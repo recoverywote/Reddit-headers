@@ -39,7 +39,6 @@
 @property(nonatomic) _Bool prefersTabBarHidden; // @synthesize prefersTabBarHidden=_prefersTabBarHidden;
 @property(retain, nonatomic) UILayoutGuide *contentLayoutGuide; // @synthesize contentLayoutGuide=_contentLayoutGuide;
 - (void).cxx_destruct;
-- (void)addFakeNavBarViewAsSubview;
 - (void)configureNavigationBarAppearance;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForOperation:(long long)arg2 fromViewController:(id)arg3 toViewController:(id)arg4;
@@ -76,17 +75,18 @@
 - (void)handleAppDidEnterForegroundIgnoringViewControllerVisibility;
 - (void)handleAppDidEnterForegroundWhenViewControllerIsOnTheTop;
 - (id)init;
-- (_Bool)openMetaPaywall:(id)arg1 forSubreddit:(id)arg2 redditService:(id)arg3;
-- (_Bool)openMetaBadgePreviewModal:(id)arg1 forSubreddit:(id)arg2 post:(id)arg3 comment:(id)arg4 redditService:(id)arg5;
-- (_Bool)openMetaBadgePreviewModalWithBadges:(id)arg1 forSubreddit:(id)arg2 redditService:(id)arg3 correlationID:(id)arg4;
+- (_Bool)openMetaPaywall:(id)arg1 forSubreddit:(id)arg2 accountContext:(id)arg3;
+- (_Bool)openMetaBadgePreviewModal:(id)arg1 forSubreddit:(id)arg2 post:(id)arg3 comment:(id)arg4 accountContext:(id)arg5;
+- (_Bool)openMetaBadgePreviewModalWithBadges:(id)arg1 forSubreddit:(id)arg2 accountContext:(id)arg3 correlationID:(id)arg4;
 - (void)sendScreenViewEventFromBackground:(_Bool)arg1;
 - (id)screenViewAnalyticsEvent;
 - (void)fireDisappearAnalyticsEvents;
 - (void)observeHlsPlayerEvent:(id)arg1;
 - (void)addHlsEventNotificationHandler;
-- (id)handleLinkUrl:(id)arg1 fromPost:(id)arg2;
-- (_Bool)openUserModModal:(id)arg1 forSubreddit:(id)arg2 withContext:(id)arg3;
-- (id)handleLinkUrlOfPost:(id)arg1;
+- (id)handleLinkUrl:(id)arg1 fromPost:(id)arg2 accountContext:(id)arg3;
+- (_Bool)openUserModModal:(id)arg1 forSubreddit:(id)arg2 withContext:(id)arg3 accountContext:(id)arg4;
+- (id)handleLinkUrlOfPost:(id)arg1 accountContext:(id)arg2;
+- (_Bool)openMetaTransferWithURL:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

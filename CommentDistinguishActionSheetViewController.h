@@ -8,28 +8,28 @@
 
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
-@class Comment, CommentTreeNode, NSString, Post, RedditService;
-@protocol CommentDistinguishActionSheetDelegate;
+@class Comment, CommentTreeNode, NSString, Post;
+@protocol AccountContext, CommentDistinguishActionSheetDelegate;
 
 @interface CommentDistinguishActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate>
 {
     Comment *_comment;
     id <CommentDistinguishActionSheetDelegate> _distinguishDelegate;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     CommentTreeNode *_commentTreeNode;
     Post *_post;
 }
 
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <CommentDistinguishActionSheetDelegate> distinguishDelegate; // @synthesize distinguishDelegate=_distinguishDelegate;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 - (void).cxx_destruct;
 - (void)removeDistinguishComment:(id)arg1;
 - (void)performDistinguishComment:(id)arg1 forDistinguishType:(long long)arg2 sticky:(_Bool)arg3;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
-- (id)initWithService:(id)arg1 commentTreeNode:(id)arg2 parentPost:(id)arg3 distinguishDelegate:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 commentTreeNode:(id)arg2 parentPost:(id)arg3 distinguishDelegate:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

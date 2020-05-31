@@ -8,8 +8,8 @@
 
 #import "FlairSelectionViewControllerDelegate-Protocol.h"
 
-@class NSArray, NSString, Post, RedditService, Subreddit, User;
-@protocol FlairProtocol, FlairSelectionPresentable, FlairSelectionSourceViewProtocol;
+@class NSArray, NSString, Post, Subreddit, User;
+@protocol AccountContext, FlairProtocol, FlairSelectionPresentable, FlairSelectionSourceViewProtocol;
 
 @interface FlairSelectionPresenter : NSObject <FlairSelectionViewControllerDelegate>
 {
@@ -23,7 +23,7 @@
     _Bool _shouldDisplayShowMyFlairFooter;
     id <FlairSelectionPresentable> _presentable;
     id <FlairSelectionSourceViewProtocol> _sourceView;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
     Post *_post;
     long long _flairType;
@@ -52,7 +52,7 @@
 @property(readonly, nonatomic) long long flairType; // @synthesize flairType=_flairType;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <FlairSelectionSourceViewProtocol> sourceView; // @synthesize sourceView=_sourceView;
 @property(nonatomic) __weak id <FlairSelectionPresentable> presentable; // @synthesize presentable=_presentable;
 - (void).cxx_destruct;
@@ -76,10 +76,10 @@
 @property(readonly, nonatomic) _Bool shouldShowEmptyState;
 @property(readonly, nonatomic) _Bool shouldShowFlairList;
 @property(readonly, nonatomic) _Bool shouldAllowUndo;
-- (id)initWithService:(id)arg1 currentAuthorFlair:(id)arg2 subreddit:(id)arg3 user:(id)arg4;
-- (id)initWithService:(id)arg1 post:(id)arg2;
-- (id)initWithService:(id)arg1 flairs:(id)arg2 currentFlair:(id)arg3 subreddit:(id)arg4;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2 post:(id)arg3 flairType:(long long)arg4 currentFlair:(id)arg5 user:(id)arg6 flairs:(id)arg7;
+- (id)initWithAccountContext:(id)arg1 currentAuthorFlair:(id)arg2 subreddit:(id)arg3 user:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 flairs:(id)arg2 currentFlair:(id)arg3 subreddit:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2 post:(id)arg3 flairType:(long long)arg4 currentFlair:(id)arg5 user:(id)arg6 flairs:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

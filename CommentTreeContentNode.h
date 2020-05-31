@@ -9,7 +9,7 @@
 #import "ASTextNodeDelegate-Protocol.h"
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ASDisplayNode, CommentMetaViewModel, CommentTreeAwardsNode, CommentTreeHeaderNode, CommentTreeLoadMoreView, CommentTreeNode, CommentTreeNodeOptions, CommentTreeTextNode, NSString, StructuredStyle;
+@class ASDisplayNode, CommentMetaViewModel, CommentTreeAwardsNode, CommentTreeHeaderNode, CommentTreeLoadMoreView, CommentTreeNode, CommentTreeNodeOptions, CommentTreeTextNode, NSString, StructuredStyle, _TtC6Reddit26AwardBubblingHighlightNode;
 @protocol CommentTreeContentNodeDelegate;
 
 @interface CommentTreeContentNode : BaseFeedDisplayNode <ASTextNodeDelegate, ObjectObserverProtocol>
@@ -26,8 +26,12 @@
     ASDisplayNode *_roundedHighlightNode;
     ASDisplayNode *_loadMoreNode;
     ASDisplayNode *_commandNode;
+    _TtC6Reddit26AwardBubblingHighlightNode *_awardHighlightNode;
+    unsigned long long _awardHighlight;
 }
 
+@property(nonatomic) unsigned long long awardHighlight; // @synthesize awardHighlight=_awardHighlight;
+@property(retain, nonatomic) _TtC6Reddit26AwardBubblingHighlightNode *awardHighlightNode; // @synthesize awardHighlightNode=_awardHighlightNode;
 @property(retain, nonatomic) ASDisplayNode *commandNode; // @synthesize commandNode=_commandNode;
 @property(retain, nonatomic) ASDisplayNode *loadMoreNode; // @synthesize loadMoreNode=_loadMoreNode;
 @property(retain, nonatomic) ASDisplayNode *roundedHighlightNode; // @synthesize roundedHighlightNode=_roundedHighlightNode;
@@ -51,6 +55,7 @@
 - (void)createHeaderNode;
 - (void)createHighlightNode;
 - (void)configureNodes;
+- (void)configureAwardHighlightNode;
 - (id)initWithCommentNode:(id)arg1 commentMetaViewModel:(id)arg2 styling:(id)arg3 delegate:(id)arg4 commentOptions:(id)arg5;
 
 // Remaining properties

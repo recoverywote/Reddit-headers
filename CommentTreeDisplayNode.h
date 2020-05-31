@@ -8,14 +8,13 @@
 
 #import "PannableCellManagerDelegate-Protocol.h"
 
-@class ASDisplayNode, CommentSwipeView, CommentTreeContentNode, CommentTreeNode, CommentTreeNodeOptions, NSIndexPath, NSString, NSTimer, PannableCellManager, _TtC6Reddit27AwardedCommentHighlightNode;
+@class ASDisplayNode, CommentSwipeView, CommentTreeContentNode, CommentTreeNode, CommentTreeNodeOptions, NSIndexPath, NSString, NSTimer, PannableCellManager;
 @protocol CommentTreeDisplayNodeDelegate;
 
 @interface CommentTreeDisplayNode : BaseFeedDisplayNode <PannableCellManagerDelegate>
 {
     CommentTreeNode *_commentNode;
     CommentTreeContentNode *_commentTreeContentNode;
-    _TtC6Reddit27AwardedCommentHighlightNode *_awardHighlightNode;
     ASDisplayNode *_commentSwipeNode;
     ASDisplayNode *_highlightNode;
     ASDisplayNode *_overlayNode;
@@ -34,7 +33,6 @@
 @property(retain, nonatomic) ASDisplayNode *overlayNode; // @synthesize overlayNode=_overlayNode;
 @property(retain, nonatomic) ASDisplayNode *highlightNode; // @synthesize highlightNode=_highlightNode;
 @property(retain, nonatomic) ASDisplayNode *commentSwipeNode; // @synthesize commentSwipeNode=_commentSwipeNode;
-@property(retain, nonatomic) _TtC6Reddit27AwardedCommentHighlightNode *awardHighlightNode; // @synthesize awardHighlightNode=_awardHighlightNode;
 @property(retain, nonatomic) CommentTreeContentNode *commentTreeContentNode; // @synthesize commentTreeContentNode=_commentTreeContentNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 - (void).cxx_destruct;
@@ -51,8 +49,6 @@
 - (void)addKeyValueObservations;
 - (void)didLoad;
 - (void)setupPannableCellManager;
-- (void)updateAwardHighlightIfNeeded;
-- (void)configureAwardHighlightNode;
 - (id)initWithCommentNode:(id)arg1 commentMetaViewModel:(id)arg2 styling:(id)arg3 delegate:(id)arg4 commentOptions:(id)arg5 atIndexPath:(id)arg6;
 @property(readonly, nonatomic) CommentSwipeView *commentSwipeView;
 

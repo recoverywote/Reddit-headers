@@ -10,6 +10,7 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class BaseCollectionView, Channel, ContactActionSheetDelegate, NSArray, NSString, RedditService;
+@protocol AccountContext;
 
 @interface ChatMembersViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
@@ -17,15 +18,16 @@
     Channel *_channel;
     ContactActionSheetDelegate *_contactActionSheetDelegate;
     NSArray *_members;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSArray *members; // @synthesize members=_members;
 @property(retain, nonatomic) ContactActionSheetDelegate *contactActionSheetDelegate; // @synthesize contactActionSheetDelegate=_contactActionSheetDelegate;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 - (void).cxx_destruct;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 reportedContact:(id)arg3 blockedContact:(id)arg4;
-@property(readonly, nonatomic) RedditService *service;
 - (void)showContactActionSheetWithContact:(id)arg1;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
@@ -36,6 +38,8 @@
 - (void)configureWithChannel:(id)arg1;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidLoad;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

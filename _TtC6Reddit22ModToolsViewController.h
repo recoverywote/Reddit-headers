@@ -11,7 +11,7 @@
 
 @interface _TtC6Reddit22ModToolsViewController : BaseTableViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: subreddit
     // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: modToolsConfig
@@ -40,7 +40,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 analyticsManager:(id)arg2 subreddit:(id)arg3 modToolsConfig:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 analyticsManager:(id)arg2 subreddit:(id)arg3 modToolsConfig:(id)arg4;
 @property(nonatomic) __weak id <_TtP6Reddit30ModToolsViewControllerDelegate_> delegate; // @synthesize delegate;
 
 @end

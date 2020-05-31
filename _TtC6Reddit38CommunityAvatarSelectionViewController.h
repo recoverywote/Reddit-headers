@@ -10,7 +10,7 @@
 
 @interface _TtC6Reddit38CommunityAvatarSelectionViewController : BaseViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: communityAvatarSelectionAnalytics
     // Error parsing type: , name: community
     // Error parsing type: , name: communityControllerMode

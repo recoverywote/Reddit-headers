@@ -10,21 +10,21 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseCollectionView, ChatMessage, DirectChannel, NSArray, NSAttributedString, NSString, RedditService;
-@protocol ChatRequestDelegatorDelegate;
+@protocol AccountContext, ChatRequestDelegatorDelegate;
 
 @interface DirectChatRequestDelegator : NSObject <ObjectObserverProtocol, ChatRequestDelegator>
 {
     id <ChatRequestDelegatorDelegate> _delegate;
     ChatMessage *_message;
     NSArray *_contacts;
-    RedditService *_service;
     DirectChannel *_channel;
     BaseCollectionView *_collectionView;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) __weak BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) DirectChannel *channel; // @synthesize channel=_channel;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSArray *contacts; // @synthesize contacts=_contacts;
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
 @property(nonatomic) __weak id <ChatRequestDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
@@ -47,7 +47,8 @@
 - (void)loadEmbedDataForMessage:(id)arg1;
 - (id)blockedSortedContactsWithContacts:(id)arg1;
 - (void)configureWithChannel:(id)arg1;
-- (id)initWithService:(id)arg1 collectionView:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 collectionView:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -19,13 +19,25 @@
     _Bool _maxIsSet;
     _Bool _scoreIsSet;
     _Bool _textIsSet;
+    _Bool _experiment_nameIsSet;
+    _Bool _experiment_variantIsSet;
+    _Bool _experiment_versionIsSet;
     int _min;
     int _max;
     int _score;
     NSString *_type;
     NSString *_text;
+    NSString *_experiment_name;
+    NSString *_experiment_variant;
+    NSString *_experiment_version;
 }
 
+@property(nonatomic) _Bool experiment_versionIsSet; // @synthesize experiment_versionIsSet=_experiment_versionIsSet;
+@property(copy, nonatomic) NSString *experiment_version; // @synthesize experiment_version=_experiment_version;
+@property(nonatomic) _Bool experiment_variantIsSet; // @synthesize experiment_variantIsSet=_experiment_variantIsSet;
+@property(copy, nonatomic) NSString *experiment_variant; // @synthesize experiment_variant=_experiment_variant;
+@property(nonatomic) _Bool experiment_nameIsSet; // @synthesize experiment_nameIsSet=_experiment_nameIsSet;
+@property(copy, nonatomic) NSString *experiment_name; // @synthesize experiment_name=_experiment_name;
 @property(nonatomic) _Bool textIsSet; // @synthesize textIsSet=_textIsSet;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) _Bool scoreIsSet; // @synthesize scoreIsSet=_scoreIsSet;
@@ -41,6 +53,9 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetExperiment_version;
+- (void)unsetExperiment_variant;
+- (void)unsetExperiment_name;
 - (void)unsetText;
 - (void)unsetScore;
 - (void)unsetMax;
@@ -51,7 +66,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithType:(id)arg1 min:(int)arg2 max:(int)arg3 score:(int)arg4 text:(id)arg5;
+- (id)initWithType:(id)arg1 min:(int)arg2 max:(int)arg3 score:(int)arg4 text:(id)arg5 experiment_name:(id)arg6 experiment_variant:(id)arg7 experiment_version:(id)arg8;
 - (id)init;
 
 // Remaining properties

@@ -7,13 +7,16 @@
 #import <objc/NSObject.h>
 
 @class SubredditPageViewController;
+@protocol AccountContext;
 
 @interface SubredditPageNavigator : NSObject
 {
+    id <AccountContext> _accountContext;
     SubredditPageViewController *_vc;
 }
 
 @property(nonatomic) __weak SubredditPageViewController *vc; // @synthesize vc=_vc;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)presentViewController:(id)arg1;
 - (void)pushViewController:(id)arg1;
@@ -26,7 +29,7 @@
 - (void)navigateToFlairPickerForSubreddit:(id)arg1 fromVC:(id)arg2;
 - (void)navigateToCommunityInfo:(id)arg1;
 - (void)navigateToSendMessageToSubredditModerator:(id)arg1;
-- (id)initWithSubredditPageViewController:(id)arg1;
+- (id)initWithSubredditPageViewController:(id)arg1 accountContext:(id)arg2;
 
 @end
 

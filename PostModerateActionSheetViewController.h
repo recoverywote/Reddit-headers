@@ -9,14 +9,16 @@
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
 @class NSString, Post;
-@protocol PostModerateActionSheetDelegate;
+@protocol AccountContext, PostModerateActionSheetDelegate;
 
 @interface PostModerateActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate>
 {
     Post *_post;
     id <PostModerateActionSheetDelegate> _postModerateActionSheetDelegate;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostModerateActionSheetDelegate> postModerateActionSheetDelegate; // @synthesize postModerateActionSheetDelegate=_postModerateActionSheetDelegate;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
@@ -31,8 +33,8 @@
 - (void)markPostSpoiler:(id)arg1;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)configureWithPost:(id)arg1 hideModerateBarActions:(_Bool)arg2;
-- (id)initWithPost:(id)arg1;
-- (id)initWithPost:(id)arg1 hideModerateBarActions:(_Bool)arg2;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 hideModerateBarActions:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

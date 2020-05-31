@@ -7,6 +7,7 @@
 #import <UIKit/UINavigationBar.h>
 
 @interface UINavigationBar (RedditUI)
+- (void)styleUsing:(id)arg1;
 - (void)makeBackgroundTransparent;
 @end
 

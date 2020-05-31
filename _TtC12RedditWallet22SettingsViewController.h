@@ -12,6 +12,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: wallet
     // Error parsing type: , name: walletFlow
     // Error parsing type: , name: redditService
+    // Error parsing type: , name: analyticsClient
+    // Error parsing type: , name: textCopyProvider
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: imageProvider
     // Error parsing type: , name: $__lazy_storage_$_headerView

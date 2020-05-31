@@ -9,7 +9,7 @@
 @interface _TtC6Reddit19CommunityTagsHelper : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: community
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
 }
 
 @end

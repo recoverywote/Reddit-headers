@@ -62,7 +62,6 @@
 - (void)presentSubredditPicker;
 - (void)modQueueHeaderBarDidTapSubredditButton:(id)arg1;
 @property(readonly, nonatomic) _Bool isInModSubreddit;
-- (_Bool)feedPostViewShouldShowExpandedHeader:(id)arg1;
 - (id)analyticsScreenViewName;
 - (void)presentSelectionAlertIfNecessaryWithCompletion:(CDUnknownBlockType)arg1;
 - (void)handleBulkActionSuccessResponseWithFailedItems:(id)arg1;

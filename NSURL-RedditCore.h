@@ -19,6 +19,7 @@
 + (id)REDGatewayEndpoint;
 + (id)REDBaseEndpoint;
 @property(readonly, nonatomic) _Bool isValidStructuredStylesImageURL;
+@property(readonly, nonatomic) NSString *red_linkedVaultTransferRecipient;
 @property(readonly, nonatomic) NSString *red_linkedVaultSubreddit;
 @property(readonly, nonatomic) NSString *red_emailVerificationCode;
 @property(readonly, nonatomic) NSString *red_linkedLiveStreamId;

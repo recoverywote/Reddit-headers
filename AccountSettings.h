@@ -15,7 +15,6 @@
 
 @property(copy, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSDictionary *sharePauseThrottleState;
 @property(copy, nonatomic) NSDictionary *shareActivityHistory;
 @property(retain, nonatomic) NSSet *tappedShareActivityTypes;
 @property(copy, nonatomic) NSArray *dismissedTokenClaims;

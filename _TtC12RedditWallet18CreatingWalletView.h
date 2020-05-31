@@ -12,18 +12,14 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: notchView
     // Error parsing type: , name: navigationBarView
-    // Error parsing type: , name: contentContainer
     // Error parsing type: , name: titleLabel
-    // Error parsing type: , name: animationView
-    // Error parsing type: , name: redditBackupButton
-    // Error parsing type: , name: manualBackupButton
+    // Error parsing type: , name: contentView
     // Error parsing type: , name: disposeBag
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
-- (void)didMoveToSuperview;
 
 @end
 

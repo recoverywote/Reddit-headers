@@ -11,7 +11,7 @@
 @interface _TtC6Reddit41CommunityCreateConfirmationViewController : BaseViewController
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: draftCommunity
     // Error parsing type: , name: avatarPicker

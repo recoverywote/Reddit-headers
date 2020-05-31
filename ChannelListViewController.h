@@ -12,23 +12,24 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class BaseCollectionView, ChannelNetworkSource, ListingStateController, NSArray, NSString, RedditService;
+@protocol AccountContext;
 
 @interface ChannelListViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource, ChannelNetworkSourceDelegate, ListingStateControllerDelegate>
 {
-    ListingStateController *_listingStateController;
-    BaseCollectionView *_collectionView;
+    id <AccountContext> _accountContext;
     unsigned long long _type;
-    RedditService *_service;
     ChannelNetworkSource *_dataSource;
     NSArray *_channels;
+    ListingStateController *_listingStateController;
+    BaseCollectionView *_collectionView;
 }
 
-@property(copy, nonatomic) NSArray *channels; // @synthesize channels=_channels;
-@property(readonly, nonatomic) ChannelNetworkSource *dataSource; // @synthesize dataSource=_dataSource;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-@property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
+@property(copy, nonatomic) NSArray *channels; // @synthesize channels=_channels;
+@property(readonly, nonatomic) ChannelNetworkSource *dataSource; // @synthesize dataSource=_dataSource;
+@property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)logViewEvent;
 - (id)analyticsScreenViewName;
@@ -48,7 +49,8 @@
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 dataSource:(id)arg2 type:(unsigned long long)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 dataSource:(id)arg2 type:(unsigned long long)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

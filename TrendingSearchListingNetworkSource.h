@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)parseTrendingSearchesFromData:(id)arg1;
++ (id)parseTrendingSearchesFromData:(id)arg1 service:(id)arg2;
 - (void)parseData:(id)arg1;
 
 @end

@@ -16,6 +16,7 @@
     // Error parsing type: , name: repository
     // Error parsing type: , name: redditService
     // Error parsing type: , name: mode
+    // Error parsing type: , name: currentTransferCancellable
     // Error parsing type: , name: debouncer
     // Error parsing type: , name: disposeBag
 }

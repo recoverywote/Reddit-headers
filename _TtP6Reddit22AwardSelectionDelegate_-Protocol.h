@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class _TtC6Reddit19AwardSelectionState, _TtC6Reddit21AwardSelectionOptions;
+@class _TtC7Economy19AwardSelectionState, _TtC7Economy21AwardSelectionOptions;
 
 @protocol _TtP6Reddit22AwardSelectionDelegate_ <NSObject>
-- (void)dismissForAwardSelectionWithOptions:(_TtC6Reddit21AwardSelectionOptions *)arg1 state:(_TtC6Reddit19AwardSelectionState *)arg2;
-- (void)sendAwardForAwardSelectionWithOptions:(_TtC6Reddit21AwardSelectionOptions *)arg1 state:(_TtC6Reddit19AwardSelectionState *)arg2;
-- (void)getCoinsForAwardSelectionWithOptions:(_TtC6Reddit21AwardSelectionOptions *)arg1 state:(_TtC6Reddit19AwardSelectionState *)arg2;
+- (void)dismissForAwardSelectionWithOptions:(_TtC7Economy21AwardSelectionOptions *)arg1 state:(_TtC7Economy19AwardSelectionState *)arg2;
+- (void)sendAwardForAwardSelectionWithOptions:(_TtC7Economy21AwardSelectionOptions *)arg1 state:(_TtC7Economy19AwardSelectionState *)arg2;
+- (void)getCoinsForAwardSelectionWithOptions:(_TtC7Economy21AwardSelectionOptions *)arg1 state:(_TtC7Economy19AwardSelectionState *)arg2;
 @end
 

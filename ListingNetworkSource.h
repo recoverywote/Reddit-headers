@@ -8,7 +8,7 @@
 
 #import "NSCopying-Protocol.h"
 
-@class ListingAnalyticsLogger, NSArray, NSDictionary, NSError, NSString, NSUUID;
+@class ListingAnalyticsLogger, NSArray, NSDictionary, NSError, NSString, NSUUID, RedditService;
 @protocol ListingNetworkSourceDelegate, OS_dispatch_queue;
 
 @interface ListingNetworkSource : NSObject <NSCopying>
@@ -19,6 +19,7 @@
     _Bool _isFetchingMore;
     _Bool _manualFetch;
     _Bool _ignoreNetworkError;
+    RedditService *_service;
     NSObject<OS_dispatch_queue> *_parsingQueue;
     NSObject<ListingNetworkSourceDelegate> *_delegate;
     NSString *_fetchURLString;
@@ -53,6 +54,7 @@
 @property(nonatomic) _Bool hasFinishedFirstFetch; // @synthesize hasFinishedFirstFetch=_hasFinishedFirstFetch;
 @property __weak NSObject<ListingNetworkSourceDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parsingQueue; // @synthesize parsingQueue=_parsingQueue;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
 - (void)notifyWillFetchDataForDataProvider:(id)arg1 correlationId:(id)arg2 parentId:(id)arg3;
 - (void)notifyDataProviderParentDidFetchDataWithParentId:(id)arg1;
@@ -79,8 +81,9 @@
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;
 - (void)invalidate;
-- (id)initWithFetchURLString:(id)arg1 parameters:(id)arg2;
-- (id)initWithFetchURLString:(id)arg1;
+- (id)initWithService:(id)arg1 fetchURLString:(id)arg2 parameters:(id)arg3;
+- (id)initWithService:(id)arg1 fetchURLString:(id)arg2;
+- (id)initWithService:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

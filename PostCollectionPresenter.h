@@ -7,37 +7,39 @@
 #import <objc/NSObject.h>
 
 @class NSString, Post, PostCollection, PostCollectionOptions, RedditService;
-@protocol PostCollectionPresentable;
+@protocol AccountContext, PostCollectionPresentable;
 
 @interface PostCollectionPresenter : NSObject
 {
     _Bool _shouldDisplaySelectedPost;
     _Bool _isForceRefresh;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Post *_post;
     PostCollection *_postCollection;
     id <PostCollectionPresentable> _presentable;
     PostCollectionOptions *_postCollectionOptions;
+    RedditService *_service;
     NSString *_postCollectionId;
 }
 
 @property(nonatomic) _Bool isForceRefresh; // @synthesize isForceRefresh=_isForceRefresh;
 @property(copy, nonatomic) NSString *postCollectionId; // @synthesize postCollectionId=_postCollectionId;
+@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool shouldDisplaySelectedPost; // @synthesize shouldDisplaySelectedPost=_shouldDisplaySelectedPost;
 @property(retain, nonatomic) PostCollectionOptions *postCollectionOptions; // @synthesize postCollectionOptions=_postCollectionOptions;
 @property(nonatomic) __weak id <PostCollectionPresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 - (void)unfollowPost;
 - (void)followPost;
 - (void)forceFetchData;
 - (void)fetchData;
-- (id)initWithService:(id)arg1 collectionId:(id)arg2 selectedPost:(id)arg3 options:(id)arg4;
-- (id)initWithService:(id)arg1 collectionURL:(id)arg2 options:(id)arg3;
-- (id)initWithService:(id)arg1 post:(id)arg2 postCollection:(id)arg3 options:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 collectionId:(id)arg2 selectedPost:(id)arg3 options:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 collectionURL:(id)arg2 options:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 postCollection:(id)arg3 options:(id)arg4;
 
 @end
 

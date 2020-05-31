@@ -15,7 +15,7 @@
 #import "SnoomojiViewControllerDelegate-Protocol.h"
 
 @class BaseView, Channel, ChatFeedInteractor, ChatPostPickerViewController, ComposeChatOverlayView, ComposeChatView, NSString, NSTimer, PhotoPickerViewController, RedditService, SnoomojiViewController, UIViewController;
-@protocol ChatCompositionViewControllerDelegate, CurrentActionSheetProtocol;
+@protocol AccountContext, ChatCompositionViewControllerDelegate, CurrentActionSheetProtocol;
 
 @interface ChatCompositionViewController : BaseViewController <ComposeChatViewDelegate, BaseTextViewDelegate, SnoomojiViewControllerDelegate, ChatKeyboardAnalyticsTracker, ObjectObserverProtocol, PhotoPickerViewControllerDelegate, RequestToNavigateView>
 {
@@ -32,9 +32,11 @@
     ChatFeedInteractor *_interactor;
     ComposeChatOverlayView *_channelLockedView;
     ComposeChatOverlayView *_channelMutedView;
+    id <AccountContext> _accountContext;
     struct CGSize _keyboardSize;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ComposeChatOverlayView *channelMutedView; // @synthesize channelMutedView=_channelMutedView;
 @property(retain, nonatomic) ComposeChatOverlayView *channelLockedView; // @synthesize channelLockedView=_channelLockedView;
 @property(retain, nonatomic) ChatFeedInteractor *interactor; // @synthesize interactor=_interactor;
@@ -54,7 +56,6 @@
 - (void)snoomojiViewController:(id)arg1 didSelectSnoomoji:(id)arg2;
 - (void)trackKeyboardEventWithNoun:(id)arg1;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
-@property(readonly, nonatomic) RedditService *service;
 - (void)applicationWillResignActive:(id)arg1;
 - (void)animateKeyboardWithUserInfo:(id)arg1;
 - (void)keyboardWillHide:(id)arg1;
@@ -90,7 +91,8 @@
 - (void)configureWithChannel:(id)arg1;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
-- (id)initWithInteractor:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 interactor:(id)arg2;
 - (void)dealloc;
 
 // Remaining properties

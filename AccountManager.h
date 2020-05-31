@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, NSArray, NSString, NSURLSession, NSUserDefaults, RedditService, SessionTracker;
+@class Account, NSArray, NSString, NSURLSession, NSUserDefaults, RedditService;
 
 @interface AccountManager : NSObject
 {
@@ -15,13 +15,11 @@
     NSURLSession *_session;
     NSUserDefaults *_defaults;
     NSString *_accountCachePath;
-    SessionTracker *_sessionTracker;
 }
 
 + (void)saveAccount:(id)arg1 inDirectoryAtPath:(id)arg2;
 + (id)loadAccountsFromDiskAtPath:(id)arg1;
 + (id)defaultAccountsDirectoryPath;
-@property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
 @property(copy, nonatomic) NSString *accountCachePath; // @synthesize accountCachePath=_accountCachePath;
 @property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
 @property(readonly, nonatomic) NSURLSession *session; // @synthesize session=_session;
@@ -43,6 +41,7 @@
 - (void)fetchAccountDuringLoginWithTokenPayload:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)getAccessTokenForCode:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)getCodeWithSessionCookie:(id)arg1 modhash:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)singleSignOnWithIdentityToken:(id)arg1 username:(id)arg2 shouldGenerateUser:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)signUpWithUsername:(id)arg1 password:(id)arg2 email:(id)arg3 emailPermission:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)loginWithUsername:(id)arg1 password:(id)arg2 twoFactorAuthCode:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)saveAccount:(id)arg1;
@@ -58,8 +57,8 @@
 @property(readonly, nonatomic) RedditService *loggedOutService;
 @property(readonly, nonatomic) NSArray *loggedInAccounts;
 @property(readonly, nonatomic) NSArray *accounts;
-- (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2 sessionTracker:(id)arg3 services:(id)arg4 currentService:(id)arg5;
-- (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2 sessionTracker:(id)arg3;
+- (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2 services:(id)arg3 currentService:(id)arg4;
+- (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2;
 - (id)init;
 
 @end

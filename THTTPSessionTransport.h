@@ -24,7 +24,6 @@
 @property(retain, nonatomic) NSMutableData *requestData; // @synthesize requestData=_requestData;
 - (void).cxx_destruct;
 - (_Bool)flush:(id *)arg1;
-- (void)flushWithRequest:(id)arg1 completion:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
 - (void)flushWithCompletion:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
 - (_Bool)write:(const char *)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 error:(id *)arg4;
 - (unsigned int)readAvail:(char *)arg1 offset:(unsigned int)arg2 maxLength:(unsigned int)arg3 error:(id *)arg4;

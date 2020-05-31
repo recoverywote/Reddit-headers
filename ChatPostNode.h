@@ -6,12 +6,13 @@
 
 #import <AsyncDisplayKit/ASDisplayNode.h>
 
-@class CAShapeLayer, ChatMessage, ChatPostErrorNode, ChatPostSkeletonNode, FeedPostCellNode, RedditService;
-@protocol FeedPostCellNodeDelegate;
+@class CAShapeLayer, ChatMessage, ChatPostErrorNode, ChatPostSkeletonNode, FeedPostCellNode;
+@protocol AccountContext, FeedPostCellNodeDelegate;
 
 @interface ChatPostNode : ASDisplayNode
 {
     id <FeedPostCellNodeDelegate> _delegateVC;
+    id <AccountContext> _accountContext;
     ChatMessage *_chatMessage;
     ChatPostSkeletonNode *_skeletonNode;
     ChatPostErrorNode *_errorNode;
@@ -26,15 +27,15 @@
 @property(retain, nonatomic) ChatPostErrorNode *errorNode; // @synthesize errorNode=_errorNode;
 @property(retain, nonatomic) ChatPostSkeletonNode *skeletonNode; // @synthesize skeletonNode=_skeletonNode;
 @property(retain, nonatomic) ChatMessage *chatMessage; // @synthesize chatMessage=_chatMessage;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate> delegateVC; // @synthesize delegateVC=_delegateVC;
 - (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)errorNodeTapped:(id)arg1;
 - (void)layout;
 - (void)didLoad;
 - (void)configureWithMessage:(id)arg1;
-- (id)init;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

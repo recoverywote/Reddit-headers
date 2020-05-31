@@ -8,6 +8,6 @@
 
 @interface _TtC12RedditWallet27EnterPasswordViewController (RedditWallet)
 - (void)keyboardWillHideWithNotification:(id)arg1;
-- (void)keyboardDidShowWithNotification:(id)arg1;
+- (void)keyboardWillShowWithNotification:(id)arg1;
 @end
 

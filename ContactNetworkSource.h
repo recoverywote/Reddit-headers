@@ -6,15 +6,10 @@
 
 #import "ListingNetworkSource.h"
 
-@class RedditService;
-
 @interface ContactNetworkSource : ListingNetworkSource
 {
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (id)defaultParameters;
 - (void)processObjects:(id)arg1 currentCount:(long long)arg2 withCompletion:(CDUnknownBlockType)arg3;
 - (id)contactsFromData:(id)arg1;

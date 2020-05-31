@@ -19,10 +19,8 @@
     BaseCollectionView *_collectionView;
     Subreddit *_subreddit;
     unsigned long long _type;
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
@@ -45,6 +43,7 @@
 - (void)configureWithRecommendedChannels:(id)arg1;
 - (void)configureWithSubreddit:(id)arg1 initialChannels:(id)arg2;
 - (void)viewDidLoad;
+@property(readonly, nonatomic) RedditService *service;
 - (id)initWithPresenter:(id)arg1;
 
 // Remaining properties

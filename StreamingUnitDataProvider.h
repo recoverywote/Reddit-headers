@@ -9,10 +9,11 @@
 #import "DataProvider-Protocol.h"
 
 @class NSString, NSUUID, RedditService, Subreddit, _TtC6Reddit13StreamManager;
+@protocol AccountContext;
 
 @interface StreamingUnitDataProvider : NSObject <DataProvider>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     _TtC6Reddit13StreamManager *_streamManager;
     Subreddit *_subreddit;
     unsigned long long _feedType;
@@ -30,7 +31,7 @@
 @property(nonatomic) unsigned long long feedType; // @synthesize feedType=_feedType;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) _TtC6Reddit13StreamManager *streamManager; // @synthesize streamManager=_streamManager;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)dealloc;
 - (void)invalidate;
@@ -43,8 +44,9 @@
 - (void)registerParentDidFetchObserver;
 - (void)registerProviderWillFetchObserver;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
-- (id)initWithService:(id)arg1 feedType:(unsigned long long)arg2;
-- (id)initWithService:(id)arg1 feedType:(unsigned long long)arg2 subreddit:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 feedType:(unsigned long long)arg2;
+- (id)initWithAccountContext:(id)arg1 feedType:(unsigned long long)arg2 subreddit:(id)arg3;
 - (_Bool)shouldHideUnit;
 
 // Remaining properties

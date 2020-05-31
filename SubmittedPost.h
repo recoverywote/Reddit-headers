@@ -16,7 +16,6 @@
     _Bool _isChatPost;
     _Bool _hasVideo;
     _Bool _isGIF;
-    _Bool _isRetry;
     _Bool _isNSFW;
     _Bool _isSpoiler;
     NSString *_pk;
@@ -56,7 +55,6 @@
 @property(retain, nonatomic) NSString *crosspostId; // @synthesize crosspostId=_crosspostId;
 @property(nonatomic) _Bool isSpoiler; // @synthesize isSpoiler=_isSpoiler;
 @property(nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
-@property(nonatomic) _Bool isRetry; // @synthesize isRetry=_isRetry;
 @property(nonatomic) _Bool isGIF; // @synthesize isGIF=_isGIF;
 @property(nonatomic) _Bool hasVideo; // @synthesize hasVideo=_hasVideo;
 @property(nonatomic) double uploadPercentage; // @synthesize uploadPercentage=_uploadPercentage;

@@ -43,6 +43,9 @@
     _Bool _nameIsSet;
     _Bool _emailIsSet;
     _Bool _previous_idIsSet;
+    _Bool _masked_emailIsSet;
+    _Bool _masked_email_userIsSet;
+    _Bool _email_domainIsSet;
     NSString *_id;
     long long _created_timestamp;
     long long _cookie_created_timestamp;
@@ -54,8 +57,17 @@
     NSString *_name;
     NSString *_email;
     NSString *_previous_id;
+    NSString *_masked_email;
+    NSString *_masked_email_user;
+    NSString *_email_domain;
 }
 
+@property(nonatomic) _Bool email_domainIsSet; // @synthesize email_domainIsSet=_email_domainIsSet;
+@property(copy, nonatomic) NSString *email_domain; // @synthesize email_domain=_email_domain;
+@property(nonatomic) _Bool masked_email_userIsSet; // @synthesize masked_email_userIsSet=_masked_email_userIsSet;
+@property(copy, nonatomic) NSString *masked_email_user; // @synthesize masked_email_user=_masked_email_user;
+@property(nonatomic) _Bool masked_emailIsSet; // @synthesize masked_emailIsSet=_masked_emailIsSet;
+@property(copy, nonatomic) NSString *masked_email; // @synthesize masked_email=_masked_email;
 @property(nonatomic) _Bool previous_idIsSet; // @synthesize previous_idIsSet=_previous_idIsSet;
 @property(copy, nonatomic) NSString *previous_id; // @synthesize previous_id=_previous_id;
 @property(nonatomic) _Bool emailIsSet; // @synthesize emailIsSet=_emailIsSet;
@@ -101,6 +113,9 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetEmail_domain;
+- (void)unsetMasked_email_user;
+- (void)unsetMasked_email;
 - (void)unsetPrevious_id;
 - (void)unsetEmail;
 - (void)unsetName;
@@ -126,7 +141,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 created_timestamp:(long long)arg2 logged_in:(_Bool)arg3 cookie_created_timestamp:(long long)arg4 suspect:(_Bool)arg5 disenfranchised:(_Bool)arg6 in_timeout:(_Bool)arg7 neutered:(_Bool)arg8 number_creddits:(long long)arg9 is_admin:(_Bool)arg10 has_premium:(_Bool)arg11 number_coins:(long long)arg12 number_premium_days_remaining:(long long)arg13 is_employee:(_Bool)arg14 is_premium_subscriber:(_Bool)arg15 post_karma:(long long)arg16 comment_karma:(long long)arg17 name:(id)arg18 email:(id)arg19 previous_id:(id)arg20;
+- (id)initWithId:(id)arg1 created_timestamp:(long long)arg2 logged_in:(_Bool)arg3 cookie_created_timestamp:(long long)arg4 suspect:(_Bool)arg5 disenfranchised:(_Bool)arg6 in_timeout:(_Bool)arg7 neutered:(_Bool)arg8 number_creddits:(long long)arg9 is_admin:(_Bool)arg10 has_premium:(_Bool)arg11 number_coins:(long long)arg12 number_premium_days_remaining:(long long)arg13 is_employee:(_Bool)arg14 is_premium_subscriber:(_Bool)arg15 post_karma:(long long)arg16 comment_karma:(long long)arg17 name:(id)arg18 email:(id)arg19 previous_id:(id)arg20 masked_email:(id)arg21 masked_email_user:(id)arg22 email_domain:(id)arg23;
 - (id)init;
 
 // Remaining properties

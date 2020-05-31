@@ -9,15 +9,15 @@
 #import "GoldCoinPurchaseConfirmationViewControllerDelegate-Protocol.h"
 #import "InAppPurchaseManagerDelegate-Protocol.h"
 
-@class Award, GildingEventLogger, GoldCoinPurchaseConfirmationViewController, GoldProduct, GoldPurchaseInProgressViewController, NSString, RedditService, UIViewController;
-@protocol PurchaseAwardCoordinatorDelegate;
+@class Award, GildingEventLogger, GoldCoinPurchaseConfirmationViewController, GoldProduct, GoldPurchaseInProgressViewController, NSString, UIViewController;
+@protocol AccountContext, PurchaseAwardCoordinatorDelegate;
 
 @interface PurchaseAwardCoordinator : NSObject <GoldCoinPurchaseConfirmationViewControllerDelegate, InAppPurchaseManagerDelegate>
 {
     _Bool _isFetchingRecommendedProduct;
     id <PurchaseAwardCoordinatorDelegate> _delegate;
+    id <AccountContext> _accountContext;
     UIViewController *_fromViewController;
-    RedditService *_service;
     Award *_award;
     unsigned long long _gildingTarget;
     GoldProduct *_recommendedProduct;
@@ -35,8 +35,8 @@
 @property(retain, nonatomic) GoldProduct *recommendedProduct; // @synthesize recommendedProduct=_recommendedProduct;
 @property(nonatomic) unsigned long long gildingTarget; // @synthesize gildingTarget=_gildingTarget;
 @property(retain, nonatomic) Award *award; // @synthesize award=_award;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PurchaseAwardCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;
@@ -57,7 +57,7 @@
 - (void)showPurchaseInProgress;
 - (void)showPurchaseConfirmation;
 - (void)startFromViewController:(id)arg1;
-- (id)initWithService:(id)arg1 award:(id)arg2 gildingTarget:(unsigned long long)arg3 correlationId:(id)arg4 eventLogger:(id)arg5;
+- (id)initWithAccountContext:(id)arg1 award:(id)arg2 gildingTarget:(unsigned long long)arg3 correlationId:(id)arg4 eventLogger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -8,22 +8,24 @@
 
 #import "ReportViewControllerDataSource-Protocol.h"
 
-@class NSString;
+@class NSString, RedditService;
 @protocol ReportableModel;
 
 @interface ReportDataSource : NSObject <ReportViewControllerDataSource>
 {
+    RedditService *_service;
     id <ReportableModel> _model;
 }
 
 @property(retain, nonatomic) id <ReportableModel> model; // @synthesize model=_model;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
 - (void)submitReportWithItem:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)reportingSubject;
 - (id)actionButtonTitle;
 - (id)reportItems;
 - (id)title;
-- (id)initWithModel:(id)arg1;
+- (id)initWithService:(id)arg1 model:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -12,6 +12,7 @@
 - (_Bool)view:(id)arg1 HasSuperView:(id)arg2;
 - (_Bool)hasSuperView:(id)arg1;
 - (id)createAndAddSubView:(Class)arg1;
+- (void)installRedditIndexBar:(id)arg1;
 - (void)bounceOnScale:(double)arg1 endStateScale:(double)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)bounceVertically:(double)arg1;
 - (void)animateFadeInWithDuration:(double)arg1;

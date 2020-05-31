@@ -13,6 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: redditService
     // Error parsing type: , name: wallet
     // Error parsing type: , name: backupOption
+    // Error parsing type: , name: recoverySource
     // Error parsing type: , name: handler
     // Error parsing type: , name: $__lazy_storage_$_contentView
     // Error parsing type: , name: $__lazy_storage_$_animator

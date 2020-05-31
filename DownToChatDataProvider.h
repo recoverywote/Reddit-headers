@@ -9,22 +9,24 @@
 #import "DataProvider-Protocol.h"
 
 @class DownToChatBanner, NSString, RedditService, Subreddit;
+@protocol AccountContext;
 
 @interface DownToChatDataProvider : NSObject <DataProvider>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
     DownToChatBanner *_downToChatBanner;
 }
 
 @property(retain, nonatomic) DownToChatBanner *downToChatBanner; // @synthesize downToChatBanner=_downToChatBanner;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)invalidate;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

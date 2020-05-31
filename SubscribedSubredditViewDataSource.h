@@ -7,16 +7,19 @@
 #import "CommunityViewDataSource.h"
 
 @class AccountSubscriptionDataSource, NSString, _TtC6Reddit29CommunityCreateFlowController;
+@protocol AccountContext;
 
 @interface SubscribedSubredditViewDataSource : CommunityViewDataSource
 {
     _Bool _shouldShowCommunityCreation;
     NSString *_analyticsPageType;
     AccountSubscriptionDataSource *_dataSource;
+    id <AccountContext> _accountContext;
     _TtC6Reddit29CommunityCreateFlowController *_flowController;
 }
 
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *flowController; // @synthesize flowController=_flowController;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) AccountSubscriptionDataSource *dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) NSString *analyticsPageType; // @synthesize analyticsPageType=_analyticsPageType;
 @property(nonatomic) _Bool shouldShowCommunityCreation; // @synthesize shouldShowCommunityCreation=_shouldShowCommunityCreation;
@@ -35,7 +38,7 @@
 - (void)subscriptionDataSourceDidFailToUpdateFavoriteState:(id)arg1;
 - (void)subscriptionDataSourceDidFailToLoad:(id)arg1;
 - (void)subscriptionDataSourceDidUpdate:(id)arg1;
-- (id)initWithTableView:(id)arg1 dataSource:(id)arg2;
+- (id)initWithTableView:(id)arg1 dataSource:(id)arg2 accountContext:(id)arg3;
 - (void)dealloc;
 
 @end

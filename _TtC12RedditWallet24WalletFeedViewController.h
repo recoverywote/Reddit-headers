@@ -15,8 +15,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: launchOptions
     // Error parsing type: , name: walletFlow
     // Error parsing type: , name: serviceLocator
-    // Error parsing type: , name: shouldReloadSubject
-    // Error parsing type: , name: timer
     // Error parsing type: , name: $__lazy_storage_$_contentView
     // Error parsing type: , name: $__lazy_storage_$_delayedClaimHandler
     // Error parsing type: , name: disposeBag

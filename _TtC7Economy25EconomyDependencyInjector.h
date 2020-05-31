@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)injectDependenciesWithAccountManager:(id)arg1;
++ (void)injectDependenciesWithAccountManager:(id)arg1 economyAnalyticsLogger:(id)arg2 isInAnonymousBrowsingProvider:(CDUnknownBlockType)arg3;
 - (id)init;
 
 @end

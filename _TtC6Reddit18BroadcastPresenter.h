@@ -8,7 +8,7 @@
 
 @interface _TtC6Reddit18BroadcastPresenter : NSObject
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: streamingConfig
     // Error parsing type: , name: subredditInfo
     // Error parsing type: , name: broadcastManager

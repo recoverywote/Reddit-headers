@@ -10,7 +10,7 @@
 
 @interface _TtC6Reddit25MetaLandingViewController : BaseViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: presenter
     // Error parsing type: , name: buyImmediately
     // Error parsing type: , name: delegate
@@ -24,8 +24,8 @@
 - (void)didTapCloseButton:(id)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithSubredditId:(id)arg1 service:(id)arg2 correlationID:(id)arg3 buyImmediately:(_Bool)arg4;
-- (id)initWithSubredditName:(id)arg1 service:(id)arg2 correlationID:(id)arg3;
+- (id)initWithSubredditId:(id)arg1 accountContext:(id)arg2 correlationID:(id)arg3 buyImmediately:(_Bool)arg4;
+- (id)initWithSubredditName:(id)arg1 accountContext:(id)arg2 correlationID:(id)arg3;
 @property(nonatomic) __weak id <_TtP6Reddit33MetaLandingViewControllerDelegate_> delegate; // @synthesize delegate;
 
 @end

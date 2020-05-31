@@ -16,18 +16,39 @@
 {
     _Bool _unique_watchersIsSet;
     _Bool _max_concurrent_watchersIsSet;
+    _Bool _duration_msIsSet;
+    _Bool _time_remaining_msIsSet;
+    _Bool _time_added_msIsSet;
+    _Bool _stream_stateIsSet;
     long long _unique_watchers;
     long long _max_concurrent_watchers;
+    long long _duration_ms;
+    long long _time_remaining_ms;
+    long long _time_added_ms;
+    NSString *_stream_state;
 }
 
+@property(nonatomic) _Bool stream_stateIsSet; // @synthesize stream_stateIsSet=_stream_stateIsSet;
+@property(copy, nonatomic) NSString *stream_state; // @synthesize stream_state=_stream_state;
+@property(nonatomic) _Bool time_added_msIsSet; // @synthesize time_added_msIsSet=_time_added_msIsSet;
+@property(nonatomic) long long time_added_ms; // @synthesize time_added_ms=_time_added_ms;
+@property(nonatomic) _Bool time_remaining_msIsSet; // @synthesize time_remaining_msIsSet=_time_remaining_msIsSet;
+@property(nonatomic) long long time_remaining_ms; // @synthesize time_remaining_ms=_time_remaining_ms;
+@property(nonatomic) _Bool duration_msIsSet; // @synthesize duration_msIsSet=_duration_msIsSet;
+@property(nonatomic) long long duration_ms; // @synthesize duration_ms=_duration_ms;
 @property(nonatomic) _Bool max_concurrent_watchersIsSet; // @synthesize max_concurrent_watchersIsSet=_max_concurrent_watchersIsSet;
 @property(nonatomic) long long max_concurrent_watchers; // @synthesize max_concurrent_watchers=_max_concurrent_watchers;
 @property(nonatomic) _Bool unique_watchersIsSet; // @synthesize unique_watchersIsSet=_unique_watchersIsSet;
 @property(nonatomic) long long unique_watchers; // @synthesize unique_watchers=_unique_watchers;
+- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetStream_state;
+- (void)unsetTime_added_ms;
+- (void)unsetTime_remaining_ms;
+- (void)unsetDuration_ms;
 - (void)unsetMax_concurrent_watchers;
 - (void)unsetUnique_watchers;
 - (id)copyWithZone:(struct _NSZone *)arg1;
@@ -35,7 +56,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithUnique_watchers:(long long)arg1 max_concurrent_watchers:(long long)arg2;
+- (id)initWithUnique_watchers:(long long)arg1 max_concurrent_watchers:(long long)arg2 duration_ms:(long long)arg3 time_remaining_ms:(long long)arg4 time_added_ms:(long long)arg5 stream_state:(id)arg6;
 - (id)init;
 
 // Remaining properties

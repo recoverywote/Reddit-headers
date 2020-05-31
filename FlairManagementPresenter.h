@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString, RedditService, Subreddit;
-@protocol FlairManagementPresentable;
+@class NSArray, NSString, Subreddit;
+@protocol AccountContext, FlairManagementPresentable;
 
 @interface FlairManagementPresenter : NSObject
 {
     _Bool _isFetching;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
     unsigned long long _modPermissions;
     long long _flairType;
@@ -28,14 +28,14 @@
 @property(readonly, nonatomic) long long flairType; // @synthesize flairType=_flairType;
 @property(readonly, nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 @property(readonly, nonatomic) NSString *pageTitle;
 - (void)fetchData;
 - (void)filterFlairsWithSearchText:(id)arg1;
 - (void)resetFilteredFlairs;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2 modPermissions:(unsigned long long)arg3 flairType:(long long)arg4;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2 modPermissions:(unsigned long long)arg3 flairType:(long long)arg4;
 
 @end
 

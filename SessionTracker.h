@@ -6,9 +6,12 @@
 
 #import <objc/NSObject.h>
 
+#import <RedditCore/NSURLRequestProcessor-Protocol.h>
+#import <RedditCore/NSURLResponseProcessor-Protocol.h>
+
 @class NSDate, NSString, NSUserDefaults;
 
-@interface SessionTracker : NSObject
+@interface SessionTracker : NSObject <NSURLRequestProcessor, NSURLResponseProcessor>
 {
     NSUserDefaults *_userDefaults;
 }
@@ -16,13 +19,19 @@
 + (id)sharedTracker;
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void).cxx_destruct;
-- (void)updateWithResponse:(id)arg1;
-- (void)addHeaderToRequest:(id)arg1;
+- (void)processResponse:(id)arg1;
+- (void)processRequest:(id)arg1;
 @property(readonly, nonatomic) _Bool isValid;
 @property(readonly, nonatomic) NSDate *date;
 @property(readonly, nonatomic) NSString *sessionId;
 @property(copy, nonatomic) NSString *fullString;
 - (id)initWithUserDefaults:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

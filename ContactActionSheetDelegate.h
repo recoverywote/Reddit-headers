@@ -10,6 +10,7 @@
 #import "ModFormViewControllerDelegate-Protocol.h"
 
 @class Channel, NSSet, NSString, RedditService, UIViewController;
+@protocol AccountContext;
 
 @interface ContactActionSheetDelegate : NSObject <ModFormViewControllerDelegate, ContactActionSheetDelegate>
 {
@@ -22,8 +23,10 @@
     UIViewController *_viewController;
     Channel *_channel;
     NSSet *_popClasses;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) NSSet *popClasses; // @synthesize popClasses=_popClasses;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
@@ -46,7 +49,6 @@
 - (id)userStringForContact:(id)arg1;
 - (void)showDeleteAllMessagesPromptWithContact:(id)arg1;
 - (void)showBanUserFromChatPromptWithContact:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)showBanUserFormWithContact:(id)arg1;
 - (void)showKickControllerWithContact:(id)arg1;
 - (void)showReportControllerWithContact:(id)arg1;
@@ -59,7 +61,8 @@
 - (void)contactActionSheetViewController:(id)arg1 didTapKick:(id)arg2;
 - (void)contactActionSheetViewController:(id)arg1 didTapReport:(id)arg2;
 - (void)contactActionSheetViewController:(id)arg1 didTapShowProfileOf:(id)arg2;
-- (id)initWithViewController:(id)arg1 channel:(id)arg2 popClassesInCaseOfBlock:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithViewController:(id)arg1 channel:(id)arg2 popClassesInCaseOfBlock:(id)arg3 accountContext:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

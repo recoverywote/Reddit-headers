@@ -12,7 +12,6 @@
 
 - (void)presentTooltipOnceForNode:(id)arg1;
 - (void)collectionNode:(id)arg1 willDisplayItemWithNode:(id)arg2;
-- (void)presentTooltipOnceForCell:(id)arg1;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)showBottomToolTipType:(unsigned long long)arg1 fromView:(id)arg2;
 - (void)showTopToolTipType:(unsigned long long)arg1 fromView:(id)arg2;

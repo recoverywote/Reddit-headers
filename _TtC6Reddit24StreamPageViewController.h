@@ -6,11 +6,11 @@
 
 #import <UIKit/UIPageViewController.h>
 
-#import "GildingFlowDelegate-Protocol.h"
 #import "UIPageViewControllerDataSource-Protocol.h"
 #import "UIPageViewControllerDelegate-Protocol.h"
+#import "_TtP6Reddit19GildingFlowDelegate_-Protocol.h"
 
-@interface _TtC6Reddit24StreamPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, GildingFlowDelegate>
+@interface _TtC6Reddit24StreamPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, _TtP6Reddit19GildingFlowDelegate_>
 {
     // Error parsing type: , name: controlView
     // Error parsing type: , name: liveStreamViewerNav

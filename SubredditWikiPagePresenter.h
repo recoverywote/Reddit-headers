@@ -7,14 +7,14 @@
 #import <objc/NSObject.h>
 
 @class NSAttributedString, NSString, NSURL, RedditService, Subreddit, SubredditWikiIndex, SubredditWikiPage;
-@protocol SubredditWikiPagePresentable;
+@protocol AccountContext, SubredditWikiPagePresentable;
 
 @interface SubredditWikiPagePresenter : NSObject
 {
     _Bool _isFetchingSubreddit;
     _Bool _isFetchingStyling;
     _Bool _isFetchingWikiPage;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     SubredditWikiPage *_wikiPage;
     id <SubredditWikiPagePresentable> _presentable;
     Subreddit *_subreddit;
@@ -34,7 +34,7 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak id <SubredditWikiPagePresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) SubredditWikiPage *wikiPage; // @synthesize wikiPage=_wikiPage;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSAttributedString *footerTextString;
 @property(readonly, copy, nonatomic) NSAttributedString *contentAttributedString;
@@ -46,10 +46,11 @@
 - (void)fetchWikiIndex;
 - (void)fetchWikiPage;
 - (void)fetchSubredditWikiData;
+@property(readonly, nonatomic) RedditService *service;
 - (id)initWithPresenter:(id)arg1 pathName:(id)arg2 wikiPageURL:(id)arg3;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2 pathName:(id)arg3 wikiPageURL:(id)arg4;
-- (id)initWithService:(id)arg1 subredditName:(id)arg2 pathName:(id)arg3 wikiPageURL:(id)arg4;
-- (id)initWithService:(id)arg1 pathName:(id)arg2 wikiPageURL:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2 pathName:(id)arg3 wikiPageURL:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 subredditName:(id)arg2 pathName:(id)arg3 wikiPageURL:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 pathName:(id)arg2 wikiPageURL:(id)arg3;
 
 @end
 

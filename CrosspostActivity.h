@@ -7,9 +7,11 @@
 #import <UIKit/UIActivity.h>
 
 @class Post, UIViewController;
+@protocol AccountContext;
 
 @interface CrosspostActivity : UIActivity
 {
+    id <AccountContext> _accountContext;
     Post *_post;
     UIViewController *_presentingViewController;
 }
@@ -18,13 +20,14 @@
 + (id)activityType;
 @property(nonatomic) __weak UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)performActivity;
 - (_Bool)canPerformWithActivityItems:(id)arg1;
 - (id)activityImage;
 - (id)activityTitle;
 - (id)activityType;
-- (id)initWithPresentingViewController:(id)arg1;
+- (id)initWithPresentingViewController:(id)arg1 accountContext:(id)arg2;
 
 @end
 

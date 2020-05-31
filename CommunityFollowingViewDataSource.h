@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)currentCachedSubscriptions;
++ (id)currentCachedSubscriptionsWithService:(id)arg1;
 - (id)headerString;
 - (id)indexes;
 - (_Bool)listingNetworkSourceShouldFilterObject:(id)arg1;

@@ -11,16 +11,16 @@
 #import "_TtP6Reddit31MetaEmoteComposeManagerDelegate_-Protocol.h"
 #import "_TtP6Reddit31MetaGIPHYComposeManagerDelegate_-Protocol.h"
 
-@class CommentReplyView, CommentTreeNode, NSString, Post, RedditService, _TtC6Reddit21MetaRichTextConverter, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
-@protocol CommentReplyViewControllerDelegate;
+@class CommentReplyView, CommentTreeNode, NSString, Post, _TtC6Reddit21MetaRichTextConverter, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
+@protocol AccountContext, CommentReplyViewControllerDelegate;
 
 @interface CommentReplyViewController : BaseViewController <UITextViewDelegate, UITextFieldDelegate, _TtP6Reddit31MetaEmoteComposeManagerDelegate_, _TtP6Reddit31MetaGIPHYComposeManagerDelegate_>
 {
     _Bool _isFromSingleCommentThread;
     CommentTreeNode *_commentTreeNode;
-    CommentReplyView *_composeView;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Post *_post;
+    CommentReplyView *_composeView;
     _TtC6Reddit23MetaEmoteComposeManager *_emoteComposeManager;
     _TtC6Reddit23MetaGIPHYComposeManager *_giphyComposeManager;
     _TtC6Reddit21MetaRichTextConverter *_richTextConverter;
@@ -32,9 +32,9 @@
 @property(retain, nonatomic) _TtC6Reddit23MetaGIPHYComposeManager *giphyComposeManager; // @synthesize giphyComposeManager=_giphyComposeManager;
 @property(retain, nonatomic) _TtC6Reddit23MetaEmoteComposeManager *emoteComposeManager; // @synthesize emoteComposeManager=_emoteComposeManager;
 @property(nonatomic) _Bool isFromSingleCommentThread; // @synthesize isFromSingleCommentThread=_isFromSingleCommentThread;
-@property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) CommentReplyView *composeView; // @synthesize composeView=_composeView;
+@property(readonly, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
 - (void).cxx_destruct;
 - (id)clickEventForComment:(id)arg1 noun:(id)arg2;
@@ -51,7 +51,7 @@
 - (void)toggleSendButton:(id)arg1 asEnabled:(_Bool)arg2;
 - (id)majorContentView;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 commentTreeNode:(id)arg2 post:(id)arg3 delegate:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 commentTreeNode:(id)arg2 post:(id)arg3 delegate:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,12 +11,12 @@
 #import "SKStoreProductViewControllerDelegate-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class AdPost, FeedPostHlsVideoView, NSLayoutConstraint, NSString, RedditService, SKStoreProductViewController, UIProgressView, UIView, WKWebView, _TtC6Reddit15RedditVideoNode;
-@protocol _TtP11RedditVideo12VideoContext_;
+@class AdPost, FeedPostHlsVideoView, NSLayoutConstraint, NSString, SKStoreProductViewController, UIProgressView, UIView, WKWebView, _TtC6Reddit15RedditVideoNode;
+@protocol AccountContext, _TtP11RedditVideo12VideoContext_;
 
 @interface AdPostDetailViewController : BaseViewController <FeedPostHlsVideoViewDelegate, UIScrollViewDelegate, SKStoreProductViewControllerDelegate, FeedPostRedditVideoViewDelegate>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     AdPost *_adPost;
     id <_TtP11RedditVideo12VideoContext_> _videoContext;
     UIView *_topView;
@@ -41,7 +41,7 @@
 @property(retain, nonatomic) UIView *topView; // @synthesize topView=_topView;
 @property(retain, nonatomic) id <_TtP11RedditVideo12VideoContext_> videoContext; // @synthesize videoContext=_videoContext;
 @property(retain, nonatomic) AdPost *adPost; // @synthesize adPost=_adPost;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)didTapOverflow:(id)arg1;
 - (void)productViewControllerDidFinish:(id)arg1;
@@ -62,7 +62,7 @@
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithService:(id)arg1 adPost:(id)arg2 videoContext:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 adPost:(id)arg2 videoContext:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

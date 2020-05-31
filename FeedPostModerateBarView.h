@@ -9,13 +9,14 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseButton, HighlightableButton, NSObject, NSString, Post;
-@protocol FeedPostModerateBarViewDelegate;
+@protocol FeedPostModerateBarViewDelegate, ViewContext;
 
 @interface FeedPostModerateBarView : BaseView <ObjectObserverProtocol>
 {
     _Bool _isInModQueue;
     NSObject<FeedPostModerateBarViewDelegate> *_delegate;
     Post *_post;
+    id <ViewContext> _viewContext;
     HighlightableButton *_approveButton;
     HighlightableButton *_deleteButton;
     HighlightableButton *_deleteAsSpamButton;
@@ -30,6 +31,7 @@
 @property(retain, nonatomic) HighlightableButton *deleteAsSpamButton; // @synthesize deleteAsSpamButton=_deleteAsSpamButton;
 @property(retain, nonatomic) HighlightableButton *deleteButton; // @synthesize deleteButton=_deleteButton;
 @property(retain, nonatomic) HighlightableButton *approveButton; // @synthesize approveButton=_approveButton;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak NSObject<FeedPostModerateBarViewDelegate> *delegate; // @synthesize delegate=_delegate;
@@ -46,7 +48,8 @@
 - (_Bool)isPostReadonly;
 - (void)configureWithData:(id)arg1;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

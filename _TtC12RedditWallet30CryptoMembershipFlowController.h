@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: user
     // Error parsing type: , name: redditService
+    // Error parsing type: , name: transactionRepository
     // Error parsing type: , name: repository
     // Error parsing type: , name: walletProvider
     // Error parsing type: , name: ethereumProvider

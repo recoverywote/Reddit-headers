@@ -15,6 +15,7 @@
 
 @interface SelectAwardViewController : BaseViewController <SelectedAwardViewControllerDelegate, SelectAwardPresentable, UICollectionViewDelegate>
 {
+    _Bool _shouldScrollToBanner;
     SelectAwardPresenter *_presenter;
     id <SelectAwardViewControllerDelegate> _delegate;
     SelectAwardDelegator *_delegator;
@@ -29,6 +30,7 @@
     NSLayoutConstraint *_selectedAwardViewBottomConstraint;
 }
 
+@property(nonatomic) _Bool shouldScrollToBanner; // @synthesize shouldScrollToBanner=_shouldScrollToBanner;
 @property(retain, nonatomic) NSLayoutConstraint *selectedAwardViewBottomConstraint; // @synthesize selectedAwardViewBottomConstraint=_selectedAwardViewBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *coinSaleBannerTop; // @synthesize coinSaleBannerTop=_coinSaleBannerTop;
 @property(retain, nonatomic) CoinSale *coinSale; // @synthesize coinSale=_coinSale;
@@ -58,6 +60,9 @@
 - (void)configureNavigationBarAppearance;
 - (_Bool)prefersTabBarHidden;
 - (void)scrollViewDidScroll:(id)arg1;
+- (void)scrollToBanner:(id)arg1;
+- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
+- (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)updateSelectedItem;
 - (void)updatePromptLabel;
 - (void)updateUserInteraction;

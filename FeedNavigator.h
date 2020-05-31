@@ -7,18 +7,20 @@
 #import <objc/NSObject.h>
 
 @class BaseViewController, RailsNavigator, RedditService;
+@protocol AccountContext;
 
 @interface FeedNavigator : NSObject
 {
     BaseViewController *_vc;
+    id <AccountContext> _accountContext;
     CDUnknownBlockType _willNavigateToPostBlock;
     RailsNavigator *_railsNavigator;
 }
 
 @property(retain, nonatomic) RailsNavigator *railsNavigator; // @synthesize railsNavigator=_railsNavigator;
 @property(copy, nonatomic) CDUnknownBlockType willNavigateToPostBlock; // @synthesize willNavigateToPostBlock=_willNavigateToPostBlock;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) RedditService *service;
 - (void)navigateToWalletWithLaunchOptions:(id)arg1;
 - (void)navigateToPostCollection:(id)arg1 withPost:(id)arg2;
 - (void)navigateToPostCollectionWithId:(id)arg1 withPost:(id)arg2;
@@ -66,6 +68,8 @@
 - (void)navigateToUrl:(id)arg1 forPost:(id)arg2 outboundSourceElement:(unsigned long long)arg3;
 - (void)navigateToUrl:(id)arg1;
 @property(nonatomic, setter=setupWithViewController:) __weak BaseViewController *vc; // @synthesize vc=_vc;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

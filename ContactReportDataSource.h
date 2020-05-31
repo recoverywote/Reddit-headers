@@ -8,23 +8,25 @@
 
 #import "ReportViewControllerDataSource-Protocol.h"
 
-@class Channel, Contact, NSString;
+@class Channel, Contact, NSString, RedditService;
 
 @interface ContactReportDataSource : NSObject <ReportViewControllerDataSource>
 {
+    RedditService *_service;
     Contact *_contact;
     Channel *_channel;
 }
 
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
 - (void)submitReportWithItem:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)reportingSubject;
 - (id)actionButtonTitle;
 - (id)reportItems;
 - (id)title;
-- (id)initWithContact:(id)arg1 channel:(id)arg2;
+- (id)initWithService:(id)arg1 contact:(id)arg2 channel:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

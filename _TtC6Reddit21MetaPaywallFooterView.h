@@ -6,9 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-#import "AttributedLabelRegularDelegate-Protocol.h"
-
-@interface _TtC6Reddit21MetaPaywallFooterView : UIView <AttributedLabelRegularDelegate>
+@interface _TtC6Reddit21MetaPaywallFooterView : UIView
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: priceView

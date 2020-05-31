@@ -8,11 +8,11 @@
 
 @interface _TtC6Reddit23CommunityAvatarUploader : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: service
     // Error parsing type: , name: avatar
     // Error parsing type: , name: community
     // Error parsing type: , name: status
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: savedFilePath
     // Error parsing type: , name: uploadedFilePath
     // Error parsing type: , name: currentUploadAttempt

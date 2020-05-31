@@ -16,6 +16,7 @@
 #import "UIScrollViewDelegate-Protocol.h"
 
 @class ASTableNode, BaseLabel, Channel, ChatCompositionViewController, ChatConnectionObserver, ChatConnectionStatusViewController, ChatDiffingAdapter, ChatFeedInteractor, ChatSkeletonView, ChatUserMentionTypeAheadAccessory, ChatUserMentionViewController, ContactActionSheetDelegate, NSString, NSTimer, RedditService, TypingIndicatorView, UIBarButtonItem, UIPanGestureRecognizer;
+@protocol AccountContext;
 
 @interface ChatTextureViewController : BaseViewController <ChatMessageCellDelegate, ChatFeedInteractorDelegate, ChatCompositionViewControllerDelegate, UIScrollViewDelegate, RUIThemeUpdateCallbackProtocol, UIGestureRecognizerDelegate, ChatConnectionObserverDelegate, PostActionSheetDelegate>
 {
@@ -23,6 +24,7 @@
     Channel *_channel;
     ChatFeedInteractor *_feedInteractor;
     ChatCompositionViewController *_compositionController;
+    id <AccountContext> _accountContext;
     ASTableNode *_tableNode;
     UIBarButtonItem *_moreButton;
     ChatDiffingAdapter *_diffingAdapter;
@@ -56,6 +58,7 @@
 @property(retain, nonatomic) UIBarButtonItem *moreButton; // @synthesize moreButton=_moreButton;
 @property(retain, nonatomic) ASTableNode *tableNode; // @synthesize tableNode=_tableNode;
 @property(nonatomic) _Bool shouldShowLoadingSkeleton; // @synthesize shouldShowLoadingSkeleton=_shouldShowLoadingSkeleton;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatCompositionViewController *compositionController; // @synthesize compositionController=_compositionController;
 @property(retain, nonatomic) ChatFeedInteractor *feedInteractor; // @synthesize feedInteractor=_feedInteractor;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
@@ -100,7 +103,6 @@
 - (void)configureWithUrl:(id)arg1;
 - (void)configureWithUser:(id)arg1;
 - (void)configureWithChannel:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)updateInsetsAndShouldChangeOffset:(_Bool)arg1;
 - (struct UIEdgeInsets)invertedPreferredContentInset;
@@ -109,7 +111,8 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)init;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 - (void)didPressDelete:(id)arg1;
 - (void)logComplaintSiteVisitedEvent:(id)arg1 chatMessage:(id)arg2 complaintType:(unsigned long long)arg3;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;

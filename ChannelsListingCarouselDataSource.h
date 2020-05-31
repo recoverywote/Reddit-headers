@@ -6,7 +6,7 @@
 
 #import "NetworkCarouselDataSource.h"
 
-@class NSArray, RedditService;
+@class NSArray;
 
 @interface ChannelsListingCarouselDataSource : NetworkCarouselDataSource
 {
@@ -15,7 +15,6 @@
 
 @property(retain, nonatomic) NSArray *allChannels; // @synthesize allChannels=_allChannels;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) RedditService *service;
 - (_Bool)hasMoreContent;
 - (void)fetchData;
 

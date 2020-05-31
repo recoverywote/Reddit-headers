@@ -9,17 +9,19 @@
 #import "ListingNetworkSourceDelegate-Protocol.h"
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class NSArray, NSString, SubredditsNetworkSource;
+@class NSArray, NSString, RedditService, SubredditsNetworkSource;
 
 @interface AccountSubscriptionDataSource : NSObject <ListingNetworkSourceDelegate, ObjectObserverProtocol>
 {
     _Bool _hasPendingUpdate;
     NSArray *_subscriptions;
+    RedditService *_service;
     SubredditsNetworkSource *_subscriptionNetworkSource;
 }
 
 @property(nonatomic) _Bool hasPendingUpdate; // @synthesize hasPendingUpdate=_hasPendingUpdate;
 @property(retain, nonatomic) SubredditsNetworkSource *subscriptionNetworkSource; // @synthesize subscriptionNetworkSource=_subscriptionNetworkSource;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSArray *subscriptions; // @synthesize subscriptions=_subscriptions;
 - (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
@@ -36,7 +38,7 @@
 - (void)loadSubscriptionData;
 @property(readonly, nonatomic) _Bool isLoading;
 - (void)dealloc;
-- (id)init;
+- (id)initWithService:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

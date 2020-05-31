@@ -9,16 +9,18 @@
 #import "LocationPrivacyInfoViewDelegate-Protocol.h"
 
 @class LocationManager, LocationPrivacyInfoView;
-@protocol PrivacyViewDelegate;
+@protocol AccountContext, PrivacyViewDelegate;
 
 @interface PrivacyInfoViewController : BaseViewController <LocationPrivacyInfoViewDelegate>
 {
     LocationPrivacyInfoView *_privacyView;
     id <PrivacyViewDelegate> _delegate;
+    id <AccountContext> _accountContext;
     LocationManager *_locationManager;
 }
 
 @property(retain, nonatomic) LocationManager *locationManager; // @synthesize locationManager=_locationManager;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PrivacyViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) LocationPrivacyInfoView *privacyView; // @synthesize privacyView=_privacyView;
 - (void).cxx_destruct;
@@ -28,6 +30,7 @@
 - (void)configureNavigationBarAppearance;
 - (void)dismiss;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

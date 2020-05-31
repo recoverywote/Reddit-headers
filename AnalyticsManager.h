@@ -7,10 +7,11 @@
 #import <objc/NSObject.h>
 
 #import "AnalyticsProcessorDelegate-Protocol.h"
+#import "_TtP7Economy22EconomyAnalyticsLogger_-Protocol.h"
 
 @class AnalyticsEventProcessor, NSString;
 
-@interface AnalyticsManager : NSObject <AnalyticsProcessorDelegate>
+@interface AnalyticsManager : NSObject <_TtP7Economy22EconomyAnalyticsLogger_, AnalyticsProcessorDelegate>
 {
     _Bool _enabled;
     AnalyticsEventProcessor *_eventProcessor;
@@ -29,6 +30,8 @@
 - (void)enable;
 - (id)init;
 - (void)logLaunchEventWithReferringURL:(id)arg1 isFirstLaunch:(_Bool)arg2;
+- (void)logWithEvents:(id)arg1;
+- (void)logWithEvent:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

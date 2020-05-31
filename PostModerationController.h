@@ -10,12 +10,12 @@
 {
 }
 
-+ (void)removePost:(id)arg1 asSpam:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-+ (void)removePost:(id)arg1 asSpam:(_Bool)arg2;
-+ (void)undistinguishPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
-+ (void)distinguishPostAsAdmin:(id)arg1;
-+ (void)distinguishPostAsModerator:(id)arg1 completion:(CDUnknownBlockType)arg2;
-+ (void)approvePost:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)removePost:(id)arg1 service:(id)arg2 asSpam:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
++ (void)removePost:(id)arg1 service:(id)arg2 asSpam:(_Bool)arg3;
++ (void)undistinguishPost:(id)arg1 service:(id)arg2 completion:(CDUnknownBlockType)arg3;
++ (void)distinguishPostAsAdmin:(id)arg1 service:(id)arg2;
++ (void)distinguishPostAsModerator:(id)arg1 service:(id)arg2 completion:(CDUnknownBlockType)arg3;
++ (void)approvePost:(id)arg1 service:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 @end
 

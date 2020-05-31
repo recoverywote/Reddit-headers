@@ -41,7 +41,7 @@
 - (void)addModAnnouncementToString;
 - (void)addUserMentionsToString;
 - (void)addLinksToString;
-- (void)configureWithMessage:(id)arg1 channel:(id)arg2;
+- (void)configureWithAccountContext:(id)arg1 message:(id)arg2 channel:(id)arg3;
 - (id)init;
 
 @end

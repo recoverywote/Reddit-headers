@@ -12,10 +12,11 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class BaseCollectionView, ChatMembersNetworkSource, ContactActionSheetDelegate, ListingStateController, NSString, RedditService, SubredditChannel;
+@protocol AccountContext;
 
 @interface ChatSubredditMembersViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource, ListingNetworkSourceDelegate, ListingStateControllerDelegate>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     ChatMembersNetworkSource *_networkSource;
     SubredditChannel *_channel;
     ListingStateController *_listingStateController;
@@ -28,7 +29,7 @@
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(readonly, nonatomic) SubredditChannel *channel; // @synthesize channel=_channel;
 @property(readonly, nonatomic) ChatMembersNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 reportedContact:(id)arg3 blockedContact:(id)arg4;
 - (void)showContactActionSheetWithContact:(id)arg1;
@@ -46,7 +47,8 @@
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 listingNetworkSource:(id)arg2 channel:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 listingNetworkSource:(id)arg2 channel:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

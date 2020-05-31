@@ -6,7 +6,7 @@
 
 #import <RedditCore/RedditService.h>
 
-@class BadgeCountManager, ChatMessageStore, ChatNetworkManager, ChatSubredditMessageStore, ContactByChannelStore, ContactStore, ContentDiskCacheManager, CrosspostManager, DatabaseManager, DirectChannelStore, FocusVerticalManager, GivenAwardsManager, GoldProductDataSource, InitialHomeFeedController, LegacyExperimentManager, LocationFilterManager, LoggedOutHiddenPostManager, MetaManager, NSSet, NewsPersonalizationManager, PostCommentCache, PostHistoryManager, PostSubmissionManager, PreferenceSyncManager, RecentChatPostManager, SubredditChannelStore, SubredditListManager, SubredditManager, SubscribedSubredditsManager, UploadRequestManager, _TtC6Reddit13SurveyManager, _TtC6Reddit22ShareActivitiesManager, _TtC6Reddit23SharePausePromptManager;
+@class BadgeCountManager, ChatMessageStore, ChatNetworkManager, ChatSubredditMessageStore, ContactByChannelStore, ContactStore, ContentDiskCacheManager, CrosspostManager, DatabaseManager, DirectChannelStore, FocusVerticalManager, GivenAwardsManager, GoldProductDataSource, InitialHomeFeedController, LegacyExperimentManager, LocationFilterManager, LoggedOutHiddenPostManager, MetaManager, NSSet, NewsPersonalizationManager, PostCommentCache, PostHistoryManager, PostSubmissionManager, PreferenceSyncManager, RecentChatPostManager, SubredditChannelStore, SubredditListManager, SubredditManager, SubscribedSubredditsManager, UploadRequestManager, _TtC6Reddit13SurveyManager;
 
 @interface RedditService (RichTextComment)
 - (void)editComment:(id)arg1 withText:(id)arg2 isRichText:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
@@ -23,8 +23,6 @@
 - (id)chatMessageWithURL:(id)arg1 inChannel:(id)arg2;
 @property(readonly, nonatomic) _TtC6Reddit13SurveyManager *surveyManager;
 @property(readonly, nonatomic) UploadRequestManager *uploadRequestManager;
-@property(readonly) _TtC6Reddit23SharePausePromptManager *sharePausePromptManager;
-@property(readonly) _TtC6Reddit22ShareActivitiesManager *shareActivitiesManager;
 @property(readonly, nonatomic) PreferenceSyncManager *preferenceSyncManager;
 @property(readonly, nonatomic) MetaManager *metaManager;
 @property(copy, nonatomic) NSSet *reportedMessageIds;

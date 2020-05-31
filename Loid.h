@@ -6,9 +6,12 @@
 
 #import <objc/NSObject.h>
 
+#import <RedditCore/NSURLRequestProcessor-Protocol.h>
+#import <RedditCore/NSURLResponseProcessor-Protocol.h>
+
 @class NSString, NSUserDefaults;
 
-@interface Loid : NSObject
+@interface Loid : NSObject <NSURLRequestProcessor, NSURLResponseProcessor>
 {
     NSString *_pk;
     NSUserDefaults *_userDefaults;
@@ -17,9 +20,9 @@
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(retain, nonatomic) NSString *pk; // @synthesize pk=_pk;
 - (void).cxx_destruct;
-- (id)debugDescription;
-- (void)updateWithResponse:(id)arg1;
-- (void)addHeaderToRequest:(id)arg1;
+@property(readonly, copy) NSString *debugDescription;
+- (void)processResponse:(id)arg1;
+- (void)processRequest:(id)arg1;
 @property(copy, nonatomic) NSString *fullTokenLoid;
 - (id)tokenComponents;
 - (id)createdDate;
@@ -28,6 +31,11 @@
 @property(readonly, nonatomic) NSString *loid;
 @property(readonly, nonatomic) NSString *userDefaultsKey;
 - (id)initWithAccountPk:(id)arg1 userDefaults:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

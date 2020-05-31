@@ -17,7 +17,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: newPointsView
     // Error parsing type: , name: usePointsView
     // Error parsing type: , name: transactionListView
-    // Error parsing type: , name: txToastContainer
 }
 
 - (void).cxx_destruct;

@@ -9,6 +9,8 @@
 @interface _TtC6Reddit25MetaClaimablePointsBanner : NSObject
 {
     // Error parsing type: , name: claim
+    // Error parsing type: , name: introCopy
+    // Error parsing type: , name: ctaCopy
     // Error parsing type: , name: onDidDismiss
 }
 

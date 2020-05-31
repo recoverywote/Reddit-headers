@@ -23,7 +23,6 @@
     NSArray *_currentChannelObjects;
     BaseCollectionView *_collectionView;
     BaseBarButtonItem *_chatButton;
-    RedditService *_service;
     ChatInboxSubredditDelegator *_subredditDelegator;
     unsigned long long _type;
     NSMutableDictionary *_preloadingSources;
@@ -34,7 +33,6 @@
 @property(retain, nonatomic) NSMutableDictionary *preloadingSources; // @synthesize preloadingSources=_preloadingSources;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) ChatInboxSubredditDelegator *subredditDelegator; // @synthesize subredditDelegator=_subredditDelegator;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) BaseBarButtonItem *chatButton; // @synthesize chatButton=_chatButton;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(copy, nonatomic) NSArray *currentChannelObjects; // @synthesize currentChannelObjects=_currentChannelObjects;
@@ -84,7 +82,8 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)didMoveToParentViewController:(id)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 type:(unsigned long long)arg2 presenter:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithPresenter:(id)arg1 type:(unsigned long long)arg2;
 - (void)dealloc;
 
 // Remaining properties

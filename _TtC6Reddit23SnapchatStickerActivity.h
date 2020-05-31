@@ -10,6 +10,7 @@
 
 @interface _TtC6Reddit23SnapchatStickerActivity : UIActivity
 {
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: isBadged
     // Error parsing type: , name: image
     // Error parsing type: , name: post
@@ -29,7 +30,7 @@
 @property(nonatomic, readonly) NSString *activityType;
 @property(nonatomic, readonly) UIImage *activityImage;
 @property(nonatomic, readonly) NSString *activityTitle;
-- (id)initWithBadged:(_Bool)arg1;
+- (id)initWithViewContext:(id)arg1 badged:(_Bool)arg2;
 @property(nonatomic, retain) SharePostNode *sharePostNode; // @synthesize sharePostNode;
 @property(nonatomic, retain) Post *post; // @synthesize post;
 @property(nonatomic, retain) UIImage *image; // @synthesize image;

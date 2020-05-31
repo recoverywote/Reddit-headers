@@ -8,7 +8,7 @@
 
 #import "AsyncStoreObserver-Protocol.h"
 
-@class NSArray, NSObject, NSString, RedditService, SBDGroupChannelListQuery;
+@class NSArray, NSObject, NSString, SBDGroupChannelListQuery;
 @protocol ChatInboxNetworkSourceDelegate;
 
 @interface ChatInboxNetworkSource : ListingNetworkSource <AsyncStoreObserver>
@@ -20,10 +20,8 @@
     SBDGroupChannelListQuery *_joinedQuery;
     long long _cacheOffset;
     unsigned long long _sourceType;
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) unsigned long long sourceType; // @synthesize sourceType=_sourceType;
 @property(nonatomic) long long cacheOffset; // @synthesize cacheOffset=_cacheOffset;
 @property(retain, nonatomic) SBDGroupChannelListQuery *joinedQuery; // @synthesize joinedQuery=_joinedQuery;

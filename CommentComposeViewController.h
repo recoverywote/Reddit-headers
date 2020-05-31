@@ -13,8 +13,8 @@
 #import "_TtP6Reddit31MetaEmoteComposeManagerDelegate_-Protocol.h"
 #import "_TtP6Reddit31MetaGIPHYComposeManagerDelegate_-Protocol.h"
 
-@class Comment, CommentComposeView, Message, NSString, Post, RedditService, _TtC6Reddit21MetaRichTextConverter, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
-@protocol CommentComposeViewControllerDelegate;
+@class Comment, CommentComposeView, Message, NSString, Post, _TtC6Reddit21MetaRichTextConverter, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
+@protocol AccountContext, CommentComposeViewControllerDelegate;
 
 @interface CommentComposeViewController : BaseViewController <UITextViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate, RequestToNavigateView, _TtP6Reddit31MetaEmoteComposeManagerDelegate_, _TtP6Reddit31MetaGIPHYComposeManagerDelegate_>
 {
@@ -22,7 +22,7 @@
     _Bool _isComposingCommentNotMessage;
     _Bool _isFromSingleCommentThread;
     CommentComposeView *_composeView;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Post *_post;
     Comment *_comment;
     Message *_message;
@@ -48,7 +48,7 @@
 @property(readonly, nonatomic) Message *message; // @synthesize message=_message;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) CommentComposeView *composeView; // @synthesize composeView=_composeView;
 - (void).cxx_destruct;
 - (id)clickEventForComment:(id)arg1 noun:(id)arg2;
@@ -68,9 +68,9 @@
 - (id)majorContentView;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 message:(id)arg2 delegate:(id)arg3;
-- (id)initWithService:(id)arg1 editingComment:(id)arg2 post:(id)arg3 delegate:(id)arg4;
-- (id)initWithService:(id)arg1 post:(id)arg2 delegate:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 message:(id)arg2 delegate:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 editingComment:(id)arg2 post:(id)arg3 delegate:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 delegate:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

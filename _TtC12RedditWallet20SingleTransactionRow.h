@@ -11,11 +11,11 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: tapSubject
     // Error parsing type: , name: date
-    // Error parsing type: , name: imageProvider
     // Error parsing type: , name: subredditIconView
     // Error parsing type: , name: subredditIconBackground
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: tokenIconView
+    // Error parsing type: , name: loaderIndicator
     // Error parsing type: , name: tokenAmountLabel
     // Error parsing type: , name: disposeBag
 }

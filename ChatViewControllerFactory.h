@@ -10,8 +10,8 @@
 {
 }
 
-+ (id)chatSettingsViewControllerWithService:(id)arg1 channel:(id)arg2;
-+ (id)chatSettingsPresenterWithService:(id)arg1 channel:(id)arg2;
++ (id)chatSettingsViewControllerWithAccountContext:(id)arg1 channel:(id)arg2;
++ (id)chatSettingsPresenterWithAccountContext:(id)arg1 channel:(id)arg2;
 
 @end
 

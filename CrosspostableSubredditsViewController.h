@@ -11,12 +11,14 @@
 #import "UITextFieldDelegate-Protocol.h"
 
 @class BaseTableView, EmptyDogeView, NSArray, NSString, Post;
+@protocol AccountContext;
 
 @interface CrosspostableSubredditsViewController : BaseViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     Post *_post;
     CDUnknownBlockType _closeActionBlock;
     CDUnknownBlockType _subredditSelectionBlock;
+    id <AccountContext> _accountContext;
     NSArray *_recentSubreddits;
     NSArray *_subscribedSubreddits;
     NSArray *_duplicatePosts;
@@ -29,6 +31,7 @@
 @property(copy, nonatomic) NSArray *duplicatePosts; // @synthesize duplicatePosts=_duplicatePosts;
 @property(copy, nonatomic) NSArray *subscribedSubreddits; // @synthesize subscribedSubreddits=_subscribedSubreddits;
 @property(copy, nonatomic) NSArray *recentSubreddits; // @synthesize recentSubreddits=_recentSubreddits;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType subredditSelectionBlock; // @synthesize subredditSelectionBlock=_subredditSelectionBlock;
 @property(copy, nonatomic) CDUnknownBlockType closeActionBlock; // @synthesize closeActionBlock=_closeActionBlock;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
@@ -49,6 +52,7 @@
 - (id)majorContentView;
 - (struct UIEdgeInsets)preferredContentInset;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

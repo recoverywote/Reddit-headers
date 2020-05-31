@@ -11,11 +11,12 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
 @class BaseButton, BaseCollectionView, BaseLabel, NSString, RedditService, Subreddit, TextureBackgroundView, UIControl;
-@protocol PostViewControllerDelegate;
+@protocol AccountContext, PostViewControllerDelegate;
 
 @interface PostMenuViewController : UIViewController <UIViewControllerTransitioningDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 {
     id <PostViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     TextureBackgroundView *_menuContainerView;
     UIControl *_dimmerView;
     BaseLabel *_titleLabel;
@@ -23,11 +24,9 @@
     BaseButton *_closeButton;
     Subreddit *_subreddit;
     NSString *_analyticBaseURL;
-    RedditService *_service;
 }
 
 + (id)allPostTypes;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSString *analyticBaseURL; // @synthesize analyticBaseURL=_analyticBaseURL;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
@@ -35,6 +34,7 @@
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIControl *dimmerView; // @synthesize dimmerView=_dimmerView;
 @property(retain, nonatomic) TextureBackgroundView *menuContainerView; // @synthesize menuContainerView=_menuContainerView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (struct CGSize)preferredContentSize;
@@ -52,7 +52,8 @@
 - (void)dismiss;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)viewDidLoad;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2 analyticBaseURL:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2 analyticBaseURL:(id)arg3;
 - (id)availablePostTypes;
 
 // Remaining properties

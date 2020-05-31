@@ -14,7 +14,7 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
-@class BaseCollectionView, ChatFeedInteractor, NSArray, NSMutableArray, NSString, RUIActionSheetViewController, RedditService, SlidingSelector;
+@class BaseCollectionView, ChatFeedInteractor, NSArray, NSMutableArray, NSString, RUIActionSheetViewController, SlidingSelector;
 @protocol ChatKeyboardAnalyticsTracker;
 
 @interface ChatPostPickerViewController : ListingViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RUIActionSheetViewControllerDelegate, FeedPostImageViewDelegate, FeedPostVideoViewDelegate, FeedPostYouTubeEmbeddedViewDelegate, CurrentActionSheetProtocol>
@@ -38,7 +38,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) __weak RUIActionSheetViewController *actionSheetViewController;
 - (_Bool)feedPostYouTubeEmbeddedViewShouldHideNsfw:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (id)layout;
 - (void)setupNetworkSources;
 - (void)postTypeDidChange:(id)arg1;

@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class SubredditDisplayView;
+@class _TtC6Reddit20SubredditDisplayView;
 
 @protocol SubredditDisplayViewDelegate <NSObject>
-- (void)subredditDisplayViewDidTap:(SubredditDisplayView *)arg1;
+- (void)subredditDisplayViewDidTap:(_TtC6Reddit20SubredditDisplayView *)arg1;
 @end
 

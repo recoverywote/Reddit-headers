@@ -8,7 +8,7 @@
 
 @interface _TtC6Reddit36CommunityTypeSelectionViewController : BaseViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: communityTypeSelectionAnalytics
     // Error parsing type: , name: communityControllerMode
     // Error parsing type: , name: community

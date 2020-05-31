@@ -23,8 +23,8 @@
 + (id)shareToChatViewControllerWithAccountContext:(id)arg1 withPost:(id)arg2 fromVC:(id)arg3;
 + (id)messageRepliesViewControllerWithAccountContext:(id)arg1;
 + (id)liveViewControllerWithAccountContext:(id)arg1;
-+ (id)chatSubredditMembersViewControllerWithRedditService:(id)arg1 channel:(id)arg2;
-+ (id)chatRequestViewControllerWithRedditService:(id)arg1;
++ (id)chatSubredditMembersViewControllerWithAccountContext:(id)arg1 channel:(id)arg2;
++ (id)chatRequestViewControllerWithAccountContext:(id)arg1;
 + (id)chatSubredditChannelListViewControllerWithAccountContext:(id)arg1;
 + (id)chatPostPickerViewControllerWithAccountContext:(id)arg1;
 + (id)chatInboxListingViewControllerWithAccountContext:(id)arg1 type:(unsigned long long)arg2;

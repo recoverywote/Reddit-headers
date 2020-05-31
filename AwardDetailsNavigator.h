@@ -19,9 +19,9 @@
 - (void).cxx_destruct;
 - (void)showReportConfirmationDialogForAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)showAwardInfoForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
-- (void)showSelectAwardScreenForComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4 mode:(long long)arg5;
-- (void)showSelectAwardScreenForPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3 mode:(long long)arg4;
-- (void)showWebPageWithURL:(id)arg1;
+- (void)showSelectAwardScreenForComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;
+- (void)showSelectAwardScreenForPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3;
+- (void)showWebPageWithURL:(id)arg1 accountContext:(id)arg2;
 - (void)close;
 - (id)initWithAwardDetailsViewController:(id)arg1;
 

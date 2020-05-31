@@ -9,7 +9,7 @@
 #import "AttributedLabelRegularDelegate-Protocol.h"
 
 @class AttributedLabelRegular, BaseButton, ImagePopupContentView, NSString;
-@protocol ImagePopupViewControllerActiveDelegate, ImagePopupViewControllerDelegate;
+@protocol AccountContext, ImagePopupViewControllerActiveDelegate, ImagePopupViewControllerDelegate;
 
 @interface ImagePopupViewController : PopupViewController <AttributedLabelRegularDelegate>
 {
@@ -19,6 +19,7 @@
     BaseButton *_confirmButton;
     BaseButton *_cancelButton;
     BaseButton *_activeButton;
+    id <AccountContext> _accountContext;
 }
 
 + (id)awardDetailsInfoDialogMetadataViewForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
@@ -31,6 +32,7 @@
 + (id)inAppPurchaseTransactionInFlightDialogForProductDescription:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
 + (id)inAppPurchaseTransactionInFlightDialogForProduct:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
 + (id)roadblockForRoadblockViewModel:(id)arg1;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) BaseButton *activeButton; // @synthesize activeButton=_activeButton;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) BaseButton *confirmButton; // @synthesize confirmButton=_confirmButton;
@@ -46,7 +48,7 @@
 - (void)didTapConfirmButton:(id)arg1;
 - (void)didTapCloseButton:(id)arg1;
 - (id)initWithTitle:(id)arg1 animatedImageURL:(id)arg2 placeholderImage:(id)arg3 attributedBody:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6 metadataView:(id)arg7;
-- (id)initWithTitle:(id)arg1 image:(id)arg2 body:(id)arg3 confirmText:(id)arg4 activeText:(id)arg5 bottomStackViewAxis:(long long)arg6;
+- (id)initWithTitle:(id)arg1 image:(id)arg2 body:(id)arg3 confirmText:(id)arg4 activeText:(id)arg5 bottomStackViewAxis:(long long)arg6 accountContext:(id)arg7;
 - (id)initWithTitle:(id)arg1 imageURL:(id)arg2 placeholderImage:(id)arg3 attributedBody:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6 metadataView:(id)arg7;
 - (id)initWithTitle:(id)arg1 image:(id)arg2 attributedBody:(id)arg3 confirmText:(id)arg4 cancelText:(id)arg5;
 - (id)initWithTitle:(id)arg1 image:(id)arg2 body:(id)arg3 confirmText:(id)arg4 cancelText:(id)arg5;

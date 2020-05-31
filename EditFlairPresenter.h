@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, Post, RedditService, Subreddit;
-@protocol FlairProtocol, MutableFlairProtocol;
+@class NSArray, NSDictionary, Post, Subreddit;
+@protocol AccountContext, FlairProtocol, MutableFlairProtocol;
 
 @interface EditFlairPresenter : NSObject
 {
@@ -15,7 +15,6 @@
     long long _flairType;
     Subreddit *_subreddit;
     NSObject<MutableFlairProtocol> *_flair;
-    RedditService *_service;
     NSObject<FlairProtocol> *_originalFlair;
     long long _unfilteredEmojiCount;
     NSArray *_subredditEmojis;
@@ -24,6 +23,7 @@
     NSDictionary *_emojisDictionary;
     Post *_post;
     unsigned long long _modPermissions;
+    id <AccountContext> _accountContext;
     NSArray *_allSubredditEmojis;
     NSArray *_allRedditEmojis;
     NSArray *_allEmojis;
@@ -34,6 +34,7 @@
 @property(copy, nonatomic) NSArray *allEmojis; // @synthesize allEmojis=_allEmojis;
 @property(copy, nonatomic) NSArray *allRedditEmojis; // @synthesize allRedditEmojis=_allRedditEmojis;
 @property(copy, nonatomic) NSArray *allSubredditEmojis; // @synthesize allSubredditEmojis=_allSubredditEmojis;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) NSDictionary *emojisDictionary; // @synthesize emojisDictionary=_emojisDictionary;
@@ -42,7 +43,6 @@
 @property(copy, nonatomic) NSArray *subredditEmojis; // @synthesize subredditEmojis=_subredditEmojis;
 @property(nonatomic) long long unfilteredEmojiCount; // @synthesize unfilteredEmojiCount=_unfilteredEmojiCount;
 @property(retain, nonatomic) NSObject<FlairProtocol> *originalFlair; // @synthesize originalFlair=_originalFlair;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSObject<MutableFlairProtocol> *flair; // @synthesize flair=_flair;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) long long flairType; // @synthesize flairType=_flairType;
@@ -61,10 +61,10 @@
 - (void)deleteFlairTemplateWithCompletion:(CDUnknownBlockType)arg1;
 - (void)filterEmojis;
 - (void)fetchEmojisWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initForEditingFlairText:(id)arg1 service:(id)arg2 subreddit:(id)arg3 post:(id)arg4 modPermissions:(unsigned long long)arg5 flairType:(long long)arg6;
-- (id)initForEditingFlairTemplate:(id)arg1 service:(id)arg2 subreddit:(id)arg3 modPermissions:(unsigned long long)arg4 flairType:(long long)arg5;
-- (id)initForAddingFlairTemplateWithService:(id)arg1 subreddit:(id)arg2 modPermissions:(unsigned long long)arg3 flairType:(long long)arg4;
-- (id)initWithMutableFlair:(id)arg1 service:(id)arg2 subreddit:(id)arg3 post:(id)arg4 modPermissions:(unsigned long long)arg5 flairType:(long long)arg6 editType:(long long)arg7;
+- (id)initForEditingFlairText:(id)arg1 accountContext:(id)arg2 subreddit:(id)arg3 post:(id)arg4 modPermissions:(unsigned long long)arg5 flairType:(long long)arg6;
+- (id)initForEditingFlairTemplate:(id)arg1 accountContext:(id)arg2 subreddit:(id)arg3 modPermissions:(unsigned long long)arg4 flairType:(long long)arg5;
+- (id)initForAddingFlairTemplateWithAccountContext:(id)arg1 subreddit:(id)arg2 modPermissions:(unsigned long long)arg3 flairType:(long long)arg4;
+- (id)initWithMutableFlair:(id)arg1 accountContext:(id)arg2 subreddit:(id)arg3 post:(id)arg4 modPermissions:(unsigned long long)arg5 flairType:(long long)arg6 editType:(long long)arg7;
 
 @end
 

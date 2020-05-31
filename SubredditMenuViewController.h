@@ -9,11 +9,12 @@
 #import "PagedTabControllerProtocol-Protocol.h"
 
 @class FeedSpinnerView, NSString, Subreddit, SubredditMenuSet, UIScrollView;
-@protocol PagedTabControllerParentCallback;
+@protocol AccountContext, PagedTabControllerParentCallback;
 
 @interface SubredditMenuViewController : BaseTableViewController <PagedTabControllerProtocol>
 {
     id <PagedTabControllerParentCallback> _pagedTabControllerParent;
+    id <AccountContext> _accountContext;
     SubredditMenuSet *_menuSet;
     Subreddit *_subreddit;
     FeedSpinnerView *_firstLoadSpinner;
@@ -22,6 +23,7 @@
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) SubredditMenuSet *menuSet; // @synthesize menuSet=_menuSet;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
 - (void).cxx_destruct;
 - (id)analyticsPageType;
@@ -47,6 +49,7 @@
 - (void)configureWithSubreddit:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1 style:(long long)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

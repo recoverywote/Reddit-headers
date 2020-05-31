@@ -8,7 +8,7 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class BaseButtonNode, ChatPostFeedIndicatorNode, FeedPostOptions, NSString, Post, UIActivity, UIView, VoteButtonNode, _TtC6Reddit23SharePausePromptManager;
+@class BaseButtonNode, ChatPostFeedIndicatorNode, FeedPostOptions, NSString, Post, UIView, VoteButtonNode;
 @protocol FeedPostCommentBarNodeDelegate;
 
 @interface FeedPostCommentBarNode : BaseFeedDisplayNode <ObjectObserverProtocol>
@@ -24,12 +24,8 @@
     BaseButtonNode *_commentButtonNode;
     ChatPostFeedIndicatorNode *_chatPostIndicatorNode;
     FeedPostOptions *_options;
-    _TtC6Reddit23SharePausePromptManager *_sharePausePromptManager;
-    UIActivity *_sharePromptActivity;
 }
 
-@property(retain, nonatomic) UIActivity *sharePromptActivity; // @synthesize sharePromptActivity=_sharePromptActivity;
-@property(retain, nonatomic) _TtC6Reddit23SharePausePromptManager *sharePausePromptManager; // @synthesize sharePausePromptManager=_sharePausePromptManager;
 @property(nonatomic) _Bool shouldHideAwardButtonTitle; // @synthesize shouldHideAwardButtonTitle=_shouldHideAwardButtonTitle;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) ChatPostFeedIndicatorNode *chatPostIndicatorNode; // @synthesize chatPostIndicatorNode=_chatPostIndicatorNode;
@@ -42,9 +38,7 @@
 @property(nonatomic) __weak id <FeedPostCommentBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
-- (void)triggerShareButtonToggleAnimation:(id)arg1;
 - (void)updateActionButtonOnImageToggle;
-- (void)updateShareIconToActivity:(id)arg1 animated:(_Bool)arg2 cell:(id)arg3;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)awardButtonDidTap:(id)arg1;
 - (void)actionButtonDidTap:(id)arg1;
@@ -56,7 +50,6 @@
 - (void)configureActionSection;
 - (void)configureCommentButton;
 - (void)configureScoreSection;
-- (_Bool)isPostReadonly;
 - (void)configureNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (_Bool)shouldDisplayChatPostFeedIndicator;

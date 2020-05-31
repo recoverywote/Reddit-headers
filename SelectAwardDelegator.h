@@ -18,7 +18,9 @@
 
 @property(readonly, nonatomic) SelectAwardPresenter *presenter; // @synthesize presenter=_presenter;
 - (void).cxx_destruct;
+- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
+- (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)bindCollectionView:(id)arg1;
 - (double)collectionView:(id)arg1 layout:(id)arg2 minimumInteritemSpacingForSectionAtIndex:(long long)arg3;
 - (struct UIEdgeInsets)collectionView:(id)arg1 layout:(id)arg2 insetForSectionAtIndex:(long long)arg3;

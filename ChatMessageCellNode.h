@@ -45,7 +45,7 @@
 - (void)didTapHeaderTextNode:(id)arg1;
 - (void)avatarImageNodeWasTapped:(id)arg1;
 - (void)didLoad;
-- (void)configureWithDisplayableMessage:(id)arg1 channel:(id)arg2;
+- (void)configureWithAccountContext:(id)arg1 displayableMessage:(id)arg2 channel:(id)arg3;
 - (id)init;
 
 @end

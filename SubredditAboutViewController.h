@@ -18,11 +18,12 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class BaseCollectionView, EmptyDogeView, FeedSpinnerView, NSArray, NSString, PillStyle, Subreddit, SubredditImageWidget, SubredditWidgetSet, UIScrollView;
-@protocol PagedTabControllerParentCallback;
+@protocol AccountContext, PagedTabControllerParentCallback;
 
 @interface SubredditAboutViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource, AttributedLabelDelegate, AttributedLabelRegularDelegate, CommunitySubscriptionCollectionViewCellProtocol, SubredditImageWidgetCollectionViewCellDelegate, SubredditWidgetSizerProtocol, SubredditWidgetButtonCollectionViewCellDelegate, TheatreViewControllerDelegate, PagedTabControllerProtocol>
 {
     id <PagedTabControllerParentCallback> _pagedTabControllerParent;
+    id <AccountContext> _accountContext;
     BaseCollectionView *_collectionView;
     Subreddit *_subreddit;
     SubredditWidgetSet *_widgetSet;
@@ -43,6 +44,7 @@
 @property(retain, nonatomic) SubredditWidgetSet *widgetSet; // @synthesize widgetSet=_widgetSet;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
 - (void).cxx_destruct;
 - (void)presentAnonymousBrowsingExitDialog;
@@ -101,7 +103,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)dealloc;
 - (void)viewDidLoad;
-- (id)init;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

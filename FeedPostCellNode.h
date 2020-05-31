@@ -12,7 +12,7 @@
 #import "VisibilityTrackable-Protocol.h"
 
 @class ASDisplayNode, Carousel, CarouselContainerNode, FeedPostAwardsNode, FeedPostCommentBarNode, FeedPostContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostMetaViewModel, UIImage;
-@protocol CarouselContainerNodeDelegate, FeedPostCellNodeDelegate><PillContainerNodeDelegate;
+@protocol CarouselContainerNodeDelegate, FeedPostCellNodeDelegate><PillContainerNodeDelegate, ViewContext;
 
 @interface FeedPostCellNode : BaseCollectionViewCellNode <VisibilityTrackable, ObjectObserverProtocol, ChainedCarouselDisplaying, FeedPostCollectionViewItem>
 {
@@ -21,6 +21,7 @@
     FeedPostTitleNode *_titleNode;
     id <FeedPostCellNodeDelegate><PillContainerNodeDelegate> _delegate;
     id <CarouselContainerNodeDelegate> _carouselContainerNodeDelegate;
+    id <ViewContext> _viewContext;
     FeedPostEventBarNode *_eventBarNode;
     FeedPostAwardsNode *_awardsNode;
     FeedPostContentNode *_contentNode;
@@ -43,6 +44,7 @@
 @property(retain, nonatomic) FeedPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) FeedPostEventBarNode *eventBarNode; // @synthesize eventBarNode=_eventBarNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CarouselContainerNodeDelegate> carouselContainerNodeDelegate; // @synthesize carouselContainerNodeDelegate=_carouselContainerNodeDelegate;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate><PillContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) FeedPostTitleNode *titleNode; // @synthesize titleNode=_titleNode;
@@ -68,8 +70,8 @@
 - (void)createAwardsNodeIfNecessary;
 - (void)createNodes;
 @property(readonly, nonatomic) UIImage *previewImage;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 carouselContainerNodeDelegate:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6;
-- (id)initWithPost:(id)arg1 options:(id)arg2 carouselContainerNodeDelegate:(id)arg3 delegate:(id)arg4 visibilityTracker:(id)arg5;
+- (id)initWithPost:(id)arg1 viewContext:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 carouselContainerNodeDelegate:(id)arg5 delegate:(id)arg6 visibilityTracker:(id)arg7;
+- (id)initWithPost:(id)arg1 viewContext:(id)arg2 options:(id)arg3 carouselContainerNodeDelegate:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

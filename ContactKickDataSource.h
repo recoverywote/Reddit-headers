@@ -15,19 +15,20 @@
     NSString *_selectedDuration;
     Contact *_contact;
     Channel *_channel;
+    RedditService *_service;
 }
 
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(copy, nonatomic) NSString *selectedDuration; // @synthesize selectedDuration=_selectedDuration;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) RedditService *service;
 - (void)submitReportWithItem:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)reportingSubject;
 - (id)actionButtonTitle;
 - (id)reportItems;
 - (id)title;
-- (id)initWithContact:(id)arg1 channel:(id)arg2;
+- (id)initWithService:(id)arg1 contact:(id)arg2 channel:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

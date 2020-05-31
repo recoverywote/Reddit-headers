@@ -6,21 +6,18 @@
 
 #import <UIKit/UIView.h>
 
-#import <RedditWallet/CAAnimationDelegate-Protocol.h>
-
-@interface _TtC12RedditWalletP33_A970951D4A18CA89D448AB89F5DCC85921TxToastExpirationView : UIView <CAAnimationDelegate>
+@interface _TtC12RedditWalletP33_A970951D4A18CA89D448AB89F5DCC85921TxToastExpirationView : UIView
 {
     // Error parsing type: , name: duration
     // Error parsing type: , name: barView
-    // Error parsing type: , name: filledHeightContraint
-    // Error parsing type: , name: emptyHeightContraint
+    // Error parsing type: , name: isExpired
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (id)initWithCoder:(id)arg1;
-- (void)animationDidStop:(id)arg1 finished:(_Bool)arg2;
+- (void)layoutSubviews;
 
 @end
 

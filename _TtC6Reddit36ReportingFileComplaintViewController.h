@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit36ReportingFileComplaintViewController : BaseViewController
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: rule
     // Error parsing type: , name: reportable
     // Error parsing type: , name: complaintType

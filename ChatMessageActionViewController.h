@@ -6,21 +6,24 @@
 
 #import <RedditUI/RUIActionSheetViewController.h>
 
-@class ChatMessage, RedditService;
+@class ChatMessage;
+@protocol AccountContext;
 
 @interface ChatMessageActionViewController : RUIActionSheetViewController
 {
+    id <AccountContext> _accountContext;
     ChatMessage *_message;
 }
 
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) RedditService *service;
 - (_Bool)canReportMessage:(id)arg1 inChannel:(id)arg2;
 - (_Bool)canRetryMessage:(id)arg1 inChannel:(id)arg2;
 - (_Bool)canDeleteMessage:(id)arg1 inChannel:(id)arg2;
 - (_Bool)canCopyMessage:(id)arg1 inChannel:(id)arg2;
 - (void)configureWithMessage:(id)arg1 andChannel:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

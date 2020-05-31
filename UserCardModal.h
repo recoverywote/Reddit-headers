@@ -9,15 +9,15 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class BaseButton, BaseImageView, BaseLabel, BaseTableView, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, RedditService, UIActivityIndicatorView;
-@protocol AccountContext, UserCardModalDelegate;
+@class BaseButton, BaseImageView, BaseLabel, BaseTableView, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, UIActivityIndicatorView;
+@protocol UserCardModalDelegate, ViewContext;
 
 @interface UserCardModal : BaseView <UITableViewDelegate, UITableViewDataSource>
 {
     _Bool _userIsBanned;
     _Bool _userIsMuted;
     id <UserCardModalDelegate> _delegate;
-    id <AccountContext> _accountContext;
+    id <ViewContext> _viewContext;
     BaseView *_modalView;
     BaseImageView *_profilePicture;
     BaseLabel *_usernameLabel;
@@ -46,7 +46,7 @@
 @property(retain, nonatomic) BaseLabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) BaseImageView *profilePicture; // @synthesize profilePicture=_profilePicture;
 @property(retain, nonatomic) BaseView *modalView; // @synthesize modalView=_modalView;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <UserCardModalDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
@@ -77,8 +77,7 @@
 - (void)configureUserAge:(id)arg1;
 - (void)configureUserName:(id)arg1;
 - (void)addConstraints;
-@property(readonly, nonatomic) RedditService *service;
-- (id)initWithAccountContext:(id)arg1;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

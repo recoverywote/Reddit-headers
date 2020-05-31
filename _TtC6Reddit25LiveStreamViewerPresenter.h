@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit25LiveStreamViewerPresenter : NSObject
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: kPromptPkBaseString
     // Error parsing type: , name: kPromptTooltipTimerInterval
     // Error parsing type: , name: kPromptNumberOfDaysToHide
@@ -41,8 +42,8 @@
 - (void)didUpdateStreamingConfig;
 - (void)subredditSubscriptionDidChange:(id)arg1;
 - (void)dealloc;
-- (id)initWithStreamManager:(id)arg1 initialStream:(id)arg2;
-- (id)initWithStreamManager:(id)arg1 deeplinkId:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 streamManager:(id)arg2 initialStream:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 streamManager:(id)arg2 deeplinkId:(id)arg3;
 
 @end
 

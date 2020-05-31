@@ -16,6 +16,7 @@
 - (id)init;
 - (void)scrollViewDidScroll:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
+- (void)layout;
 - (void)didLoad;
 
 @end

@@ -11,7 +11,7 @@
 #import "ListingStateControllerDelegate-Protocol.h"
 
 @class BaseCollectionView, ChatMembersNetworkSource, ListingStateController, NSArray, NSAttributedString, NSString, RedditService, SubredditChannel;
-@protocol ChatRequestDelegatorDelegate;
+@protocol AccountContext, ChatRequestDelegatorDelegate;
 
 @interface SubredditChatRequestDelegator : NSObject <ListingNetworkSourceDelegate, ChatRequestDelegator, ListingStateControllerDelegate>
 {
@@ -19,7 +19,7 @@
     id <ChatRequestDelegatorDelegate> _delegate;
     SubredditChannel *_subredditChannel;
     NSArray *_contacts;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     ChatMembersNetworkSource *_networkSource;
     ListingStateController *_listingStateController;
     BaseCollectionView *_collectionView;
@@ -29,7 +29,7 @@
 @property(readonly, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(nonatomic) _Bool didPerformSecondFetchForPopularMembersPreview; // @synthesize didPerformSecondFetchForPopularMembersPreview=_didPerformSecondFetchForPopularMembersPreview;
 @property(readonly, nonatomic) ChatMembersNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSArray *contacts; // @synthesize contacts=_contacts;
 @property(retain, nonatomic) SubredditChannel *subredditChannel; // @synthesize subredditChannel=_subredditChannel;
 @property(nonatomic) __weak id <ChatRequestDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
@@ -56,7 +56,8 @@
 - (void)removeContacts:(id)arg1;
 - (void)presentAlertForChannel:(id)arg1;
 - (void)configureWithChannel:(id)arg1 requestDecisionView:(id)arg2;
-- (id)initWithService:(id)arg1 collectionView:(id)arg2 listingStateController:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 collectionView:(id)arg2 listingStateController:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

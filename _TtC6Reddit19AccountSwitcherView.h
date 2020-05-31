@@ -13,8 +13,8 @@
     // Error parsing type: , name: accounts
     // Error parsing type: , name: currentAccount
     // Error parsing type: , name: contentStackView
+    // Error parsing type: , name: headerLabel
     // Error parsing type: , name: tableView
-    // Error parsing type: , name: headerString
     // Error parsing type: , name: items
     // Error parsing type: , name: delegate
     // Error parsing type: , name: isAnonymousBrowsingEnabled

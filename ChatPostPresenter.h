@@ -10,14 +10,14 @@
 #import "LiveCommentDelegate-Protocol.h"
 
 @class ASBatchContext, Comment, CommentNetworkSource, LiveStream, NSArray, NSDate, NSMutableDictionary, NSString, NSTimer, Post, RedditService, SocketSession;
-@protocol ChatPostPresenterDelegate, _TtP6Reddit30ChatPostNetworkManagerProtocol_;
+@protocol AccountContext, ChatPostPresenterDelegate, _TtP6Reddit30ChatPostNetworkManagerProtocol_;
 
 @interface ChatPostPresenter : NSObject <LiveCommentDelegate, ListingNetworkSourceDelegate>
 {
     _Bool _hasPinnedStickiedComment;
     _Bool _didLoseConnection;
+    id <AccountContext> _accountContext;
     id <ChatPostPresenterDelegate> _delegate;
-    RedditService *_service;
     LiveStream *_liveStream;
     Post *_post;
     NSArray *_typeAheadUsers;
@@ -71,8 +71,8 @@
 @property(retain, nonatomic) NSArray *typeAheadUsers; // @synthesize typeAheadUsers=_typeAheadUsers;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) LiveStream *liveStream; // @synthesize liveStream=_liveStream;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak id <ChatPostPresenterDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (_Bool)shouldShowVotingNodeForComment:(id)arg1;
 @property(readonly, nonatomic) long long collapsedCommentBehavior;
@@ -122,8 +122,9 @@
 @property(readonly, nonatomic) _Bool shouldShowRules;
 @property(readonly, nonatomic) _Bool shouldShowDownvote;
 @property(readonly, nonatomic) _Bool shouldShowVotingInMessages;
-- (id)initWithLiveStream:(id)arg1 service:(id)arg2 networkManager:(id)arg3;
-- (id)initWithPost:(id)arg1 service:(id)arg2 networkManager:(id)arg3 deeplinkCommentId:(id)arg4;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithLiveStream:(id)arg1 accountContext:(id)arg2 networkManager:(id)arg3;
+- (id)initWithPost:(id)arg1 accountContext:(id)arg2 networkManager:(id)arg3 deeplinkCommentId:(id)arg4;
 - (void)updateTypeAheadUsersWithCellModels:(id)arg1;
 - (id)sortCellModelByDateWithInitialCellModels:(id)arg1;
 - (id)handleCommentsWithInitialCellModels:(id)arg1 users:(id)arg2 shouldSort:(_Bool)arg3;

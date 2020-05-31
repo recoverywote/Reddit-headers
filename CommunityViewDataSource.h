@@ -9,12 +9,13 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class BaseViewController, NSArray, NSString, UITableView;
+@class BaseViewController, NSArray, NSString, RedditService, UITableView;
 @protocol CommunityViewDataSourceDelegate;
 
 @interface CommunityViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 {
     _Bool _editing;
+    RedditService *_service;
     UITableView *_tableView;
     long long _section;
     NSArray *_currentObjects;
@@ -30,6 +31,7 @@
 @property(copy, nonatomic) NSArray *currentObjects; // @synthesize currentObjects=_currentObjects;
 @property(nonatomic) long long section; // @synthesize section=_section;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
 - (_Bool)tableView:(id)arg1 handleDidSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
@@ -45,7 +47,7 @@
 - (void)tableViewDidScroll;
 - (void)refreshSubscriptions;
 - (id)viewControllerForIndexPath:(id)arg1;
-- (id)initWithTableView:(id)arg1;
+- (id)initWithService:(id)arg1 tableView:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

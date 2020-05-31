@@ -72,6 +72,7 @@
 - (void)cleanupPersistedData;
 - (void)warmUpAccountSpecificManagers;
 - (void)accountDidChange:(id)arg1;
+- (void)warmUpModules;
 - (void)warmUpMiscSingletons;
 - (void)setupAFNetworking;
 - (void)setupAnalyticsWithLaunchOptions:(id)arg1 isFirstLaunch:(_Bool)arg2;

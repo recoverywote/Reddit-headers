@@ -10,7 +10,7 @@
 #import "PagedTabControllerProtocol-Protocol.h"
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
-@class NSString, RedditService, UIScrollView;
+@class NSString, UIScrollView;
 @protocol ModeratorsViewControllerDelegate;
 
 @interface ModeratorsViewController : ModUserListViewController <RUIActionSheetViewControllerDelegate, ModFormViewControllerDelegate, PagedTabControllerProtocol>
@@ -18,10 +18,8 @@
     unsigned long long _listType;
     id <ModeratorsViewControllerDelegate> _delegate;
     NSString *_subredditName;
-    RedditService *_service;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
 @property(nonatomic) __weak id <ModeratorsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long listType; // @synthesize listType=_listType;
@@ -45,8 +43,8 @@
 - (void)viewDidLoad;
 - (void)setupNetworkSource;
 - (void)configureWithSubreddit:(id)arg1;
-- (id)initWithService:(id)arg1 subredditName:(id)arg2 type:(unsigned long long)arg3 presenter:(id)arg4;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2 type:(unsigned long long)arg3 presenter:(id)arg4;
+- (id)initWithSubredditName:(id)arg1 type:(unsigned long long)arg2 presenter:(id)arg3;
+- (id)initWithSubreddit:(id)arg1 type:(unsigned long long)arg2 presenter:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

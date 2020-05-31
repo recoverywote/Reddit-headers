@@ -10,18 +10,20 @@
 
 @interface _TtC6Reddit33MetaClaimablePointsViewController : BaseViewController
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: banner
-    // Error parsing type: , name: redditService
+    // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: delegate
     // Error parsing type: , name: $__lazy_storage_$_contentNode
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)configureViewAppearance;
-- (id)initWithBanner:(id)arg1 redditService:(id)arg2;
+- (id)initWithBanner:(id)arg1 accountContext:(id)arg2;
 @property(nonatomic) __weak id <_TtP6Reddit41MetaClaimablePointsViewControllerDelegate_> delegate; // @synthesize delegate;
 
 @end

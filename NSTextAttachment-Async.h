@@ -7,11 +7,6 @@
 #import <UIKit/NSTextAttachment.h>
 
 @interface NSTextAttachment (Async)
-+ (id)spacerAttachment;
-+ (id)textAttachmentWithImageBaselineAligned:(id)arg1 font:(id)arg2;
-+ (id)textAttachmentWithNameBaselineAligned:(id)arg1 font:(id)arg2;
-+ (id)textAttachmentWithImage:(id)arg1 font:(id)arg2;
-+ (id)textAttachmentWithName:(id)arg1 font:(id)arg2;
 - (void)loadImageURL:(id)arg1 placeholderImage:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)loadImageURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 @end

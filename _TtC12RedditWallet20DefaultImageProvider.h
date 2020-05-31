@@ -8,6 +8,8 @@
 
 @interface _TtC12RedditWallet20DefaultImageProvider : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: cache
+    // Error parsing type: , name: queue
     // Error parsing type: , name: session
 }
 

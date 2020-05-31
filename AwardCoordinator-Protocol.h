@@ -6,16 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class Comment, LiveStream, NSString, Post, RedditService, SelectAwardOptions, UIViewController;
+@class UIViewController, _TtC7Economy20AwardSelectionConfig;
 @protocol AwardCoordinatorDelegate;
 
 @protocol AwardCoordinator <NSObject>
-+ (id)new;
 @property(nonatomic) __weak id <AwardCoordinatorDelegate> delegate;
-- (void)startFromViewController:(UIViewController *)arg1 options:(SelectAwardOptions *)arg2;
-- (id)initWithComment:(Comment *)arg1 parentPost:(Post *)arg2 service:(RedditService *)arg3 correlationId:(NSString *)arg4;
-- (id)initWithPost:(Post *)arg1 stream:(LiveStream *)arg2 service:(RedditService *)arg3 correlationId:(NSString *)arg4;
-- (id)initWithPost:(Post *)arg1 service:(RedditService *)arg2 correlationId:(NSString *)arg3;
-- (id)init;
+- (void)startFromViewController:(UIViewController *)arg1 config:(_TtC7Economy20AwardSelectionConfig *)arg2;
 @end
 

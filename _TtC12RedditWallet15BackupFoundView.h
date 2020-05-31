@@ -9,14 +9,14 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet15BackupFoundView : UIView
 {
-    // Error parsing type: , name: navigationBarView
-    // Error parsing type: , name: usePasswordButton
-    // Error parsing type: , name: createPasswordButton
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: notchView
+    // Error parsing type: , name: navigationBarView
     // Error parsing type: , name: contentContainer
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
+    // Error parsing type: , name: unlockVaultButton
+    // Error parsing type: , name: createNewVaultButton
     // Error parsing type: , name: animationView
     // Error parsing type: , name: disposeBag
 }

@@ -10,6 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet23EnterRecoveryPhraseView : UIView
 {
     // Error parsing type: , name: themeProvider
+    // Error parsing type: , name: betaCheckbox
     // Error parsing type: , name: notchView
     // Error parsing type: , name: navigationBarView
     // Error parsing type: , name: innerView

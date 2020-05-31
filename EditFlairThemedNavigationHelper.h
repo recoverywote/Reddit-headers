@@ -6,24 +6,24 @@
 
 #import <objc/NSObject.h>
 
-@class RedditService, UINavigationController, UIViewController;
-@protocol EditFlairViewControllerDelegate;
+@class UINavigationController, UIViewController;
+@protocol AccountContext, EditFlairViewControllerDelegate;
 
 @interface EditFlairThemedNavigationHelper : NSObject
 {
     UIViewController<EditFlairViewControllerDelegate> *_fromVC;
     UINavigationController *_navigationController;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(retain, nonatomic) UIViewController<EditFlairViewControllerDelegate> *fromVC; // @synthesize fromVC=_fromVC;
 - (void).cxx_destruct;
 - (void)presentEditFlairViewControllerWithFlair:(id)arg1 flairType:(long long)arg2 flairEditType:(long long)arg3 subreddit:(id)arg4 post:(id)arg5 modPermissions:(unsigned long long)arg6;
 - (void)navigateToEditFlairViewControllerWithFlair:(id)arg1 flairType:(long long)arg2 flairEditType:(long long)arg3 subreddit:(id)arg4 post:(id)arg5 modPermissions:(unsigned long long)arg6;
 - (id)navBarTitleTextAttributes;
-- (id)initWithTheme:(id)arg1 fromVC:(id)arg2 navigationController:(id)arg3 redditService:(id)arg4;
+- (id)initWithTheme:(id)arg1 fromVC:(id)arg2 navigationController:(id)arg3 accountContext:(id)arg4;
 
 @end
 

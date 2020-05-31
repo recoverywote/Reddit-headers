@@ -12,12 +12,13 @@
 #import "WebViewControllerProtocol-Protocol.h"
 
 @class NSString, NSURL, RedditService, Subreddit, UIProgressView, UIViewController, WKWebView, WebNavigationControlsView, WebViewInteractor;
+@protocol AccountContext;
 
 @interface ModmailWebViewController : BaseViewController <WKNavigationDelegate, WebNavigationControlsViewDelegate, RUIActionSheetViewControllerDelegate, WebViewControllerProtocol>
 {
     WebViewInteractor *_interactor;
     UIViewController *_fromVC;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
     WKWebView *_webView;
     NSURL *_webURL;
@@ -32,7 +33,7 @@
 @property(retain, nonatomic) NSURL *webURL; // @synthesize webURL=_webURL;
 @property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIViewController *fromVC; // @synthesize fromVC=_fromVC;
 @property(retain, nonatomic) WebViewInteractor *interactor; // @synthesize interactor=_interactor;
 - (void).cxx_destruct;
@@ -53,7 +54,8 @@
 - (void)didTapBack;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
 
 // Remaining properties
 @property(copy, nonatomic) NSString *analyticsSource;

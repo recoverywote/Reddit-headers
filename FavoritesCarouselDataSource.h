@@ -10,13 +10,14 @@
 #import "CarouselDataSourceInternal-Protocol.h"
 #import "ListingNetworkSourceDelegate-Protocol.h"
 
-@class NSArray, NSError, NSString, SubredditsNetworkSource;
+@class NSArray, NSError, NSString, RedditService, SubredditsNetworkSource;
 @protocol TemplateParserContext;
 
 @interface FavoritesCarouselDataSource : NSObject <CarouselDataSource, CarouselDataSourceInternal, ListingNetworkSourceDelegate>
 {
     id <TemplateParserContext> _templateContext;
     NSError *_lastError;
+    RedditService *_service;
     SubredditsNetworkSource *_subscriptionNetworkSource;
     CDUnknownBlockType _completion;
     NSArray *_carouselItems;
@@ -25,6 +26,7 @@
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) SubredditsNetworkSource *subscriptionNetworkSource; // @synthesize subscriptionNetworkSource=_subscriptionNetworkSource;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(readonly, nonatomic) __weak id <TemplateParserContext> templateContext; // @synthesize templateContext=_templateContext;
 - (void).cxx_destruct;
@@ -36,7 +38,7 @@
 - (_Bool)hasMoreContent;
 - (id)carouselItemsForObjects:(id)arg1;
 - (void)fetchCarouselItemsWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithFetchURLString:(id)arg1;
+- (id)initWithService:(id)arg1 fetchURLString:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

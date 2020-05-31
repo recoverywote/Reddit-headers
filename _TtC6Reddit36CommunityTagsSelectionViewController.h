@@ -10,7 +10,7 @@
 
 @interface _TtC6Reddit36CommunityTagsSelectionViewController : BaseViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: communityTagsSelectionAnalytics
     // Error parsing type: , name: communityControllerMode
     // Error parsing type: , name: communityTagsHelper

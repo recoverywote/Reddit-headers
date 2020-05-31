@@ -33,9 +33,9 @@
     struct CGPoint _previousScrollPosition;
 }
 
-+ (id)postCollectionViewControllerWithRedditService:(id)arg1 postCollection:(id)arg2 post:(id)arg3 options:(id)arg4;
-+ (id)postCollectionViewControllerWithRedditService:(id)arg1 postCollectionURL:(id)arg2 options:(id)arg3;
-+ (id)postCollectionViewControllerWithRedditService:(id)arg1 postCollectionId:(id)arg2 post:(id)arg3 options:(id)arg4;
++ (id)postCollectionViewControllerWithAccountContext:(id)arg1 postCollection:(id)arg2 post:(id)arg3 options:(id)arg4;
++ (id)postCollectionViewControllerWithAccountContext:(id)arg1 postCollectionURL:(id)arg2 options:(id)arg3;
++ (id)postCollectionViewControllerWithAccountContext:(id)arg1 postCollectionId:(id)arg2 post:(id)arg3 options:(id)arg4;
 @property(nonatomic) struct CGPoint previousScrollPosition; // @synthesize previousScrollPosition=_previousScrollPosition;
 @property(retain, nonatomic) PostCollectionNavigator *navigator; // @synthesize navigator=_navigator;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;

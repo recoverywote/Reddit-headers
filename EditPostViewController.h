@@ -7,9 +7,11 @@
 #import "BaseViewController.h"
 
 @class BaseButton, EditPostView, NSString, Post;
+@protocol AccountContext;
 
 @interface EditPostViewController : BaseViewController
 {
+    id <AccountContext> _accountContext;
     Post *_post;
     EditPostView *_editPostView;
     BaseButton *_postButton;
@@ -22,6 +24,7 @@
 @property(retain, nonatomic) BaseButton *postButton; // @synthesize postButton=_postButton;
 @property(retain, nonatomic) EditPostView *editPostView; // @synthesize editPostView=_editPostView;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)updatePostTextWithNewDataAndExit;
 - (void)updatePostButtonWithText:(id)arg1 forState:(unsigned long long)arg2;
@@ -31,7 +34,7 @@
 - (void)didTapClose;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
-- (id)initWithPost:(id)arg1 onEditSuccess:(CDUnknownBlockType)arg2;
+- (id)initWithPost:(id)arg1 accountContext:(id)arg2 onEditSuccess:(CDUnknownBlockType)arg3;
 
 @end
 

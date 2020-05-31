@@ -8,7 +8,7 @@
 
 @interface _TtC6Reddit17ModToolsNavigator : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: subreddit
     // Error parsing type: , name: modUserPermissions

@@ -10,9 +10,9 @@
 {
 }
 
-+ (id)listingNetworkSourceFromDiscoveryUnit:(id)arg1 templateContext:(id)arg2 additionalParameters:(id)arg3;
-+ (id)createDataSourceForDiscoveryUnit:(id)arg1 templateContext:(id)arg2 additionalParameters:(id)arg3;
-+ (id)createDataSourceForDiscoveryUnit:(id)arg1 templateContext:(id)arg2;
++ (id)listingNetworkSourceFromDiscoveryUnit:(id)arg1 service:(id)arg2 templateContext:(id)arg3 additionalParameters:(id)arg4;
++ (id)createDataSourceForDiscoveryUnit:(id)arg1 templateContext:(id)arg2 service:(id)arg3 additionalParameters:(id)arg4;
++ (id)createDataSourceForDiscoveryUnit:(id)arg1 templateContext:(id)arg2 service:(id)arg3;
 + (id)requestParameters:(id)arg1 templateContext:(id)arg2 additionalParameters:(id)arg3;
 + (id)urlString:(id)arg1 templateContext:(id)arg2;
 + (_Bool)hasLocalPrefix:(id)arg1;

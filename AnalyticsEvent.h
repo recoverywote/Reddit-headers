@@ -10,7 +10,7 @@
 #import <AnalyticsFramework/NSCopying-Protocol.h>
 #import <AnalyticsFramework/TBase-Protocol.h>
 
-@class AnalyticsActionInfo, AnalyticsAd, AnalyticsAdBrandSafety, AnalyticsAdCampaign, AnalyticsAdDecision, AnalyticsAdGroup, AnalyticsAdPush, AnalyticsAdRequest, AnalyticsAdTargeting, AnalyticsAdblock, AnalyticsAdmin, AnalyticsAdminAction, AnalyticsApi, AnalyticsApiResponse, AnalyticsApp, AnalyticsBanner, AnalyticsBillingInfo, AnalyticsBrand, AnalyticsBroadcast, AnalyticsBulkActionJob, AnalyticsBusinessInfo, AnalyticsCSAIContentReport, AnalyticsCSAIMedia, AnalyticsCarousel, AnalyticsCategoryHeader, AnalyticsChat, AnalyticsChatHomeFeedBoosting, AnalyticsClickTest, AnalyticsComment, AnalyticsCommentComposer, AnalyticsCommentDraft, AnalyticsContentMetadata, AnalyticsCrawler, AnalyticsCrowdControl, AnalyticsCustomFeed, AnalyticsDOMTimers, AnalyticsDiscoveryUnit, AnalyticsDomainBan, AnalyticsEdit, AnalyticsEmail, AnalyticsExpand, AnalyticsExperiment, AnalyticsFundingInstrument, AnalyticsGeo, AnalyticsGeoBlock, AnalyticsGoldPurchase, AnalyticsGrapeshotClassification, AnalyticsImposter, AnalyticsInferred, AnalyticsLegalExportRequest, AnalyticsLinkSharing, AnalyticsListing, AnalyticsLiveThread, AnalyticsMLModel, AnalyticsMailroomRequest, AnalyticsMedia, AnalyticsMessage, AnalyticsMessengerRequest, AnalyticsMetaFlair, AnalyticsMetaSearch, AnalyticsModAction, AnalyticsNCMECReport, AnalyticsNews, AnalyticsNotification, AnalyticsNotificationRequest, AnalyticsOauth, AnalyticsOnboarding, AnalyticsOutbound, AnalyticsPWA, AnalyticsPayment, AnalyticsPerspective, AnalyticsPlatform, AnalyticsPoll, AnalyticsPopup, AnalyticsPost, AnalyticsPostCollection, AnalyticsPostComposer, AnalyticsPostDraft, AnalyticsPostEvent, AnalyticsPostFlair, AnalyticsPostRequirement, AnalyticsProfile, AnalyticsProgrammatic, AnalyticsRES, AnalyticsReddarAudit, AnalyticsReddarAuditTicket, AnalyticsReddarQueue, AnalyticsReddarTicket, AnalyticsReddarTicketContent, AnalyticsReferrer, AnalyticsRelevanceModel, AnalyticsReport, AnalyticsRequest, AnalyticsRerouteRule, AnalyticsResponse, AnalyticsSEO, AnalyticsScheduledPost, AnalyticsScreen, AnalyticsSearch, AnalyticsSession, AnalyticsSetting, AnalyticsShare, AnalyticsSpamuraiAction, AnalyticsSubreddit, AnalyticsSurvey, AnalyticsTargetIP, AnalyticsThirdPartyBadge, AnalyticsTicket, AnalyticsTimer, AnalyticsTooltip, AnalyticsTopicMetadata, AnalyticsTopicTag, AnalyticsTwoFactorAuth, AnalyticsUpload, AnalyticsUrlParsed, AnalyticsUser, AnalyticsUserFlair, AnalyticsUserPreferences, AnalyticsUserSubreddit, AnalyticsVisibility, AnalyticsVote, AnalyticsWebhook, AnalyticsWidget, AnalyticsZendeskTicket, AnalyticsZipkin, NSDictionary, NSString;
+@class AnalyticsActionInfo, AnalyticsAd, AnalyticsAdBrandSafety, AnalyticsAdCampaign, AnalyticsAdDecision, AnalyticsAdGroup, AnalyticsAdPush, AnalyticsAdRequest, AnalyticsAdTargeting, AnalyticsAdblock, AnalyticsAdmin, AnalyticsAdminAction, AnalyticsApi, AnalyticsApiResponse, AnalyticsApp, AnalyticsBanner, AnalyticsBillingInfo, AnalyticsBrand, AnalyticsBroadcast, AnalyticsBulkActionJob, AnalyticsBusinessInfo, AnalyticsCSAIContentReport, AnalyticsCSAIMedia, AnalyticsCarousel, AnalyticsCategoryHeader, AnalyticsChat, AnalyticsChatHomeFeedBoosting, AnalyticsClickTest, AnalyticsComment, AnalyticsCommentComposer, AnalyticsCommentDraft, AnalyticsContentMetadata, AnalyticsCrawler, AnalyticsCrowdControl, AnalyticsCustomFeed, AnalyticsDOMTimers, AnalyticsDiscoveryUnit, AnalyticsDomainBan, AnalyticsEdit, AnalyticsEmail, AnalyticsExpand, AnalyticsExperiment, AnalyticsFundingInstrument, AnalyticsGeo, AnalyticsGeoBlock, AnalyticsGoldPurchase, AnalyticsGrapeshotClassification, AnalyticsImposter, AnalyticsInferred, AnalyticsLegalExportRequest, AnalyticsLinkSharing, AnalyticsListing, AnalyticsLiveThread, AnalyticsMLModel, AnalyticsMailroomRequest, AnalyticsMedia, AnalyticsMessage, AnalyticsMessengerRequest, AnalyticsMetaFlair, AnalyticsMetaSearch, AnalyticsModAction, AnalyticsNCMECReport, AnalyticsNews, AnalyticsNotification, AnalyticsNotificationRequest, AnalyticsOauth, AnalyticsOnboarding, AnalyticsOutbound, AnalyticsPWA, AnalyticsPayment, AnalyticsPerspective, AnalyticsPlatform, AnalyticsPlayback, AnalyticsPoll, AnalyticsPopup, AnalyticsPost, AnalyticsPostCollection, AnalyticsPostComposer, AnalyticsPostDraft, AnalyticsPostEvent, AnalyticsPostFlair, AnalyticsPostRequirement, AnalyticsProfile, AnalyticsProgrammatic, AnalyticsRES, AnalyticsReddarAudit, AnalyticsReddarAuditTicket, AnalyticsReddarQueue, AnalyticsReddarTicket, AnalyticsReddarTicketContent, AnalyticsReferrer, AnalyticsRelevanceModel, AnalyticsReport, AnalyticsRequest, AnalyticsRerouteRule, AnalyticsResponse, AnalyticsSEO, AnalyticsScheduledPost, AnalyticsScreen, AnalyticsSearch, AnalyticsSession, AnalyticsSetting, AnalyticsShare, AnalyticsSpamuraiAction, AnalyticsSubreddit, AnalyticsSurvey, AnalyticsTargetIP, AnalyticsThirdPartyBadge, AnalyticsTicket, AnalyticsTimer, AnalyticsTooltip, AnalyticsTopicMetadata, AnalyticsTopicTag, AnalyticsTwoFactorAuth, AnalyticsUpload, AnalyticsUrlParsed, AnalyticsUser, AnalyticsUserFlair, AnalyticsUserPreferences, AnalyticsUserSubreddit, AnalyticsVisibility, AnalyticsVote, AnalyticsWebhook, AnalyticsWidget, AnalyticsZendeskTicket, AnalyticsZipkin, NSDictionary, NSString;
 
 @interface AnalyticsEvent : NSObject <TBase, NSCoding, NSCopying>
 {
@@ -148,6 +148,7 @@
     _Bool _imposterIsSet;
     _Bool _broadcastIsSet;
     _Bool _surveyIsSet;
+    _Bool _playbackIsSet;
     _Bool _geoIsSet;
     _Bool _user_legacy_idIsSet;
     _Bool _content_metadataIsSet;
@@ -156,6 +157,7 @@
     _Bool _create_request_timestampIsSet;
     _Bool _inferredIsSet;
     _Bool _event_hmac_keyIsSet;
+    _Bool _batch_load_idIsSet;
     NSString *_source;
     NSString *_action;
     NSString *_noun;
@@ -290,6 +292,7 @@
     AnalyticsImposter *_imposter;
     AnalyticsBroadcast *_broadcast;
     AnalyticsSurvey *_survey;
+    AnalyticsPlayback *_playback;
     AnalyticsGeo *_geo;
     NSString *_user_legacy_id;
     AnalyticsContentMetadata *_content_metadata;
@@ -298,9 +301,12 @@
     long long _create_request_timestamp;
     AnalyticsInferred *_inferred;
     NSString *_event_hmac_key;
+    NSString *_batch_load_id;
 }
 
 + (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
+@property(nonatomic) _Bool batch_load_idIsSet; // @synthesize batch_load_idIsSet=_batch_load_idIsSet;
+@property(copy, nonatomic) NSString *batch_load_id; // @synthesize batch_load_id=_batch_load_id;
 @property(nonatomic) _Bool event_hmac_keyIsSet; // @synthesize event_hmac_keyIsSet=_event_hmac_keyIsSet;
 @property(copy, nonatomic) NSString *event_hmac_key; // @synthesize event_hmac_key=_event_hmac_key;
 @property(nonatomic) _Bool inferredIsSet; // @synthesize inferredIsSet=_inferredIsSet;
@@ -317,6 +323,8 @@
 @property(copy, nonatomic) NSString *user_legacy_id; // @synthesize user_legacy_id=_user_legacy_id;
 @property(nonatomic) _Bool geoIsSet; // @synthesize geoIsSet=_geoIsSet;
 @property(retain, nonatomic) AnalyticsGeo *geo; // @synthesize geo=_geo;
+@property(nonatomic) _Bool playbackIsSet; // @synthesize playbackIsSet=_playbackIsSet;
+@property(retain, nonatomic) AnalyticsPlayback *playback; // @synthesize playback=_playback;
 @property(nonatomic) _Bool surveyIsSet; // @synthesize surveyIsSet=_surveyIsSet;
 @property(retain, nonatomic) AnalyticsSurvey *survey; // @synthesize survey=_survey;
 @property(nonatomic) _Bool broadcastIsSet; // @synthesize broadcastIsSet=_broadcastIsSet;
@@ -590,6 +598,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetBatch_load_id;
 - (void)unsetEvent_hmac_key;
 - (void)unsetInferred;
 - (void)unsetCreate_request_timestamp;
@@ -598,6 +607,7 @@
 - (void)unsetContent_metadata;
 - (void)unsetUser_legacy_id;
 - (void)unsetGeo;
+- (void)unsetPlayback;
 - (void)unsetSurvey;
 - (void)unsetBroadcast;
 - (void)unsetImposter;
@@ -737,7 +747,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 endpoint_timestamp:(long long)arg4 client_timestamp:(long long)arg5 uuid:(id)arg6 utc_offset:(double)arg7 correlation_id:(id)arg8 screenview_id:(id)arg9 post:(id)arg10 listing:(id)arg11 comment:(id)arg12 notification:(id)arg13 oauth:(id)arg14 screen:(id)arg15 app:(id)arg16 platform:(id)arg17 request:(id)arg18 referrer:(id)arg19 dom_timer:(id)arg20 user:(id)arg21 user_preferences:(id)arg22 subreddit:(id)arg23 session:(id)arg24 action_info:(id)arg25 expand:(id)arg26 media:(id)arg27 chat:(id)arg28 post_composer:(id)arg29 widget:(id)arg30 profile:(id)arg31 onboarding:(id)arg32 timer:(id)arg33 tfa:(id)arg34 api_response:(id)arg35 api:(id)arg36 discovery_unit:(id)arg37 experiment:(id)arg38 share:(id)arg39 user_subreddit:(id)arg40 notification_request:(id)arg41 search:(id)arg42 message:(id)arg43 admin:(id)arg44 ticket:(id)arg45 mailroom_request:(id)arg46 comment_composer:(id)arg47 gold_purchase:(id)arg48 payment:(id)arg49 news:(id)arg50 outbound:(id)arg51 click_test:(id)arg52 carousel:(id)arg53 adblock:(id)arg54 email:(id)arg55 metaflair:(id)arg56 post_draft:(id)arg57 setting:(id)arg58 visibility:(id)arg59 webhook:(id)arg60 relevance_model:(id)arg61 meta_search:(id)arg62 post_flair:(id)arg63 admin_action:(id)arg64 zipkin:(id)arg65 edit:(id)arg66 post_event:(id)arg67 post_collection:(id)arg68 third_party_badge:(id)arg69 brand:(id)arg70 messenger_request:(id)arg71 banner:(id)arg72 tooltip:(id)arg73 upload:(id)arg74 csai_media:(id)arg75 category_header:(id)arg76 report:(id)arg77 live_thread:(id)arg78 ad_request:(id)arg79 ad_decision:(id)arg80 ad_push:(id)arg81 vote:(id)arg82 popup:(id)arg83 mod_action:(id)arg84 user_flair:(id)arg85 topic_tag:(id)arg86 res:(id)arg87 ad:(id)arg88 ad_campaign:(id)arg89 ad_group:(id)arg90 ad_targeting:(id)arg91 business_info:(id)arg92 billing_info:(id)arg93 reddar_ticket:(id)arg94 zendesk_ticket:(id)arg95 target_user:(id)arg96 crawler:(id)arg97 response:(id)arg98 custom_feed:(id)arg99 pwa:(id)arg100 seo:(id)arg101 ncmec_report:(id)arg102 funding_instrument:(id)arg103 grapeshot_classification:(id)arg104 perspective:(id)arg105 comment_draft:(id)arg106 target_post:(id)arg107 ml_model:(id)arg108 topic_metadata:(id)arg109 chat_home_feed_boosting:(id)arg110 domain_ban:(id)arg111 legal_export_request:(id)arg112 post_requirement:(id)arg113 target_ip:(id)arg114 crowd_control:(id)arg115 reddar_ticket_content:(id)arg116 scheduled_post:(id)arg117 poll:(id)arg118 reddar_audit:(id)arg119 reddar_audit_ticket:(id)arg120 target_subreddit:(id)arg121 spamurai_action:(id)arg122 ad_brand_safety:(id)arg123 bulk_action_job:(id)arg124 target_comment:(id)arg125 target_message:(id)arg126 reroute_rule:(id)arg127 reddar_queue:(id)arg128 geo_block:(id)arg129 programmatic:(id)arg130 csai_content_report:(id)arg131 imposter:(id)arg132 broadcast:(id)arg133 survey:(id)arg134 geo:(id)arg135 user_legacy_id:(id)arg136 content_metadata:(id)arg137 url_parsed:(id)arg138 link_sharing:(id)arg139 create_request_timestamp:(long long)arg140 inferred:(id)arg141 event_hmac_key:(id)arg142;
+- (id)initWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 endpoint_timestamp:(long long)arg4 client_timestamp:(long long)arg5 uuid:(id)arg6 utc_offset:(double)arg7 correlation_id:(id)arg8 screenview_id:(id)arg9 post:(id)arg10 listing:(id)arg11 comment:(id)arg12 notification:(id)arg13 oauth:(id)arg14 screen:(id)arg15 app:(id)arg16 platform:(id)arg17 request:(id)arg18 referrer:(id)arg19 dom_timer:(id)arg20 user:(id)arg21 user_preferences:(id)arg22 subreddit:(id)arg23 session:(id)arg24 action_info:(id)arg25 expand:(id)arg26 media:(id)arg27 chat:(id)arg28 post_composer:(id)arg29 widget:(id)arg30 profile:(id)arg31 onboarding:(id)arg32 timer:(id)arg33 tfa:(id)arg34 api_response:(id)arg35 api:(id)arg36 discovery_unit:(id)arg37 experiment:(id)arg38 share:(id)arg39 user_subreddit:(id)arg40 notification_request:(id)arg41 search:(id)arg42 message:(id)arg43 admin:(id)arg44 ticket:(id)arg45 mailroom_request:(id)arg46 comment_composer:(id)arg47 gold_purchase:(id)arg48 payment:(id)arg49 news:(id)arg50 outbound:(id)arg51 click_test:(id)arg52 carousel:(id)arg53 adblock:(id)arg54 email:(id)arg55 metaflair:(id)arg56 post_draft:(id)arg57 setting:(id)arg58 visibility:(id)arg59 webhook:(id)arg60 relevance_model:(id)arg61 meta_search:(id)arg62 post_flair:(id)arg63 admin_action:(id)arg64 zipkin:(id)arg65 edit:(id)arg66 post_event:(id)arg67 post_collection:(id)arg68 third_party_badge:(id)arg69 brand:(id)arg70 messenger_request:(id)arg71 banner:(id)arg72 tooltip:(id)arg73 upload:(id)arg74 csai_media:(id)arg75 category_header:(id)arg76 report:(id)arg77 live_thread:(id)arg78 ad_request:(id)arg79 ad_decision:(id)arg80 ad_push:(id)arg81 vote:(id)arg82 popup:(id)arg83 mod_action:(id)arg84 user_flair:(id)arg85 topic_tag:(id)arg86 res:(id)arg87 ad:(id)arg88 ad_campaign:(id)arg89 ad_group:(id)arg90 ad_targeting:(id)arg91 business_info:(id)arg92 billing_info:(id)arg93 reddar_ticket:(id)arg94 zendesk_ticket:(id)arg95 target_user:(id)arg96 crawler:(id)arg97 response:(id)arg98 custom_feed:(id)arg99 pwa:(id)arg100 seo:(id)arg101 ncmec_report:(id)arg102 funding_instrument:(id)arg103 grapeshot_classification:(id)arg104 perspective:(id)arg105 comment_draft:(id)arg106 target_post:(id)arg107 ml_model:(id)arg108 topic_metadata:(id)arg109 chat_home_feed_boosting:(id)arg110 domain_ban:(id)arg111 legal_export_request:(id)arg112 post_requirement:(id)arg113 target_ip:(id)arg114 crowd_control:(id)arg115 reddar_ticket_content:(id)arg116 scheduled_post:(id)arg117 poll:(id)arg118 reddar_audit:(id)arg119 reddar_audit_ticket:(id)arg120 target_subreddit:(id)arg121 spamurai_action:(id)arg122 ad_brand_safety:(id)arg123 bulk_action_job:(id)arg124 target_comment:(id)arg125 target_message:(id)arg126 reroute_rule:(id)arg127 reddar_queue:(id)arg128 geo_block:(id)arg129 programmatic:(id)arg130 csai_content_report:(id)arg131 imposter:(id)arg132 broadcast:(id)arg133 survey:(id)arg134 playback:(id)arg135 geo:(id)arg136 user_legacy_id:(id)arg137 content_metadata:(id)arg138 url_parsed:(id)arg139 link_sharing:(id)arg140 create_request_timestamp:(long long)arg141 inferred:(id)arg142 event_hmac_key:(id)arg143 batch_load_id:(id)arg144;
 - (id)init;
 - (id)prettyPrint;
 - (id)makeSafeForDictValue:(id)arg1;

@@ -6,16 +6,15 @@
 
 #import <RedditCore/Comment.h>
 
-@class AwardingTotal, NSArray, UIColor;
+@class AwardingTotal, NSArray;
 
 @interface Comment (CommunityAwards)
++ (id)highlightColorForType:(unsigned long long)arg1;
 + (id)defaultAttributesUsingTheme:(id)arg1;
 + (id)activeLinkAttributesUsingTheme:(id)arg1;
 + (id)linkAttributesUsingTheme:(id)arg1;
 - (_Bool)isLastGivenAward:(id)arg1;
-- (_Bool)highlightForHighAwardWithSpecialHighlightingEnabled:(_Bool)arg1;
-- (_Bool)shouldHighlightForHighAward;
-@property(readonly, nonatomic) UIColor *awardHighlightColor;
+@property(readonly, nonatomic) _Bool shouldHighlightForHighAward;
 @property(readonly, nonatomic) unsigned long long awardHighlight;
 @property(readonly, nonatomic) _Bool hasBeenAwardedByCurrentAccount;
 @property(readonly, nonatomic) NSArray *orderedAwardingTotalsWithFirstModAwardRemoved;

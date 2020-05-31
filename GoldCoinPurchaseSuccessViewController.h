@@ -7,9 +7,11 @@
 #import "PopupViewController.h"
 
 @class BaseButton, BaseView, GoldProduct, UIImageView, UILabel;
+@protocol AccountContext;
 
 @interface GoldCoinPurchaseSuccessViewController : PopupViewController
 {
+    id <AccountContext> _accountContext;
     UIImageView *_productImageView;
     UILabel *_successTitleLabel;
     UILabel *_messageLabel;
@@ -24,12 +26,13 @@
 @property(retain, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) UILabel *successTitleLabel; // @synthesize successTitleLabel=_successTitleLabel;
 @property(retain, nonatomic) UIImageView *productImageView; // @synthesize productImageView=_productImageView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)setupViews;
 - (void)actionButtonDidTap:(id)arg1;
 - (void)closeButtonDidTap:(id)arg1;
 - (void)viewDidLoad;
-- (id)initWithProduct:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 product:(id)arg2;
 
 @end
 

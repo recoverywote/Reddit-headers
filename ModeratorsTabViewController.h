@@ -9,19 +9,20 @@
 #import "ModeratorsViewControllerDelegate-Protocol.h"
 
 @class ModeratorsViewController, NSString, RedditService, Subreddit;
+@protocol AccountContext;
 
 @interface ModeratorsTabViewController : PagedTabViewController <ModeratorsViewControllerDelegate>
 {
     ModeratorsViewController *_allModeratorsVC;
     ModeratorsViewController *_editableModeratorsVC;
+    id <AccountContext> _accountContext;
     NSString *_subredditName;
     Subreddit *_subreddit;
-    RedditService *_service;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ModeratorsViewController *editableModeratorsVC; // @synthesize editableModeratorsVC=_editableModeratorsVC;
 @property(retain, nonatomic) ModeratorsViewController *allModeratorsVC; // @synthesize allModeratorsVC=_allModeratorsVC;
 - (void).cxx_destruct;
@@ -34,9 +35,10 @@
 - (void)fetchModPerms;
 - (void)fetchSubredditAndModPerms;
 - (void)prepareNavBar;
+@property(readonly, nonatomic) RedditService *service;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2;
-- (id)initWithService:(id)arg1 subredditName:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 subredditName:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

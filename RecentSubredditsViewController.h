@@ -11,32 +11,34 @@
 #import "UITableViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class BaseSearchController, BaseTableView, NSArray, NSString;
-@protocol RecentSubredditsViewControllerDelegate;
+@class BaseSearchController, NSArray, NSString, UITableView;
+@protocol AccountContext, RecentSubredditsViewControllerDelegate;
 
 @interface RecentSubredditsViewController : BaseViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
     _Bool _hasLoadedDataOnce;
     _Bool _isShowingAutocompleteSearchResults;
     id <RecentSubredditsViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     NSArray *_recentSubreddits;
     NSArray *_subscribedSubreddits;
     NSArray *_searchResults;
     NSArray *_autocompleteResults;
     NSString *_submittedQuery;
-    BaseTableView *_tableView;
+    UITableView *_tableView;
     BaseSearchController *_searchController;
 }
 
 @property(retain, nonatomic) BaseSearchController *searchController; // @synthesize searchController=_searchController;
 @property(nonatomic) _Bool isShowingAutocompleteSearchResults; // @synthesize isShowingAutocompleteSearchResults=_isShowingAutocompleteSearchResults;
 @property(nonatomic) _Bool hasLoadedDataOnce; // @synthesize hasLoadedDataOnce=_hasLoadedDataOnce;
-@property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
+@property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(copy, nonatomic) NSString *submittedQuery; // @synthesize submittedQuery=_submittedQuery;
 @property(copy, nonatomic) NSArray *autocompleteResults; // @synthesize autocompleteResults=_autocompleteResults;
 @property(copy, nonatomic) NSArray *searchResults; // @synthesize searchResults=_searchResults;
 @property(copy, nonatomic) NSArray *subscribedSubreddits; // @synthesize subscribedSubreddits=_subscribedSubreddits;
 @property(copy, nonatomic) NSArray *recentSubreddits; // @synthesize recentSubreddits=_recentSubreddits;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <RecentSubredditsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)keyboardWillHide:(id)arg1;
@@ -46,19 +48,18 @@
 - (void)reloadSearchResults;
 - (void)updateSearchResultsWithAutocomplete:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
-- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
-- (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (id)subredditForIndex:(id)arg1;
 - (void)loadSubscribedSubsFromNetwork;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
-- (id)majorContentView;
-- (struct UIEdgeInsets)preferredContentInset;
 - (void)viewDidLoad;
+- (id)createTableView;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -19,7 +19,6 @@
 @property(copy, nonatomic) NSSet *subscribedSubtopics; // @synthesize subscribedSubtopics=_subscribedSubtopics;
 @property(copy, nonatomic) NSOrderedSet *subscribedTopics; // @synthesize subscribedTopics=_subscribedTopics;
 - (void).cxx_destruct;
-- (void)writeNewsTopicNotificationPreferences:(id)arg1 withCurrentPreference:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)writeNewsTopicSubtopicPersonalization;
 - (id)descriptionInfoFromMulti:(id)arg1;
 - (id)newsTopicsWithMultis:(id)arg1;

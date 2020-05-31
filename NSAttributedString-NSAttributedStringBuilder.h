@@ -12,7 +12,6 @@
 + (id)attributedStringWithImage:(id)arg1 attributes:(id)arg2 imageHeight:(double)arg3;
 + (id)attributedStringWithAttachment:(id)arg1 attributes:(id)arg2;
 + (id)attributedStringForSubredditName:(id)arg1 username:(id)arg2 forRect:(struct CGRect)arg3;
-+ (id)goldCoinSymbolUsingFont:(id)arg1 tintColor:(id)arg2;
 + (id)attributedStringForIconName:(id)arg1 font:(id)arg2;
 + (id)attributedStringForIconName:(id)arg1 color:(id)arg2 font:(id)arg3;
 - (id)attributedSubredditLinkStringWithSubredditImage:(id)arg1 backgroundColor:(id)arg2 borderColor:(id)arg3 subredditMention:(id)arg4;

@@ -24,7 +24,7 @@
 - (void)listingNetworkSourceDidFetchMoreData:(id)arg1;
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
 - (void)fetchData;
-- (id)initWithListingNetworkSourceBlock:(CDUnknownBlockType)arg1;
+- (id)initWithService:(id)arg1 listingNetworkSourceBlock:(CDUnknownBlockType)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

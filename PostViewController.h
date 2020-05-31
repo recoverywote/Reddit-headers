@@ -14,7 +14,7 @@
 #import "UIAdaptivePresentationControllerDelegate-Protocol.h"
 
 @class BaseButton, BaseLabel, BaseScrollView, FeedSpinnerView, FlairLabel, KeyboardFloatingViewInteractor, LocationManager, NSArray, NSString, NSURL, PostFlair, RedditService, SubmittedPost, Subreddit, SubredditBarView, UIView, _TtC6Reddit24ChatDiscussionToggleView, _TtC6Reddit30SubredditPostingDifficultyView;
-@protocol PostViewControllerDelegate;
+@protocol AccountContext, PostViewControllerDelegate;
 
 @interface PostViewController : BaseViewController <RecentSubredditsViewControllerDelegate, FlairViewDelegate, RequestToNavigateView, FlairSelectionSourceViewProtocol, KeyboardInteractorDelegate, UIAdaptivePresentationControllerDelegate>
 {
@@ -34,18 +34,18 @@
     _TtC6Reddit24ChatDiscussionToggleView *_chatDiscussionView;
     KeyboardFloatingViewInteractor *_keyboardFloatingViewInteractor;
     FeedSpinnerView *_spinnerView;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     SubmittedPost *_postToEdit;
     NSArray *_formatValidationErrors;
 }
 
-+ (id)postViewControllerForSubmittedPostType:(unsigned long long)arg1;
-+ (id)postViewControllerForSubmittedPostToEdit:(id)arg1;
++ (id)postViewControllerForSubmittedPostType:(unsigned long long)arg1 accountContext:(id)arg2;
++ (id)postViewControllerForSubmittedPostToEdit:(id)arg1 accountContext:(id)arg2;
 @property(retain, nonatomic) NSArray *formatValidationErrors; // @synthesize formatValidationErrors=_formatValidationErrors;
 @property(retain, nonatomic) SubmittedPost *postToEdit; // @synthesize postToEdit=_postToEdit;
 @property(nonatomic) _Bool canSaveAsDraft; // @synthesize canSaveAsDraft=_canSaveAsDraft;
 @property(nonatomic) _Bool hasBeenEdited; // @synthesize hasBeenEdited=_hasBeenEdited;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) FeedSpinnerView *spinnerView; // @synthesize spinnerView=_spinnerView;
 @property(retain, nonatomic) KeyboardFloatingViewInteractor *keyboardFloatingViewInteractor; // @synthesize keyboardFloatingViewInteractor=_keyboardFloatingViewInteractor;
 @property(retain, nonatomic) _TtC6Reddit24ChatDiscussionToggleView *chatDiscussionView; // @synthesize chatDiscussionView=_chatDiscussionView;
@@ -101,7 +101,8 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)configureViewAppearance;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 @property(retain, nonatomic) UIView *postErrorSeparator; // @dynamic postErrorSeparator;
 @property(retain, nonatomic) UIView *titleErrorSeparator; // @dynamic titleErrorSeparator;
 @property(retain, nonatomic) BaseLabel *postErrorView; // @dynamic postErrorView;

@@ -7,21 +7,23 @@
 #import <RedditUI/RUIActionSheetViewController.h>
 
 @class NSObject, NSString, NSURL;
-@protocol AnalyticsViewProtocol, OpenBrowserActionViewDelegate;
+@protocol AccountContext, AnalyticsViewProtocol, OpenBrowserActionViewDelegate;
 
 @interface OpenBrowserActionViewController : RUIActionSheetViewController
 {
     id <AnalyticsViewProtocol> _sourceView;
+    id <AccountContext> _accountContext;
     NSObject<OpenBrowserActionViewDelegate> *_browserActionDelegate;
     NSURL *_URL;
     NSString *_pageTitle;
 }
 
 + (void)openBrowserActionViewController:(id)arg1 didSelectItem:(id)arg2;
-+ (id)createViewControllerWithURL:(id)arg1 browserActionDelegate:(id)arg2;
++ (id)createViewControllerWithURL:(id)arg1 accountContext:(id)arg2 browserActionDelegate:(id)arg3;
 @property(readonly) NSString *pageTitle; // @synthesize pageTitle=_pageTitle;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak NSObject<OpenBrowserActionViewDelegate> *browserActionDelegate; // @synthesize browserActionDelegate=_browserActionDelegate;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AnalyticsViewProtocol> sourceView; // @synthesize sourceView=_sourceView;
 - (void).cxx_destruct;
 - (void)handleSelectionOfItem:(id)arg1;
@@ -31,7 +33,7 @@
 - (void)userDidSelectOpenInChrome;
 - (void)userDidSelectOpenInSafari;
 - (void)populateActionItems;
-- (id)initWithURL:(id)arg1 browserActionDelegate:(id)arg2;
+- (id)initWithURL:(id)arg1 accountContext:(id)arg2 browserActionDelegate:(id)arg3;
 
 @end
 

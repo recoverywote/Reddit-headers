@@ -7,8 +7,9 @@
 #import <UIKit/UIViewController.h>
 
 @interface UIViewController (RedditUI)
-- (void)fullyRemoveFromParentViewController;
-- (void)containChildViewController:(id)arg1;
+- (void)fullyRemoveFromParent;
+- (void)rui_fullyAddChildViewController:(id)arg1;
 - (void)popViewControllerWithAnimation;
+- (id)installNavigationBarBackdropView:(id)arg1;
 @end
 

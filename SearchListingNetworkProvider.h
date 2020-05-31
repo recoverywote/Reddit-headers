@@ -10,13 +10,13 @@
 {
 }
 
-+ (id)defaultSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 withinSubreddit:(_Bool)arg5 queryId:(id)arg6 correlationId:(id)arg7;
-+ (id)customFeedSearchListingNetworkSourceWithQuery:(id)arg1 customFeed:(id)arg2 withAccount:(id)arg3;
-+ (id)defaultSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 withinSubreddit:(_Bool)arg5 category:(id)arg6 queryId:(id)arg7 correlationId:(id)arg8;
-+ (id)userSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 queryId:(id)arg5 correlationId:(id)arg6;
-+ (id)subredditSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 allowUsers:(_Bool)arg5 queryId:(id)arg6 correlationId:(id)arg7;
-+ (id)subredditSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 queryId:(id)arg5 correlationId:(id)arg6;
-+ (id)autoCompleteSearchListingNetworkSourceWithQuery:(id)arg1 withAccount:(id)arg2 queryId:(id)arg3 correlationId:(id)arg4;
++ (id)defaultSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 withinSubreddit:(_Bool)arg5 queryId:(id)arg6 correlationId:(id)arg7 service:(id)arg8;
++ (id)customFeedSearchListingNetworkSourceWithQuery:(id)arg1 customFeed:(id)arg2 withAccount:(id)arg3 service:(id)arg4;
++ (id)defaultSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 withinSubreddit:(_Bool)arg5 category:(id)arg6 queryId:(id)arg7 correlationId:(id)arg8 service:(id)arg9;
++ (id)userSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 queryId:(id)arg5 correlationId:(id)arg6 service:(id)arg7;
++ (id)subredditSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 allowUsers:(_Bool)arg5 queryId:(id)arg6 correlationId:(id)arg7 service:(id)arg8;
++ (id)subredditSearchListingNetworkSourceWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 queryId:(id)arg5 correlationId:(id)arg6 service:(id)arg7;
++ (id)autoCompleteSearchListingNetworkSourceWithQuery:(id)arg1 withAccount:(id)arg2 queryId:(id)arg3 correlationId:(id)arg4 service:(id)arg5;
 + (id)processedSearchQueryWithQuery:(id)arg1 withHistorySubreddit:(id)arg2 withPostFlair:(id)arg3 withCategory:(id)arg4 forTypeahead:(_Bool)arg5;
 
 @end

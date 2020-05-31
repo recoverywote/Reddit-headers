@@ -9,19 +9,17 @@
 #import "SFSafariViewControllerDelegate-Protocol.h"
 #import "WebViewControllerProtocol-Protocol.h"
 
-@class NSString, NSURL, RedditService, WebViewInteractor;
+@class NSString, NSURL, WebViewInteractor;
 
 @interface BaseSafariViewController : SFSafariViewController <SFSafariViewControllerDelegate, WebViewControllerProtocol>
 {
     NSString *_analyticsSource;
-    RedditService *_service;
     WebViewInteractor *_interactor;
     NSURL *_analyticsURL;
 }
 
 @property(readonly, nonatomic) NSURL *analyticsURL; // @synthesize analyticsURL=_analyticsURL;
 @property(readonly, nonatomic) WebViewInteractor *interactor; // @synthesize interactor=_interactor;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;
 - (void).cxx_destruct;
 - (id)analyticsPageType;
@@ -33,7 +31,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)dealloc;
-- (id)initWithService:(id)arg1 URL:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 URL:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

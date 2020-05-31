@@ -22,8 +22,6 @@
 @property(retain, nonatomic) EmptyFeedNUXView *emptyFeedNUXView; // @synthesize emptyFeedNUXView=_emptyFeedNUXView;
 - (void).cxx_destruct;
 - (void)feedSortOptionController:(id)arg1 didFinishSelectingFeedSort:(unsigned long long)arg2 feedRange:(unsigned long long)arg3;
-- (_Bool)feedPostViewShouldShowFlairs:(id)arg1;
-- (_Bool)feedPostViewShouldShowExpandedHeader:(id)arg1;
 - (void)emptyFeedNuxDidTapSignUp:(id)arg1;
 - (void)emptyFeedNuxDidTapExplore:(id)arg1;
 - (void)emptyFeedNuxDidTapLogin:(id)arg1;

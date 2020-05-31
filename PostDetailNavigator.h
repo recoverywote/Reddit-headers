@@ -7,22 +7,24 @@
 #import <objc/NSObject.h>
 
 @class PostDetailViewController, RedditService;
+@protocol AccountContext;
 
 @interface PostDetailNavigator : NSObject
 {
+    id <AccountContext> _accountContext;
     PostDetailViewController *_vc;
-    RedditService *_service;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak PostDetailViewController *vc; // @synthesize vc=_vc;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)navigateToAwardDetailsForComment:(id)arg1 parentPost:(id)arg2 correlationId:(id)arg3;
 - (void)presentLoggedOutViewControllerForDownvoting;
 - (void)presentLoggedOutViewControllerForUpvoting;
 - (void)presentLoggedOutViewControllerForCommenting;
 - (void)presentExitAnonymousBrowsingPopupForSource:(unsigned long long)arg1;
-- (id)initWithViewController:(id)arg1 service:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithViewController:(id)arg1 accountContext:(id)arg2;
 
 @end
 

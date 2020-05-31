@@ -12,13 +12,13 @@
 #import "_TtP6Reddit33MetaLandingViewControllerDelegate_-Protocol.h"
 #import "_TtP6Reddit37MetaSubredditMembershipActionDelegate_-Protocol.h"
 
-@class MetaCommunityInfo, NSString, RedditService, Subreddit, UIScrollView, _TtC6Reddit34MetaSubredditMembershipContentNode;
-@protocol PagedTabControllerParentCallback;
+@class MetaCommunityInfo, NSString, Subreddit, UIScrollView, _TtC6Reddit34MetaSubredditMembershipContentNode;
+@protocol AccountContext, PagedTabControllerParentCallback;
 
 @interface MetaSubredditMembershipViewController : BaseViewController <UIScrollViewDelegate, _TtP6Reddit37MetaSubredditMembershipActionDelegate_, _TtP6Reddit33MetaLandingViewControllerDelegate_, MetaBadgeManagementViewControllerDelegate, PagedTabControllerProtocol>
 {
     id <PagedTabControllerParentCallback> _pagedTabControllerParent;
-    RedditService *_redditService;
+    id <AccountContext> _accountContext;
     _TtC6Reddit34MetaSubredditMembershipContentNode *_contentNode;
     NSString *_userPK;
     NSString *_correlationID;
@@ -31,7 +31,7 @@
 @property(retain, nonatomic) NSString *correlationID; // @synthesize correlationID=_correlationID;
 @property(retain, nonatomic) NSString *userPK; // @synthesize userPK=_userPK;
 @property(retain, nonatomic) _TtC6Reddit34MetaSubredditMembershipContentNode *contentNode; // @synthesize contentNode=_contentNode;
-@property(nonatomic) __weak RedditService *redditService; // @synthesize redditService=_redditService;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
 - (void).cxx_destruct;
 - (id)pageItemId;
@@ -56,8 +56,8 @@
 - (void)viewDidLoad;
 - (void)viewDidLayoutSubviews;
 - (void)loadView;
-- (id)initWithRedditService:(id)arg1 userPK:(id)arg2;
-- (id)initWithRedditService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 userPK:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

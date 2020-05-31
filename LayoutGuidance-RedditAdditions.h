@@ -60,7 +60,6 @@
 - (struct CGSize)cardSmallThumbnailSize;
 - (struct UIEdgeInsets)cardSmallThumbnailInsets;
 - (double)maxSubredditIconSize;
-- (double)indexBarItemSize;
 - (double)navBarHeight;
 - (double)statusBarHeight;
 - (double)thicklineHeight;

@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit33ReportingReasonListViewController : BaseTableViewController
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: reportable
     // Error parsing type: , name: rulesType
     // Error parsing type: , name: redditRules

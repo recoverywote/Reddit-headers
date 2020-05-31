@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: service
     // Error parsing type: , name: communityManager
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: subreddit
     // Error parsing type: , name: bannerPreferences
     // Error parsing type: , name: banner
@@ -20,7 +21,7 @@
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
 
 @end
 

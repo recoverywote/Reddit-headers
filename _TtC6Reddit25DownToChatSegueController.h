@@ -9,7 +9,7 @@
 @interface _TtC6Reddit25DownToChatSegueController : BaseViewController
 {
     // Error parsing type: , name: subreddit
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: deeplinkUrl
     // Error parsing type: , name: headerLabel
     // Error parsing type: , name: detailLabel
@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
 
 @end
 

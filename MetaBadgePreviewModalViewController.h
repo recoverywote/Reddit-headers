@@ -35,7 +35,7 @@
 - (void)loadView;
 - (id)presentationControllerForPresentedViewController:(id)arg1 presentingViewController:(id)arg2 sourceViewController:(id)arg3;
 - (id)initWithBadges:(id)arg1 subreddit:(id)arg2 actionTitle:(id)arg3 actionHandler:(CDUnknownBlockType)arg4;
-- (id)initWithService:(id)arg1 badgePK:(id)arg2 subreddit:(id)arg3 analyticsEventBuilder:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 badgePK:(id)arg2 subreddit:(id)arg3 analyticsEventBuilder:(id)arg4;
 - (id)initWithBadgeProvider:(CDUnknownBlockType)arg1 subreddit:(id)arg2 didLoadHandler:(CDUnknownBlockType)arg3 actionHandler:(CDUnknownBlockType)arg4;
 
 // Remaining properties

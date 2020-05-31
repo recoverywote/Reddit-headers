@@ -30,7 +30,7 @@
 - (id)parseNodesToArray:(id)arg1 atDepth:(long long)arg2 forParent:(id)arg3;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;
-- (id)initWithPost:(id)arg1 fetchURLString:(id)arg2 parameters:(id)arg3;
+- (id)initWithService:(id)arg1 post:(id)arg2 fetchURLString:(id)arg3 parameters:(id)arg4;
 
 @end
 

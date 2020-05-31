@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: authorUsername
     // Error parsing type: , name: author
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: spinnerView
     // Error parsing type: , name: stackView
     // Error parsing type: , name: onBlockAuthorPress

@@ -7,15 +7,18 @@
 #import <UIKit/UIActivity.h>
 
 @class Post, UIViewController;
+@protocol AccountContext;
 
 @interface ChatPostActivity : UIActivity
 {
     Post *_post;
     UIViewController *_presentingViewController;
+    id <AccountContext> _accountContext;
 }
 
 + (long long)activityCategory;
 + (id)activityType;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
@@ -24,7 +27,7 @@
 - (id)activityImage;
 - (id)activityTitle;
 - (id)activityType;
-- (id)initWithPresentingViewController:(id)arg1;
+- (id)initWithPresentingViewController:(id)arg1 accountContext:(id)arg2;
 
 @end
 

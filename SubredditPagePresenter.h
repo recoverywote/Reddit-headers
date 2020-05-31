@@ -9,14 +9,14 @@
 #import "TemplateParserContext-Protocol.h"
 
 @class Account, ChatNetworkManager, DiscoveryUnitFetcher, MetaCommunityInfo, NSArray, NSString, RedditService, Subreddit;
-@protocol SubredditPagePresentable;
+@protocol AccountContext, SubredditPagePresentable;
 
 @interface SubredditPagePresenter : NSObject <TemplateParserContext>
 {
     _Bool _isChatEnabledForSubreddit;
     _Bool _isModPermissionsFetched;
     _Bool _isFetchingSubreddit;
-    RedditService *_redditService;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
     id <SubredditPagePresentable> _presentable;
     NSArray *_channels;
@@ -25,12 +25,8 @@
     unsigned long long _feedSort;
     unsigned long long _feedRange;
     DiscoveryUnitFetcher *_discoveryUnitFetcher;
-    Account *_currentAccount;
-    ChatNetworkManager *_chatNetworkManager;
 }
 
-@property(retain, nonatomic) ChatNetworkManager *chatNetworkManager; // @synthesize chatNetworkManager=_chatNetworkManager;
-@property(retain, nonatomic) Account *currentAccount; // @synthesize currentAccount=_currentAccount;
 @property(retain, nonatomic) DiscoveryUnitFetcher *discoveryUnitFetcher; // @synthesize discoveryUnitFetcher=_discoveryUnitFetcher;
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
 @property(nonatomic) unsigned long long feedSort; // @synthesize feedSort=_feedSort;
@@ -42,7 +38,7 @@
 @property(nonatomic) _Bool isChatEnabledForSubreddit; // @synthesize isChatEnabledForSubreddit=_isChatEnabledForSubreddit;
 @property(nonatomic) __weak id <SubredditPagePresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(retain, nonatomic) RedditService *redditService; // @synthesize redditService=_redditService;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)addSubredditToCustomFeed:(id)arg1;
 - (_Bool)hasMenuTab;
@@ -64,7 +60,10 @@
 - (id)pillForTemplateName:(id)arg1;
 - (id)valueForTemplateName:(id)arg1;
 - (void)upgradeToBetaTesterIfPossibleWithSubredditName:(id)arg1;
-- (id)initWithRedditService:(id)arg1;
+@property(readonly, nonatomic) ChatNetworkManager *chatNetworkManager;
+@property(readonly, nonatomic) Account *currentAccount;
+@property(readonly, nonatomic) RedditService *redditService;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -41,7 +41,7 @@
 - (id)searchesForDiscoveryUnitData:(id)arg1;
 - (id)postsForData:(id)arg1;
 - (id)subredditsForData:(id)arg1;
-- (id)initWithQuery:(id)arg1 withSort:(id)arg2 withTime:(id)arg3 withLimit:(long long)arg4 withinSubreddit:(_Bool)arg5 category:(id)arg6 source:(id)arg7 correlationId:(id)arg8 queryId:(id)arg9 carouselDelegate:(id)arg10;
+- (id)initWithService:(id)arg1 query:(id)arg2 withSort:(id)arg3 withTime:(id)arg4 withLimit:(long long)arg5 withinSubreddit:(_Bool)arg6 category:(id)arg7 source:(id)arg8 correlationId:(id)arg9 queryId:(id)arg10 carouselDelegate:(id)arg11;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

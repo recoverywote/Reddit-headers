@@ -17,7 +17,6 @@
 @property(readonly, nonatomic) _Bool isAnonymousBrowsingEnabled;
 @property(readonly, nonatomic) _Bool isCommunitySettingsM2Enabled;
 @property(readonly, nonatomic) _Bool isCollectionInFeedEnabled;
-@property(readonly, nonatomic) long long sharePausePromptVariant;
 @property(readonly, nonatomic) long long redditSharesVariant;
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
 @property(readonly, nonatomic) _Bool isMuxEnabled;
@@ -76,6 +75,8 @@
 - (id)disableTheatreModeExperimentName;
 @property(readonly, nonatomic) _Bool isLapsedUserTargetedOfferEnabled;
 @property(readonly, nonatomic) _Bool isNewUserTargetedOfferEnabled;
+@property(readonly, nonatomic) _Bool isEditUsernameEnabled;
+@property(readonly, nonatomic) _Bool isSingleSignOnEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletEnabled;
 @property(readonly, nonatomic) _Bool isRedditVideoV2Enabled;
 @property(readonly, nonatomic) _Bool isReportUserProfileIntegrationEnabled;

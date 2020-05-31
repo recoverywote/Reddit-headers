@@ -8,9 +8,18 @@
 
 @interface _TtC6Reddit26AnonymousBrowsingExitPopup : BaseViewController
 {
-    // Error parsing type: , name: exitView
     // Error parsing type: , name: anonymousModeManager
     // Error parsing type: , name: source
+    // Error parsing type: , name: corneredView
+    // Error parsing type: , name: scrollViewContainerView
+    // Error parsing type: , name: scrollView
+    // Error parsing type: , name: stackView
+    // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: closeButton
+    // Error parsing type: , name: descriptionContainerView
+    // Error parsing type: , name: descriptionLabel
+    // Error parsing type: , name: leaveAnonymousBrowsingButton
+    // Error parsing type: , name: kUpdateSettingsURLString
 }
 
 - (void).cxx_destruct;

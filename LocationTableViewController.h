@@ -9,12 +9,13 @@
 #import "UISearchBarDelegate-Protocol.h"
 
 @class EmptyDogeView, GeoRegion, LocationFilterManager, NSArray, NSString, SearchBarTableViewCell;
-@protocol LocationTableViewControllerDelegate;
+@protocol AccountContext, LocationTableViewControllerDelegate;
 
 @interface LocationTableViewController : BaseTableViewController <UISearchBarDelegate>
 {
     id <LocationTableViewControllerDelegate> _locationTableDelegate;
     GeoRegion *_selectedRegion;
+    id <AccountContext> _accountContext;
     GeoRegion *_currentRegion;
     GeoRegion *_selectedSubregion;
     LocationFilterManager *_manager;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) LocationFilterManager *manager; // @synthesize manager=_manager;
 @property(retain, nonatomic) GeoRegion *selectedSubregion; // @synthesize selectedSubregion=_selectedSubregion;
 @property(retain, nonatomic) GeoRegion *currentRegion; // @synthesize currentRegion=_currentRegion;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) GeoRegion *selectedRegion; // @synthesize selectedRegion=_selectedRegion;
 @property(nonatomic) __weak id <LocationTableViewControllerDelegate> locationTableDelegate; // @synthesize locationTableDelegate=_locationTableDelegate;
 - (void).cxx_destruct;
@@ -54,6 +56,8 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1 style:(long long)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

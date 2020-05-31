@@ -8,15 +8,15 @@
 
 #import "AttributedLabelRegularDelegate-Protocol.h"
 
-@class AttributedLabelRegular, Award, BaseButton, BaseView, GoldProduct, NSString, RedditService, UILabel, _TtC6Reddit25AnimatableRemoteImageView;
-@protocol GoldCoinPurchaseConfirmationViewControllerDelegate;
+@class AttributedLabelRegular, Award, BaseButton, BaseView, GoldProduct, NSString, UILabel, _TtC6Reddit25AnimatableRemoteImageView;
+@protocol AccountContext, GoldCoinPurchaseConfirmationViewControllerDelegate;
 
 @interface GoldCoinPurchaseConfirmationViewController : PopupViewController <AttributedLabelRegularDelegate>
 {
     id <GoldCoinPurchaseConfirmationViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     Award *_award;
     GoldProduct *_purchasingProduct;
-    RedditService *_service;
     BaseView *_dialogContentView;
     BaseButton *_actionButton;
     _TtC6Reddit25AnimatableRemoteImageView *_gildIconImageView;
@@ -31,9 +31,9 @@
 @property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *gildIconImageView; // @synthesize gildIconImageView=_gildIconImageView;
 @property(retain, nonatomic) BaseButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) BaseView *dialogContentView; // @synthesize dialogContentView=_dialogContentView;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) GoldProduct *purchasingProduct; // @synthesize purchasingProduct=_purchasingProduct;
 @property(retain, nonatomic) Award *award; // @synthesize award=_award;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <GoldCoinPurchaseConfirmationViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)setupViews;
@@ -42,7 +42,7 @@
 - (void)actionButtonDidTap:(id)arg1;
 - (void)didDismissByTappingDimmer;
 - (void)viewDidLoad;
-- (id)initWithAward:(id)arg1 purchasingProduct:(id)arg2 service:(id)arg3;
+- (id)initWithAward:(id)arg1 purchasingProduct:(id)arg2 accountContext:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -13,7 +13,6 @@
 - (id)commentsFromData:(id)arg1;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;
-- (id)initWithFetchURLString:(id)arg1;
 
 @end
 

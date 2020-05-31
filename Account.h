@@ -6,7 +6,7 @@
 
 #import <RedditCore/User.h>
 
-@class AccountPreferences, NSDate, NSString;
+@class AccountPreferences, NSArray, NSDate, NSString;
 
 @interface Account : User
 {
@@ -30,8 +30,10 @@
     NSDate *_premiumExpirationDate;
     NSDate *_suspensionExpiration;
     AccountPreferences *_preferences;
+    NSArray *_linkedIdentities;
 }
 
+@property(retain, nonatomic) NSArray *linkedIdentities; // @synthesize linkedIdentities=_linkedIdentities;
 @property(nonatomic) _Bool isEmailPermissionRequired; // @synthesize isEmailPermissionRequired=_isEmailPermissionRequired;
 @property(nonatomic) _Bool isChatUserReportingEnabled; // @synthesize isChatUserReportingEnabled=_isChatUserReportingEnabled;
 @property(nonatomic) _Bool isChatMessageReportingEnabled; // @synthesize isChatMessageReportingEnabled=_isChatMessageReportingEnabled;

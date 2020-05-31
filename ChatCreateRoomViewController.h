@@ -9,7 +9,8 @@
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 #import "WarningTextViewDelegate-Protocol.h"
 
-@class BaseScrollView, ChatRoomMuteSettings, DropdownDetailView, NSArray, NSDictionary, NSString, RedditService, Subreddit, ToggleTextDetailView, WarningTextView;
+@class BaseScrollView, ChatRoomMuteSettings, DropdownDetailView, NSArray, NSDictionary, NSString, Subreddit, ToggleTextDetailView, WarningTextView;
+@protocol AccountContext;
 
 @interface ChatCreateRoomViewController : BaseViewController <RUIActionSheetViewControllerDelegate, WarningTextViewDelegate>
 {
@@ -26,8 +27,10 @@
     NSArray *_muteAccountAgesOrderedKeys;
     NSArray *_muteNewMemberOrderedKeys;
     ChatRoomMuteSettings *_muteSettings;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatRoomMuteSettings *muteSettings; // @synthesize muteSettings=_muteSettings;
 @property(readonly, nonatomic) NSArray *muteNewMemberOrderedKeys; // @synthesize muteNewMemberOrderedKeys=_muteNewMemberOrderedKeys;
 @property(readonly, nonatomic) NSArray *muteAccountAgesOrderedKeys; // @synthesize muteAccountAgesOrderedKeys=_muteAccountAgesOrderedKeys;
@@ -53,7 +56,6 @@
 @property(readonly, copy, nonatomic) NSString *trimmedDescriptionString;
 @property(readonly, copy, nonatomic) NSString *trimmedRoomNameString;
 - (void)startChatWithChannel:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)createChannel;
 - (void)updateSaveButtonStatus;
 - (void)addNavBarItems;
@@ -61,7 +63,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
-- (id)initWithSubreddit:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -21,8 +21,6 @@
 + (id)avatarDefaultImageForBase10ID:(long long)arg1;
 + (id)addWatermarkToImage:(id)arg1 withSubredditName:(id)arg2 withUsername:(id)arg3 withLogo:(id)arg4;
 + (id)addWatermarkToImage:(id)arg1 withSubredditName:(id)arg2 withUsername:(id)arg3;
-+ (id)tintedImageNamed:(id)arg1 tintColor:(id)arg2;
-+ (id)circularImageFromImage:(id)arg1 withFillColor:(id)arg2;
 + (id)circledImageNamed:(id)arg1 tintColor:(id)arg2 fillColor:(id)arg3 size:(double)arg4;
 + (id)imageWithImage:(id)arg1 scaledToWidth:(double)arg2;
 + (id)circularImageFromColor:(id)arg1 withRadius:(double)arg2;
@@ -31,8 +29,6 @@
 + (id)sharedInstance;
 - (id)imageForWatermarkInfo:(id)arg1;
 - (void)saveWithCompletion:(CDUnknownBlockType)arg1;
-- (id)averageColorFromImageRef:(struct CGImage *)arg1;
-- (id)averageColorFromRect:(struct CGRect)arg1;
 - (id)circledImageNamed:(id)arg1 tintColor:(id)arg2 fillColor:(id)arg3 borderColor:(id)arg4;
 - (id)roundedImageWithCacheName:(id)arg1 tintColor:(id)arg2 fillColor:(id)arg3 borderColor:(id)arg4 size:(double)arg5 scaleOriginalImage:(_Bool)arg6 cornerRadius:(double)arg7;
 - (id)roundedImageWithTintColor:(id)arg1 fillColor:(id)arg2 borderColor:(id)arg3 size:(double)arg4 cornerRadius:(double)arg5;

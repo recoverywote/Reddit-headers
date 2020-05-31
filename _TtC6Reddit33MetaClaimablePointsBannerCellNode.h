@@ -14,6 +14,7 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: banner
     // Error parsing type: , name: contentNode
+    // Error parsing type: , name: analyticsManager
 }
 
 - (void).cxx_destruct;
@@ -23,7 +24,7 @@
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-- (id)initWithBanner:(id)arg1 visibilityTracker:(id)arg2;
+- (id)initWithBanner:(id)arg1 viewContext:(id)arg2 visibilityTracker:(id)arg3;
 @property(nonatomic, readonly) _TtC6Reddit25MetaClaimablePointsBanner *banner; // @synthesize banner;
 @property(nonatomic) __weak id <_TtP6Reddit41MetaClaimablePointsBannerCellNodeDelegate_> delegate; // @synthesize delegate;
 

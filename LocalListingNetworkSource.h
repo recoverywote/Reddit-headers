@@ -16,7 +16,7 @@
 - (void)fetchListingDataWithParameters:(id)arg1 correlationId:(id)arg2 successBlock:(CDUnknownBlockType)arg3 failureBlock:(CDUnknownBlockType)arg4;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;
-- (id)initWithLocalObjectFetch:(CDUnknownBlockType)arg1;
+- (id)initWithService:(id)arg1 localObjectFetch:(CDUnknownBlockType)arg2;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

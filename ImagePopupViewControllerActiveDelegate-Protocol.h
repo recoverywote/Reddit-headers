@@ -5,8 +5,9 @@
 //
 
 @class ImagePopupViewController;
+@protocol AccountContext;
 
 @protocol ImagePopupViewControllerActiveDelegate
-- (void)imagePopupViewControllerDidPressActiveButton:(ImagePopupViewController *)arg1;
+- (void)imagePopupViewControllerDidPressActiveButton:(ImagePopupViewController *)arg1 accountContext:(id <AccountContext>)arg2;
 @end
 

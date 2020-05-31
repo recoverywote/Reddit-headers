@@ -13,7 +13,6 @@
 {
     NSArray *_indexes;
     id <ScrollViewIndexBarDelegate> _delegate;
-    double _itemSize;
     ScrollViewIndexBarIndicatorView *_indicatorView;
     NSArray *_indexViews;
     unsigned long long _currentIndex;
@@ -22,21 +21,24 @@
 @property(nonatomic) unsigned long long currentIndex; // @synthesize currentIndex=_currentIndex;
 @property(copy, nonatomic) NSArray *indexViews; // @synthesize indexViews=_indexViews;
 @property(retain, nonatomic) ScrollViewIndexBarIndicatorView *indicatorView; // @synthesize indicatorView=_indicatorView;
-@property(nonatomic) double itemSize; // @synthesize itemSize=_itemSize;
 @property(nonatomic) __weak id <ScrollViewIndexBarDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSArray *indexes; // @synthesize indexes=_indexes;
 - (void).cxx_destruct;
+- (void)setOpacity:(double)arg1 animated:(_Bool)arg2;
 - (void)adjustIndexViewTint:(SEL)arg1;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesMoved:(id)arg1 withEvent:(id)arg2;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
+@property(readonly, nonatomic) double itemSize;
+- (struct CGSize)intrinsicContentSize;
 - (struct CGRect)indicatorFrameForIndex:(long long)arg1;
 - (long long)indexForPoint:(struct CGPoint)arg1;
 - (id)makeViewForIndex:(id)arg1;
 @property(readonly, nonatomic) double itemOffset;
 - (void)layoutSubviews;
 - (void)configureWithIndexes:(id)arg1;
+- (double)opacityForTableView:(id)arg1;
 
 @end
 

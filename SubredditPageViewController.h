@@ -161,7 +161,7 @@
 - (void)configureWithSubredditName:(id)arg1;
 @property(readonly, nonatomic) Subreddit *subreddit;
 @property(readonly, nonatomic) RedditService *service;
-- (id)init;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(copy, nonatomic) NSString *analyticsReason;

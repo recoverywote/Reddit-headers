@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@class MetaUsernameDecoration, NSDictionary, NSString, RedditService, Subreddit, UIColor;
-@protocol MetaBadgeManagementPresenterDelegate;
+@class MetaUsernameDecoration, NSDictionary, NSString, Subreddit, UIColor;
+@protocol AccountContext, MetaBadgeManagementPresenterDelegate;
 
 @interface MetaBadgeManagementPresenter : NSObject
 {
     NSDictionary *_viewModels;
     id <MetaBadgeManagementPresenterDelegate> _delegate;
-    RedditService *_redditService;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
     NSString *_userPK;
     UIColor *_contentColor;
@@ -22,7 +22,7 @@
 @property(retain, nonatomic) UIColor *contentColor; // @synthesize contentColor=_contentColor;
 @property(retain, nonatomic) NSString *userPK; // @synthesize userPK=_userPK;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(nonatomic) __weak RedditService *redditService; // @synthesize redditService=_redditService;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <MetaBadgeManagementPresenterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSDictionary *viewModels; // @synthesize viewModels=_viewModels;
 - (void).cxx_destruct;
@@ -37,7 +37,7 @@
 - (id)placementViewModelsFromBadgeViewModels:(id)arg1 placement:(id)arg2 productCollections:(id)arg3;
 - (void)didFetchRemoteBadgeProducts:(id)arg1 ownedBadges:(id)arg2 productCollections:(id)arg3 errors:(id)arg4;
 - (void)reloadData;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2 userPK:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2 userPK:(id)arg3;
 
 @end
 

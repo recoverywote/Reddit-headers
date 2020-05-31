@@ -29,7 +29,7 @@
 - (void)parseData:(id)arg1;
 - (void)fetchListingDataWithParameters:(id)arg1 correlationId:(id)arg2 successBlock:(CDUnknownBlockType)arg3 failureBlock:(CDUnknownBlockType)arg4;
 - (id)copyWithZone:(struct _NSZone *)arg1;
-- (id)initWithListing:(id)arg1 removeDuplicates:(_Bool)arg2;
+- (id)initWithService:(id)arg1 listing:(id)arg2 removeDuplicates:(_Bool)arg3;
 
 @end
 

@@ -19,7 +19,6 @@
     SearchBarTransition *_searchBarTransition;
     SearchPresenter *_searchPresenter;
     UIView *_headerView;
-    CDUnknownBlockType _headerContentView;
     REDSearchBar *_searchBar;
     REDInputTextField *_searchInputView;
     FeedSpinnerView *_firstLoadSpinner;
@@ -42,7 +41,6 @@
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
 @property(retain, nonatomic) REDInputTextField *searchInputView; // @synthesize searchInputView=_searchInputView;
 @property(retain, nonatomic) REDSearchBar *searchBar; // @synthesize searchBar=_searchBar;
-@property(copy, nonatomic) CDUnknownBlockType headerContentView; // @synthesize headerContentView=_headerContentView;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SearchPresenter *searchPresenter; // @synthesize searchPresenter=_searchPresenter;
 @property(retain, nonatomic) SearchBarTransition *searchBarTransition; // @synthesize searchBarTransition=_searchBarTransition;

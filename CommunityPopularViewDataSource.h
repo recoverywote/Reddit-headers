@@ -6,7 +6,6 @@
 
 #import "CommunityViewDataSource.h"
 
-@class RedditService;
 @protocol AccountContext;
 
 @interface CommunityPopularViewDataSource : CommunityViewDataSource
@@ -22,8 +21,7 @@
 - (id)viewControllerForIndexPath:(id)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-@property(readonly, nonatomic) RedditService *service;
-- (id)initWithTableView:(id)arg1 accountContext:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 tableView:(id)arg2;
 
 @end
 

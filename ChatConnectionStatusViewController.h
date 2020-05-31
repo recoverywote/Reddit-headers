@@ -6,7 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-@class BaseButton, BaseImageView, BaseLabel, NSTimer, RedditService, UIStackView;
+@class BaseButton, BaseImageView, BaseLabel, NSTimer, UIStackView;
 @protocol ChatConnectionStatusViewControllerDelegate;
 
 @interface ChatConnectionStatusViewController : UIViewController
@@ -34,7 +34,6 @@
 - (void)autoDismissTimerDidFire:(id)arg1;
 - (void)stopAutoDimissTimer;
 - (void)startAutoDimissTimer;
-@property(readonly, nonatomic) RedditService *service;
 - (void)hideIndicator;
 - (void)showIndicator;
 - (void)showConnectingView;

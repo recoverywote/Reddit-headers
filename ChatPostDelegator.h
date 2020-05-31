@@ -10,12 +10,15 @@
 #import "_TtP6Reddit41ChatPostActionSheetViewControllerDelegate_-Protocol.h"
 
 @class ChatPostViewController, NSString;
+@protocol AccountContext;
 
 @interface ChatPostDelegator : NSObject <_TtP6Reddit41ChatPostActionSheetViewControllerDelegate_, ChatPostContentNodeDelegate>
 {
     ChatPostViewController *_viewController;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak ChatPostViewController *viewController; // @synthesize viewController=_viewController;
 - (void).cxx_destruct;
 - (_Bool)attemptNavigationToUserCardModalWithUsername:(id)arg1 comment:(id)arg2;
@@ -44,7 +47,7 @@
 - (void)didTapParentCommentNodeWithComment:(id)arg1;
 - (void)chatPostContentNode:(id)arg1 didTapAvatarImageNode:(id)arg2;
 - (void)chatPostTextNode:(id)arg1 didTapURL:(id)arg2;
-- (id)initWithViewController:(id)arg1;
+- (id)initWithViewController:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

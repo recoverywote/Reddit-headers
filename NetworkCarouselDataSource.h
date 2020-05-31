@@ -40,7 +40,7 @@
 - (void)fetchLocalData;
 - (void)fetchCarouselItemsWithCompletion:(CDUnknownBlockType)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
-- (id)initWithURLString:(id)arg1 parameters:(id)arg2 templateContext:(id)arg3;
+- (id)initWithURLString:(id)arg1 service:(id)arg2 parameters:(id)arg3 templateContext:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

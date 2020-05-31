@@ -21,7 +21,7 @@
 - (_Bool)hasMoreContent;
 - (id)carouselItemsFromData:(id)arg1;
 - (void)parseData:(id)arg1;
-- (id)initWithURLString:(id)arg1 parameters:(id)arg2 templateContext:(id)arg3 subredditPk:(id)arg4;
+- (id)initWithURLString:(id)arg1 service:(id)arg2 parameters:(id)arg3 templateContext:(id)arg4 subredditPk:(id)arg5;
 
 @end
 

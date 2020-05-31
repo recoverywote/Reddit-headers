@@ -53,9 +53,6 @@
 - (void)scrollViewIndexBarDidEndScrolling:(id)arg1;
 - (void)scrollViewIndexBarDidBeginScrolling:(id)arg1;
 - (void)scrollViewIndexBar:(id)arg1 didSelectIndex:(id)arg2;
-- (struct CGRect)visibleIndexBarFrame;
-- (_Bool)shouldShowIndexBar;
-- (void)showIndexBarIfNeededAnimated:(_Bool)arg1;
 - (id)indexesForDataSources;
 - (void)communityViewDataSourceDidUpdate:(id)arg1;
 - (void)didPullToRefresh:(id)arg1;
@@ -74,7 +71,7 @@
 - (void)fetchAllData;
 - (id)majorContentView;
 - (struct UIEdgeInsets)preferredContentInset;
-- (void)layoutViewsForFrame:(struct CGRect)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)orderedDataSources;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;

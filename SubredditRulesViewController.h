@@ -12,17 +12,16 @@
 {
     Subreddit *_subreddit;
     FeedSpinnerView *_firstLoadSpinner;
-    RedditService *_service;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
 - (void)reloadSubredditRules;
 - (void)setupLoadingSpinner;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
 
 @end
 

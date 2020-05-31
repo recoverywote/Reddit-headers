@@ -9,12 +9,13 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class ASDisplayNode, BaseButtonNode, FeedPostOptions, NSString, Post;
-@protocol FeedPostModerateBarNodeDelegate;
+@protocol FeedPostModerateBarNodeDelegate, ViewContext;
 
 @interface FeedPostModerateBarNode : BaseFeedDisplayNode <ObjectObserverProtocol>
 {
     Post *_post;
     id <FeedPostModerateBarNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     FeedPostOptions *_options;
     BaseButtonNode *_approveButtonNode;
     BaseButtonNode *_deleteButtonNode;
@@ -34,6 +35,7 @@
 @property(retain, nonatomic) BaseButtonNode *deleteButtonNode; // @synthesize deleteButtonNode=_deleteButtonNode;
 @property(retain, nonatomic) BaseButtonNode *approveButtonNode; // @synthesize approveButtonNode=_approveButtonNode;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostModerateBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
@@ -50,7 +52,7 @@
 - (void)reconfigure;
 - (void)addKeyValueObservations;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 options:(id)arg2;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

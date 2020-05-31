@@ -38,7 +38,7 @@
 - (void)viewDidLoad;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)loadView;
-- (id)initWithService:(id)arg1 subreddit:(id)arg2 userPK:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2 userPK:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

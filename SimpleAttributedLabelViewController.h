@@ -9,9 +9,11 @@
 #import "AttributedLabelDelegate-Protocol.h"
 
 @class AttributedLabel, EmptyDogeView, NSAttributedString, NSLayoutConstraint, NSString, UIScrollView, UIView;
+@protocol AccountContext;
 
 @interface SimpleAttributedLabelViewController : BaseViewController <AttributedLabelDelegate>
 {
+    id <AccountContext> _accountContext;
     UIScrollView *_scrollView;
     UIView *_contentView;
     AttributedLabel *_attributedLabel;
@@ -26,6 +28,7 @@
 @property(retain, nonatomic) AttributedLabel *attributedLabel; // @synthesize attributedLabel=_attributedLabel;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)handleLinkURL:(id)arg1;
 - (void)attributedLabel:(id)arg1 didSelectLinkWithURL:(id)arg2;
@@ -34,6 +37,7 @@
 - (void)configureWithAttributedString:(id)arg1;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

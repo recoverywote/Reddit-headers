@@ -12,14 +12,14 @@
 #import "SelectAwardViewControllerDelegate-Protocol.h"
 #import "_TtP6Reddit22AwardSelectionDelegate_-Protocol.h"
 
-@class Comment, GildingEventLogger, GoldProduct, NSNumber, NSString, Post, PurchaseAwardCoordinator, RedditService, UIViewController, _TtC6Reddit19AwardSelectionState, _TtC6Reddit21AwardSelectionOptions, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit25GildingPurchaseController, _TtC6Reddit34GoldUpsellImagePopupViewController;
-@protocol AwardCoordinatorDelegate;
+@class Comment, GildingEventLogger, GoldProduct, NSNumber, NSString, Post, PurchaseAwardCoordinator, UIViewController, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit25GildingPurchaseController, _TtC6Reddit34GoldUpsellImagePopupViewController, _TtC7Economy19AwardSelectionState, _TtC7Economy21AwardSelectionOptions;
+@protocol AccountContext, AwardCoordinatorDelegate;
 
 @interface AwardCoordinatorV2 : UIResponder <SelectAwardViewControllerDelegate, SelectAwardEditOptionsViewControllerDelegate, PurchaseAwardCoordinatorDelegate, _TtP6Reddit22AwardSelectionDelegate_, AwardCoordinator>
 {
     id <AwardCoordinatorDelegate> _delegate;
-    _TtC6Reddit19AwardSelectionState *_state;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
+    _TtC7Economy19AwardSelectionState *_state;
     Post *_post;
     Comment *_comment;
     NSString *_correlationId;
@@ -34,12 +34,12 @@
     _TtC6Reddit34GoldUpsellImagePopupViewController *_goldUpsellImagePopupViewController;
     _TtC6Reddit25GildingPurchaseController *_gildPurchaseController;
     _TtC6Reddit24CoinMarketingEventLogger *_coinMarketingEventLogger;
-    _TtC6Reddit21AwardSelectionOptions *_options;
+    _TtC7Economy21AwardSelectionOptions *_options;
     GoldProduct *_lowCoinOfferProduct;
 }
 
 @property(nonatomic) __weak GoldProduct *lowCoinOfferProduct; // @synthesize lowCoinOfferProduct=_lowCoinOfferProduct;
-@property(copy, nonatomic) _TtC6Reddit21AwardSelectionOptions *options; // @synthesize options=_options;
+@property(copy, nonatomic) _TtC7Economy21AwardSelectionOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *coinMarketingEventLogger; // @synthesize coinMarketingEventLogger=_coinMarketingEventLogger;
 @property(retain, nonatomic) _TtC6Reddit25GildingPurchaseController *gildPurchaseController; // @synthesize gildPurchaseController=_gildPurchaseController;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *goldUpsellImagePopupViewController; // @synthesize goldUpsellImagePopupViewController=_goldUpsellImagePopupViewController;
@@ -54,8 +54,8 @@
 @property(retain, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
-@property(retain, nonatomic) _TtC6Reddit19AwardSelectionState *state; // @synthesize state=_state;
+@property(retain, nonatomic) _TtC7Economy19AwardSelectionState *state; // @synthesize state=_state;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AwardCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)showGoldUpsell;
@@ -88,11 +88,11 @@
 - (void)showAwardsHelpPage;
 - (void)showSelectAward;
 - (void)dismissSelectAwardViewControllerWithCompletion:(CDUnknownBlockType)arg1 dismissalReason:(unsigned long long)arg2;
-- (void)startFromViewController:(id)arg1 options:(id)arg2;
+- (void)startFromViewController:(id)arg1 config:(id)arg2;
 - (_Bool)useAwardingTrayV2ForRPAN:(_Bool)arg1;
-- (id)initWithComment:(id)arg1 parentPost:(id)arg2 service:(id)arg3 correlationId:(id)arg4;
-- (id)initWithPost:(id)arg1 stream:(id)arg2 service:(id)arg3 correlationId:(id)arg4;
-- (id)initWithPost:(id)arg1 service:(id)arg2 correlationId:(id)arg3;
+- (id)initWithComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;
+- (id)initWithPost:(id)arg1 stream:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;
+- (id)initWithPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

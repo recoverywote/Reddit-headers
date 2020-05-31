@@ -10,13 +10,14 @@
 #import "PostDetailContentDisplaying-Protocol.h"
 
 @class FeedPostCommentBarNode, FeedPostDetailAwardsNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostDetailContentNode, PostDetailHeaderNode, PostMetaViewModel, UIImage;
-@protocol PostDetailCellNodeDelegate;
+@protocol PostDetailCellNodeDelegate, ViewContext;
 
 @interface FeedPostDetailCellNode : BaseCollectionViewCellNode <FeedPostCollectionViewItem, PostDetailContentDisplaying>
 {
     PostDetailContentNode *_contentNode;
     id <PostDetailCellNodeDelegate> _delegate;
     Post *_post;
+    id <ViewContext> _viewContext;
     FeedPostTitleNode *_titleNode;
     FeedPostCommentBarNode *_commentBarNode;
     FeedPostEventBarNode *_eventBarNode;
@@ -35,6 +36,7 @@
 @property(retain, nonatomic) FeedPostEventBarNode *eventBarNode; // @synthesize eventBarNode=_eventBarNode;
 @property(retain, nonatomic) FeedPostCommentBarNode *commentBarNode; // @synthesize commentBarNode=_commentBarNode;
 @property(retain, nonatomic) FeedPostTitleNode *titleNode; // @synthesize titleNode=_titleNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <PostDetailCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostDetailContentNode *contentNode; // @synthesize contentNode=_contentNode;
@@ -57,7 +59,7 @@
 - (void)createNodes;
 - (void)addKeyValueObservations;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 delegate:(id)arg4 visibilityTracker:(id)arg5;
+- (id)initWithPost:(id)arg1 viewContext:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6;
 @property(readonly, nonatomic) double visibleThreshold;
 
 // Remaining properties

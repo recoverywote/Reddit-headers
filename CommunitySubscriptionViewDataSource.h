@@ -9,16 +9,19 @@
 #import "ListingNetworkSourceDelegate-Protocol.h"
 
 @class NSString, SubredditsNetworkSource;
+@protocol AccountContext;
 
 @interface CommunitySubscriptionViewDataSource : CommunityViewDataSource <ListingNetworkSourceDelegate>
 {
     NSString *_fetchURLString;
     long long _thingType;
+    id <AccountContext> _accountContext;
     SubredditsNetworkSource *_subscriptionNetworkSource;
 }
 
-+ (id)currentCachedSubscriptions;
++ (id)currentCachedSubscriptionsWithService:(id)arg1;
 @property(retain, nonatomic) SubredditsNetworkSource *subscriptionNetworkSource; // @synthesize subscriptionNetworkSource=_subscriptionNetworkSource;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) long long thingType; // @synthesize thingType=_thingType;
 @property(copy, nonatomic) NSString *fetchURLString; // @synthesize fetchURLString=_fetchURLString;
 - (void).cxx_destruct;
@@ -39,7 +42,7 @@
 @property(readonly, nonatomic) _Bool isFetchingMoreContent;
 - (id)parameterForThingType:(long long)arg1;
 - (void)configureWithURLString:(id)arg1;
-- (id)initWithTableView:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 tableView:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

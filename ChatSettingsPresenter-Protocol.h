@@ -6,10 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class Channel;
+@class Channel, RedditService;
+@protocol AccountContext;
 
 @protocol ChatSettingsPresenter <NSObject>
 @property(readonly, nonatomic) Channel *channel;
+@property(readonly, nonatomic) RedditService *service;
+@property(readonly, nonatomic) id <AccountContext> accountContext;
 - (void)checkForMutedNotificationsWithCompletion:(void (^)(_Bool))arg1;
 - (void)toggleMuteBadgesWithSwitchValue:(_Bool)arg1 completion:(void (^)(_Bool))arg2;
 - (void)toggleMuteNotificationsWithSwitchValue:(_Bool)arg1 completion:(void (^)(_Bool))arg2;

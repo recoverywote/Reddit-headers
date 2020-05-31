@@ -9,25 +9,28 @@
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
 @class Channel, Contact, NSString, RedditService;
-@protocol ContactActionSheetDelegate;
+@protocol AccountContext, ContactActionSheetDelegate;
 
 @interface ContactActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate>
 {
     id <ContactActionSheetDelegate> _contactActionSheetDelegate;
     Contact *_contact;
     Channel *_channel;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(nonatomic) __weak id <ContactActionSheetDelegate> contactActionSheetDelegate; // @synthesize contactActionSheetDelegate=_contactActionSheetDelegate;
 - (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
-@property(readonly, nonatomic) RedditService *service;
 - (_Bool)shouldRestrictOptionsForBot;
 - (_Bool)shouldShowModTools;
 - (_Bool)shouldShowStartChat;
 - (void)configureWithContact:(id)arg1 channel:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

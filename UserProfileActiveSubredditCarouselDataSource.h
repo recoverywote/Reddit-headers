@@ -13,7 +13,7 @@
 - (_Bool)listingNetworkSourceShouldFilterObject:(id)arg1;
 - (id)carouselItemsFromData:(id)arg1;
 - (void)parseData:(id)arg1;
-- (id)initWithUsername:(id)arg1;
+- (id)initWithService:(id)arg1 username:(id)arg2;
 
 @end
 

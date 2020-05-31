@@ -12,10 +12,12 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class BaseSearchBar, BaseTableView, CommunityModeratingViewDataSource, NSArray, NSString;
+@protocol AccountContext;
 
 @interface ModQueueCommunitiesViewController : BaseViewController <CommunityViewDataSourceDelegate, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
     _Bool _isSearching;
+    id <AccountContext> _accountContext;
     BaseSearchBar *_searchBar;
     BaseTableView *_tableView;
     CommunityModeratingViewDataSource *_dataSource;
@@ -29,6 +31,7 @@
 @property(retain, nonatomic) CommunityModeratingViewDataSource *dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) BaseSearchBar *searchBar; // @synthesize searchBar=_searchBar;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)searchBarCancelButtonClicked:(id)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;
@@ -47,7 +50,7 @@
 - (void)didTapCloseButton:(id)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
-- (id)initWithSelectionCompletion:(CDUnknownBlockType)arg1;
+- (id)initWithAccountContext:(id)arg1 selectionCompletion:(CDUnknownBlockType)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

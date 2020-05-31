@@ -6,16 +6,14 @@
 
 #import "ListingNetworkSource.h"
 
-@class RedditService, SBDGroupChannelMemberListQuery, SubredditChannel;
+@class SBDGroupChannelMemberListQuery, SubredditChannel;
 
 @interface ChatMembersNetworkSource : ListingNetworkSource
 {
     SubredditChannel *_subredditChannel;
     SBDGroupChannelMemberListQuery *_query;
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) SBDGroupChannelMemberListQuery *query; // @synthesize query=_query;
 @property(retain, nonatomic) SubredditChannel *subredditChannel; // @synthesize subredditChannel=_subredditChannel;
 - (void).cxx_destruct;
@@ -23,7 +21,6 @@
 - (void)fetchMoreData;
 - (void)fetchData;
 - (void)configureWithChannel:(id)arg1;
-- (id)initWithService:(id)arg1;
 
 @end
 

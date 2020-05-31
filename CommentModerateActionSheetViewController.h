@@ -9,16 +9,18 @@
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
 @class Comment, NSString, Post;
-@protocol CommentModerateActionSheetDelegate;
+@protocol AccountContext, CommentModerateActionSheetDelegate;
 
 @interface CommentModerateActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate>
 {
     Comment *_comment;
     id <CommentModerateActionSheetDelegate> _commentModerateActionSheetDelegate;
+    id <AccountContext> _accountContext;
     Post *_post;
 }
 
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <CommentModerateActionSheetDelegate> commentModerateActionSheetDelegate; // @synthesize commentModerateActionSheetDelegate=_commentModerateActionSheetDelegate;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 - (void).cxx_destruct;
@@ -30,7 +32,7 @@
 - (void)removeDistinguishComment:(id)arg1;
 - (void)performDistinguishComment:(id)arg1 forDistinguishType:(long long)arg2 sticky:(_Bool)arg3;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
-- (id)initWithComment:(id)arg1 parentPost:(id)arg2 customActions:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 comment:(id)arg2 parentPost:(id)arg3 customActions:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

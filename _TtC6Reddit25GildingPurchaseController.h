@@ -10,6 +10,7 @@
 
 @interface _TtC6Reddit25GildingPurchaseController : BaseViewController <InAppPurchaseManagerDelegate>
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: fromViewController
     // Error parsing type: , name: correlationId
     // Error parsing type: , name: completion
@@ -28,7 +29,7 @@
 - (void)inAppPurchaseManager:(id)arg1 transactionDidBeginValidationWithId:(id)arg2 correlationId:(id)arg3;
 - (void)inAppPurchaseManagerDidBeginTransaction:(id)arg1 correlationId:(id)arg2;
 - (void)purchaseWithGoldProduct:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithLogger:(id)arg1 correlationId:(id)arg2 fromViewController:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 logger:(id)arg2 correlationId:(id)arg3 fromViewController:(id)arg4;
 
 @end
 

@@ -8,7 +8,7 @@
 
 @interface _TtC6Reddit28CommunityCreateNamePresenter : NSObject
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: communityCreateAnalytics
     // Error parsing type: , name: cachedCommunityName
     // Error parsing type: , name: communityName

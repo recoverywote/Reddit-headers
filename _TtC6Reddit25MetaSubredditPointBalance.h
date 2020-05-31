@@ -13,7 +13,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)attributedStringWithDefaultFont:(id)arg1 textColor:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
+- (id)attributedStringWithDefaultFont:(id)arg1 textColor:(id)arg2 author:(id)arg3 imagesLoaded:(CDUnknownBlockType)arg4;
 
 @end
 

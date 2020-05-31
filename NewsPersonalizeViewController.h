@@ -11,15 +11,15 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class BaseButton, BaseLabel, BaseTableView, BaseView, NSMutableOrderedSet, NSMutableSet, NSOrderedSet, NSPredicate, NSString, RedditService;
-@protocol NewsPersonalizeViewControllerDelegate;
+@class BaseButton, BaseLabel, BaseTableView, BaseView, NSMutableOrderedSet, NSMutableSet, NSOrderedSet, NSPredicate, NSString;
+@protocol AccountContext, NewsPersonalizeViewControllerDelegate;
 
 @interface NewsPersonalizeViewController : BaseViewController <NewsPersonalizeViewDelegate, NewsPersonalizeViewDataSource, UITableViewDelegate, UITableViewDataSource>
 {
     _Bool _hasUserModifiedTopicOrder;
     _Bool _hasUserPersonalizedNews;
     id <NewsPersonalizeViewControllerDelegate> _delegate;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     BaseTableView *_tableView;
     BaseView *_headerView;
     BaseButton *_doneButton;
@@ -50,7 +50,7 @@
 @property(retain, nonatomic) BaseButton *doneButton; // @synthesize doneButton=_doneButton;
 @property(retain, nonatomic) BaseView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <NewsPersonalizeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (id)newsTopicAtIndexPath:(id)arg1;
@@ -82,7 +82,7 @@
 - (void)addTableView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 subscribedTopics:(id)arg2 subscribedSubtopics:(id)arg3 allTopics:(id)arg4 hasPersonalizedNews:(_Bool)arg5;
+- (id)initWithAccountContext:(id)arg1 subscribedTopics:(id)arg2 subscribedSubtopics:(id)arg3 allTopics:(id)arg4 hasPersonalizedNews:(_Bool)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

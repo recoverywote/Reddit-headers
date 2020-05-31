@@ -9,26 +9,27 @@
 #import "CarouselDataSource-Protocol.h"
 #import "CarouselDataSourceInternal-Protocol.h"
 
-@class NSArray, NSError, NSString;
+@class NSArray, NSError, NSString, RedditService;
 @protocol TemplateParserContext;
 
 @interface RecentlyViewedSubredditsCarouselDataSource : NSObject <CarouselDataSource, CarouselDataSourceInternal>
 {
     id <TemplateParserContext> _templateContext;
     NSError *_lastError;
+    RedditService *_service;
     NSArray *_carouselItems;
 }
 
 + (id)listingCarouselItemsFromSubreddits:(id)arg1;
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(readonly, nonatomic) __weak id <TemplateParserContext> templateContext; // @synthesize templateContext=_templateContext;
 - (void).cxx_destruct;
 - (_Bool)hasMoreContent;
 - (void)filterCarouselItems;
 - (void)fetchCarouselItemsWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithSubreddits:(id)arg1;
-- (id)init;
+- (id)initWithService:(id)arg1 subreddits:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

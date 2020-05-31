@@ -9,21 +9,24 @@
 #import "ChatSettingsPresenter-Protocol.h"
 
 @class Channel, NSString, RedditService;
+@protocol AccountContext;
 
 @interface ChatSettingsPresenter : NSObject <ChatSettingsPresenter>
 {
-    Channel *_channel;
+    id <AccountContext> _accountContext;
     RedditService *_service;
+    Channel *_channel;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
+@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)channelStore;
 - (void)toggleMuteBadgesWithSwitchValue:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)toggleMuteNotificationsWithSwitchValue:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)checkForMutedNotificationsWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithChannel:(id)arg1 service:(id)arg2;
+- (id)initWithChannel:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

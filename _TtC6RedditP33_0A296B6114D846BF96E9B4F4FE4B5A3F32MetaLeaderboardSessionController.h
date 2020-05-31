@@ -12,7 +12,7 @@
     // Error parsing type: , name: communityInfo
     // Error parsing type: , name: cacheID
     // Error parsing type: , name: displayNode
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
 }
 
 @end

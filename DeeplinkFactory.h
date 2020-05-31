@@ -15,7 +15,7 @@
 + (id)viewControllerForChatShareableLinkURL:(id)arg1 channelURL:(id)arg2 accountContext:(id)arg3;
 + (id)viewControllerForModel:(id)arg1 accountContext:(id)arg2;
 + (void)handleMailToURL:(id)arg1 accountContext:(id)arg2;
-+ (id)handleUnknownURL:(id)arg1;
++ (id)handleUnknownURL:(id)arg1 accountContext:(id)arg2;
 + (id)viewControllerForURL:(id)arg1 accountContext:(id)arg2;
 
 @end

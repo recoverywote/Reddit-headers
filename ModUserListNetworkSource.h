@@ -24,7 +24,7 @@
 - (id)usersFromData:(id)arg1;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;
-- (id)initWithEndpoint:(id)arg1 objectClass:(Class)arg2 userListDataParam:(id)arg3 userListIdParam:(id)arg4;
+- (id)initWithService:(id)arg1 endpoint:(id)arg2 objectClass:(Class)arg3 userListDataParam:(id)arg4 userListIdParam:(id)arg5;
 
 @end
 

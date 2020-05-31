@@ -137,7 +137,7 @@
 - (void)viewDidLoad;
 - (id)allowedImagePickerMediaTypes;
 - (void)didTapVideo:(id)arg1;
-- (id)initWithMediaType:(unsigned long long)arg1 fileManager:(id)arg2 service:(id)arg3;
+- (id)initWithMediaType:(unsigned long long)arg1 fileManager:(id)arg2 accountContext:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -50,9 +50,8 @@
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)didFinishScrollingToViewController:(id)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)addChildController:(id)arg1;
 - (void)willScrollFromStartingViewController:(id)arg1 destinationViewController:(id)arg2;
-- (void)removeChildIfNeeded:(id)arg1;
-- (void)addChildIfNeeded:(id)arg1;
 - (void)loadRightViewController:(id)arg1;
 - (void)loadLeftViewController:(id)arg1;
 - (void)loadViewController:(id)arg1;

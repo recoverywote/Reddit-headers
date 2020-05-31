@@ -11,13 +11,13 @@
 @interface InAppPurchaseAccountProvider : NSObject
 {
     RedditService *_currentService;
-    NSString *_currentAccountUsernameHash;
+    NSString *_usernameForInAppPurchase;
     AccountManager *_accountManager;
 }
 
 @property(readonly, nonatomic) __weak AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSString *currentAccountUsernameHash; // @synthesize currentAccountUsernameHash=_currentAccountUsernameHash;
+@property(readonly, nonatomic) NSString *usernameForInAppPurchase; // @synthesize usernameForInAppPurchase=_usernameForInAppPurchase;
 @property(readonly, nonatomic) RedditService *currentService; // @synthesize currentService=_currentService;
 @property(readonly, nonatomic) Account *currentAccount;
 - (void)updateCurrentAccount;

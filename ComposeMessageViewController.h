@@ -9,12 +9,13 @@
 #import "RequestToNavigateView-Protocol.h"
 
 @class ComposeMessageView, NSObject, NSString, Subreddit, User;
-@protocol ComposeMessageViewControllerDelegate;
+@protocol AccountContext, ComposeMessageViewControllerDelegate;
 
 @interface ComposeMessageViewController : BaseViewController <RequestToNavigateView>
 {
     _Bool _messageModeratorsMode;
     NSObject<ComposeMessageViewControllerDelegate> *_delegate;
+    id <AccountContext> _accountContext;
     ComposeMessageView *_composeView;
     User *_user;
     Subreddit *_subreddit;
@@ -24,6 +25,7 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(retain, nonatomic) ComposeMessageView *composeView; // @synthesize composeView=_composeView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak NSObject<ComposeMessageViewControllerDelegate> *delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (id)analyticsScreenViewName;
@@ -39,6 +41,7 @@
 - (void)configureWithUser:(id)arg1;
 - (void)configureWithUsername:(id)arg1;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

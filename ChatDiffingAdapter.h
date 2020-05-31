@@ -11,7 +11,7 @@
 #import "ChatFeedInteractorFetchDelegate-Protocol.h"
 
 @class ASBatchContext, ASTableNode, Channel, ChatFeedInteractor, NSArray, NSString, SerialAsyncQueue;
-@protocol ChatMessageCellDelegate;
+@protocol AccountContext, ChatMessageCellDelegate;
 
 @interface ChatDiffingAdapter : NSObject <ASTableDelegate, ASTableDataSource, ChatFeedInteractorFetchDelegate>
 {
@@ -24,8 +24,10 @@
     ChatFeedInteractor *_interactor;
     NSArray *_items;
     ASBatchContext *_batchContext;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ASBatchContext *batchContext; // @synthesize batchContext=_batchContext;
 @property(retain, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) _Bool initialItemsRead; // @synthesize initialItemsRead=_initialItemsRead;
@@ -50,7 +52,7 @@
 - (long long)tableNode:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableNode:(id)arg1;
 - (void)configureWithChannel:(id)arg1 interactor:(id)arg2;
-- (id)initWithCollectionNode:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 collectionNode:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

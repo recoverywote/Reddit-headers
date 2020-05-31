@@ -10,7 +10,7 @@
 
 @interface _TtC6Reddit29MetaLeaderboardViewController : BaseViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: $__lazy_storage_$_displayNode
     // Error parsing type: , name: sessionController
     // Error parsing type: , name: pagedTabControllerParent
@@ -25,7 +25,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)loadView;
 - (void)configureWithSubreddit:(id)arg1 communityInfo:(id)arg2;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

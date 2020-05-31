@@ -6,20 +6,17 @@
 
 #import "ListingNetworkSource.h"
 
-@class RedditService, Subreddit;
+@class Subreddit;
 
 @interface ChatSubredditChannelListNetworkSource : ListingNetworkSource
 {
     Subreddit *_subreddit;
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
 - (void)fetchData;
 - (void)configureWithSubreddit:(id)arg1;
-- (id)initWithService:(id)arg1;
 
 @end
 

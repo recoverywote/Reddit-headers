@@ -11,7 +11,7 @@
 }
 
 - (void)parseData:(id)arg1;
-- (id)initWithRailsContext:(id)arg1;
+- (id)initWithService:(id)arg1 railsContext:(id)arg2;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

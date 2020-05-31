@@ -8,15 +8,15 @@
 
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
-@class Comment, CommentTreeNode, NSString, Post, RedditService;
-@protocol CommentActionSheetDelegate;
+@class Comment, CommentTreeNode, NSString, Post;
+@protocol AccountContext, CommentActionSheetDelegate;
 
 @interface CommentActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate>
 {
     Comment *_comment;
     CommentTreeNode *_commentTreeNode;
     id <CommentActionSheetDelegate> _commentActionSheetDelegate;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Post *_post;
     unsigned long long _commentSort;
     NSString *_correlationId;
@@ -25,7 +25,7 @@
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <CommentActionSheetDelegate> commentActionSheetDelegate; // @synthesize commentActionSheetDelegate=_commentActionSheetDelegate;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
@@ -39,7 +39,7 @@
 - (void)unsaveComment:(id)arg1;
 - (void)saveComment:(id)arg1;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
-- (id)initWithService:(id)arg1 commentTreeNode:(id)arg2 parentPost:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 commentTreeNode:(id)arg2 parentPost:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

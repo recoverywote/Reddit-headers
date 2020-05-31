@@ -16,7 +16,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class Channel, ChannelHistorySource, ChannelSyncService, NSArray, NSString, RedditService;
-@protocol ChatFeedInteractorDelegate><PostActionSheetDelegate><AnalyticsViewProtocol, ChatFeedInteractorFetchDelegate;
+@protocol AccountContext, ChatFeedInteractorDelegate><PostActionSheetDelegate><AnalyticsViewProtocol, ChatFeedInteractorFetchDelegate;
 
 @interface ChatFeedInteractor : NSObject <ChannelObserver, ObjectObserverProtocol, ChannelHistorySourceDelegate, FeedPostCellNodeDelegate, ChatExternalLinkNodeDelegate, ChannelSyncServiceDelegate, ASTextNodeDelegate, ChatConnectionStatusViewControllerDelegate>
 {
@@ -24,7 +24,7 @@
     id <ChatFeedInteractorDelegate><PostActionSheetDelegate><AnalyticsViewProtocol> _delegateVC;
     id <ChatFeedInteractorFetchDelegate> _fetchDelegate;
     Channel *_channel;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     ChannelHistorySource *_networkSource;
     ChannelSyncService *_syncService;
     id _batchContext;
@@ -33,7 +33,7 @@
 @property(retain, nonatomic) id batchContext; // @synthesize batchContext=_batchContext;
 @property(retain, nonatomic) ChannelSyncService *syncService; // @synthesize syncService=_syncService;
 @property(retain, nonatomic) ChannelHistorySource *networkSource; // @synthesize networkSource=_networkSource;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(nonatomic) __weak id <ChatFeedInteractorFetchDelegate> fetchDelegate; // @synthesize fetchDelegate=_fetchDelegate;
 @property(nonatomic) __weak id <ChatFeedInteractorDelegate><PostActionSheetDelegate><AnalyticsViewProtocol> delegateVC; // @synthesize delegateVC=_delegateVC;
@@ -106,7 +106,8 @@
 - (void)fetchDataForContext:(id)arg1;
 - (void)configureWithChannel:(id)arg1;
 - (void)configureWithMessages:(id)arg1;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

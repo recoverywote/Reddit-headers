@@ -9,12 +9,12 @@
 #import "ChatRequestDelegatorDelegate-Protocol.h"
 
 @class BaseButton, BaseCollectionView, Channel, ContactActionSheetDelegate, DirectChatRequestDelegator, NSString, RedditService, SubredditChatRequestDelegator, UIStackView;
-@protocol ChatRequestDelegator;
+@protocol AccountContext, ChatRequestDelegator;
 
 @interface ChatRequestViewController : BaseViewController <ChatRequestDelegatorDelegate>
 {
     Channel *_channel;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     id <ChatRequestDelegator> _delegator;
     DirectChatRequestDelegator *_directChatDelegator;
     SubredditChatRequestDelegator *_subredditChatDelegator;
@@ -35,7 +35,7 @@
 @property(retain, nonatomic) SubredditChatRequestDelegator *subredditChatDelegator; // @synthesize subredditChatDelegator=_subredditChatDelegator;
 @property(retain, nonatomic) DirectChatRequestDelegator *directChatDelegator; // @synthesize directChatDelegator=_directChatDelegator;
 @property(retain, nonatomic) id <ChatRequestDelegator> delegator; // @synthesize delegator=_delegator;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 - (void).cxx_destruct;
 - (void)trackPreviewAnalyticsEventWithAction:(id)arg1 noun:(id)arg2;
@@ -62,7 +62,8 @@
 - (struct UIEdgeInsets)preferredContentInset;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

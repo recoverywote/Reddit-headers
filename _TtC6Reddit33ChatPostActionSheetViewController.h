@@ -12,13 +12,13 @@
 {
     // Error parsing type: , name: commentActionSheetDelegate
     // Error parsing type: , name: commentTreeNode
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
 }
 
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (id)initWithCommentTreeNode:(id)arg1 style:(unsigned long long)arg2 service:(id)arg3;
+- (id)initWithCommentTreeNode:(id)arg1 style:(unsigned long long)arg2 accountContext:(id)arg3;
 @property(nonatomic, retain) id <_TtP6Reddit41ChatPostActionSheetViewControllerDelegate_> commentActionSheetDelegate; // @synthesize commentActionSheetDelegate;
 
 @end

@@ -6,19 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class Comment, GildingEventLogger, NSDictionary, NSIndexPath, NSNumber, NSOrderedSet, Post, RedditService, Subreddit, _TtC6Reddit19AwardSelectionState, _TtC6Reddit21AwardSelectionOptions;
-@protocol SelectAwardPresentable, UIScrollViewDelegate;
+@class Comment, GildingEventLogger, NSDictionary, NSIndexPath, NSNumber, NSOrderedSet, Post, Subreddit, _TtC7Economy19AwardSelectionState, _TtC7Economy21AwardSelectionOptions;
+@protocol AccountContext, SelectAwardPresentable, UIScrollViewDelegate;
 
 @interface SelectAwardPresenter : NSObject
 {
     _Bool _isLoading;
+    id <AccountContext> _accountContext;
     id <SelectAwardPresentable> _presentable;
     id <UIScrollViewDelegate> _scrollingDelegate;
-    RedditService *_service;
     Subreddit *_subreddit;
     NSNumber *_subredditCoins;
-    _TtC6Reddit21AwardSelectionOptions *_options;
-    _TtC6Reddit19AwardSelectionState *_selectionState;
+    _TtC7Economy21AwardSelectionOptions *_options;
+    _TtC7Economy19AwardSelectionState *_selectionState;
     Post *_post;
     Comment *_comment;
     NSOrderedSet *_sections;
@@ -35,13 +35,13 @@
 @property(retain, nonatomic) NSOrderedSet *sections; // @synthesize sections=_sections;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-@property(readonly, nonatomic) _TtC6Reddit19AwardSelectionState *selectionState; // @synthesize selectionState=_selectionState;
-@property(readonly, copy, nonatomic) _TtC6Reddit21AwardSelectionOptions *options; // @synthesize options=_options;
+@property(readonly, nonatomic) _TtC7Economy19AwardSelectionState *selectionState; // @synthesize selectionState=_selectionState;
+@property(readonly, copy, nonatomic) _TtC7Economy21AwardSelectionOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) NSNumber *subredditCoins; // @synthesize subredditCoins=_subredditCoins;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak id <UIScrollViewDelegate> scrollingDelegate; // @synthesize scrollingDelegate=_scrollingDelegate;
 @property(nonatomic) __weak id <SelectAwardPresentable> presentable; // @synthesize presentable=_presentable;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)didTapReloadButton;
 - (void)didSelectItemAtIndexPath:(id)arg1;
@@ -61,7 +61,7 @@
 @property(readonly, nonatomic) unsigned long long numberOfSections;
 @property(readonly, nonatomic) unsigned long long gildingTarget;
 @property(readonly, nonatomic) long long coinBalance;
-- (id)initWithService:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4 selectionState:(id)arg5 eventLogger:(id)arg6;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4 selectionState:(id)arg5 eventLogger:(id)arg6;
 
 @end
 

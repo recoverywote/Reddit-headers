@@ -9,7 +9,7 @@
 @interface _TtC6Reddit20MetaPaywallPresenter : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: $__lazy_storage_$_cryptoFlowController
     // Error parsing type: , name: purchaseCoordinator
     // Error parsing type: , name: subredditReference

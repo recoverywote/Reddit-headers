@@ -15,7 +15,7 @@
 #import "UITextFieldDelegate-Protocol.h"
 
 @class BaseCollectionView, Channel, ChatSettingsSubredditDelegator, ContactActionSheetDelegate, NSString, RedditService;
-@protocol ChatSettingsPresenter;
+@protocol AccountContext, ChatSettingsPresenter;
 
 @interface ChatSettingsViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, ChatAddressBookViewControllerDelegate, ChatSettingsSubredditDelegatorDelegate, ObjectObserverProtocol>
 {
@@ -25,10 +25,8 @@
     ContactActionSheetDelegate *_contactActionSheetDelegate;
     ChatSettingsSubredditDelegator *_subredditDelegator;
     id <ChatSettingsPresenter> _presenter;
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) id <ChatSettingsPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) ChatSettingsSubredditDelegator *subredditDelegator; // @synthesize subredditDelegator=_subredditDelegator;
 @property(retain, nonatomic) ContactActionSheetDelegate *contactActionSheetDelegate; // @synthesize contactActionSheetDelegate=_contactActionSheetDelegate;
@@ -76,7 +74,9 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithService:(id)arg1 presenter:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+@property(readonly, nonatomic) id <AccountContext> accountContext;
+- (id)initWithPresenter:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

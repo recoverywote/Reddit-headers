@@ -37,8 +37,10 @@
     // Error parsing type: , name: danger
     // Error parsing type: , name: upvote
     // Error parsing type: , name: downvote
+    // Error parsing type: , name: modalBackground
 }
 
++ (id)modalBackgroundFor:(unsigned long long)arg1;
 + (id)coinsFor:(unsigned long long)arg1;
 + (id)canvasFor:(unsigned long long)arg1;
 + (id)tone7For:(unsigned long long)arg1;
@@ -53,6 +55,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithThemeType:(unsigned long long)arg1;
+@property(nonatomic, readonly) UIColor *modalBackground; // @synthesize modalBackground;
 @property(nonatomic, readonly) UIColor *downvote; // @synthesize downvote;
 @property(nonatomic, readonly) UIColor *upvote; // @synthesize upvote;
 @property(nonatomic, readonly) UIColor *danger; // @synthesize danger;

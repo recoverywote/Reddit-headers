@@ -8,7 +8,7 @@
 
 #import "AsyncStoreObserver-Protocol.h"
 
-@class NSString, RedditService, SBDGroupChannelListQuery;
+@class NSString, SBDGroupChannelListQuery;
 
 @interface ChannelNetworkSource : ListingNetworkSource <AsyncStoreObserver>
 {
@@ -17,10 +17,8 @@
     unsigned long long _type;
     long long _filter;
     long long _cacheOffset;
-    RedditService *_service;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) long long cacheOffset; // @synthesize cacheOffset=_cacheOffset;
 @property(nonatomic) long long filter; // @synthesize filter=_filter;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;

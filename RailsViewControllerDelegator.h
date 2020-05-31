@@ -25,7 +25,7 @@
     FeedSortOptionController *_sortOptionController;
 }
 
-+ (id)subredditListingNetworkSourceWithRailsContext:(id)arg1;
++ (id)subredditListingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2;
 @property(retain, nonatomic) FeedSortOptionController *sortOptionController; // @synthesize sortOptionController=_sortOptionController;
 @property(retain, nonatomic) RailsNavigator *railsNavigator; // @synthesize railsNavigator=_railsNavigator;
 - (void).cxx_destruct;

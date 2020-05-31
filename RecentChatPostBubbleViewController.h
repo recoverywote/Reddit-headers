@@ -9,18 +9,19 @@
 #import "RecentChatPostBubbleViewDelegate-Protocol.h"
 
 @class NSMutableArray, NSString, RedditService, Subreddit, UIStackView;
+@protocol AccountContext;
 
 @interface RecentChatPostBubbleViewController : UIViewController <RecentChatPostBubbleViewDelegate>
 {
     Subreddit *_subreddit;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     UIStackView *_recentChatPostStackView;
     NSMutableArray *_recentChatPosts;
 }
 
 @property(retain, nonatomic) NSMutableArray *recentChatPosts; // @synthesize recentChatPosts=_recentChatPosts;
 @property(retain, nonatomic) UIStackView *recentChatPostStackView; // @synthesize recentChatPostStackView=_recentChatPostStackView;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
 - (id)analyticsPageType;
@@ -32,8 +33,9 @@
 - (void)reconfigureBubbles;
 - (void)didMoveToParentViewController:(id)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+@property(readonly, nonatomic) RedditService *service;
 - (void)viewDidDisappear:(_Bool)arg1;
-- (id)initWithRedditService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

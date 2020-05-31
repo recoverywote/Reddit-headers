@@ -14,8 +14,8 @@
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;
 - (void)fetchData;
-- (id)initWithFetchURLString:(id)arg1;
-- (id)init;
+- (id)initWithService:(id)arg1 fetchURLString:(id)arg2;
+- (id)initWithService:(id)arg1;
 
 @end
 

@@ -6,21 +6,26 @@
 
 #import "BaseViewController.h"
 
-@interface _TtC6Reddit20WalletViewController : BaseViewController
+#import "_TtP6Reddit41MetaClaimablePointsViewControllerDelegate_-Protocol.h"
+
+@interface _TtC6Reddit20WalletViewController : BaseViewController <_TtP6Reddit41MetaClaimablePointsViewControllerDelegate_>
 {
-    // Error parsing type: , name: redditService
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: walletInstance
-    // Error parsing type: , name: launchOptions
     // Error parsing type: , name: containerController
+    // Error parsing type: , name: launchOptions
+    // Error parsing type: , name: didPresentClaimBanner
+    // Error parsing type: , name: balanceStateSubscription
     // Error parsing type: , name: $__lazy_storage_$_walletRetrievalFlow
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)claimablePointsViewControllerDidLaunchWallet:(id)arg1 withOptions:(id)arg2;
 - (void)viewDidLoad;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (id)initWithRedditService:(id)arg1 launchOptions:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 launchOptions:(id)arg2;
 
 @end
 

@@ -6,7 +6,19 @@
 
 #import <RedditCore/Award.h>
 
+@class NSURL;
+
 @interface Award (Economy)
+- (id)awardIconURLWithSize:(long long)arg1;
+@property(nonatomic, readonly) NSURL *liveStreamChatAwardImageURL;
+@property(nonatomic, readonly) NSURL *actionBarAwardImageURL;
+@property(nonatomic, readonly) NSURL *giveAwardSuccessToastImageURL;
+@property(nonatomic, readonly) NSURL *giveAwardCoinPurchaseConfirmationImageURL;
+@property(nonatomic, readonly) NSURL *giveAwardDescriptionImageURL;
+@property(nonatomic, readonly) NSURL *giveAwardImageURL;
+@property(nonatomic, readonly) NSURL *awardDetailsInfoImageURL;
+@property(nonatomic, readonly) NSURL *awardDetailsImageURL;
+@property(nonatomic, readonly) NSURL *feedAwardImageURL;
 - (long long)RPANUIConfigurationTypeWithNewUIEnabled:(_Bool)arg1;
 @end
 

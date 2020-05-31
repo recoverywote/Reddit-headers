@@ -7,21 +7,25 @@
 #import <objc/NSObject.h>
 
 @class Post, UIViewController;
+@protocol AccountContext;
 
 @interface CrosspostPresenter : NSObject
 {
+    id <AccountContext> _accountContext;
     Post *_post;
     UIViewController *_presentingViewController;
 }
 
 @property(retain, nonatomic) UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)displayViewContoller:(id)arg1;
 - (void)showPostViewControllerWithSubreddit:(id)arg1;
 - (void)showCrosspost;
 - (void)presentCrosspostSharingWithPost:(id)arg1 subreddit:(id)arg2 presentingViewController:(id)arg3;
 - (void)presentCrosspostSharingWithPost:(id)arg1 presentingViewController:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

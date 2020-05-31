@@ -12,7 +12,8 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: imageProvider
     // Error parsing type: , name: didHideSubject
-    // Error parsing type: , name: performOngoingTransactionSink
+    // Error parsing type: , name: subviewsSubject
+    // Error parsing type: , name: openOngoingTransactionSink
     // Error parsing type: , name: txViews
     // Error parsing type: , name: offscreenViews
     // Error parsing type: , name: disposeBag

@@ -310,7 +310,7 @@
 - (void)createSubredditWithName:(id)arg1 publicDescription:(id)arg2 isNSFW:(_Bool)arg3 type:(long long)arg4 communityTags:(id)arg5 primaryCommunityTag:(id)arg6 completion:(CDUnknownBlockType)arg7;
 - (void)validateSubredditName:(id)arg1 publicDescription:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchPostingDifficultyScoreForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)fetchFocusVerticalsRecommendedSubredditsWithPostsPageSize:(long long)arg1 isNsfwIncluded:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)fetchFocusVerticalsRecommendedSubredditsWithPostsPageSize:(long long)arg1 isNsfwIncluded:(_Bool)arg2 version:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)fetchSubredditMentionsWithSubredditNames:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSubredditsWithNames:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSubredditWikiIndexForSubredditName:(id)arg1 completion:(CDUnknownBlockType)arg2;
