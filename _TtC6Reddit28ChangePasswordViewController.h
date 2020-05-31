@@ -8,8 +8,7 @@
 
 @interface _TtC6Reddit28ChangePasswordViewController : BaseViewController
 {
-    // Error parsing type: , name: accountManager
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: kAvatarImageSize
     // Error parsing type: , name: kTextFieldHeight
     // Error parsing type: , name: saveButton

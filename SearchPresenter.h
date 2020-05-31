@@ -7,10 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSOrderedSet, RedditService;
+@protocol AccountContext;
 
 @interface SearchPresenter : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     unsigned long long _searchType;
     unsigned long long _searchLoadingState;
     NSOrderedSet *_currentTabs;
@@ -18,12 +19,13 @@
 
 @property(retain, nonatomic) NSOrderedSet *currentTabs; // @synthesize currentTabs=_currentTabs;
 @property(nonatomic) unsigned long long searchLoadingState; // @synthesize searchLoadingState=_searchLoadingState;
-@property(nonatomic) unsigned long long searchType; // @synthesize searchType=_searchType;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) unsigned long long searchType; // @synthesize searchType=_searchType;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (long long)indexOfSearchTabType:(unsigned long long)arg1;
 - (id)processedSearchQuery:(id)arg1;
-- (id)initWithRedditService:(id)arg1 searchType:(unsigned long long)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 searchType:(unsigned long long)arg2;
 
 @end
 

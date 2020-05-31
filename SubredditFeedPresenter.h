@@ -42,7 +42,7 @@
 - (void)setFeedRange:(unsigned long long)arg1;
 - (void)setFeedSort:(unsigned long long)arg1;
 - (_Bool)shouldUseNewFeedSort;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

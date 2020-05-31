@@ -9,6 +9,7 @@
 @class SelectAwardViewController;
 
 @protocol SelectAwardViewControllerDelegate <NSObject>
+- (void)selectAwardViewControllerDidTapGetCoinsButton:(SelectAwardViewController *)arg1;
 - (void)selectAwardViewControllerDidTapCloseButton:(SelectAwardViewController *)arg1;
 - (void)selectAwardViewControllerDidTapActionButton:(SelectAwardViewController *)arg1;
 - (void)selectAwardViewControllerDidTapEditOptionsButton:(SelectAwardViewController *)arg1;

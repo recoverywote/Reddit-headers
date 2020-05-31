@@ -14,12 +14,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: actions
     // Error parsing type: , name: launchOptions
     // Error parsing type: , name: walletFlow
-    // Error parsing type: , name: repository
-    // Error parsing type: , name: dataSource
-    // Error parsing type: , name: redditService
-    // Error parsing type: , name: ethereumProvider
-    // Error parsing type: , name: themeProvider
-    // Error parsing type: , name: imageProvider
+    // Error parsing type: , name: serviceLocator
     // Error parsing type: , name: shouldReloadSubject
     // Error parsing type: , name: timer
     // Error parsing type: , name: $__lazy_storage_$_contentView

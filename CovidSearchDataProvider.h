@@ -9,20 +9,22 @@
 #import "DataProvider-Protocol.h"
 
 @class NSString, RedditService;
+@protocol AccountContext;
 
 @interface CovidSearchDataProvider : NSObject <DataProvider>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSString *_query;
 }
 
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
-- (id)initWithService:(id)arg1 query:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 query:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

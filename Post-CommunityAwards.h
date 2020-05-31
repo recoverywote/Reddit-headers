@@ -49,7 +49,7 @@
 - (id)authorUsernameTitleColorWithAdditionalAttributes:(id)arg1;
 - (void)appendUserName:(id)arg1 options:(id)arg2 additionalAttributes:(id)arg3;
 - (void)appendUserName:(id)arg1 options:(id)arg2;
-- (id)compactHeaderStringWithOptions:(id)arg1 metaUsernameDecoration:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
+- (id)compactHeaderStringWithOptions:(id)arg1 metaSubredditPointBalance:(id)arg2 metaUsernameDecoration:(id)arg3 imagesLoaded:(CDUnknownBlockType)arg4;
 - (id)compactHeaderStringWithOptions:(id)arg1;
 - (id)crossPostFooterString;
 - (id)crossPostHeaderString;
@@ -58,7 +58,7 @@
 - (id)feedPostText:(id)arg1;
 - (_Bool)shouldDisplayShortDomain;
 - (id)headerIconsWithOptions:(id)arg1;
-- (id)headerDetailsWithOptions:(id)arg1 metaUsernameDecoration:(id)arg2 richTextLoader:(id)arg3 imagesLoaded:(CDUnknownBlockType)arg4;
+- (id)headerDetailsWithOptions:(id)arg1 metaSubredditPointBalance:(id)arg2 metaUsernameDecoration:(id)arg3 richTextLoader:(id)arg4 imagesLoaded:(CDUnknownBlockType)arg5;
 - (id)headerDetailsWithOptions:(id)arg1 richTextLoader:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
 - (_Bool)shouldEnableTappableSubredditNameWithTitleOptions:(id)arg1;
 - (id)subredditHeaderTitleWithOptions:(id)arg1;

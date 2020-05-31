@@ -10,14 +10,14 @@
 {
 }
 
-+ (CDUnknownBlockType)searchTabProviderWithRailsContext:(id)arg1 redditService:(id)arg2 listingNetworkSource:(id)arg3;
-+ (id)bestTabWithRailsContext:(id)arg1 redditService:(id)arg2 searchViewController:(id)arg3;
-+ (id)bestTabWithRailsNetworkSource:(id)arg1 forRailsContext:(id)arg2 redditService:(id)arg3 searchViewController:(id)arg4;
-+ (id)typeaheadSearchTabsForRailsContext:(id)arg1 redditService:(id)arg2 searchViewController:(id)arg3;
-+ (id)subredditSearchTabsForRailsContext:(id)arg1 redditService:(id)arg2 searchViewController:(id)arg3;
-+ (id)defaultSearchTabsForRailsContext:(id)arg1 redditService:(id)arg2 searchViewController:(id)arg3;
-+ (CDUnknownBlockType)searchTabProviderWithRailsContext:(id)arg1 redditService:(id)arg2;
-+ (CDUnknownBlockType)searchTabProviderWithRailsListingNetworkSource:(id)arg1 withRailsContext:(id)arg2 redditService:(id)arg3;
++ (CDUnknownBlockType)searchTabProviderWithRailsContext:(id)arg1 accountContext:(id)arg2 listingNetworkSource:(id)arg3;
++ (id)bestTabWithRailsContext:(id)arg1 accountContext:(id)arg2 searchViewController:(id)arg3;
++ (id)bestTabWithRailsNetworkSource:(id)arg1 forRailsContext:(id)arg2 accountContext:(id)arg3 searchViewController:(id)arg4;
++ (id)typeaheadSearchTabsForRailsContext:(id)arg1 accountContext:(id)arg2 searchViewController:(id)arg3;
++ (id)subredditSearchTabsForRailsContext:(id)arg1 accountContext:(id)arg2 searchViewController:(id)arg3;
++ (id)defaultSearchTabsForRailsContext:(id)arg1 accountContext:(id)arg2 searchViewController:(id)arg3;
++ (CDUnknownBlockType)searchTabProviderWithRailsContext:(id)arg1 accountContext:(id)arg2;
++ (CDUnknownBlockType)searchTabProviderWithRailsListingNetworkSource:(id)arg1 withRailsContext:(id)arg2 accountContext:(id)arg3;
 
 @end
 

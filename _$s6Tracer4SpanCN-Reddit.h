@@ -7,7 +7,6 @@
 #import "_$s6Tracer4SpanCN.h"
 
 @interface _$s6Tracer4SpanCN (Reddit)
-@property(nonatomic, readonly) long long parentSpanIdHeaderValue;
 - (id)zipkinV1RepresentationWithMergingTags:(id)arg1;
 @end
 

@@ -50,7 +50,6 @@
 @property(readonly, nonatomic) _Bool screenViewLoggingEnabled;
 - (_Bool)shouldAutorotate;
 - (_Bool)attemptScrollMainContentViewToTop;
-- (void)didTapBackButton:(id)arg1;
 - (void)configureViewAppearance;
 - (_Bool)prefersNavigationBarHidden;
 - (struct UIEdgeInsets)basePreferredContentInset;

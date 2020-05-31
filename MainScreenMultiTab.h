@@ -31,7 +31,7 @@
 - (id)initWithCoder:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)viewControllerWithRedditService:(id)arg1;
+- (id)viewControllerWithAccountContext:(id)arg1;
 - (id)initWithName:(id)arg1 multiURLPath:(id)arg2;
 
 // Remaining properties

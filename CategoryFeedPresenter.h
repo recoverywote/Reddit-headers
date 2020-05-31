@@ -19,7 +19,7 @@
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
-- (id)initWithService:(id)arg1 category:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 category:(id)arg2;
 
 @end
 

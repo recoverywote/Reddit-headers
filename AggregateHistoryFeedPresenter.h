@@ -18,7 +18,7 @@
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)configureWithHistoryType:(long long)arg1 forceFetch:(_Bool)arg2;
 - (void)changeHistoryType:(long long)arg1;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(nonatomic) __weak id <AggregateHistoryFeedPresentable> presentable; // @dynamic presentable;

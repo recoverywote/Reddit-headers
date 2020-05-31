@@ -27,7 +27,7 @@
 - (_Bool)shouldUseNewFeedSort;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)configureWithUsername:(id)arg1;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(nonatomic) __weak id <UserPostFeedPresentable> presentable; // @dynamic presentable;

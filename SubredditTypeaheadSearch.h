@@ -7,25 +7,27 @@
 #import <objc/NSObject.h>
 
 @class NSString, NSTimer, RedditService;
+@protocol AccountContext;
 
 @interface SubredditTypeaheadSearch : NSObject
 {
     unsigned long long _minimumQueryLength;
     double _queryDelay;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSString *_currentQuery;
     NSTimer *_queryTimer;
 }
 
 @property(retain, nonatomic) NSTimer *queryTimer; // @synthesize queryTimer=_queryTimer;
 @property(retain, nonatomic) NSString *currentQuery; // @synthesize currentQuery=_currentQuery;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) double queryDelay; // @synthesize queryDelay=_queryDelay;
 @property(nonatomic) unsigned long long minimumQueryLength; // @synthesize minimumQueryLength=_minimumQueryLength;
 - (void).cxx_destruct;
 - (void)executeCurrentQueryWithResults:(CDUnknownBlockType)arg1;
 - (void)query:(id)arg1 results:(CDUnknownBlockType)arg2;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

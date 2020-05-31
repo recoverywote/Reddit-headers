@@ -17,6 +17,7 @@
     // Error parsing type: , name: assetProvider
     // Error parsing type: , name: audioCoordinator
     // Error parsing type: , name: decoderPool
+    // Error parsing type: , name: videoAnalyticsLogger
     // Error parsing type: , name: delegate
     // Error parsing type: , name: playerLayerContainer
     // Error parsing type: , name: shouldAutorepeat
@@ -34,6 +35,7 @@
 - (void)willDeactivateAudioSession;
 - (void)willActivateAudioSession;
 - (void)applicationDidBecomeActiveWithNotification:(id)arg1;
+- (void)dealloc;
 
 @end
 

@@ -6,16 +6,16 @@
 
 #import <UIKit/UIView.h>
 
-@interface _TtCC6Reddit14AwardSelection18AwardSelectionView : UIView
+#import "UIGestureRecognizerDelegate-Protocol.h"
+
+@interface _TtCC6Reddit14AwardSelection18AwardSelectionView : UIView <UIGestureRecognizerDelegate>
 {
+    // Error parsing type: , name: options
+    // Error parsing type: , name: state
     // Error parsing type: , name: theme
     // Error parsing type: , name: model
-    // Error parsing type: , name: isAnonymous
-    // Error parsing type: , name: allowsAnonymous
-    // Error parsing type: , name: sendAward
-    // Error parsing type: , name: getCoins
-    // Error parsing type: , name: selectedAward
-    // Error parsing type: , name: message
+    // Error parsing type: , name: delegate
+    // Error parsing type: , name: selectedAwardViewModel
     // Error parsing type: , name: keyboardFrame
     // Error parsing type: , name: selectedAwardView
     // Error parsing type: , name: unselectButtonContainer
@@ -25,24 +25,27 @@
     // Error parsing type: , name: messageEditor
     // Error parsing type: , name: awardList
     // Error parsing type: , name: coinsBar
-    // Error parsing type: , name: loadingIndicatorContainer
-    // Error parsing type: , name: loadingIndicator
     // Error parsing type: , name: keyboardPlaceholderView
     // Error parsing type: , name: keyboardPlaceholderViewHeightConstraint
     // Error parsing type: , name: sendAwardButton
     // Error parsing type: , name: sendAwardConstrainsForActiveKeyboard
     // Error parsing type: , name: sendAwardConstrainsForInactiveKeyboard
     // Error parsing type: , name: notificationTokens
+    // Error parsing type: , name: bottomConstraintOfContainerView
+    // Error parsing type: , name: panToDismissGestureRecognizer
+    // Error parsing type: , name: panGestureRecognizerFirstTouchLocation
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+- (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)layoutSubviews;
 - (void)sendAwardButtonTap;
-- (void)discardOverlay;
+- (void)dismissOverlay;
 - (void)unselect;
 - (id)initWithCoder:(id)arg1;
-- (id)init;
+- (void)panAction;
 
 @end
 

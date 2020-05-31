@@ -4,67 +4,80 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import <UIKit/UIResponder.h>
 
 #import "AwardCoordinator-Protocol.h"
 #import "PurchaseAwardCoordinatorDelegate-Protocol.h"
 #import "SelectAwardEditOptionsViewControllerDelegate-Protocol.h"
 #import "SelectAwardViewControllerDelegate-Protocol.h"
+#import "_TtP6Reddit22AwardSelectionDelegate_-Protocol.h"
 
-@class CoinMarketingEventLogger, Comment, GildingEventLogger, GoldProduct, NSNumber, NSString, Post, PurchaseAwardCoordinator, RedditService, SelectAwardOptions, SelectAwardViewController, UIViewController, _TtC6Reddit25GildingPurchaseController, _TtC6Reddit34GoldUpsellImagePopupViewController;
+@class Comment, GildingEventLogger, GoldProduct, NSNumber, NSString, Post, PurchaseAwardCoordinator, RedditService, UIViewController, _TtC6Reddit19AwardSelectionState, _TtC6Reddit21AwardSelectionOptions, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit25GildingPurchaseController, _TtC6Reddit34GoldUpsellImagePopupViewController;
 @protocol AwardCoordinatorDelegate;
 
-@interface AwardCoordinatorV2 : NSObject <SelectAwardViewControllerDelegate, SelectAwardEditOptionsViewControllerDelegate, PurchaseAwardCoordinatorDelegate, AwardCoordinator>
+@interface AwardCoordinatorV2 : UIResponder <SelectAwardViewControllerDelegate, SelectAwardEditOptionsViewControllerDelegate, PurchaseAwardCoordinatorDelegate, _TtP6Reddit22AwardSelectionDelegate_, AwardCoordinator>
 {
     id <AwardCoordinatorDelegate> _delegate;
+    _TtC6Reddit19AwardSelectionState *_state;
     RedditService *_service;
     Post *_post;
     Comment *_comment;
     NSString *_correlationId;
     unsigned long long _gildingTarget;
     NSNumber *_isAwardPurchased;
+    CDUnknownBlockType _makeAwardSelectionViewControllerV2;
     UIViewController *_fromViewController;
-    SelectAwardViewController *_selectAwardViewController;
+    UIViewController *_selectAwardViewController;
     PurchaseAwardCoordinator *_purchaseAwardCoordinator;
     GildingEventLogger *_eventLogger;
     NSString *_previousLastGivenAwardIdentifier;
     _TtC6Reddit34GoldUpsellImagePopupViewController *_goldUpsellImagePopupViewController;
     _TtC6Reddit25GildingPurchaseController *_gildPurchaseController;
-    CoinMarketingEventLogger *_coinMarketingEventLogger;
-    SelectAwardOptions *_options;
+    _TtC6Reddit24CoinMarketingEventLogger *_coinMarketingEventLogger;
+    _TtC6Reddit21AwardSelectionOptions *_options;
     GoldProduct *_lowCoinOfferProduct;
 }
 
 @property(nonatomic) __weak GoldProduct *lowCoinOfferProduct; // @synthesize lowCoinOfferProduct=_lowCoinOfferProduct;
-@property(copy, nonatomic) SelectAwardOptions *options; // @synthesize options=_options;
-@property(retain, nonatomic) CoinMarketingEventLogger *coinMarketingEventLogger; // @synthesize coinMarketingEventLogger=_coinMarketingEventLogger;
+@property(copy, nonatomic) _TtC6Reddit21AwardSelectionOptions *options; // @synthesize options=_options;
+@property(retain, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *coinMarketingEventLogger; // @synthesize coinMarketingEventLogger=_coinMarketingEventLogger;
 @property(retain, nonatomic) _TtC6Reddit25GildingPurchaseController *gildPurchaseController; // @synthesize gildPurchaseController=_gildPurchaseController;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *goldUpsellImagePopupViewController; // @synthesize goldUpsellImagePopupViewController=_goldUpsellImagePopupViewController;
 @property(retain, nonatomic) NSString *previousLastGivenAwardIdentifier; // @synthesize previousLastGivenAwardIdentifier=_previousLastGivenAwardIdentifier;
 @property(retain, nonatomic) GildingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) PurchaseAwardCoordinator *purchaseAwardCoordinator; // @synthesize purchaseAwardCoordinator=_purchaseAwardCoordinator;
-@property(retain, nonatomic) SelectAwardViewController *selectAwardViewController; // @synthesize selectAwardViewController=_selectAwardViewController;
+@property(retain, nonatomic) UIViewController *selectAwardViewController; // @synthesize selectAwardViewController=_selectAwardViewController;
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
+@property(readonly, nonatomic) CDUnknownBlockType makeAwardSelectionViewControllerV2; // @synthesize makeAwardSelectionViewControllerV2=_makeAwardSelectionViewControllerV2;
 @property(retain, nonatomic) NSNumber *isAwardPurchased; // @synthesize isAwardPurchased=_isAwardPurchased;
 @property(nonatomic) unsigned long long gildingTarget; // @synthesize gildingTarget=_gildingTarget;
 @property(retain, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(retain, nonatomic) _TtC6Reddit19AwardSelectionState *state; // @synthesize state=_state;
 @property(nonatomic) __weak id <AwardCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)showGoldUpsell;
+- (void)checkForGoldUpsell;
 - (void)purchaseLowCoinOffer;
+- (void)dismissForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
+- (void)sendAwardForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
+- (void)getCoinsForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
 - (void)purchaseAwardCoordinatorDidCancel:(id)arg1;
 - (void)purchaseAwardCoordinatorDidFail:(id)arg1;
 - (void)purchaseAwardCoordinator:(id)arg1 didSucceedWithDeferredStatus:(_Bool)arg2;
 - (void)editOptionsViewControllerDidTypeMessage:(id)arg1;
 - (void)editOptionsViewController:(id)arg1 didToggleAnonymous:(_Bool)arg2;
 - (void)editOptionsViewController:(id)arg1 didSaveOptions:(id)arg2;
+- (void)selectAwardViewControllerDidTapGetCoinsButton:(id)arg1;
 - (void)selectAwardViewControllerDidTapCloseButton:(id)arg1;
 - (void)selectAwardViewControllerDidTapActionButton:(id)arg1;
 - (void)selectAwardViewControllerDidTapEditOptionsButton:(id)arg1;
 - (void)selectAwardViewControllerDidTapInfoButton:(id)arg1;
+- (void)presentGetCoinsInViewController:(id)arg1;
+- (void)dismissAwardSelection;
+- (void)sendAward;
 - (void)restorePreviousLastGivenAwardIdentifier;
 - (void)handleGildingCompletionWithError:(id)arg1;
 - (void)optimisticallyUpdateGivenAwardsCache;
@@ -76,8 +89,9 @@
 - (void)showSelectAward;
 - (void)dismissSelectAwardViewControllerWithCompletion:(CDUnknownBlockType)arg1 dismissalReason:(unsigned long long)arg2;
 - (void)startFromViewController:(id)arg1 options:(id)arg2;
+- (_Bool)useAwardingTrayV2ForRPAN:(_Bool)arg1;
 - (id)initWithComment:(id)arg1 parentPost:(id)arg2 service:(id)arg3 correlationId:(id)arg4;
-- (id)initWithLiveStreamPost:(id)arg1 service:(id)arg2 correlationId:(id)arg3;
+- (id)initWithPost:(id)arg1 stream:(id)arg2 service:(id)arg3 correlationId:(id)arg4;
 - (id)initWithPost:(id)arg1 service:(id)arg2 correlationId:(id)arg3;
 
 // Remaining properties

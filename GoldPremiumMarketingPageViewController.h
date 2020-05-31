@@ -14,6 +14,7 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class GoldProduct, NSArray, NSLayoutConstraint, NSString, PremiumMarketingEventLogger, RedditService, UIButton, UICollectionView, UILabel, UIPageControl, UIScrollView, UIStackView, UIView;
+@protocol AccountContext;
 
 @interface GoldPremiumMarketingPageViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate, RUIThemeUpdateCallbackProtocol, InAppPurchaseManagerDelegate, AttributedLabelRegularDelegate, GoldPremiumPurchaseSuccessViewControllerDelegate>
 {
@@ -33,8 +34,8 @@
     NSLayoutConstraint *_collectionViewHeightConstraint;
     NSLayoutConstraint *_contentStackViewWidthConstraint;
     NSArray *_benefitViewModels;
-    RedditService *_service;
     GoldProduct *_premiumProduct;
+    id <AccountContext> _accountContext;
     NSString *_correlationId;
     PremiumMarketingEventLogger *_eventLogger;
 }
@@ -42,8 +43,8 @@
 @property(readonly, nonatomic) PremiumMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) _Bool wasReferredFromInFeedUnit; // @synthesize wasReferredFromInFeedUnit=_wasReferredFromInFeedUnit;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) GoldProduct *premiumProduct; // @synthesize premiumProduct=_premiumProduct;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSArray *benefitViewModels; // @synthesize benefitViewModels=_benefitViewModels;
 @property(retain, nonatomic) NSLayoutConstraint *contentStackViewWidthConstraint; // @synthesize contentStackViewWidthConstraint=_contentStackViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
@@ -90,7 +91,8 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 correlationId:(id)arg2 wasReferredFromInFeedUnit:(_Bool)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 correlationId:(id)arg2 wasReferredFromInFeedUnit:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

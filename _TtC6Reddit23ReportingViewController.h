@@ -15,7 +15,7 @@
     // Error parsing type: , name: reportOptions
     // Error parsing type: , name: redditRules
     // Error parsing type: , name: subredditRules
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: kReason
     // Error parsing type: , name: onSubmissionSuccessful
     // Error parsing type: , name: onComplaintSiteVisited
@@ -26,11 +26,11 @@
 - (id)init;
 - (void)closeButtonPress;
 - (void)viewDidLoad;
-- (id)initWithReportable:(id)arg1 service:(id)arg2;
-- (id)initWithLiveStream:(id)arg1 relativeReportTime:(double)arg2 service:(id)arg3;
-- (id)initWithLiveStreamPost:(id)arg1 service:(id)arg2;
-- (id)initWithLiveStreamComment:(id)arg1 service:(id)arg2;
-- (id)initWithChatPostMessage:(id)arg1 service:(id)arg2;
+- (id)initWithReportable:(id)arg1 accountContext:(id)arg2;
+- (id)initWithLiveStream:(id)arg1 relativeReportTime:(double)arg2 accountContext:(id)arg3;
+- (id)initWithLiveStreamPost:(id)arg1 accountContext:(id)arg2;
+- (id)initWithLiveStreamComment:(id)arg1 accountContext:(id)arg2;
+- (id)initWithChatPostMessage:(id)arg1 accountContext:(id)arg2;
 @property(nonatomic, copy) CDUnknownBlockType onComplaintSiteVisited;
 @property(nonatomic, copy) CDUnknownBlockType onSubmissionSuccessful;
 

@@ -11,25 +11,25 @@
 }
 
 + (id)sortModelWithRailsContext:(id)arg1;
-+ (id)listingRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2 listingNetworkSource:(id)arg3;
-+ (id)mediaRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2;
-+ (id)typeaheadRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2;
-+ (id)subredditRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2;
-+ (id)gamesRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2;
-+ (id)userRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2;
-+ (id)postsRailsPresenterWithRailsContext:(id)arg1 service:(id)arg2 searchTabType:(unsigned long long)arg3 withTitle:(id)arg4;
++ (id)listingRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2 listingNetworkSource:(id)arg3;
++ (id)mediaRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2;
++ (id)typeaheadRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2;
++ (id)subredditRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2;
++ (id)gamesRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2;
++ (id)userRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2;
++ (id)postsRailsPresenterWithRailsContext:(id)arg1 accountContext:(id)arg2 searchTabType:(unsigned long long)arg3 withTitle:(id)arg4;
 + (id)railsViewControllerWithRailsPresenter:(id)arg1 withSearchViewController:(id)arg2;
-+ (id)listingRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 listingNetworkSource:(id)arg3 withSearchViewController:(id)arg4;
-+ (id)typeaheadRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)subredditRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)gamesRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)userRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)mediaRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)postsRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)postsRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 searchTabType:(unsigned long long)arg3 withTitle:(id)arg4 withSearchViewController:(id)arg5;
-+ (id)nonTabDefaultRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
-+ (id)topRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withRailsListingNetworkSource:(id)arg3 withSearchViewController:(id)arg4;
-+ (id)topRailsViewControllerWithRailsContext:(id)arg1 service:(id)arg2 withSearchViewController:(id)arg3;
++ (id)listingRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 listingNetworkSource:(id)arg3 withSearchViewController:(id)arg4;
++ (id)typeaheadRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)subredditRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)gamesRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)userRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)mediaRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)postsRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)postsRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 searchTabType:(unsigned long long)arg3 withTitle:(id)arg4 withSearchViewController:(id)arg5;
++ (id)nonTabDefaultRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
++ (id)topRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withRailsListingNetworkSource:(id)arg3 withSearchViewController:(id)arg4;
++ (id)topRailsViewControllerWithRailsContext:(id)arg1 accountContext:(id)arg2 withSearchViewController:(id)arg3;
 
 @end
 

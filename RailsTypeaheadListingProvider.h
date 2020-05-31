@@ -7,12 +7,13 @@
 #import "RailsListingProvider.h"
 
 @class AutoCompleteNetworkSourceBuilder, RailsContext, RedditService, ZeroStateSearchNetworkSourceBuilder;
+@protocol AccountContext;
 
 @interface RailsTypeaheadListingProvider : RailsListingProvider
 {
     _Bool _isAutoComplete;
+    id <AccountContext> _accountContext;
     RailsContext *_railsContext;
-    RedditService *_redditService;
     AutoCompleteNetworkSourceBuilder *_autoCompleteNetworkSourceBuilder;
     ZeroStateSearchNetworkSourceBuilder *_zeroStateSearchNetworkSourceBuilder;
 }
@@ -20,11 +21,12 @@
 @property(nonatomic) _Bool isAutoComplete; // @synthesize isAutoComplete=_isAutoComplete;
 @property(retain, nonatomic) ZeroStateSearchNetworkSourceBuilder *zeroStateSearchNetworkSourceBuilder; // @synthesize zeroStateSearchNetworkSourceBuilder=_zeroStateSearchNetworkSourceBuilder;
 @property(retain, nonatomic) AutoCompleteNetworkSourceBuilder *autoCompleteNetworkSourceBuilder; // @synthesize autoCompleteNetworkSourceBuilder=_autoCompleteNetworkSourceBuilder;
-@property(retain, nonatomic) RedditService *redditService; // @synthesize redditService=_redditService;
 @property(retain, nonatomic) RailsContext *railsContext; // @synthesize railsContext=_railsContext;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)createListingNetworkSource;
-- (id)initWithRailsContext:(id)arg1 redditService:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithRailsContext:(id)arg1 accountContext:(id)arg2;
 
 @end
 

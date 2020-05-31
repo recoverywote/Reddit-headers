@@ -11,7 +11,6 @@
     // Error parsing type: , name: username
     // Error parsing type: , name: reportableModel
     // Error parsing type: , name: stepNumber
-    // Error parsing type: , name: service
     // Error parsing type: , name: kReason
     // Error parsing type: , name: kSiteReason
     // Error parsing type: , name: kReasonHowToHelp
@@ -24,6 +23,7 @@
     // Error parsing type: , name: kPromptViewHeight
     // Error parsing type: , name: kConfirmationViewHeight
     // Error parsing type: , name: kStackViewMargin
+    // Error parsing type: , name: accountContext
 }
 
 - (void).cxx_destruct;
@@ -39,7 +39,7 @@
 - (void)closeButtonPress;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
-- (id)initWithReportedUsername:(id)arg1 service:(id)arg2;
+- (id)initWithReportedUsername:(id)arg1 accountContext:(id)arg2;
 
 @end
 

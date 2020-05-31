@@ -10,7 +10,7 @@
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
 @class NSString, Post, PostActionSheetConfiguration;
-@protocol PostActionSheetDelegate;
+@protocol AccountContext, PostActionSheetDelegate;
 
 @interface PostActionSheetViewController : RUIActionSheetViewController <RUIActionSheetViewControllerDelegate, MFMailComposeViewControllerDelegate>
 {
@@ -18,8 +18,10 @@
     PostActionSheetConfiguration *_configuration;
     NSString *_correlationId;
     id <PostActionSheetDelegate> _postActionSheetDelegate;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostActionSheetDelegate> postActionSheetDelegate; // @synthesize postActionSheetDelegate=_postActionSheetDelegate;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(retain, nonatomic) PostActionSheetConfiguration *configuration; // @synthesize configuration=_configuration;
@@ -45,9 +47,9 @@
 - (void)reportPost:(id)arg1;
 - (void)blockAuthorOfPost:(id)arg1;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
-- (id)initOverflowActionSheetWithPost:(id)arg1 postActionSheetDelegate:(id)arg2 configuration:(id)arg3;
-- (id)initOverflowActionSheetWithPost:(id)arg1 postActionSheetDelegate:(id)arg2 includeSaveItem:(_Bool)arg3 showFlairItem:(_Bool)arg4;
-- (id)initOverflowActionSheetWithPost:(id)arg1 postActionSheetDelegate:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 postActionSheetDelegate:(id)arg3 configuration:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 postActionSheetDelegate:(id)arg3 includeSaveItem:(_Bool)arg4 showFlairItem:(_Bool)arg5;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 postActionSheetDelegate:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

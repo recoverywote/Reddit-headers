@@ -14,7 +14,7 @@
 #import "UIImagePickerControllerDelegate-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
 
-@class AVURLAsset, AttributedLabelRegular, BaseButton, BaseLabel, BaseScrollView, BaseTextView, BaseView, BottomLabelButton, EditMemeViewController, HlsPlayerView, NSDictionary, NSFileManager, NSString, NSURL, NSUUID, UIImage, UIImagePickerController, UIImageView, UITapGestureRecognizer, UIView, _TtC6Reddit15RedditVideoNode, _TtC6Reddit25PostKeyboardAccessoryView;
+@class AVURLAsset, BaseButton, BaseLabel, BaseScrollView, BaseTextView, BaseView, BottomLabelButton, EditMemeViewController, HlsPlayerView, NSDictionary, NSFileManager, NSString, NSURL, NSUUID, UIImage, UIImagePickerController, UIImageView, UITapGestureRecognizer, UIView, _TtC6Reddit15RedditVideoNode, _TtC6Reddit25PostKeyboardAccessoryView;
 
 @interface ImagePostViewController : PostViewController <BaseTextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AttributedLabelRegularDelegate, ImagePostViewControllerDelegate, PlayerViewDelegate, EditMemeViewControllerDelegate>
 {
@@ -44,7 +44,6 @@
     NSDictionary *_mediaInfo;
     UITapGestureRecognizer *_tapGesture;
     BaseButton *_removeImageButton;
-    AttributedLabelRegular *_termsLabel;
     NSString *_linkUploadURL;
     NSString *_linkImageUploadURL;
     double _linkUploadPercent;
@@ -64,7 +63,6 @@
 @property(nonatomic) double linkUploadPercent; // @synthesize linkUploadPercent=_linkUploadPercent;
 @property(retain, nonatomic) NSString *linkImageUploadURL; // @synthesize linkImageUploadURL=_linkImageUploadURL;
 @property(retain, nonatomic) NSString *linkUploadURL; // @synthesize linkUploadURL=_linkUploadURL;
-@property(retain, nonatomic) AttributedLabelRegular *termsLabel; // @synthesize termsLabel=_termsLabel;
 @property(nonatomic) _Bool wasTrimmed; // @synthesize wasTrimmed=_wasTrimmed;
 @property(retain, nonatomic) BaseButton *removeImageButton; // @synthesize removeImageButton=_removeImageButton;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;

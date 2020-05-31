@@ -30,7 +30,7 @@
 - (id)streamingUnitDataProvider;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)configureWithURLString:(id)arg1 feedSort:(unsigned long long)arg2 params:(id)arg3 shouldManualFetch:(_Bool)arg4;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(nonatomic) __weak id <MainFeedPresentable> presentable; // @dynamic presentable;

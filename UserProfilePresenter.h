@@ -7,12 +7,12 @@
 #import <objc/NSObject.h>
 
 @class RedditService, User;
-@protocol UserProfilePresenterDelegate;
+@protocol AccountContext, UserProfilePresenterDelegate;
 
 @interface UserProfilePresenter : NSObject
 {
     _Bool _isFetching;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     User *_user;
     id <UserProfilePresenterDelegate> _delegate;
 }
@@ -20,7 +20,7 @@
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(nonatomic) __weak id <UserProfilePresenterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (_Bool)isUsernameForActiveService:(id)arg1;
 - (void)addUsersSubreddit:(id)arg1 toCustomFeed:(id)arg2;
@@ -31,7 +31,8 @@
 - (void)addUserToCustomFeed:(id)arg1;
 - (void)configureWithUser:(id)arg1;
 - (void)configureWithUsername:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

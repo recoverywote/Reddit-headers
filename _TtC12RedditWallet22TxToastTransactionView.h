@@ -25,7 +25,6 @@ __attribute__((visibility("hidden")))
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
-- (void)didMoveToSuperview;
 - (void)didTapSelf:(id)arg1;
 
 @end

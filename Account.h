@@ -18,6 +18,7 @@
     _Bool _isSuspended;
     _Bool _shouldResetPassword;
     _Bool _doNotTrack;
+    _Bool _canEditName;
     _Bool _isGroupChatEnabled;
     _Bool _isChatMessageReportingEnabled;
     _Bool _isChatUserReportingEnabled;
@@ -36,6 +37,7 @@
 @property(nonatomic) _Bool isChatMessageReportingEnabled; // @synthesize isChatMessageReportingEnabled=_isChatMessageReportingEnabled;
 @property(nonatomic) _Bool isGroupChatEnabled; // @synthesize isGroupChatEnabled=_isGroupChatEnabled;
 @property(copy, nonatomic) AccountPreferences *preferences; // @synthesize preferences=_preferences;
+@property(nonatomic) _Bool canEditName; // @synthesize canEditName=_canEditName;
 @property(nonatomic) _Bool doNotTrack; // @synthesize doNotTrack=_doNotTrack;
 @property(retain, nonatomic) NSDate *suspensionExpiration; // @synthesize suspensionExpiration=_suspensionExpiration;
 @property(nonatomic) _Bool shouldResetPassword; // @synthesize shouldResetPassword=_shouldResetPassword;

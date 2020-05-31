@@ -8,7 +8,7 @@
 
 @interface _TtC6Reddit34NotificationSettingsViewController : BaseTableViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: settings
     // Error parsing type: , name: firstLoadSpinner
     // Error parsing type: , name: notificationsDisabledView
@@ -30,7 +30,7 @@
 - (void)applicationDidBecomeActive:(id)arg1;
 @property(nonatomic, readonly) struct UIEdgeInsets preferredContentInset;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

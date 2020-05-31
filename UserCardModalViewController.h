@@ -12,10 +12,12 @@
 #import "UserCardModalDelegate-Protocol.h"
 
 @class Account, BaseView, NSLayoutConstraint, NSString, NSURL, RedditService, Subreddit, UIViewController, User, UserCardModal;
+@protocol AccountContext;
 
 @interface UserCardModalViewController : BaseViewController <UINavigationControllerDelegate, UserCardModalDelegate, ModFormViewControllerDelegate, FlairSelectionSourceViewProtocol>
 {
     NSString *_username;
+    id <AccountContext> _accountContext;
     UIViewController *_fromVC;
     BaseView *_transparentBackground;
     UserCardModal *_modalView;
@@ -23,19 +25,17 @@
     Subreddit *_subreddit;
     NSString *_modContext;
     NSString *_fromVCPageType;
-    RedditService *_service;
     Account *_currentAccount;
     unsigned long long _modPermissions;
     NSLayoutConstraint *_modalViewLeadingConstraint;
     NSLayoutConstraint *_modalViewTrailingConstraint;
 }
 
-+ (id)userCardModalNavigationControllerWithService:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
++ (id)userCardModalNavigationControllerWithAccountContext:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
 @property(retain, nonatomic) NSLayoutConstraint *modalViewTrailingConstraint; // @synthesize modalViewTrailingConstraint=_modalViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *modalViewLeadingConstraint; // @synthesize modalViewLeadingConstraint=_modalViewLeadingConstraint;
 @property(nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
 @property(retain, nonatomic) Account *currentAccount; // @synthesize currentAccount=_currentAccount;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSString *fromVCPageType; // @synthesize fromVCPageType=_fromVCPageType;
 @property(retain, nonatomic) NSString *modContext; // @synthesize modContext=_modContext;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
@@ -43,6 +43,7 @@
 @property(retain, nonatomic) UserCardModal *modalView; // @synthesize modalView=_modalView;
 @property(retain, nonatomic) BaseView *transparentBackground; // @synthesize transparentBackground=_transparentBackground;
 @property(retain, nonatomic) UIViewController *fromVC; // @synthesize fromVC=_fromVC;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 - (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
@@ -77,7 +78,8 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (_Bool)prefersNavigationBarHidden;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
 
 // Remaining properties
 @property(copy, nonatomic) NSString *analyticsReason;

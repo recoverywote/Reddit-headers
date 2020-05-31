@@ -58,8 +58,6 @@
 - (void)pagedTabViewController:(id)arg1 transitionCompleted:(_Bool)arg2 fromViewController:(id)arg3 toViewController:(id)arg4 navigationMethod:(long long)arg5;
 - (void)floatingHeaderShouldMove:(id)arg1;
 - (void)setAnalyticsReferringURL:(id)arg1;
-- (void)updateSegmentControlFont;
-- (void)updateTextFontForSegmentItem:(id)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)setFocusToSearchBar;
 - (_Bool)searchBarShouldBeginEditing:(id)arg1;
@@ -69,8 +67,8 @@
 - (void)selectViewControllerWithHomeFeedType:(unsigned long long)arg1;
 - (id)pageSegmentItemsForControllers:(id)arg1;
 - (void)setupMainFeedViewAnimated:(_Bool)arg1;
-- (id)viewControllersForTabs:(id)arg1 redditService:(id)arg2 reuseControllers:(id)arg3;
-- (id)viewControllersForTabs:(id)arg1 redditService:(id)arg2;
+- (id)viewControllersForTabs:(id)arg1 reuseControllers:(id)arg2;
+- (id)viewControllersForTabs:(id)arg1;
 - (void)reloadTabs:(id)arg1 activeTabIndex:(unsigned long long)arg2;
 - (void)loadTabs:(id)arg1;
 - (void)configureChatPostBubbleViewController;

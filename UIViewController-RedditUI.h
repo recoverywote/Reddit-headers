@@ -9,5 +9,6 @@
 @interface UIViewController (RedditUI)
 - (void)fullyRemoveFromParentViewController;
 - (void)containChildViewController:(id)arg1;
+- (void)popViewControllerWithAnimation;
 @end
 

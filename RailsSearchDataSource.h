@@ -11,14 +11,15 @@
 #import "SearchDataSource-Protocol.h"
 
 @class NSString, RailsContext, RedditService, TrendingRailsListingNetworkSource;
+@protocol AccountContext;
 
 @interface RailsSearchDataSource : NSObject <ListingNetworkSourceDelegate, DiscoveryUnitViewModelDataProviderDelegate, SearchDataSource>
 {
     TrendingRailsListingNetworkSource *_trendingRailsListingNetworkSource;
     CDUnknownBlockType _headerContentView;
     CDUnknownBlockType _searchTabProviderBlock;
+    id <AccountContext> _accountContext;
     RailsContext *_railsContext;
-    RedditService *_service;
     NSString *_query;
     NSString *_analyticsPageType;
     CDUnknownBlockType _completionBlock;
@@ -29,8 +30,8 @@
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(copy, nonatomic) NSString *analyticsPageType; // @synthesize analyticsPageType=_analyticsPageType;
 @property(retain, nonatomic) NSString *query; // @synthesize query=_query;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) RailsContext *railsContext; // @synthesize railsContext=_railsContext;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType searchTabProviderBlock; // @synthesize searchTabProviderBlock=_searchTabProviderBlock;
 @property(copy, nonatomic) CDUnknownBlockType headerContentView; // @synthesize headerContentView=_headerContentView;
 @property(retain, nonatomic) TrendingRailsListingNetworkSource *trendingRailsListingNetworkSource; // @synthesize trendingRailsListingNetworkSource=_trendingRailsListingNetworkSource;
@@ -46,7 +47,8 @@
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
 - (void)listingNetworkSourceDidFail:(id)arg1;
 - (void)fetchDataForSearchViewController:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (id)initWithRedditService:(id)arg1 railsContext:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 railsContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

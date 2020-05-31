@@ -10,6 +10,6 @@
 - (void)didTapOverflowNode:(id)arg1;
 - (void)didUpdateCurrentStream:(id)arg1;
 - (void)didUpdateWatcherCount:(long long)arg1;
-- (void)playWithStream:(id)arg1;
+- (void)playWithOldStream:(id)arg1 newStream:(id)arg2;
 @end
 

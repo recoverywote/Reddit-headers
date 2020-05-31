@@ -6,31 +6,36 @@
 
 #import <RedditCore/ObservableObject.h>
 
-@class MetaBadgeLoader, MetaUsernameDecoration, NSString, RedditService, Subreddit, _TtC6Reddit17MetaPollViewModel;
+@class MetaBadgeLoader, MetaUsernameDecoration, NSString, RedditService, Subreddit, _TtC6Reddit17MetaPollViewModel, _TtC6Reddit25MetaSubredditPointBalance;
+@protocol AccountContext;
 
 @interface PostMetaViewModel : ObservableObject
 {
     _Bool _isPollIncluded;
     MetaUsernameDecoration *_decoration;
     _TtC6Reddit17MetaPollViewModel *_pollViewModel;
+    _TtC6Reddit25MetaSubredditPointBalance *_subredditPointBalance;
+    id <AccountContext> _accountContext;
     Subreddit *_subreddit;
-    RedditService *_service;
     MetaBadgeLoader *_badgeLoader;
     NSString *_identifier;
 }
 
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) MetaBadgeLoader *badgeLoader; // @synthesize badgeLoader=_badgeLoader;
-@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) _Bool isPollIncluded; // @synthesize isPollIncluded=_isPollIncluded;
+@property(retain, nonatomic) _TtC6Reddit25MetaSubredditPointBalance *subredditPointBalance; // @synthesize subredditPointBalance=_subredditPointBalance;
 @property(retain, nonatomic) _TtC6Reddit17MetaPollViewModel *pollViewModel; // @synthesize pollViewModel=_pollViewModel;
 @property(retain, nonatomic) MetaUsernameDecoration *decoration; // @synthesize decoration=_decoration;
 - (void).cxx_destruct;
 - (id)pollViewModelWithPoll:(id)arg1 communityInfo:(id)arg2;
+- (void)updateWithSubredditPointBalance:(id)arg1;
 - (_Bool)updateWithPoll:(id)arg1 communityInfo:(id)arg2;
 - (_Bool)updateWithBadges:(id)arg1;
-- (id)initWithPost:(id)arg1 subreddit:(id)arg2 service:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithPost:(id)arg1 subreddit:(id)arg2 accountContext:(id)arg3;
 
 @end
 

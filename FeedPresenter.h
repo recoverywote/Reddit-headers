@@ -52,7 +52,7 @@
     NSArray *_keyValueObservations;
 }
 
-+ (id)modQueuePresenterWithService:(id)arg1;
++ (id)modQueuePresenterWithAccountContext:(id)arg1;
 @property(copy, nonatomic) NSArray *keyValueObservations; // @synthesize keyValueObservations=_keyValueObservations;
 @property(retain, nonatomic) ListingChangeBuffer *feedUpdateBuffer; // @synthesize feedUpdateBuffer=_feedUpdateBuffer;
 @property(retain, nonatomic) DiscoveryUnitViewModelDataProvider *discoveryUnitsDataProvider; // @synthesize discoveryUnitsDataProvider=_discoveryUnitsDataProvider;
@@ -140,7 +140,7 @@
 @property(readonly, nonatomic) NSArray *availableFeedSorts;
 @property(readonly, nonatomic) double minimumLineSpacing;
 @property(readonly, nonatomic) Account *currentAccount;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 @property(readonly, nonatomic) unsigned long long surfaceType;
 - (_Bool)recentCommunitiesEnabled;
 - (id)valueForTemplateName:(id)arg1;

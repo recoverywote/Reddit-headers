@@ -8,11 +8,14 @@
 
 @interface _TtCC6Reddit14AwardSelection9AwardList : UIView
 {
-    // Error parsing type: , name: collectionView
-    // Error parsing type: , name: _selectedAward
+    // Error parsing type: , name: shouldHidePrice
+    // Error parsing type: , name: eventLogger
+    // Error parsing type: , name: _selectedAwardViewModel
     // Error parsing type: , name: didSelectAward
-    // Error parsing type: , name: awards
+    // Error parsing type: , name: awardViewModels
     // Error parsing type: , name: theme
+    // Error parsing type: , name: knownCellFrames
+    // Error parsing type: , name: collectionView
 }
 
 - (void).cxx_destruct;
@@ -22,7 +25,6 @@
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (id)initWithCoder:(id)arg1;
-- (id)init;
 
 @end
 

@@ -11,8 +11,8 @@
 }
 
 + (id)updateSubredditPreferences:(id)arg1 newPreferences:(id)arg2;
-+ (void)performSubredditPreferencesUpdateRequest:(id)arg1 oldValues:(id)arg2 successHandler:(CDUnknownBlockType)arg3 failureHandler:(CDUnknownBlockType)arg4;
-+ (void)loadUserSubredditPreferencesWithSubredditName:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
++ (void)performSubredditPreferencesUpdateRequest:(id)arg1 oldValues:(id)arg2 accountContext:(id)arg3 successHandler:(CDUnknownBlockType)arg4 failureHandler:(CDUnknownBlockType)arg5;
++ (void)loadUserSubredditPreferencesWithAccountContext:(id)arg1 subredditName:(id)arg2 successHandler:(CDUnknownBlockType)arg3 failureHandler:(CDUnknownBlockType)arg4;
 
 @end
 

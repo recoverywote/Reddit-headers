@@ -25,7 +25,7 @@
 - (_Bool)shouldForceUnblurTheatreMediaItem:(id)arg1;
 - (id)mediaCurrentPostForIndex:(id)arg1;
 - (id)mediaCurrentModelForIndex:(id)arg1;
-- (id)initWithService:(id)arg1 presentationModel:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 presentationModel:(id)arg2;
 
 @end
 

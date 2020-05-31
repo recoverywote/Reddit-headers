@@ -10,11 +10,12 @@
 #import "UITextFieldDelegate-Protocol.h"
 
 @class BaseButton, BaseLabel, BaseTextField, BaseView, KeyboardFloatingViewInteractor, NSLayoutConstraint, NSString, RedditService;
+@protocol AccountContext;
 
 @interface ForgotInfoViewController : BaseViewController <KeyboardInteractorDelegate, UITextFieldDelegate>
 {
     _Bool _isInForgotPasswordState;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSString *_initialUsername;
     BaseTextField *_usernameField;
     BaseTextField *_emailField;
@@ -38,7 +39,7 @@
 @property(readonly, nonatomic) BaseTextField *emailField; // @synthesize emailField=_emailField;
 @property(readonly, nonatomic) BaseTextField *usernameField; // @synthesize usernameField=_usernameField;
 @property(copy, nonatomic) NSString *initialUsername; // @synthesize initialUsername=_initialUsername;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)keyboardDidChange;
@@ -54,7 +55,8 @@
 - (void)configureViewAppearance;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 username:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 username:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

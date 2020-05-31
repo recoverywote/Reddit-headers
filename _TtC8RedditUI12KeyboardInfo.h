@@ -18,6 +18,7 @@
 @property(nonatomic, readonly) long long animationCurve;
 @property(nonatomic, readonly) double animationDuration;
 @property(nonatomic, readonly) struct CGRect frame;
+@property(nonatomic, readonly) _Bool isLocal;
 
 @end
 

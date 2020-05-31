@@ -7,24 +7,26 @@
 #import <objc/NSObject.h>
 
 @class RedditService, ShareSheetData, UIViewController;
+@protocol AccountContext;
 
 @interface ShareSheetPresenter : NSObject
 {
     _Bool _ignoreCheckingAppInstallation;
+    id <AccountContext> _accountContext;
     ShareSheetData *_shareData;
     UIViewController *_presentingViewController;
-    RedditService *_service;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) ShareSheetData *shareData; // @synthesize shareData=_shareData;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool ignoreCheckingAppInstallation; // @synthesize ignoreCheckingAppInstallation=_ignoreCheckingAppInstallation;
 - (void).cxx_destruct;
 - (id)excludedActivityTypes;
 - (id)appActivities;
 - (id)activityItems;
-- (id)initWithShareData:(id)arg1 presentingViewController:(id)arg2 service:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithShareData:(id)arg1 presentingViewController:(id)arg2 accountContext:(id)arg3;
 
 @end
 

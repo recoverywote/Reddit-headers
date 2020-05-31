@@ -7,21 +7,23 @@
 #import <objc/NSObject.h>
 
 @class Post, RedditService;
+@protocol AccountContext;
 
 @interface SavedPostPresenter : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Post *_post;
 }
 
 + (_Bool)shouldAllowSavedPostFoldersForAccount:(id)arg1;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)saveWithCategoryName:(id)arg1 presentingViewController:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)saveWithCategoryName:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)unsaveWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithService:(id)arg1 post:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2;
 
 @end
 

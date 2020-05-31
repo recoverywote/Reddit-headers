@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC6Reddit15BaseOverlayView.h"
+#import "_$s7Economy15BaseOverlayViewCN.h"
 
-@interface _TtC6Reddit16ShadowBorderView : _TtC6Reddit15BaseOverlayView
+@interface _TtC6Reddit16ShadowBorderView : _$s7Economy15BaseOverlayViewCN
 {
     // Error parsing type: , name: cornerRadius
     // Error parsing type: , name: shadowRadius

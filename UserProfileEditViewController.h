@@ -13,12 +13,12 @@
 #import "UINavigationControllerDelegate-Protocol.h"
 
 @class NSDictionary, NSString, ProfileEditHeaderView, ProfileSettingTextView, RedditService, ToggleTextDetailView, UIImagePickerController, UIScrollView, User;
-@protocol UserProfileEditViewControllerDelegate;
+@protocol AccountContext, UserProfileEditViewControllerDelegate;
 
 @interface UserProfileEditViewController : BaseViewController <RequestToNavigateView, ProfileSettingTextViewDelegate, RUIActionSheetViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     id <UserProfileEditViewControllerDelegate> _delegate;
-    RedditService *_redditService;
+    id <AccountContext> _accountContext;
     NSString *_displayName;
     NSString *_aboutText;
     ProfileEditHeaderView *_headerView;
@@ -49,7 +49,7 @@
 @property(retain, nonatomic) ProfileEditHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(copy, nonatomic) NSString *aboutText; // @synthesize aboutText=_aboutText;
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
-@property(retain, nonatomic) RedditService *redditService; // @synthesize redditService=_redditService;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <UserProfileEditViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)keyboardWillHide:(id)arg1;
@@ -105,7 +105,8 @@
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithUser:(id)arg1 redditService:(id)arg2;
+@property(readonly, nonatomic) RedditService *redditService;
+- (id)initWithUser:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

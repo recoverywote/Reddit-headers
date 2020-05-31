@@ -16,11 +16,11 @@
 #import "_TtP6Reddit35AccountStatusViewControllerDelegate_-Protocol.h"
 
 @class AccountManager, AttributedLabelRegular, BaseView, NSMutableArray, NSString, RUIActionSheetViewController, RedditService, ThemeActionSheetController, ThemeManager;
+@protocol AccountContext;
 
 @interface AppSettingsViewController : BaseTableViewController <MFMailComposeViewControllerDelegate, RUIActionSheetViewControllerDelegate, _TtP6Reddit35AccountStatusViewControllerDelegate_, AttributedLabelRegularDelegate, LabeledStepSliderDelegate, UITextFieldDelegate, ThemeActionSheetDelegate, RUIThemeUpdateCallbackProtocol>
 {
-    AccountManager *_accountManager;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     ThemeManager *_themeManager;
     BaseView *_footerView;
     AttributedLabelRegular *_footerLabel;
@@ -39,8 +39,7 @@
 @property(retain, nonatomic) AttributedLabelRegular *footerLabel; // @synthesize footerLabel=_footerLabel;
 @property(retain, nonatomic) BaseView *footerView; // @synthesize footerView=_footerView;
 @property(readonly, nonatomic) ThemeManager *themeManager; // @synthesize themeManager=_themeManager;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-@property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)didTapCloseButton:(id)arg1;
 - (void)themeDidChange:(id)arg1;
@@ -81,7 +80,9 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)viewDidLoad;
-- (id)initWithAccountManager:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+@property(readonly, nonatomic) AccountManager *accountManager;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

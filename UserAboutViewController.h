@@ -11,7 +11,7 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
 @class BaseView, FeedSpinnerView, FloatingHeaderManager, NSArray, NSString, RedditService, UIButton, UIScrollView, User;
-@protocol PagedTabControllerParentCallback;
+@protocol AccountContext, PagedTabControllerParentCallback;
 
 @interface UserAboutViewController : BaseTableViewController <FloatingHeaderCallbackProtocol, RUIThemeUpdateCallbackProtocol, PagedTabControllerProtocol>
 {
@@ -24,8 +24,10 @@
     UIButton *_messageButton;
     User *_user;
     NSArray *_trophies;
+    id <AccountContext> _accountContext;
 }
 
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) NSArray *trophies; // @synthesize trophies=_trophies;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(retain, nonatomic) UIButton *messageButton; // @synthesize messageButton=_messageButton;
@@ -60,7 +62,6 @@
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-@property(readonly, nonatomic) RedditService *service;
 - (_Bool)isOtherUser;
 - (_Bool)userHasDescriptionText;
 - (long long)rowNumberForCellType:(long long)arg1;
@@ -69,7 +70,8 @@
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)pageItemId;
 - (id)pageItemText;
-- (id)initWithUsername:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 username:(id)arg2;
 - (void)dealloc;
 
 // Remaining properties

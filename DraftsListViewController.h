@@ -12,9 +12,11 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class ListingStateController, NSMutableArray, NSString, RedditService;
+@protocol AccountContext;
 
 @interface DraftsListViewController : BaseTableViewController <UITableViewDelegate, UITableViewDataSource, PostViewControllerDelegate, ListingStateControllerDelegate>
 {
+    id <AccountContext> _accountContext;
     RedditService *_service;
     NSMutableArray *_drafts;
     NSMutableArray *_draftsBeingDeleted;
@@ -25,6 +27,7 @@
 @property(retain, nonatomic) NSMutableArray *draftsBeingDeleted; // @synthesize draftsBeingDeleted=_draftsBeingDeleted;
 @property(retain, nonatomic) NSMutableArray *drafts; // @synthesize drafts=_drafts;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
@@ -43,7 +46,7 @@
 - (void)fetchDrafts;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

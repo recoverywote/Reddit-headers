@@ -9,7 +9,7 @@
 #import "DataProvider-Protocol.h"
 
 @class DiscoveryLayout, DiscoverySurface, DiscoveryUnitFetcher, ListingDistributor, NSHashTable, NSMutableArray, NSMutableDictionary, NSString, NSUUID, RedditService;
-@protocol DiscoveryUnitViewModelDataProviderDelegate;
+@protocol AccountContext, DiscoveryUnitViewModelDataProviderDelegate;
 
 @interface DiscoveryUnitViewModelDataProvider : NSObject <DataProvider>
 {
@@ -19,7 +19,7 @@
     NSMutableDictionary *_discoveryUnitViewModels;
     DiscoverySurface *_discoverySurface;
     NSString *_sectionIdentifier;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSObject<DiscoveryUnitViewModelDataProviderDelegate> *_delegate;
     NSMutableDictionary *_unitsToFetch;
     NSMutableArray *_discoveryUnitViewModelsToFetch;
@@ -40,7 +40,7 @@
 @property(retain, nonatomic) NSMutableArray *discoveryUnitViewModelsToFetch; // @synthesize discoveryUnitViewModelsToFetch=_discoveryUnitViewModelsToFetch;
 @property(retain) NSMutableDictionary *unitsToFetch; // @synthesize unitsToFetch=_unitsToFetch;
 @property __weak NSObject<DiscoveryUnitViewModelDataProviderDelegate> *delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSString *sectionIdentifier; // @synthesize sectionIdentifier=_sectionIdentifier;
 @property(retain, nonatomic) DiscoverySurface *discoverySurface; // @synthesize discoverySurface=_discoverySurface;
 @property(nonatomic) _Bool deduplication; // @synthesize deduplication=_deduplication;
@@ -61,8 +61,9 @@
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)reset;
 - (void)invalidate;
-- (id)initWithService:(id)arg1 dataProviderDelegate:(id)arg2;
-- (id)initWithService:(id)arg1 dataProviderDelegate:(id)arg2 preprocessObjectsBlock:(CDUnknownBlockType)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 dataProviderDelegate:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 dataProviderDelegate:(id)arg2 preprocessObjectsBlock:(CDUnknownBlockType)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

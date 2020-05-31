@@ -10,27 +10,27 @@
 {
 }
 
-+ (id)addSubredditsToMultiViewControllerWithMulti:(id)arg1 redditService:(id)arg2;
-+ (id)customFeedListViewControllerWithRedditService:(id)arg1;
-+ (id)multiSubredditListViewControllerWithRedditService:(id)arg1;
-+ (id)approvedUsersViewControllerWithRedditSevice:(id)arg1 withSubreddit:(id)arg2;
-+ (id)mutedUsersViewControllerWithRedditSevice:(id)arg1 withSubreddit:(id)arg2;
-+ (id)bannedUsersViewControllerWithRedditSevice:(id)arg1 withSubreddit:(id)arg2;
-+ (id)modUserListViewControllerWithRedditSevice:(id)arg1 withSubreddit:(id)arg2;
-+ (id)moderatorsViewControllerWithRedditSevice:(id)arg1 withSubredditName:(id)arg2 withType:(unsigned long long)arg3;
-+ (id)moderatorsViewControllerWithRedditSevice:(id)arg1 withSubreddit:(id)arg2 withType:(unsigned long long)arg3;
-+ (id)modWidgetFullListViewControllerWithRedditSevice:(id)arg1 withSubreddit:(id)arg2;
-+ (id)shareToChatViewControllerWithRedditService:(id)arg1 withPost:(id)arg2 fromVC:(id)arg3;
-+ (id)messageRepliesViewControllerWithRedditService:(id)arg1;
-+ (id)liveViewControllerWithRedditService:(id)arg1;
++ (id)addSubredditsToMultiViewControllerWithMulti:(id)arg1 accountContext:(id)arg2;
++ (id)customFeedListViewControllerWithAccountContext:(id)arg1;
++ (id)multiSubredditListViewControllerWithAccountContext:(id)arg1;
++ (id)approvedUsersViewControllerWithAccountContext:(id)arg1 subreddit:(id)arg2;
++ (id)mutedUsersViewControllerWithAccountContext:(id)arg1 subreddit:(id)arg2;
++ (id)bannedUsersViewControllerWithAccountContext:(id)arg1 subreddit:(id)arg2;
++ (id)modUserListViewControllerWithAccountContext:(id)arg1 withSubreddit:(id)arg2;
++ (id)moderatorsViewControllerWithAccountContext:(id)arg1 withSubredditName:(id)arg2 withType:(unsigned long long)arg3;
++ (id)moderatorsViewControllerWithAccountContext:(id)arg1 withSubreddit:(id)arg2 withType:(unsigned long long)arg3;
++ (id)modWidgetFullListViewControllerWithAccountContext:(id)arg1 subreddit:(id)arg2;
++ (id)shareToChatViewControllerWithAccountContext:(id)arg1 withPost:(id)arg2 fromVC:(id)arg3;
++ (id)messageRepliesViewControllerWithAccountContext:(id)arg1;
++ (id)liveViewControllerWithAccountContext:(id)arg1;
 + (id)chatSubredditMembersViewControllerWithRedditService:(id)arg1 channel:(id)arg2;
 + (id)chatRequestViewControllerWithRedditService:(id)arg1;
-+ (id)chatSubredditChannelListViewControllerWithRedditService:(id)arg1;
-+ (id)chatPostPickerViewControllerWithRedditService:(id)arg1;
-+ (id)chatInboxListingViewControllerWithRedditService:(id)arg1 type:(unsigned long long)arg2;
-+ (id)chatAddressBookViewControllerWithMode:(unsigned long long)arg1 initialContacts:(id)arg2 redditService:(id)arg3;
-+ (id)mailListViewControllerWithRedditService:(id)arg1;
-+ (id)activityViewControllerWithRedditService:(id)arg1;
++ (id)chatSubredditChannelListViewControllerWithAccountContext:(id)arg1;
++ (id)chatPostPickerViewControllerWithAccountContext:(id)arg1;
++ (id)chatInboxListingViewControllerWithAccountContext:(id)arg1 type:(unsigned long long)arg2;
++ (id)chatAddressBookViewControllerWithMode:(unsigned long long)arg1 initialContacts:(id)arg2 accountContext:(id)arg3;
++ (id)mailListViewControllerWithAccountContext:(id)arg1;
++ (id)activityViewControllerWithAccountContext:(id)arg1;
 
 @end
 

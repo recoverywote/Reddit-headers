@@ -13,6 +13,9 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: nodeDisplayMode
     // Error parsing type: , name: feedDisplaymode
+    // Error parsing type: , name: durationObservation
+    // Error parsing type: , name: isTrackingPlayer
+    // Error parsing type: , name: didUpdateMetadata
     // Error parsing type: , name: paused
     // Error parsing type: , name: presenter
     // Error parsing type: , name: watcherCountNode
@@ -47,6 +50,7 @@
 - (void)enterStream;
 - (void)didLoad;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
+- (void)dealloc;
 - (id)initWithPresenter:(id)arg1 displayMode:(unsigned long long)arg2;
 @property(nonatomic, retain) id <_TtP6Reddit31StreamingEntryPointNodeDelegate_> delegate; // @synthesize delegate;
 

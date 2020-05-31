@@ -10,7 +10,9 @@
 {
 }
 
-+ (void)presentTrayInto:(id)arg1 subredditName:(id)arg2 postPK:(id)arg3 allowsAnonymous:(_Bool)arg4 redditService:(id)arg5 theme:(id)arg6 getCoins:(CDUnknownBlockType)arg7 completion:(CDUnknownBlockType)arg8;
++ (CDUnknownBlockType)viewControllerMakerWithComment:(id)arg1 post:(id)arg2 redditService:(id)arg3 eventLogger:(id)arg4 theme:(id)arg5 delegate:(id)arg6;
++ (CDUnknownBlockType)viewControllerMakerWithStream:(id)arg1 post:(id)arg2 redditService:(id)arg3 eventLogger:(id)arg4 theme:(id)arg5 delegate:(id)arg6;
++ (CDUnknownBlockType)viewControllerMakerWithPost:(id)arg1 redditService:(id)arg2 eventLogger:(id)arg3 theme:(id)arg4 delegate:(id)arg5;
 - (id)init;
 
 @end

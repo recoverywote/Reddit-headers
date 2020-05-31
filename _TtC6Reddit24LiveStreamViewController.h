@@ -19,6 +19,7 @@
     // Error parsing type: , name: thumbnailView
     // Error parsing type: , name: playerView
     // Error parsing type: , name: overlayView
+    // Error parsing type: , name: durationIsSet
     // Error parsing type: , name: shouldAutoHideTitle
     // Error parsing type: , name: activeVotingRequests
     // Error parsing type: , name: liveStreamPlaybackState
@@ -45,6 +46,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
+- (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 
 @end

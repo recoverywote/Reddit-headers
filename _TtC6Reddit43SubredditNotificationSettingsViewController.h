@@ -8,7 +8,7 @@
 
 @interface _TtC6Reddit43SubredditNotificationSettingsViewController : BaseTableViewController
 {
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: subreddits
     // Error parsing type: , name: headerHeight
 }

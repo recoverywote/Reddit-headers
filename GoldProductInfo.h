@@ -6,12 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSNumber, NSString;
+@class CoinDealInfo, NSArray, NSNumber, NSString;
 
 @interface GoldProductInfo : NSObject
 {
     _Bool _isFeatured;
-    _Bool _isDeal;
     long long _packageType;
     NSString *_productId;
     NSString *_productDescription;
@@ -21,15 +20,16 @@
     NSString *_featuredLabel;
     unsigned long long _periodicalCoins;
     NSNumber *_signupBonusCoins;
+    CoinDealInfo *_dealInfo;
     NSArray *_marketingMediaSources;
     NSArray *_purchaseSuccessMediaSources;
 }
 
 @property(readonly, nonatomic) NSArray *purchaseSuccessMediaSources; // @synthesize purchaseSuccessMediaSources=_purchaseSuccessMediaSources;
 @property(readonly, nonatomic) NSArray *marketingMediaSources; // @synthesize marketingMediaSources=_marketingMediaSources;
+@property(readonly, nonatomic) CoinDealInfo *dealInfo; // @synthesize dealInfo=_dealInfo;
 @property(readonly, nonatomic) NSNumber *signupBonusCoins; // @synthesize signupBonusCoins=_signupBonusCoins;
 @property(readonly, nonatomic) unsigned long long periodicalCoins; // @synthesize periodicalCoins=_periodicalCoins;
-@property(readonly, nonatomic) _Bool isDeal; // @synthesize isDeal=_isDeal;
 @property(readonly, nonatomic) NSString *featuredLabel; // @synthesize featuredLabel=_featuredLabel;
 @property(readonly, nonatomic) _Bool isFeatured; // @synthesize isFeatured=_isFeatured;
 @property(readonly, nonatomic) unsigned long long bonusPercentage; // @synthesize bonusPercentage=_bonusPercentage;

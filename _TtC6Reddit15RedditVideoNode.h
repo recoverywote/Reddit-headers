@@ -18,7 +18,7 @@
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;
-- (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterPreloadState;
 - (id)initWithRedditVideoViewBlock:(CDUnknownBlockType)arg1;
 @property(nonatomic, readonly) _TtC11RedditVideo21RedditVideoPlayerView *redditVideoPlayerView;

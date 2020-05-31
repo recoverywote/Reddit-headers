@@ -7,14 +7,17 @@
 #import <UIKit/UIActivity.h>
 
 @class Post;
+@protocol AccountContext;
 
 @interface SavePostActivity : UIActivity
 {
     Post *_post;
+    id <AccountContext> _accountContext;
 }
 
 + (long long)activityCategory;
 + (id)activityType;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
 - (void)performActivity;
@@ -22,6 +25,7 @@
 - (id)activityImage;
 - (id)activityTitle;
 - (id)activityType;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

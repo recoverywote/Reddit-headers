@@ -45,13 +45,13 @@
     ChatPostViewController *_chatPostViewController;
 }
 
-+ (id)postDetailViewControllerWithRedditService:(id)arg1 post:(id)arg2 postCollection:(id)arg3 modifiedOptions:(id)arg4;
++ (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 postCollection:(id)arg3 modifiedOptions:(id)arg4;
 + (void)updateOptions:(id)arg1 withPost:(id)arg2;
-+ (id)postDetailViewControllerWithRedditService:(id)arg1 collectionId:(id)arg2 options:(id)arg3;
-+ (id)postDetailViewControllerWithRedditService:(id)arg1 highlightComment:(id)arg2 isModerator:(_Bool)arg3 options:(id)arg4;
-+ (id)postDetailViewControllerWithRedditService:(id)arg1 permalink:(id)arg2 options:(id)arg3;
-+ (id)postDetailViewControllerWithRedditService:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4;
-+ (id)postDetailViewControllerWithRedditService:(id)arg1 post:(id)arg2 options:(id)arg3;
++ (id)postDetailViewControllerWithAccountContext:(id)arg1 collectionId:(id)arg2 options:(id)arg3;
++ (id)postDetailViewControllerWithAccountContext:(id)arg1 highlightComment:(id)arg2 isModerator:(_Bool)arg3 options:(id)arg4;
++ (id)postDetailViewControllerWithAccountContext:(id)arg1 permalink:(id)arg2 options:(id)arg3;
++ (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4;
++ (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 @property(retain, nonatomic) ChatPostViewController *chatPostViewController; // @synthesize chatPostViewController=_chatPostViewController;
 @property(retain, nonatomic) RoadblockCoordinator *roadblockCoordinator; // @synthesize roadblockCoordinator=_roadblockCoordinator;
 @property(retain, nonatomic) NextCommentButtonInteractor *nextCommentInteractor; // @synthesize nextCommentInteractor=_nextCommentInteractor;
@@ -86,7 +86,6 @@
 - (id)postSectionNode;
 - (id)commentSectionHeaderNode;
 - (void)highlightCellForIndexPath:(id)arg1;
-@property(readonly, nonatomic) _Bool shouldShowLoadParentCommentBar;
 @property(readonly, nonatomic) UICollectionView *feedCollectionView;
 - (_Bool)hasCommentsForNextCommentButtonInteractor:(id)arg1;
 - (double)nextCommentButtonBottomInsetForInteractor:(id)arg1;

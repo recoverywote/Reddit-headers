@@ -4,20 +4,19 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <RedditUI/BaseControl.h>
+#import <UIKit/UIControl.h>
 
-@class BaseImageView, BaseLabel, BaseView, NSString, UIFont, UIImage;
+@class BaseImageView, BaseLabel, BaseView, NSString, UIImage;
 @protocol PageSegmentItemDelegate;
 
-@interface PageSegmentItem : BaseControl
+@interface PageSegmentItem : UIControl
 {
-    _Bool _disabled;
+    id <PageSegmentItemDelegate> _delegate;
     NSString *_text;
     long long _badgeValue;
     long long _badgeStyle;
     unsigned long long _alignment;
     double _minimumWidth;
-    id <PageSegmentItemDelegate> _delegate;
     BaseImageView *_imageView;
     BaseLabel *_label;
     BaseLabel *_numericBadgeLabel;
@@ -33,18 +32,15 @@
 @property(retain, nonatomic) BaseLabel *numericBadgeLabel; // @synthesize numericBadgeLabel=_numericBadgeLabel;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
-@property(nonatomic) __weak id <PageSegmentItemDelegate> delegate; // @synthesize delegate=_delegate;
-@property(nonatomic) _Bool disabled; // @synthesize disabled=_disabled;
 @property(nonatomic) double minimumWidth; // @synthesize minimumWidth=_minimumWidth;
 @property(nonatomic) unsigned long long alignment; // @synthesize alignment=_alignment;
 @property(nonatomic) long long badgeStyle; // @synthesize badgeStyle=_badgeStyle;
 @property(nonatomic) long long badgeValue; // @synthesize badgeValue=_badgeValue;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
+@property(nonatomic) __weak id <PageSegmentItemDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIFont *font;
 - (struct CGRect)rectForContentInView;
 - (void)layoutSubviews;
-- (void)setFrame:(struct CGRect)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)setSelected:(_Bool)arg1;
 - (unsigned long long)hash;

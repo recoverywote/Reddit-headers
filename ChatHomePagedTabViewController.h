@@ -11,11 +11,12 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
 @class BaseBarButtonItem, ChatInboxListingViewController, LoggedOutViewController, NSString, RecentChatPostViewController, RedditService, UIView;
+@protocol AccountContext;
 
 @interface ChatHomePagedTabViewController : PagedTabViewController <RUIThemeUpdateCallbackProtocol, ObjectObserverProtocol, ChatAddressBookViewControllerDelegate>
 {
     _Bool _hasViewAppeared;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     BaseBarButtonItem *_chatButton;
     ChatInboxListingViewController *_directInboxViewController;
     ChatInboxListingViewController *_subredditInboxViewController;
@@ -31,7 +32,7 @@
 @property(retain, nonatomic) ChatInboxListingViewController *subredditInboxViewController; // @synthesize subredditInboxViewController=_subredditInboxViewController;
 @property(retain, nonatomic) ChatInboxListingViewController *directInboxViewController; // @synthesize directInboxViewController=_directInboxViewController;
 @property(retain, nonatomic) BaseBarButtonItem *chatButton; // @synthesize chatButton=_chatButton;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)themeDidChange:(id)arg1;
 - (void)trackAnalyticEventWithAction:(id)arg1 noun:(id)arg2 currentChannels:(id)arg3 requestsChannels:(id)arg4;
@@ -56,7 +57,8 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

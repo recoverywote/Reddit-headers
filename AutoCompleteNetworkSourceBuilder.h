@@ -7,10 +7,11 @@
 #import <objc/NSObject.h>
 
 @class AutoCompleteCache, AutoCompleteDataProvider, ListingNetworkSource, RedditService, ResultAllItem;
+@protocol AccountContext;
 
 @interface AutoCompleteNetworkSourceBuilder : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     AutoCompleteCache *_autoCompleteCache;
     ListingNetworkSource *_cachedListingNetworkSource;
     ResultAllItem *_resultAllItem;
@@ -21,12 +22,13 @@
 @property(retain, nonatomic) ResultAllItem *resultAllItem; // @synthesize resultAllItem=_resultAllItem;
 @property(retain, nonatomic) ListingNetworkSource *cachedListingNetworkSource; // @synthesize cachedListingNetworkSource=_cachedListingNetworkSource;
 @property(retain, nonatomic) AutoCompleteCache *autoCompleteCache; // @synthesize autoCompleteCache=_autoCompleteCache;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)cacheOrNetworkAutoCompleteSourceWithRailsContext:(id)arg1;
 - (id)autoCompleteDataProviderWithRailsContext:(id)arg1 firstChange:(_Bool)arg2;
 - (id)networkSourceWithRailsContext:(id)arg1 firstChange:(_Bool)arg2;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

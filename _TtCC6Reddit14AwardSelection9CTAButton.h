@@ -9,6 +9,8 @@
 @interface _TtCC6Reddit14AwardSelection9CTAButton : UIButton
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: ctaState
+    // Error parsing type: , name: activityIndicator
 }
 
 - (void).cxx_destruct;
@@ -16,8 +18,6 @@
 @property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
-@property(nonatomic) _Bool enabled;
-- (_Bool)isEnabled;
 
 @end
 

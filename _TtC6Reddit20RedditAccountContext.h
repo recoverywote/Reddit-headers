@@ -9,11 +9,12 @@
 #import "AccountContext-Protocol.h"
 #import "ViewContext-Protocol.h"
 
-@class Account, AnalyticsManager, ExperimentManager, RUI, RedditService, VisibilityTracker;
+@class Account, AccountManager, AnalyticsManager, ExperimentManager, RUI, RedditService, VisibilityTracker;
 @protocol ViewContext;
 
 @interface _TtC6Reddit20RedditAccountContext : NSObject <AccountContext, ViewContext>
 {
+    // Error parsing type: , name: accountManager
     // Error parsing type: , name: redditService
     // Error parsing type: , name: rui
     // Error parsing type: , name: analyticsManager
@@ -25,11 +26,12 @@
 @property(nonatomic, readonly) ExperimentManager *experimentManager;
 @property(nonatomic, readonly) Account *account;
 @property(nonatomic, readonly) id <ViewContext> viewContext;
-- (id)initWithRedditService:(id)arg1 rui:(id)arg2 analyticsManager:(id)arg3 visibilityTracker:(id)arg4;
+- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 analyticsManager:(id)arg4 visibilityTracker:(id)arg5;
 @property(nonatomic, readonly) VisibilityTracker *visibilityTracker; // @synthesize visibilityTracker;
 @property(nonatomic, readonly) AnalyticsManager *analyticsManager; // @synthesize analyticsManager;
 @property(nonatomic, readonly) RUI *rui; // @synthesize rui;
 @property(nonatomic, readonly) RedditService *redditService; // @synthesize redditService;
+@property(nonatomic, readonly) AccountManager *accountManager; // @synthesize accountManager;
 
 @end
 

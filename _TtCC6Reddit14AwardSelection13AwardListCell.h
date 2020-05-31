@@ -8,12 +8,15 @@
 
 @interface _TtCC6Reddit14AwardSelection13AwardListCell : UICollectionViewCell
 {
-    // Error parsing type: , name: award
+    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: shouldHidePrice
     // Error parsing type: , name: theme
     // Error parsing type: , name: stackView
     // Error parsing type: , name: imageView
     // Error parsing type: , name: nameLabel
     // Error parsing type: , name: coinPriceLabel
+    // Error parsing type: , name: timesUsedLabel
+    // Error parsing type: , name: timesUsedContainer
 }
 
 - (void).cxx_destruct;

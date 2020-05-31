@@ -8,8 +8,7 @@
 
 @interface _TtC6Reddit29AccountSettingsViewController : BaseTableViewController
 {
-    // Error parsing type: , name: accountManager
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: headerHeight
     // Error parsing type: , name: preferences
     // Error parsing type: , name: listingStateController
@@ -27,7 +26,7 @@
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)fetchPreferences;
 - (void)viewDidLoad;
-- (id)initWith:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

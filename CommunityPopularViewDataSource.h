@@ -7,13 +7,14 @@
 #import "CommunityViewDataSource.h"
 
 @class RedditService;
+@protocol AccountContext;
 
 @interface CommunityPopularViewDataSource : CommunityViewDataSource
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (_Bool)tableView:(id)arg1 handleDidSelectRowAtIndexPath:(id)arg2;
 - (id)indexes;
@@ -21,7 +22,8 @@
 - (id)viewControllerForIndexPath:(id)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-- (id)initWithTableView:(id)arg1 service:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithTableView:(id)arg1 accountContext:(id)arg2;
 
 @end
 

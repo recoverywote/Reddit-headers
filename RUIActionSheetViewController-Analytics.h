@@ -9,7 +9,7 @@
 @class NSString;
 
 @interface RUIActionSheetViewController (Analytics)
-+ (id)saveActionSheetForPost:(id)arg1 service:(id)arg2 viewController:(id)arg3 didSelectAction:(CDUnknownBlockType)arg4 didCancelAction:(CDUnknownBlockType)arg5 completion:(CDUnknownBlockType)arg6;
++ (id)saveActionSheetForPost:(id)arg1 accountContext:(id)arg2 viewController:(id)arg3 didSelectAction:(CDUnknownBlockType)arg4 didCancelAction:(CDUnknownBlockType)arg5 completion:(CDUnknownBlockType)arg6;
 - (void)logV2ControlTapWithClickName:(id)arg1 post:(id)arg2 commentTreeNode:(id)arg3 correlationId:(id)arg4;
 @property(readonly, nonatomic) NSString *presentingAnalyticsPageType;
 @property(readonly, nonatomic) NSString *presentingAnalyticsScreenName;

@@ -11,6 +11,8 @@
     // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: adEventsManager
     // Error parsing type: , name: videoEventLogger
+    // Error parsing type: , name: redditMuxEventLogger
+    // Error parsing type: , name: service
     // Error parsing type: , name: post
     // Error parsing type: , name: playerController
     // Error parsing type: , name: analyticsViewProtocol

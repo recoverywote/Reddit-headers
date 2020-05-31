@@ -66,7 +66,7 @@
 - (void)initializeNewsTopicsSource;
 - (void)configureWithSelectedTopic:(id)arg1 selectedSubtopic:(id)arg2;
 - (void)updateWithSubscribedTopics:(id)arg1 subscribedSubtopics:(id)arg2;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(nonatomic) __weak id <NewsFeedPresentable> presentable; // @dynamic presentable;

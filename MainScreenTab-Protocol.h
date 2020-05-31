@@ -8,11 +8,11 @@
 #import "NSSecureCoding-Protocol.h"
 #import "ObservableObjectProtocol-Protocol.h"
 
-@class ListingViewController, NSString, RedditService;
-@protocol FeedViewControllerInterface;
+@class ListingViewController, NSString;
+@protocol AccountContext, FeedViewControllerInterface;
 
 @protocol MainScreenTab <NSObject, NSSecureCoding, ObservableObjectProtocol>
-- (ListingViewController<FeedViewControllerInterface> *)viewControllerWithRedditService:(RedditService *)arg1;
+- (ListingViewController<FeedViewControllerInterface> *)viewControllerWithAccountContext:(id <AccountContext>)arg1;
 @property(nonatomic, readonly) unsigned long long homeFeedType;
 @property(nonatomic, readonly) NSString *name;
 @property(nonatomic, readonly) NSString *analyticsIdentifier;

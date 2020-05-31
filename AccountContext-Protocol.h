@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class RedditService;
+@class AccountManager, RedditService;
 @protocol ViewContext;
 
 @protocol AccountContext <NSObject>
 @property(nonatomic, readonly) id <ViewContext> viewContext;
+@property(nonatomic, readonly) AccountManager *accountManager;
 @property(nonatomic, readonly) RedditService *redditService;
 @end
 

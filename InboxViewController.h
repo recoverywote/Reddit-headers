@@ -13,17 +13,18 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
 @class ActivityViewController, MailListViewController, NSString, RedditService;
+@protocol AccountContext;
 
 @interface InboxViewController : PagedTabViewController <ComposeMessageViewControllerDelegate, RUIActionSheetViewControllerDelegate, RUIThemeUpdateCallbackProtocol, ObjectObserverProtocol, CompositeInboxViewController>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     MailListViewController *_mailController;
     ActivityViewController *_activityController;
 }
 
 @property(retain, nonatomic) ActivityViewController *activityController; // @synthesize activityController=_activityController;
 @property(retain, nonatomic) MailListViewController *mailController; // @synthesize mailController=_mailController;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)navigateToNotificationSettingsViewController;
 - (void)logAnalyticsEventWithAction:(id)arg1 noun:(id)arg2;
@@ -51,7 +52,8 @@
 - (void)forceFetchIfFailed:(id)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

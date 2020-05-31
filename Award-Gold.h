@@ -19,6 +19,5 @@
 @property(readonly, nonatomic) NSURL *awardDetailsInfoImageURL;
 @property(readonly, nonatomic) NSURL *awardDetailsImageURL;
 @property(readonly, nonatomic) NSURL *feedAwardImageURL;
-- (long long)RPANUIConfigurationTypeWithNewUIEnabled:(_Bool)arg1;
 @end
 

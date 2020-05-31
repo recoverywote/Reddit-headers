@@ -8,34 +8,37 @@
 
 @interface _TtCC6Reddit14AwardSelection13MessageEditor : UIView
 {
+    // Error parsing type: , name: options
+    // Error parsing type: , name: state
+    // Error parsing type: , name: eventLogger
     // Error parsing type: , name: theme
     // Error parsing type: , name: isActive
-    // Error parsing type: , name: _isAnonymous
-    // Error parsing type: , name: didChangeIsAnonymous
-    // Error parsing type: , name: allowsAnonymous
     // Error parsing type: , name: _message
-    // Error parsing type: , name: award
+    // Error parsing type: , name: selectedAwardViewModel
     // Error parsing type: , name: didChangeMessage
-    // Error parsing type: , name: ctaButtonLayoutGuide
+    // Error parsing type: , name: sendAward
+    // Error parsing type: , name: sendAwardStatus
     // Error parsing type: , name: anonymousToggleImageView
     // Error parsing type: , name: anonymousToggleLabel
     // Error parsing type: , name: textView
+    // Error parsing type: , name: textViewContainer
     // Error parsing type: , name: textViewHeightConstraint
     // Error parsing type: , name: placeholderLabel
     // Error parsing type: , name: messageLimitLabel
     // Error parsing type: , name: activeStateConstrains
     // Error parsing type: , name: inactiveStateConstrains
+    // Error parsing type: , name: ctaButtonLayoutGuide
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (void)textViewDidChange:(id)arg1;
 - (void)textViewDidEndEditing:(id)arg1;
 - (void)textViewDidBeginEditing:(id)arg1;
 - (void)deactivate;
 - (void)toggleIsAnonymous;
 - (id)initWithCoder:(id)arg1;
-- (id)init;
 
 @end
 

@@ -28,6 +28,6 @@
 - (id)userIconsForData:(id)arg1 usingTheme:(id)arg2;
 - (id)textAttachmentWithImageNamed:(id)arg1 usingTheme:(id)arg2;
 - (id)headerTitleColorWithUserProvidedColor:(id)arg1 usingTheme:(id)arg2;
-- (id)commentHeaderString:(_Bool)arg1 usingTheme:(id)arg2 shouldShowAuthorFlair:(_Bool)arg3 shouldBoldAuthorName:(_Bool)arg4 shouldShowCrowdControlLabel:(_Bool)arg5 usernameDecoration:(id)arg6 richTextLoader:(id)arg7 imagesLoaded:(CDUnknownBlockType)arg8;
+- (id)commentHeaderString:(_Bool)arg1 usingTheme:(id)arg2 shouldShowAuthorFlair:(_Bool)arg3 shouldBoldAuthorName:(_Bool)arg4 shouldShowCrowdControlLabel:(_Bool)arg5 metaSubredditPointBalance:(id)arg6 usernameDecoration:(id)arg7 richTextLoader:(id)arg8 imagesLoaded:(CDUnknownBlockType)arg9;
 @end
 

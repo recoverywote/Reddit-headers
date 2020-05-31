@@ -9,6 +9,8 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet26RegistrationGradientButton : UIButton
 {
+    // Error parsing type: , name: themeProvider
+    // Error parsing type: , name: title
     // Error parsing type: , name: disposeBag
 }
 

@@ -9,18 +9,20 @@
 #import "DataProvider-Protocol.h"
 
 @class NSString, RedditService;
+@protocol AccountContext;
 
 @interface SearchHistoryDataProvider : NSObject <DataProvider>
 {
-    RedditService *_redditService;
+    id <AccountContext> _accountContext;
 }
 
-@property(retain, nonatomic) RedditService *redditService; // @synthesize redditService=_redditService;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
-- (id)initWithRedditService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -7,18 +7,20 @@
 #import <objc/NSObject.h>
 
 @class RedditService;
+@protocol AccountContext;
 
 @interface ZeroStateSearchNetworkSourceBuilder : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)trendingObjectProviderForRailsContext:(id)arg1;
 - (id)historyIndexProvider;
 - (id)networkSourceWithRailsContext:(id)arg1;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

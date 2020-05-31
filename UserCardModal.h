@@ -10,13 +10,14 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class BaseButton, BaseImageView, BaseLabel, BaseTableView, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, RedditService, UIActivityIndicatorView;
-@protocol UserCardModalDelegate;
+@protocol AccountContext, UserCardModalDelegate;
 
 @interface UserCardModal : BaseView <UITableViewDelegate, UITableViewDataSource>
 {
     _Bool _userIsBanned;
     _Bool _userIsMuted;
     id <UserCardModalDelegate> _delegate;
+    id <AccountContext> _accountContext;
     BaseView *_modalView;
     BaseImageView *_profilePicture;
     BaseLabel *_usernameLabel;
@@ -28,12 +29,10 @@
     NSDictionary *_allActions;
     UIActivityIndicatorView *_userActivityIndicator;
     UIActivityIndicatorView *_actionsActivityIndicator;
-    RedditService *_service;
     NSLayoutConstraint *_actionTableHeightConstraint;
 }
 
 @property(retain, nonatomic) NSLayoutConstraint *actionTableHeightConstraint; // @synthesize actionTableHeightConstraint=_actionTableHeightConstraint;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) UIActivityIndicatorView *actionsActivityIndicator; // @synthesize actionsActivityIndicator=_actionsActivityIndicator;
 @property(retain, nonatomic) UIActivityIndicatorView *userActivityIndicator; // @synthesize userActivityIndicator=_userActivityIndicator;
 @property(nonatomic) _Bool userIsMuted; // @synthesize userIsMuted=_userIsMuted;
@@ -47,6 +46,7 @@
 @property(retain, nonatomic) BaseLabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) BaseImageView *profilePicture; // @synthesize profilePicture=_profilePicture;
 @property(retain, nonatomic) BaseView *modalView; // @synthesize modalView=_modalView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <UserCardModalDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
@@ -77,7 +77,8 @@
 - (void)configureUserAge:(id)arg1;
 - (void)configureUserName:(id)arg1;
 - (void)addConstraints;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

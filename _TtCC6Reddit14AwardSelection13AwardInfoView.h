@@ -8,13 +8,21 @@
 
 @interface _TtCC6Reddit14AwardSelection13AwardInfoView : UIView
 {
-    // Error parsing type: , name: award
+    // Error parsing type: , name: awardViewModel
     // Error parsing type: , name: theme
     // Error parsing type: , name: isExpanded
+    // Error parsing type: , name: imageView
+    // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: chevronView
+    // Error parsing type: , name: titleContainer
+    // Error parsing type: , name: detailsLabel
+    // Error parsing type: , name: detailsContainer
+    // Error parsing type: , name: containerView
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)toggleExpanded;
 - (id)initWithCoder:(id)arg1;
 - (id)init;
 

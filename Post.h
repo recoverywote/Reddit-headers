@@ -69,7 +69,6 @@
     AuthorFlair *_authorFlair;
     RichText *_selfPostRichText;
     NSArray *_comments;
-    unsigned long long _commentSort;
     PostLocation *_location;
     NSArray *_crosspostParentList;
     NSArray *_categories;
@@ -78,19 +77,19 @@
     NSArray *_awardingTotals;
     unsigned long long _totalAwardsReceived;
     long long _discussionType;
+    unsigned long long _gilded;
     NSAttributedString *_selfPostRichTextAttributed;
     NSDictionary *_selfPostRichTextData;
     NSDictionary *_selfPostRichTextMediaMetadata;
     unsigned long long _suggestedCommentSort;
-    unsigned long long _gilded;
 }
 
 + (id)keyPathsToObserveChanges;
-@property(nonatomic) unsigned long long gilded; // @synthesize gilded=_gilded;
 @property(nonatomic) unsigned long long suggestedCommentSort; // @synthesize suggestedCommentSort=_suggestedCommentSort;
 @property(retain, nonatomic) NSDictionary *selfPostRichTextMediaMetadata; // @synthesize selfPostRichTextMediaMetadata=_selfPostRichTextMediaMetadata;
 @property(retain, nonatomic) NSDictionary *selfPostRichTextData; // @synthesize selfPostRichTextData=_selfPostRichTextData;
 @property(copy, nonatomic) NSAttributedString *selfPostRichTextAttributed; // @synthesize selfPostRichTextAttributed=_selfPostRichTextAttributed;
+@property(nonatomic) unsigned long long gilded; // @synthesize gilded=_gilded;
 @property(nonatomic) _Bool isHlsGif; // @synthesize isHlsGif=_isHlsGif;
 @property(nonatomic) _Bool isHlsVideo; // @synthesize isHlsVideo=_isHlsVideo;
 @property(nonatomic) long long discussionType; // @synthesize discussionType=_discussionType;
@@ -105,7 +104,6 @@
 @property(nonatomic) _Bool isCrosspostable; // @synthesize isCrosspostable=_isCrosspostable;
 @property(copy, nonatomic) NSArray *crosspostParentList; // @synthesize crosspostParentList=_crosspostParentList;
 @property(copy, nonatomic) PostLocation *location; // @synthesize location=_location;
-@property(nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 @property(copy, nonatomic) NSArray *comments; // @synthesize comments=_comments;
 @property(nonatomic) _Bool isDeleted; // @synthesize isDeleted=_isDeleted;
 @property(retain, nonatomic) RichText *selfPostRichText; // @synthesize selfPostRichText=_selfPostRichText;

@@ -42,7 +42,7 @@
 - (void)configureWithURLString:(id)arg1 feedSort:(unsigned long long)arg2 params:(id)arg3;
 - (id)popularPresentable;
 - (void)dealloc;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

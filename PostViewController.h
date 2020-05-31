@@ -11,11 +11,12 @@
 #import "KeyboardInteractorDelegate-Protocol.h"
 #import "RecentSubredditsViewControllerDelegate-Protocol.h"
 #import "RequestToNavigateView-Protocol.h"
+#import "UIAdaptivePresentationControllerDelegate-Protocol.h"
 
 @class BaseButton, BaseLabel, BaseScrollView, FeedSpinnerView, FlairLabel, KeyboardFloatingViewInteractor, LocationManager, NSArray, NSString, NSURL, PostFlair, RedditService, SubmittedPost, Subreddit, SubredditBarView, UIView, _TtC6Reddit24ChatDiscussionToggleView, _TtC6Reddit30SubredditPostingDifficultyView;
 @protocol PostViewControllerDelegate;
 
-@interface PostViewController : BaseViewController <RecentSubredditsViewControllerDelegate, FlairViewDelegate, RequestToNavigateView, FlairSelectionSourceViewProtocol, KeyboardInteractorDelegate>
+@interface PostViewController : BaseViewController <RecentSubredditsViewControllerDelegate, FlairViewDelegate, RequestToNavigateView, FlairSelectionSourceViewProtocol, KeyboardInteractorDelegate, UIAdaptivePresentationControllerDelegate>
 {
     _Bool _analyticsDidCancelPost;
     _Bool _hasBeenEdited;
@@ -73,6 +74,8 @@
 - (void)requestToNavigateAwayWithCompletion:(CDUnknownBlockType)arg1;
 - (_Bool)recentSubredditsViewController:(id)arg1 shouldRefetchSubreddit:(id)arg2;
 - (void)recentSubredditsViewController:(id)arg1 didSelectSubreddit:(id)arg2;
+- (_Bool)presentationControllerShouldDismiss:(id)arg1;
+- (void)willMoveToParentViewController:(id)arg1;
 - (void)didToggleChatDiscussionSwitch:(id)arg1;
 - (id)populateSubmittedPostWithUUID:(id)arg1;
 - (id)populateSubmittedPost;

@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)postPreviewModeDataSourceWithRedditService:(id)arg1 withListingNetworkSource:(id)arg2 fromPost:(id)arg3 withBestComment:(id)arg4 withPostDetailOptions:(id)arg5;
++ (id)postPreviewModeDataSourceWithAccountContext:(id)arg1 withListingNetworkSource:(id)arg2 fromPost:(id)arg3 withBestComment:(id)arg4 withPostDetailOptions:(id)arg5;
 
 @end
 

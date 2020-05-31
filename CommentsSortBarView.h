@@ -25,7 +25,8 @@
 - (void)toggleLiveIndicatorView:(_Bool)arg1;
 - (void)layoutSubviews;
 - (void)setLeftButtonTitle:(id)arg1 withImage:(id)arg2;
-- (void)configureWithConfigurationType:(unsigned long long)arg1 hasParentComment:(_Bool)arg2 shoudLockComments:(_Bool)arg3;
+- (void)configureWithConfigurationType:(unsigned long long)arg1 hasParentComment:(_Bool)arg2 isPartialCommentTree:(_Bool)arg3 shoudLockComments:(_Bool)arg4;
+- (id)initWithFrame:(struct CGRect)arg1;
 
 @end
 

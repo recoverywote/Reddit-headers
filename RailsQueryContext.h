@@ -34,7 +34,7 @@
 - (id)initWithCoder:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)listingNetworkSourceWithRedditService:(id)arg1 railsContext:(id)arg2 withDelegate:(id)arg3;
+- (id)listingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2 withDelegate:(id)arg3;
 
 @end
 

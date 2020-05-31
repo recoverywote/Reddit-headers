@@ -13,19 +13,19 @@
     UIViewController *_vc;
 }
 
-+ (id)searchViewControllerWithDeepLinkURL:(id)arg1 error:(id *)arg2;
-+ (id)searchViewControllerWithObjects:(id)arg1 attemptAutopill:(_Bool)arg2 promotedOrigin:(_Bool)arg3 analyticsContext:(id)arg4;
++ (id)searchViewControllerWithAccountContext:(id)arg1 deepLinkURL:(id)arg2 error:(id *)arg3;
++ (id)searchViewControllerWithAccountContext:(id)arg1 objects:(id)arg2 attemptAutopill:(_Bool)arg3 promotedOrigin:(_Bool)arg4 analyticsContext:(id)arg5;
 @property(nonatomic) __weak UIViewController *vc; // @synthesize vc=_vc;
 - (void).cxx_destruct;
-- (void)navigateToSearchViewControllerWithRailsContext:(id)arg1 object:(id)arg2;
-- (void)navigateToSearchViewControllerWithRailsContextSeeMoreTopFlairs:(id)arg1 model:(id)arg2;
-- (void)navigateToSearchViewControllerWithRailsContextSeeMoreSubreddits:(id)arg1;
-- (void)navigateToSearchViewControllerWithAnalyticsContext:(id)arg1 contextObjects:(id)arg2 showMode:(unsigned long long)arg3 transitionClass:(Class)arg4 queryOrigin:(unsigned long long)arg5 autoPill:(_Bool)arg6;
-- (void)navigateToSearchViewControllerWithPill:(id)arg1 subreddit:(id)arg2 transitionClass:(Class)arg3 analyticsContext:(id)arg4;
-- (void)navigateToSearchViewControllerWithRailsContext:(id)arg1 withListingNetworkSource:(id)arg2 withPlaceholder:(id)arg3;
-- (void)navigateToSearchViewControllerWithRailsContext:(id)arg1 withContextObjects:(id)arg2 withPlaceholder:(id)arg3 showMode:(unsigned long long)arg4 transitionClass:(Class)arg5 initialTabType:(unsigned long long)arg6;
-- (void)navigateToSearchViewControllerWithRailsContext:(id)arg1 withPlaceholder:(id)arg2 showMode:(unsigned long long)arg3 transitionClass:(Class)arg4;
-- (void)navigateToSearchViewControllerWithRailsContext:(id)arg1 withPlaceholder:(id)arg2;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContext:(id)arg2 object:(id)arg3;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContextSeeMoreTopFlairs:(id)arg2 model:(id)arg3;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContextSeeMoreSubreddits:(id)arg2;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 analyticsContext:(id)arg2 contextObjects:(id)arg3 showMode:(unsigned long long)arg4 transitionClass:(Class)arg5 queryOrigin:(unsigned long long)arg6 autoPill:(_Bool)arg7;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 pill:(id)arg2 subreddit:(id)arg3 transitionClass:(Class)arg4 analyticsContext:(id)arg5;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContext:(id)arg2 withListingNetworkSource:(id)arg3 withPlaceholder:(id)arg4;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContext:(id)arg2 withContextObjects:(id)arg3 withPlaceholder:(id)arg4 showMode:(unsigned long long)arg5 transitionClass:(Class)arg6 initialTabType:(unsigned long long)arg7;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContext:(id)arg2 withPlaceholder:(id)arg3 showMode:(unsigned long long)arg4 transitionClass:(Class)arg5;
+- (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContext:(id)arg2 withPlaceholder:(id)arg3;
 - (id)initWithViewController:(id)arg1;
 
 @end

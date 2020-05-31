@@ -8,17 +8,17 @@
 
 @interface _TtC6Reddit26PendingPostsViewController : BaseViewController
 {
-    // Error parsing type: , name: service
     // Error parsing type: , name: tableView
     // Error parsing type: , name: listingStateController
     // Error parsing type: , name: estimatedCellHeight
+    // Error parsing type: , name: accountContext
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (void)updateListing;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

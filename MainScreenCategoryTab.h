@@ -30,7 +30,7 @@
 - (id)initWithCoder:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)viewControllerWithRedditService:(id)arg1;
+- (id)viewControllerWithAccountContext:(id)arg1;
 - (id)initWithCategory:(id)arg1;
 
 // Remaining properties

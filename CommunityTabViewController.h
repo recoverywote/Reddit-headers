@@ -7,14 +7,14 @@
 #import "PagedTabViewController.h"
 
 #import "REDSearchBarDelegate-Protocol.h"
-#import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
 @class CommunitiesViewController, CustomFeedsListViewController, NSArray, NSString, REDSearchBar, RedditService, SearchBarTransition;
+@protocol AccountContext;
 
-@interface CommunityTabViewController : PagedTabViewController <REDSearchBarDelegate, UIViewControllerTransitioningDelegate, RUIThemeUpdateCallbackProtocol>
+@interface CommunityTabViewController : PagedTabViewController <REDSearchBarDelegate, UIViewControllerTransitioningDelegate>
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     CommunitiesViewController *_communitiesController;
     CustomFeedsListViewController *_customFeedsViewController;
     REDSearchBar *_searchBar;
@@ -27,17 +27,16 @@
 @property(retain, nonatomic) REDSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) CustomFeedsListViewController *customFeedsViewController; // @synthesize customFeedsViewController=_customFeedsViewController;
 @property(retain, nonatomic) CommunitiesViewController *communitiesController; // @synthesize communitiesController=_communitiesController;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)analyticsPageType;
-- (void)themeDidChange:(id)arg1;
 - (void)setFocusToSearchBar;
 - (_Bool)searchBarShouldBeginEditing:(id)arg1;
-- (void)setupTabBarItem;
 - (id)majorContentView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -76,11 +76,11 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)fetchRules;
 - (void)presentFromViewController:(id)arg1;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2 userID:(id)arg3 username:(id)arg4 message:(id)arg5 banDuration:(id)arg6 modNote:(id)arg7 reason:(id)arg8 banDate:(id)arg9 context:(id)arg10 allowEditingUsername:(_Bool)arg11;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2 contact:(id)arg3;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2 user:(id)arg3 context:(id)arg4;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2 bannedUser:(id)arg3 context:(id)arg4;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2 userID:(id)arg3 username:(id)arg4 message:(id)arg5 banDuration:(id)arg6 modNote:(id)arg7 reason:(id)arg8 banDate:(id)arg9 context:(id)arg10 allowEditingUsername:(_Bool)arg11;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2 contact:(id)arg3;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2 user:(id)arg3 context:(id)arg4;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2 bannedUser:(id)arg3 context:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

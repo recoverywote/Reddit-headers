@@ -11,7 +11,6 @@
 @interface ExperimentManager (Reddit)
 - (void)exposeShouldShowAllInboxNotificationsWhenUnauthorized;
 @property(readonly, nonatomic) _Bool shouldShowAllInboxNotificationsWhenUnauthorized;
-@property(readonly, nonatomic) _Bool isPollCreationEnabled;
 - (void)exposeAnonymousBrowsingMode;
 @property(nonatomic) _Bool isInAnonymousBrowsing;
 - (id)anonymousBrowsingExperimentName;
@@ -21,8 +20,8 @@
 @property(readonly, nonatomic) long long sharePausePromptVariant;
 @property(readonly, nonatomic) long long redditSharesVariant;
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
+@property(readonly, nonatomic) _Bool isMuxEnabled;
 @property(readonly, nonatomic) _Bool isRPANAbrBroadcastEnabled;
-@property(readonly, nonatomic) _Bool isRPANMetalHKViewEnabled;
 @property(readonly, nonatomic) long long rpanEntryPointUIVariant;
 @property(readonly, nonatomic) long long rpanSuperScrubberVariant;
 @property(readonly, nonatomic) long long rpanEntryPointCopyVariant;
@@ -75,6 +74,8 @@
 - (void)exposeDisableTheatreMode;
 @property(readonly, nonatomic) _Bool shouldDisableTheatreMode;
 - (id)disableTheatreModeExperimentName;
+@property(readonly, nonatomic) _Bool isLapsedUserTargetedOfferEnabled;
+@property(readonly, nonatomic) _Bool isNewUserTargetedOfferEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletEnabled;
 @property(readonly, nonatomic) _Bool isRedditVideoV2Enabled;
 @property(readonly, nonatomic) _Bool isReportUserProfileIntegrationEnabled;
@@ -89,6 +90,7 @@
 @property(readonly, nonatomic) _Bool isChatPostQuickNavigationEnabled;
 @property(readonly, nonatomic) _Bool isInChatPostHoldout;
 @property(readonly, nonatomic) long long chatPostVariant;
+@property(readonly, nonatomic) long long chatHovercardVariant;
 @property(readonly, nonatomic) _Bool isMemeGeneratorEnabled;
 - (_Bool)isExperimentEnabled:(id)arg1;
 - (_Bool)wasAppInstalledAfterDateString:(id)arg1;

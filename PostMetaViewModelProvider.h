@@ -6,34 +6,38 @@
 
 #import <objc/NSObject.h>
 
-@class MetaBadgeManager, NSMutableArray, NSMutableDictionary, NextRunLoopScheduler, RedditService, Subreddit;
+@class MetaBadgeManager, NSMutableArray, NSMutableDictionary, NextRunLoopScheduler, Subreddit, _TtC6Reddit33MetaSubredditPointBalanceProvider;
+@protocol AccountContext;
 
 @interface PostMetaViewModelProvider : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     MetaBadgeManager *_badgeManager;
+    _TtC6Reddit33MetaSubredditPointBalanceProvider *_subredditPointBalanceProvider;
     Subreddit *_subreddit;
+    NextRunLoopScheduler *_nextRunLoopScheduler;
     NSMutableDictionary *_postsByUsers;
     NSMutableDictionary *_viewModelsByPosts;
     NSMutableArray *_queuedUserPKs;
     NSMutableDictionary *_queuedPosts;
-    NextRunLoopScheduler *_nextRunLoopScheduler;
 }
 
-@property(retain, nonatomic) NextRunLoopScheduler *nextRunLoopScheduler; // @synthesize nextRunLoopScheduler=_nextRunLoopScheduler;
-@property(retain, nonatomic) NSMutableDictionary *queuedPosts; // @synthesize queuedPosts=_queuedPosts;
-@property(retain, nonatomic) NSMutableArray *queuedUserPKs; // @synthesize queuedUserPKs=_queuedUserPKs;
-@property(retain, nonatomic) NSMutableDictionary *viewModelsByPosts; // @synthesize viewModelsByPosts=_viewModelsByPosts;
-@property(retain, nonatomic) NSMutableDictionary *postsByUsers; // @synthesize postsByUsers=_postsByUsers;
-@property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(retain, nonatomic) MetaBadgeManager *badgeManager; // @synthesize badgeManager=_badgeManager;
-@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) NSMutableDictionary *queuedPosts; // @synthesize queuedPosts=_queuedPosts;
+@property(readonly, nonatomic) NSMutableArray *queuedUserPKs; // @synthesize queuedUserPKs=_queuedUserPKs;
+@property(readonly, nonatomic) NSMutableDictionary *viewModelsByPosts; // @synthesize viewModelsByPosts=_viewModelsByPosts;
+@property(readonly, nonatomic) NSMutableDictionary *postsByUsers; // @synthesize postsByUsers=_postsByUsers;
+@property(readonly, nonatomic) NextRunLoopScheduler *nextRunLoopScheduler; // @synthesize nextRunLoopScheduler=_nextRunLoopScheduler;
+@property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
+@property(readonly, nonatomic) _TtC6Reddit33MetaSubredditPointBalanceProvider *subredditPointBalanceProvider; // @synthesize subredditPointBalanceProvider=_subredditPointBalanceProvider;
+@property(readonly, nonatomic) MetaBadgeManager *badgeManager; // @synthesize badgeManager=_badgeManager;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)postMetaViewModelForPost:(id)arg1;
 - (void)fetchViewModelsForPosts:(id)arg1 viewModels:(id)arg2 service:(id)arg3;
+- (void)updateWithBalances:(id)arg1;
 - (void)updateViewModelsForPosts:(id)arg1;
 - (void)updateViewModelsForUserPKs:(id)arg1;
-- (id)initWithBadgeManager:(id)arg1 subreddit:(id)arg2 service:(id)arg3;
+- (id)initWithBadgeManager:(id)arg1 subreddit:(id)arg2 accountContext:(id)arg3;
 
 @end
 

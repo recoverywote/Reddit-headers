@@ -33,9 +33,6 @@
 - (void)awardCoordinatorDidStart:(id)arg1;
 - (void)finish;
 - (void)startFromViewController:(id)arg1 options:(id)arg2 mode:(long long)arg3;
-- (_Bool)allowsAnonymousAwardsForMode:(long long)arg1;
-- (id)themeForMode:(long long)arg1;
-- (_Bool)useAwardSelectionV2ForMode:(long long)arg1;
 - (id)initWithComment:(id)arg1 parentPost:(id)arg2 service:(id)arg3 correlationId:(id)arg4;
 - (id)initWithLiveStreamPost:(id)arg1 liveStream:(id)arg2 service:(id)arg3 correlationId:(id)arg4 delegate:(id)arg5;
 - (id)initWithPost:(id)arg1 service:(id)arg2 correlationId:(id)arg3;

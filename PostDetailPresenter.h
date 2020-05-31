@@ -101,7 +101,6 @@
 - (void)toggleCollapseComment:(id)arg1;
 @property(readonly, nonatomic) _Bool hasComments;
 @property(readonly, nonatomic) _Bool hasParentComment;
-@property(readonly, nonatomic) _Bool isPartialCommentTree;
 - (_Bool)shouldOverlayCommentNode:(id)arg1;
 - (_Bool)shouldHighlightCommentNode:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldLockComments;
@@ -118,13 +117,13 @@
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
 - (_Bool)isTraced;
 - (void)fetchData;
-- (id)initWithService:(id)arg1 isModerator:(_Bool)arg2 options:(id)arg3;
-- (id)initWithService:(id)arg1 highlightComment:(id)arg2 isModerator:(_Bool)arg3 options:(id)arg4;
-- (id)initWithService:(id)arg1 collectionId:(id)arg2 options:(id)arg3;
-- (id)initWithService:(id)arg1 permalink:(id)arg2 options:(id)arg3;
-- (id)initWithService:(id)arg1 post:(id)arg2 postCollection:(id)arg3 options:(id)arg4;
-- (id)initWithService:(id)arg1 post:(id)arg2 scrollToComment:(id)arg3 options:(id)arg4;
-- (id)initWithService:(id)arg1 post:(id)arg2 options:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 isModerator:(_Bool)arg2 options:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 highlightComment:(id)arg2 isModerator:(_Bool)arg3 options:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 collectionId:(id)arg2 options:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 permalink:(id)arg2 options:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 postCollection:(id)arg3 options:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 scrollToComment:(id)arg3 options:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 @property(readonly, nonatomic) unsigned long long suggestedInitialSort;
 @property(readonly, nonatomic) unsigned long long loadingState;
 @property(readonly, nonatomic) CommentNetworkSource *commentNetworkSource;

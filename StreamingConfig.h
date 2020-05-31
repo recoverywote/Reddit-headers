@@ -38,6 +38,7 @@
     double _streamDurationLimit;
     NSURL *_firstTimeBroadcasterPolicyURL;
     NSURL *_unavailableVideoURL;
+    long long _abrInitialCapKbps;
     double _abrBitrateCapRestoreDenominator;
     double _abrBitrateRestoreDenominator;
     double _abrReducedBitrateCapPercent;
@@ -54,6 +55,7 @@
 @property(readonly, nonatomic) double abrReducedBitrateCapPercent; // @synthesize abrReducedBitrateCapPercent=_abrReducedBitrateCapPercent;
 @property(readonly, nonatomic) double abrBitrateRestoreDenominator; // @synthesize abrBitrateRestoreDenominator=_abrBitrateRestoreDenominator;
 @property(readonly, nonatomic) double abrBitrateCapRestoreDenominator; // @synthesize abrBitrateCapRestoreDenominator=_abrBitrateCapRestoreDenominator;
+@property(readonly, nonatomic) long long abrInitialCapKbps; // @synthesize abrInitialCapKbps=_abrInitialCapKbps;
 @property(readonly, nonatomic) NSURL *unavailableVideoURL; // @synthesize unavailableVideoURL=_unavailableVideoURL;
 @property(readonly, nonatomic) NSURL *firstTimeBroadcasterPolicyURL; // @synthesize firstTimeBroadcasterPolicyURL=_firstTimeBroadcasterPolicyURL;
 @property(readonly, nonatomic) double streamDurationLimit; // @synthesize streamDurationLimit=_streamDurationLimit;

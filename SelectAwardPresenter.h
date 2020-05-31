@@ -6,24 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@class Award, Comment, GildingEventLogger, NSDictionary, NSIndexPath, NSNumber, NSOrderedSet, NSString, Post, RedditService, SelectAwardOptions, Subreddit;
+@class Comment, GildingEventLogger, NSDictionary, NSIndexPath, NSNumber, NSOrderedSet, Post, RedditService, Subreddit, _TtC6Reddit19AwardSelectionState, _TtC6Reddit21AwardSelectionOptions;
 @protocol SelectAwardPresentable, UIScrollViewDelegate;
 
 @interface SelectAwardPresenter : NSObject
 {
-    _Bool _isAnonymous;
-    _Bool _isProcessing;
     _Bool _isLoading;
     id <SelectAwardPresentable> _presentable;
     id <UIScrollViewDelegate> _scrollingDelegate;
     RedditService *_service;
     Subreddit *_subreddit;
     NSNumber *_subredditCoins;
-    Award *_selectedAward;
-    NSString *_message;
+    _TtC6Reddit21AwardSelectionOptions *_options;
+    _TtC6Reddit19AwardSelectionState *_selectionState;
     Post *_post;
     Comment *_comment;
-    SelectAwardOptions *_options;
     NSOrderedSet *_sections;
     NSDictionary *_awardsBySection;
     NSDictionary *_awardViewModelById;
@@ -36,21 +33,16 @@
 @property(retain, nonatomic) NSDictionary *awardViewModelById; // @synthesize awardViewModelById=_awardViewModelById;
 @property(retain, nonatomic) NSDictionary *awardsBySection; // @synthesize awardsBySection=_awardsBySection;
 @property(retain, nonatomic) NSOrderedSet *sections; // @synthesize sections=_sections;
-@property(copy, nonatomic) SelectAwardOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-@property(nonatomic) _Bool isProcessing; // @synthesize isProcessing=_isProcessing;
-@property(copy, nonatomic) NSString *message; // @synthesize message=_message;
-@property(nonatomic) _Bool isAnonymous; // @synthesize isAnonymous=_isAnonymous;
-@property(retain, nonatomic) Award *selectedAward; // @synthesize selectedAward=_selectedAward;
+@property(readonly, nonatomic) _TtC6Reddit19AwardSelectionState *selectionState; // @synthesize selectionState=_selectionState;
+@property(readonly, copy, nonatomic) _TtC6Reddit21AwardSelectionOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) NSNumber *subredditCoins; // @synthesize subredditCoins=_subredditCoins;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak id <UIScrollViewDelegate> scrollingDelegate; // @synthesize scrollingDelegate=_scrollingDelegate;
 @property(nonatomic) __weak id <SelectAwardPresentable> presentable; // @synthesize presentable=_presentable;
 - (void).cxx_destruct;
-- (void)didTapCloseButton;
-- (void)didTapActionButton;
 - (void)didTapReloadButton;
 - (void)didSelectItemAtIndexPath:(id)arg1;
 - (void)didLoad;
@@ -67,13 +59,9 @@
 - (_Bool)shouldShowFooterImageForSection:(unsigned long long)arg1;
 - (unsigned long long)numberOfItemsInSection:(unsigned long long)arg1;
 @property(readonly, nonatomic) unsigned long long numberOfSections;
-@property(readonly, nonatomic) unsigned long long selectedAwardViewModelOptions;
 @property(readonly, nonatomic) unsigned long long gildingTarget;
 @property(readonly, nonatomic) long long coinBalance;
-@property(readonly, nonatomic) _Bool requiresPremiumForSelectedAward;
-@property(readonly, nonatomic) _Bool requiresCoinPurchaseForSelectedAward;
-@property(readonly, nonatomic) _Bool isAnonymousGildingAllowed;
-- (id)initWithService:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4 eventLogger:(id)arg5;
+- (id)initWithService:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4 selectionState:(id)arg5 eventLogger:(id)arg6;
 
 @end
 

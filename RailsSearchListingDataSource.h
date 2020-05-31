@@ -20,7 +20,7 @@
 @property(copy, nonatomic) CDUnknownBlockType headerContentView; // @synthesize headerContentView=_headerContentView;
 - (void).cxx_destruct;
 - (void)fetchDataForSearchViewController:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (id)initWithRedditService:(id)arg1 railsContext:(id)arg2 listingNetworkSource:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 railsContext:(id)arg2 listingNetworkSource:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

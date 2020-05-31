@@ -9,14 +9,15 @@
 #import "CarouselContainerNodeDelegate-Protocol.h"
 
 @class Carousel, NSString, RedditService;
+@protocol AccountContext;
 
 @interface CommunityRecentlyViewedDataSource : CommunityViewDataSource <CarouselContainerNodeDelegate>
 {
     Carousel *_carousel;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 - (void).cxx_destruct;
 - (void)carouselContainerNode:(id)arg1 performRemoveOfCarousel:(id)arg2 removalReason:(unsigned long long)arg3;
@@ -44,7 +45,8 @@
 - (id)headerString;
 - (void)refreshCarouselWithAnimation:(_Bool)arg1;
 - (void)refreshSubscriptions;
-- (id)initWithTableView:(id)arg1 recentSubreddits:(id)arg2 service:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithTableView:(id)arg1 recentSubreddits:(id)arg2 accountContext:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

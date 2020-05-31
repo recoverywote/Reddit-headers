@@ -12,6 +12,8 @@
 {
     // Error parsing type: , name: duration
     // Error parsing type: , name: barView
+    // Error parsing type: , name: filledHeightContraint
+    // Error parsing type: , name: emptyHeightContraint
 }
 
 - (void).cxx_destruct;
@@ -19,7 +21,6 @@
 @property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (id)initWithCoder:(id)arg1;
 - (void)animationDidStop:(id)arg1 finished:(_Bool)arg2;
-- (void)layoutSubviews;
 
 @end
 

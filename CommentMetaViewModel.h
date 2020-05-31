@@ -6,19 +6,22 @@
 
 #import <RedditCore/ObservableObject.h>
 
-@class MetaBadgeLoader, MetaUsernameDecoration, NSString;
+@class MetaBadgeLoader, MetaUsernameDecoration, NSString, _TtC6Reddit25MetaSubredditPointBalance;
 
 @interface CommentMetaViewModel : ObservableObject
 {
     MetaBadgeLoader *_badgeLoader;
     MetaUsernameDecoration *_decoration;
+    _TtC6Reddit25MetaSubredditPointBalance *_subredditPointBalance;
     NSString *_identifier;
 }
 
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
+@property(retain, nonatomic) _TtC6Reddit25MetaSubredditPointBalance *subredditPointBalance; // @synthesize subredditPointBalance=_subredditPointBalance;
 @property(retain, nonatomic) MetaUsernameDecoration *decoration; // @synthesize decoration=_decoration;
 @property(retain, nonatomic) MetaBadgeLoader *badgeLoader; // @synthesize badgeLoader=_badgeLoader;
 - (void).cxx_destruct;
+- (void)updateWithSubredditPointBalance:(id)arg1;
 - (_Bool)updateWithBadges:(id)arg1;
 
 @end

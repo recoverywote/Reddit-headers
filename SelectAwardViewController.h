@@ -61,6 +61,7 @@
 - (void)updateSelectedItem;
 - (void)updatePromptLabel;
 - (void)updateUserInteraction;
+- (unsigned long long)selectedAwardViewModelOptions;
 - (void)updateSelectedAwardView;
 - (void)configureSelectedAwardController;
 - (void)configureCollectionView;

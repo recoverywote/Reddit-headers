@@ -101,7 +101,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)setActiveControllerIndex:(unsigned long long)arg1;
-- (id)initWithUsername:(id)arg1 redditService:(id)arg2;
+- (id)initWithUsername:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

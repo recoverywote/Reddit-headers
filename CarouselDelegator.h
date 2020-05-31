@@ -10,7 +10,7 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
 @class FeedNavigator, ListingPresenter, NSString, RailsContext, RedditService;
-@protocol AnalyticsViewProtocol, CarouselDelegatorDelegate, ListingAnalyticsProtocol;
+@protocol AccountContext, AnalyticsViewProtocol, CarouselDelegatorDelegate, ListingAnalyticsProtocol;
 
 @interface CarouselDelegator : NSObject <UIViewControllerTransitioningDelegate, CarouselContainerNodeDelegate>
 {
@@ -21,14 +21,14 @@
     CDUnknownBlockType _carouselHasMoreContent;
     CDUnknownBlockType _previewModeEnabledForCarouselItem;
     CDUnknownBlockType _willNavigateToCarouselItemFromCarousel;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     FeedNavigator *_navigator;
     id <AnalyticsViewProtocol> _analyticsViewProtocol;
 }
 
 @property(nonatomic) __weak id <AnalyticsViewProtocol> analyticsViewProtocol; // @synthesize analyticsViewProtocol=_analyticsViewProtocol;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType willNavigateToCarouselItemFromCarousel; // @synthesize willNavigateToCarouselItemFromCarousel=_willNavigateToCarouselItemFromCarousel;
 @property(copy, nonatomic) CDUnknownBlockType previewModeEnabledForCarouselItem; // @synthesize previewModeEnabledForCarouselItem=_previewModeEnabledForCarouselItem;
 @property(copy, nonatomic) CDUnknownBlockType carouselHasMoreContent; // @synthesize carouselHasMoreContent=_carouselHasMoreContent;
@@ -73,7 +73,8 @@
 - (void)carouselContainerNode:(id)arg1 didSubscribeInNode:(id)arg2;
 @property(readonly, nonatomic) RailsContext *railsContext;
 - (id)railsPresenter;
-- (id)initWithRedditService:(id)arg1 analyticsViewProtocol:(id)arg2 feedNavigator:(id)arg3 delegate:(id)arg4;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 analyticsViewProtocol:(id)arg2 feedNavigator:(id)arg3 delegate:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

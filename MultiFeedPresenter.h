@@ -17,7 +17,7 @@
 - (void).cxx_destruct;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)configureWithMulti:(id)arg1;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

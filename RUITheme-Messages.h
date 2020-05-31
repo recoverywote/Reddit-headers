@@ -6,13 +6,9 @@
 
 #import <RedditUI/RUITheme.h>
 
-@class UIColor;
-
 @interface RUITheme (Messages)
 + (id)themeIdentifier;
 - (id)messageActiveLinkAttributes;
 - (id)messageLinkAttributes;
-- (id)backgroundColorFrom:(id)arg1;
-@property(nonatomic, readonly) UIColor *goldHighlightColor;
 @end
 

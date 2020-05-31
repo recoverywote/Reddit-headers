@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit24StreamPageViewController.h"
 
-#import "UIGestureRecognizerDelegate-Protocol.h"
-
-@interface _TtC6Reddit24StreamPageViewController (Reddit) <UIGestureRecognizerDelegate>
+@interface _TtC6Reddit24StreamPageViewController (Reddit)
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 @end
 

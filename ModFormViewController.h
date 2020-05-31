@@ -10,14 +10,14 @@
 #import "UITextViewDelegate-Protocol.h"
 
 @class BaseBarButtonItem, ModFormScrollView, NSLayoutConstraint, NSMutableArray, NSObject, NSString, RedditService, Subreddit, UIStackView, UIView;
-@protocol ModFormViewControllerDelegate, ModUserListable;
+@protocol AccountContext, ModFormViewControllerDelegate, ModUserListable;
 
 @interface ModFormViewController : BaseViewController <UITextFieldDelegate, UITextViewDelegate>
 {
     _Bool _sendingForm;
     NSObject<ModFormViewControllerDelegate> *_delegate;
     Subreddit *_subreddit;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     id <ModUserListable> _userData;
     ModFormScrollView *_scrollView;
     UIStackView *_contentView;
@@ -31,7 +31,7 @@
     struct CGRect _keyboardFrame;
 }
 
-+ (id)presentFromViewController:(id)arg1 subreddit:(id)arg2 userData:(id)arg3;
++ (id)presentFromViewController:(id)arg1 subreddit:(id)arg2 userData:(id)arg3 accountContext:(id)arg4;
 @property(retain, nonatomic) BaseBarButtonItem *addButton; // @synthesize addButton=_addButton;
 @property(nonatomic) struct CGRect keyboardFrame; // @synthesize keyboardFrame=_keyboardFrame;
 @property(retain, nonatomic) UIView *currentEditingField; // @synthesize currentEditingField=_currentEditingField;
@@ -44,7 +44,7 @@
 @property(retain, nonatomic) UIStackView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) ModFormScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(retain, nonatomic) id <ModUserListable> userData; // @synthesize userData=_userData;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak NSObject<ModFormViewControllerDelegate> *delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -81,7 +81,8 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)presentFromViewController:(id)arg1;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2;
 @property(readonly, copy, nonatomic) NSString *subredditName;
 
 // Remaining properties

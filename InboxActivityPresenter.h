@@ -28,7 +28,7 @@
 - (void)didSelectFilterType:(unsigned long long)arg1;
 - (void)setCurrentObjects:(id)arg1;
 - (void)dealloc;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(nonatomic) __weak id <InboxActivityPresentable> presentable; // @dynamic presentable;

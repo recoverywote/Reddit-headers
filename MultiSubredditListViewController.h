@@ -15,14 +15,14 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class BaseTableView, EmptyCustomFeedView, Listing, ListingStateController, Multi, MultiCommunityListHeaderView, NSArray, NSMutableArray, NSString, RedditService, UIScrollView;
-@protocol MultiSubredditListDelegate, PagedTabControllerParentCallback;
+@protocol AccountContext, MultiSubredditListDelegate, PagedTabControllerParentCallback;
 
 @interface MultiSubredditListViewController : BaseViewController <CommunitySubscriptionTableViewCellDelegate, UITableViewDelegate, UITableViewDataSource, MultiCommunityListHeaderViewDelegate, AddSubredditsToMultiViewControllerDelegate, ListingStateControllerDelegate, PagedTabControllerProtocol>
 {
     _Bool _isOwner;
     id <MultiSubredditListDelegate> _delegate;
     id <PagedTabControllerParentCallback> _pagedTabParentDelegate;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Listing *_listing;
     NSMutableArray *_subreddits;
     ListingStateController *_listingStateController;
@@ -44,7 +44,7 @@
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(retain, nonatomic) NSMutableArray *subreddits; // @synthesize subreddits=_subreddits;
 @property(retain, nonatomic) Listing *listing; // @synthesize listing=_listing;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabParentDelegate; // @synthesize pagedTabParentDelegate=_pagedTabParentDelegate;
 @property(nonatomic) __weak id <MultiSubredditListDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -78,7 +78,8 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

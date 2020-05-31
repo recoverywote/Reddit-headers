@@ -7,6 +7,7 @@
 #import <objc/NSObject.h>
 
 @class Multi, NSArray, NSMutableArray, NSMutableOrderedSet, RedditService, SubredditTypeaheadSearch;
+@protocol AccountContext;
 
 @interface AddSubredditsToMultiPresenter : NSObject
 {
@@ -18,7 +19,7 @@
     NSMutableOrderedSet *_selectedSubreddits;
     CDUnknownBlockType _onNewData;
     CDUnknownBlockType _onCurrentStateChange;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSArray *_subredditNames;
     SubredditTypeaheadSearch *_subredditSearch;
     NSMutableArray *_recommendedSubreddits;
@@ -35,7 +36,7 @@
 @property(copy, nonatomic) NSMutableArray *recommendedSubreddits; // @synthesize recommendedSubreddits=_recommendedSubreddits;
 @property(retain, nonatomic) SubredditTypeaheadSearch *subredditSearch; // @synthesize subredditSearch=_subredditSearch;
 @property(copy, nonatomic) NSArray *subredditNames; // @synthesize subredditNames=_subredditNames;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType onCurrentStateChange; // @synthesize onCurrentStateChange=_onCurrentStateChange;
 @property(copy, nonatomic) CDUnknownBlockType onNewData; // @synthesize onNewData=_onNewData;
 @property(retain, nonatomic) NSMutableOrderedSet *selectedSubreddits; // @synthesize selectedSubreddits=_selectedSubreddits;
@@ -53,7 +54,8 @@
 - (_Bool)addSubreddit:(id)arg1;
 - (void)searchWithQuery:(id)arg1;
 - (void)fetchData;
-- (id)initWithMulti:(id)arg1 service:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithMulti:(id)arg1 accountContext:(id)arg2;
 
 @end
 

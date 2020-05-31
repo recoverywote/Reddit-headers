@@ -10,30 +10,30 @@
 {
 }
 
-+ (id)forYouFeedViewControllerWithTab:(id)arg1 redditService:(id)arg2;
-+ (id)categoryFeedViewControllerWithTab:(id)arg1 redditService:(id)arg2;
-+ (id)modQueueViewControllerWithSubreddit:(id)arg1 redditService:(id)arg2;
-+ (id)recentChatPostViewControllerWithRedditService:(id)arg1;
-+ (id)aggregateHistoryFeedViewControllerWithRedditService:(id)arg1;
-+ (id)mediaTheatreViewControllerWithService:(id)arg1 presentationModel:(id)arg2;
-+ (id)theatreViewControllerWithRedditService:(id)arg1 presentationModel:(id)arg2;
-+ (id)savedPostsFeedViewControllerWithRedditService:(id)arg1 categoryName:(id)arg2;
-+ (id)modSubredditFeedViewControllerWithModSubreddit:(id)arg1 redditService:(id)arg2;
-+ (id)mainScreenMultiFeedViewControllerWithTab:(id)arg1 service:(id)arg2;
-+ (id)multiFeedViewControllerForService:(id)arg1;
-+ (id)userPostFeedViewControllerWithRedditService:(id)arg1;
-+ (id)textureSubredditFeedViewControllerWithRedditService:(id)arg1;
-+ (id)subredditFeedViewControllerForSubreddit:(id)arg1 redditService:(id)arg2;
-+ (id)subredditFeedViewControllerWithRedditService:(id)arg1;
-+ (id)newsFeedViewControllerWithRedditService:(id)arg1;
-+ (id)mainFeedVCWithRedditService:(id)arg1;
-+ (id)mainTabPopularFeedViewControllerWithRedditService:(id)arg1;
-+ (id)homeFeedViewControllerWithRedditService:(id)arg1;
-+ (id)mainTabHomeFeedViewControllerWithRedditService:(id)arg1;
-+ (id)allFeedViewControllerWithRedditService:(id)arg1;
-+ (id)texturePopularFeedViewControllerWithRedditService:(id)arg1;
-+ (id)popularFeedViewControllerWithRedditService:(id)arg1;
-+ (id)textureFeedViewControllerWithRedditService:(id)arg1;
++ (id)forYouFeedViewControllerWithTab:(id)arg1 accountContext:(id)arg2;
++ (id)categoryFeedViewControllerWithTab:(id)arg1 accountContext:(id)arg2;
++ (id)modQueueViewControllerWithSubreddit:(id)arg1 accountContext:(id)arg2;
++ (id)recentChatPostViewControllerWithAccountContext:(id)arg1;
++ (id)aggregateHistoryFeedViewControllerWithAccountContext:(id)arg1;
++ (id)mediaTheatreViewControllerWithAccountContext:(id)arg1 presentationModel:(id)arg2;
++ (id)theatreViewControllerWithAccountContext:(id)arg1 presentationModel:(id)arg2;
++ (id)savedPostsFeedViewControllerWithAccountContext:(id)arg1 categoryName:(id)arg2;
++ (id)modSubredditFeedViewControllerWithModSubreddit:(id)arg1 accountContext:(id)arg2;
++ (id)mainScreenMultiFeedViewControllerWithTab:(id)arg1 accountContext:(id)arg2;
++ (id)multiFeedViewControllerForAccountContext:(id)arg1;
++ (id)userPostFeedViewControllerWithAccountContext:(id)arg1;
++ (id)textureSubredditFeedViewControllerWithAccountContext:(id)arg1;
++ (id)subredditFeedViewControllerForSubreddit:(id)arg1 accountContext:(id)arg2;
++ (id)subredditFeedViewControllerWithAccountContext:(id)arg1;
++ (id)newsFeedViewControllerWithAccountContext:(id)arg1;
++ (id)mainFeedVCWithAccountContext:(id)arg1;
++ (id)mainTabPopularFeedViewControllerWithAccountContext:(id)arg1;
++ (id)homeFeedViewControllerWithAccountContext:(id)arg1;
++ (id)mainTabHomeFeedViewControllerWithAccountContext:(id)arg1;
++ (id)allFeedViewControllerWithAccountContext:(id)arg1;
++ (id)texturePopularFeedViewControllerWithAccountContext:(id)arg1;
++ (id)popularFeedViewControllerWithAccountContext:(id)arg1;
++ (id)textureFeedViewControllerWithAccountContext:(id)arg1;
 
 @end
 

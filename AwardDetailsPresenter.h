@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class AwardDetailsEventLogger, Comment, NSArray, NSDictionary, NSNotificationCenter, NSString, Post, RedditService, Subreddit;
-@protocol AwardDetailsNavigatable, AwardDetailsPresentable;
+@protocol AccountContext, AwardDetailsNavigatable, AwardDetailsPresentable;
 
 @interface AwardDetailsPresenter : NSObject <ObjectObserverProtocol>
 {
@@ -17,9 +17,9 @@
     NSArray *_awardDetailsCellViewModels;
     id <AwardDetailsNavigatable> _navigator;
     id <AwardDetailsPresentable> _presentable;
+    id <AccountContext> _accountContext;
     Post *_post;
     Comment *_comment;
-    RedditService *_service;
     NSString *_correlationId;
     AwardDetailsEventLogger *_eventLogger;
     Subreddit *_subreddit;
@@ -33,9 +33,9 @@
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(readonly, nonatomic) AwardDetailsEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AwardDetailsPresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) id <AwardDetailsNavigatable> navigator; // @synthesize navigator=_navigator;
 @property(copy, nonatomic) NSArray *awardDetailsCellViewModels; // @synthesize awardDetailsCellViewModels=_awardDetailsCellViewModels;
@@ -60,10 +60,11 @@
 - (void)didLoad;
 @property(readonly, nonatomic) _Bool shouldDisplayGiveAwardFooter;
 @property(readonly, nonatomic) unsigned long long maxAwardsCountDigits;
-- (id)initWithComment:(id)arg1 parentPost:(id)arg2 service:(id)arg3 correlationId:(id)arg4 notificationCenter:(id)arg5;
-- (id)initWithComment:(id)arg1 parentPost:(id)arg2 service:(id)arg3 correlationId:(id)arg4;
-- (id)initWithPost:(id)arg1 service:(id)arg2 correlationId:(id)arg3 notificationCenter:(id)arg4;
-- (id)initWithPost:(id)arg1 service:(id)arg2 correlationId:(id)arg3;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4 notificationCenter:(id)arg5;
+- (id)initWithComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;
+- (id)initWithPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3 notificationCenter:(id)arg4;
+- (id)initWithPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -47,7 +47,9 @@
 - (void)logClickEditOptionsEvent;
 - (void)logUnselectAnonymousOptionEvent;
 - (void)logSelectAnonymousOptionEvent;
+- (void)logSelectAwardEventWithAward:(id)arg1 rowIndex:(long long)arg2 columnIndex:(long long)arg3;
 - (void)logSelectAwardEventWithAward:(id)arg1;
+- (id)goldPurchaseForAward:(id)arg1;
 - (void)logViewGiveAwardModalEventWithDefaultAward:(id)arg1 availableAwards:(id)arg2 isDefaultAnonymous:(_Bool)arg3;
 - (id)initWithAccount:(id)arg1 post:(id)arg2 comment:(id)arg3 correlationId:(id)arg4 isLiveStream:(_Bool)arg5 analyticsManager:(id)arg6;
 - (id)initWithAccount:(id)arg1 post:(id)arg2 comment:(id)arg3 isLiveStream:(_Bool)arg4 correlationId:(id)arg5;

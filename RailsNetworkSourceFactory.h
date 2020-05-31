@@ -15,10 +15,10 @@
 + (id)suggedestedSortDataModels:(id)arg1;
 + (id)buildSubredditNetworkDataProviderWithQuery:(id)arg1 sort:(id)arg2 time:(id)arg3 queryId:(id)arg4 correlationId:(id)arg5;
 + (id)subredditEmptyModeListingNetworkSourceWithRailsContext:(id)arg1;
-+ (id)defaultListingNetworkSourceWithRedditService:(id)arg1 railsContext:(id)arg2 delegate:(id)arg3;
++ (id)defaultListingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2 delegate:(id)arg3;
 + (id)arrayByRepeatingObject:(id)arg1 times:(unsigned long long)arg2;
-+ (id)topListingNetworkSourceWithRedditService:(id)arg1 railsContext:(id)arg2 delegate:(id)arg3;
-+ (id)subredditCategoryListingNetworkSourceWithRedditService:(id)arg1 railsContext:(id)arg2 delegate:(id)arg3;
++ (id)topListingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2 delegate:(id)arg3;
++ (id)subredditCategoryListingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2 delegate:(id)arg3;
 + (id)flairListingNetworkSourceWithRailsContext:(id)arg1;
 + (id)subredditListingNetworkSourceWithRailsContext:(id)arg1;
 

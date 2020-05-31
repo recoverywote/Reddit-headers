@@ -12,7 +12,8 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class BaseTableView, CoinMarketingEventLogger, FeedSpinnerView, GoldProduct, NSArray, NSLayoutConstraint, NSString, RedditService, UIImageView;
+@class BaseTableView, FeedSpinnerView, GoldProduct, NSArray, NSLayoutConstraint, NSString, RedditService, UIImageView, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit34GoldUpsellImagePopupViewController;
+@protocol AccountContext;
 
 @interface GoldCoinMarketingPageViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, GoldProductTableViewCellDelegate, GoldCoinMarketingPageHeaderCellDelegate, InAppPurchaseManagerDelegate>
 {
@@ -22,16 +23,20 @@
     FeedSpinnerView *_loadingIndicatorView;
     GoldProduct *_purchasingProduct;
     NSArray *_products;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSString *_correlationId;
     NSString *_sourcePage;
-    CoinMarketingEventLogger *_eventLogger;
+    _TtC6Reddit24CoinMarketingEventLogger *_eventLogger;
+    _TtC6Reddit34GoldUpsellImagePopupViewController *_dealPopupController;
+    GoldProduct *_targetedOfferDeal;
 }
 
-@property(readonly, nonatomic) CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
+@property(retain, nonatomic) GoldProduct *targetedOfferDeal; // @synthesize targetedOfferDeal=_targetedOfferDeal;
+@property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *dealPopupController; // @synthesize dealPopupController=_dealPopupController;
+@property(readonly, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *sourcePage; // @synthesize sourcePage=_sourcePage;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) NSArray *products; // @synthesize products=_products;
 @property(retain, nonatomic) GoldProduct *purchasingProduct; // @synthesize purchasingProduct=_purchasingProduct;
 @property(retain, nonatomic) FeedSpinnerView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
@@ -46,8 +51,9 @@
 - (void)showLoadingIndicator;
 - (void)fetchGoldProductsIfNecessary;
 - (void)purchaseProduct:(id)arg1;
+- (void)showDealPopup;
+- (void)checkForDeals;
 - (void)updateProductItems;
-- (void)showSaleData;
 - (void)handleFetchFailure;
 - (void)handleFetchSuccess;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;
@@ -67,11 +73,12 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 correlationId:(id)arg2 wasReferredFromInFeedUnit:(_Bool)arg3;
-- (id)initWithService:(id)arg1 correlationId:(id)arg2 source:(id)arg3;
-- (id)initWithService:(id)arg1 source:(id)arg2;
-- (id)initWithService:(id)arg1 correlationId:(id)arg2;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 correlationId:(id)arg2 source:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 correlationId:(id)arg2 wasReferredFromInFeedUnit:(_Bool)arg3;
+- (id)initWithAccountContext:(id)arg1 source:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 correlationId:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

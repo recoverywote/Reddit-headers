@@ -7,14 +7,15 @@
 #import "BaseTableViewController.h"
 
 @class BaseButton, NSArray, Post, RedditService, SavedCategoryPresenter, SavedPostPresenter;
+@protocol AccountContext;
 
 @interface SavePostToCategoryViewController : BaseTableViewController
 {
     _Bool _includeAddCategory;
     Post *_post;
+    id <AccountContext> _accountContext;
     NSArray *_categoryNames;
     BaseButton *_saveButton;
-    RedditService *_service;
     SavedPostPresenter *_presenter;
     SavedCategoryPresenter *_savedCategoryPresenter;
     CDUnknownBlockType _completion;
@@ -25,10 +26,10 @@
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) SavedCategoryPresenter *savedCategoryPresenter; // @synthesize savedCategoryPresenter=_savedCategoryPresenter;
 @property(retain, nonatomic) SavedPostPresenter *presenter; // @synthesize presenter=_presenter;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) BaseButton *saveButton; // @synthesize saveButton=_saveButton;
 @property(nonatomic) _Bool includeAddCategory; // @synthesize includeAddCategory=_includeAddCategory;
 @property(retain, nonatomic) NSArray *categoryNames; // @synthesize categoryNames=_categoryNames;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
 - (void)dismissFromCurrentContext;
@@ -42,8 +43,9 @@
 - (void)didTapClose:(id)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 presenter:(id)arg2 savedCategoryPresenter:(id)arg3 post:(id)arg4 includeAddCategory:(_Bool)arg5 cancel:(CDUnknownBlockType)arg6 completion:(CDUnknownBlockType)arg7;
-- (id)initWithService:(id)arg1 post:(id)arg2 includeAddCategory:(_Bool)arg3 cancel:(CDUnknownBlockType)arg4 completion:(CDUnknownBlockType)arg5;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 presenter:(id)arg2 savedCategoryPresenter:(id)arg3 post:(id)arg4 includeAddCategory:(_Bool)arg5 cancel:(CDUnknownBlockType)arg6 completion:(CDUnknownBlockType)arg7;
+- (id)initWithAccountContext:(id)arg1 post:(id)arg2 includeAddCategory:(_Bool)arg3 cancel:(CDUnknownBlockType)arg4 completion:(CDUnknownBlockType)arg5;
 
 @end
 

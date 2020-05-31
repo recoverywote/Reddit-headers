@@ -14,7 +14,6 @@
     // Error parsing type: , name: experimentManager
     // Error parsing type: , name: completionCallback
     // Error parsing type: , name: $__lazy_storage_$_policyText
-    // Error parsing type: , name: $__lazy_storage_$_marketingText
 }
 
 - (void).cxx_destruct;
@@ -23,7 +22,7 @@
 - (void)imagePopupViewControllerDidClose:(id)arg1;
 - (void)imagePopupViewControllerDidCancel:(id)arg1;
 - (void)imagePopupViewControllerDidConfirm:(id)arg1;
-- (void)show;
+- (void)showWithViewModel:(id)arg1;
 - (id)initFromViewController:(id)arg1 experimentManager:(id)arg2 completionCallback:(CDUnknownBlockType)arg3;
 
 @end

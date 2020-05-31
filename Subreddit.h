@@ -47,7 +47,6 @@
     NSString *_descriptionText;
     NSString *_publicDescriptionText;
     NSString *_displayName;
-    NSString *_displayNamePrefixed;
     NSString *_visualName;
     NSString *_submitText;
     NSString *_urlPath;
@@ -67,10 +66,15 @@
     SubredditWidgetSet *_widgetSet;
     SubredditMenuSet *_menuSet;
     AuthorFlair *_authorFlair;
+    NSString *_displayNamePrefixed;
+    NSString *_sharingPermalinkIncludingDomain;
 }
 
++ (_Bool)isReservedSubredditName:(id)arg1;
 + (id)keyPathsToObserveChanges;
 + (_Bool)supportsSecureCoding;
+@property(copy, nonatomic) NSString *sharingPermalinkIncludingDomain; // @synthesize sharingPermalinkIncludingDomain=_sharingPermalinkIncludingDomain;
+@property(copy, nonatomic) NSString *displayNamePrefixed; // @synthesize displayNamePrefixed=_displayNamePrefixed;
 @property(nonatomic) _Bool isEmojisEnabled; // @synthesize isEmojisEnabled=_isEmojisEnabled;
 @property(retain, nonatomic) AuthorFlair *authorFlair; // @synthesize authorFlair=_authorFlair;
 @property(nonatomic) _Bool isAuthorFlairHidden; // @synthesize isAuthorFlairHidden=_isAuthorFlairHidden;
@@ -112,7 +116,6 @@
 @property(copy, nonatomic) NSString *urlPath; // @synthesize urlPath=_urlPath;
 @property(copy, nonatomic) NSString *submitText; // @synthesize submitText=_submitText;
 @property(copy, nonatomic) NSString *visualName; // @synthesize visualName=_visualName;
-@property(copy, nonatomic) NSString *displayNamePrefixed; // @synthesize displayNamePrefixed=_displayNamePrefixed;
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *publicDescriptionText; // @synthesize publicDescriptionText=_publicDescriptionText;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
@@ -127,7 +130,6 @@
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 - (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

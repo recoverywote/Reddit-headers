@@ -9,13 +9,13 @@
 #import "ListingNetworkSourceDelegate-Protocol.h"
 
 @class ListingNetworkSource, NSArray, NSString, NSUUID, RedditService, _TtC6Tracer5Trace;
-@protocol ListingPresentable;
+@protocol AccountContext, ListingPresentable;
 
 @interface ListingPresenter : NSObject <ListingNetworkSourceDelegate>
 {
     _Bool _didProvideListingContentToListingPresentable;
     id <ListingPresentable> _presentable;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     ListingNetworkSource *_listingNetworkSource;
     NSArray *_currentObjects;
     unsigned long long _numPagesFetched;
@@ -29,7 +29,7 @@
 @property(nonatomic) unsigned long long numPagesFetched; // @synthesize numPagesFetched=_numPagesFetched;
 @property(copy, nonatomic) NSArray *currentObjects; // @synthesize currentObjects=_currentObjects;
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <ListingPresentable> presentable; // @synthesize presentable=_presentable;
 - (void).cxx_destruct;
 - (void)configureWithListingNetworkSource:(id)arg1;
@@ -49,7 +49,8 @@
 - (void)fetchMoreContentIfNecessary;
 - (void)fetchData;
 - (void)presentableWillAppear;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

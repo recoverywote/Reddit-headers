@@ -65,8 +65,8 @@
 - (_Bool)shouldFilterObject:(id)arg1;
 - (void)updateFeedPostOptions;
 - (void)dealloc;
-- (id)initWithRailsContext:(id)arg1 service:(id)arg2 listingProvider:(id)arg3 searchTabType:(unsigned long long)arg4 withTitle:(id)arg5;
-- (id)initWithRailsContext:(id)arg1 service:(id)arg2 listingProvider:(id)arg3;
+- (id)initWithRailsContext:(id)arg1 accountContext:(id)arg2 listingProvider:(id)arg3 searchTabType:(unsigned long long)arg4 withTitle:(id)arg5;
+- (id)initWithRailsContext:(id)arg1 accountContext:(id)arg2 listingProvider:(id)arg3;
 @property(readonly, nonatomic) _Bool hasFlairContext;
 @property(readonly, nonatomic) _Bool hasSubredditContext;
 - (_Bool)shouldShowHlsVideoPostInTheater:(id)arg1;

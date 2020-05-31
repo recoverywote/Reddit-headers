@@ -12,11 +12,12 @@
 #import "_TtP6Reddit35AccountStatusViewControllerDelegate_-Protocol.h"
 
 @class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseTableView, BaseView, ChatAvatarImageView, KeyValueObservation, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager;
+@protocol AccountContext;
 
 @interface UserDrawerViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit35AccountStatusViewControllerDelegate_, UIViewControllerTransitioningDelegate>
 {
     UIPercentDrivenInteractiveTransition *_interactiveTransition;
-    AccountManager *_accountManager;
+    id <AccountContext> _accountContext;
     _TtC6Reddit24MetaWalletBalanceManager *_balanceManager;
     BaseView *_background;
     BaseView *_drawerPanel;
@@ -56,7 +57,7 @@
 @property(retain, nonatomic) BaseView *drawerPanel; // @synthesize drawerPanel=_drawerPanel;
 @property(retain, nonatomic) BaseView *background; // @synthesize background=_background;
 @property(retain, nonatomic) _TtC6Reddit24MetaWalletBalanceManager *balanceManager; // @synthesize balanceManager=_balanceManager;
-@property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
 - (void).cxx_destruct;
 - (void)showAnonymousBrowsingTooltipIfNeeded;
@@ -91,7 +92,8 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)dealloc;
 - (void)viewDidLoad;
-- (id)initWithAccountManager:(id)arg1;
+@property(readonly, nonatomic) AccountManager *accountManager;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

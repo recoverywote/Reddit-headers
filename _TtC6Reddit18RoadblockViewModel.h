@@ -13,13 +13,13 @@
 {
     // Error parsing type: , name: roadblockedModel
     // Error parsing type: , name: roadblockedThing
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
 }
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)initWithError:(id)arg1 service:(id)arg2;
-- (id)initWithRoadblockable:(id)arg1 service:(id)arg2;
+- (id)initWithError:(id)arg1 accountContext:(id)arg2;
+- (id)initWithRoadblockable:(id)arg1 accountContext:(id)arg2;
 @property(nonatomic, readonly) _Bool shouldBlurBackground;
 @property(nonatomic, readonly) NSString *backText;
 @property(nonatomic, readonly) NSString *confirmButtonText;

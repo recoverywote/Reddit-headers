@@ -17,6 +17,8 @@
     long long _awardSubType;
     NSArray *_awardIcons;
     NSNumber *_coinPrice;
+    NSNumber *_coinReward;
+    NSNumber *_subredditCoinReward;
     NSNumber *_daysOfPremium;
     NSNumber *_stickyDuration;
     NSString *_awardDescription;
@@ -31,6 +33,8 @@
 @property(readonly, nonatomic) NSString *awardDescription; // @synthesize awardDescription=_awardDescription;
 @property(readonly, nonatomic) NSNumber *stickyDuration; // @synthesize stickyDuration=_stickyDuration;
 @property(readonly, nonatomic) NSNumber *daysOfPremium; // @synthesize daysOfPremium=_daysOfPremium;
+@property(readonly, nonatomic) NSNumber *subredditCoinReward; // @synthesize subredditCoinReward=_subredditCoinReward;
+@property(readonly, nonatomic) NSNumber *coinReward; // @synthesize coinReward=_coinReward;
 @property(readonly, nonatomic) NSNumber *coinPrice; // @synthesize coinPrice=_coinPrice;
 @property(readonly, nonatomic) NSArray *awardIcons; // @synthesize awardIcons=_awardIcons;
 @property(readonly, nonatomic) _Bool isNew; // @synthesize isNew=_isNew;
@@ -43,7 +47,7 @@
 - (id)mediaSourceForAwardIconSize:(long long)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 - (id)initWithData:(id)arg1;
-- (id)initWithIdentifier:(id)arg1 name:(id)arg2 awardIcons:(id)arg3 awardType:(long long)arg4 awardSubType:(long long)arg5 isNewAward:(_Bool)arg6 coinPrice:(id)arg7 daysOfPremium:(id)arg8 stickyDuration:(id)arg9 awardDescription:(id)arg10 endDate:(id)arg11 tags:(id)arg12;
+- (id)initWithIdentifier:(id)arg1 name:(id)arg2 awardIcons:(id)arg3 awardType:(long long)arg4 awardSubType:(long long)arg5 isNewAward:(_Bool)arg6 coinPrice:(id)arg7 coinReward:(id)arg8 subredditCoinReward:(id)arg9 daysOfPremium:(id)arg10 stickyDuration:(id)arg11 awardDescription:(id)arg12 endDate:(id)arg13 tags:(id)arg14;
 
 @end
 

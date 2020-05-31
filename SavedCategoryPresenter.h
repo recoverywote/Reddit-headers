@@ -7,17 +7,19 @@
 #import <objc/NSObject.h>
 
 @class RedditService;
+@protocol AccountContext;
 
 @interface SavedCategoryPresenter : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
 + (id)savedPostsAllCategoryName;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (void)fetchCategoriesWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

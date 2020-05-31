@@ -7,11 +7,11 @@
 #import <objc/NSObject.h>
 
 @class Multi, NSString, RedditService;
-@protocol MultiPagePresentable;
+@protocol AccountContext, MultiPagePresentable;
 
 @interface MultiPagePresenter : NSObject
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     Multi *_multi;
     NSString *_multiName;
     NSString *_username;
@@ -22,7 +22,7 @@
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *multiName; // @synthesize multiName=_multiName;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)compressedImage:(id)arg1 maxFileSizeInKB:(int)arg2;
 - (id)saveImageToDisk:(id)arg1 withName:(id)arg2 finalImage:(id *)arg3;
@@ -31,7 +31,8 @@
 - (void)makeMultiPublicWithCompletion:(CDUnknownBlockType)arg1;
 - (void)configureWithMulti:(id)arg1;
 - (void)configureWithMultiName:(id)arg1 forUsername:(id)arg2;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

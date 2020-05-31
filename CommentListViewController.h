@@ -17,7 +17,7 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
 @class BaseCollectionView, CommentListingNetworkSource, ListingStateController, NSArray, NSMutableArray, NSNotificationCenter, NSString, RedditService, UIScrollView, User;
-@protocol PagedTabControllerParentCallback;
+@protocol AccountContext, PagedTabControllerParentCallback;
 
 @interface CommentListViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, InboxCellContentViewDelegate, ReportActionSheetDelegate, ObjectObserverProtocol, ListingStateControllerDelegate, ListingNetworkSourceDelegate, PagedTabControllerProtocol>
 {
@@ -28,14 +28,14 @@
     ListingStateController *_listingStateController;
     NSArray *_comments;
     CommentListingNetworkSource *_networkSource;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     NSNotificationCenter *_notifCenter;
     NSMutableArray *_notifObservers;
 }
 
 @property(readonly, copy, nonatomic) NSMutableArray *notifObservers; // @synthesize notifObservers=_notifObservers;
 @property(readonly, nonatomic) NSNotificationCenter *notifCenter; // @synthesize notifCenter=_notifCenter;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) CommentListingNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
 @property(retain, nonatomic) NSArray *comments; // @synthesize comments=_comments;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
@@ -67,7 +67,8 @@
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 networkSource:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 networkSource:(id)arg2;
 - (void)dealloc;
 
 // Remaining properties

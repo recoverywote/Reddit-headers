@@ -7,15 +7,16 @@
 #import "BaseViewController.h"
 
 @class RedditService, UIStackView;
+@protocol AccountContext;
 
 @interface RedditPremiumPreferencesViewController : BaseViewController
 {
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     UIStackView *_contentStackView;
 }
 
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)lineSeparatorView;
 - (id)spacerWithHeight:(double)arg1;
@@ -27,7 +28,8 @@
 - (void)setupViewsForNonSubscriber;
 - (void)setupViewsForSubscriber;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

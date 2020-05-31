@@ -21,6 +21,8 @@
     // Error parsing type: , name: $__lazy_storage_$_navigator
     // Error parsing type: , name: footerLabel
     // Error parsing type: , name: $__lazy_storage_$_layout
+    // Error parsing type: , name: newTagAttributedString
+    // Error parsing type: , name: distanceFromNewTagToArrow
 }
 
 - (void).cxx_destruct;

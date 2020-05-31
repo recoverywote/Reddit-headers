@@ -8,9 +8,9 @@
 
 @interface _TtCC12RedditWallet33TransactionApprovalViewControllerP33_F1622841DE4F4DA58BE674EE9C9DED584View : UIView
 {
-    // Error parsing type: , name: topActionBar
     // Error parsing type: , name: bottomActionBar
     // Error parsing type: , name: notchView
+    // Error parsing type: , name: topActionBar
     // Error parsing type: , name: centerContainer
     // Error parsing type: , name: scrollingView
     // Error parsing type: , name: iconView

@@ -11,6 +11,7 @@
     // Error parsing type: , name: coinBalance
     // Error parsing type: , name: getCoins
     // Error parsing type: , name: theme
+    // Error parsing type: , name: hideBalance
     // Error parsing type: , name: ctaButtonLayoutGuide
     // Error parsing type: , name: coinBalanceLabel
     // Error parsing type: , name: getCoinsButton

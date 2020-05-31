@@ -7,16 +7,16 @@
 #import <RedditUI/RUIActionSheetViewController.h>
 
 @class Account, RedditService;
-@protocol ReportActionSheetDelegate, ReportableModel;
+@protocol AccountContext, ReportActionSheetDelegate, ReportableModel;
 
 @interface ReportActionSheetViewController : RUIActionSheetViewController
 {
     id <ReportableModel> _model;
     id <ReportActionSheetDelegate> _reportActionSheetDelegate;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <ReportActionSheetDelegate> reportActionSheetDelegate; // @synthesize reportActionSheetDelegate=_reportActionSheetDelegate;
 @property(readonly, nonatomic) id <ReportableModel> model; // @synthesize model=_model;
 - (void).cxx_destruct;
@@ -25,7 +25,8 @@
 - (void)presentReportControllerForModel:(id)arg1;
 @property(readonly, nonatomic) Account *account;
 - (void)setupActionSheetItems;
-- (id)initWithModel:(id)arg1 service:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithModel:(id)arg1 accountContext:(id)arg2;
 
 @end
 

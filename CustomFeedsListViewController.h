@@ -13,25 +13,26 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class BaseTableView, EmptyDogeView, Listing, ListingStateController, NSArray, NSString, RedditService, UIScrollView;
+@protocol AccountContext;
 
 @interface CustomFeedsListViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, MultiPageViewControllerDelegate, ListingStateControllerDelegate, PagedTabControllerProtocol>
 {
     unsigned long long _viewMode;
     CDUnknownBlockType _onSelection;
+    id <AccountContext> _accountContext;
     BaseTableView *_tableView;
     EmptyDogeView *_emptyView;
     ListingStateController *_listingStateController;
     NSArray *_customFeeds;
-    RedditService *_service;
     Listing *_listing;
 }
 
 @property(retain, nonatomic) Listing *listing; // @synthesize listing=_listing;
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSArray *customFeeds; // @synthesize customFeeds=_customFeeds;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType onSelection; // @synthesize onSelection=_onSelection;
 @property(nonatomic) unsigned long long viewMode; // @synthesize viewMode=_viewMode;
 - (void).cxx_destruct;
@@ -63,7 +64,8 @@
 - (void)fetchNextListingPage;
 - (void)refetchListing;
 - (void)viewDidLoad;
-- (id)initWithService:(id)arg1 listing:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 listing:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -7,6 +7,8 @@
 #import <UIKit/UITabBarItem.h>
 
 @interface UITabBarItem (Factory)
++ (id)tabBarItemWithImage:(id)arg1 colorGuide:(id)arg2;
 + (id)tabBarItemWithImage:(id)arg1;
++ (id)makeCommunityTabBarItemUsing:(id)arg1;
 @end
 

@@ -18,7 +18,7 @@
 @property(readonly, nonatomic) UIFont *bodyM;
 @property(readonly, nonatomic) UIFont *bodyL;
 @property(readonly, nonatomic) UIFont *bodyXL;
-- (id)headingM;
+@property(readonly, nonatomic) UIFont *headingM;
 @property(readonly, nonatomic) UIFont *headingL;
 @property(readonly, nonatomic) UIFont *headingXL;
 @property(readonly, nonatomic) UIFont *displayM;

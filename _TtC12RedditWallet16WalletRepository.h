@@ -8,6 +8,7 @@
 
 @interface _TtC12RedditWallet16WalletRepository : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: redditService
     // Error parsing type: , name: dataSource
     // Error parsing type: , name: communitiesRepository
     // Error parsing type: , name: userResponseRepository

@@ -44,7 +44,7 @@
 - (id)attributedStringWithTemplateContext:(id)arg1 ignoreNotFound:(_Bool)arg2;
 - (id)stringWithTemplateContext:(id)arg1;
 - (id)stringWithTemplateContext:(id)arg1 ignoreNotFound:(_Bool)arg2;
-- (id)attributedStringWithGoldCoinSymbolUsingFont:(id)arg1 tintColor:(id)arg2;
+- (id)attributedStringWithGoldCoinSymbolUsingFont:(id)arg1 textColor:(id)arg2 tintColor:(id)arg3;
 - (id)attributedStringWithGoldCoinSymbolUsingFont:(id)arg1;
 - (_Bool)isValidEmailAddress;
 - (id)apm_MD5String;

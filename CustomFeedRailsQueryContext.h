@@ -11,7 +11,7 @@
 }
 
 - (id)pillName;
-- (id)listingNetworkSourceWithRedditService:(id)arg1 railsContext:(id)arg2 withDelegate:(id)arg3;
+- (id)listingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2 withDelegate:(id)arg3;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 

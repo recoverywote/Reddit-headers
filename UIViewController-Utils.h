@@ -38,15 +38,13 @@
 - (void)imagePopupViewControllerDidClose:(id)arg1;
 - (void)imagePopupViewControllerDidCancel:(id)arg1;
 - (void)imagePopupViewController:(id)arg1 didSelectLinkWithURL:(id)arg2;
-- (void)presentDirectShareForSubject:(id)arg1 body:(id)arg2 sender:(id)arg3;
+- (void)presentDirectShareForSubject:(id)arg1 body:(id)arg2 sender:(id)arg3 accountContext:(id)arg4;
 - (void)didTapCloseButton:(id)arg1;
 - (void)showInformationalModalView;
 - (void)showErrorToastForPostType:(unsigned long long)arg1 activityType:(id)arg2 error:(id)arg3;
 - (void)showSuccessToastForPostType:(unsigned long long)arg1 activityType:(id)arg2;
-- (id)activityViewControllerForShareData:(id)arg1;
-- (void)presentShareViewForData:(id)arg1;
-- (void)presentShareViewForTextString:(id)arg1 urlString:(id)arg2 analyticsSource:(id)arg3 sender:(id)arg4;
-- (void)closeAction;
-- (void)addCloseButton;
+- (id)activityViewControllerForShareData:(id)arg1 accountContext:(id)arg2;
+- (void)presentShareViewForData:(id)arg1 accountContext:(id)arg2;
+- (void)presentShareViewForTextString:(id)arg1 urlString:(id)arg2 analyticsSource:(id)arg3 sender:(id)arg4 accountContext:(id)arg5;
 @end
 

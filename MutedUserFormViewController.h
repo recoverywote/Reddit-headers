@@ -30,10 +30,10 @@
 - (_Bool)isEditingExistingForm;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (id)initWithUsername:(id)arg1 reason:(id)arg2 subreddit:(id)arg3 service:(id)arg4;
-- (id)initWithUser:(id)arg1 subreddit:(id)arg2 service:(id)arg3;
-- (id)initWithMutedUser:(id)arg1 subreddit:(id)arg2 service:(id)arg3;
-- (id)initWithSubreddit:(id)arg1 service:(id)arg2;
+- (id)initWithUsername:(id)arg1 reason:(id)arg2 subreddit:(id)arg3 accountContext:(id)arg4;
+- (id)initWithUser:(id)arg1 subreddit:(id)arg2 accountContext:(id)arg3;
+- (id)initWithMutedUser:(id)arg1 subreddit:(id)arg2 accountContext:(id)arg3;
+- (id)initWithSubreddit:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

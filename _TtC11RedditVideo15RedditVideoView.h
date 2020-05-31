@@ -11,7 +11,6 @@
 @interface _TtC11RedditVideo15RedditVideoView : UIView
 {
     // Error parsing type: , name: playerLayerView
-    // Error parsing type: , name: videoAnalyticsLogger
     // Error parsing type: , name: delegate
     // Error parsing type: , name: placeholderView
     // Error parsing type: , name: snapshotView

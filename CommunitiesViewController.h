@@ -13,6 +13,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class AccountSubscriptionDataSource, BaseTableView, CommunityDefaultSubscriptionViewDataSource, CommunityFollowingViewDataSource, CommunityModeratingViewDataSource, CommunityPopularViewDataSource, CommunityRecentlyViewedDataSource, FavoriteSubredditViewDataSource, NSArray, NSString, RedditService, ScrollViewIndexBar, SubscribedSubredditViewDataSource, UIScrollView;
+@protocol AccountContext;
 
 @interface CommunitiesViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, CommunityViewDataSourceDelegate, ScrollViewIndexBarDelegate, PagedTabControllerProtocol>
 {
@@ -28,10 +29,10 @@
     CommunityDefaultSubscriptionViewDataSource *_defaultSubscriptionViewDataSource;
     CommunityRecentlyViewedDataSource *_recentlyViewedDataSource;
     NSArray *_dataSources;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
 }
 
-@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool hasPerformedInitialFetch; // @synthesize hasPerformedInitialFetch=_hasPerformedInitialFetch;
 @property(copy, nonatomic) NSArray *dataSources; // @synthesize dataSources=_dataSources;
 @property(retain, nonatomic) CommunityRecentlyViewedDataSource *recentlyViewedDataSource; // @synthesize recentlyViewedDataSource=_recentlyViewedDataSource;
@@ -79,7 +80,8 @@
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)configureDataSources;
 - (void)viewDidLoad;
-- (id)initWithRecentSubreddits:(id)arg1 service:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithRecentSubreddits:(id)arg1 accountContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

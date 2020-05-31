@@ -9,13 +9,13 @@
 #import "ImagePopupViewControllerDelegate-Protocol.h"
 
 @class BaseViewController, NSURL, RedditService;
-@protocol NSObject, RoadblockCoordinatorDelegate;
+@protocol AccountContext, NSObject, RoadblockCoordinatorDelegate;
 
 @interface RoadblockCoordinator : NSObject <ImagePopupViewControllerDelegate>
 {
     _Bool _isStarted;
     id <RoadblockCoordinatorDelegate> _delegate;
-    RedditService *_service;
+    id <AccountContext> _accountContext;
     BaseViewController *_presentingViewController;
     id <NSObject> _nsfwPreferenceObserver;
     NSURL *_originURL;
@@ -25,7 +25,7 @@
 @property(retain, nonatomic) NSURL *originURL; // @synthesize originURL=_originURL;
 @property(nonatomic) __weak id <NSObject> nsfwPreferenceObserver; // @synthesize nsfwPreferenceObserver=_nsfwPreferenceObserver;
 @property(readonly, nonatomic) __weak BaseViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
-@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <RoadblockCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)handleConfirmedNSFWRoadblockableModel:(id)arg1;
@@ -44,7 +44,8 @@
 - (void)startWithError:(id)arg1 forSubredditNamed:(id)arg2;
 - (void)startWithError:(id)arg1;
 - (void)dealloc;
-- (id)initWithService:(id)arg1 presentingViewController:(id)arg2;
+@property(readonly, nonatomic) RedditService *service;
+- (id)initWithAccountContext:(id)arg1 presentingViewController:(id)arg2;
 
 @end
 

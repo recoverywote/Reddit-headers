@@ -12,7 +12,7 @@
 
 - (id)decodeAssociatedObject:(id)arg1;
 - (id)pillName;
-- (id)listingNetworkSourceWithRedditService:(id)arg1 railsContext:(id)arg2 withDelegate:(id)arg3;
+- (id)listingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2 withDelegate:(id)arg3;
 - (id)computedPillText;
 
 @end
