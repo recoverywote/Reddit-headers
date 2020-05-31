@@ -34,6 +34,7 @@
     NSString *_qa_message;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool qa_messageIsSet; // @synthesize qa_messageIsSet=_qa_messageIsSet;
 @property(copy, nonatomic) NSString *qa_message; // @synthesize qa_message=_qa_message;
 @property(nonatomic) _Bool qa_policyIsSet; // @synthesize qa_policyIsSet=_qa_policyIsSet;
@@ -52,7 +53,6 @@
 @property(copy, nonatomic) NSString *audit_id; // @synthesize audit_id=_audit_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

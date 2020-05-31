@@ -22,12 +22,12 @@
 
 + (id)shadowWithNSShadow:(id)arg1;
 + (id)shadowWithColor:(id)arg1 offset:(struct CGSize)arg2 radius:(double)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextShadow *subShadow; // @synthesize subShadow=_subShadow;
 @property(nonatomic) int blendMode; // @synthesize blendMode=_blendMode;
 @property(nonatomic) double radius; // @synthesize radius=_radius;
 @property(nonatomic) struct CGSize offset; // @synthesize offset=_offset;
 @property(retain, nonatomic) UIColor *color; // @synthesize color=_color;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

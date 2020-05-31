@@ -14,6 +14,7 @@
 
 @interface FeedPostDetailCellNode : BaseCollectionViewCellNode <FeedPostCollectionViewItem, PostDetailContentDisplaying>
 {
+    _Bool _isAwardsPlaqueEnabled;
     PostDetailContentNode *_contentNode;
     id <PostDetailCellNodeDelegate> _delegate;
     Post *_post;
@@ -28,6 +29,8 @@
     PostDetailHeaderNode *_postDetailHeaderNode;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isAwardsPlaqueEnabled; // @synthesize isAwardsPlaqueEnabled=_isAwardsPlaqueEnabled;
 @property(retain, nonatomic) PostDetailHeaderNode *postDetailHeaderNode; // @synthesize postDetailHeaderNode=_postDetailHeaderNode;
 @property(retain, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -40,7 +43,6 @@
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <PostDetailCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostDetailContentNode *contentNode; // @synthesize contentNode=_contentNode;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImage *previewImage;
 - (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
@@ -59,7 +61,7 @@
 - (void)createNodes;
 - (void)addKeyValueObservations;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 viewContext:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6;
+- (id)initWithPost:(id)arg1 viewContext:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6 isAwardsPlaqueEnabled:(_Bool)arg7;
 @property(readonly, nonatomic) double visibleThreshold;
 
 // Remaining properties

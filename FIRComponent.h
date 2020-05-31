@@ -18,11 +18,11 @@
 
 + (id)componentWithProtocol:(id)arg1 instantiationTiming:(long long)arg2 dependencies:(id)arg3 creationBlock:(CDUnknownBlockType)arg4;
 + (id)componentWithProtocol:(id)arg1 creationBlock:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType creationBlock; // @synthesize creationBlock=_creationBlock;
 @property(readonly, copy, nonatomic) NSArray *dependencies; // @synthesize dependencies=_dependencies;
 @property(readonly, nonatomic) long long instantiationTiming; // @synthesize instantiationTiming=_instantiationTiming;
 @property(readonly, nonatomic) Protocol *protocol; // @synthesize protocol=_protocol;
-- (void).cxx_destruct;
 - (id)initWithProtocol:(id)arg1 instantiationTiming:(long long)arg2 dependencies:(id)arg3 creationBlock:(CDUnknownBlockType)arg4;
 
 @end

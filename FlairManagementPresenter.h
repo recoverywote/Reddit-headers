@@ -21,6 +21,7 @@
     id <FlairManagementPresentable> _presentable;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(nonatomic) __weak id <FlairManagementPresentable> presentable; // @synthesize presentable=_presentable;
 @property(copy, nonatomic) NSArray *filteredFlairs; // @synthesize filteredFlairs=_filteredFlairs;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 @property(readonly, nonatomic) NSString *pageTitle;
 - (void)fetchData;

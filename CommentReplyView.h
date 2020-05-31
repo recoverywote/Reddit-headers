@@ -26,6 +26,7 @@
     BaseView *_seperatorLineView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *seperatorLineView; // @synthesize seperatorLineView=_seperatorLineView;
 @property(retain, nonatomic) CommentHeaderView *commentHeaderView; // @synthesize commentHeaderView=_commentHeaderView;
 @property(retain, nonatomic) _TtC6Reddit23MetaGIPHYComposeManager *giphyComposeManager; // @synthesize giphyComposeManager=_giphyComposeManager;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) CommentTextView *commentTextView; // @synthesize commentTextView=_commentTextView;
 @property(retain, nonatomic) BaseAttachmentTextView *replyTextView; // @synthesize replyTextView=_replyTextView;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
-- (void).cxx_destruct;
 - (void)commentTextViewDidChangeSelection:(id)arg1;
 - (void)linkViewControllerDidTapInsert:(id)arg1;
 - (void)textViewDidBeginEditing:(id)arg1;

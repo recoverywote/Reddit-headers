@@ -16,11 +16,11 @@
     NSUserActivity *_userActivity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUserActivity *userActivity; // @synthesize userActivity=_userActivity;
 @property(nonatomic) _Bool publiclyIndexable; // @synthesize publiclyIndexable=_publiclyIndexable;
 @property(retain, nonatomic) NSSet *keywords; // @synthesize keywords=_keywords;
 @property(retain, nonatomic) NSDictionary *params; // @synthesize params=_params;
-- (void).cxx_destruct;
 - (void)indexContentWithUrl:(id)arg1 spotlightIdentifier:(id)arg2 callback:(CDUnknownBlockType)arg3;
 - (void)indexWithCallback:(CDUnknownBlockType)arg1;
 - (void)setIdentifier:(id)arg1;

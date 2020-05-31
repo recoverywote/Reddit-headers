@@ -22,6 +22,7 @@
     SubredditCategory *_subredditCategory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditCategory *subredditCategory; // @synthesize subredditCategory=_subredditCategory;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *subtitleText; // @synthesize subtitleText=_subtitleText;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(retain, nonatomic) ASDisplayNode *extraContentNode; // @synthesize extraContentNode=_extraContentNode;
 @property(copy, nonatomic) CDUnknownBlockType onFollowButtonTapped; // @synthesize onFollowButtonTapped=_onFollowButtonTapped;
-- (void).cxx_destruct;
 - (void)followButtonTapped:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureFollowNode;

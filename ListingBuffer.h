@@ -17,12 +17,12 @@
     NSMutableDictionary *_objectChangesMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *objectChangesMap; // @synthesize objectChangesMap=_objectChangesMap;
 @property(retain, nonatomic) NSMutableOrderedSet *deletedObjectPks; // @synthesize deletedObjectPks=_deletedObjectPks;
 @property(retain, nonatomic) NSMutableOrderedSet *insertedObjects; // @synthesize insertedObjects=_insertedObjects;
 @property(nonatomic) unsigned long long bufferedSectionIndex; // @synthesize bufferedSectionIndex=_bufferedSectionIndex;
 @property(nonatomic) __weak BufferedListingPresenter *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)flushUsingCurrentObjects:(id)arg1;
 - (void)queueDeletedObjectPk:(id)arg1;
 - (void)queueInsertObjects:(id)arg1;

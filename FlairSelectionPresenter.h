@@ -35,6 +35,7 @@
     NSObject<FlairProtocol> *_selectedFlair;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldDisplayShowMyFlairFooter; // @synthesize shouldDisplayShowMyFlairFooter=_shouldDisplayShowMyFlairFooter;
 @property(nonatomic) _Bool shouldShowDisabledState; // @synthesize shouldShowDisabledState=_shouldShowDisabledState;
 @property(nonatomic) _Bool isReadOnlyMode; // @synthesize isReadOnlyMode=_isReadOnlyMode;
@@ -55,7 +56,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <FlairSelectionSourceViewProtocol> sourceView; // @synthesize sourceView=_sourceView;
 @property(nonatomic) __weak id <FlairSelectionPresentable> presentable; // @synthesize presentable=_presentable;
-- (void).cxx_destruct;
 - (id)eventForApplyFlair;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 - (void)fetchModPermissionsForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;

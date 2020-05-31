@@ -18,9 +18,9 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GDTCORStorage *storageInstance; // @synthesize storageInstance=_storageInstance;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *eventWritingQueue; // @synthesize eventWritingQueue=_eventWritingQueue;
-- (void).cxx_destruct;
 - (void)appWillTerminate:(id)arg1;
 - (void)transformEvent:(id)arg1 withTransformers:(id)arg2 onComplete:(CDUnknownBlockType)arg3;
 - (id)init;

@@ -15,9 +15,9 @@
 }
 
 + (struct CGSize)sizeForText:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *wrapperView; // @synthesize wrapperView=_wrapperView;
 @property(retain, nonatomic) UILabel *multilineTextLabel; // @synthesize multilineTextLabel=_multilineTextLabel;
-- (void).cxx_destruct;
 - (void)setBackgroundColor:(id)arg1;
 - (void)prepareForReuse;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

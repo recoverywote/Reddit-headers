@@ -26,6 +26,7 @@
     NSString *_analyticsSource;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;
 @property(nonatomic) _Bool shouldShowLogo; // @synthesize shouldShowLogo=_shouldShowLogo;
 @property(retain, nonatomic) NSString *doneButtonTitle; // @synthesize doneButtonTitle=_doneButtonTitle;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak id <CaptureScreenDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSArray *contentItems; // @synthesize contentItems=_contentItems;
-- (void).cxx_destruct;
 - (void)logTapSkipAnalyticsEvent;
 - (void)logTapNextAnalyticsEvent;
 - (void)logTapBackAnalyticsEvent;

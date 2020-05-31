@@ -15,6 +15,7 @@
     // Error parsing type: , name: post
     // Error parsing type: , name: options
     // Error parsing type: , name: postMetaViewModel
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: delegate
     // Error parsing type: , name: $__lazy_storage_$_subredditLabelNode
     // Error parsing type: , name: $__lazy_storage_$_timeSinceNode
@@ -30,7 +31,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4;
 @property(nonatomic) __weak id <_TtP6Reddit26FeedPostHeaderNodeDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic, readonly) Post *post; // @synthesize post;
 

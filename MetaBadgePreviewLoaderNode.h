@@ -11,8 +11,8 @@
     ASDisplayNode *_indicatorNode;
 }
 
-@property(retain, nonatomic) ASDisplayNode *indicatorNode; // @synthesize indicatorNode=_indicatorNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ASDisplayNode *indicatorNode; // @synthesize indicatorNode=_indicatorNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didExitVisibleState;
 - (void)didEnterVisibleState;

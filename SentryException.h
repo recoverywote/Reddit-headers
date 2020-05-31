@@ -20,13 +20,13 @@
     SentryThread *_thread;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SentryThread *thread; // @synthesize thread=_thread;
 @property(copy, nonatomic) NSNumber *userReported; // @synthesize userReported=_userReported;
 @property(copy, nonatomic) NSString *module; // @synthesize module=_module;
 @property(retain, nonatomic) SentryMechanism *mechanism; // @synthesize mechanism=_mechanism;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(copy, nonatomic) NSString *value; // @synthesize value=_value;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)initWithValue:(id)arg1 type:(id)arg2;
 

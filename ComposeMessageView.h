@@ -21,12 +21,12 @@
     UIView *_subjectDivider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *subjectDivider; // @synthesize subjectDivider=_subjectDivider;
 @property(retain, nonatomic) UIView *usernameDivider; // @synthesize usernameDivider=_usernameDivider;
 @property(retain, nonatomic) BaseTextView *messageTextView; // @synthesize messageTextView=_messageTextView;
 @property(retain, nonatomic) BaseTextView *subjectTextView; // @synthesize subjectTextView=_subjectTextView;
 @property(retain, nonatomic) LabeledTextField *usernameTextField; // @synthesize usernameTextField=_usernameTextField;
-- (void).cxx_destruct;
 - (void)linkViewControllerDidTapInsert:(id)arg1;
 - (void)textViewDidBeginEditing:(id)arg1;
 - (void)textViewDidChange:(id)arg1;

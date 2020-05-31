@@ -22,6 +22,7 @@
     long long _statusBarStyle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long statusBarStyle; // @synthesize statusBarStyle=_statusBarStyle;
 @property(nonatomic) _Bool hasAddedObservers; // @synthesize hasAddedObservers=_hasAddedObservers;
 @property(retain, nonatomic) NSLayoutConstraint *headerHeightConstraint; // @synthesize headerHeightConstraint=_headerHeightConstraint;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) FeedNavigator *feedNavigator; // @synthesize feedNavigator=_feedNavigator;
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(nonatomic) __weak id <PostDetailHeaderViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)configureNavigationBarStyle;
 - (void)configureNavigationBarTintColor;

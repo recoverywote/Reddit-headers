@@ -15,9 +15,9 @@
 }
 
 + (id)buildFromJSON:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSNumber *score; // @synthesize score=_score;
 @property(readonly, copy, nonatomic) NSString *crossPlatformID; // @synthesize crossPlatformID=_crossPlatformID;
-- (void).cxx_destruct;
 
 @end
 

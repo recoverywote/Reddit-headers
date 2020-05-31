@@ -17,11 +17,11 @@
     NSCache *_inMemoryCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCache *inMemoryCache; // @synthesize inMemoryCache=_inMemoryCache;
 @property(readonly, nonatomic) NSString *service; // @synthesize service=_service;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *inMemoryCacheQueue; // @synthesize inMemoryCacheQueue=_inMemoryCacheQueue;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *keychainQueue; // @synthesize keychainQueue=_keychainQueue;
-- (void).cxx_destruct;
 - (id)unarchivedObjectOfClass:(Class)arg1 fromData:(id)arg2 error:(id *)arg3;
 - (id)archiveDataForObject:(id)arg1 error:(id *)arg2;
 - (id)keychainQueryWithKey:(id)arg1 accessGroup:(id)arg2;

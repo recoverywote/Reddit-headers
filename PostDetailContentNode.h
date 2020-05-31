@@ -7,7 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, FeedPostCallToActionNode, FeedPostOptions, FeedPostTextWithThumbnailNode, FeedPostThumbnailNode, FlairContainerNode, Post, PostMetaViewModel, RichTextDisplayNode, UIImage;
-@protocol PostDetailContentNodeDelegate;
+@protocol PostDetailContentNodeDelegate, ViewContext;
 
 @interface PostDetailContentNode : BaseFeedDisplayNode
 {
@@ -21,8 +21,11 @@
     FeedPostOptions *_options;
     PostMetaViewModel *_postMetaViewModel;
     id <PostDetailContentNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <PostDetailContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -33,7 +36,6 @@
 @property(retain, nonatomic) FeedPostTextWithThumbnailNode *textNode; // @synthesize textNode=_textNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) FlairContainerNode *flairContainerNode; // @synthesize flairContainerNode=_flairContainerNode;
-- (void).cxx_destruct;
 - (void)noLongerPastVisibilityThreshold;
 - (void)didPassVisibilityThreshold;
 - (void)didBecomeFullyVisible;
@@ -52,7 +54,7 @@
 - (void)configureSelfTextNode;
 - (void)createSelfTextNode;
 - (void)createNodes;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 delegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 
 @end
 

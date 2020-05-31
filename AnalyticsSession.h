@@ -30,6 +30,7 @@
     long long _created_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool anonymous_browsing_modeIsSet; // @synthesize anonymous_browsing_modeIsSet=_anonymous_browsing_modeIsSet;
 @property(nonatomic) _Bool anonymous_browsing_mode; // @synthesize anonymous_browsing_mode=_anonymous_browsing_mode;
 @property(nonatomic) _Bool created_timestampIsSet; // @synthesize created_timestampIsSet=_created_timestampIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *referrer_url; // @synthesize referrer_url=_referrer_url;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -14,9 +14,9 @@
     CDUnknownBlockType _textTransform;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType textTransform; // @synthesize textTransform=_textTransform;
 @property(retain, nonatomic) NSMutableAttributedString *backingStorage; // @synthesize backingStorage=_backingStorage;
-- (void).cxx_destruct;
 - (void)setAttributes:(id)arg1 range:(struct _NSRange)arg2;
 - (void)replaceCharactersInRange:(struct _NSRange)arg1 withString:(id)arg2;
 - (id)attributesAtIndex:(unsigned long long)arg1 effectiveRange:(struct _NSRange *)arg2;

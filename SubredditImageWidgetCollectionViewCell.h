@@ -23,6 +23,7 @@
 }
 
 + (double)cellHeightForImage:(id)arg1 maxWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewBottomConstraint; // @synthesize imageViewBottomConstraint=_imageViewBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *linkIndicatorButtonHeightConstraint; // @synthesize linkIndicatorButtonHeightConstraint=_linkIndicatorButtonHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *linkLabelHeightConstraint; // @synthesize linkLabelHeightConstraint=_linkLabelHeightConstraint;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic) __weak id <SubredditImageWidgetCollectionViewCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSURL *firstImageLinkURL; // @synthesize firstImageLinkURL=_firstImageLinkURL;
-- (void).cxx_destruct;
 - (void)configureWithSubredditImageWidgetViewModel:(id)arg1;
 - (void)didPressLinkButton:(id)arg1;
 - (void)prepareForReuse;

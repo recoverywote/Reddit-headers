@@ -15,9 +15,9 @@
     NSObject<OS_dispatch_queue> *_concurrentQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *concurrentQueue; // @synthesize concurrentQueue=_concurrentQueue;
 @property(readonly, nonatomic) NSMapTable *mapTable; // @synthesize mapTable=_mapTable;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *allValues;
 - (id)objectForKey:(id)arg1;
 - (void)removeObjectForKey:(id)arg1;

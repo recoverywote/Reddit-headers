@@ -30,6 +30,7 @@
     NSString *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool identifierIsSet; // @synthesize identifierIsSet=_identifierIsSet;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) _Bool familyIsSet; // @synthesize familyIsSet=_familyIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *feature_blob; // @synthesize feature_blob=_feature_blob;
 @property(nonatomic) _Bool number_max_recommendationsIsSet; // @synthesize number_max_recommendationsIsSet=_number_max_recommendationsIsSet;
 @property(nonatomic) int number_max_recommendations; // @synthesize number_max_recommendations=_number_max_recommendations;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

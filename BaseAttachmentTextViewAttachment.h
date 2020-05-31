@@ -16,10 +16,10 @@
 }
 
 + (id)emptyImage;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *plainTextRepresentation; // @synthesize plainTextRepresentation=_plainTextRepresentation;
 @property(readonly, nonatomic) UIView *view; // @synthesize view=_view;
-- (void).cxx_destruct;
 - (id)image;
 
 @end

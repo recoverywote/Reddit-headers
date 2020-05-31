@@ -19,11 +19,11 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(nonatomic) __weak id <ContactActionSheetDelegate> contactActionSheetDelegate; // @synthesize contactActionSheetDelegate=_contactActionSheetDelegate;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (_Bool)shouldRestrictOptionsForBot;
 - (_Bool)shouldShowModTools;

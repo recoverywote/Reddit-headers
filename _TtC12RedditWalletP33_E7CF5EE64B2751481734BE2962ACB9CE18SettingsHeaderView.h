@@ -11,7 +11,7 @@
     // Error parsing type: , name: avatarView
     // Error parsing type: , name: usernameLabel
     // Error parsing type: , name: addressLabel
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

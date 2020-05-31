@@ -16,11 +16,11 @@
     UIColor *_originalColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *originalColor; // @synthesize originalColor=_originalColor;
 @property(nonatomic) _Bool isHighlightable; // @synthesize isHighlightable=_isHighlightable;
 @property(retain, nonatomic) UIColor *cellHighlightColor; // @synthesize cellHighlightColor=_cellHighlightColor;
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
-- (void).cxx_destruct;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)setSelected:(_Bool)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

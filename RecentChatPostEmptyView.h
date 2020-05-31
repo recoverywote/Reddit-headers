@@ -21,13 +21,13 @@
     BaseButton *_callToActionButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
 @property(retain, nonatomic) AttributedLabelRegular *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(retain, nonatomic) BaseImageView *skeletonImageView; // @synthesize skeletonImageView=_skeletonImageView;
 @property(retain, nonatomic) BaseImageView *gradientImageView; // @synthesize gradientImageView=_gradientImageView;
 @property(nonatomic) __weak id <RecentChatPostEmptyViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapCTA;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)layoutSubviews;

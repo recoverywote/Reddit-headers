@@ -38,6 +38,7 @@
     long long _preview_expiry_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool preview_expiry_timestampIsSet; // @synthesize preview_expiry_timestampIsSet=_preview_expiry_timestampIsSet;
 @property(nonatomic) long long preview_expiry_timestamp; // @synthesize preview_expiry_timestamp=_preview_expiry_timestamp;
 @property(nonatomic) _Bool rejection_reasonIsSet; // @synthesize rejection_reasonIsSet=_rejection_reasonIsSet;
@@ -60,7 +61,6 @@
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

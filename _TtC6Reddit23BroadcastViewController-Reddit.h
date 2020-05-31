@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit23BroadcastViewController.h"
 
-#import "UITextViewDelegate-Protocol.h"
-
-@interface _TtC6Reddit23BroadcastViewController (Reddit) <UITextViewDelegate>
+@interface _TtC6Reddit23BroadcastViewController (Reddit)
 - (void)textViewDidChange:(id)arg1;
 - (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (void)textViewDidBeginEditing:(id)arg1;

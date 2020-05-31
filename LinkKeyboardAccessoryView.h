@@ -14,9 +14,9 @@
     UIButton *_rightButton;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIButton *rightButton; // @synthesize rightButton=_rightButton;
 @property(readonly, nonatomic) UIButton *linkButton; // @synthesize linkButton=_linkButton;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

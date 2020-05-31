@@ -14,9 +14,9 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(retain, nonatomic) ASDisplayNode *node; // @synthesize node=_node;
-- (void).cxx_destruct;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (struct CGSize)systemLayoutSizeFittingSize:(struct CGSize)arg1;

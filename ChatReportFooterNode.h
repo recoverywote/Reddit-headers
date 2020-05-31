@@ -22,6 +22,7 @@
     BaseButtonNode *_ignoreReportsButtonNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButtonNode *ignoreReportsButtonNode; // @synthesize ignoreReportsButtonNode=_ignoreReportsButtonNode;
 @property(retain, nonatomic) BaseButtonNode *deleteMessageButtonNode; // @synthesize deleteMessageButtonNode=_deleteMessageButtonNode;
 @property(retain, nonatomic) ASTextNode *actionedTextNode; // @synthesize actionedTextNode=_actionedTextNode;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
 @property(nonatomic) __weak id <ChatReportFooterNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didTapDeleteMessage:(id)arg1;
 - (void)didTapIgnoreReports:(id)arg1;

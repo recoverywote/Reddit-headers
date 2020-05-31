@@ -13,8 +13,8 @@
     NSCache *_commentCache;
 }
 
-@property(retain, nonatomic) NSCache *commentCache; // @synthesize commentCache=_commentCache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSCache *commentCache; // @synthesize commentCache=_commentCache;
 - (id)commentTreeNodesForPostId:(id)arg1 withCommentSort:(unsigned long long)arg2;
 - (void)storeCommentTreeNodes:(id)arg1 withCommentSort:(unsigned long long)arg2 forPostId:(id)arg3;
 - (id)init;

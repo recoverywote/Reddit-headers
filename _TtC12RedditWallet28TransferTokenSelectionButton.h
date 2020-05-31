@@ -14,7 +14,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: disclosureImageView
     // Error parsing type: , name: token
     // Error parsing type: , name: tokenIconSubscription
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

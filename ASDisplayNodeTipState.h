@@ -14,9 +14,9 @@
     ASTipNode *_tipNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTipNode *tipNode; // @synthesize tipNode=_tipNode;
 @property(readonly, nonatomic) ASDisplayNode *node; // @synthesize node=_node;
-- (void).cxx_destruct;
 - (id)initWithNode:(id)arg1;
 
 @end

@@ -14,9 +14,9 @@
     FIRInstanceIDAuthKeychain *_keychain;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FIRInstanceIDAuthKeychain *keychain; // @synthesize keychain=_keychain;
 @property(retain, nonatomic) FIRInstanceIDBackupExcludedPlist *plist; // @synthesize plist=_plist;
-- (void).cxx_destruct;
 - (void)migrateCheckinItemIfNeeded;
 - (id)cachedCheckinPreferences;
 - (void)removeCheckinPreferencesWithHandler:(CDUnknownBlockType)arg1;

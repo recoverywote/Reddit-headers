@@ -10,8 +10,7 @@
 {
     // Error parsing type: , name: color
     // Error parsing type: , name: subreddit
-    // Error parsing type: , name: subredditImageNode
-    // Error parsing type: , name: subredditBackgroundNode
+    // Error parsing type: , name: userFrameNode
     // Error parsing type: , name: titleNode
     // Error parsing type: , name: subtitleNode
     // Error parsing type: , name: highlightNode

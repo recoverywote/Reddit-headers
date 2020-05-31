@@ -25,6 +25,7 @@
 
 + (id)borderWithFillColor:(id)arg1 cornerRadius:(double)arg2;
 + (id)borderWithLineStyle:(long long)arg1 lineWidth:(double)arg2 strokeColor:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *fillColor; // @synthesize fillColor=_fillColor;
 @property(retain, nonatomic) ASTextShadow *shadow; // @synthesize shadow=_shadow;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIColor *strokeColor; // @synthesize strokeColor=_strokeColor;
 @property(nonatomic) double strokeWidth; // @synthesize strokeWidth=_strokeWidth;
 @property(nonatomic) long long lineStyle; // @synthesize lineStyle=_lineStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

@@ -16,11 +16,11 @@
     NSMutableString *_systemIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool forceQuirks; // @synthesize forceQuirks=_forceQuirks;
 @property(retain, nonatomic) NSMutableString *systemIdentifier; // @synthesize systemIdentifier=_systemIdentifier;
 @property(retain, nonatomic) NSMutableString *publicIdentifier; // @synthesize publicIdentifier=_publicIdentifier;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

@@ -15,9 +15,9 @@
 }
 
 + (id)elementWithData:(id)arg1 mediaMatadata:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *mediaElements; // @synthesize mediaElements=_mediaElements;
 @property(copy, nonatomic) NSArray *elements; // @synthesize elements=_elements;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithData:(id)arg1 mediaMetadata:(id)arg2;
 

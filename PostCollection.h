@@ -25,6 +25,7 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *primaryPostId; // @synthesize primaryPostId=_primaryPostId;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) long long displayLayout; // @synthesize displayLayout=_displayLayout;
@@ -35,7 +36,6 @@
 @property(readonly, copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, nonatomic) Post *primaryPost;
 @property(readonly) unsigned long long hash;

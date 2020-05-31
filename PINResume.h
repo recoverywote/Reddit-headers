@@ -18,10 +18,10 @@
 }
 
 + (id)resumeData:(id)arg1 ifRange:(id)arg2 totalBytes:(long long)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long totalBytes; // @synthesize totalBytes=_totalBytes;
 @property(readonly, copy, nonatomic) NSString *ifRange; // @synthesize ifRange=_ifRange;
 @property(readonly, nonatomic) NSData *resumeData; // @synthesize resumeData=_resumeData;
-- (void).cxx_destruct;
 - (id)initWithResumeData:(id)arg1 ifRange:(id)arg2 totalBytes:(long long)arg3;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

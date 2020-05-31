@@ -22,13 +22,13 @@
     NSArray *_fontList;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *fontList; // @synthesize fontList=_fontList;
 @property(copy, nonatomic) NSArray *colorHexValues; // @synthesize colorHexValues=_colorHexValues;
 @property(copy, nonatomic) NSArray *backgroundColorList; // @synthesize backgroundColorList=_backgroundColorList;
 @property(copy, nonatomic) NSArray *colorList; // @synthesize colorList=_colorList;
 @property(nonatomic) double currentTextSize; // @synthesize currentTextSize=_currentTextSize;
 @property(nonatomic) __weak id <TextStylerPickerViewDelegate> pickerDelegate; // @synthesize pickerDelegate=_pickerDelegate;
-- (void).cxx_destruct;
 - (double)textFontCellWidth;
 - (void)updateInitialTextColor:(id)arg1;
 - (void)updateInitialBackgroundColor:(id)arg1;

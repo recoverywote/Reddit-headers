@@ -13,10 +13,10 @@
     CDUnknownBlockType _viewForSupplementaryBlock;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) CDUnknownBlockType viewForSupplementaryBlock; // @synthesize viewForSupplementaryBlock=_viewForSupplementaryBlock;
 @property(readonly, nonatomic) CDUnknownBlockType cellForItemBlock; // @synthesize cellForItemBlock=_cellForItemBlock;
 @property(readonly, nonatomic) CDUnknownBlockType sizeForItemBlock; // @synthesize sizeForItemBlock=_sizeForItemBlock;
-- (void).cxx_destruct;
 - (_Bool)shouldUseUIKitCell;
 
 @end

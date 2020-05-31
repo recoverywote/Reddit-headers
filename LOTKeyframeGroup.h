@@ -13,8 +13,8 @@
     NSArray *_keyframes;
 }
 
-@property(readonly, nonatomic) NSArray *keyframes; // @synthesize keyframes=_keyframes;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *keyframes; // @synthesize keyframes=_keyframes;
 - (void)remapKeyframesWithBlock:(CDUnknownBlockType)arg1;
 - (void)buildKeyframesFromData:(id)arg1;
 - (id)initWithData:(id)arg1;

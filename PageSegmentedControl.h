@@ -23,6 +23,7 @@
     BaseView *_indicatorBar;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool areItemsCentered; // @synthesize areItemsCentered=_areItemsCentered;
 @property(retain, nonatomic) BaseView *indicatorBar; // @synthesize indicatorBar=_indicatorBar;
 @property(retain, nonatomic) BaseScrollView *containerScrollView; // @synthesize containerScrollView=_containerScrollView;
@@ -31,7 +32,6 @@
 @property(nonatomic) long long currentIndex; // @synthesize currentIndex=_currentIndex;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) __weak id <PageSegmentedControlDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)pageSegmentItemDidChangeBadge:(id)arg1;
 - (struct CGRect)indicatorBarFrameForPageSegmentItem:(id)arg1;
 - (void)layoutSubviews;

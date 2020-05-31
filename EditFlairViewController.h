@@ -47,6 +47,7 @@
 }
 
 + (id)backgroundColorHexStringsForFlairType:(long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasSeenColorPicker; // @synthesize hasSeenColorPicker=_hasSeenColorPicker;
 @property(retain, nonatomic) EditFlairPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) BaseLabel *textHintLabel; // @synthesize textHintLabel=_textHintLabel;
@@ -74,7 +75,6 @@
 @property(retain, nonatomic) UIView *flairScrollViewContentView; // @synthesize flairScrollViewContentView=_flairScrollViewContentView;
 @property(retain, nonatomic) UIScrollView *flairScrollView; // @synthesize flairScrollView=_flairScrollView;
 @property(nonatomic) __weak id <EditFlairViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)logEvent:(id)arg1;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

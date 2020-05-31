@@ -13,8 +13,8 @@
     FeedPostPlaceholderView *_feedPostPlaceholderView;
 }
 
-@property(retain, nonatomic) FeedPostPlaceholderView *feedPostPlaceholderView; // @synthesize feedPostPlaceholderView=_feedPostPlaceholderView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) FeedPostPlaceholderView *feedPostPlaceholderView; // @synthesize feedPostPlaceholderView=_feedPostPlaceholderView;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

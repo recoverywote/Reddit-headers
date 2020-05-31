@@ -15,8 +15,8 @@
 + (id)adjacentSiblingCombinator:(id)arg1;
 + (id)descendantOfElementCombinator:(id)arg1;
 + (id)childOfElementCombinator:(id)arg1;
-@property(readonly, nonatomic) CSSSelector *selector; // @synthesize selector=_selector;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) CSSSelector *selector; // @synthesize selector=_selector;
 - (id)initWithSelector:(id)arg1;
 
 @end

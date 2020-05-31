@@ -16,9 +16,9 @@
     CDUnknownBlockType _searchTabProviderBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType searchTabProviderBlock; // @synthesize searchTabProviderBlock=_searchTabProviderBlock;
 @property(copy, nonatomic) CDUnknownBlockType headerContentView; // @synthesize headerContentView=_headerContentView;
-- (void).cxx_destruct;
 - (void)fetchDataForSearchViewController:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (id)initWithAccountContext:(id)arg1 railsContext:(id)arg2 listingNetworkSource:(id)arg3;
 

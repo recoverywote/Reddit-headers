@@ -11,7 +11,7 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
 @class BaseLabel, BaseTextView, FeedPostAwardsNode, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostThumbnailView, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView;
-@protocol FeedPostCrosspostViewDelegate, FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate;
+@protocol FeedPostCrosspostViewDelegate, FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate, ViewContext;
 
 @interface FeedPostCrosspostView : BaseView <RUIThemeUpdateCallbackProtocol, ContentImageViewDelegate, FeedPostAwardsNodeDelegate>
 {
@@ -30,11 +30,14 @@
     FeedPostYouTubeEmbeddedView *_youTubeEmbeddedView;
     BaseLabel *_metadataLabel;
     id <FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate> _crosspostContentViewsDelegate;
+    id <ViewContext> _viewContext;
 }
 
 + (_Bool)shouldShowThumbnailForPost:(id)arg1 parentPost:(id)arg2 useCompactView:(_Bool)arg3;
-+ (double)calculatedHeightForWidth:(double)arg1 withParentPost:(id)arg2 crosspost:(id)arg3 withFeedPostOptions:(id)arg4 delegate:(id)arg5;
++ (double)calculatedHeightForViewContext:(id)arg1 width:(double)arg2 withParentPost:(id)arg3 crosspost:(id)arg4 withFeedPostOptions:(id)arg5 delegate:(id)arg6;
 + (_Bool)shouldForceCompactViewForCrosspost:(id)arg1 withOptions:(id)arg2;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate> crosspostContentViewsDelegate; // @synthesize crosspostContentViewsDelegate=_crosspostContentViewsDelegate;
 @property(retain, nonatomic) BaseLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) FeedPostYouTubeEmbeddedView *youTubeEmbeddedView; // @synthesize youTubeEmbeddedView=_youTubeEmbeddedView;
@@ -50,7 +53,6 @@
 @property(retain, nonatomic) Post *crosspost; // @synthesize crosspost=_crosspost;
 @property(retain, nonatomic) Post *parentPost; // @synthesize parentPost=_parentPost;
 @property(nonatomic) __weak id <FeedPostCrosspostViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)feedPostAwardsNodeNeedsLayoutUpdate:(id)arg1;
 - (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2;
 - (void)contentImageViewDidTapImage:(id)arg1;
@@ -69,7 +71,8 @@
 - (_Bool)isValidCrosspost;
 - (void)configureWithParentPost:(id)arg1 crosspost:(id)arg2 withFeedPostOptions:(id)arg3 delegate:(id)arg4;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

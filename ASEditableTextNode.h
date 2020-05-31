@@ -33,12 +33,12 @@
     struct UIEdgeInsets _textContainerInset;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long maximumLinesToDisplay; // @synthesize maximumLinesToDisplay=_maximumLinesToDisplay;
 @property(nonatomic) struct UIEdgeInsets textContainerInset; // @synthesize textContainerInset=_textContainerInset;
 @property(nonatomic) _Bool scrollEnabled; // @synthesize scrollEnabled=_scrollEnabled;
 @property __weak id <ASEditableTextNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)_delegateDidFinishEditing;
 - (void)_delegateDidUpdateText;
 - (void)_delegateDidChangeSelectionFromSelectedRange:(struct _NSRange)arg1 toSelectedRange:(struct _NSRange)arg2;

@@ -18,10 +18,10 @@
 }
 
 + (void)setupDefaultsForSessionConfiguration:(id)arg1 withProtocolName:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(copy, nonatomic) CDUnknownBlockType responseValidate; // @synthesize responseValidate=_responseValidate;
-- (void).cxx_destruct;
 - (id)validateResponse:(id)arg1 data:(id)arg2;
 - (id)taskWithRequest:(id)arg1 completionHandler:(CDUnknownBlockType)arg2 error:(id *)arg3;
 - (id)newTransport;

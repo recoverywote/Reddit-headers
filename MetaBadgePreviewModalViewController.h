@@ -22,12 +22,12 @@
 
 + (void)fetchBadgeUsingService:(id)arg1 subreddit:(id)arg2 badgePK:(id)arg3 completion:(CDUnknownBlockType)arg4;
 + (void)fetchAllBadgesUsingService:(id)arg1 subreddit:(id)arg2 badgePK:(id)arg3 userPK:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) MetaBadgePreviewModalDisplayNode *displayNode; // @synthesize displayNode=_displayNode;
 @property(readonly, nonatomic) CDUnknownBlockType didLoadHandler; // @synthesize didLoadHandler=_didLoadHandler;
 @property(readonly, nonatomic) CDUnknownBlockType actionHandler; // @synthesize actionHandler=_actionHandler;
 @property(readonly, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 @property(readonly, nonatomic) CDUnknownBlockType badgeProvider; // @synthesize badgeProvider=_badgeProvider;
-- (void).cxx_destruct;
 - (void)performMetaBadgePreviewActionWithSender:(id)arg1 selectedBadge:(id)arg2;
 - (void)performCloseMetaBadgePreviewWithSender:(id)arg1;
 - (void)configureViewAppearance;

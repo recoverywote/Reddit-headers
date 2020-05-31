@@ -16,11 +16,11 @@
     BaseView *_coloredCircleView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *coloredCircleView; // @synthesize coloredCircleView=_coloredCircleView;
 @property(retain, nonatomic) BaseLabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

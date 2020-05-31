@@ -13,9 +13,9 @@
 }
 
 + (id)resultModelOf:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject *searchResultModel; // @synthesize searchResultModel=_searchResultModel;
 @property(nonatomic) long long searchResultIndex; // @synthesize searchResultIndex=_searchResultIndex;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (_Bool)isMemberOfClass:(Class)arg1;
 - (unsigned long long)hash;

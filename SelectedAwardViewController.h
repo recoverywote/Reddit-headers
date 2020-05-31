@@ -38,6 +38,7 @@
     NSString *_message;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *message; // @synthesize message=_message;
 @property(retain, nonatomic) NSLayoutConstraint *textViewHeightConstraint; // @synthesize textViewHeightConstraint=_textViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *actionButtonBottomConstraint; // @synthesize actionButtonBottomConstraint=_actionButtonBottomConstraint;
@@ -61,7 +62,6 @@
 @property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) BaseView *topLine; // @synthesize topLine=_topLine;
 @property(readonly, nonatomic) __weak id <SelectedAwardViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)sizeChatBox;
 - (void)textViewDidEndEditing:(id)arg1;
 - (void)textViewDidChange:(id)arg1;

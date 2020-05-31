@@ -28,6 +28,7 @@
 + (struct CGSize)sizeForCaption:(id)arg1 withMaxWidth:(double)arg2;
 + (struct CGSize)sizeWithMediaSize:(struct CGSize)arg1 withMaxWidth:(double)arg2 withCaption:(id)arg3;
 + (struct CGSize)sizeWithElement:(id)arg1 withMaxWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit15RedditVideoNode *videoNode; // @synthesize videoNode=_videoNode;
 @property(retain, nonatomic) BaseLabel *mediaStatusLabel; // @synthesize mediaStatusLabel=_mediaStatusLabel;
 @property(retain, nonatomic) BaseLabel *captionLabel; // @synthesize captionLabel=_captionLabel;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) RichTextImageElement *imageElement; // @synthesize imageElement=_imageElement;
 @property(nonatomic) __weak id <AttributedLabelMediaDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) HlsPlayerView *videoView; // @synthesize videoView=_videoView;
-- (void).cxx_destruct;
 - (_Bool)shouldDisableAutoplay;
 - (void)playerViewDidEndPlaying:(id)arg1;
 - (void)playerViewDidBeginPlaying:(id)arg1;

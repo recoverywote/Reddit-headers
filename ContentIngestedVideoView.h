@@ -14,9 +14,9 @@
     BaseImageView *_videoPlayButtonOverlay;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *videoPlayButtonOverlay; // @synthesize videoPlayButtonOverlay=_videoPlayButtonOverlay;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)mp4URL;
 - (void)streamPlayerView:(id)arg1 didUpdateElapsedTime:(CDStruct_1b6d18a9)arg2;
 - (void)handleAppDidEnterBackground;

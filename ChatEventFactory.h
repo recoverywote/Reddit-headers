@@ -26,7 +26,7 @@
 + (id)chatTypeStringWithChannel:(id)arg1;
 + (id)invitationInboxEventsWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 message:(id)arg4;
 + (id)invitationsListEventWithAction:(id)arg1 noun:(id)arg2 pendingInvites:(unsigned long long)arg3;
-+ (id)contactListEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 pickedMembers:(id)arg4 addedMethod:(unsigned long long)arg5;
++ (id)contactListEventWithAccountContext:(id)arg1 action:(id)arg2 noun:(id)arg3 channel:(id)arg4 pickedMembers:(id)arg5 addedMethod:(unsigned long long)arg6;
 + (id)chatKeyboardEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 message:(id)arg4 imageSource:(unsigned long long)arg5;
 + (id)chatViewEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 kickDuration:(id)arg4;
 + (id)chatViewEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3 message:(id)arg4 unreadCount:(unsigned long long)arg5 reportReason:(id)arg6 showsHistory:(_Bool)arg7 pageType:(id)arg8;

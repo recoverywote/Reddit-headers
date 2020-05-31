@@ -16,11 +16,11 @@
     SerialAsyncQueue *_serialQueue;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didReadInitialItems; // @synthesize didReadInitialItems=_didReadInitialItems;
 @property(retain, nonatomic) SerialAsyncQueue *serialQueue; // @synthesize serialQueue=_serialQueue;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
-- (void).cxx_destruct;
 - (id)deepCopySections:(id)arg1;
 - (id)diffChangesWithNewItems:(id)arg1 oldItems:(id)arg2;
 - (id)indexPathForDiffableItem:(id)arg1;

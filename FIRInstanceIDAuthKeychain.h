@@ -15,9 +15,9 @@
 }
 
 + (id)keychainQueryForService:(id)arg1 account:(id)arg2 generic:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *cachedKeychainData; // @synthesize cachedKeychainData=_cachedKeychainData;
 @property(copy, nonatomic) NSString *generic; // @synthesize generic=_generic;
-- (void).cxx_destruct;
 - (void)setData:(id)arg1 forService:(id)arg2 account:(id)arg3 handler:(CDUnknownBlockType)arg4;
 - (void)removeItemsMatchingService:(id)arg1 account:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (id)dataForService:(id)arg1 account:(id)arg2;

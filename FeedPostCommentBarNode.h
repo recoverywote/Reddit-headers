@@ -26,6 +26,7 @@
     FeedPostOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldHideAwardButtonTitle; // @synthesize shouldHideAwardButtonTitle=_shouldHideAwardButtonTitle;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) ChatPostFeedIndicatorNode *chatPostIndicatorNode; // @synthesize chatPostIndicatorNode=_chatPostIndicatorNode;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) BaseButtonNode *actionButtonNode; // @synthesize actionButtonNode=_actionButtonNode;
 @property(nonatomic) __weak id <FeedPostCommentBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)updateActionButtonOnImageToggle;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)awardButtonDidTap:(id)arg1;
@@ -56,6 +56,7 @@
 @property(readonly, nonatomic) UIView *voteTooltipAnchorView;
 - (void)configureVoteButtons;
 - (void)didLoad;
+- (void)configureWithPost:(id)arg1;
 - (id)initWithPost:(id)arg1 options:(id)arg2;
 
 // Remaining properties

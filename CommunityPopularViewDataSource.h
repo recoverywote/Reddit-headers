@@ -13,8 +13,8 @@
     id <AccountContext> _accountContext;
 }
 
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (_Bool)tableView:(id)arg1 handleDidSelectRowAtIndexPath:(id)arg2;
 - (id)indexes;
 - (id)headerString;

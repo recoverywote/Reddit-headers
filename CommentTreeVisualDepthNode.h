@@ -14,9 +14,9 @@
     unsigned long long _depth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long depth; // @synthesize depth=_depth;
 @property(retain, nonatomic) NSArray *spacerSegments; // @synthesize spacerSegments=_spacerSegments;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)createNodes;
 - (id)initWithDepth:(unsigned long long)arg1;

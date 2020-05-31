@@ -16,8 +16,8 @@
 }
 
 + (id)filterWithFilters:(id)arg1;
-@property(retain, nonatomic) NSArray *filters; // @synthesize filters=_filters;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *filters; // @synthesize filters=_filters;
 - (void)filterReports:(id)arg1 onCompletion:(CDUnknownBlockType)arg2;
 - (void)addFilter:(id)arg1;
 - (id)initWithFiltersArray:(id)arg1;

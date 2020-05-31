@@ -21,12 +21,12 @@
     unsigned long long _length;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long length; // @synthesize length=_length;
 @property(copy, nonatomic) NSString *textContent; // @synthesize textContent=_textContent;
 @property(nonatomic) __weak HTMLNode *parentNode; // @synthesize parentNode=_parentNode;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) short nodeType; // @synthesize nodeType=_nodeType;
-- (void).cxx_destruct;
 - (id)debugQuickLookObject;
 - (id)description;
 - (id)treeDescription;

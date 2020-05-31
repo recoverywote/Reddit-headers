@@ -13,8 +13,8 @@
     NSString *_accountPk;
 }
 
-@property(copy, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
 @property(copy, nonatomic) NSDictionary *shareActivityHistory;
 @property(retain, nonatomic) NSSet *tappedShareActivityTypes;
 @property(copy, nonatomic) NSArray *dismissedTokenClaims;
@@ -29,6 +29,8 @@
 @property(retain, nonatomic) NSDate *dateToBadgeForYouFeed;
 @property(copy, nonatomic) NSArray *selectedOnboardingCategories;
 @property(copy, nonatomic) NSDictionary *inFeedChainingData;
+- (_Bool)shouldShowDownToChatSafetyScreen;
+- (void)setDownToChatSafetyScreenViewed;
 - (_Bool)shouldHideDiscoveryUnitWithPk:(id)arg1;
 - (void)setShouldHide:(_Bool)arg1 forDiscoveryUnitWithPk:(id)arg2 forNumberOfDays:(long long)arg3;
 - (void)setHasSeenBroadcastPromptNewLabelForSubredditInfo:(id)arg1;

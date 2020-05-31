@@ -33,6 +33,7 @@
     REDSearchBar *_searchBar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) REDSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) BaseBarButtonItem *overflowItem; // @synthesize overflowItem=_overflowItem;
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) MultiFeedViewController *multiFeedViewController; // @synthesize multiFeedViewController=_multiFeedViewController;
 @property(retain, nonatomic) MultiPagePresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak id <MultiPageViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)screenViewLoggingEnabled;
 - (id)analyticsScreenViewName;
 - (id)analyticsPageType;

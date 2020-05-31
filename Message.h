@@ -33,6 +33,7 @@
     NSDictionary *_debugData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *debugData; // @synthesize debugData=_debugData;
 @property(copy, nonatomic) NSArray *replies; // @synthesize replies=_replies;
 @property(copy, nonatomic) NSArray *visualReplies; // @synthesize visualReplies=_visualReplies;
@@ -51,7 +52,6 @@
 @property(copy, nonatomic) NSString *author; // @synthesize author=_author;
 @property(nonatomic) _Bool isLoadingMoreNode; // @synthesize isLoadingMoreNode=_isLoadingMoreNode;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) _Bool canBeBlocked;

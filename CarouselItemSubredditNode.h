@@ -35,6 +35,7 @@
     BaseButtonNode *_actionButtonNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButtonNode *actionButtonNode; // @synthesize actionButtonNode=_actionButtonNode;
 @property(retain, nonatomic) BaseButtonNode *hideButtonNode; // @synthesize hideButtonNode=_hideButtonNode;
 @property(retain, nonatomic) ASTextNode *subscriptionCountNode; // @synthesize subscriptionCountNode=_subscriptionCountNode;
@@ -55,7 +56,6 @@
 @property(nonatomic) _Bool showActionButton; // @synthesize showActionButton=_showActionButton;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) _Bool isPreviewing; // @synthesize isPreviewing=_isPreviewing;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)didTapSubscriptionButton:(id)arg1;
 - (_Bool)shouldShowSubscribeButton;
@@ -70,9 +70,9 @@
 - (id)hideButtonImage;
 - (void)configureNodes;
 - (void)didLoad;
-- (id)initWithCarousel:(id)arg1 carouselItem:(id)arg2 defaultPlaceholderColor:(id)arg3;
-- (id)initWithCarouselItem:(id)arg1 defaultPlaceholderColor:(id)arg2 compact:(_Bool)arg3 hideable:(_Bool)arg4 showDescription:(_Bool)arg5;
-- (id)initWithCarouselItem:(id)arg1 defaultPlaceholderColor:(id)arg2 compact:(_Bool)arg3 hideable:(_Bool)arg4 showDescription:(_Bool)arg5 showActionButton:(_Bool)arg6 actionButtonTitle:(id)arg7 actionButtonIconName:(id)arg8 actionButtonActionName:(id)arg9 showSubscriptionCount:(_Bool)arg10;
+- (id)initWithCarousel:(id)arg1 viewContext:(id)arg2 carouselItem:(id)arg3 defaultPlaceholderColor:(id)arg4;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2 defaultPlaceholderColor:(id)arg3 compact:(_Bool)arg4 hideable:(_Bool)arg5 showDescription:(_Bool)arg6;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2 defaultPlaceholderColor:(id)arg3 compact:(_Bool)arg4 hideable:(_Bool)arg5 showDescription:(_Bool)arg6 showActionButton:(_Bool)arg7 actionButtonTitle:(id)arg8 actionButtonIconName:(id)arg9 actionButtonActionName:(id)arg10 showSubscriptionCount:(_Bool)arg11;
 - (void)dealloc;
 
 // Remaining properties

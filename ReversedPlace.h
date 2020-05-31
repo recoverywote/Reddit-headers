@@ -20,6 +20,7 @@
     NSString *_city;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *city; // @synthesize city=_city;
 @property(retain, nonatomic) NSString *state; // @synthesize state=_state;
 @property(retain, nonatomic) NSString *countryCode; // @synthesize countryCode=_countryCode;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) NSNumber *longitude; // @synthesize longitude=_longitude;
 @property(retain, nonatomic) NSNumber *latitude; // @synthesize latitude=_latitude;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 
 @end
 

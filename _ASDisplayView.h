@@ -21,9 +21,9 @@
 
 + (Class)layerClass;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *keepalive_node; // @synthesize keepalive_node=_keepalive_node;
 @property(nonatomic) __weak ASDisplayNode *asyncdisplaykit_node; // @synthesize asyncdisplaykit_node=_asyncdisplaykit_node;
-- (void).cxx_destruct;
 - (id)forwardingTargetForSelector:(SEL)arg1;
 - (void)safeAreaInsetsDidChange;
 - (void)layoutMarginsDidChange;

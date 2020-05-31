@@ -124,9 +124,9 @@
 }
 
 + (Class)layerClass;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _ASHierarchyChangeSet *changeSet; // @synthesize changeSet=_changeSet;
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
-- (void).cxx_destruct;
 - (void)setPrefetchingEnabled:(_Bool)arg1;
 - (void)setPrefetchDataSource:(id)arg1;
 - (void)layer:(id)arg1 didChangeBoundsWithOldValue:(struct CGRect)arg2 newValue:(struct CGRect)arg3;

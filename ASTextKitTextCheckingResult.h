@@ -15,8 +15,8 @@
     ASTextKitEntityAttribute *_entityAttribute;
 }
 
-@property(readonly, nonatomic) ASTextKitEntityAttribute *entityAttribute; // @synthesize entityAttribute=_entityAttribute;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) ASTextKitEntityAttribute *entityAttribute; // @synthesize entityAttribute=_entityAttribute;
 - (struct _NSRange)range;
 - (unsigned long long)resultType;
 - (id)initWithType:(unsigned long long)arg1 entityAttribute:(id)arg2 range:(struct _NSRange)arg3;

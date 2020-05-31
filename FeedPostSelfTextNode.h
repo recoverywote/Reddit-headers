@@ -14,9 +14,9 @@
     ASTextNode *_selfTextNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *selfTextNode; // @synthesize selfTextNode=_selfTextNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)postAttributedStringChanged:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;

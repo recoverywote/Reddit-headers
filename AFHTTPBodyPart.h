@@ -24,6 +24,7 @@
     unsigned long long _bodyContentLength;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasFinalBoundary; // @synthesize hasFinalBoundary=_hasFinalBoundary;
 @property(nonatomic) _Bool hasInitialBoundary; // @synthesize hasInitialBoundary=_hasInitialBoundary;
 @property(retain, nonatomic) NSInputStream *inputStream; // @synthesize inputStream=_inputStream;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *boundary; // @synthesize boundary=_boundary;
 @property(retain, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(nonatomic) unsigned long long stringEncoding; // @synthesize stringEncoding=_stringEncoding;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)transitionToNextPhase;
 - (long long)readData:(id)arg1 intoBuffer:(char *)arg2 maxLength:(unsigned long long)arg3;

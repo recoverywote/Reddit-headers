@@ -21,13 +21,13 @@
     NSString *_currentFieldName;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *currentFieldName; // @synthesize currentFieldName=_currentFieldName;
 @property(retain, nonatomic) NSString *currentMessageName; // @synthesize currentMessageName=_currentMessageName;
 @property(nonatomic) _Bool strictWrite; // @synthesize strictWrite=_strictWrite;
 @property(nonatomic) _Bool strictRead; // @synthesize strictRead=_strictRead;
 @property(retain, nonatomic) id <TTransport> transport; // @synthesize transport=_transport;
 @property(nonatomic) unsigned int messageSizeLimit; // @synthesize messageSizeLimit=_messageSizeLimit;
-- (void).cxx_destruct;
 - (_Bool)writeListEnd:(id *)arg1;
 - (_Bool)writeListBeginWithElementType:(int)arg1 size:(int)arg2 error:(id *)arg3;
 - (_Bool)writeSetEnd:(id *)arg1;

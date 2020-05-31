@@ -44,12 +44,12 @@
     NSString *_gravity;
 }
 
+- (void).cxx_destruct;
 @property int periodicTimeObserverTimescale; // @synthesize periodicTimeObserverTimescale=_periodicTimeObserverTimescale;
 @property(readonly) long long playerState; // @synthesize playerState=_playerState;
 @property _Bool shouldAggressivelyRecoverFromStall; // @synthesize shouldAggressivelyRecoverFromStall=_shouldAggressivelyRecoverFromStall;
 @property _Bool shouldAutorepeat; // @synthesize shouldAutorepeat=_shouldAutorepeat;
 @property _Bool shouldAutoplay; // @synthesize shouldAutoplay=_shouldAutoplay;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)setShouldBePlaying:(_Bool)arg1;
 - (_Bool)shouldBePlaying;

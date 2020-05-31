@@ -18,9 +18,9 @@
     unsigned long long _maximumSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long maximumSize; // @synthesize maximumSize=_maximumSize;
 @property(copy, nonatomic) NSOrderedSet *searchHistoryItems; // @synthesize searchHistoryItems=_searchHistoryItems;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)searchHistoryByRemovingItem:(id)arg1;

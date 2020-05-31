@@ -30,6 +30,7 @@
     NSString *_recipient_device_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool recipient_device_idIsSet; // @synthesize recipient_device_idIsSet=_recipient_device_idIsSet;
 @property(copy, nonatomic) NSString *recipient_device_id; // @synthesize recipient_device_id=_recipient_device_id;
 @property(nonatomic) _Bool recipient_app_nameIsSet; // @synthesize recipient_app_nameIsSet=_recipient_app_nameIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *status; // @synthesize status=_status;
 @property(nonatomic) _Bool message_idIsSet; // @synthesize message_idIsSet=_message_idIsSet;
 @property(copy, nonatomic) NSString *message_id; // @synthesize message_id=_message_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

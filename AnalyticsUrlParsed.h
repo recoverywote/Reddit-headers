@@ -32,6 +32,7 @@
     NSString *_utm_term;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool utm_termIsSet; // @synthesize utm_termIsSet=_utm_termIsSet;
 @property(copy, nonatomic) NSString *utm_term; // @synthesize utm_term=_utm_term;
 @property(nonatomic) _Bool utm_mediumIsSet; // @synthesize utm_mediumIsSet=_utm_mediumIsSet;
@@ -48,7 +49,6 @@
 @property(copy, nonatomic) NSString *utm_source; // @synthesize utm_source=_utm_source;
 @property(nonatomic) _Bool shared_timestampIsSet; // @synthesize shared_timestampIsSet=_shared_timestampIsSet;
 @property(nonatomic) long long shared_timestamp; // @synthesize shared_timestamp=_shared_timestamp;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

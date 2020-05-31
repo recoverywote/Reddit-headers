@@ -27,7 +27,7 @@
 - (_Bool)requiresPremiumWithAward:(id)arg1;
 - (_Bool)requiresCoinPurchaseWithAward:(id)arg1;
 - (id)copyWithZone:(void *)arg1;
-- (id)initWithConfig:(id)arg1 account:(id)arg2 isInAnonymousBrowsing:(_Bool)arg3;
+- (id)initWithConfig:(id)arg1 shouldAllowEditOptions:(_Bool)arg2 shouldAllowAnonymousGilding:(_Bool)arg3 account:(id)arg4 isInAnonymousBrowsing:(_Bool)arg5;
 @property(nonatomic, readonly) long long goldCoinsOnAccount; // @synthesize goldCoinsOnAccount;
 @property(nonatomic, readonly) _Bool isPremiumAccount; // @synthesize isPremiumAccount;
 @property(nonatomic, readonly) _Bool isEmployeeAccount; // @synthesize isEmployeeAccount;

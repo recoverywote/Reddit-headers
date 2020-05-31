@@ -23,11 +23,11 @@
 + (_Bool)supportsSecureCoding;
 + (id)sharedInstance;
 + (id)archivePath;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GDTCORUploadCoordinator *uploadCoordinator; // @synthesize uploadCoordinator=_uploadCoordinator;
 @property(readonly, nonatomic) NSMutableOrderedSet *storedEvents; // @synthesize storedEvents=_storedEvents;
 @property(retain, nonatomic) NSMutableDictionary *targetToEventSet; // @synthesize targetToEventSet=_targetToEventSet;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *storageQueue; // @synthesize storageQueue=_storageQueue;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)appWillTerminate:(id)arg1;

@@ -14,8 +14,8 @@
 }
 
 + (unsigned long long)maxLevelForDisplay;
-@property(retain, nonatomic) NSArray *verticalLines; // @synthesize verticalLines=_verticalLines;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *verticalLines; // @synthesize verticalLines=_verticalLines;
 - (void)setVerticalLineTopInset:(long long)arg1;
 - (void)setVerticalLineBottomInset:(long long)arg1;
 - (void)resetColorForLastVerticalLine;

@@ -17,10 +17,10 @@
 }
 
 + (id)sharedInstance;
-@property(readonly, nonatomic) ASWeakSet *dirtyNodes; // @synthesize dirtyNodes=_dirtyNodes;
-@property(readonly, nonatomic) _Bool hasChanges; // @synthesize hasChanges=_hasChanges;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) ASWeakSet *dirtyNodes; // @synthesize dirtyNodes=_dirtyNodes;
+@property(readonly, nonatomic) _Bool hasChanges; // @synthesize hasChanges=_hasChanges;
 - (void)scheduleFlushIfNeeded;
 - (void)flush;
 - (void)registerNode:(id)arg1;

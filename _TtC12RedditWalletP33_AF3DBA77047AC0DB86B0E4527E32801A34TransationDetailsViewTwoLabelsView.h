@@ -11,7 +11,7 @@
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: leftLabel
     // Error parsing type: , name: rightLabel
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

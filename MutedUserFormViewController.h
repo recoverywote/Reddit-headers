@@ -18,11 +18,11 @@
     NSString *_initialUsername;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *initialUsername; // @synthesize initialUsername=_initialUsername;
 @property(copy, nonatomic) NSString *initialModNote; // @synthesize initialModNote=_initialModNote;
 @property(retain, nonatomic) ModFormTextView *modNoteField; // @synthesize modNoteField=_modNoteField;
 @property(retain, nonatomic) ModFormTextField *usernameField; // @synthesize usernameField=_usernameField;
-- (void).cxx_destruct;
 - (void)muteUser:(id)arg1 reason:(id)arg2;
 - (void)addButtonPress:(id)arg1;
 - (void)buildForm;

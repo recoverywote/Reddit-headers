@@ -17,10 +17,10 @@
     NSNumber *_longitude;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *longitude; // @synthesize longitude=_longitude;
 @property(retain, nonatomic) NSNumber *latitude; // @synthesize latitude=_latitude;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithGraphQLData:(id)arg1;

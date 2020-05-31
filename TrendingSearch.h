@@ -21,13 +21,13 @@
     long long _subredditAppearances;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long subredditAppearances; // @synthesize subredditAppearances=_subredditAppearances;
 @property(readonly, nonatomic) _Bool isPromoted; // @synthesize isPromoted=_isPromoted;
 @property(readonly, nonatomic) _Bool isWhiteListed; // @synthesize isWhiteListed=_isWhiteListed;
 @property(readonly, copy, nonatomic) NSArray *trendingPosts; // @synthesize trendingPosts=_trendingPosts;
 @property(readonly, copy, nonatomic) NSString *displayText; // @synthesize displayText=_displayText;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 @property(readonly, nonatomic) NSString *identifier;

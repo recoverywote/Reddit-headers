@@ -44,6 +44,7 @@
     UIView *_dividerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *dividerView; // @synthesize dividerView=_dividerView;
 @property(retain, nonatomic) TheatrePhysicsController *physicsController; // @synthesize physicsController=_physicsController;
 @property(nonatomic) _Bool showControlsAfterGestureCancel; // @synthesize showControlsAfterGestureCancel=_showControlsAfterGestureCancel;
@@ -61,7 +62,6 @@
 @property(nonatomic) _Bool isRotating; // @synthesize isRotating=_isRotating;
 @property(nonatomic) long long currentPosition; // @synthesize currentPosition=_currentPosition;
 @property(nonatomic) __weak id <TheatreViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)screenViewAnalyticsEvent;
 @property(readonly, nonatomic) NSURL *deeplinkURL;
 - (id)makeCollectionViewLayout;

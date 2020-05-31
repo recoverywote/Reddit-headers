@@ -22,6 +22,7 @@
     ModFormCheckbox *_checkboxChatOperator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ModFormCheckbox *checkboxChatOperator; // @synthesize checkboxChatOperator=_checkboxChatOperator;
 @property(retain, nonatomic) ModFormCheckbox *checkboxChatConfig; // @synthesize checkboxChatConfig=_checkboxChatConfig;
 @property(retain, nonatomic) ModFormCheckbox *checkboxWiki; // @synthesize checkboxWiki=_checkboxWiki;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) ModFormCheckbox *checkboxAccess; // @synthesize checkboxAccess=_checkboxAccess;
 @property(retain, nonatomic) ModFormCheckbox *checkboxAll; // @synthesize checkboxAll=_checkboxAll;
 @property(retain, nonatomic) ModFormTextField *usernameField; // @synthesize usernameField=_usernameField;
-- (void).cxx_destruct;
 - (void)checkboxChanged:(id)arg1;
 - (unsigned long long)selectedUserPermissions;
 - (_Bool)hasMetAllRequirements;

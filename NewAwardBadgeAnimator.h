@@ -16,8 +16,8 @@
 }
 
 + (double)synchronizationClock;
-@property(nonatomic) __weak NewAwardBadgeView *badge; // @synthesize badge=_badge;
 - (void).cxx_destruct;
+@property(nonatomic) __weak NewAwardBadgeView *badge; // @synthesize badge=_badge;
 @property(readonly, nonatomic) CAAnimation *shimmerAnimation; // @synthesize shimmerAnimation=_shimmerAnimation;
 @property(readonly, nonatomic) CAAnimation *scaleAnimation; // @synthesize scaleAnimation=_scaleAnimation;
 - (void)stopAnimation;

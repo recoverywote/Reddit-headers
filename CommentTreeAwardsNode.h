@@ -20,12 +20,12 @@
     CommentAwardsNode *_awardsNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CommentAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) CommentTreeVisualDepthNode *visualDepthNode; // @synthesize visualDepthNode=_visualDepthNode;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
 @property(nonatomic) __weak id <CommentTreeAwardsNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didLongPressed:(id)arg1;
 - (void)awardsBackgroundNodeDidTap:(id)arg1;

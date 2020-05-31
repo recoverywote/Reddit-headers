@@ -13,8 +13,8 @@
     NSMutableDictionary *_cache;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *cache; // @synthesize cache=_cache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *cache; // @synthesize cache=_cache;
 - (void)clear;
 - (id)objectForKey:(id)arg1;
 - (void)setObject:(id)arg1 forKey:(id)arg2;

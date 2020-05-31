@@ -14,9 +14,9 @@
     NSDate *_expirationDate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
 @property(readonly, nonatomic) NSString *authToken; // @synthesize authToken=_authToken;
-- (void).cxx_destruct;
 - (id)initWithToken:(id)arg1 expirationDate:(id)arg2;
 
 @end

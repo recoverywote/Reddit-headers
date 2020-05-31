@@ -19,13 +19,13 @@
 }
 
 + (void)cleanIndexPathsWithMap:(const unordered_map_6fea4092 *)arg1 moves:(id)arg2 indexPaths:(id)arg3 deletes:(id)arg4 inserts:(id)arg5;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *moveIndexPaths; // @synthesize moveIndexPaths=_moveIndexPaths;
 @property(readonly, nonatomic) NSArray *deleteIndexPaths; // @synthesize deleteIndexPaths=_deleteIndexPaths;
 @property(readonly, nonatomic) NSArray *insertIndexPaths; // @synthesize insertIndexPaths=_insertIndexPaths;
 @property(readonly, nonatomic) NSSet *moveSections; // @synthesize moveSections=_moveSections;
 @property(readonly, nonatomic) NSIndexSet *deleteSections; // @synthesize deleteSections=_deleteSections;
 @property(readonly, nonatomic) NSIndexSet *insertSections; // @synthesize insertSections=_insertSections;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithInsertSections:(id)arg1 deleteSections:(id)arg2 moveSections:(id)arg3 insertIndexPaths:(id)arg4 deleteIndexPaths:(id)arg5 moveIndexPaths:(id)arg6;
 

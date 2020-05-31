@@ -36,6 +36,7 @@
     NSString *_cover_url;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool communities_visibleIsSet; // @synthesize communities_visibleIsSet=_communities_visibleIsSet;
 @property(nonatomic) _Bool communities_visible; // @synthesize communities_visible=_communities_visible;
 @property(nonatomic) _Bool content_visibleIsSet; // @synthesize content_visibleIsSet=_content_visibleIsSet;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

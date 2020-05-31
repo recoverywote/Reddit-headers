@@ -30,6 +30,7 @@
     CDUnknownBlockType _didFinishSettingCompletionHandler;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType didFinishSettingCompletionHandler; // @synthesize didFinishSettingCompletionHandler=_didFinishSettingCompletionHandler;
 @property(nonatomic) long long scrollingDirection; // @synthesize scrollingDirection=_scrollingDirection;
 @property(nonatomic) _Bool activeControllerBeganTransition; // @synthesize activeControllerBeganTransition=_activeControllerBeganTransition;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) UIViewController *activeController; // @synthesize activeController=_activeController;
 @property(nonatomic) __weak id <REDPageViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <REDPageViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;

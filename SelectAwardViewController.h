@@ -30,6 +30,7 @@
     NSLayoutConstraint *_selectedAwardViewBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldScrollToBanner; // @synthesize shouldScrollToBanner=_shouldScrollToBanner;
 @property(retain, nonatomic) NSLayoutConstraint *selectedAwardViewBottomConstraint; // @synthesize selectedAwardViewBottomConstraint=_selectedAwardViewBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *coinSaleBannerTop; // @synthesize coinSaleBannerTop=_coinSaleBannerTop;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) SelectAwardDelegator *delegator; // @synthesize delegator=_delegator;
 @property(nonatomic) __weak id <SelectAwardViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SelectAwardPresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (void)updateForKeyboardHeight:(double)arg1 keyboardInfo:(id)arg2;
 - (void)keyboardWillHide:(id)arg1;
 - (void)keyboardWillShow:(id)arg1;

@@ -21,11 +21,11 @@
 }
 
 + (double)collectionViewSizeHeightForPillStyle:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *pills; // @synthesize pills=_pills;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(nonatomic) __weak id <PillContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateCollectionView;

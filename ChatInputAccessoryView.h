@@ -10,6 +10,7 @@
 #import "_TtP6Reddit43ChatInputAccessoryParentCommentViewDelegate_-Protocol.h"
 
 @class BaseTextView, ChatPostUserTypeAheadController, ChatPostUserTypeAheadView, NSLayoutConstraint, NSString, RUITheme, UIActivityIndicatorView, UIButton, UIControl, _TtC6Reddit21LiveStreamAwardButton, _TtC6Reddit35ChatInputAccessoryParentCommentView;
+@protocol ViewContext;
 
 @interface ChatInputAccessoryView : UIInputView <UITextViewDelegate, _TtP6Reddit43ChatInputAccessoryParentCommentViewDelegate_>
 {
@@ -23,6 +24,7 @@
     CDUnknownBlockType _awardButtonAction;
     RUITheme *_themeOverride;
     long long _maxChatCommentLength;
+    id <ViewContext> _viewContext;
     NSLayoutConstraint *_textViewHeightConstraint;
     BaseTextView *_textView;
     NSString *_currentPlaceholderString;
@@ -39,6 +41,7 @@
     NSLayoutConstraint *_awardButtonTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldUseNewAwardButton; // @synthesize shouldUseNewAwardButton=_shouldUseNewAwardButton;
 @property(retain, nonatomic) NSLayoutConstraint *awardButtonTrailingConstraint; // @synthesize awardButtonTrailingConstraint=_awardButtonTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *awardButtonMaxWidthConstraint; // @synthesize awardButtonMaxWidthConstraint=_awardButtonMaxWidthConstraint;
@@ -54,6 +57,7 @@
 @property(copy, nonatomic) NSString *currentPlaceholderString; // @synthesize currentPlaceholderString=_currentPlaceholderString;
 @property(retain, nonatomic) BaseTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) NSLayoutConstraint *textViewHeightConstraint; // @synthesize textViewHeightConstraint=_textViewHeightConstraint;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) long long maxChatCommentLength; // @synthesize maxChatCommentLength=_maxChatCommentLength;
 @property(nonatomic) _Bool enableAwards; // @synthesize enableAwards=_enableAwards;
 @property(retain, nonatomic) RUITheme *themeOverride; // @synthesize themeOverride=_themeOverride;
@@ -63,7 +67,6 @@
 @property(copy, nonatomic) CDUnknownBlockType inputAccessoryHeightChange; // @synthesize inputAccessoryHeightChange=_inputAccessoryHeightChange;
 @property(copy, nonatomic) CDUnknownBlockType closeButtonAction; // @synthesize closeButtonAction=_closeButtonAction;
 @property(copy, nonatomic) CDUnknownBlockType sendButtonAction; // @synthesize sendButtonAction=_sendButtonAction;
-- (void).cxx_destruct;
 - (void)closeButtonTap;
 - (void)closeParentCommentView;
 - (void)showParentCommentViewWithComment:(id)arg1;
@@ -93,7 +96,7 @@
 - (void)configureColors;
 - (void)sharedInit;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 inputViewStyle:(long long)arg2 accessoryStyle:(unsigned long long)arg3 withNewAwardButton:(_Bool)arg4;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2 inputViewStyle:(long long)arg3 accessoryStyle:(unsigned long long)arg4 withNewAwardButton:(_Bool)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

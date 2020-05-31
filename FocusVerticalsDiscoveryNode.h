@@ -10,7 +10,7 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class ASButtonNode, ASTextNode, FeedPostOptions, FocusVerticalsDiscoveryFeedbackNode, FocusVerticalsDiscoveryUnitViewModel, NSMutableArray, NSString;
-@protocol FocusVerticalsDiscoveryNodeDelegate;
+@protocol FocusVerticalsDiscoveryNodeDelegate, ViewContext;
 
 @interface FocusVerticalsDiscoveryNode : BaseCollectionViewCellNode <UIGestureRecognizerDelegate, FocusVerticalsDiscoveryFeedbackNodeDelegate>
 {
@@ -22,8 +22,11 @@
     ASButtonNode *_closeNode;
     FocusVerticalsDiscoveryFeedbackNode *_feedbackNode;
     ASTextNode *_topPostLabelNode;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool didTapHide; // @synthesize didTapHide=_didTapHide;
 @property(retain, nonatomic) ASTextNode *topPostLabelNode; // @synthesize topPostLabelNode=_topPostLabelNode;
 @property(retain, nonatomic) FocusVerticalsDiscoveryFeedbackNode *feedbackNode; // @synthesize feedbackNode=_feedbackNode;
@@ -32,7 +35,6 @@
 @property(readonly, nonatomic) __weak id <FocusVerticalsDiscoveryNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) FocusVerticalsDiscoveryUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)focusVerticalsDiscoveryFeedbackNode:(id)arg1 didSelectFeedback:(long long)arg2;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didTapClose:(id)arg1;
@@ -52,7 +54,7 @@
 - (void)configureTopPostLabelNode;
 - (void)configureNodes;
 - (_Bool)isInactiveCommunityExperimentEnabled;
-- (id)initWithFocusVerticalsDiscoveryUnitViewModel:(id)arg1 options:(id)arg2 delegate:(id)arg3 visibilityTracker:(id)arg4;
+- (id)initWithFocusVerticalsDiscoveryUnitViewModel:(id)arg1 viewContext:(id)arg2 options:(id)arg3 delegate:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

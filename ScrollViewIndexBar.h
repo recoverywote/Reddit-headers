@@ -18,12 +18,12 @@
     unsigned long long _currentIndex;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long currentIndex; // @synthesize currentIndex=_currentIndex;
 @property(copy, nonatomic) NSArray *indexViews; // @synthesize indexViews=_indexViews;
 @property(retain, nonatomic) ScrollViewIndexBarIndicatorView *indicatorView; // @synthesize indicatorView=_indicatorView;
 @property(nonatomic) __weak id <ScrollViewIndexBarDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSArray *indexes; // @synthesize indexes=_indexes;
-- (void).cxx_destruct;
 - (void)setOpacity:(double)arg1 animated:(_Bool)arg2;
 - (void)adjustIndexViewTint:(SEL)arg1;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;

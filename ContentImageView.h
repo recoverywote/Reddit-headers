@@ -22,6 +22,7 @@
 }
 
 + (struct CGSize)getImageSizeForSize:(struct CGSize)arg1 forPost:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(nonatomic) _Bool failed; // @synthesize failed=_failed;
 @property(nonatomic) __weak id <ContentImageViewDelegate> delegate; // @synthesize delegate=_delegate;
@@ -30,7 +31,6 @@
 @property(nonatomic) struct CGSize contentImageSize; // @synthesize contentImageSize=_contentImageSize;
 @property(retain, nonatomic) BaseImageView *internalImageView; // @synthesize internalImageView=_internalImageView;
 @property(copy, nonatomic) NSString *imageURLString; // @synthesize imageURLString=_imageURLString;
-- (void).cxx_destruct;
 - (void)didTapImage;
 - (void)layoutSubviews;
 - (void)setFrame:(struct CGRect)arg1;

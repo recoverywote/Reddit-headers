@@ -20,6 +20,7 @@
     NSMutableDictionary *_viewControllerCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *viewControllerCache; // @synthesize viewControllerCache=_viewControllerCache;
 @property(retain, nonatomic) NSMutableOrderedSet *viewControllerLRU; // @synthesize viewControllerLRU=_viewControllerLRU;
 @property(retain, nonatomic) NSMutableArray *viewControllerIndexes; // @synthesize viewControllerIndexes=_viewControllerIndexes;
@@ -27,7 +28,6 @@
 @property(nonatomic) unsigned long long maxCapacity; // @synthesize maxCapacity=_maxCapacity;
 @property(copy, nonatomic) CDUnknownBlockType objectsTransformer; // @synthesize objectsTransformer=_objectsTransformer;
 @property(copy, nonatomic) NSArray *previewControllers; // @synthesize previewControllers=_previewControllers;
-- (void).cxx_destruct;
 - (void)fetchMoreIfNecessary;
 - (id)removeCachedViewControllerAtIndexPath:(id)arg1;
 - (id)cachedViewControllerForIndexPath:(id)arg1;

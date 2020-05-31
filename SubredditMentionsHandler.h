@@ -15,10 +15,10 @@
     SubredditMentionsDataFetcher *_dataFetcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditMentionsDataFetcher *dataFetcher; // @synthesize dataFetcher=_dataFetcher;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSAttributedString *attributedString; // @synthesize attributedString=_attributedString;
-- (void).cxx_destruct;
 - (id)enhancedAttributedStringForAttributes:(id)arg1 enhancedAttributes:(id)arg2;
 - (void)enhanceSubredditMentionsWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithService:(id)arg1 attributedString:(id)arg2;

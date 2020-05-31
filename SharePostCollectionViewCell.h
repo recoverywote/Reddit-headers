@@ -7,28 +7,31 @@
 #import <RedditUI/BaseCollectionViewCell.h>
 
 @class FeedPostCrosspostView, LabeledTextField, NSLayoutConstraint, Post, TextFieldContentView;
+@protocol ViewContext;
 
 @interface SharePostCollectionViewCell : BaseCollectionViewCell
 {
+    id <ViewContext> _viewContext;
     Post *_post;
     FeedPostCrosspostView *_postView;
     TextFieldContentView *_textFieldView;
     NSLayoutConstraint *_postViewHeightConstraint;
 }
 
-+ (struct CGSize)calculatedSizeWithPost:(id)arg1 options:(id)arg2 forWidth:(double)arg3;
++ (struct CGSize)calculatedSizeWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 forWidth:(double)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *postViewHeightConstraint; // @synthesize postViewHeightConstraint=_postViewHeightConstraint;
 @property(retain, nonatomic) TextFieldContentView *textFieldView; // @synthesize textFieldView=_textFieldView;
 @property(retain, nonatomic) FeedPostCrosspostView *postView; // @synthesize postView=_postView;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) LabeledTextField *textField;
 - (void)prepareForReuse;
-- (void)configureWithPost:(id)arg1 options:(id)arg2;
+- (void)configureWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 @property(readonly, nonatomic) Post *crosspost;
 @property(readonly, nonatomic) Post *parentPost;
 - (void)setupConstraints;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)setupUI;
 
 @end
 

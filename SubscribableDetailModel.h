@@ -15,8 +15,8 @@
     NSObject<Subscribable><Styleable> *_subscribable;
 }
 
-@property(retain, nonatomic) NSObject<Subscribable><Styleable> *subscribable; // @synthesize subscribable=_subscribable;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSObject<Subscribable><Styleable> *subscribable; // @synthesize subscribable=_subscribable;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 - (id)initWithSubscribable:(id)arg1;

@@ -21,6 +21,7 @@
     id <LocationActionDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <LocationActionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(retain, nonatomic) BaseButtonNode *previewActionButtonNode; // @synthesize previewActionButtonNode=_previewActionButtonNode;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) ASTextNode *mainTitleNode; // @synthesize mainTitleNode=_mainTitleNode;
 @property(retain, nonatomic) BaseButtonNode *overflowButtonNode; // @synthesize overflowButtonNode=_overflowButtonNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)overflowButtonTapped:(id)arg1;
 - (void)allowLocationWasTapped:(id)arg1;

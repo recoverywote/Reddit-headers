@@ -20,10 +20,10 @@
     id <ChatSettingsSubredditPresenter> _presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <ChatSettingsSubredditPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) SubredditChannel *channel; // @synthesize channel=_channel;
 @property(nonatomic) __weak id <ChatSettingsSubredditDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)imageLabelCellWithText:(id)arg1 image:(id)arg2 collectionView:(id)arg3 indexPath:(id)arg4;
 - (id)imageLabelToggleCellWithText:(id)arg1 image:(id)arg2 toggleSelector:(SEL)arg3 collectionView:(id)arg4 indexPath:(id)arg5;
 - (void)didToggleDisableBadgeSwitch:(id)arg1;

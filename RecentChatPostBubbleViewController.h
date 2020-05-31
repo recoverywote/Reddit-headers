@@ -19,11 +19,11 @@
     NSMutableArray *_recentChatPosts;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *recentChatPosts; // @synthesize recentChatPosts=_recentChatPosts;
 @property(retain, nonatomic) UIStackView *recentChatPostStackView; // @synthesize recentChatPostStackView=_recentChatPostStackView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (void)showChatPostInboxTooltip;
 - (void)recentChatPostBubbleView:(id)arg1 didDismissRecentChatPost:(id)arg2;

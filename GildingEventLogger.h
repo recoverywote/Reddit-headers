@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "_TtP7Economy25AwardSelectionEventLogger_-Protocol.h"
+
 @class Account, AnalyticsManager, Comment, NSString, Post;
 
-@interface GildingEventLogger : NSObject
+@interface GildingEventLogger : NSObject <_TtP7Economy25AwardSelectionEventLogger_>
 {
     _Bool _isLiveStream;
     _Bool _didLogTypeMessageEvent;
@@ -20,6 +22,7 @@
     AnalyticsManager *_analyticsManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didLogViewGildFormEvent; // @synthesize didLogViewGildFormEvent=_didLogViewGildFormEvent;
 @property(nonatomic) _Bool didLogTypeMessageEvent; // @synthesize didLogTypeMessageEvent=_didLogTypeMessageEvent;
 @property(readonly, nonatomic) AnalyticsManager *analyticsManager; // @synthesize analyticsManager=_analyticsManager;
@@ -28,7 +31,6 @@
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
-- (void).cxx_destruct;
 - (id)gildingContentString;
 - (id)goldPurchaseForAward:(id)arg1 product:(id)arg2;
 - (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
@@ -53,6 +55,12 @@
 - (void)logViewGiveAwardModalEventWithDefaultAward:(id)arg1 availableAwards:(id)arg2 isDefaultAnonymous:(_Bool)arg3;
 - (id)initWithAccount:(id)arg1 post:(id)arg2 comment:(id)arg3 correlationId:(id)arg4 isLiveStream:(_Bool)arg5 analyticsManager:(id)arg6;
 - (id)initWithAccount:(id)arg1 post:(id)arg2 comment:(id)arg3 isLiveStream:(_Bool)arg4 correlationId:(id)arg5;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

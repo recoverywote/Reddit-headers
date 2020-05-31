@@ -16,8 +16,8 @@
 }
 
 + (id)filterWithKeys:(id)arg1;
-@property(retain, nonatomic) NSArray *keyPaths; // @synthesize keyPaths=_keyPaths;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *keyPaths; // @synthesize keyPaths=_keyPaths;
 - (void)filterReports:(id)arg1 onCompletion:(CDUnknownBlockType)arg2;
 - (id)initWithKeysArray:(id)arg1;
 - (id)initWithKeys:(id)arg1;

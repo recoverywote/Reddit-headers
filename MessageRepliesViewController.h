@@ -29,6 +29,7 @@
     NSIndexPath *_indexPathOfFirstUnread;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSIndexPath *indexPathOfFirstUnread; // @synthesize indexPathOfFirstUnread=_indexPathOfFirstUnread;
 @property(retain, nonatomic) CommentComposePlaceHolderView *replyTextView; // @synthesize replyTextView=_replyTextView;
 @property(retain, nonatomic) ThreadedMessageManager *objectManager; // @synthesize objectManager=_objectManager;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) BaseCollectionView *feedCollectionView; // @synthesize feedCollectionView=_feedCollectionView;
 @property(retain, nonatomic) Message *rootMessage; // @synthesize rootMessage=_rootMessage;
 @property(nonatomic) __weak id <MessagesRepliesViewControllerProcotol> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)messageHeaderView:(id)arg1 didTapLinkURL:(id)arg2;
 - (void)attributedLabel:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)commentComposeViewController:(id)arg1 didFinishWithSuccess:(_Bool)arg2 newItem:(id)arg3;

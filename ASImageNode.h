@@ -38,9 +38,9 @@
 + (id)displayWithParameters:(id)arg1 isCancelled:(CDUnknownBlockType)arg2;
 + (_Bool)shouldShowImageScalingOverlay;
 + (void)setShouldShowImageScalingOverlay:(_Bool)arg1;
-@property(nonatomic) double lastDisplayLinkFire; // @synthesize lastDisplayLinkFire=_lastDisplayLinkFire;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) double lastDisplayLinkFire; // @synthesize lastDisplayLinkFire=_lastDisplayLinkFire;
 - (id)debugLabelAttributes;
 - (void)layout;
 @property(copy) CDUnknownBlockType imageModificationBlock; // @synthesize imageModificationBlock=_imageModificationBlock;

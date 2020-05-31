@@ -18,7 +18,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: animationView
     // Error parsing type: , name: redditBackupButton
     // Error parsing type: , name: manualBackupButton
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

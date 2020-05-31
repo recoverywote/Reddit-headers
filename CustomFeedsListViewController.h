@@ -27,6 +27,7 @@
     Listing *_listing;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Listing *listing; // @synthesize listing=_listing;
 @property(retain, nonatomic) NSArray *customFeeds; // @synthesize customFeeds=_customFeeds;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType onSelection; // @synthesize onSelection=_onSelection;
 @property(nonatomic) unsigned long long viewMode; // @synthesize viewMode=_viewMode;
-- (void).cxx_destruct;
 - (void)multiPageViewControllerMultiUpdated:(id)arg1;
 - (void)multiPageViewController:(id)arg1 customFeedWasCopied:(id)arg2;
 - (void)multiPageViewControllerMultiDeleted:(id)arg1;

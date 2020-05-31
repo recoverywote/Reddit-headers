@@ -23,12 +23,12 @@
     ListingStateController *_listingStateController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(retain, nonatomic) NSMutableArray *draftsBeingDeleted; // @synthesize draftsBeingDeleted=_draftsBeingDeleted;
 @property(retain, nonatomic) NSMutableArray *drafts; // @synthesize drafts=_drafts;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 - (void)postViewController:(id)arg1 didSubmitPostWithURL:(id)arg2;

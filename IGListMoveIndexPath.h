@@ -14,9 +14,9 @@
     NSIndexPath *_to;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSIndexPath *to; // @synthesize to=_to;
 @property(readonly, nonatomic) NSIndexPath *from; // @synthesize from=_from;
-- (void).cxx_destruct;
 - (id)description;
 - (long long)compare:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

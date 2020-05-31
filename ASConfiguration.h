@@ -16,9 +16,9 @@
     unsigned long long _experimentalFeatures;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long experimentalFeatures; // @synthesize experimentalFeatures=_experimentalFeatures;
 @property(retain, nonatomic) id <ASConfigurationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithDictionary:(id)arg1;
 

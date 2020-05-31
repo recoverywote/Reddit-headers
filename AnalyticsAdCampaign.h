@@ -26,6 +26,7 @@
     NSString *_effective_status;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool effective_statusIsSet; // @synthesize effective_statusIsSet=_effective_statusIsSet;
 @property(copy, nonatomic) NSString *effective_status; // @synthesize effective_status=_effective_status;
 @property(nonatomic) _Bool configured_statusIsSet; // @synthesize configured_statusIsSet=_configured_statusIsSet;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

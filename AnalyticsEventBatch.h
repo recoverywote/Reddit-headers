@@ -18,9 +18,9 @@
     NSMutableArray *_events;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool eventsIsSet; // @synthesize eventsIsSet=_eventsIsSet;
 @property(retain, nonatomic) NSMutableArray *events; // @synthesize events=_events;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

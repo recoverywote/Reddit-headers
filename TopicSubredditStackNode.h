@@ -7,6 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASButtonNode, NSArray;
+@protocol ViewContext;
 
 @interface TopicSubredditStackNode : BaseFeedDisplayNode
 {
@@ -14,26 +15,28 @@
     CDUnknownBlockType _onTopicStackNodePressed;
     CDUnknownBlockType _onShareTapped;
     NSArray *_subreddits;
+    id <ViewContext> _viewContext;
     NSArray *_subredditNodes;
     ASButtonNode *_shareNode;
     long long _limitedTo;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowShareButton; // @synthesize shouldShowShareButton=_shouldShowShareButton;
 @property(nonatomic) long long limitedTo; // @synthesize limitedTo=_limitedTo;
 @property(retain, nonatomic) ASButtonNode *shareNode; // @synthesize shareNode=_shareNode;
 @property(retain, nonatomic) NSArray *subredditNodes; // @synthesize subredditNodes=_subredditNodes;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) NSArray *subreddits; // @synthesize subreddits=_subreddits;
 @property(copy, nonatomic) CDUnknownBlockType onShareTapped; // @synthesize onShareTapped=_onShareTapped;
 @property(copy, nonatomic) CDUnknownBlockType onTopicStackNodePressed; // @synthesize onTopicStackNodePressed=_onTopicStackNodePressed;
-- (void).cxx_destruct;
 - (void)didTapShareNode:(id)arg1;
 - (void)didTapNode:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createNodes;
 - (void)didLoad;
-- (id)initWithSubreddits:(id)arg1 limitedTo:(unsigned long long)arg2 shouldShowShareButton:(_Bool)arg3;
+- (id)initWithSubreddits:(id)arg1 viewContext:(id)arg2 limitedTo:(unsigned long long)arg3 shouldShowShareButton:(_Bool)arg4;
 
 @end
 

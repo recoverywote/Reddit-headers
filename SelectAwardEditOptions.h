@@ -14,9 +14,9 @@
     NSString *_message;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *message; // @synthesize message=_message;
 @property(readonly, nonatomic) NSNumber *isAnonymous; // @synthesize isAnonymous=_isAnonymous;
-- (void).cxx_destruct;
 - (id)initWithMessage:(id)arg1 isAnonymous:(id)arg2;
 
 @end

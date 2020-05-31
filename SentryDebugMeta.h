@@ -25,6 +25,7 @@
     NSNumber *_revisionVersion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *revisionVersion; // @synthesize revisionVersion=_revisionVersion;
 @property(copy, nonatomic) NSNumber *minorVersion; // @synthesize minorVersion=_minorVersion;
 @property(copy, nonatomic) NSNumber *majorVersion; // @synthesize majorVersion=_majorVersion;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSNumber *cpuType; // @synthesize cpuType=_cpuType;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(copy, nonatomic) NSString *uuid; // @synthesize uuid=_uuid;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)init;
 

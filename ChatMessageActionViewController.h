@@ -15,9 +15,9 @@
     ChatMessage *_message;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (_Bool)canReportMessage:(id)arg1 inChannel:(id)arg2;
 - (_Bool)canRetryMessage:(id)arg1 inChannel:(id)arg2;
 - (_Bool)canDeleteMessage:(id)arg1 inChannel:(id)arg2;

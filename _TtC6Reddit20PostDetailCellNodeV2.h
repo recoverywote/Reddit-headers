@@ -13,6 +13,7 @@
 @interface _TtC6Reddit20PostDetailCellNodeV2 : BaseCollectionViewCellNode <PostDetailContentDisplaying>
 {
     // Error parsing type: , name: post
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: options
     // Error parsing type: , name: delegate
     // Error parsing type: , name: eventBarNode
@@ -27,7 +28,7 @@
 - (id)init;
 - (id)initWithViewControllerBlock:(CDUnknownBlockType)arg1 didLoadBlock:(CDUnknownBlockType)arg2;
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 delegate:(id)arg4 visibilityTracker:(id)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 @property(nonatomic, retain) _TtC6Reddit18FeedPostHeaderNode *headerNode; // @synthesize headerNode;
 @property(nonatomic, retain) _TtC6Reddit24FeedPostModActionBarNode *modBarNode; // @synthesize modBarNode;
 @property(nonatomic, retain) _TtC6Reddit21FeedPostActionBarNode *actionBarNode; // @synthesize actionBarNode;

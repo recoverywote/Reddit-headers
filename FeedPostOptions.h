@@ -34,6 +34,7 @@
     _Bool _isInChatPostHoldout;
     _Bool _isPostUIRefreshEnabled;
     _Bool _shouldShowCommentCountInMetadataRow;
+    _Bool _isRedditVideoV2Enabled;
     FeedPostTitleOptions *_titleOptions;
     FeedPostEventBarOptions *_eventBarOptions;
     FeedPostTextOptions *_textOptions;
@@ -46,9 +47,11 @@
     struct CGSize _maxMediaSize;
 }
 
-+ (id)defaultChatPostOptions;
-+ (id)defaultFeedPostOptions;
++ (id)defaultChatPostOptionsWithViewContext:(id)arg1;
++ (id)defaultFeedPostOptionsWithViewContext:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <VideoContext> videoContext; // @synthesize videoContext=_videoContext;
+@property(nonatomic) _Bool isRedditVideoV2Enabled; // @synthesize isRedditVideoV2Enabled=_isRedditVideoV2Enabled;
 @property(nonatomic) _Bool shouldShowCommentCountInMetadataRow; // @synthesize shouldShowCommentCountInMetadataRow=_shouldShowCommentCountInMetadataRow;
 @property(readonly, nonatomic) _Bool isPostUIRefreshEnabled; // @synthesize isPostUIRefreshEnabled=_isPostUIRefreshEnabled;
 @property(nonatomic) _Bool isInChatPostHoldout; // @synthesize isInChatPostHoldout=_isInChatPostHoldout;
@@ -79,14 +82,12 @@
 @property(retain, nonatomic) FeedPostTextOptions *textOptions; // @synthesize textOptions=_textOptions;
 @property(retain, nonatomic) FeedPostEventBarOptions *eventBarOptions; // @synthesize eventBarOptions=_eventBarOptions;
 @property(retain, nonatomic) FeedPostTitleOptions *titleOptions; // @synthesize titleOptions=_titleOptions;
-- (void).cxx_destruct;
 - (_Bool)shouldShowBigSubscribeButtonForPost:(id)arg1;
 @property(readonly, nonatomic) _Bool useCompactMode;
 - (id)theatreDetailOptions;
 - (id)postDetailFeedPostOptions;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithTitleOptions:(id)arg1 eventBarOptions:(id)arg2 textOptions:(id)arg3 videoOptions:(id)arg4 webLinkOptions:(id)arg5;
-@property(readonly, nonatomic) _Bool isRedditVideoV2Enabled;
 
 @end
 

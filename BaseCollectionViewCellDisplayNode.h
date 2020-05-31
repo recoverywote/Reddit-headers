@@ -15,9 +15,9 @@
     double _separatorHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double separatorHeight; // @synthesize separatorHeight=_separatorHeight;
 @property(retain, nonatomic) ASDisplayNode<BaseCollectionViewCellSelected> *node; // @synthesize node=_node;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didEndDisplayingCell;

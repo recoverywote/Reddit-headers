@@ -7,6 +7,7 @@
 #import "ContentImageView.h"
 
 @class BaseImageView, BaseLabel, FeedPostOptions, RoundedImageView;
+@protocol ViewContext;
 
 @interface FeedPostThumbnailView : ContentImageView
 {
@@ -14,13 +15,15 @@
     BaseImageView *_placeholderImageView;
     RoundedImageView *_linkTypeIconImageView;
     FeedPostOptions *_options;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) RoundedImageView *linkTypeIconImageView; // @synthesize linkTypeIconImageView=_linkTypeIconImageView;
 @property(retain, nonatomic) BaseImageView *placeholderImageView; // @synthesize placeholderImageView=_placeholderImageView;
 @property(retain, nonatomic) BaseLabel *urlLabel; // @synthesize urlLabel=_urlLabel;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
 - (id)urlTextForPost:(id)arg1;
@@ -29,7 +32,8 @@
 - (_Bool)postHasThumbnailImage:(id)arg1;
 - (void)prepareForReuse;
 - (void)configureWithData:(id)arg1 withOptions:(id)arg2 shouldApplyStyling:(_Bool)arg3;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

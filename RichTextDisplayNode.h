@@ -23,6 +23,7 @@
     RichTextNodeOptions *_richTextNodeOptions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RichTextNodeOptions *richTextNodeOptions; // @synthesize richTextNodeOptions=_richTextNodeOptions;
 @property(retain, nonatomic) SubredditMentionsHandler *subredditMentionsHandler; // @synthesize subredditMentionsHandler=_subredditMentionsHandler;
 @property(retain, nonatomic) NSMapTable *mediaNodes; // @synthesize mediaNodes=_mediaNodes;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <RichTextDisplayNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long justifyContent; // @synthesize justifyContent=_justifyContent;
 @property(copy, nonatomic) NSAttributedString *attributedText; // @synthesize attributedText=_attributedText;
-- (void).cxx_destruct;
 - (void)resetNodesWithNewMediaNodes:(id)arg1 newDisplayNodes:(id)arg2;
 - (void)attributedLabelDidTapMediaView:(id)arg1 didTapRichTextMedia:(id)arg2;
 - (void)richTextTextNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;

@@ -27,13 +27,13 @@
     id <ChatSettingsPresenter> _presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <ChatSettingsPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) ChatSettingsSubredditDelegator *subredditDelegator; // @synthesize subredditDelegator=_subredditDelegator;
 @property(retain, nonatomic) ContactActionSheetDelegate *contactActionSheetDelegate; // @synthesize contactActionSheetDelegate=_contactActionSheetDelegate;
 @property(nonatomic) _Bool showsHistory; // @synthesize showsHistory=_showsHistory;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 reportedContact:(id)arg3 blockedContact:(id)arg4;
 - (id)analyticsScreenViewName;
 - (id)channelStore;

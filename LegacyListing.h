@@ -18,11 +18,11 @@
 
 + (id)keyPathsForValuesAffectingHasNextPage;
 + (id)defaultParameters;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *afterId; // @synthesize afterId=_afterId;
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(nonatomic) _Bool hasFetched; // @synthesize hasFetched;
-- (void).cxx_destruct;
 - (_Bool)hasNextPage;
 - (void)fetchNextPage:(CDUnknownBlockType)arg1;
 - (id)clone;

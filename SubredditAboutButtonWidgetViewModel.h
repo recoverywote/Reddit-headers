@@ -14,9 +14,9 @@
     SubredditButtonWidget *_buttonWidget;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditButtonWidget *buttonWidget; // @synthesize buttonWidget=_buttonWidget;
 @property(copy, nonatomic) NSAttributedString *attributedDescriptionText; // @synthesize attributedDescriptionText=_attributedDescriptionText;
-- (void).cxx_destruct;
 - (long long)numberOfRowItems;
 - (id)titleLabelText;
 - (double)heightForRow:(long long)arg1 rowWidth:(double)arg2;

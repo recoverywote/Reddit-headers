@@ -20,6 +20,7 @@
     NSLayoutConstraint *_centerYConstraintOffset;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *centerYConstraintOffset; // @synthesize centerYConstraintOffset=_centerYConstraintOffset;
 @property(retain, nonatomic) NSLayoutConstraint *centerYConstraint; // @synthesize centerYConstraint=_centerYConstraint;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) BaseView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) BaseLabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)configureWithChannel:(id)arg1 image:(id)arg2 text:(id)arg3;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

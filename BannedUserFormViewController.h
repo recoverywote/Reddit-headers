@@ -36,6 +36,7 @@
     NSString *_initialContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool allowsEditingUsername; // @synthesize allowsEditingUsername=_allowsEditingUsername;
 @property(readonly, copy, nonatomic) NSString *initialContext; // @synthesize initialContext=_initialContext;
 @property(readonly, copy, nonatomic) NSDate *initialBanDate; // @synthesize initialBanDate=_initialBanDate;
@@ -57,7 +58,6 @@
 @property(retain, nonatomic) ModFormTextField *usernameField; // @synthesize usernameField=_usernameField;
 @property(retain, nonatomic) UINavigationController *fromModal; // @synthesize fromModal=_fromModal;
 @property(retain, nonatomic) UIViewController *fromVC; // @synthesize fromVC=_fromVC;
-- (void).cxx_destruct;
 - (void)didTapContextView;
 - (void)configureBanContextContainerWithSubview:(id)arg1;
 - (id)commentViewFromComment:(id)arg1;

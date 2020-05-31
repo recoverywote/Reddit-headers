@@ -17,10 +17,10 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(copy, nonatomic) NSString *embedHTML; // @synthesize embedHTML=_embedHTML;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescriptionWithPrefix:(id)arg1;

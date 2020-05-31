@@ -8,7 +8,8 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class BaseButton, BaseImageView, BaseLabel, NSString, RedditService, SubredditChannel, SubredditChannelHeader;
+@class BaseButton, BaseImageView, BaseLabel, NSString, SubredditChannel, SubredditChannelHeader;
+@protocol ViewContext;
 
 @interface ChatSubredditCollectionViewCell : BaseCollectionViewCell <ObjectObserverProtocol>
 {
@@ -27,10 +28,13 @@
     NSString *_communityIconUrlString;
     SubredditChannelHeader *_channelHeader;
     unsigned long long _type;
+    id <ViewContext> _viewContext;
 }
 
 + (id)membersCountStringForCount:(unsigned long long)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1 forWidth:(double)arg2;
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) SubredditChannelHeader *channelHeader; // @synthesize channelHeader=_channelHeader;
 @property(copy, nonatomic) NSString *communityIconUrlString; // @synthesize communityIconUrlString=_communityIconUrlString;
@@ -46,18 +50,16 @@
 @property(retain, nonatomic) BaseLabel *mentionCountLabel; // @synthesize mentionCountLabel=_mentionCountLabel;
 @property(retain, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
-- (void).cxx_destruct;
 - (id)subredditBackgroundColor;
 - (void)updateCommunityIconDefault;
 - (void)updateCommunityIconWithUrl:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)configureStatusLabel;
 @property(readonly, nonatomic) _Bool shouldHideNSFWThumbnail;
 @property(readonly, nonatomic) _Bool shouldMarkSubredditNFSW;
-- (void)configureWithHeader:(id)arg1;
+- (void)configureWithHeader:(id)arg1 viewContext:(id)arg2;
 - (void)configureCommunityCellBoldDetail;
-- (void)configureWithPopularChannel:(id)arg1;
-- (void)configureWithChannel:(id)arg1 enableStatus:(_Bool)arg2 joined:(_Bool)arg3;
+- (void)configureWithPopularChannel:(id)arg1 viewContext:(id)arg2;
+- (void)configureWithChannel:(id)arg1 enableStatus:(_Bool)arg2 joined:(_Bool)arg3 viewContext:(id)arg4;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

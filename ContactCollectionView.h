@@ -13,8 +13,8 @@
     NSArray *_currentContacts;
 }
 
-@property(copy, nonatomic) NSArray *currentContacts; // @synthesize currentContacts=_currentContacts;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *currentContacts; // @synthesize currentContacts=_currentContacts;
 - (void)configureWithContacts:(id)arg1;
 
 @end

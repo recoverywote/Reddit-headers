@@ -10,7 +10,7 @@
 {
 }
 
-+ (CDUnknownBlockType)headerViewWithHeaderModels:(id)arg1 withRailsContext:(id)arg2;
++ (CDUnknownBlockType)headerViewWithHeaderModels:(id)arg1 railsContext:(id)arg2 viewContext:(id)arg3;
 + (id)headerViewModelForRailsContext:(id)arg1;
 
 @end

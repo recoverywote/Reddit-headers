@@ -13,8 +13,8 @@
     ASTextNode *_labelNode;
 }
 
-@property(retain, nonatomic) ASTextNode *labelNode; // @synthesize labelNode=_labelNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ASTextNode *labelNode; // @synthesize labelNode=_labelNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)setLabelAttribute:(id)arg1 value:(id)arg2;
 - (void)setTextFont:(id)arg1;

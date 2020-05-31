@@ -18,12 +18,12 @@
     id <HTMLNodeFilter> _filter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HTMLNodeFilter> filter; // @synthesize filter=_filter;
 @property(readonly, nonatomic) unsigned long long whatToShow; // @synthesize whatToShow=_whatToShow;
 @property(readonly, nonatomic) _Bool pointerBeforeReferenceNode; // @synthesize pointerBeforeReferenceNode=_pointerBeforeReferenceNode;
 @property(readonly, nonatomic) HTMLNode *referenceNode; // @synthesize referenceNode=_referenceNode;
 @property(readonly, nonatomic) HTMLNode *root; // @synthesize root=_root;
-- (void).cxx_destruct;
 - (id)nextObject;
 - (id)previousNode;
 - (id)nextNode;

@@ -20,6 +20,7 @@
     SubscribeButtonLarge *_subscribeButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubscribeButtonLarge *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
 @property(retain, nonatomic) BorderedImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
@@ -27,7 +28,6 @@
 @property(nonatomic) __weak NSObject<CommunitySubscriptionCollectionViewCellProtocol> *delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
 @property(retain, nonatomic) SubredditCommunityListWidgetCommunity *community; // @synthesize community=_community;
-- (void).cxx_destruct;
 - (void)configureCellWithCommunity:(id)arg1 iconPlaceholderImage:(id)arg2 iconDefaultBackgroundColor:(id)arg3 isSubscribed:(_Bool)arg4 subscribeButtonColor:(id)arg5 subscribeString:(id)arg6 subscribedString:(id)arg7;
 - (void)didTapSubscribeButton:(id)arg1;
 - (void)prepareForReuse;

@@ -32,6 +32,7 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType rightViewAction; // @synthesize rightViewAction=_rightViewAction;
 @property(nonatomic) _Bool shouldShowValidatedRightViewIcon; // @synthesize shouldShowValidatedRightViewIcon=_shouldShowValidatedRightViewIcon;
 @property(nonatomic) _Bool shouldShowErrorRightViewIcon; // @synthesize shouldShowErrorRightViewIcon=_shouldShowErrorRightViewIcon;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) NSString *textInput; // @synthesize textInput=_textInput;
 @property(retain, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
-- (void).cxx_destruct;
 
 @end
 

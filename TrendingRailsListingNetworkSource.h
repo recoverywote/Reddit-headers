@@ -21,6 +21,7 @@
     id <DiscoveryUnitViewModelDataProviderDelegate> _carouselDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <DiscoveryUnitViewModelDataProviderDelegate> carouselDelegate; // @synthesize carouselDelegate=_carouselDelegate;
 @property(copy, nonatomic) NSDictionary *discoveryUnitViewModels; // @synthesize discoveryUnitViewModels=_discoveryUnitViewModels;
 @property(copy, nonatomic) NSDictionary *flairs; // @synthesize flairs=_flairs;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSArray *headerObjects; // @synthesize headerObjects=_headerObjects;
 @property(retain, nonatomic) SubredditCategory *railsTopic; // @synthesize railsTopic=_railsTopic;
 @property(copy, nonatomic) NSString *viewTreatment; // @synthesize viewTreatment=_viewTreatment;
-- (void).cxx_destruct;
 - (void)parseData:(id)arg1;
 - (id)discoveryUnitViewModelsForData:(id)arg1;
 - (id)orderedFlairForDiscoveryUnit:(id)arg1;

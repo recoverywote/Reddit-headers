@@ -27,6 +27,7 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) NSArray *trophies; // @synthesize trophies=_trophies;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> userProfileDelegate; // @synthesize userProfileDelegate=_userProfileDelegate;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (void)trackInitiatingChatEvent;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

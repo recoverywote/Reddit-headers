@@ -26,6 +26,7 @@
 }
 
 + (double)preferredHeight;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *selectedImage; // @synthesize selectedImage=_selectedImage;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(retain, nonatomic) BaseView *nonNumericBadgeView; // @synthesize nonNumericBadgeView=_nonNumericBadgeView;
@@ -38,7 +39,6 @@
 @property(nonatomic) long long badgeValue; // @synthesize badgeValue=_badgeValue;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) __weak id <PageSegmentItemDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGRect)rectForContentInView;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;

@@ -17,15 +17,16 @@
     NSArray *_members;
     NSString *_name;
     unsigned long long _createdAt;
+    RedditService *_service;
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) unsigned long long createdAt; // @synthesize createdAt=_createdAt;
 @property(nonatomic) _Bool selected; // @synthesize selected=_selected;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSArray *members; // @synthesize members=_members;
-- (void).cxx_destruct;
-@property(readonly, nonatomic) RedditService *service;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)unreadCount;
@@ -36,7 +37,7 @@
 - (id)memberString;
 - (_Bool)joined;
 @property(readonly, nonatomic) NSArray *membersExceptMe;
-- (id)init;
+- (id)initWithService:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

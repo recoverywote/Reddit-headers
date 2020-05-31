@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: economyLogger
     // Error parsing type: , name: accountManager
-    // Error parsing type: , name: valuesInjector
 }
 
 @end

@@ -24,12 +24,12 @@
 + (id)mutedSolidButton;
 + (id)solidButton;
 + (id)buttonWithImage:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldRoundButtons; // @synthesize shouldRoundButtons=_shouldRoundButtons;
 @property(retain, nonatomic) _TtC8RedditUI21RedditButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) NSDictionary *titleAttributes; // @synthesize titleAttributes=_titleAttributes;
 @property(nonatomic) _Bool disableTemplatedImage; // @synthesize disableTemplatedImage=_disableTemplatedImage;
 @property(nonatomic) struct UIEdgeInsets extendedInsets; // @synthesize extendedInsets=_extendedInsets;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)setImage:(id)arg1 forState:(unsigned long long)arg2;

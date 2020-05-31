@@ -30,6 +30,7 @@
     NSTimer *_timer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) UIActivityIndicatorView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <EmojiPickerViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)backspace;
 - (void)didLongPressBackspaceButton:(id)arg1;
 - (void)didTapBackspaceButton:(id)arg1;

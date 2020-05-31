@@ -38,6 +38,7 @@
     NSString *_gifts_data_status;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool has_ndoIsSet; // @synthesize has_ndoIsSet=_has_ndoIsSet;
 @property(nonatomic) _Bool has_ndo; // @synthesize has_ndo=_has_ndo;
 @property(nonatomic) _Bool gifts_data_statusIsSet; // @synthesize gifts_data_statusIsSet=_gifts_data_statusIsSet;
@@ -60,7 +61,6 @@
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool user_idsIsSet; // @synthesize user_idsIsSet=_user_idsIsSet;
 @property(retain, nonatomic) NSMutableArray *user_ids; // @synthesize user_ids=_user_ids;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

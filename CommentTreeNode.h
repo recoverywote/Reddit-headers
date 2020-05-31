@@ -23,6 +23,7 @@
     long long _childCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isDeleted; // @synthesize isDeleted=_isDeleted;
 @property(nonatomic) _Bool isCollapsed; // @synthesize isCollapsed=_isCollapsed;
 @property(nonatomic) _Bool isTopLevelComment; // @synthesize isTopLevelComment=_isTopLevelComment;
@@ -32,7 +33,6 @@
 @property(nonatomic) long long depth; // @synthesize depth=_depth;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) CommentTreeNode *parent; // @synthesize parent=_parent;
-- (void).cxx_destruct;
 - (id)debugDescription;
 @property(readonly, nonatomic) CommentTreeNode *root;
 @property(readonly, nonatomic) _Bool isContinueThreadPlaceholder;

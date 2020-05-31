@@ -15,10 +15,10 @@
     long long _order;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long order; // @synthesize order=_order;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, nonatomic) long long optionId; // @synthesize optionId=_optionId;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

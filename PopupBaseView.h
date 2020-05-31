@@ -15,10 +15,10 @@
     NSArray *_textFields;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool alreadyLayout; // @synthesize alreadyLayout=_alreadyLayout;
 @property(readonly, nonatomic) NSArray *textFields; // @synthesize textFields=_textFields;
 @property(retain, nonatomic) UIButton *confirmButton; // @synthesize confirmButton=_confirmButton;
-- (void).cxx_destruct;
 - (_Bool)becomeFirstResponder;
 @property(readonly, nonatomic) double preferredHeight;
 - (void)layoutSubviews;

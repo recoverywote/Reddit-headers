@@ -18,12 +18,12 @@
     BaseButtonNode *_closeButtonNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButtonNode *closeButtonNode; // @synthesize closeButtonNode=_closeButtonNode;
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(nonatomic) __weak id <ForYouFeedBannerCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ForYouFeedBanner *banner; // @synthesize banner=_banner;
-- (void).cxx_destruct;
 - (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (void)closeButtonDidTap:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

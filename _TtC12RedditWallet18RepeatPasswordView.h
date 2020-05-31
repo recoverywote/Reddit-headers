@@ -17,7 +17,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: contentContainer
     // Error parsing type: , name: $__lazy_storage_$_scrollingInnerView
     // Error parsing type: , name: bottomConstraint
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

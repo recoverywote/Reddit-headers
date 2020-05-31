@@ -15,9 +15,9 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UnfairLock *tappedLock; // @synthesize tappedLock=_tappedLock;
 @property(retain, nonatomic) UnfairLock *receivedLock; // @synthesize receivedLock=_receivedLock;
-- (void).cxx_destruct;
 - (void)logTappedNotification:(id)arg1;
 - (void)logSuppressedNotification:(id)arg1;
 - (void)logReceivedNotification:(id)arg1;

@@ -20,6 +20,7 @@
     NSBundle *_assetBundle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSBundle *assetBundle; // @synthesize assetBundle=_assetBundle;
 @property(retain, nonatomic) NSString *rootDirectory; // @synthesize rootDirectory=_rootDirectory;
 @property(readonly, nonatomic) LOTLayerGroup *layerGroup; // @synthesize layerGroup=_layerGroup;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) NSNumber *assetHeight; // @synthesize assetHeight=_assetHeight;
 @property(readonly, nonatomic) NSNumber *assetWidth; // @synthesize assetWidth=_assetWidth;
 @property(readonly, nonatomic) NSString *referenceID; // @synthesize referenceID=_referenceID;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1 withAssetGroup:(id)arg2 withFramerate:(id)arg3;
 - (id)initWithJSON:(id)arg1 withAssetGroup:(id)arg2 withAssetBundle:(id)arg3 withFramerate:(id)arg4;
 

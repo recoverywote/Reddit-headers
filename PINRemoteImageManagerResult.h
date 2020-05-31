@@ -24,6 +24,7 @@
 + (id)imageResultWithImage:(id)arg1 alternativeRepresentation:(id)arg2 requestLength:(double)arg3 resultType:(unsigned long long)arg4 UUID:(id)arg5 response:(id)arg6 error:(id)arg7 renderedImageQuality:(double)arg8;
 + (id)imageResultWithImage:(id)arg1 alternativeRepresentation:(id)arg2 requestLength:(double)arg3 resultType:(unsigned long long)arg4 UUID:(id)arg5 response:(id)arg6 error:(id)arg7 bytesSavedByResuming:(unsigned long long)arg8;
 + (id)imageResultWithImage:(id)arg1 alternativeRepresentation:(id)arg2 requestLength:(double)arg3 resultType:(unsigned long long)arg4 UUID:(id)arg5 response:(id)arg6 error:(id)arg7;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURLResponse *response; // @synthesize response=_response;
 @property(readonly, nonatomic) unsigned long long bytesSavedByResuming; // @synthesize bytesSavedByResuming=_bytesSavedByResuming;
 @property(readonly, nonatomic) double renderedImageQuality; // @synthesize renderedImageQuality=_renderedImageQuality;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) double requestDuration; // @synthesize requestDuration=_requestDuration;
 @property(readonly, nonatomic) id alternativeRepresentation; // @synthesize alternativeRepresentation=_alternativeRepresentation;
 @property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithImage:(id)arg1 alternativeRepresentation:(id)arg2 requestLength:(double)arg3 error:(id)arg4 resultType:(unsigned long long)arg5 UUID:(id)arg6 response:(id)arg7 renderedImageQuality:(double)arg8 bytesSavedByResuming:(unsigned long long)arg9;
 

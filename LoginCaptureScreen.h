@@ -16,11 +16,11 @@
     CaptureContentButton *_forgotPasswordContent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool revealPassword; // @synthesize revealPassword=_revealPassword;
 @property(retain, nonatomic) CaptureContentButton *forgotPasswordContent; // @synthesize forgotPasswordContent=_forgotPasswordContent;
 @property(retain, nonatomic) CaptureContentTextEntry *passwordContent; // @synthesize passwordContent=_passwordContent;
 @property(retain, nonatomic) CaptureContentTextEntry *usernameContent; // @synthesize usernameContent=_usernameContent;
-- (void).cxx_destruct;
 - (void)logTapNextAnalyticsEvent;
 - (void)logTapBackAnalyticsEvent;
 - (void)didTapCloseForgotPassword;

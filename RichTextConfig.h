@@ -29,6 +29,7 @@
 + (void)setCurrentConfig:(id)arg1;
 + (id)currentConfig;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) long long defaultTableColumnAlignment; // @synthesize defaultTableColumnAlignment=_defaultTableColumnAlignment;
 @property(copy, nonatomic) NSParagraphStyle *paragraphStyle; // @synthesize paragraphStyle=_paragraphStyle;
 @property(nonatomic) double blockquoteIndent; // @synthesize blockquoteIndent=_blockquoteIndent;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) UIFont *italicFont; // @synthesize italicFont=_italicFont;
 @property(retain, nonatomic) UIFont *boldFont; // @synthesize boldFont=_boldFont;
 @property(retain, nonatomic) UIFont *codeFont; // @synthesize codeFont=_codeFont;
-- (void).cxx_destruct;
 - (id)superscriptAttributesForLevel:(double)arg1;
 - (id)headingFontForLevel:(long long)arg1;
 - (id)init;

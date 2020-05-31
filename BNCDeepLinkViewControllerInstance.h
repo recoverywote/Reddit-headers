@@ -15,9 +15,9 @@
     long long _option;
 }
 
+- (void).cxx_destruct;
 @property long long option; // @synthesize option=_option;
 @property(retain, nonatomic) UIViewController<BranchDeepLinkingController> *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 
 @end
 

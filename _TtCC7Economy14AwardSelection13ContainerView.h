@@ -6,6 +6,7 @@
 
 #import <UIKit/UIVisualEffectView.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtCC7Economy14AwardSelection13ContainerView : UIVisualEffectView
 {
     // Error parsing type: , name: theme

@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit27AccountStatusViewController.h"
 
-#import "_TtP6Reddit27AccountSwitcherViewDelegate_-Protocol.h"
-
-@interface _TtC6Reddit27AccountStatusViewController (Reddit) <_TtP6Reddit27AccountSwitcherViewDelegate_>
+@interface _TtC6Reddit27AccountStatusViewController (Reddit)
 - (void)didTapClose;
 - (void)didSelectAddAccount;
 - (void)didSelectLogoutFromAccount:(id)arg1;

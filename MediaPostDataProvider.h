@@ -15,8 +15,8 @@
     NSArray *_mediaPosts;
 }
 
-@property(retain, nonatomic) NSArray *mediaPosts; // @synthesize mediaPosts=_mediaPosts;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *mediaPosts; // @synthesize mediaPosts=_mediaPosts;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;

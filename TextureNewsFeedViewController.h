@@ -21,11 +21,11 @@
     double _oldOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double oldOffset; // @synthesize oldOffset=_oldOffset;
 @property(retain, nonatomic) NewsCollectionViewFlowLayout *flowLayout; // @synthesize flowLayout=_flowLayout;
 @property(retain, nonatomic) BaseView *floatingPersonalizeTopicsView; // @synthesize floatingPersonalizeTopicsView=_floatingPersonalizeTopicsView;
 @property(retain, nonatomic) NewsUpliftingContentController *newsUpliftController; // @synthesize newsUpliftController=_newsUpliftController;
-- (void).cxx_destruct;
 - (void)newsTopicsLoadDidFailWithError:(id)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)themeDidChange:(id)arg1;

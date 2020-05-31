@@ -16,11 +16,11 @@
     ASImageNode *_keyNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASImageNode *keyNode; // @synthesize keyNode=_keyNode;
 @property(retain, nonatomic) ASTextNode *subredditDescription; // @synthesize subredditDescription=_subredditDescription;
 @property(retain, nonatomic) ASTextNode *subredditName; // @synthesize subredditName=_subredditName;
 @property(retain, nonatomic) ASTextNode *channelName; // @synthesize channelName=_channelName;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureWithChannel:(id)arg1;
 - (id)init;

@@ -32,6 +32,7 @@
     VideoAssetLoader *_downloader;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool pausedForBackgroundMode; // @synthesize pausedForBackgroundMode=_pausedForBackgroundMode;
 @property(nonatomic) _Bool isBlurEffectRemoved; // @synthesize isBlurEffectRemoved=_isBlurEffectRemoved;
 @property(nonatomic) _Bool canAutoPlay; // @synthesize canAutoPlay=_canAutoPlay;
@@ -48,7 +49,6 @@
 @property(nonatomic) __weak id <FeedPostVideoNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Post *parentPost; // @synthesize parentPost=_parentPost;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)imageNode:(id)arg1 didLoadImage:(id)arg2;
 - (void)videoNode:(id)arg1 willChangePlayerState:(long long)arg2 toState:(long long)arg3;
 - (void)didTapVideoNode:(id)arg1;

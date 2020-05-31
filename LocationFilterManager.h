@@ -18,13 +18,13 @@
     NSDictionary *_regionLookup;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *regionLookup; // @synthesize regionLookup=_regionLookup;
 @property(retain, nonatomic) AppSettings *appSettings; // @synthesize appSettings=_appSettings;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) GeoRegion *globalRegion; // @synthesize globalRegion=_globalRegion;
-- (void).cxx_destruct;
 - (id)geoCacheFilePathForAccount:(id)arg1;
 - (id)geoCacheDirectoryPath;
 - (id)dictionaryForRegions:(id)arg1;

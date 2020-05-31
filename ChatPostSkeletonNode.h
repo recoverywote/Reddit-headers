@@ -20,6 +20,7 @@
 }
 
 + (id)makeGrayNode;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *contentView5; // @synthesize contentView5=_contentView5;
 @property(retain, nonatomic) ASDisplayNode *contentView4; // @synthesize contentView4=_contentView4;
 @property(retain, nonatomic) ASDisplayNode *contentView3; // @synthesize contentView3=_contentView3;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) ASDisplayNode *detailView; // @synthesize detailView=_detailView;
 @property(retain, nonatomic) ASDisplayNode *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) ASDisplayNode *avatarView; // @synthesize avatarView=_avatarView;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)init;
 

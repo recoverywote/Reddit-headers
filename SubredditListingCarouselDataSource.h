@@ -14,9 +14,9 @@
     NSString *_subredditPk;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *subredditPk; // @synthesize subredditPk=_subredditPk;
 @property(nonatomic) long long originalItemCount; // @synthesize originalItemCount=_originalItemCount;
-- (void).cxx_destruct;
 - (id)cloneDataSourceWithSeeMoreCount:(long long)arg1;
 - (_Bool)hasMoreContent;
 - (id)carouselItemsFromData:(id)arg1;

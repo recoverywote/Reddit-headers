@@ -21,13 +21,13 @@
     struct CGPoint _initialContentOrigin;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *yConstraint; // @synthesize yConstraint=_yConstraint;
 @property(nonatomic) struct CGPoint initialContentOrigin; // @synthesize initialContentOrigin=_initialContentOrigin;
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
 @property(retain, nonatomic) FloatingUpdateView *refreshPillView; // @synthesize refreshPillView=_refreshPillView;
 @property(nonatomic) double freshContentButtonCooldown; // @synthesize freshContentButtonCooldown=_freshContentButtonCooldown;
 @property(nonatomic) __weak id <RefreshControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didPan:(id)arg1;
 - (void)floatingHeaderShouldMove:(id)arg1;
 - (void)dismissRefreshPill;

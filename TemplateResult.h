@@ -15,10 +15,10 @@
     NSError *_error;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(copy, nonatomic) NSArray *replacements; // @synthesize replacements=_replacements;
 @property(copy, nonatomic) NSString *value; // @synthesize value=_value;
-- (void).cxx_destruct;
 
 @end
 

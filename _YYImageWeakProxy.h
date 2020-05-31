@@ -12,8 +12,8 @@
 }
 
 + (id)proxyWithTarget:(id)arg1;
-@property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
 - (id)debugDescription;
 - (id)description;
 - (_Bool)isProxy;

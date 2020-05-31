@@ -13,8 +13,8 @@
     AttributedLabel *_attributedLabel;
 }
 
-@property(nonatomic) __weak AttributedLabel *attributedLabel; // @synthesize attributedLabel=_attributedLabel;
 - (void).cxx_destruct;
+@property(nonatomic) __weak AttributedLabel *attributedLabel; // @synthesize attributedLabel=_attributedLabel;
 - (_Bool)resignFirstResponder;
 
 @end

@@ -17,11 +17,11 @@
     id <PreviewLocationActionDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <PreviewLocationActionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) BaseButtonNode *moreDetailsActionButtonNode; // @synthesize moreDetailsActionButtonNode=_moreDetailsActionButtonNode;
 @property(retain, nonatomic) BaseButtonNode *allowLocationButtonNode; // @synthesize allowLocationButtonNode=_allowLocationButtonNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)allowLocationWasTapped:(id)arg1;
 - (void)moreDetailsTapped:(id)arg1;

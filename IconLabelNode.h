@@ -17,11 +17,11 @@
     IconLabelModel *_iconLabelModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) IconLabelModel *iconLabelModel; // @synthesize iconLabelModel=_iconLabelModel;
 @property(nonatomic) __weak id <IconLabelNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) BaseButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
 @property(retain, nonatomic) ASTextNode *labelNode; // @synthesize labelNode=_labelNode;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;

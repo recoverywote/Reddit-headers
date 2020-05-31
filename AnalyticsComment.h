@@ -36,6 +36,7 @@
     NSString *_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool created_timestampIsSet; // @synthesize created_timestampIsSet=_created_timestampIsSet;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSString *post_id; // @synthesize post_id=_post_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

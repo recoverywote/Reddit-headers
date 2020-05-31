@@ -30,6 +30,7 @@
     NSString *_timezone;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool is_recurringIsSet; // @synthesize is_recurringIsSet=_is_recurringIsSet;
 @property(nonatomic) _Bool is_recurring; // @synthesize is_recurring=_is_recurring;
 @property(nonatomic) _Bool timezoneIsSet; // @synthesize timezoneIsSet=_timezoneIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *creator_user_id; // @synthesize creator_user_id=_creator_user_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(nonatomic) long long id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

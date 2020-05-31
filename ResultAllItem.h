@@ -15,8 +15,8 @@
     NSString *_query;
 }
 
-@property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 

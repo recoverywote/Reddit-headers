@@ -20,11 +20,11 @@
 
 + (_Bool)supportsSecureCoding;
 + (id)globalRegionWithSubdivisionData:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *subRegions; // @synthesize subRegions=_subRegions;
 @property(copy, nonatomic) NSString *fullCode; // @synthesize fullCode=_fullCode;
 @property(copy, nonatomic) NSString *code; // @synthesize code=_code;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (id)totalParam;

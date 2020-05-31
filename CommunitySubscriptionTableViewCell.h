@@ -20,6 +20,7 @@
     BaseButton *_supplementaryButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *supplementaryButton; // @synthesize supplementaryButton=_supplementaryButton;
 @property(retain, nonatomic) BaseButton *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
 @property(retain, nonatomic) BorderedImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
@@ -27,11 +28,10 @@
 @property(retain, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
 @property(nonatomic) __weak NSObject<CommunitySubscriptionTableViewCellDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (void)subredditSubscriptionDidChange:(id)arg1;
 - (void)didTapSupplementaryButton:(id)arg1;
 - (void)didTapSubscribeButton:(id)arg1;
-- (void)configureWithSubreddit:(id)arg1 alreadyAdded:(_Bool)arg2;
+- (void)configureWithSubreddit:(id)arg1 viewContext:(id)arg2 alreadyAdded:(_Bool)arg3;
 - (void)prepareForReuse;
 - (void)setupViews;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

@@ -17,18 +17,18 @@
     ASDisplayNode *_gradientNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *gradientNode; // @synthesize gradientNode=_gradientNode;
 @property(retain, nonatomic) ASNetworkImageNode *bannerNode; // @synthesize bannerNode=_bannerNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
 @property(retain, nonatomic) ASTextNode *metadataTextNode; // @synthesize metadataTextNode=_metadataTextNode;
 @property(retain, nonatomic) SubscribableButtonNode *subredditIconNode; // @synthesize subredditIconNode=_subredditIconNode;
-- (void).cxx_destruct;
 - (id)imageURLForPost:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (id)createGradientNode;
 - (void)createNodes;
-- (id)initWithCarouselItem:(id)arg1;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2;
 
 @end
 

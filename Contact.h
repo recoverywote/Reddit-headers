@@ -34,6 +34,7 @@
 + (id)tableName;
 + (id)keyPathsToObserveChanges;
 + (id)sortedContacts:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SBDUser *sendbirdUser; // @synthesize sendbirdUser=_sendbirdUser;
 @property(copy, nonatomic) NSDictionary *serverUserData; // @synthesize serverUserData=_serverUserData;
 @property(nonatomic) _Bool blockedByMe; // @synthesize blockedByMe=_blockedByMe;
@@ -49,7 +50,6 @@
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(nonatomic) unsigned long long uniqueID; // @synthesize uniqueID=_uniqueID;
 @property(nonatomic) _Bool selected; // @synthesize selected;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, copy) NSString *debugDescription;

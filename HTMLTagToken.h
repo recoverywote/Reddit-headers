@@ -15,10 +15,10 @@
     _Bool _selfClosing;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isSelfClosing) _Bool selfClosing; // @synthesize selfClosing=_selfClosing;
 @property(retain, nonatomic) HTMLOrderedDictionary *attributes; // @synthesize attributes=_attributes;
 @property(copy, nonatomic) NSString *tagName; // @synthesize tagName=_tagName;
-- (void).cxx_destruct;
 - (void)appendStringToTagName:(id)arg1;
 - (id)initWithTagName:(id)arg1 attributes:(id)arg2;
 - (id)initWithTagName:(id)arg1;

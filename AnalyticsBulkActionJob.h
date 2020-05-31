@@ -38,6 +38,7 @@
     NSMutableArray *_targets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool targetsIsSet; // @synthesize targetsIsSet=_targetsIsSet;
 @property(retain, nonatomic) NSMutableArray *targets; // @synthesize targets=_targets;
 @property(nonatomic) _Bool user_idIsSet; // @synthesize user_idIsSet=_user_idIsSet;
@@ -60,7 +61,6 @@
 @property(copy, nonatomic) NSString *bigquery_job_id; // @synthesize bigquery_job_id=_bigquery_job_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -22,10 +22,10 @@
 + (id)URLForQueueFile;
 + (id)queueFile_deprecated;
 + (id)exceptionString:(id)arg1;
+- (void).cxx_destruct;
 @property(retain) NSObject<OS_dispatch_source> *persistTimer; // @synthesize persistTimer=_persistTimer;
 @property(retain) NSObject<OS_dispatch_queue> *asyncQueue; // @synthesize asyncQueue=_asyncQueue;
 @property(retain) NSMutableArray *queue; // @synthesize queue=_queue;
-- (void).cxx_destruct;
 - (void)retrieve;
 @property(readonly) _Bool isDirty;
 - (void)persistImmediately;

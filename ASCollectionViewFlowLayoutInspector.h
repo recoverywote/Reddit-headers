@@ -23,8 +23,8 @@
     UICollectionViewFlowLayout *_layout;
 }
 
-@property(nonatomic) __weak UICollectionViewFlowLayout *layout; // @synthesize layout=_layout;
 - (void).cxx_destruct;
+@property(nonatomic) __weak UICollectionViewFlowLayout *layout; // @synthesize layout=_layout;
 - (id)delegateForCollectionView:(id)arg1;
 - (long long)scrollableDirections;
 - (unsigned long long)collectionView:(id)arg1 supplementaryNodesOfKind:(id)arg2 inSection:(unsigned long long)arg3;

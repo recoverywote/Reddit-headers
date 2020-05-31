@@ -18,11 +18,11 @@
     RailsListingDeduplicator *_deduplicator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RailsListingDeduplicator *deduplicator; // @synthesize deduplicator=_deduplicator;
 @property(retain, nonatomic) NSMutableSet *uniqueObjects; // @synthesize uniqueObjects=_uniqueObjects;
 @property(nonatomic) _Bool deduplication; // @synthesize deduplication=_deduplication;
 @property(nonatomic) _Bool insertSeparator; // @synthesize insertSeparator=_insertSeparator;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (_Bool)shouldAddSeparatorForObject:(id)arg1 previousObject:(id)arg2;

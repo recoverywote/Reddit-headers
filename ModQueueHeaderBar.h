@@ -25,6 +25,7 @@
     CALayer *_bottomBorder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *bottomBorder; // @synthesize bottomBorder=_bottomBorder;
 @property(retain, nonatomic) BaseButton *subredditDropdownButton; // @synthesize subredditDropdownButton=_subredditDropdownButton;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) BaseButton *subredditButton; // @synthesize subredditButton=_subredditButton;
 @property(nonatomic) __weak NSObject<ModQueueHeaderBarDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak UIViewController *parentViewController; // @synthesize parentViewController=_parentViewController;
-- (void).cxx_destruct;
 - (id)titleForContentMode:(unsigned long long)arg1;
 - (id)titleForQueueType:(long long)arg1;
 - (id)iconForContentMode:(unsigned long long)arg1;

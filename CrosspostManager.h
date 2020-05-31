@@ -14,9 +14,9 @@
     CrosspostCache *_topkarmaSubredditsCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CrosspostCache *topkarmaSubredditsCache; // @synthesize topkarmaSubredditsCache=_topkarmaSubredditsCache;
 @property(retain, nonatomic) CrosspostCache *crosspostableSubredditsCache; // @synthesize crosspostableSubredditsCache=_crosspostableSubredditsCache;
-- (void).cxx_destruct;
 - (void)recentCrosspostableSubredditsForPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)recentCrosspostableSubreddits:(CDUnknownBlockType)arg1;
 - (void)crosspostableSubredditsForPost:(id)arg1 completion:(CDUnknownBlockType)arg2;

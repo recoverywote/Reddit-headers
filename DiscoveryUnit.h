@@ -47,6 +47,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *surfaceParameters; // @synthesize surfaceParameters=_surfaceParameters;
 @property(copy, nonatomic) NSSet *options; // @synthesize options=_options;
 @property(readonly, nonatomic) NSArray *chainingSurfaces; // @synthesize chainingSurfaces=_chainingSurfaces;
@@ -78,7 +79,6 @@
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) unsigned long long surfacePosition;

@@ -24,6 +24,7 @@
     NSURL *_deferredURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *deferredURL; // @synthesize deferredURL=_deferredURL;
 @property(retain, nonatomic) NSLayoutConstraint *contentTopAlignConstraint; // @synthesize contentTopAlignConstraint=_contentTopAlignConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *contentCenterConstraint; // @synthesize contentCenterConstraint=_contentCenterConstraint;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) BaseButton *dismissButton; // @synthesize dismissButton=_dismissButton;
 @property(copy, nonatomic) CDUnknownBlockType didTapLoginButton; // @synthesize didTapLoginButton=_didTapLoginButton;
 @property(copy, nonatomic) CDUnknownBlockType didTapSignUpButton; // @synthesize didTapSignUpButton=_didTapSignUpButton;
-- (void).cxx_destruct;
 - (void)captureViewControllerDidTapLogin:(id)arg1;
 - (void)captureViewControllerDidFinish:(id)arg1;
 - (void)captureViewControllerDidCancel:(id)arg1;

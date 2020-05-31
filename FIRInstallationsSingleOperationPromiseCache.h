@@ -14,9 +14,9 @@
     FBLPromise *_pendingPromise;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FBLPromise *pendingPromise; // @synthesize pendingPromise=_pendingPromise;
 @property(readonly, nonatomic) CDUnknownBlockType newOperationHandler; // @synthesize newOperationHandler=_newOperationHandler;
-- (void).cxx_destruct;
 - (id)getExistingPendingPromise;
 - (id)getExistingPendingOrCreateNewPromise;
 - (id)initWithNewOperationHandler:(CDUnknownBlockType)arg1;

@@ -14,14 +14,14 @@
     struct CGSize _contentSize;
     ASCollectionLayoutContext *_context;
     NSMapTable *_elementToLayoutAttributesTable;
-    struct NSMapTable *_pageToLayoutAttributesTable;
-    struct NSMapTable *_unmeasuredPageToLayoutAttributesTable;
+    NSMapTable *_pageToLayoutAttributesTable;
+    NSMapTable *_unmeasuredPageToLayoutAttributesTable;
 }
 
-+ (struct NSMapTable *)_unmeasuredLayoutAttributesTableFromTable:(id)arg1 contentSize:(struct CGSize)arg2 pageSize:(struct CGSize)arg3;
++ (id)_unmeasuredLayoutAttributesTableFromTable:(id)arg1 contentSize:(struct CGSize)arg2 pageSize:(struct CGSize)arg3;
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (struct NSMapTable *)getAndRemoveUnmeasuredLayoutAttributesPageTableInRect:(struct CGRect)arg1;
+- (id)getAndRemoveUnmeasuredLayoutAttributesPageTableInRect:(struct CGRect)arg1;
 - (id)layoutAttributesForElementsInRect:(struct CGRect)arg1;
 - (id)layoutAttributesForElement:(id)arg1;
 - (id)layoutAttributesForSupplementaryElementOfKind:(id)arg1 atIndexPath:(id)arg2;

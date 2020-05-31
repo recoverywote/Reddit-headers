@@ -15,10 +15,10 @@
     struct UIEdgeInsets _insets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(retain, nonatomic) NSArray *nodes; // @synthesize nodes=_nodes;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithNodes:(id)arg1 spacing:(double)arg2 insets:(struct UIEdgeInsets)arg3;
 

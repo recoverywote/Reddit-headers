@@ -21,12 +21,12 @@
     SimpleLabelIconTableHeaderView *_headerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SimpleLabelIconTableHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(copy, nonatomic) NSString *currentSearchString; // @synthesize currentSearchString=_currentSearchString;
 @property(copy, nonatomic) NSArray *searchResults; // @synthesize searchResults=_searchResults;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;

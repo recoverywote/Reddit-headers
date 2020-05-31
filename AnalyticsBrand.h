@@ -40,6 +40,7 @@
     NSMutableArray *_feature_flags;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool feature_flagsIsSet; // @synthesize feature_flagsIsSet=_feature_flagsIsSet;
 @property(retain, nonatomic) NSMutableArray *feature_flags; // @synthesize feature_flags=_feature_flags;
 @property(nonatomic) _Bool pay_by_invoiceIsSet; // @synthesize pay_by_invoiceIsSet=_pay_by_invoiceIsSet;
@@ -64,7 +65,6 @@
 @property(copy, nonatomic) NSString *status; // @synthesize status=_status;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

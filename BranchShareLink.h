@@ -25,6 +25,7 @@
     id <BranchShareLinkDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <BranchShareLinkDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) BranchLinkProperties *linkProperties; // @synthesize linkProperties=_linkProperties;
 @property(readonly, nonatomic) BranchUniversalObject *universalObject; // @synthesize universalObject=_universalObject;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) NSString *shareText; // @synthesize shareText=_shareText;
 @property(retain, nonatomic) NSURL *placeholderURL; // @synthesize placeholderURL=_placeholderURL;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (_Bool)returnURL;
 - (id)shareObjectForItem:(id)arg1 activityType:(id)arg2;
 - (void)presentActivityViewControllerFromViewController:(id)arg1 anchor:(id)arg2;

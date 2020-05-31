@@ -17,7 +17,8 @@
     // Error parsing type: , name: label
     // Error parsing type: , name: arrowAnimationView
     // Error parsing type: , name: illustrationAnimationView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: isLoopingFinalAnimation
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

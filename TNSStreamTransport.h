@@ -16,9 +16,9 @@
     NSOutputStream *_output;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSOutputStream *output; // @synthesize output=_output;
 @property(retain, nonatomic) NSInputStream *input; // @synthesize input=_input;
-- (void).cxx_destruct;
 - (void)close;
 - (_Bool)flush:(id *)arg1;
 - (_Bool)write:(const char *)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 error:(id *)arg4;

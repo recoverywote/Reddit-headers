@@ -15,10 +15,10 @@
     struct UIEdgeInsets _buttonInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets buttonInsets; // @synthesize buttonInsets=_buttonInsets;
 @property(nonatomic) __weak UIStackView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) NSArray *buttons; // @synthesize buttons=_buttons;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (void)setButtonTitle:(id)arg1 forControlState:(unsigned long long)arg2 atIndex:(long long)arg3;
 - (void)setButtonHidden:(_Bool)arg1 atIndex:(long long)arg2;

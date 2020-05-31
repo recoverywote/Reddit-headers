@@ -18,12 +18,12 @@
     long long _maxRecommendation;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long maxRecommendation; // @synthesize maxRecommendation=_maxRecommendation;
 @property(copy, nonatomic) NSArray *originalItems; // @synthesize originalItems=_originalItems;
 @property(retain, nonatomic) NSObject<CarouselDataSource><CarouselDataSourceInternal> *dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) CaptureButtonListItem *popularNearMeLabel; // @synthesize popularNearMeLabel=_popularNearMeLabel;
 @property(retain, nonatomic) SubredditsCaptureScreen *subredditSuggestionScreen; // @synthesize subredditSuggestionScreen=_subredditSuggestionScreen;
-- (void).cxx_destruct;
 - (void)parseWithDataSource:(id)arg1;
 - (void)fetchRecommendedSubredditsForCategoriesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)willMoveToScreen:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3;

@@ -15,8 +15,8 @@
     TheatreFeedPostView *_theatreFeedPostView;
 }
 
-@property(retain, nonatomic) TheatreFeedPostView *theatreFeedPostView; // @synthesize theatreFeedPostView=_theatreFeedPostView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) TheatreFeedPostView *theatreFeedPostView; // @synthesize theatreFeedPostView=_theatreFeedPostView;
 @property(readonly, nonatomic) UIImage *previewImage;
 - (void)noLongerPastVisibilityThreshold;
 - (void)noLongerFullyVisible;
@@ -26,7 +26,7 @@
 - (void)willBeginDisplayingCell;
 - (void)prepareForReuse;
 @property(readonly, nonatomic) Post *post;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)configureWithViewContext:(id)arg1;
 
 @end
 

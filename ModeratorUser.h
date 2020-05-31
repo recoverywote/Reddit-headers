@@ -18,13 +18,13 @@
     unsigned long long _permissions;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isEditable; // @synthesize isEditable=_isEditable;
 @property(readonly, nonatomic) unsigned long long permissions; // @synthesize permissions=_permissions;
 @property(readonly, nonatomic) NSDate *dateAdded; // @synthesize dateAdded=_dateAdded;
 @property(readonly, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
 @property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) NSString *userId; // @synthesize userId=_userId;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 - (id)initWithUserId:(id)arg1 username:(id)arg2 iconURL:(id)arg3 dateAdded:(id)arg4 permissions:(unsigned long long)arg5 isEditable:(_Bool)arg6;
 

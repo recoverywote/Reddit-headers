@@ -16,11 +16,11 @@
     ASImageNode *_iconNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASImageNode *iconNode; // @synthesize iconNode=_iconNode;
 @property(retain, nonatomic) PillButtonNode *pillButtonNode; // @synthesize pillButtonNode=_pillButtonNode;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) RailPillViewModel *railFlairViewModel; // @synthesize railFlairViewModel=_railFlairViewModel;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (id)initWithRailFlairViewModel:(id)arg1;

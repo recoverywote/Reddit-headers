@@ -21,13 +21,13 @@
     NSURL *_originURL;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isStarted; // @synthesize isStarted=_isStarted;
 @property(retain, nonatomic) NSURL *originURL; // @synthesize originURL=_originURL;
 @property(nonatomic) __weak id <NSObject> nsfwPreferenceObserver; // @synthesize nsfwPreferenceObserver=_nsfwPreferenceObserver;
 @property(readonly, nonatomic) __weak BaseViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <RoadblockCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleConfirmedNSFWRoadblockableModel:(id)arg1;
 - (void)fetchQuarantinedSubredditByName:(id)arg1;
 - (void)didConfirmRoadblockableModel:(id)arg1 roadblockType:(long long)arg2 popupController:(id)arg3;

@@ -41,6 +41,7 @@
 
 + (id)postViewControllerForSubmittedPostType:(unsigned long long)arg1 accountContext:(id)arg2;
 + (id)postViewControllerForSubmittedPostToEdit:(id)arg1 accountContext:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *formatValidationErrors; // @synthesize formatValidationErrors=_formatValidationErrors;
 @property(retain, nonatomic) SubmittedPost *postToEdit; // @synthesize postToEdit=_postToEdit;
 @property(nonatomic) _Bool canSaveAsDraft; // @synthesize canSaveAsDraft=_canSaveAsDraft;
@@ -56,7 +57,6 @@
 @property(nonatomic) _Bool analyticsDidCancelPost; // @synthesize analyticsDidCancelPost=_analyticsDidCancelPost;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak id <PostViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)formatValidationErrorsFromAPIErrors:(id)arg1;
 - (void)enablePostButton;
 - (void)submittedPostDidUpdateTranscodeState:(id)arg1;

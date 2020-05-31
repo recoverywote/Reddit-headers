@@ -24,6 +24,7 @@
     CommentTreeVisualDepthNode *_visualDepthNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CommentTreeVisualDepthNode *visualDepthNode; // @synthesize visualDepthNode=_visualDepthNode;
 @property(retain, nonatomic) BaseButtonNode *overflowButtonNode; // @synthesize overflowButtonNode=_overflowButtonNode;
 @property(retain, nonatomic) BaseButtonNode *lockButtonNode; // @synthesize lockButtonNode=_lockButtonNode;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) BaseButtonNode *approveButtonNode; // @synthesize approveButtonNode=_approveButtonNode;
 @property(nonatomic) __weak id <CommentTreeModerateBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)overflowButtonNodeTapped:(id)arg1;

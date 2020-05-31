@@ -20,6 +20,7 @@
     ASDisplayNode *_placementNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *placementNode; // @synthesize placementNode=_placementNode;
 @property(nonatomic) __weak id <MetaBadgeManagementActionDelegate> actionDelegate; // @synthesize actionDelegate=_actionDelegate;
 @property(retain, nonatomic) NSArray *tabs; // @synthesize tabs=_tabs;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) MetaBadgeManagementLoaderNode *loaderNode; // @synthesize loaderNode=_loaderNode;
 @property(retain, nonatomic) MetaBadgeManagementCommentSectionNode *commentSectionNode; // @synthesize commentSectionNode=_commentSectionNode;
 @property(retain, nonatomic) MetaSectionNode *headerNode; // @synthesize headerNode=_headerNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)updateWithViewModel:(id)arg1 placement:(id)arg2;
 - (void)updateSelectedTab:(id)arg1 usernameDecoration:(id)arg2;

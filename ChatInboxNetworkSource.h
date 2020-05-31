@@ -22,6 +22,7 @@
     unsigned long long _sourceType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long sourceType; // @synthesize sourceType=_sourceType;
 @property(nonatomic) long long cacheOffset; // @synthesize cacheOffset=_cacheOffset;
 @property(retain, nonatomic) SBDGroupChannelListQuery *joinedQuery; // @synthesize joinedQuery=_joinedQuery;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSArray *currentPopularObjects; // @synthesize currentPopularObjects=_currentPopularObjects;
 @property(retain, nonatomic) NSArray *currentRequestObjects; // @synthesize currentRequestObjects=_currentRequestObjects;
 @property(retain, nonatomic) NSArray *currentChannelObjects; // @synthesize currentChannelObjects=_currentChannelObjects;
-- (void).cxx_destruct;
 - (void)asyncStore:(id)arg1 didRemoveModelWithKey:(id)arg2 value:(id)arg3;
 - (void)popularChannelJoined:(id)arg1;
 - (void)popularChannelLeft:(id)arg1;

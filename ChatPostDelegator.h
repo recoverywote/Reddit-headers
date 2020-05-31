@@ -18,9 +18,9 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak ChatPostViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (_Bool)attemptNavigationToUserCardModalWithUsername:(id)arg1 comment:(id)arg2;
 - (_Bool)attemptNavigationToUserCardModalWithURL:(id)arg1 comment:(id)arg2;
 - (void)handleNavigationToProfileWithPk:(id)arg1 comment:(id)arg2;

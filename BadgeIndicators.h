@@ -23,6 +23,7 @@
     BadgeIndicator *_appBadge;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) BadgeIndicator *appBadge; // @synthesize appBadge=_appBadge;
 @property(readonly, nonatomic) BadgeIndicator *inboxTab; // @synthesize inboxTab=_inboxTab;
 @property(readonly, nonatomic) BadgeIndicator *activityTab; // @synthesize activityTab=_activityTab;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) BadgeIndicator *directMessages; // @synthesize directMessages=_directMessages;
 @property(readonly, nonatomic) BadgeIndicator *chatRoomMentions; // @synthesize chatRoomMentions=_chatRoomMentions;
 @property(readonly, nonatomic) BadgeIndicator *chatRooms; // @synthesize chatRooms=_chatRooms;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)initWithData:(id)arg1;
 - (id)mutableCopyWithZone:(struct _NSZone *)arg1;

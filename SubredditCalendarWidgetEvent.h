@@ -17,12 +17,12 @@
     NSDate *_endDate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *endDate; // @synthesize endDate=_endDate;
 @property(retain, nonatomic) NSDate *startDate; // @synthesize startDate=_startDate;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) _Bool isAllDay; // @synthesize isAllDay=_isAllDay;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

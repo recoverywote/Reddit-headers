@@ -13,8 +13,8 @@
     NSMapTable *_hashTable;
 }
 
-@property(readonly, nonatomic) NSMapTable *hashTable; // @synthesize hashTable=_hashTable;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMapTable *hashTable; // @synthesize hashTable=_hashTable;
 - (id)setObject:(id)arg1 forKey:(id)arg2;
 - (id)entryForKey:(id)arg1;
 - (id)init;

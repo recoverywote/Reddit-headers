@@ -25,6 +25,7 @@
     NSTimer *_consumeTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *consumeTimer; // @synthesize consumeTimer=_consumeTimer;
 @property(retain, nonatomic) PannableCellManager *pannableCellManager; // @synthesize pannableCellManager=_pannableCellManager;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
@@ -35,12 +36,12 @@
 @property(retain, nonatomic) ASDisplayNode *commentSwipeNode; // @synthesize commentSwipeNode=_commentSwipeNode;
 @property(retain, nonatomic) CommentTreeContentNode *commentTreeContentNode; // @synthesize commentTreeContentNode=_commentTreeContentNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)consumeTimerDidFire:(id)arg1;
 - (void)didExitVisibleState;
 - (void)didEnterVisibleState;
-- (void)highlightCell;
+- (void)highlightCell:(_Bool)arg1;
+- (void)highlightCellBriefly;
 - (_Bool)shouldCellPan;
 - (unsigned long long)panCellStateForStateNum:(unsigned long long)arg1;
 - (void)pannableCellManager:(id)arg1 didPanToIndex:(unsigned long long)arg2;

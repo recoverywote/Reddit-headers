@@ -28,6 +28,7 @@
     NSString *_titleViewPlaceholder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *titleViewPlaceholder; // @synthesize titleViewPlaceholder=_titleViewPlaceholder;
 @property(readonly, nonatomic) NSString *postViewPlaceholder; // @synthesize postViewPlaceholder=_postViewPlaceholder;
 @property(retain, nonatomic) APIError *formatValidationError; // @synthesize formatValidationError=_formatValidationError;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) BaseTextView *postView; // @synthesize postView=_postView;
 @property(retain, nonatomic) BaseTextView *titleView; // @synthesize titleView=_titleView;
 @property(retain, nonatomic) BaseScrollView *wrapperScrollView; // @synthesize wrapperScrollView=_wrapperScrollView;
-- (void).cxx_destruct;
 - (id)analyticsPostComposerType;
 - (id)analyticsScreenViewName;
 - (void)linkViewControllerDidTapInsert:(id)arg1;

@@ -28,6 +28,7 @@
     NSString *_isp_organization;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isp_organizationIsSet; // @synthesize isp_organizationIsSet=_isp_organizationIsSet;
 @property(copy, nonatomic) NSString *isp_organization; // @synthesize isp_organization=_isp_organization;
 @property(nonatomic) _Bool json_byte_sizeIsSet; // @synthesize json_byte_sizeIsSet=_json_byte_sizeIsSet;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) NSString *client_ip; // @synthesize client_ip=_client_ip;
 @property(nonatomic) _Bool app_nameIsSet; // @synthesize app_nameIsSet=_app_nameIsSet;
 @property(copy, nonatomic) NSString *app_name; // @synthesize app_name=_app_name;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

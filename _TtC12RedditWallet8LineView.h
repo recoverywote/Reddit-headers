@@ -9,7 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet8LineView : UIView
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

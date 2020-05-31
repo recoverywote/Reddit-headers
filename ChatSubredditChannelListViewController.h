@@ -21,11 +21,11 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
-- (void).cxx_destruct;
 - (id)pageItemId;
 - (id)pageItemText;
 - (void)scrollDidStopScrolling:(id)arg1;

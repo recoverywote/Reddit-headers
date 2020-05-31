@@ -14,8 +14,8 @@
 }
 
 + (id)instance;
-@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void)cacheHeight:(double)arg1 forText:(id)arg2 withFont:(id)arg3 atWidth:(double)arg4 numberOfLines:(unsigned long long)arg5;
 - (void)cacheHeight:(double)arg1 forText:(id)arg2 withFont:(id)arg3 atWidth:(double)arg4;
 - (double)heightForText:(id)arg1 withFont:(id)arg2 atWidth:(double)arg3 numberOfLines:(unsigned long long)arg4;

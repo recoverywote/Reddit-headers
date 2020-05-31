@@ -13,8 +13,8 @@
     LabeledTextField *_textField;
 }
 
-@property(retain, nonatomic) LabeledTextField *textField; // @synthesize textField=_textField;
 - (void).cxx_destruct;
+@property(retain, nonatomic) LabeledTextField *textField; // @synthesize textField=_textField;
 - (_Bool)becomeFirstResponder;
 - (_Bool)canBecomeFirstResponder;
 - (void)layoutSubviews;

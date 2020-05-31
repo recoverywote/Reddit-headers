@@ -26,6 +26,7 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) NSSet *popClasses; // @synthesize popClasses=_popClasses;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) CDUnknownBlockType additionalActionOnBan; // @synthesize additionalActionOnBan=_additionalActionOnBan;
 @property(copy, nonatomic) CDUnknownBlockType additionalActionOnKick; // @synthesize additionalActionOnKick=_additionalActionOnKick;
 @property(copy, nonatomic) CDUnknownBlockType additionalActionOnBlock; // @synthesize additionalActionOnBlock=_additionalActionOnBlock;
-- (void).cxx_destruct;
 - (void)trackSettingsAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 additionalInfo:(id)arg3;
 - (void)trackViewAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 additionalInfo:(id)arg3;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 additionalInfo:(id)arg3;

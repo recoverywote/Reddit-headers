@@ -19,18 +19,20 @@
     KeyValueObservation *_postSavedStateObserver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) KeyValueObservation *postSavedStateObserver; // @synthesize postSavedStateObserver=_postSavedStateObserver;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak PostDetailViewController *controller; // @synthesize controller=_controller;
 @property(readonly, nonatomic) UIBarButtonItem *saveButton; // @synthesize saveButton=_saveButton;
 @property(readonly, nonatomic) UIBarButtonItem *moreButton; // @synthesize moreButton=_moreButton;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didTapSharePost:(id)arg2 sender:(id)arg3;
 - (void)didHidePostFromActionSheetViewController:(id)arg1;
 - (void)didTapEditPostFlairFromActionSheetViewController:(id)arg1;
+- (void)didTapAnonymousBrowsingIcon:(id)arg1;
 - (void)handleOverflowTapFromView:(id)arg1;
 - (void)didTapOverflow:(id)arg1;
 - (void)didTapSave:(id)arg1;
+- (id)anonymousBrowsingBarButton;
 - (void)updateSaveButtonWithState:(_Bool)arg1;
 - (void)observePostSaveStatus;
 - (void)dealloc;

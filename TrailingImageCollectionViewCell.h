@@ -17,12 +17,12 @@
     struct CGSize _imageSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageTrailingConstraint; // @synthesize imageTrailingConstraint=_imageTrailingConstraint;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 @property(nonatomic) double trailingPadding; // @synthesize trailingPadding=_trailingPadding;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
-- (void).cxx_destruct;
 - (void)updateConstraints;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -13,8 +13,8 @@
     NSArray *_nodes;
 }
 
-@property(readonly, nonatomic) NSArray *nodes; // @synthesize nodes=_nodes;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *nodes; // @synthesize nodes=_nodes;
 - (id)initWithAttributedString:(id)arg1;
 
 @end

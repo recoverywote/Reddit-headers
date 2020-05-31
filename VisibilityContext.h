@@ -20,6 +20,7 @@
     struct CGRect _visibleRect;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long event; // @synthesize event=_event;
 @property(readonly, nonatomic) double visibleThreshold; // @synthesize visibleThreshold=_visibleThreshold;
 @property(readonly, nonatomic) double percentageVisible; // @synthesize percentageVisible=_percentageVisible;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) double timeInVisibleState; // @synthesize timeInVisibleState=_timeInVisibleState;
 @property(readonly, nonatomic) NSDate *timeExitedState; // @synthesize timeExitedState=_timeExitedState;
 @property(readonly, nonatomic) NSDate *timeEnteredState; // @synthesize timeEnteredState=_timeEnteredState;
-- (void).cxx_destruct;
 - (_Bool)isPastVisibleThreshold:(double)arg1;
 @property(readonly, nonatomic) _Bool isFullyVisible;
 - (id)initWithTimeEnteredState:(id)arg1 timeExitedState:(id)arg2 timeInVisibleState:(double)arg3 viewRect:(struct CGRect)arg4 visibleRect:(struct CGRect)arg5 percentageVisible:(double)arg6 visibleThreshold:(double)arg7 visibilityEvent:(unsigned long long)arg8;

@@ -40,6 +40,7 @@
     PremiumMarketingEventLogger *_eventLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) PremiumMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) _Bool wasReferredFromInFeedUnit; // @synthesize wasReferredFromInFeedUnit=_wasReferredFromInFeedUnit;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
@@ -60,7 +61,6 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) _Bool disableSwipeToGoBackGesture; // @synthesize disableSwipeToGoBackGesture=_disableSwipeToGoBackGesture;
-- (void).cxx_destruct;
 - (void)goldPremiumPurchaseSuccessViewController:(id)arg1 didTapLinkUrl:(id)arg2;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;

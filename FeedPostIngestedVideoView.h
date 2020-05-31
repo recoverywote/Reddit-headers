@@ -15,8 +15,8 @@
     ContentIngestedVideoView *_hlsVideoView;
 }
 
-@property(retain, nonatomic) ContentIngestedVideoView *hlsVideoView; // @synthesize hlsVideoView=_hlsVideoView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ContentIngestedVideoView *hlsVideoView; // @synthesize hlsVideoView=_hlsVideoView;
 - (_Bool)parentIsCarouselView;
 - (void)playerViewDidEndPlaying:(id)arg1;
 - (void)playerViewDidBeginPlaying:(id)arg1;

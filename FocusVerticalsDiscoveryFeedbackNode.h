@@ -26,6 +26,7 @@
     ASTextNode *_showFewerTextNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *showFewerTextNode; // @synthesize showFewerTextNode=_showFewerTextNode;
 @property(retain, nonatomic) ASTextNode *responseTextNode; // @synthesize responseTextNode=_responseTextNode;
 @property(retain, nonatomic) ASImageNode *checkmarkIconNode; // @synthesize checkmarkIconNode=_checkmarkIconNode;
@@ -39,7 +40,6 @@
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(retain, nonatomic) id <FocusVerticalsDiscoveryFeedbackNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) FocusVerticalRecommendation *focusVerticalRecommendation; // @synthesize focusVerticalRecommendation=_focusVerticalRecommendation;
-- (void).cxx_destruct;
 - (void)didTapRecommendedTooOftenButton;
 - (void)didTapSubredditNotInCommunityButton;
 - (void)didTapNotInterestedInSubredditButton;

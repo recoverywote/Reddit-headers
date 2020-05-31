@@ -13,8 +13,8 @@
     ConcurrentMapTable *_inMemoryStrongStorage;
 }
 
-@property(retain, nonatomic) ConcurrentMapTable *inMemoryStrongStorage; // @synthesize inMemoryStrongStorage=_inMemoryStrongStorage;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ConcurrentMapTable *inMemoryStrongStorage; // @synthesize inMemoryStrongStorage=_inMemoryStrongStorage;
 - (id)inMemoryUserIDKeyWithUserID:(id)arg1;
 - (void)fetchContactsForChannelId:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)fetchContactWithUserID:(id)arg1 username:(id)arg2 channel:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;

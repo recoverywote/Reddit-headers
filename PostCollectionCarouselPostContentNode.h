@@ -7,7 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, ASTextNode, FeedPostOptions, Post;
-@protocol FeedPostContentNodeDelegate;
+@protocol FeedPostContentNodeDelegate, ViewContext;
 
 @interface PostCollectionCarouselPostContentNode : BaseFeedDisplayNode
 {
@@ -17,15 +17,17 @@
     ASTextNode *_desciptionNode;
     FeedPostOptions *_options;
     id <FeedPostContentNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) ASTextNode *desciptionNode; // @synthesize desciptionNode=_desciptionNode;
 @property(retain, nonatomic) ASDisplayNode *gradientNode; // @synthesize gradientNode=_gradientNode;
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (struct UIEdgeInsets)contentNodeInsets;
 - (void)createNodesForCrossPost;
@@ -34,7 +36,7 @@
 - (void)createGradientNode;
 - (void)createNodesForPostDescription;
 - (void)createNodes;
-- (id)initWithPost:(id)arg1 options:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 delegate:(id)arg4;
 
 @end
 

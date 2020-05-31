@@ -29,6 +29,7 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CommentAwardsView *awardsSummaryView; // @synthesize awardsSummaryView=_awardsSummaryView;
 @property(retain, nonatomic) RichTextLoader *richTextLoader; // @synthesize richTextLoader=_richTextLoader;
 @property(retain, nonatomic) UITapGestureRecognizer *singleTapRecognizer; // @synthesize singleTapRecognizer=_singleTapRecognizer;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) CheckboxButton *bulkActionCheckbox; // @synthesize bulkActionCheckbox=_bulkActionCheckbox;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(nonatomic) __weak id <CommentHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapAwards:(id)arg1;
 - (void)didSingleTapComment:(id)arg1;
 - (void)didLongTapComment:(id)arg1;

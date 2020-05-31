@@ -16,8 +16,8 @@
 }
 
 + (id)sharedCache;
-@property(retain, nonatomic) NSMutableDictionary *messageIdToCacheKeyMapping; // @synthesize messageIdToCacheKeyMapping=_messageIdToCacheKeyMapping;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *messageIdToCacheKeyMapping; // @synthesize messageIdToCacheKeyMapping=_messageIdToCacheKeyMapping;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)cacheHeight:(id)arg1 forDisplayableMessage:(id)arg2 atWidth:(double)arg3;
 - (id)heightForDisplayableMessage:(id)arg1 atWidth:(double)arg2;

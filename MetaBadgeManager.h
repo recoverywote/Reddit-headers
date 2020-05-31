@@ -19,13 +19,13 @@
     TimeoutExpirationCache *_cache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) TimeoutExpirationCache *cache; // @synthesize cache=_cache;
 @property(nonatomic) unsigned long long batchSize; // @synthesize batchSize=_batchSize;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak MetaCommunityManager *metaCommunityService; // @synthesize metaCommunityService=_metaCommunityService;
 @property(nonatomic) __weak RedditService *redditService; // @synthesize redditService=_redditService;
-- (void).cxx_destruct;
 - (void)didFetchUncachedBadgesForUserPKs:(id)arg1 badges:(id)arg2 error:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)fetchUncachedBadgesForUserPKs:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)cachedBadgesForUserPKs:(id)arg1 completion:(CDUnknownBlockType)arg2;

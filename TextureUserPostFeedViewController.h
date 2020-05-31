@@ -17,9 +17,9 @@
     id <PagedTabControllerParentCallback> _userProfileDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> userProfileDelegate; // @synthesize userProfileDelegate=_userProfileDelegate;
 @property(retain, nonatomic) User *analyticsUser; // @synthesize analyticsUser=_analyticsUser;
-- (void).cxx_destruct;
 - (void)showTopKarmaSubredditCarousel;
 - (void)userFeedDidPullToRefresh:(id)arg1;
 - (void)viewDidLoad;

@@ -15,8 +15,8 @@
 
 + (_Bool)supportsSecureCoding;
 + (id)compoundSerializerWithResponseSerializers:(id)arg1;
-@property(copy, nonatomic) NSArray *responseSerializers; // @synthesize responseSerializers=_responseSerializers;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *responseSerializers; // @synthesize responseSerializers=_responseSerializers;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

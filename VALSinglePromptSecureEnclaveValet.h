@@ -13,8 +13,8 @@
     LAContext *_context;
 }
 
-@property(retain) LAContext *context; // @synthesize context=_context;
 - (void).cxx_destruct;
+@property(retain) LAContext *context; // @synthesize context=_context;
 - (id)_contextOptions;
 - (void)requirePromptOnNextAccess;
 - (id)stringForKey:(id)arg1 userPrompt:(id)arg2 userCancelled:(inout _Bool *)arg3;

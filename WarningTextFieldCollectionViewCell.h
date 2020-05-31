@@ -13,8 +13,8 @@
     WarningLabel *_warningLabel;
 }
 
-@property(retain, nonatomic) WarningLabel *warningLabel; // @synthesize warningLabel=_warningLabel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) WarningLabel *warningLabel; // @synthesize warningLabel=_warningLabel;
 - (void)updateWarningLabelSize;
 - (void)textFieldDidChange:(id)arg1;
 - (void)layoutSubviews;

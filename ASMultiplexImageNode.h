@@ -44,6 +44,8 @@
     PHImageManager *_imageManager;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(copy, nonatomic) id loadingImageIdentifier; // @synthesize loadingImageIdentifier=_loadingImageIdentifier;
 @property(retain, nonatomic) PHImageManager *imageManager; // @synthesize imageManager=_imageManager;
 @property(readonly, nonatomic) id <NSCopying><NSObject> displayedImageIdentifier; // @synthesize displayedImageIdentifier=_displayedImageIdentifier;
@@ -51,8 +53,6 @@
 @property(nonatomic) _Bool downloadsIntermediateImages; // @synthesize downloadsIntermediateImages=_downloadsIntermediateImages;
 @property(nonatomic) __weak id <ASMultiplexImageNodeDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <ASMultiplexImageNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)_finishedLoadingImage:(id)arg1 forIdentifier:(id)arg2 error:(id)arg3;
 - (void)_downloadImageWithIdentifier:(id)arg1 URL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)_fetchImageWithIdentifierFromCache:(id)arg1 URL:(id)arg2 completion:(CDUnknownBlockType)arg3;

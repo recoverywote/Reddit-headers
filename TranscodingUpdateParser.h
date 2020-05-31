@@ -20,10 +20,10 @@
 }
 
 + (id)transcodingUpdateSessionWithWebsocketURL:(id)arg1 withDelegate:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) long long transcodingState; // @synthesize transcodingState=_transcodingState;
 @property(retain, nonatomic) SocketSession *socketSession; // @synthesize socketSession=_socketSession;
 @property(nonatomic) __weak id <TranscodingUpdateParserDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)socketSessionHasClosed:(id)arg1;
 - (void)socketSessionDidConnect:(id)arg1;
 - (void)socketSession:(id)arg1 didLoseConnectionWithError:(id)arg2;

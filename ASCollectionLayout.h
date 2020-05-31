@@ -26,9 +26,9 @@
 + (struct CGSize)_viewportSizeForCollectionNode:(id)arg1 scrollableDirections:(long long)arg2;
 + (struct CGSize)_boundsForCollectionNode:(id)arg1;
 + (id)calculateLayoutWithContext:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <ASCollectionLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
-- (void).cxx_destruct;
 - (_Bool)shouldInvalidateLayoutForBoundsChange:(struct CGRect)arg1;
 - (id)layoutAttributesForSupplementaryViewOfKind:(id)arg1 atIndexPath:(id)arg2;
 - (id)layoutAttributesForItemAtIndexPath:(id)arg1;

@@ -16,9 +16,9 @@
     NSString *_sslHostname;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) int sd; // @synthesize sd=_sd;
 @property(retain, nonatomic) NSString *sslHostname; // @synthesize sslHostname=_sslHostname;
-- (void).cxx_destruct;
 - (_Bool)isOpen;
 - (void)stream:(id)arg1 handleEvent:(unsigned long long)arg2;
 - (void)dealloc;

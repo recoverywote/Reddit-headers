@@ -23,6 +23,7 @@
     WarningLabel *_charactersRemainingLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) WarningLabel *charactersRemainingLabel; // @synthesize charactersRemainingLabel=_charactersRemainingLabel;
 @property(retain, nonatomic) BaseTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
@@ -30,7 +31,6 @@
 @property(nonatomic) long long characterLengthLimit; // @synthesize characterLengthLimit=_characterLengthLimit;
 @property(nonatomic) long long characterLengthWarningThreshold; // @synthesize characterLengthWarningThreshold=_characterLengthWarningThreshold;
 @property(nonatomic) double textViewHeight; // @synthesize textViewHeight=_textViewHeight;
-- (void).cxx_destruct;
 - (_Bool)baseTextView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (void)textView:(id)arg1 didChangeToNewSize:(struct CGSize)arg2;
 - (_Bool)textViewShouldChangeSize:(id)arg1;

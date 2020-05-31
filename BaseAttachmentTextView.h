@@ -15,8 +15,8 @@
     NSMutableDictionary *_attachedViews;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *attachedViews; // @synthesize attachedViews=_attachedViews;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *attachedViews; // @synthesize attachedViews=_attachedViews;
 - (id)text;
 - (void)layoutAttachments;
 - (void)layoutManager:(id)arg1 didCompleteLayoutForTextContainer:(id)arg2 atEnd:(_Bool)arg3;

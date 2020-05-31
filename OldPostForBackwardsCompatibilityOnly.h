@@ -17,8 +17,8 @@
 
 + (_Bool)supportsSecureCoding;
 + (void)initialize;
-@property(retain, nonatomic) NSString *pk; // @synthesize pk=_pk;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *pk; // @synthesize pk=_pk;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 

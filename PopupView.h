@@ -17,10 +17,10 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIControl *dimmerView; // @synthesize dimmerView=_dimmerView;
 @property(retain, nonatomic) UIViewController<PopupViewControllerProtocol> *controller; // @synthesize controller=_controller;
 @property(nonatomic) double visibleKeyboardHeight; // @synthesize visibleKeyboardHeight=_visibleKeyboardHeight;
-- (void).cxx_destruct;
 - (void)didTapDimmerView;
 - (void)dismissPopup:(_Bool)arg1;
 - (void)showPopup:(_Bool)arg1;

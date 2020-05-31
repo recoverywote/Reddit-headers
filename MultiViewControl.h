@@ -14,9 +14,9 @@
     UIStackView *_currentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *currentView; // @synthesize currentView=_currentView;
 @property(retain) NSMutableDictionary *stackViewsForState; // @synthesize stackViewsForState=_stackViewsForState;
-- (void).cxx_destruct;
 - (void)tintColorDidChange;
 - (void)setEnabled:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;

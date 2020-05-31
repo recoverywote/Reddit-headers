@@ -26,6 +26,7 @@
     NSMutableArray *_items;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool itemsIsSet; // @synthesize itemsIsSet=_itemsIsSet;
 @property(retain, nonatomic) NSMutableArray *items; // @synthesize items=_items;
 @property(nonatomic) _Bool nameIsSet; // @synthesize nameIsSet=_nameIsSet;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

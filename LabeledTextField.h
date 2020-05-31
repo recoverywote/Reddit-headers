@@ -13,8 +13,8 @@
     BaseLabel *_leftLabel;
 }
 
-@property(retain, nonatomic) BaseLabel *leftLabel; // @synthesize leftLabel=_leftLabel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseLabel *leftLabel; // @synthesize leftLabel=_leftLabel;
 - (struct CGRect)leftViewRectForBounds:(struct CGRect)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (id)initWithFrame:(struct CGRect)arg1;

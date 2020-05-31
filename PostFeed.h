@@ -18,13 +18,13 @@
     NSNumber *_adDistance;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *adDistance; // @synthesize adDistance=_adDistance;
 @property(nonatomic) long long adDisplaySource; // @synthesize adDisplaySource=_adDisplaySource;
 @property(copy, nonatomic) NSString *forcedAdId; // @synthesize forcedAdId=_forcedAdId;
 @property(nonatomic) unsigned long long displayMode; // @synthesize displayMode=_displayMode;
 @property(nonatomic) unsigned long long range; // @synthesize range=_range;
 @property(nonatomic) unsigned long long sort; // @synthesize sort=_sort;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *adLayout;
 - (id)parsePageInfo:(id)arg1;
 - (id)variables;

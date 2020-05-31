@@ -7,7 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol RootViewControllerDelegate <NSObject>
-@property(readonly, nonatomic) _Bool didScheduleURL;
 - (void)rootViewControllerDidInstallNewMainTabBar;
 - (void)showPushNotificationPromptIfNeededWithCompletion:(void (^)(void))arg1;
 - (void)refreshConfig;

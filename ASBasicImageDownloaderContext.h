@@ -19,11 +19,11 @@
 
 + (void)cancelContextWithURL:(id)arg1;
 + (id)contextForURL:(id)arg1;
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *callbackDatas; // @synthesize callbackDatas=_callbackDatas;
 @property(nonatomic) __weak NSURLSessionTask *sessionTask; // @synthesize sessionTask=_sessionTask;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (id)createSessionTaskIfNecessaryWithBlock:(CDUnknownBlockType)arg1;
 - (void)completeWithImage:(id)arg1 error:(id)arg2;
 - (void)performProgressBlocks:(double)arg1;

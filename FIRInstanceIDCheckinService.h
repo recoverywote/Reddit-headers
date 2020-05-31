@@ -14,8 +14,8 @@
 }
 
 + (void)setCheckinTestBlock:(CDUnknownBlockType)arg1;
-@property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
 - (id)checkinParametersWithExistingCheckin:(id)arg1;
 - (void)stopFetching;
 - (void)checkinWithExistingCheckin:(id)arg1 completion:(CDUnknownBlockType)arg2;

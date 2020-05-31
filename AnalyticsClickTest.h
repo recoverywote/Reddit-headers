@@ -30,6 +30,7 @@
     NSString *_page_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool page_typeIsSet; // @synthesize page_typeIsSet=_page_typeIsSet;
 @property(copy, nonatomic) NSString *page_type; // @synthesize page_type=_page_type;
 @property(nonatomic) _Bool responseIsSet; // @synthesize responseIsSet=_responseIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(nonatomic) long long id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -18,7 +18,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: warningLabel
     // Error parsing type: , name: recipientEntryTextField
     // Error parsing type: , name: recipientImageSubscription
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

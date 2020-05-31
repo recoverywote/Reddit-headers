@@ -24,12 +24,12 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <NSSecureCoding><GDTCORUploadPackageProtocol> handler; // @synthesize handler=_handler;
 @property(retain, nonatomic) GDTCORStorage *storage; // @synthesize storage=_storage;
 @property(readonly, nonatomic) long long target; // @synthesize target=_target;
 @property(retain, nonatomic) GDTCORClock *deliverByTime; // @synthesize deliverByTime=_deliverByTime;
 @property(retain, nonatomic) NSSet *events; // @synthesize events=_events;
-- (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (void)checkIfPackageIsExpired:(id)arg1;

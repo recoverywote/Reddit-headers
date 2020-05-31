@@ -11,10 +11,13 @@
     // Error parsing type: , name: stackView
     // Error parsing type: , name: authProviderViews
     // Error parsing type: , name: providers
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)didTapGoogleButtonWithSender:(id)arg1;
+- (void)didTapAppleButtonWithSender:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 
 @end

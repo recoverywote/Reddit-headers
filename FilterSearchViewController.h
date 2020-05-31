@@ -21,12 +21,12 @@
     NSString *_timeParameter;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *timeParameter; // @synthesize timeParameter=_timeParameter;
 @property(copy, nonatomic) NSString *sortParameter; // @synthesize sortParameter=_sortParameter;
 @property(copy, nonatomic) NSString *originalTimeParameter; // @synthesize originalTimeParameter=_originalTimeParameter;
 @property(copy, nonatomic) NSString *originalSortParameter; // @synthesize originalSortParameter=_originalSortParameter;
 @property(nonatomic) __weak NSObject<FilterSearchViewControllerDelegate> *filterDelegate; // @synthesize filterDelegate=_filterDelegate;
-- (void).cxx_destruct;
 - (void)labeledStepSlider:(id)arg1 didChangeStepItem:(id)arg2;
 - (void)actionSheetViewController:(id)arg1 didGetDismissedFromOutside:(_Bool)arg2;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;

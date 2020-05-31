@@ -15,10 +15,10 @@
     NSString *_placement;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *placement; // @synthesize placement=_placement;
 @property(readonly, nonatomic) MetaBadgeManagementBadgeViewModel *selectedBadgeViewModel; // @synthesize selectedBadgeViewModel=_selectedBadgeViewModel;
 @property(readonly, nonatomic) NSArray *collectionsViewModels; // @synthesize collectionsViewModels=_collectionsViewModels;
-- (void).cxx_destruct;
 - (id)initWithCollectionsViewModels:(id)arg1 selectedBadgeViewModel:(id)arg2 placement:(id)arg3;
 
 @end

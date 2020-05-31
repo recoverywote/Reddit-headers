@@ -17,12 +17,12 @@
     UILabel *_metaTextLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *metaTextLabel; // @synthesize metaTextLabel=_metaTextLabel;
 @property(retain, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) BaseButton *retryButton; // @synthesize retryButton=_retryButton;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) UILabel *mainLabel; // @synthesize mainLabel=_mainLabel;
-- (void).cxx_destruct;
 - (void)setMetaText:(id)arg1 isError:(_Bool)arg2;
 - (void)configureLayout;
 - (id)initWithFrame:(struct CGRect)arg1;

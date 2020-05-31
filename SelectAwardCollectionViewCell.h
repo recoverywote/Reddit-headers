@@ -20,6 +20,7 @@
 }
 
 + (double)calculateHeightForViewModel:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit16PremiumIndicator *premiumBadge; // @synthesize premiumBadge=_premiumBadge;
 @property(retain, nonatomic) NewAwardBadgeView *newBadge; // @synthesize newBadge=_newBadge;
 @property(retain, nonatomic) UILabel *timeLeftLabel; // @synthesize timeLeftLabel=_timeLeftLabel;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) UILabel *nameLabel; // @synthesize nameLabel=_nameLabel;
 @property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (void)prepareForReuse;
 - (void)configureWithViewModel:(id)arg1;

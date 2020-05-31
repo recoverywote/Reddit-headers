@@ -14,9 +14,9 @@
     NSArray *_rules;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *rules; // @synthesize rules=_rules;
 @property(nonatomic) _Bool rulesExpandedByDefault; // @synthesize rulesExpandedByDefault=_rulesExpandedByDefault;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

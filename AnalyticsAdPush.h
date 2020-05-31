@@ -28,6 +28,7 @@
     NSString *_direction;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool first_adIsSet; // @synthesize first_adIsSet=_first_adIsSet;
 @property(nonatomic) _Bool first_ad; // @synthesize first_ad=_first_ad;
 @property(nonatomic) _Bool directionIsSet; // @synthesize directionIsSet=_directionIsSet;
@@ -40,7 +41,6 @@
 @property(nonatomic) _Bool push_nsfw; // @synthesize push_nsfw=_push_nsfw;
 @property(nonatomic) _Bool push_whitelistIsSet; // @synthesize push_whitelistIsSet=_push_whitelistIsSet;
 @property(nonatomic) _Bool push_whitelist; // @synthesize push_whitelist=_push_whitelist;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -15,9 +15,9 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) double fetchedTime; // @synthesize fetchedTime=_fetchedTime;
 @property(copy, nonatomic) NSArray *categories; // @synthesize categories=_categories;
-- (void).cxx_destruct;
 - (void)fetchWithCompletion:(CDUnknownBlockType)arg1;
 
 @end

@@ -16,11 +16,11 @@
     struct UIEdgeInsets _originalInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets originalInsets; // @synthesize originalInsets=_originalInsets;
 @property(nonatomic) unsigned long long characterLengthWarningThreshold; // @synthesize characterLengthWarningThreshold=_characterLengthWarningThreshold;
 @property(retain, nonatomic) BaseLabel *characterLimitLabel; // @synthesize characterLimitLabel=_characterLimitLabel;
 @property(nonatomic) unsigned long long characterLengthLimit; // @synthesize characterLengthLimit=_characterLengthLimit;
-- (void).cxx_destruct;
 - (void)updateCharacterLimitIndicator;
 - (void)setTextContainerInset:(struct UIEdgeInsets)arg1;
 - (void)layoutSubviews;

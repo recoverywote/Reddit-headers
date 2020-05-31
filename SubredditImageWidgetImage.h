@@ -16,11 +16,11 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *assetId; // @synthesize assetId=_assetId;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(retain, nonatomic) NSURL *linkURL; // @synthesize linkURL=_linkURL;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1 assetId:(id)arg2;
 
 @end

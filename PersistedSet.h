@@ -14,9 +14,9 @@
     Class _objectClass;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) Class objectClass; // @synthesize objectClass=_objectClass;
 @property(readonly, nonatomic) NSString *directoryPath; // @synthesize directoryPath=_directoryPath;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)archiveDirectory;
 - (id)objectFileNames;

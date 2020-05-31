@@ -37,11 +37,11 @@
 + (long long)rangeModeForInterfaceState:(unsigned long long)arg1 currentRangeMode:(long long)arg2;
 + (_Bool)isFirstRangeUpdateForRangeMode:(long long)arg1;
 + (void)layoutDebugOverlayIfNeeded;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool contentHasBeenScrolled; // @synthesize contentHasBeenScrolled=_contentHasBeenScrolled;
 @property(nonatomic) __weak id <ASRangeControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <ASRangeControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) id <ASLayoutController> layoutController; // @synthesize layoutController=_layoutController;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (id)descriptionWithIndexPaths:(id)arg1;
 - (void)clearPreloadedData;

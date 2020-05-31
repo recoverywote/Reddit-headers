@@ -20,6 +20,7 @@
     NSString *_downloadToken;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *downloadToken; // @synthesize downloadToken=_downloadToken;
 @property(copy, nonatomic) NSString *mediaURLString; // @synthesize mediaURLString=_mediaURLString;
 @property(retain, nonatomic) MediaModel *mediaModel; // @synthesize mediaModel=_mediaModel;
@@ -27,7 +28,6 @@
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <VideoAssetLoaderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) _Bool isReady; // @synthesize isReady=_isReady;
-- (void).cxx_destruct;
 - (void)downloadCompletedWithURL:(id)arg1;
 - (void)downloadProgressChanged:(double)arg1;
 - (void)downloadVideo;

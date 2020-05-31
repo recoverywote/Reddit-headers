@@ -13,8 +13,8 @@
     RedditService *_service;
 }
 
-@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (void)markMessagesAsFromHistory:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)handleMessagesResultSet:(id)arg1 channel:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)markSendingMessagesAsFailed;

@@ -12,7 +12,6 @@
 
 @interface AppFlowCoordinator : NSObject <RootViewControllerDelegate>
 {
-    _Bool _didScheduleURL;
     _Bool _didScheduleBranchURL;
     _Bool _isBranchMatchGuaranteed;
     RootViewController *_rootViewController;
@@ -23,15 +22,14 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *pushNotifURLToHandleAfterAccountSwitching; // @synthesize pushNotifURLToHandleAfterAccountSwitching=_pushNotifURLToHandleAfterAccountSwitching;
 @property(nonatomic) _Bool isBranchMatchGuaranteed; // @synthesize isBranchMatchGuaranteed=_isBranchMatchGuaranteed;
 @property(nonatomic) _Bool didScheduleBranchURL; // @synthesize didScheduleBranchURL=_didScheduleBranchURL;
-@property(nonatomic) _Bool didScheduleURL; // @synthesize didScheduleURL=_didScheduleURL;
 @property(copy, nonatomic) NSURL *pendingEmailVerificationURL; // @synthesize pendingEmailVerificationURL=_pendingEmailVerificationURL;
 @property(copy, nonatomic) NSURL *scheduledURL; // @synthesize scheduledURL=_scheduledURL;
 @property(retain, nonatomic) MainTabBarController *mainTabController; // @synthesize mainTabController=_mainTabController;
 @property(readonly, nonatomic) RootViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
-- (void).cxx_destruct;
 - (void)navigateToLoginCaptureView;
 - (void)handleEmailVerificationURL:(id)arg1;
 - (void)refreshConfig;

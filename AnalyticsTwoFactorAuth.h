@@ -30,6 +30,7 @@
     NSString *_device_algorithm;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool otp_embedded_in_passwordIsSet; // @synthesize otp_embedded_in_passwordIsSet=_otp_embedded_in_passwordIsSet;
 @property(nonatomic) _Bool otp_embedded_in_password; // @synthesize otp_embedded_in_password=_otp_embedded_in_password;
 @property(nonatomic) _Bool backup_code_usedIsSet; // @synthesize backup_code_usedIsSet=_backup_code_usedIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *device_name; // @synthesize device_name=_device_name;
 @property(nonatomic) _Bool device_previous_remaining_backup_codesIsSet; // @synthesize device_previous_remaining_backup_codesIsSet=_device_previous_remaining_backup_codesIsSet;
 @property(nonatomic) long long device_previous_remaining_backup_codes; // @synthesize device_previous_remaining_backup_codes=_device_previous_remaining_backup_codes;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -18,9 +18,9 @@
 }
 
 + (void)initialize;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<KeychainAdapter> *keychain; // @synthesize keychain=_keychain;
 @property(nonatomic) _Bool isInvalid; // @synthesize isInvalid=_isInvalid;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSHTTPCookie *modMailCookie;
 - (void)clearAllValues;
 @property(nonatomic) double tokenDuration;

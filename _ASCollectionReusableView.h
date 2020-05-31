@@ -14,9 +14,9 @@
     UICollectionViewLayoutAttributes *_layoutAttributes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UICollectionViewLayoutAttributes *layoutAttributes; // @synthesize layoutAttributes=_layoutAttributes;
 @property(retain, nonatomic) ASCollectionElement *element; // @synthesize element=_element;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)applyLayoutAttributes:(id)arg1;
 - (void)prepareForReuse;

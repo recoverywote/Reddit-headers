@@ -18,10 +18,10 @@
     NSArray *_currentObjects;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *currentObjects; // @synthesize currentObjects=_currentObjects;
 @property(copy) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (void)listingNetworkSourceDidFail:(id)arg1;
 - (void)listingNetworkSourceDidFetchMoreData:(id)arg1;

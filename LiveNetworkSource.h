@@ -13,8 +13,8 @@
     id <LiveNetworkSourceDelegate> _liveNetworkSourceDelegate;
 }
 
-@property(nonatomic) __weak id <LiveNetworkSourceDelegate> liveNetworkSourceDelegate; // @synthesize liveNetworkSourceDelegate=_liveNetworkSourceDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <LiveNetworkSourceDelegate> liveNetworkSourceDelegate; // @synthesize liveNetworkSourceDelegate=_liveNetworkSourceDelegate;
 - (id)liveUpdatesFromData:(id)arg1;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;

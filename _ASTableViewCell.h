@@ -15,9 +15,9 @@
     ASCollectionElement *_element;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASCollectionElement *element; // @synthesize element=_element;
 @property(nonatomic) __weak id <_ASTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)setHighlighted:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;

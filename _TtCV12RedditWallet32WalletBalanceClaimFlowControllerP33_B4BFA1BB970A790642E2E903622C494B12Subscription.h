@@ -8,7 +8,7 @@
 
 @interface _TtCV12RedditWallet32WalletBalanceClaimFlowControllerP33_B4BFA1BB970A790642E2E903622C494B12Subscription : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 @end

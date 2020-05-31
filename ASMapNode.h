@@ -24,9 +24,9 @@
 }
 
 + (id)defaultPinImageWithCenterOffset:(struct CGPoint *)arg1;
+- (void).cxx_destruct;
 @property(copy) CDUnknownBlockType imageForStaticMapAnnotationBlock; // @synthesize imageForStaticMapAnnotationBlock=_imageForStaticMapAnnotationBlock;
 @property(readonly) MKMapView *mapView; // @synthesize mapView=_mapView;
-- (void).cxx_destruct;
 - (_Bool)supportsLayerBacking;
 - (void)layout;
 - (void)calculatedLayoutDidChange;

@@ -16,10 +16,10 @@
     UIViewController<SubredditContextProvider> *_subredditContextProvider;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool statusBarHiddenOverride; // @synthesize statusBarHiddenOverride=_statusBarHiddenOverride;
 @property(retain, nonatomic) UIViewController<SubredditContextProvider> *subredditContextProvider; // @synthesize subredditContextProvider=_subredditContextProvider;
 @property(retain, nonatomic) CustomPopTransition *customPopTransition; // @synthesize customPopTransition=_customPopTransition;
-- (void).cxx_destruct;
 - (void)showStatusBar;
 - (void)resetStatusBar;
 - (void)hideStatusBar;

@@ -44,6 +44,7 @@
     NSString *_topic_tag_primary_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool topic_tag_primary_idIsSet; // @synthesize topic_tag_primary_idIsSet=_topic_tag_primary_idIsSet;
 @property(copy, nonatomic) NSString *topic_tag_primary_id; // @synthesize topic_tag_primary_id=_topic_tag_primary_id;
 @property(nonatomic) _Bool post_difficulty_ratingIsSet; // @synthesize post_difficulty_ratingIsSet=_post_difficulty_ratingIsSet;
@@ -72,7 +73,6 @@
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

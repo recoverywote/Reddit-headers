@@ -16,9 +16,9 @@
     NSAttributedString *_attributedString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSAttributedString *attributedString; // @synthesize attributedString=_attributedString;
 @property(copy, nonatomic) CDUnknownBlockType pillAttributedTextBlock; // @synthesize pillAttributedTextBlock=_pillAttributedTextBlock;
-- (void).cxx_destruct;
 - (id)pillText;
 - (id)pillAttributedType;
 - (id)pillBackgroundColor;

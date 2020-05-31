@@ -16,11 +16,11 @@
     NSNumber *_calculatedHomeFeed;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *calculatedHomeFeed; // @synthesize calculatedHomeFeed=_calculatedHomeFeed;
 @property(nonatomic) _Bool didPostInitialFeedDidPerformInitialFetchNotification; // @synthesize didPostInitialFeedDidPerformInitialFetchNotification=_didPostInitialFeedDidPerformInitialFetchNotification;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (void)initialFeedDidPerformInitialFetchForFeedType:(unsigned long long)arg1 didFetchSuccessfully:(_Bool)arg2;
 @property(readonly, nonatomic) unsigned long long homeFeed;
 - (id)initWithService:(id)arg1 notificationCenter:(id)arg2;

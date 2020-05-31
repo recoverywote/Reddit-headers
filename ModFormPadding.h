@@ -20,8 +20,8 @@
 + (id)quarter;
 + (id)half;
 + (id)regular;
-@property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 - (double)heightWithMaxSize:(struct CGSize)arg1;
 
 @end

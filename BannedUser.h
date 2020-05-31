@@ -21,6 +21,7 @@
     NSString *_banContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *banContext; // @synthesize banContext=_banContext;
 @property(readonly, copy, nonatomic) NSString *banMessage; // @synthesize banMessage=_banMessage;
 @property(readonly, copy, nonatomic) NSNumber *banDuration; // @synthesize banDuration=_banDuration;
@@ -30,7 +31,6 @@
 @property(readonly, copy, nonatomic) NSDate *banDate; // @synthesize banDate=_banDate;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *userId; // @synthesize userId=_userId;
-- (void).cxx_destruct;
 - (id)initWithUsername:(id)arg1 userId:(id)arg2 iconURL:(id)arg3 reason:(id)arg4 banMessage:(id)arg5 modNote:(id)arg6 banContext:(id)arg7 banDuration:(id)arg8 banDate:(id)arg9;
 - (id)initWithData:(id)arg1;
 

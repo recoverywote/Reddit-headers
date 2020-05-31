@@ -14,8 +14,8 @@
 }
 
 + (id)getStoreUrlFromDsn:(id)arg1;
-@property(retain, nonatomic) SentryDsn *dsn; // @synthesize dsn=_dsn;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SentryDsn *dsn; // @synthesize dsn=_dsn;
 - (id)initStoreRequestWithDsn:(id)arg1 andData:(id)arg2 didFailWithError:(id *)arg3;
 - (id)initStoreRequestWithDsn:(id)arg1 andEvent:(id)arg2 didFailWithError:(id *)arg3;
 

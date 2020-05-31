@@ -32,6 +32,7 @@
 }
 
 + (id)presentFromViewController:(id)arg1 subreddit:(id)arg2 userData:(id)arg3 accountContext:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseBarButtonItem *addButton; // @synthesize addButton=_addButton;
 @property(nonatomic) struct CGRect keyboardFrame; // @synthesize keyboardFrame=_keyboardFrame;
 @property(retain, nonatomic) UIView *currentEditingField; // @synthesize currentEditingField=_currentEditingField;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak NSObject<ModFormViewControllerDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)adjustScrollViewOffsetForField:(id)arg1;
 - (void)keyboardWillChange:(id)arg1;
 - (void)keyboardWillHide:(id)arg1;

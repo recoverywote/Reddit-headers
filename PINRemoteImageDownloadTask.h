@@ -19,9 +19,9 @@
 }
 
 + (_Bool)retriableError:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *ifRange; // @synthesize ifRange=_ifRange;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSData *data;
 @property(readonly, nonatomic) double estimatedRemainingTime;
 - (id)progressImage;

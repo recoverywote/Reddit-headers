@@ -14,9 +14,9 @@
     NSArray *_tableRows;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *tableRows; // @synthesize tableRows=_tableRows;
 @property(copy, nonatomic) NSArray *headerRow; // @synthesize headerRow=_headerRow;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (struct CGSize)sizeForTableCellElement:(id)arg1 config:(id)arg2 textSizeCache:(id)arg3;
 - (double)recommendedWidthForColumn:(unsigned long long)arg1 config:(id)arg2 textSizeCache:(id)arg3;

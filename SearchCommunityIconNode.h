@@ -16,11 +16,11 @@
     struct CGSize _buttonNodeSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldUseSafeBrowsingMode; // @synthesize shouldUseSafeBrowsingMode=_shouldUseSafeBrowsingMode;
 @property(nonatomic) struct CGSize buttonNodeSize; // @synthesize buttonNodeSize=_buttonNodeSize;
 @property(retain, nonatomic) ASNetworkImageNode *subredditButtonNode; // @synthesize subredditButtonNode=_subredditButtonNode;
 @property(retain, nonatomic) SearchCommunity *searchCommunity; // @synthesize searchCommunity=_searchCommunity;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (_Bool)shouldObscureIcon;

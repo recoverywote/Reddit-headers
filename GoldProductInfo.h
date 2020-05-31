@@ -25,6 +25,7 @@
     NSArray *_purchaseSuccessMediaSources;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *purchaseSuccessMediaSources; // @synthesize purchaseSuccessMediaSources=_purchaseSuccessMediaSources;
 @property(readonly, nonatomic) NSArray *marketingMediaSources; // @synthesize marketingMediaSources=_marketingMediaSources;
 @property(readonly, nonatomic) CoinDealInfo *dealInfo; // @synthesize dealInfo=_dealInfo;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) NSString *productDescription; // @synthesize productDescription=_productDescription;
 @property(readonly, nonatomic) NSString *productId; // @synthesize productId=_productId;
 @property(readonly, nonatomic) long long packageType; // @synthesize packageType=_packageType;
-- (void).cxx_destruct;
 - (id)initWithPackageType:(long long)arg1 data:(id)arg2;
 
 @end

@@ -14,9 +14,9 @@
     NSDictionary *_options;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *options; // @synthesize options=_options;
 @property(readonly, copy, nonatomic) NSDecimalNumber *totalVotes; // @synthesize totalVotes=_totalVotes;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

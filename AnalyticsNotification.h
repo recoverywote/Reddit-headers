@@ -28,6 +28,7 @@
     NSString *_body;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool bodyIsSet; // @synthesize bodyIsSet=_bodyIsSet;
 @property(copy, nonatomic) NSString *body; // @synthesize body=_body;
 @property(nonatomic) _Bool titleIsSet; // @synthesize titleIsSet=_titleIsSet;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) NSString *process_notes; // @synthesize process_notes=_process_notes;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -16,9 +16,9 @@
     FeedSpinnerView *_loadSpinner;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedSpinnerView *loadSpinner; // @synthesize loadSpinner=_loadSpinner;
 @property(retain, nonatomic) DeeplinkResolvingPresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (void)showErrorToast;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;

@@ -15,10 +15,10 @@
     NSCache *_subredditManagers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSCache *subredditManagers; // @synthesize subredditManagers=_subredditManagers;
 @property(retain, nonatomic) MetaCommunityManager *communityManager; // @synthesize communityManager=_communityManager;
 @property(readonly, nonatomic) __weak RedditService *redditService; // @synthesize redditService=_redditService;
-- (void).cxx_destruct;
 - (id)badgeManagerForSubreddit:(id)arg1;
 - (id)initWithRedditService:(id)arg1;
 

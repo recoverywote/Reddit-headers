@@ -16,11 +16,11 @@
     NSURL *_iconURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
 @property(readonly, copy, nonatomic) NSDate *approvedDate; // @synthesize approvedDate=_approvedDate;
 @property(readonly, copy, nonatomic) NSString *userId; // @synthesize userId=_userId;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (id)initWithUsername:(id)arg1 userId:(id)arg2 approvedDate:(id)arg3 iconURL:(id)arg4;
 - (id)initWithData:(id)arg1;
 

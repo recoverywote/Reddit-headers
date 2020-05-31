@@ -52,6 +52,7 @@
 + (void)clearAll;
 + (id)getInstance;
 + (id)preferenceHelper;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *creditsDictionary; // @synthesize creditsDictionary=_creditsDictionary;
 @property(retain, nonatomic) NSMutableDictionary *persistenceDict; // @synthesize persistenceDict=_persistenceDict;
 @property(retain, nonatomic) NSURL *faceBookAppLink; // @synthesize faceBookAppLink=_faceBookAppLink;
@@ -63,7 +64,6 @@
 @property(nonatomic) double retryInterval; // @synthesize retryInterval=_retryInterval;
 @property(nonatomic) long long retryCount; // @synthesize retryCount=_retryCount;
 @property(nonatomic) _Bool isDebug; // @synthesize isDebug=_isDebug;
-- (void).cxx_destruct;
 - (long long)readIntegerFromDefaults:(id)arg1;
 - (_Bool)readBoolFromDefaults:(id)arg1;
 - (id)readStringFromDefaults:(id)arg1;

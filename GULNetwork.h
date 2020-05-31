@@ -24,12 +24,12 @@
 }
 
 + (void)handleEventsForBackgroundURLSessionID:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) double timeoutInterval; // @synthesize timeoutInterval=_timeoutInterval;
 @property(nonatomic) _Bool isDebugModeEnabled; // @synthesize isDebugModeEnabled=_isDebugModeEnabled;
 @property(nonatomic) __weak id <GULNetworkLoggerDelegate> loggerDelegate; // @synthesize loggerDelegate=_loggerDelegate;
 @property(nonatomic) __weak id <GULNetworkReachabilityDelegate> reachabilityDelegate; // @synthesize reachabilityDelegate=_reachabilityDelegate;
 @property(readonly, nonatomic, getter=isNetworkConnected) _Bool networkConnected; // @synthesize networkConnected=_networkConnected;
-- (void).cxx_destruct;
 - (void)GULNetwork_logWithLevel:(long long)arg1 messageCode:(long long)arg2 message:(id)arg3;
 - (void)GULNetwork_logWithLevel:(long long)arg1 messageCode:(long long)arg2 message:(id)arg3 context:(id)arg4;
 - (void)GULNetwork_logWithLevel:(long long)arg1 messageCode:(long long)arg2 message:(id)arg3 contexts:(id)arg4;

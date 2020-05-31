@@ -35,6 +35,7 @@
     NSPredicate *_removeAllTopicPredicate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSPredicate *removeAllTopicPredicate; // @synthesize removeAllTopicPredicate=_removeAllTopicPredicate;
 @property(retain, nonatomic) NSMutableSet *expandedTopics; // @synthesize expandedTopics=_expandedTopics;
 @property(retain, nonatomic) NSMutableSet *updatedSubTopics; // @synthesize updatedSubTopics=_updatedSubTopics;
@@ -52,7 +53,6 @@
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <NewsPersonalizeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)newsTopicAtIndexPath:(id)arg1;
 - (void)reorderSubscriptionListForTopic:(id)arg1;
 - (void)recalculatePickModeTopics;

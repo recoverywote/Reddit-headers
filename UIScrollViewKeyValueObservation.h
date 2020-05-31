@@ -16,10 +16,10 @@
     NSArray *_keyPaths;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *keyPaths; // @synthesize keyPaths=_keyPaths;
 @property(nonatomic) __weak UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) __weak id <RUIScrollViewProgressObserver> observer; // @synthesize observer=_observer;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (id)initWithScrollView:(id)arg1 observer:(id)arg2 forOptions:(long long)arg3;

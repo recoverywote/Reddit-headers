@@ -47,6 +47,7 @@
 + (struct CGColor *)_highlightColorForStyle:(unsigned long long)arg1;
 + (void)drawRect:(struct CGRect)arg1 withParameters:(id)arg2 isCancelled:(CDUnknownBlockType)arg3 isRasterizing:(_Bool)arg4;
 + (double)ascenderWithAttributedString:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly) _Bool usingExperiment; // @synthesize usingExperiment=_usingExperiment;
 @property(copy, nonatomic) NSArray *pointSizeScaleFactors; // @synthesize pointSizeScaleFactors=_pointSizeScaleFactors;
 @property(nonatomic) _Bool passthroughNonlinkTouches; // @synthesize passthroughNonlinkTouches=_passthroughNonlinkTouches;
@@ -57,7 +58,6 @@
 @property unsigned long long maximumNumberOfLines; // @synthesize maximumNumberOfLines=_maximumNumberOfLines;
 @property long long truncationMode; // @synthesize truncationMode=_truncationMode;
 @property(copy) NSAttributedString *additionalTruncationMessage; // @synthesize additionalTruncationMessage=_additionalTruncationMessage;
-- (void).cxx_destruct;
 - (id)_locked_prepareTruncationStringForDrawing:(id)arg1;
 - (id)_locked_composedTruncationText;
 - (struct _NSRange)_additionalTruncationMessageRangeWithVisibleRange:(struct _NSRange)arg1;

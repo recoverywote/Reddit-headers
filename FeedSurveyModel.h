@@ -20,6 +20,7 @@
     NSString *_imageName;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showTexturedBackground; // @synthesize showTexturedBackground=_showTexturedBackground;
 @property(nonatomic) _Bool showButtons; // @synthesize showButtons=_showButtons;
 @property(copy, nonatomic) NSString *imageName; // @synthesize imageName=_imageName;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) CDUnknownBlockType declineButtonStringBlock; // @synthesize declineButtonStringBlock=_declineButtonStringBlock;
 @property(copy, nonatomic) CDUnknownBlockType descriptionStringBlock; // @synthesize descriptionStringBlock=_descriptionStringBlock;
 @property(copy, nonatomic) CDUnknownBlockType titleStringBlock; // @synthesize titleStringBlock=_titleStringBlock;
-- (void).cxx_destruct;
 
 @end
 

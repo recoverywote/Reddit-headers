@@ -15,10 +15,10 @@
     NSString *_tagName;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *attributes; // @synthesize attributes=_attributes;
 @property(readonly, copy, nonatomic) NSString *tagName; // @synthesize tagName=_tagName;
 @property(readonly, nonatomic) long long htmlNamespace; // @synthesize htmlNamespace=_htmlNamespace;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)description;
 - (id)outerHTML;

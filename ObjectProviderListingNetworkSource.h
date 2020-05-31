@@ -15,8 +15,8 @@
     ObjectProvider *_objectProvider;
 }
 
-@property(retain, nonatomic) ObjectProvider *objectProvider; // @synthesize objectProvider=_objectProvider;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ObjectProvider *objectProvider; // @synthesize objectProvider=_objectProvider;
 - (void)objectProviderDidUpdate:(id)arg1;
 - (_Bool)hasMoreContent;
 - (_Bool)isFetchingMore;

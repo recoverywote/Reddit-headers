@@ -19,6 +19,7 @@
     BaseView *_videoHeaderBackground;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPanning; // @synthesize isPanning=_isPanning;
 @property(retain, nonatomic) BaseView *videoHeaderBackground; // @synthesize videoHeaderBackground=_videoHeaderBackground;
 @property(retain, nonatomic) BaseView *headerOverlayView; // @synthesize headerOverlayView=_headerOverlayView;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) BaseImageView *headerImageView; // @synthesize headerImageView=_headerImageView;
 @property(retain, nonatomic) FeedPostHlsVideoView *feedPostHlsVideoView; // @synthesize feedPostHlsVideoView=_feedPostHlsVideoView;
 @property(nonatomic) _Bool hasLoadedOnce; // @synthesize hasLoadedOnce=_hasLoadedOnce;
-- (void).cxx_destruct;
 - (double)topPadding;
 - (void)didCompleteTransition;
 - (void)updateWithPercentDisplayed:(double)arg1;

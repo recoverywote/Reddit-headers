@@ -18,10 +18,10 @@
 + (id)videoModelFromData:(id)arg1;
 + (id)mediaModelFromData:(id)arg1;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *variantInfo; // @synthesize variantInfo=_variantInfo;
 @property(copy, nonatomic) NSArray *resolutionInfo; // @synthesize resolutionInfo=_resolutionInfo;
 @property(copy, nonatomic) NSString *imageID; // @synthesize imageID=_imageID;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isHostedVideo;
 - (id)safeURLForDictionary:(id)arg1 key:(id)arg2;
 - (_Bool)hasVideos;

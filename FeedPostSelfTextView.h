@@ -28,11 +28,11 @@
 + (struct CGSize)textViewSizeWithData:(id)arg1;
 + (id)textOfDisplayedContentForPost:(id)arg1;
 + (id)textForLayoutSizeCalculationForPost:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldApplyStyling; // @synthesize shouldApplyStyling=_shouldApplyStyling;
 @property(retain, nonatomic) AttributedLabel *textViewLabel; // @synthesize textViewLabel=_textViewLabel;
 @property(nonatomic) __weak id <FeedPostSelfTextViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)theatreViewDidClose;
 - (void)postAttributedStringChanged:(id)arg1;
 - (void)attributedLabel:(id)arg1 didTapMedia:(id)arg2;

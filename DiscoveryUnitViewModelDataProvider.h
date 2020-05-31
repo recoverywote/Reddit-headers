@@ -31,6 +31,7 @@
     CDUnknownBlockType _preprocessObjectsBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType preprocessObjectsBlock; // @synthesize preprocessObjectsBlock=_preprocessObjectsBlock;
 @property(retain, nonatomic) DiscoveryLayout *calculatedLayout; // @synthesize calculatedLayout=_calculatedLayout;
 @property(retain, nonatomic) DiscoveryUnitFetcher *discoveryUnitFetcher; // @synthesize discoveryUnitFetcher=_discoveryUnitFetcher;
@@ -47,7 +48,6 @@
 @property(nonatomic) _Bool insertSeparators; // @synthesize insertSeparators=_insertSeparators;
 @property(nonatomic) _Bool isFetched; // @synthesize isFetched=_isFetched;
 @property(retain, nonatomic) NSMutableDictionary *discoveryUnitViewModels; // @synthesize discoveryUnitViewModels=_discoveryUnitViewModels;
-- (void).cxx_destruct;
 - (_Bool)isDiscoveryUnitEnabled:(id)arg1;
 - (void)exposeForDiscoveryUnit:(id)arg1;
 - (void)logFetchedDiscoveryUnitViewModels:(id)arg1;

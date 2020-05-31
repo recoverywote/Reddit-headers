@@ -17,12 +17,12 @@
     NSString *_lastRevisionBy;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *lastRevisionBy; // @synthesize lastRevisionBy=_lastRevisionBy;
 @property(copy, nonatomic) NSDate *lastRevisionDate; // @synthesize lastRevisionDate=_lastRevisionDate;
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(retain, nonatomic) RichText *contentRichText; // @synthesize contentRichText=_contentRichText;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithGraphQLData:(id)arg1;
 
 @end

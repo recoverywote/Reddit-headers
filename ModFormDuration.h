@@ -18,10 +18,10 @@
 }
 
 + (id)durationWithText:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ModFormCheckbox *permanentCheckbox; // @synthesize permanentCheckbox=_permanentCheckbox;
 @property(retain, nonatomic) ModFormTextField *durationTextField; // @synthesize durationTextField=_durationTextField;
 @property(nonatomic) _Bool isOptional; // @synthesize isOptional;
-- (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)textFieldDidChange:(id)arg1;
 - (void)dealloc;

@@ -70,6 +70,7 @@
     CDStruct_1b6d18a9 _elapsed;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AnalyticsActionInfo *actionInfo; // @synthesize actionInfo=_actionInfo;
 @property(retain, nonatomic) NSURL *videoFileDiskURL; // @synthesize videoFileDiskURL=_videoFileDiskURL;
 @property(copy, nonatomic) NSString *videoPostID; // @synthesize videoPostID=_videoPostID;
@@ -125,7 +126,6 @@
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <TheatrePlayerDelegate> theatrePlayerDelegate; // @synthesize theatrePlayerDelegate=_theatrePlayerDelegate;
 @property(nonatomic) __weak id <PlayerViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)defaultAnalyticsEvent;
 - (_Bool)parentIsCarouselView;
 - (_Bool)needsToBeConfigured;

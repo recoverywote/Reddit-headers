@@ -24,6 +24,7 @@
     NSString *_country;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool countryIsSet; // @synthesize countryIsSet=_countryIsSet;
 @property(copy, nonatomic) NSString *country; // @synthesize country=_country;
 @property(nonatomic) _Bool subverticalIsSet; // @synthesize subverticalIsSet=_subverticalIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *industry; // @synthesize industry=_industry;
 @property(nonatomic) _Bool nameIsSet; // @synthesize nameIsSet=_nameIsSet;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

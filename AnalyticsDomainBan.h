@@ -36,6 +36,7 @@
     NSString *_inspector_exempt_regex;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool submit_bannedIsSet; // @synthesize submit_bannedIsSet=_submit_bannedIsSet;
 @property(nonatomic) _Bool submit_banned; // @synthesize submit_banned=_submit_banned;
 @property(nonatomic) _Bool inspector_exempt_regexIsSet; // @synthesize inspector_exempt_regexIsSet=_inspector_exempt_regexIsSet;
@@ -56,7 +57,6 @@
 @property(nonatomic) _Bool markdown; // @synthesize markdown=_markdown;
 @property(nonatomic) _Bool urlIsSet; // @synthesize urlIsSet=_urlIsSet;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

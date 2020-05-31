@@ -25,6 +25,7 @@
 }
 
 + (id)objectWithDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *spotlightIdentifier; // @synthesize spotlightIdentifier=_spotlightIdentifier;
 @property(retain, nonatomic) BranchContentMetadata *contentMetadata; // @synthesize contentMetadata=_contentMetadata;
 @property(nonatomic) _Bool publiclyIndex; // @synthesize publiclyIndex=_publiclyIndex;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSString *canonicalUrl; // @synthesize canonicalUrl=_canonicalUrl;
 @property(retain, nonatomic) NSString *canonicalIdentifier; // @synthesize canonicalIdentifier=_canonicalIdentifier;
-- (void).cxx_destruct;
 - (id)dictionary;
 - (void)safeSetValue:(id)arg1 forKey:(id)arg2 onDict:(id)arg3;
 - (id)getDictionaryWithCompleteLinkProperties:(id)arg1;

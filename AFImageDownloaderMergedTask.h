@@ -16,11 +16,11 @@
     NSMutableArray *_responseHandlers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *responseHandlers; // @synthesize responseHandlers=_responseHandlers;
 @property(retain, nonatomic) NSURLSessionDataTask *task; // @synthesize task=_task;
 @property(retain, nonatomic) NSUUID *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) NSString *URLIdentifier; // @synthesize URLIdentifier=_URLIdentifier;
-- (void).cxx_destruct;
 - (void)removeResponseHandler:(id)arg1;
 - (void)addResponseHandler:(id)arg1;
 - (id)initWithURLIdentifier:(id)arg1 identifier:(id)arg2 task:(id)arg3;

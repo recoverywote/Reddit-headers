@@ -21,13 +21,13 @@
     FeedPostOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) LoadingIndicatorNode *loadingIndicatorNode; // @synthesize loadingIndicatorNode=_loadingIndicatorNode;
 @property(nonatomic) __weak id <FeedPostImageNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Post *parentPost; // @synthesize parentPost=_parentPost;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) ASNetworkImageNode *imageNode; // @synthesize imageNode=_imageNode;
-- (void).cxx_destruct;
 - (void)imageNode:(id)arg1 didFailWithError:(id)arg2;
 - (void)imageNodeDidStartFetchingData:(id)arg1;
 - (void)imageNode:(id)arg1 didLoadImage:(id)arg2;

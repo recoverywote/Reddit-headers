@@ -16,9 +16,9 @@
     unsigned long long _state;
 }
 
+- (void).cxx_destruct;
 @property unsigned long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
-- (void).cxx_destruct;
 - (id)description;
 - (void)_ensureTransactionData;
 - (void)waitUntilComplete;

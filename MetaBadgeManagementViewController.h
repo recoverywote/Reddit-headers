@@ -21,12 +21,12 @@
     MetaBadgeManagementTab *_selectedTab;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MetaBadgeManagementTab *selectedTab; // @synthesize selectedTab=_selectedTab;
 @property(retain, nonatomic) NSArray *tabs; // @synthesize tabs=_tabs;
 @property(retain, nonatomic) MetaBadgeManagementPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) MetaBadgeManagementDisplayNode *displayNode; // @synthesize displayNode=_displayNode;
 @property(nonatomic) __weak id <MetaBadgeManagementViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapCloseButton:(id)arg1;
 - (void)performModifySelectedViewModel:(id)arg1 withSender:(id)arg2;
 - (void)performDidChangeSelectedTab:(id)arg1 withSender:(id)arg2;

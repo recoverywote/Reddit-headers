@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit34MainScreenTabManagerViewController.h"
 
-#import "UITableViewDelegate-Protocol.h"
-
-@interface _TtC6Reddit34MainScreenTabManagerViewController (Reddit) <UITableViewDelegate>
+@interface _TtC6Reddit34MainScreenTabManagerViewController (Reddit)
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 commitEditingStyle:(long long)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 moveRowAtIndexPath:(id)arg2 toIndexPath:(id)arg3;

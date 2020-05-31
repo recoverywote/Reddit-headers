@@ -21,10 +21,10 @@
 }
 
 + (void)adjustFontSizeForAttributeString:(id)arg1 withScaleFactor:(double)arg2;
-@property(nonatomic) struct CGSize constrainedSize; // @synthesize constrainedSize=_constrainedSize;
-@property(readonly, nonatomic) NSTextContainer *sizingTextContainer; // @synthesize sizingTextContainer=_sizingTextContainer;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) struct CGSize constrainedSize; // @synthesize constrainedSize=_constrainedSize;
+@property(readonly, nonatomic) NSTextContainer *sizingTextContainer; // @synthesize sizingTextContainer=_sizingTextContainer;
 - (double)scaleFactor;
 @property(readonly, nonatomic) NSLayoutManager *sizingLayoutManager; // @synthesize sizingLayoutManager=_sizingLayoutManager;
 - (struct CGSize)boundingBoxForString:(id)arg1;

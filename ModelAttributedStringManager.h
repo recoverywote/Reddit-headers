@@ -20,11 +20,11 @@
 }
 
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak RUIThemeGuidance *themeGuidance; // @synthesize themeGuidance=_themeGuidance;
 @property(nonatomic) __weak AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *backgroundQueue; // @synthesize backgroundQueue=_backgroundQueue;
-- (void).cxx_destruct;
 - (void)themeDidChange:(id)arg1;
 - (void)didLoadPost:(id)arg1;
 - (void)dealloc;

@@ -16,10 +16,10 @@
 }
 
 + (id)placeholderNodeForType:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ShimmerNode *shimmerNode; // @synthesize shimmerNode=_shimmerNode;
 @property(retain, nonatomic) ASDisplayNode *placeholderNode; // @synthesize placeholderNode=_placeholderNode;
 @property(nonatomic) _Bool enableShimmer; // @synthesize enableShimmer=_enableShimmer;
-- (void).cxx_destruct;
 - (void)didLoad;
 - (void)layout;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

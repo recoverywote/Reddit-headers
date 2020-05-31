@@ -17,12 +17,12 @@
     CDUnknownBlockType _switchChangedCallback;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType switchChangedCallback; // @synthesize switchChangedCallback=_switchChangedCallback;
 @property(retain, nonatomic) BaseView *bottomDividerView; // @synthesize bottomDividerView=_bottomDividerView;
 @property(retain, nonatomic) BaseView *topDividerView; // @synthesize topDividerView=_topDividerView;
 @property(retain, nonatomic) UISwitch *showMyFlairSwitch; // @synthesize showMyFlairSwitch=_showMyFlairSwitch;
 @property(retain, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
-- (void).cxx_destruct;
 - (void)setOnSwitchChangeAction:(CDUnknownBlockType)arg1;
 @property(nonatomic) _Bool showMyFlairSwitchOn;
 - (void)showFlairSwitchToggled:(id)arg1;

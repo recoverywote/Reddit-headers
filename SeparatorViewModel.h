@@ -18,9 +18,9 @@
 
 + (id)widgetSeparator;
 + (id)lineSeparator;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) unsigned long long separatorType; // @synthesize separatorType=_separatorType;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;

@@ -18,6 +18,7 @@
 @property(readonly, nonatomic) _Bool isCommunitySettingsM2Enabled;
 @property(readonly, nonatomic) _Bool isCollectionInFeedEnabled;
 @property(readonly, nonatomic) long long redditSharesVariant;
+@property(readonly, nonatomic) _Bool isNewCommentComposerEnabled;
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
 @property(readonly, nonatomic) _Bool isMuxEnabled;
 @property(readonly, nonatomic) _Bool isRPANAbrBroadcastEnabled;
@@ -77,6 +78,7 @@
 @property(readonly, nonatomic) _Bool isNewUserTargetedOfferEnabled;
 @property(readonly, nonatomic) _Bool isEditUsernameEnabled;
 @property(readonly, nonatomic) _Bool isSingleSignOnEnabled;
+@property(readonly, nonatomic) _Bool isCryptoWalletInterfaceEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletEnabled;
 @property(readonly, nonatomic) _Bool isRedditVideoV2Enabled;
 @property(readonly, nonatomic) _Bool isReportUserProfileIntegrationEnabled;
@@ -85,6 +87,7 @@
 @property(readonly, nonatomic) _Bool isHideBestOfCommunitiesEnabled;
 @property(readonly, nonatomic) _Bool isErrorReportingEnabled;
 @property(readonly, nonatomic) _Bool isClientTracingEnabled;
+@property(readonly, nonatomic) _Bool isSerialAsyncQueueDispatchTimeForeverEnabled;
 @property(readonly, nonatomic) _Bool isDownToChatEnabled;
 - (void)exposeChatPostCreationExperimentForSubreddit:(id)arg1;
 - (_Bool)isChatPostCreationExperimentEnabledForSubreddit:(id)arg1;

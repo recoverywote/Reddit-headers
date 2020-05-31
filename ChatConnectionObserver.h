@@ -17,23 +17,24 @@
     ChatFeedInteractor *_feedInteractor;
     id <ChatConnectionObserverDelegate> _delegate;
     NSTimer *_connectionAlertTimer;
+    RedditService *_service;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSTimer *connectionAlertTimer; // @synthesize connectionAlertTimer=_connectionAlertTimer;
 @property(nonatomic) _Bool shouldShowConnectionAlert; // @synthesize shouldShowConnectionAlert=_shouldShowConnectionAlert;
 @property(nonatomic) __weak id <ChatConnectionObserverDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ChatFeedInteractor *feedInteractor; // @synthesize feedInteractor=_feedInteractor;
-- (void).cxx_destruct;
 - (void)chatNetworkManager:(id)arg1 messageWasDeleted:(long long)arg2;
 - (void)chatNetworkManager:(id)arg1 didReceiveMessage:(id)arg2 channel:(id)arg3;
 - (void)chatNetworkManager:(id)arg1 connectionStatusDidChange:(unsigned long long)arg2;
 - (void)connectionAlertTimerFired:(id)arg1;
 - (void)resetConnectionAlertTimer;
 - (void)activateConnectionAlertTimer;
-@property(readonly, nonatomic) RedditService *service;
 - (void)handleConnectionStatusChange:(unsigned long long)arg1;
 - (void)reportConnectionStatusChange;
-- (id)init;
+- (id)initWithService:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

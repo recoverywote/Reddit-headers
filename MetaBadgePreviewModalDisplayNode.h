@@ -13,8 +13,8 @@
     MetaBadgePreviewModalContentNode *_contentNode;
 }
 
-@property(retain, nonatomic) MetaBadgePreviewModalContentNode *contentNode; // @synthesize contentNode=_contentNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) MetaBadgePreviewModalContentNode *contentNode; // @synthesize contentNode=_contentNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)setBadges:(id)arg1 selectedBadgePK:(id)arg2 actionTitle:(id)arg3;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;

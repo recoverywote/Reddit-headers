@@ -19,10 +19,10 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) AttributedLabelRegular *label; // @synthesize label=_label;
 @property(retain, nonatomic) CaptureContentAttributedText *content; // @synthesize content=_content;
 @property(nonatomic) __weak CaptureScreen *screen; // @synthesize screen=_screen;
-- (void).cxx_destruct;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)prepareForReuse;
 - (void)configureWithContent:(id)arg1 screen:(id)arg2;

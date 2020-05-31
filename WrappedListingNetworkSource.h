@@ -16,9 +16,9 @@
     ListingNetworkSource *_listingNetworkSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
 @property(copy, nonatomic) CDUnknownBlockType listingNetworkSourceBlock; // @synthesize listingNetworkSourceBlock=_listingNetworkSourceBlock;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (void)listingNetworkSourceDidFail:(id)arg1;
 - (void)listingNetworkSourceDidFetchMoreData:(id)arg1;

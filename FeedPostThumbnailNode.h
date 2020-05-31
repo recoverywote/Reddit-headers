@@ -7,6 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASImageNode, ASNetworkImageNode, FeedPostOptions, Post, UIImage, UrlLabelNode;
+@protocol ViewContext;
 
 @interface FeedPostThumbnailNode : BaseFeedDisplayNode
 {
@@ -19,10 +20,13 @@
     ASImageNode *_linkTypeIconNode;
     UrlLabelNode *_urlLabelNode;
     FeedPostOptions *_options;
+    id <ViewContext> _viewContext;
     struct CGSize _size;
 }
 
 + (_Bool)shouldShowUrlLabelForPost:(id)arg1;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool shouldApplyStyling; // @synthesize shouldApplyStyling=_shouldApplyStyling;
 @property(nonatomic) _Bool blurImage; // @synthesize blurImage=_blurImage;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
@@ -33,12 +37,11 @@
 @property(retain, nonatomic) ASImageNode *postTypeIconNode; // @synthesize postTypeIconNode=_postTypeIconNode;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) ASNetworkImageNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
-- (void).cxx_destruct;
 - (void)configurePlaceholderImage;
 - (void)configureNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 @property(readonly, nonatomic) UIImage *thumbnailImage;
-- (id)initWithPost:(id)arg1 options:(id)arg2 targetSize:(struct CGSize)arg3 blurImage:(_Bool)arg4 shouldApplyStyling:(_Bool)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 targetSize:(struct CGSize)arg4 blurImage:(_Bool)arg5 shouldApplyStyling:(_Bool)arg6;
 
 @end
 

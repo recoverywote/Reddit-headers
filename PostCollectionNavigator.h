@@ -14,9 +14,9 @@
     PostCollectionPresenter *_postCollectionPresenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak PostCollectionPresenter *postCollectionPresenter; // @synthesize postCollectionPresenter=_postCollectionPresenter;
 @property(nonatomic) __weak PostCollectionViewController *postCollectionViewController; // @synthesize postCollectionViewController=_postCollectionViewController;
-- (void).cxx_destruct;
 - (void)markPostVisitedAndAddToHistory:(id)arg1;
 - (void)navigateToLoggedOutViewController;
 - (void)navigateToTheatreModeWithImage:(id)arg1 post:(id)arg2 postCollection:(id)arg3;

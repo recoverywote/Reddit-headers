@@ -15,10 +15,10 @@
     NSArray *_pastedItems;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool truncatePlaceholder; // @synthesize truncatePlaceholder=_truncatePlaceholder;
 @property(copy, nonatomic) NSArray *pastedItems; // @synthesize pastedItems=_pastedItems;
 @property(nonatomic) unsigned long long pastableMediaTypes; // @synthesize pastableMediaTypes=_pastableMediaTypes;
-- (void).cxx_destruct;
 - (id)truncatePlaceholder:(id)arg1;
 - (void)setPlaceholderText:(id)arg1;
 - (void)setFrame:(struct CGRect)arg1;

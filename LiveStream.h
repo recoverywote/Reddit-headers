@@ -18,6 +18,8 @@
     _Bool _isVODAccessible;
     _Bool _isUserReported;
     _Bool _isUserHidden;
+    _Bool _postIsNSFW;
+    _Bool _postIsSpoiler;
     _Bool _isBumperVideo;
     NSString *_streamId;
     NSString *_postId;
@@ -43,8 +45,8 @@
     NSDate *_fetchedAt;
     NSString *_postDomain;
     NSDate *_postCreatedAt;
-    NSString *_postAuthorId;
     double _postUpvoteRatio;
+    NSString *_postAuthorId;
     NSString *_pk;
     NSString *_author;
     NSString *_sharingPermalinkIncludingDomain;
@@ -53,14 +55,17 @@
     struct CGSize _mediaSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LiveStreamSubscriptionDetails *subscriptionDetails; // @synthesize subscriptionDetails=_subscriptionDetails;
 @property(readonly, nonatomic) StreamingSubredditInfo *subredditInfo; // @synthesize subredditInfo=_subredditInfo;
 @property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain; // @synthesize sharingPermalinkIncludingDomain=_sharingPermalinkIncludingDomain;
 @property(readonly, copy, nonatomic) NSString *author; // @synthesize author=_author;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(readonly, nonatomic) _Bool isBumperVideo; // @synthesize isBumperVideo=_isBumperVideo;
-@property(readonly, nonatomic) double postUpvoteRatio; // @synthesize postUpvoteRatio=_postUpvoteRatio;
 @property(readonly, copy, nonatomic) NSString *postAuthorId; // @synthesize postAuthorId=_postAuthorId;
+@property(readonly, nonatomic) _Bool postIsSpoiler; // @synthesize postIsSpoiler=_postIsSpoiler;
+@property(readonly, nonatomic) _Bool postIsNSFW; // @synthesize postIsNSFW=_postIsNSFW;
+@property(readonly, nonatomic) double postUpvoteRatio; // @synthesize postUpvoteRatio=_postUpvoteRatio;
 @property(readonly, nonatomic) NSDate *postCreatedAt; // @synthesize postCreatedAt=_postCreatedAt;
 @property(readonly, copy, nonatomic) NSString *postDomain; // @synthesize postDomain=_postDomain;
 @property(nonatomic) _Bool isUserHidden; // @synthesize isUserHidden=_isUserHidden;
@@ -91,7 +96,6 @@
 @property(readonly, copy, nonatomic) NSURL *hlsURL; // @synthesize hlsURL=_hlsURL;
 @property(readonly, copy, nonatomic) NSString *postId; // @synthesize postId=_postId;
 @property(readonly, copy, nonatomic) NSString *streamId; // @synthesize streamId=_streamId;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNumber *totalCoinsReceived;
 @property(readonly, nonatomic) _Bool isStale;
 @property(readonly, nonatomic) _Bool wasKilledOrPurged;

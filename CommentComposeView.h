@@ -26,6 +26,7 @@
     BaseView *_titleDivider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *titleDivider; // @synthesize titleDivider=_titleDivider;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) _TtC6Reddit23MetaEmoteComposeManager *emoteComposeManager; // @synthesize emoteComposeManager=_emoteComposeManager;
 @property(retain, nonatomic) CommentComposeImageManager *imageManager; // @synthesize imageManager=_imageManager;
 @property(retain, nonatomic) BaseAttachmentTextView *replyTextView; // @synthesize replyTextView=_replyTextView;
-- (void).cxx_destruct;
 - (void)linkViewControllerDidTapInsert:(id)arg1;
 - (void)textViewDidEndEditing:(id)arg1;
 - (void)textViewDidBeginEditing:(id)arg1;

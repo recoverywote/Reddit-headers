@@ -20,6 +20,7 @@
     NSArray *_products;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *products; // @synthesize products=_products;
 @property(retain, nonatomic) NSString *affiliation; // @synthesize affiliation=_affiliation;
 @property(retain, nonatomic) NSString *coupon; // @synthesize coupon=_coupon;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) NSString *transactionID; // @synthesize transactionID=_transactionID;
 @property(retain, nonatomic) NSString *currency; // @synthesize currency=_currency;
 @property(retain, nonatomic) NSDecimalNumber *revenue; // @synthesize revenue=_revenue;
-- (void).cxx_destruct;
 - (id)description;
 - (id)dictionary;
 

@@ -13,8 +13,8 @@
     BaseButton *_starButton;
 }
 
-@property(retain, nonatomic) BaseButton *starButton; // @synthesize starButton=_starButton;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseButton *starButton; // @synthesize starButton=_starButton;
 - (void)themeDidChange:(id)arg1;
 - (void)updateStarButtonImages;
 - (void)prepareForReuse;

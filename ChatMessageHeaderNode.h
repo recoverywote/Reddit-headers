@@ -7,24 +7,27 @@
 #import <AsyncDisplayKit/ASCellNode.h>
 
 @class ASTextNode, DirectChannel, NSArray;
+@protocol ViewContext;
 
 @interface ChatMessageHeaderNode : ASCellNode
 {
+    id <ViewContext> _viewContext;
     NSArray *_iconLabels;
     ASTextNode *_detailLabel;
     DirectChannel *_channel;
 }
 
-+ (id)iconLabelsForContacts:(id)arg1;
++ (id)iconLabelsForContacts:(id)arg1 viewContext:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) DirectChannel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) ASTextNode *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) NSArray *iconLabels; // @synthesize iconLabels=_iconLabels;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureWithContacts:(id)arg1;
 - (void)configureWithChannel:(id)arg1;
 - (id)descriptionLabelText;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

@@ -98,6 +98,7 @@
     NSString *_offer_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool award_row_positionIsSet; // @synthesize award_row_positionIsSet=_award_row_positionIsSet;
 @property(nonatomic) int award_row_position; // @synthesize award_row_position=_award_row_position;
 @property(nonatomic) _Bool award_col_positionIsSet; // @synthesize award_col_positionIsSet=_award_col_positionIsSet;
@@ -180,7 +181,6 @@
 @property(nonatomic) int number_months; // @synthesize number_months=_number_months;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

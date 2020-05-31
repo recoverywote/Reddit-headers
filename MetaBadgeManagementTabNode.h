@@ -15,9 +15,9 @@
     NSArray *_tabNodes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *tabNodes; // @synthesize tabNodes=_tabNodes;
 @property(nonatomic) __weak id <MetaBadgeManagementActionDelegate> actionDelegate; // @synthesize actionDelegate=_actionDelegate;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didPressTabNode:(id)arg1;
 - (void)didLoad;

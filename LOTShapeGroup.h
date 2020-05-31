@@ -15,9 +15,9 @@
 }
 
 + (id)shapeItemWithJSON:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (id)description;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;

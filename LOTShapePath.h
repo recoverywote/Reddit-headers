@@ -16,11 +16,11 @@
     LOTKeyframeGroup *_shapePath;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) LOTKeyframeGroup *shapePath; // @synthesize shapePath=_shapePath;
 @property(readonly, nonatomic) NSNumber *index; // @synthesize index=_index;
 @property(readonly, nonatomic) _Bool closed; // @synthesize closed=_closed;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

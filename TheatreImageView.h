@@ -13,8 +13,8 @@
     id <TheatreImageViewDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <TheatreImageViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <TheatreImageViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)didTapLoader:(id)arg1;
 - (void)setScrollViewZoom:(double)arg1;
 - (void)scrollViewDidEndZooming:(id)arg1 withView:(id)arg2 atScale:(double)arg3;

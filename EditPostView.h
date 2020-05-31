@@ -19,11 +19,11 @@
     BaseTextView *_bodyTextView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseTextView *bodyTextView; // @synthesize bodyTextView=_bodyTextView;
 @property(retain, nonatomic) BaseView *titleDivider; // @synthesize titleDivider=_titleDivider;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (_Bool)textViewShouldChangeSize:(id)arg1;
 - (void)textView:(id)arg1 didChangeToNewSize:(struct CGSize)arg2;
 - (void)linkViewControllerDidTapInsert:(id)arg1;

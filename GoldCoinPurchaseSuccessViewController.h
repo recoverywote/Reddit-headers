@@ -20,6 +20,7 @@
     BaseView *_dialogContentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *dialogContentView; // @synthesize dialogContentView=_dialogContentView;
 @property(retain, nonatomic) BaseButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) GoldProduct *product; // @synthesize product=_product;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) UILabel *successTitleLabel; // @synthesize successTitleLabel=_successTitleLabel;
 @property(retain, nonatomic) UIImageView *productImageView; // @synthesize productImageView=_productImageView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)actionButtonDidTap:(id)arg1;
 - (void)closeButtonDidTap:(id)arg1;

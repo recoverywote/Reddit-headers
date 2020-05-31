@@ -17,12 +17,12 @@
     LOTKeyframeGroup *_opacity;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool evenOddFillRule; // @synthesize evenOddFillRule=_evenOddFillRule;
 @property(readonly, nonatomic) LOTKeyframeGroup *opacity; // @synthesize opacity=_opacity;
 @property(readonly, nonatomic) LOTKeyframeGroup *color; // @synthesize color=_color;
 @property(readonly, nonatomic) _Bool fillEnabled; // @synthesize fillEnabled=_fillEnabled;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

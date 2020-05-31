@@ -18,10 +18,10 @@
     LinkView *_linkView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LinkView *linkView; // @synthesize linkView=_linkView;
 @property(nonatomic) __weak id <LinkViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) double preferredPopupHeight; // @synthesize preferredPopupHeight=_preferredPopupHeight;
-- (void).cxx_destruct;
 - (_Bool)isValidURL:(id)arg1;
 - (void)didTapInsertLink:(id)arg1;
 - (double)preferredPopupHeightForWidth:(double)arg1;

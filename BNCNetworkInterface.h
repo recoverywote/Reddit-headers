@@ -18,10 +18,10 @@
 + (id)allIPAddresses;
 + (id)localIPAddress;
 + (id)currentInterfaces;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *address; // @synthesize address=_address;
 @property(nonatomic) long long addressType; // @synthesize addressType=_addressType;
 @property(copy, nonatomic) NSString *interfaceName; // @synthesize interfaceName=_interfaceName;
-- (void).cxx_destruct;
 - (id)description;
 
 @end

@@ -30,6 +30,7 @@
     NSString *_visibility;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool visibilityIsSet; // @synthesize visibilityIsSet=_visibilityIsSet;
 @property(copy, nonatomic) NSString *visibility; // @synthesize visibility=_visibility;
 @property(nonatomic) _Bool cover_art_urlIsSet; // @synthesize cover_art_urlIsSet=_cover_art_urlIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *owner_id; // @synthesize owner_id=_owner_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -49,6 +49,7 @@
     LineDrawingController *_lineDrawer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LineDrawingController *lineDrawer; // @synthesize lineDrawer=_lineDrawer;
 @property(retain, nonatomic) UIFont *selectedFont; // @synthesize selectedFont=_selectedFont;
 @property(nonatomic) double retainedKeyboardHeight; // @synthesize retainedKeyboardHeight=_retainedKeyboardHeight;
@@ -77,7 +78,6 @@
 @property(nonatomic) double maxImageViewHeight; // @synthesize maxImageViewHeight=_maxImageViewHeight;
 @property(nonatomic) double maxTextViewHeight; // @synthesize maxTextViewHeight=_maxTextViewHeight;
 @property(nonatomic) __weak id <EditMemeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)lineDrawingControllerDidStartDrawing:(id)arg1;
 - (void)restoreKeyboardStylerPropertiesForTextField;
 - (void)restoreDefaultSelectedTextFieldPropertiesWithKeyboard:(_Bool)arg1;

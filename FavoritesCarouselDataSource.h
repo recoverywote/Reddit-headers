@@ -23,13 +23,13 @@
     NSArray *_carouselItems;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) SubredditsNetworkSource *subscriptionNetworkSource; // @synthesize subscriptionNetworkSource=_subscriptionNetworkSource;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(readonly, nonatomic) __weak id <TemplateParserContext> templateContext; // @synthesize templateContext=_templateContext;
-- (void).cxx_destruct;
 - (void)listingNetworkSourceDidFail:(id)arg1;
 - (_Bool)listingNetworkSourceShouldFilterObject:(id)arg1;
 - (void)listingNetworkSourceDidFetchMoreData:(id)arg1;

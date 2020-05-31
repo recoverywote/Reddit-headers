@@ -16,8 +16,8 @@
     id <TProcessor> _sharedProcessor;
 }
 
-@property(retain, nonatomic) id <TProcessor> sharedProcessor; // @synthesize sharedProcessor=_sharedProcessor;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <TProcessor> sharedProcessor; // @synthesize sharedProcessor=_sharedProcessor;
 - (id)processorForTransport:(id)arg1;
 - (id)initWithSharedProcessor:(id)arg1;
 

@@ -16,11 +16,11 @@
     unsigned long long _layoutStyle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowLinkIcon; // @synthesize shouldShowLinkIcon=_shouldShowLinkIcon;
 @property(nonatomic) unsigned long long layoutStyle; // @synthesize layoutStyle=_layoutStyle;
 @property(retain, nonatomic) NSString *domainString; // @synthesize domainString=_domainString;
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
-- (void).cxx_destruct;
 - (void)configureNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithDomainString:(id)arg1 style:(unsigned long long)arg2 shouldShowLinkIcon:(_Bool)arg3;

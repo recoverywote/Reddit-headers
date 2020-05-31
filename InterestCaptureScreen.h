@@ -17,12 +17,12 @@
     NSMutableArray *_selectedButtons;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *selectedButtons; // @synthesize selectedButtons=_selectedButtons;
 @property(retain, nonatomic) ReverseGeocoder *reverseGeocoder; // @synthesize reverseGeocoder=_reverseGeocoder;
 @property(nonatomic) _Bool shouldShowLoginButton; // @synthesize shouldShowLoginButton=_shouldShowLoginButton;
 @property(retain, nonatomic) NSArray *buttonListItems; // @synthesize buttonListItems=_buttonListItems;
 @property(retain, nonatomic) CaptureContentButtonList *listContent; // @synthesize listContent=_listContent;
-- (void).cxx_destruct;
 - (void)logTapSkipAnalyticsEvent;
 - (void)logTapNextAnalyticsEvent;
 - (void)logTapBackAnalyticsEvent;

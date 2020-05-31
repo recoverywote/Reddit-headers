@@ -14,9 +14,9 @@
     AuthorFlair *_authorFlair;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AuthorFlair *authorFlair; // @synthesize authorFlair=_authorFlair;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

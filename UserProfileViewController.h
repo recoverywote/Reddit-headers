@@ -37,6 +37,7 @@
     long long _statusBarStyle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long statusBarStyle; // @synthesize statusBarStyle=_statusBarStyle;
 @property(retain, nonatomic) RoadblockCoordinator *roadblockCoordinator; // @synthesize roadblockCoordinator=_roadblockCoordinator;
 @property(retain, nonatomic) NotificationActionSheetPresenter *notificationPresenter; // @synthesize notificationPresenter=_notificationPresenter;
@@ -52,7 +53,6 @@
 @property(nonatomic) _Bool previewModeEnabled; // @synthesize previewModeEnabled=_previewModeEnabled;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)showNewCustomFeedTooltip;
 - (void)showCustomFeed:(id)arg1;

@@ -9,8 +9,8 @@
 #import "ChatSelectedViewDelegate-Protocol.h"
 #import "UITextViewDelegate-Protocol.h"
 
-@class BaseButton, Channel, ChatFeedInteractor, ChatMediaToolbar, ChatSelectedMediaView, ChatTextView, NSString, RedditService, UIImage;
-@protocol ComposeChatViewDelegate;
+@class BaseButton, Channel, ChatFeedInteractor, ChatMediaToolbar, ChatSelectedMediaView, ChatTextView, NSString, UIImage;
+@protocol AccountContext, ComposeChatViewDelegate;
 
 @interface ComposeChatView : BaseView <UITextViewDelegate, ChatSelectedViewDelegate>
 {
@@ -29,8 +29,11 @@
     BaseView *_bottomLineView;
     Channel *_channel;
     ChatSelectedMediaView *_selectedMediaView;
+    id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatSelectedMediaView *selectedMediaView; // @synthesize selectedMediaView=_selectedMediaView;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) BaseView *bottomLineView; // @synthesize bottomLineView=_bottomLineView;
@@ -46,7 +49,6 @@
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(nonatomic) __weak ChatFeedInteractor *interactor; // @synthesize interactor=_interactor;
 @property(nonatomic) __weak id <ComposeChatViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setSendButtonEnabled:(_Bool)arg1;
 - (void)resetTextView;
 - (void)sendButtonDidTap:(id)arg1;
@@ -56,7 +58,6 @@
 - (id)textWithoutImages;
 - (void)textViewDidChange:(id)arg1;
 - (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
-@property(readonly, nonatomic) RedditService *service;
 - (void)hideSelectedMediaViewShouldShowKeyboard:(_Bool)arg1 shouldAnimateHiding:(_Bool)arg2;
 - (void)chatSelectedMediaViewDidTapCancel:(id)arg1;
 - (void)insertTextForChatMediaSource:(long long)arg1;
@@ -65,7 +66,7 @@
 - (_Bool)resignFirstResponder;
 - (void)configureWithChannel:(id)arg1;
 - (void)layoutSubviews;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithAccountContext:(id)arg1 frame:(struct CGRect)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

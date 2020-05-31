@@ -13,8 +13,8 @@
     TextFieldContentView *_textFieldView;
 }
 
-@property(retain, nonatomic) TextFieldContentView *textFieldView; // @synthesize textFieldView=_textFieldView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) TextFieldContentView *textFieldView; // @synthesize textFieldView=_textFieldView;
 @property(readonly, nonatomic) LabeledTextField *textField;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

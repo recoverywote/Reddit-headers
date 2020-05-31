@@ -14,9 +14,9 @@
     long long _status;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(copy, nonatomic) NSArray *pages; // @synthesize pages=_pages;
-- (void).cxx_destruct;
 - (id)initWithGraphQLData:(id)arg1;
 
 @end

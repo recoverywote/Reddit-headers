@@ -8,9 +8,8 @@
 
 #import "UIPageViewControllerDataSource-Protocol.h"
 #import "UIPageViewControllerDelegate-Protocol.h"
-#import "_TtP6Reddit19GildingFlowDelegate_-Protocol.h"
 
-@interface _TtC6Reddit24StreamPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate, _TtP6Reddit19GildingFlowDelegate_>
+@interface _TtC6Reddit24StreamPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 {
     // Error parsing type: , name: controlView
     // Error parsing type: , name: liveStreamViewerNav
@@ -57,8 +56,8 @@
 - (void)didTapBroadcast:(id)arg1;
 - (void)handleTapShare:(id)arg1;
 - (void)didTapAwardButton:(id)arg1;
-- (void)gildingFlowDidFailAwardingForTarget:(id)arg1;
-- (void)gildingFlowDidStartAwardingForTarget:(id)arg1;
+- (void)awardingFlowDidFailAwardingForTarget:(id)arg1;
+- (void)awardingFlowDidSStartAwardingForTarget:(id)arg1;
 - (void)didTapModerate:(id)arg1;
 - (void)closeLiveStream:(id)arg1;
 - (void)reachabilityDidChange;

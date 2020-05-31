@@ -28,6 +28,7 @@
 + (id)layoutWithLayoutElement:(id)arg1 size:(struct CGSize)arg2 position:(struct CGPoint)arg3 sublayouts:(id)arg4;
 + (_Bool)shouldRetainSublayoutLayoutElements;
 + (void)setShouldRetainSublayoutLayoutElements:(_Bool)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) ASRectMap *elementToRectMap; // @synthesize elementToRectMap=_elementToRectMap;
 @property(retain, nonatomic) NSMutableArray *sublayoutLayoutElements; // @synthesize sublayoutLayoutElements=_sublayoutLayoutElements;
 @property(nonatomic) _Bool retainSublayoutLayoutElements; // @synthesize retainSublayoutLayoutElements=_retainSublayoutLayoutElements;
@@ -35,7 +36,6 @@
 @property(nonatomic) struct CGPoint position; // @synthesize position=_position;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) __weak id <ASLayoutElement> layoutElement; // @synthesize layoutElement=_layoutElement;
-- (void).cxx_destruct;
 - (id)_recursiveDescriptionForLayout:(id)arg1 level:(unsigned long long)arg2;
 - (id)recursiveDescription;
 - (id)description;

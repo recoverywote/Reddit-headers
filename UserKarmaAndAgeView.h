@@ -39,6 +39,7 @@
 }
 
 + (double)defaultHeight;
+- (void).cxx_destruct;
 @property(nonatomic) long long offsetIndex; // @synthesize offsetIndex=_offsetIndex;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) BaseView *rightCurtain; // @synthesize rightCurtain=_rightCurtain;
@@ -62,7 +63,6 @@
 @property(retain, nonatomic) BaseImageView *karmaLogoView; // @synthesize karmaLogoView=_karmaLogoView;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(nonatomic) _Bool isCompact; // @synthesize isCompact=_isCompact;
-- (void).cxx_destruct;
 - (void)setXOffset:(double)arg1;
 - (double)xOffset;
 - (double)startOffset;

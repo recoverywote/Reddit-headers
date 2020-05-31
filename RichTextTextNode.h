@@ -25,6 +25,7 @@
 }
 
 + (id)defaultLinkAttributes;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSAttributedString *modelAttributedString; // @synthesize modelAttributedString=_modelAttributedString;
 @property(retain, nonatomic) RichTextNodeOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) RichTextInlineGIFOverlay *gifOverlay; // @synthesize gifOverlay=_gifOverlay;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <RichTextTextNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSDictionary *linkAttributes; // @synthesize linkAttributes=_linkAttributes;
 @property(retain, nonatomic) NSAttributedString *attributedText; // @synthesize attributedText=_attributedText;
-- (void).cxx_destruct;
 - (id)modifiedAttributedStringForModelAttributedString:(id)arg1;
 @property(readonly, nonatomic) _Bool isLinkSelected;
 - (void)spoilerTextTapped:(id)arg1 atSpoilerRange:(struct _NSRange)arg2 atPoint:(struct CGPoint)arg3;

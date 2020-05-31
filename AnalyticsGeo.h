@@ -36,6 +36,7 @@
     long long _metro_code;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool metro_codeIsSet; // @synthesize metro_codeIsSet=_metro_codeIsSet;
 @property(nonatomic) long long metro_code; // @synthesize metro_code=_metro_code;
 @property(nonatomic) _Bool tor_exit_nodeIsSet; // @synthesize tor_exit_nodeIsSet=_tor_exit_nodeIsSet;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSString *region; // @synthesize region=_region;
 @property(nonatomic) _Bool country_codeIsSet; // @synthesize country_codeIsSet=_country_codeIsSet;
 @property(copy, nonatomic) NSString *country_code; // @synthesize country_code=_country_code;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

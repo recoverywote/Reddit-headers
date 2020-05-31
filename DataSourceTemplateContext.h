@@ -17,9 +17,9 @@
     id <TemplateParserContext> _nestedContext;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <TemplateParserContext> nestedContext; // @synthesize nestedContext=_nestedContext;
 @property(nonatomic) __weak NSObject<CarouselDataSource> *dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (id)valueForTemplateName:(id)arg1;
 - (id)attributedStringForTemplateName:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (id)pillForTemplateName:(id)arg1;

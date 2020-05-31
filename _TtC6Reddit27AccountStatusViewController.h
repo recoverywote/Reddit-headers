@@ -19,8 +19,7 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: dimmerView
     // Error parsing type: , name: contentView
-    // Error parsing type: , name: accountManager
-    // Error parsing type: , name: anonymousModeManager
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: accountStatusContentView
     // Error parsing type: , name: senderFrame
 }
@@ -31,7 +30,7 @@
 - (void)viewWillLayoutSubviews;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccountManager:(id)arg1 anonymousModeManager:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 @property(nonatomic, readonly) long long preferredStatusBarStyle;
 @property(nonatomic, readonly) double contentHeight;
 @property(nonatomic, retain) BaseView *contentView; // @synthesize contentView;

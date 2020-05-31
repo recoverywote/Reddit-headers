@@ -15,10 +15,10 @@
     SEL _setter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SEL setter; // @synthesize setter=_setter;
 @property(readonly, nonatomic) SEL getter; // @synthesize getter=_getter;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 getter:(SEL)arg2 setter:(SEL)arg3;
 
 @end

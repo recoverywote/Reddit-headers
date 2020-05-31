@@ -23,13 +23,13 @@
 
 + (id)sharedInstance;
 + (void)load;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GDTCORClock *FLLOfLastDailyUpload; // @synthesize FLLOfLastDailyUpload=_FLLOfLastDailyUpload;
 @property(retain, nonatomic) GDTCORClock *CCTTimeOfLastDailyUpload; // @synthesize CCTTimeOfLastDailyUpload=_CCTTimeOfLastDailyUpload;
 @property(retain, nonatomic) NSMutableSet *CSHEvents; // @synthesize CSHEvents=_CSHEvents;
 @property(retain, nonatomic) NSMutableSet *FLLEvents; // @synthesize FLLEvents=_FLLEvents;
 @property(retain, nonatomic) NSMutableSet *CCTEvents; // @synthesize CCTEvents=_CCTEvents;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
-- (void).cxx_destruct;
 - (void)packageExpired:(id)arg1;
 - (void)packageDelivered:(id)arg1 successful:(_Bool)arg2;
 - (id)logEventsOkToSendDaily:(id)arg1;

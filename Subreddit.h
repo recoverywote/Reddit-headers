@@ -73,6 +73,7 @@
 + (_Bool)isReservedSubredditName:(id)arg1;
 + (id)keyPathsToObserveChanges;
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *sharingPermalinkIncludingDomain; // @synthesize sharingPermalinkIncludingDomain=_sharingPermalinkIncludingDomain;
 @property(copy, nonatomic) NSString *displayNamePrefixed; // @synthesize displayNamePrefixed=_displayNamePrefixed;
 @property(nonatomic) _Bool isEmojisEnabled; // @synthesize isEmojisEnabled=_isEmojisEnabled;
@@ -128,7 +129,6 @@
 @property(copy, nonatomic) NSString *bannerImageURLString; // @synthesize bannerImageURLString=_bannerImageURLString;
 @property(copy, nonatomic) NSString *iconImageURLString; // @synthesize iconImageURLString=_iconImageURLString;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

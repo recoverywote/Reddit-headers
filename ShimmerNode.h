@@ -14,9 +14,9 @@
     ASDisplayNode *_contentNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) SynchronizedShimmerView *shimmerView; // @synthesize shimmerView=_shimmerView;
-- (void).cxx_destruct;
 - (void)applyShimmerToNode:(id)arg1;
 - (void)startShimmer:(id)arg1;
 - (id)initWithShimmer;

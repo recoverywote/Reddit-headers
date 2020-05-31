@@ -18,10 +18,10 @@
     DownToChatBanner *_downToChatBanner;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) DownToChatBanner *downToChatBanner; // @synthesize downToChatBanner=_downToChatBanner;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;

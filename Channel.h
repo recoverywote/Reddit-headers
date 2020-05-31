@@ -40,6 +40,7 @@
 + (id)persistProperties;
 + (id)tableName;
 + (_Bool)isValidChannelName:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *sbTypingMembers; // @synthesize sbTypingMembers=_sbTypingMembers;
 @property(copy, nonatomic) NSString *currentUserId; // @synthesize currentUserId=_currentUserId;
 @property(retain, nonatomic) SBDGroupChannel *channel; // @synthesize channel=_channel;
@@ -63,7 +64,6 @@
 @property(nonatomic) _Bool muted; // @synthesize muted=_muted;
 @property(nonatomic) _Bool selected; // @synthesize selected=_selected;
 @property(nonatomic) unsigned long long uniqueID; // @synthesize uniqueID=_uniqueID;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToChannel:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

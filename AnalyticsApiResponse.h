@@ -24,6 +24,7 @@
     NSString *_content;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool contentIsSet; // @synthesize contentIsSet=_contentIsSet;
 @property(copy, nonatomic) NSString *content; // @synthesize content=_content;
 @property(nonatomic) _Bool errorIsSet; // @synthesize errorIsSet=_errorIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *error_name; // @synthesize error_name=_error_name;
 @property(nonatomic) _Bool response_codeIsSet; // @synthesize response_codeIsSet=_response_codeIsSet;
 @property(nonatomic) int response_code; // @synthesize response_code=_response_code;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

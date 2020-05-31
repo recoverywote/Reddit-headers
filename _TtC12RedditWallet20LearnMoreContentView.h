@@ -18,7 +18,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: pagesSubject
     // Error parsing type: , name: currentIndexSubject
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

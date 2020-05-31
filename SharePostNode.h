@@ -18,12 +18,12 @@
     ASImageNode *_logoImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASImageNode *logoImage; // @synthesize logoImage=_logoImage;
 @property(retain, nonatomic) ASDisplayNode *attributionNode; // @synthesize attributionNode=_attributionNode;
 @property(retain, nonatomic) FeedPostCellNode *postCellNode; // @synthesize postCellNode=_postCellNode;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate> delegateVC; // @synthesize delegateVC=_delegateVC;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)imageWithSize:(struct CGSize)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithViewContext:(id)arg1 post:(id)arg2;

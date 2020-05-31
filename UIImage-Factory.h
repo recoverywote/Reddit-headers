@@ -32,5 +32,6 @@
 - (id)circledImageNamed:(id)arg1 tintColor:(id)arg2 fillColor:(id)arg3 borderColor:(id)arg4;
 - (id)roundedImageWithCacheName:(id)arg1 tintColor:(id)arg2 fillColor:(id)arg3 borderColor:(id)arg4 size:(double)arg5 scaleOriginalImage:(_Bool)arg6 cornerRadius:(double)arg7;
 - (id)roundedImageWithTintColor:(id)arg1 fillColor:(id)arg2 borderColor:(id)arg3 size:(double)arg4 cornerRadius:(double)arg5;
+- (id)gid_imageWithBlendMode:(int)arg1 color:(id)arg2;
 @end
 

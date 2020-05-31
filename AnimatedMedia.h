@@ -16,9 +16,9 @@
     NSArray *_mp4Resolutions;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *mp4Resolutions; // @synthesize mp4Resolutions=_mp4Resolutions;
 @property(retain, nonatomic) MediaSource *mp4Source; // @synthesize mp4Source=_mp4Source;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescriptionWithPrefix:(id)arg1;

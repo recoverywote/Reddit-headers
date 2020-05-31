@@ -9,12 +9,13 @@
 #import "AvatarImageNodeDelegate-Protocol.h"
 
 @class ASImageNode, ASTextNode, AvatarImageNode, ChatMessage;
-@protocol ChatReportHeaderNodeDelegate;
+@protocol ChatReportHeaderNodeDelegate, ViewContext;
 
 @interface ChatReportHeaderNode : ASDisplayNode <AvatarImageNodeDelegate>
 {
     ChatMessage *_message;
     id <ChatReportHeaderNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     AvatarImageNode *_avatarNode;
     ASTextNode *_timestampNode;
     ASTextNode *_usernameNode;
@@ -22,21 +23,22 @@
     ASImageNode *_channelTypeImageNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASImageNode *channelTypeImageNode; // @synthesize channelTypeImageNode=_channelTypeImageNode;
 @property(retain, nonatomic) ASTextNode *channelNameNode; // @synthesize channelNameNode=_channelNameNode;
 @property(retain, nonatomic) ASTextNode *usernameNode; // @synthesize usernameNode=_usernameNode;
 @property(retain, nonatomic) ASTextNode *timestampNode; // @synthesize timestampNode=_timestampNode;
 @property(retain, nonatomic) AvatarImageNode *avatarNode; // @synthesize avatarNode=_avatarNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <ChatReportHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
-- (void).cxx_destruct;
 - (void)didTapReportedUsernameNode:(id)arg1;
 - (void)avatarImageNodeWasTapped:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureThemableNodes;
 - (void)configureNodes;
 - (void)didLoad;
-- (id)initWithMessage:(id)arg1;
+- (id)initWithViewContext:(id)arg1 message:(id)arg2;
 
 @end
 

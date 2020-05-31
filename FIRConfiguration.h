@@ -14,8 +14,8 @@
 }
 
 + (id)sharedInstance;
-@property(retain, nonatomic) FIRAnalyticsConfiguration *analyticsConfiguration; // @synthesize analyticsConfiguration=_analyticsConfiguration;
 - (void).cxx_destruct;
+@property(retain, nonatomic) FIRAnalyticsConfiguration *analyticsConfiguration; // @synthesize analyticsConfiguration=_analyticsConfiguration;
 - (void)setLoggerLevel:(long long)arg1;
 - (id)init;
 

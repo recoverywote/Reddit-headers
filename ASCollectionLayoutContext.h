@@ -19,12 +19,12 @@
     struct CGPoint _initialContentOffset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id additionalInfo; // @synthesize additionalInfo=_additionalInfo;
 @property(readonly, nonatomic) __weak ASElementMap *elements; // @synthesize elements=_elements;
 @property(readonly, nonatomic) long long scrollableDirections; // @synthesize scrollableDirections=_scrollableDirections;
 @property(readonly, nonatomic) struct CGPoint initialContentOffset; // @synthesize initialContentOffset=_initialContentOffset;
 @property(readonly, nonatomic) struct CGSize viewportSize; // @synthesize viewportSize=_viewportSize;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToContext:(id)arg1;

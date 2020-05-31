@@ -22,6 +22,7 @@
     BaseLabel *_selectionCountLabel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showingPanel; // @synthesize showingPanel=_showingPanel;
 @property(retain, nonatomic) BaseLabel *selectionCountLabel; // @synthesize selectionCountLabel=_selectionCountLabel;
 @property(retain, nonatomic) BaseButton *clearSelectionButton; // @synthesize clearSelectionButton=_clearSelectionButton;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) BaseButton *approveButton; // @synthesize approveButton=_approveButton;
 @property(nonatomic) __weak FeedViewController *parentVC; // @synthesize parentVC=_parentVC;
 @property(nonatomic) __weak id <ModQueueBulkActionsViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)buttonWithImage:(id)arg1 action:(SEL)arg2;
 - (void)didTapClearSelection;
 - (void)didTapSpam;

@@ -26,6 +26,7 @@
     EmptyDogeView *_emptyView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(copy, nonatomic) NSArray *duplicatePosts; // @synthesize duplicatePosts=_duplicatePosts;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) CDUnknownBlockType subredditSelectionBlock; // @synthesize subredditSelectionBlock=_subredditSelectionBlock;
 @property(copy, nonatomic) CDUnknownBlockType closeActionBlock; // @synthesize closeActionBlock=_closeActionBlock;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)showPostDetailViewControllerWithPost:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

@@ -19,6 +19,7 @@
     NSURL *_iconURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
 @property(readonly, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(readonly, nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) _Bool isUnavailable; // @synthesize isUnavailable=_isUnavailable;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *subredditId; // @synthesize subredditId=_subredditId;
-- (void).cxx_destruct;
 - (id)initWithGraphQLData:(id)arg1 subredditName:(id)arg2;
 
 @end

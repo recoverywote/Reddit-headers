@@ -19,11 +19,11 @@
     id <ElementalDiscoveryNodeDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <ElementalDiscoveryNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSMapTable *elementNodeMap; // @synthesize elementNodeMap=_elementNodeMap;
 @property(copy, nonatomic) NSArray *displayElements; // @synthesize displayElements=_displayElements;
 @property(readonly, nonatomic) ElementalDiscoveryUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (void)didTapElement:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

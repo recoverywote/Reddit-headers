@@ -23,6 +23,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSData *dataObjectTransportBytes; // @synthesize dataObjectTransportBytes=_dataObjectTransportBytes;
 @property(retain, nonatomic) NSDictionary *customPrioritizationParams; // @synthesize customPrioritizationParams=_customPrioritizationParams;
 @property(retain, nonatomic) GDTCORClock *clockSnapshot; // @synthesize clockSnapshot=_clockSnapshot;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) id <GDTCOREventDataObject> dataObject; // @synthesize dataObject=_dataObject;
 @property(readonly, nonatomic) long long target; // @synthesize target=_target;
 @property(readonly, nonatomic) NSString *mappingID; // @synthesize mappingID=_mappingID;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)storedEventWithDataFuture:(id)arg1;

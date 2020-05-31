@@ -16,10 +16,10 @@
     id <GoldProductTableViewCellDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <GoldProductTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Account *account; // @synthesize account=_account;
 @property(retain, nonatomic) GoldProduct *product; // @synthesize product=_product;
-- (void).cxx_destruct;
 - (void)configureWithProduct:(id)arg1 forAccount:(id)arg2;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

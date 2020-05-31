@@ -16,11 +16,11 @@
     UIColor *_layerTintColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *layerTintColor; // @synthesize layerTintColor=_layerTintColor;
 @property(nonatomic) _Bool shouldAnimating; // @synthesize shouldAnimating=_shouldAnimating;
 @property(nonatomic) _Bool isAnimating; // @synthesize isAnimating=_isAnimating;
 @property(retain, nonatomic) UIImageView *failureView; // @synthesize failureView=_failureView;
-- (void).cxx_destruct;
 - (id)createCircleWith:(double)arg1 color:(id)arg2;
 - (id)orbitPlanet:(double)arg1 angle:(double)arg2 layer:(id)arg3 size:(struct CGSize)arg4 planetDiameter:(double)arg5 tintColor:(id)arg6;
 - (void)configureAnimationInLayer:(id)arg1 withSize:(struct CGSize)arg2 tintColor:(id)arg3;

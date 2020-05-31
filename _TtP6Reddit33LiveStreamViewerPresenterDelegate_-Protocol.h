@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class LiveStream, StreamingSubredditInfo, Subreddit, _TtC6Reddit19LiveStreamPresenter;
+@class LiveStream, StreamingSubredditInfo, Subreddit, User, _TtC6Reddit19LiveStreamPresenter;
 
 @protocol _TtP6Reddit33LiveStreamViewerPresenterDelegate_ <NSObject>
+- (void)didUpdateFollowingStateFor:(User *)arg1;
 - (void)didUpdateSubscriptionStateFor:(Subreddit *)arg1;
-- (void)didLoadLiveStreamSubscriptionDetailsFor:(LiveStream *)arg1;
+- (void)didLoadLiveStreamSubscriptionDetailsFor:(LiveStream *)arg1 shouldMarkNSFW:(_Bool)arg2;
 - (void)didLoadRecommendedSubredditPrompt:(StreamingSubredditInfo *)arg1;
 - (void)didLoadSubredditInfoFromConfig:(StreamingSubredditInfo *)arg1;
 - (_TtC6Reddit19LiveStreamPresenter *)presenterForCurrentStream:(LiveStream *)arg1;

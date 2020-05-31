@@ -7,28 +7,31 @@
 #import "BaseButtonNode.h"
 
 @class ASTextNode, Subreddit, SubscribableButtonNode;
+@protocol ViewContext;
 
 @interface TopicSubredditStackItemNode : BaseButtonNode
 {
     _Bool _isSeeMore;
     Subreddit *_subreddit;
+    id <ViewContext> _viewContext;
     SubscribableButtonNode *_subredditIconNode;
     ASTextNode *_seeMoreTextNode;
     long long _seeMoreCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long seeMoreCount; // @synthesize seeMoreCount=_seeMoreCount;
 @property(retain, nonatomic) ASTextNode *seeMoreTextNode; // @synthesize seeMoreTextNode=_seeMoreTextNode;
 @property(retain, nonatomic) SubscribableButtonNode *subredditIconNode; // @synthesize subredditIconNode=_subredditIconNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isSeeMore; // @synthesize isSeeMore=_isSeeMore;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initWithSeeMoreCount:(long long)arg1;
-- (id)initWithSubreddit:(id)arg1;
+- (id)initWithSeeMoreCount:(long long)arg1 viewContext:(id)arg2;
+- (id)initWithSubreddit:(id)arg1 viewContext:(id)arg2;
 
 @end
 

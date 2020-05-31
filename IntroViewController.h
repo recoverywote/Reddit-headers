@@ -14,9 +14,7 @@
 @interface IntroViewController : BaseViewController <CaptureViewControllerDelegate>
 {
     _Bool _enableAnimation;
-    _Bool _didDeferIntro;
     _Bool _animationHasPlayed;
-    _Bool _shouldCheckForURL;
     id <IntroViewControllerDelegate> _delegate;
     BaseButton *_loginButton;
     BaseButton *_signupButton;
@@ -29,7 +27,7 @@
     BaseLabel *_conversationsLabel;
 }
 
-@property(nonatomic) _Bool shouldCheckForURL; // @synthesize shouldCheckForURL=_shouldCheckForURL;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *conversationsLabel; // @synthesize conversationsLabel=_conversationsLabel;
 @property(retain, nonatomic) BaseLabel *exploreLabel; // @synthesize exploreLabel=_exploreLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -40,10 +38,8 @@
 @property(retain, nonatomic) BaseButton *skipButton; // @synthesize skipButton=_skipButton;
 @property(retain, nonatomic) BaseButton *signupButton; // @synthesize signupButton=_signupButton;
 @property(retain, nonatomic) BaseButton *loginButton; // @synthesize loginButton=_loginButton;
-@property(nonatomic) _Bool didDeferIntro; // @synthesize didDeferIntro=_didDeferIntro;
 @property(nonatomic) _Bool enableAnimation; // @synthesize enableAnimation=_enableAnimation;
 @property(nonatomic) __weak id <IntroViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)analyticsScreenViewName;
 - (void)captureViewControllerDidFinish:(id)arg1;
 - (void)skipButtonTapped:(id)arg1;

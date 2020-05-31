@@ -25,6 +25,7 @@
     struct UIEdgeInsets _contentInset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool automaticallyAdjustsContentOffset; // @synthesize automaticallyAdjustsContentOffset=_automaticallyAdjustsContentOffset;
 @property(nonatomic) _Bool animatesContentOffset; // @synthesize animatesContentOffset=_animatesContentOffset;
 @property(nonatomic) struct CGPoint contentOffset; // @synthesize contentOffset=_contentOffset;
@@ -38,7 +39,6 @@
 @property(nonatomic) long long rangeMode; // @synthesize rangeMode=_rangeMode;
 @property(nonatomic) __weak id <ASTableDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <ASTableDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

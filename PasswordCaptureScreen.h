@@ -14,9 +14,9 @@
     CaptureContentTextEntry *_textEntryContent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPasswordValid; // @synthesize isPasswordValid=_isPasswordValid;
 @property(retain, nonatomic) CaptureContentTextEntry *textEntryContent; // @synthesize textEntryContent=_textEntryContent;
-- (void).cxx_destruct;
 - (void)hidePasswordError;
 - (void)showPasswordError;
 - (_Bool)validateContent;

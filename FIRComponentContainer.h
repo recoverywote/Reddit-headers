@@ -18,11 +18,11 @@
 
 + (void)registerAsComponentRegistrant:(Class)arg1 inSet:(id)arg2;
 + (void)registerAsComponentRegistrant:(Class)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *eagerProtocolsToInstantiate; // @synthesize eagerProtocolsToInstantiate=_eagerProtocolsToInstantiate;
 @property(retain, nonatomic) NSMutableDictionary *cachedInstances; // @synthesize cachedInstances=_cachedInstances;
 @property(retain, nonatomic) NSMutableDictionary *components; // @synthesize components=_components;
 @property(readonly, nonatomic) __weak FIRApp *app; // @synthesize app=_app;
-- (void).cxx_destruct;
 - (void)removeAllCachedInstances;
 - (id)instanceForProtocol:(id)arg1;
 - (id)instantiateInstanceForProtocol:(id)arg1 withBlock:(CDUnknownBlockType)arg2;

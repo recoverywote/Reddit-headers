@@ -50,6 +50,7 @@
     double _identity_attack;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool identity_attackIsSet; // @synthesize identity_attackIsSet=_identity_attackIsSet;
 @property(nonatomic) double identity_attack; // @synthesize identity_attack=_identity_attack;
 @property(nonatomic) _Bool unsubstantialIsSet; // @synthesize unsubstantialIsSet=_unsubstantialIsSet;
@@ -84,7 +85,6 @@
 @property(nonatomic) double toxicity; // @synthesize toxicity=_toxicity;
 @property(nonatomic) _Bool collapse_reasonsIsSet; // @synthesize collapse_reasonsIsSet=_collapse_reasonsIsSet;
 @property(retain, nonatomic) NSMutableArray *collapse_reasons; // @synthesize collapse_reasons=_collapse_reasons;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

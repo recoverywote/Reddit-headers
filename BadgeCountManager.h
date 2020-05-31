@@ -22,11 +22,11 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *inboxActivityLastSeenDate; // @synthesize inboxActivityLastSeenDate=_inboxActivityLastSeenDate;
 @property(copy, nonatomic) BadgeIndicators *badgeIndicators; // @synthesize badgeIndicators=_badgeIndicators;
 @property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(nonatomic) long long commentReplyBadgeCount; // @synthesize commentReplyBadgeCount=_commentReplyBadgeCount;
-- (void).cxx_destruct;
 - (void)decrementBadge:(unsigned long long)arg1;
 - (void)incrementBadge:(unsigned long long)arg1;
 - (void)updateBadge:(unsigned long long)arg1 delta:(long long)arg2;

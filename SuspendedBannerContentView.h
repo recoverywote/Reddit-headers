@@ -22,13 +22,13 @@
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
 + (struct CGSize)calculatedTitleSizeWithLabel:(id)arg1;
 + (id)titleLabelFactory;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(retain, nonatomic) SuspendedBannerModel *suspendedBannerModel; // @synthesize suspendedBannerModel=_suspendedBannerModel;
 @property(retain, nonatomic) BaseImageView *suspendedImageView; // @synthesize suspendedImageView=_suspendedImageView;
 @property(retain, nonatomic) BaseView *imageBackgroundView; // @synthesize imageBackgroundView=_imageBackgroundView;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak id <SuspendedBannerContentViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;

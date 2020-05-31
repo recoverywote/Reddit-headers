@@ -22,6 +22,7 @@
     id <PostCollectionTitleNodeDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <PostCollectionTitleNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostCollectionOptions *postCollectionOptions; // @synthesize postCollectionOptions=_postCollectionOptions;
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) ASTextNode *countNode; // @synthesize countNode=_countNode;
 @property(nonatomic) long long positionInFeed; // @synthesize positionInFeed=_positionInFeed;
 @property(readonly, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double postCollectionDescriptionNodeHeight;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 @property(readonly, nonatomic) _Bool shouldShowDescription;

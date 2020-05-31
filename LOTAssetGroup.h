@@ -16,9 +16,9 @@
     NSBundle *_assetBundle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSBundle *assetBundle; // @synthesize assetBundle=_assetBundle;
 @property(retain, nonatomic) NSString *rootDirectory; // @synthesize rootDirectory=_rootDirectory;
-- (void).cxx_destruct;
 - (id)assetModelForID:(id)arg1;
 - (void)finalizeInitializationWithFramerate:(id)arg1;
 - (void)buildAssetNamed:(id)arg1 withFramerate:(id)arg2;

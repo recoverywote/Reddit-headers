@@ -11,7 +11,7 @@
     // Error parsing type: , name: content
     // Error parsing type: , name: contentContainer
     // Error parsing type: , name: doneButton
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

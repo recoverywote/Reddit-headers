@@ -10,7 +10,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class ASDisplayNode, ASTextNode, FeedPostAwardsNode, FeedPostHlsVideoView, FeedPostMediaContentNode, FeedPostOptions, FeedPostThumbnailNode, NSString, Post, _TtC6Reddit20FeedPostMetadataNode;
-@protocol FeedPostCrossPostNodeDelegate;
+@protocol FeedPostCrossPostNodeDelegate, ViewContext;
 
 @interface FeedPostCrossPostNode : BaseFeedDisplayNode <ASTextNodeDelegate, ObjectObserverProtocol>
 {
@@ -25,8 +25,11 @@
     ASDisplayNode *_footerNode;
     ASTextNode *_metaTextNode;
     _TtC6Reddit20FeedPostMetadataNode *_metadataNode;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) _TtC6Reddit20FeedPostMetadataNode *metadataNode; // @synthesize metadataNode=_metadataNode;
 @property(retain, nonatomic) ASTextNode *metaTextNode; // @synthesize metaTextNode=_metaTextNode;
 @property(readonly, nonatomic) ASDisplayNode *footerNode; // @synthesize footerNode=_footerNode;
@@ -38,7 +41,6 @@
 @property(nonatomic) __weak id <FeedPostCrossPostNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) FeedPostThumbnailNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)textNode:(id)arg1 tappedLinkAttribute:(id)arg2 value:(id)arg3 atPoint:(struct CGPoint)arg4 textRange:(struct _NSRange)arg5;
 - (_Bool)textNode:(id)arg1 shouldHighlightLinkAttribute:(id)arg2 value:(id)arg3 atPoint:(struct CGPoint)arg4;
@@ -70,7 +72,7 @@
 @property(readonly, nonatomic) FeedPostHlsVideoView *hlsVideoView;
 - (void)postAttributedStringChanged:(id)arg1;
 - (void)dealloc;
-- (id)initWithPost:(id)arg1 options:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 delegate:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

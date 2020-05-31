@@ -15,10 +15,10 @@
     CDUnknownBlockType _objectProviderBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType objectProviderBlock; // @synthesize objectProviderBlock=_objectProviderBlock;
 @property(retain, nonatomic) NSArray *placeholders; // @synthesize placeholders=_placeholders;
 @property(nonatomic) unsigned long long preferredIndex; // @synthesize preferredIndex=_preferredIndex;
-- (void).cxx_destruct;
 - (void)fetchMoreWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchWithCompletion:(CDUnknownBlockType)arg1 isFetchingMore:(_Bool)arg2;

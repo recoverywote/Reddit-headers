@@ -28,6 +28,7 @@
     RUIActionSheetViewController *_currentActionSheetViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak RUIActionSheetViewController *currentActionSheetViewController; // @synthesize currentActionSheetViewController=_currentActionSheetViewController;
 @property(retain, nonatomic) NSMutableArray *contentOffsets; // @synthesize contentOffsets=_contentOffsets;
 @property(retain, nonatomic) NSArray *networkSources; // @synthesize networkSources=_networkSources;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SlidingSelector *selector; // @synthesize selector=_selector;
 @property(nonatomic) __weak id <ChatKeyboardAnalyticsTracker> analyticsTracker; // @synthesize analyticsTracker=_analyticsTracker;
 @property(nonatomic) __weak ChatFeedInteractor *interactor; // @synthesize interactor=_interactor;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak RUIActionSheetViewController *actionSheetViewController;
 - (_Bool)feedPostYouTubeEmbeddedViewShouldHideNsfw:(id)arg1;
 - (id)layout;

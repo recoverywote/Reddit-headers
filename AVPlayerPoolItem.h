@@ -14,9 +14,9 @@
     AVPlayer *_player;
 }
 
+- (void).cxx_destruct;
 @property(readonly) StreamPlayerView *streamPlayerView; // @synthesize streamPlayerView=_streamPlayerView;
 @property(retain) AVPlayer *player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)setStreamPlayerView:(id)arg1;
 - (void)resetPlayer;
 - (id)createPlayer;

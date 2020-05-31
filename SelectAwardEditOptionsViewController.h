@@ -28,11 +28,11 @@
     SelectAwardEditOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SelectAwardEditOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) __weak id <SelectAwardEditOptionsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIImageView *anonymousToggle; // @synthesize anonymousToggle=_anonymousToggle;
 @property(retain, nonatomic) UIImageView *publicToggle; // @synthesize publicToggle=_publicToggle;
-- (void).cxx_destruct;
 - (id)lineSeparatorView;
 @property(readonly, nonatomic) UIStackView *optionsStackView; // @synthesize optionsStackView=_optionsStackView;
 - (id)createOptionRowStackViewWith:(id)arg1;

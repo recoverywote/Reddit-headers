@@ -22,6 +22,7 @@
     long long _typeHint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long typeHint; // @synthesize typeHint=_typeHint;
 @property(retain, nonatomic) VideoMedia *video; // @synthesize video=_video;
 @property(retain, nonatomic) StreamingMedia *streaming; // @synthesize streaming=_streaming;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) StillMedia *obfuscatedStill; // @synthesize obfuscatedStill=_obfuscatedStill;
 @property(retain, nonatomic) StillMedia *still; // @synthesize still=_still;
 @property(copy, nonatomic) NSString *mediaId; // @synthesize mediaId=_mediaId;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescription;

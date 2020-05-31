@@ -28,6 +28,7 @@
     struct CGRect _boundingRect;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldUseOverlayBackgroundColor; // @synthesize shouldUseOverlayBackgroundColor=_shouldUseOverlayBackgroundColor;
 @property(nonatomic) struct CGRect boundingRect; // @synthesize boundingRect=_boundingRect;
 @property(copy, nonatomic) NSString *confirmationDialogButtonText; // @synthesize confirmationDialogButtonText=_confirmationDialogButtonText;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) PHFetchResult *photos; // @synthesize photos=_photos;
 @property(nonatomic) __weak id <PhotoPickerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak RUIActionSheetViewController *actionSheetViewController;
 - (void)loadImageForAsset:(id)arg1;
 - (void)loadPhotos;

@@ -19,12 +19,12 @@
 
 + (id)awardIconsResolutionsGraphQLKeys;
 + (id)awardIconsResolutions;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long totalCoinsReceived; // @synthesize totalCoinsReceived=_totalCoinsReceived;
 @property(readonly, nonatomic) unsigned long long total; // @synthesize total=_total;
 @property(readonly, nonatomic) NSArray *awardIcons; // @synthesize awardIcons=_awardIcons;
 @property(readonly, nonatomic) long long coinPrice; // @synthesize coinPrice=_coinPrice;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)mediaSourceForLiveStreamAwardIconSize:(long long)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 

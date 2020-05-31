@@ -19,6 +19,7 @@
     LOTBezierPath *_outputPath;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool pathShouldCacheLengths; // @synthesize pathShouldCacheLengths=_pathShouldCacheLengths;
 @property(retain, nonatomic) LOTBezierPath *outputPath; // @synthesize outputPath=_outputPath;
 @property(retain, nonatomic) LOTBezierPath *localPath; // @synthesize localPath=_localPath;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) NSNumber *currentFrame; // @synthesize currentFrame=_currentFrame;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
 @property(readonly, nonatomic) NSDictionary *valueInterpolators; // @synthesize valueInterpolators=_valueInterpolators;
-- (void).cxx_destruct;
 - (void)setValueDelegate:(id)arg1 forKeypath:(id)arg2;
 - (void)searchNodesForKeypath:(id)arg1;
 - (void)rebuildOutputs;

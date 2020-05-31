@@ -36,6 +36,7 @@
     NSString *_chatPlaceholder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldUpdateActionButtonBackground; // @synthesize shouldUpdateActionButtonBackground=_shouldUpdateActionButtonBackground;
 @property(readonly, nonatomic) _Bool shouldHidePrice; // @synthesize shouldHidePrice=_shouldHidePrice;
 @property(readonly, nonatomic) _Bool shouldHideOptionsInfo; // @synthesize shouldHideOptionsInfo=_shouldHideOptionsInfo;
@@ -60,7 +61,6 @@
 @property(readonly, nonatomic) NSAttributedString *attributedPrice; // @synthesize attributedPrice=_attributedPrice;
 @property(readonly, nonatomic) NSURL *iconImageURL; // @synthesize iconImageURL=_iconImageURL;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithAward:(id)arg1 subreddit:(id)arg2 subredditCoins:(id)arg3 target:(unsigned long long)arg4 options:(unsigned long long)arg5;
 
 @end

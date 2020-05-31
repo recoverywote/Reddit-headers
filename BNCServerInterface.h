@@ -18,10 +18,10 @@
 
 + (struct __SecKey *)publicSecKeyFromPKCS12CertChainData:(id)arg1;
 + (id)publicSecKeyRefs;
+- (void).cxx_destruct;
 @property(retain) id <BNCNetworkServiceProtocol> networkService; // @synthesize networkService=_networkService;
 @property(retain) NSString *requestEndpoint; // @synthesize requestEndpoint=_requestEndpoint;
 @property(retain, nonatomic) BNCPreferenceHelper *preferenceHelper; // @synthesize preferenceHelper=_preferenceHelper;
-- (void).cxx_destruct;
 - (void)safeSetValue:(id)arg1 forKey:(id)arg2 onDict:(id)arg3;
 - (id)updateDeviceInfoToParams:(id)arg1;
 - (void)updateDeviceInfoToMutableDictionary:(id)arg1;

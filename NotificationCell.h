@@ -14,8 +14,8 @@
 }
 
 + (struct CGSize)calculatedSizeForData:(id)arg1 collectionViewWidth:(double)arg2;
-@property(retain, nonatomic) NotificationView *mainContentView; // @synthesize mainContentView=_mainContentView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NotificationView *mainContentView; // @synthesize mainContentView=_mainContentView;
 - (void)prepareForReuse;
 - (void)configureWithData:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

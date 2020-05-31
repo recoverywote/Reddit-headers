@@ -23,6 +23,7 @@
 }
 
 + (id)keyPathsForValuesAffectingIsAutoDarkModeEnabled;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType enableAutoModeCompletion; // @synthesize enableAutoModeCompletion=_enableAutoModeCompletion;
 @property(retain, nonatomic) NSTimer *updateTimer; // @synthesize updateTimer=_updateTimer;
 @property(nonatomic) int authorizationStatus; // @synthesize authorizationStatus=_authorizationStatus;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) AppSettings *appSettings; // @synthesize appSettings=_appSettings;
 @property(retain, nonatomic) RUITheme *cachedNonAnonymousBrowsingTheme; // @synthesize cachedNonAnonymousBrowsingTheme=_cachedNonAnonymousBrowsingTheme;
 @property(retain, nonatomic) UITraitCollection *traitCollection; // @synthesize traitCollection=_traitCollection;
-- (void).cxx_destruct;
 - (void)locationManager:(id)arg1 didUpdateLocations:(id)arg2;
 - (void)locationManager:(id)arg1 didChangeAuthorizationStatus:(int)arg2;
 - (void)setupTimer;
@@ -44,7 +44,7 @@
 @property(readonly, nonatomic) CLLocation *currentLocation;
 - (_Bool)isLocationAuthorized;
 - (void)toggleBetweenLightOrDarkMode;
-- (void)toggleAnonymousBrowsingThemeIsEnabled:(_Bool)arg1;
+- (void)toggleAnonymousBrowsingThemeIsEnabled:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)switchToDarkTheme;
 - (void)switchToLightTheme;
 - (void)updateThemeIfNeeded;
@@ -57,7 +57,7 @@
 - (void)setIsAutoDarkModeEnabled:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic) _Bool isAutoDarkModeEnabled;
 - (void)updateFontSizeDelta:(long long)arg1;
-- (void)updateCurrentTheme:(id)arg1;
+- (void)updateCurrentTheme:(id)arg1 onVisibleObserversDidUpdate:(CDUnknownBlockType)arg2;
 - (void)traitCollectionDidChange:(id)arg1;
 - (id)initWithAppSettings:(id)arg1;
 - (void)dealloc;

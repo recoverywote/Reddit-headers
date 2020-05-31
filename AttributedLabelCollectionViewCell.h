@@ -19,13 +19,13 @@
 }
 
 + (double)calculatedHeightForAttributedString:(id)arg1 width:(double)arg2 includingHorizontalPadding:(_Bool)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *labelBottomConstraint; // @synthesize labelBottomConstraint=_labelBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *labelTopConstraint; // @synthesize labelTopConstraint=_labelTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *labelTrailingConstraint; // @synthesize labelTrailingConstraint=_labelTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *labelLeadingConstraint; // @synthesize labelLeadingConstraint=_labelLeadingConstraint;
 @property(retain, nonatomic) AttributedLabel *textViewAttributedLabel; // @synthesize textViewAttributedLabel=_textViewAttributedLabel;
 @property(nonatomic) struct UIEdgeInsets labelInsets; // @synthesize labelInsets=_labelInsets;
-- (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

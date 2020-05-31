@@ -28,6 +28,7 @@
     NSString *_source_element;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool source_elementIsSet; // @synthesize source_elementIsSet=_source_elementIsSet;
 @property(copy, nonatomic) NSString *source_element; // @synthesize source_element=_source_element;
 @property(nonatomic) _Bool subreddit_nameIsSet; // @synthesize subreddit_nameIsSet=_subreddit_nameIsSet;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) NSString *post_id; // @synthesize post_id=_post_id;
 @property(nonatomic) _Bool urlIsSet; // @synthesize urlIsSet=_urlIsSet;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -22,6 +22,7 @@
     UIImage *_subscribedTopImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *subscribedTopImage; // @synthesize subscribedTopImage=_subscribedTopImage;
 @property(retain, nonatomic) UIImage *unsubscribedTopImage; // @synthesize unsubscribedTopImage=_unsubscribedTopImage;
 @property(retain, nonatomic) UIImage *bottomImage; // @synthesize bottomImage=_bottomImage;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) BaseImageView *bottomImageView; // @synthesize bottomImageView=_bottomImageView;
 @property(nonatomic) _Bool subscribed; // @synthesize subscribed=_subscribed;
 @property(nonatomic) __weak id <SubscribeButtonCompactDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)didTap:(id)arg1;
 - (void)themeDidChange:(id)arg1;

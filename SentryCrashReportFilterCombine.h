@@ -18,9 +18,9 @@
 
 + (id)filterWithFiltersAndKeys:(id)arg1;
 + (CDUnknownBlockType)argBlockWithFilters:(id)arg1 andKeys:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *keys; // @synthesize keys=_keys;
 @property(retain, nonatomic) NSArray *filters; // @synthesize filters=_filters;
-- (void).cxx_destruct;
 - (void)filterReports:(id)arg1 onCompletion:(CDUnknownBlockType)arg2;
 - (id)initWithFiltersAndKeys:(id)arg1;
 - (id)initWithFilters:(id)arg1 keys:(id)arg2;

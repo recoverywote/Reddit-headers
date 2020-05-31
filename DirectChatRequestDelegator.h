@@ -22,13 +22,13 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) __weak BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) DirectChannel *channel; // @synthesize channel=_channel;
 @property(copy, nonatomic) NSArray *contacts; // @synthesize contacts=_contacts;
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
 @property(nonatomic) __weak id <ChatRequestDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)dealloc;
 @property(readonly, nonatomic) NSAttributedString *messagePreviewHeaderAttributedString;

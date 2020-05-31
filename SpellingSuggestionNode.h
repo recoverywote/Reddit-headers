@@ -17,11 +17,11 @@
     ASTextNode *_detailTextNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *detailTextNode; // @synthesize detailTextNode=_detailTextNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(nonatomic) __weak id <SpellingSuggestionNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didTapNode:(id)arg1;
 - (void)configureTextsForConfidentSearchTerm:(id)arg1 originalSearchTerm:(id)arg2;

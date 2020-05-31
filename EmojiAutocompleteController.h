@@ -19,11 +19,11 @@
     TextInputPrefixListener *_prefixListener;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) TextInputPrefixListener *prefixListener; // @synthesize prefixListener=_prefixListener;
 @property(retain, nonatomic) UIResponder<UITextInput> *textInput; // @synthesize textInput=_textInput;
 @property(copy, nonatomic) NSArray *emojis; // @synthesize emojis=_emojis;
 @property(nonatomic) __weak id <EmojiAutocompleteControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)noPrefixFoundForTextInputPrefixListener:(id)arg1;
 - (void)textInputPrefixListener:(id)arg1 foundPrefix:(id)arg2 withWord:(id)arg3 wordRange:(struct _NSRange)arg4;
 - (void)selectAllText;

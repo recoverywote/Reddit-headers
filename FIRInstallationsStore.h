@@ -17,11 +17,11 @@
     GULUserDefaults *_userDefaults;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GULUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(readonly, nonatomic) NSString *accessGroup; // @synthesize accessGroup=_accessGroup;
 @property(readonly, nonatomic) FIRSecureStorage *secureStorage; // @synthesize secureStorage=_secureStorage;
-- (void).cxx_destruct;
 - (id)setInstallationExists:(_Bool)arg1 forItemWithIdentifier:(id)arg2;
 - (id)installationExistsForAppID:(id)arg1 appName:(id)arg2;
 - (id)removeInstallationForAppID:(id)arg1 appName:(id)arg2;

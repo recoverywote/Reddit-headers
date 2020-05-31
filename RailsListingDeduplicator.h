@@ -13,8 +13,8 @@
     NSMutableSet *_uniqueObjects;
 }
 
-@property(retain, nonatomic) NSMutableSet *uniqueObjects; // @synthesize uniqueObjects=_uniqueObjects;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableSet *uniqueObjects; // @synthesize uniqueObjects=_uniqueObjects;
 - (void)addObjects:(id)arg1;
 - (void)addObject:(id)arg1;
 @property(readonly, nonatomic) NSSet *objectSet;

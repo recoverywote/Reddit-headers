@@ -13,8 +13,8 @@
     NSCache *_cache;
 }
 
-@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (id)itemForKey:(id)arg1;
 - (void)cacheItem:(id)arg1 forKey:(id)arg2;
 - (id)init;

@@ -14,8 +14,8 @@
 }
 
 + (id)createWidgetWithData:(id)arg1;
-@property(copy, nonatomic) NSString *widgetId; // @synthesize widgetId=_widgetId;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *widgetId; // @synthesize widgetId=_widgetId;
 - (id)initWithData:(id)arg1;
 
 @end

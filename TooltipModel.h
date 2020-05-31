@@ -28,6 +28,7 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(nonatomic) double delay; // @synthesize delay=_delay;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) __weak UIView *anchorView; // @synthesize anchorView=_anchorView;
 @property(nonatomic) unsigned long long priority; // @synthesize priority=_priority;
 @property(readonly, nonatomic) unsigned long long tooltipType; // @synthesize tooltipType=_tooltipType;
-- (void).cxx_destruct;
 - (id)initWithTooltipType:(unsigned long long)arg1 anchorView:(id)arg2 buildBlock:(CDUnknownBlockType)arg3;
 
 // Remaining properties

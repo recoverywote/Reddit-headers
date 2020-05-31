@@ -7,7 +7,7 @@
 #import "BaseCollectionViewCellNode.h"
 
 @class ASDisplayNode, ASTextNode, FeedPostEventBarNode, FeedPostOptions, Post, PostCollection, PostCollectionCarouselPostContentNode;
-@protocol PostCollectionCarouselPostNodeDelegate;
+@protocol PostCollectionCarouselPostNodeDelegate, ViewContext;
 
 @interface PostCollectionCarouselPostNode : BaseCollectionViewCellNode
 {
@@ -21,8 +21,11 @@
     ASTextNode *_commentsAndPointsNode;
     PostCollectionCarouselPostContentNode *_contentNode;
     id <PostCollectionCarouselPostNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <PostCollectionCarouselPostNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostCollectionCarouselPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) ASTextNode *commentsAndPointsNode; // @synthesize commentsAndPointsNode=_commentsAndPointsNode;
@@ -33,7 +36,6 @@
 @property(nonatomic) long long positionInFeed; // @synthesize positionInFeed=_positionInFeed;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
-- (void).cxx_destruct;
 - (void)didBecomeFullyVisible;
 - (void)nodeDidTap:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
@@ -46,7 +48,7 @@
 - (void)createPostEventNodeIfNeeded;
 - (void)createTopLineNode;
 - (void)createNodes;
-- (id)initWithPostCollection:(id)arg1 post:(id)arg2 postOptions:(id)arg3 delegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 postCollection:(id)arg2 post:(id)arg3 postOptions:(id)arg4 delegate:(id)arg5;
 
 @end
 

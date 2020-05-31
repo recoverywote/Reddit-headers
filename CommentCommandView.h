@@ -36,6 +36,7 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isUserAModerator; // @synthesize isUserAModerator=_isUserAModerator;
 @property(nonatomic) _Bool isTopLevel; // @synthesize isTopLevel=_isTopLevel;
 @property(nonatomic) __weak id <CommentCommandViewDelegate> delegate; // @synthesize delegate=_delegate;
@@ -56,7 +57,6 @@
 @property(nonatomic) _Bool isInModMode; // @synthesize isInModMode=_isInModMode;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) BaseButton *moreOptionButton; // @synthesize moreOptionButton=_moreOptionButton;
-- (void).cxx_destruct;
 - (void)didTapDistinguish;
 - (void)didTapModerate;
 - (void)didTapReply;

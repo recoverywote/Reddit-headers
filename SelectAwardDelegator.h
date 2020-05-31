@@ -16,8 +16,8 @@
     SelectAwardPresenter *_presenter;
 }
 
-@property(readonly, nonatomic) SelectAwardPresenter *presenter; // @synthesize presenter=_presenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SelectAwardPresenter *presenter; // @synthesize presenter=_presenter;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;

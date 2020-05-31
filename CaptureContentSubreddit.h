@@ -15,10 +15,10 @@
     CDUnknownBlockType _action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(retain, nonatomic) NSMutableArray *selectedSubreddits; // @synthesize selectedSubreddits=_selectedSubreddits;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 
 @end
 

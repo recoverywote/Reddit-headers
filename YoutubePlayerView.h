@@ -23,11 +23,11 @@
 + (long long)playerStateForString:(id)arg1;
 + (id)stringForPlaybackQuality:(long long)arg1;
 + (long long)playbackQualityForString:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIView *initialLoadingView; // @synthesize initialLoadingView=_initialLoadingView;
 @property(retain, nonatomic) NSURL *originURL; // @synthesize originURL=_originURL;
 @property(nonatomic) __weak id <YoutubePlayerViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
-- (void).cxx_destruct;
 - (void)removeWebView;
 - (id)createNewWebView;
 - (void)setWebView:(id)arg1;

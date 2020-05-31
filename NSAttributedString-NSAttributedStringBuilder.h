@@ -8,21 +8,5 @@
 
 @interface NSAttributedString (NSAttributedStringBuilder)
 + (id)attributedStrings:(id)arg1 joinedBy:(id)arg2;
-+ (id)attributedStringWithImageNamed:(id)arg1 attributes:(id)arg2 imageHeight:(double)arg3;
-+ (id)attributedStringWithImage:(id)arg1 attributes:(id)arg2 imageHeight:(double)arg3;
-+ (id)attributedStringWithAttachment:(id)arg1 attributes:(id)arg2;
-+ (id)attributedStringForSubredditName:(id)arg1 username:(id)arg2 forRect:(struct CGRect)arg3;
-+ (id)attributedStringForIconName:(id)arg1 font:(id)arg2;
-+ (id)attributedStringForIconName:(id)arg1 color:(id)arg2 font:(id)arg3;
-- (id)attributedSubredditLinkStringWithSubredditImage:(id)arg1 backgroundColor:(id)arg2 borderColor:(id)arg3 subredditMention:(id)arg4;
-- (id)appendedWithNewLineAttributedString:(id)arg1;
-- (id)appendedAttributedString:(id)arg1 separator:(id)arg2;
-- (void)detectAndAddLinksForText:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (id)attributedStringForLinks:(id)arg1 withActiveLink:(id)arg2 linkAttributes:(id)arg3 activeLinkAttributes:(id)arg4 defaultAttributes:(id)arg5;
-- (id)spoilerTexts;
-- (id)attributedLinks;
-- (id)extractAttributesFromString:(id)arg1;
-- (id)attributesForString;
-- (void)loadAsyncAttachmentsWithCompletion:(CDUnknownBlockType)arg1;
 @end
 

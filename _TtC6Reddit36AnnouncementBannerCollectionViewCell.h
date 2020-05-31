@@ -6,9 +6,7 @@
 
 #import <RedditUI/BaseCollectionViewCell.h>
 
-#import "VisibilityTrackable-Protocol.h"
-
-@interface _TtC6Reddit36AnnouncementBannerCollectionViewCell : BaseCollectionViewCell <VisibilityTrackable>
+@interface _TtC6Reddit36AnnouncementBannerCollectionViewCell : BaseCollectionViewCell
 {
     // Error parsing type: , name: announcementBannerView
     // Error parsing type: , name: visibilityTracker

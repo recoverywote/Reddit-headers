@@ -34,6 +34,7 @@
     NSString *_template_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool template_typeIsSet; // @synthesize template_typeIsSet=_template_typeIsSet;
 @property(copy, nonatomic) NSString *template_type; // @synthesize template_type=_template_type;
 @property(nonatomic) _Bool timeout_durationIsSet; // @synthesize timeout_durationIsSet=_timeout_durationIsSet;
@@ -52,7 +53,6 @@
 @property(nonatomic) int number_password_dump_credentials; // @synthesize number_password_dump_credentials=_number_password_dump_credentials;
 @property(nonatomic) _Bool password_dump_idIsSet; // @synthesize password_dump_idIsSet=_password_dump_idIsSet;
 @property(copy, nonatomic) NSString *password_dump_id; // @synthesize password_dump_id=_password_dump_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

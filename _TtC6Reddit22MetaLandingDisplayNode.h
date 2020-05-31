@@ -4,24 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <AsyncDisplayKit/ASScrollNode.h>
+#import <AsyncDisplayKit/ASDisplayNode.h>
 
-@interface _TtC6Reddit22MetaLandingDisplayNode : ASScrollNode
+@interface _TtC6Reddit22MetaLandingDisplayNode : ASDisplayNode
 {
-    // Error parsing type: , name: introNode
-    // Error parsing type: , name: benefitsNode
-    // Error parsing type: , name: jumperImageNode
-    // Error parsing type: , name: loyaltyNode
-    // Error parsing type: , name: achievementNode
-    // Error parsing type: , name: styleNode
-    // Error parsing type: , name: fallingImageNode
-    // Error parsing type: , name: emoteKeyboardSectionNode
-    // Error parsing type: , name: rescueImageNode
-    // Error parsing type: , name: gifSectionNode
-    // Error parsing type: , name: golfCartImageNode
-    // Error parsing type: , name: communityGiveawaySectionNode
-    // Error parsing type: , name: supportSectionNode
-    // Error parsing type: , name: testimonialsSectionNode
+    // Error parsing type: , name: contentNode
 }
 
 - (void).cxx_destruct;

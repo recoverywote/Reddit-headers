@@ -31,6 +31,7 @@
     _TtC6Reddit22CoinSaleEntryContainer *_coinSaleContainer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit22CoinSaleEntryContainer *coinSaleContainer; // @synthesize coinSaleContainer=_coinSaleContainer;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) _TtC6Reddit22ForcePasswordResetView *forcePasswordResetView; // @synthesize forcePasswordResetView=_forcePasswordResetView;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) HomeViewController *homeViewController; // @synthesize homeViewController=_homeViewController;
 @property(retain, nonatomic) UINavigationController *currentViewController; // @synthesize currentViewController=_currentViewController;
 @property(nonatomic) __weak id <MainTabBarControllerDelegate> mainTabDelegate; // @synthesize mainTabDelegate=_mainTabDelegate;
-- (void).cxx_destruct;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)showCommunityCreationViewController;
 - (id)viewControllerAtTab:(unsigned long long)arg1;
@@ -53,7 +53,7 @@
 - (void)showCoinsMarketingController;
 - (id)coinSaleNavigationButton;
 - (void)addNavigationButtons;
-- (void)switchToTab:(unsigned long long)arg1 andPopToRootandPushVC:(id)arg2;
+- (void)switchToTab:(unsigned long long)arg1 andPopToRootAndPushVC:(id)arg2;
 - (void)switchToTab:(unsigned long long)arg1 andPushViewController:(id)arg2;
 - (void)showChatViewController:(id)arg1 forChatURL:(id)arg2;
 - (void)showDeeplinkURL:(id)arg1;
@@ -76,6 +76,7 @@
 - (_Bool)tabBarController:(id)arg1 shouldSelectViewController:(id)arg2;
 - (void)tabBarController:(id)arg1 didSelectViewController:(id)arg2;
 - (void)presentPostMenuIfPossible;
+- (void)selectChatTabDirectPage;
 - (void)switchToChatTab;
 - (void)switchToInboxTab;
 - (void)switchToCommunityTabAndStartSearch;

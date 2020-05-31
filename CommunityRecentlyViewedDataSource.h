@@ -17,9 +17,9 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
-- (void).cxx_destruct;
 - (void)carouselContainerNode:(id)arg1 performRemoveOfCarousel:(id)arg2 removalReason:(unsigned long long)arg3;
 - (void)carouselContainerNode:(id)arg1 didTapCarouselItem:(id)arg2 atIndex:(long long)arg3 carouselItems:(id)arg4;
 - (void)carouselContainerNode:(id)arg1 didTapActionName:(id)arg2 carouselItem:(id)arg3 atIndex:(long long)arg4 carouselItems:(id)arg5;

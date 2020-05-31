@@ -25,6 +25,7 @@
     MediaPostDataProvider *_mediaPostDataProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MediaPostDataProvider *mediaPostDataProvider; // @synthesize mediaPostDataProvider=_mediaPostDataProvider;
 @property(retain, nonatomic) KeyValueObservation *railsContextObserver; // @synthesize railsContextObserver=_railsContextObserver;
 @property(copy, nonatomic) NSArray *categories; // @synthesize categories=_categories;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) RailsListingProvider *listingProvider; // @synthesize listingProvider=_listingProvider;
 @property(copy, nonatomic) NSArray *recentSearches; // @synthesize recentSearches=_recentSearches;
 @property(retain, nonatomic) RailsContext *railsContext; // @synthesize railsContext=_railsContext;
-- (void).cxx_destruct;
 - (id)listingTraceName;
 - (void)reconfigureListingNetworkSource;
 - (id)analyticsCorrelationId;

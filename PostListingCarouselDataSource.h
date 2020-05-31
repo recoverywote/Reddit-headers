@@ -20,6 +20,7 @@
 @property(nonatomic) _Bool includeOnlyMedia; // @synthesize includeOnlyMedia=_includeOnlyMedia;
 @property(nonatomic) _Bool shouldParseComments; // @synthesize shouldParseComments=_shouldParseComments;
 @property(nonatomic) _Bool useCurrentLocation; // @synthesize useCurrentLocation=_useCurrentLocation;
+- (id)carouselItemsFromData:(id)arg1 shouldFilter:(CDUnknownBlockType)arg2;
 - (_Bool)listingNetworkSourceShouldFilterObject:(id)arg1;
 - (void)parseData:(id)arg1;
 - (void)fetchCarouselItemsWithCompletion:(CDUnknownBlockType)arg1;

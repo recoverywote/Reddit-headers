@@ -15,10 +15,10 @@
     CDUnknownBlockType _callback;
 }
 
+- (void).cxx_destruct;
 @property(copy) CDUnknownBlockType callback; // @synthesize callback=_callback;
 @property(retain, nonatomic) NSString *bucket; // @synthesize bucket=_bucket;
 @property(nonatomic) long long amount; // @synthesize amount=_amount;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)processResponse:(id)arg1 error:(id)arg2;

@@ -16,11 +16,11 @@
     NSUUID *_uuid;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSUUID *uuid; // @synthesize uuid=_uuid;
 @property(nonatomic) __weak HLSAssetDownloadSession *downloadSession; // @synthesize downloadSession=_downloadSession;
 @property(readonly, nonatomic) AVURLAsset *asset; // @synthesize asset=_asset;
 @property(readonly, nonatomic) HLSPlaylist *playlist; // @synthesize playlist=_playlist;
-- (void).cxx_destruct;
 - (id)initWithPlaylist:(id)arg1 asset:(id)arg2;
 
 @end

@@ -14,9 +14,9 @@
     TheatrePresentationModel *_presentationModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isRichTextTheatreView; // @synthesize isRichTextTheatreView=_isRichTextTheatreView;
 @property(retain, nonatomic) TheatrePresentationModel *presentationModel; // @synthesize presentationModel=_presentationModel;
-- (void).cxx_destruct;
 - (void)didHidePost:(id)arg1;
 - (id)feedPostOptions;
 - (void)addStartingObjectIfNeeded;

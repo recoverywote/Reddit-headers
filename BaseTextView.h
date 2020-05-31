@@ -20,12 +20,12 @@
     UITextView *_placeHolderLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITextView *placeHolderLabel; // @synthesize placeHolderLabel=_placeHolderLabel;
 @property(nonatomic) double maxHeight; // @synthesize maxHeight=_maxHeight;
 @property(nonatomic) __weak id <BaseTextViewDelegate> textViewDelegate; // @synthesize textViewDelegate=_textViewDelegate;
 @property(copy, nonatomic) NSAttributedString *placeholderAttributedText; // @synthesize placeholderAttributedText=_placeholderAttributedText;
 @property(copy, nonatomic) NSString *placeholderText; // @synthesize placeholderText=_placeholderText;
-- (void).cxx_destruct;
 - (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (_Bool)textViewShouldBeginEditing:(id)arg1;
 - (void)textChanged:(id)arg1;

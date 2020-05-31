@@ -14,7 +14,7 @@
 #import "_TtP6Reddit40TheatreFeedPostRedditVideoPlayerDelegate_-Protocol.h"
 
 @class FeedPostHlsVideoView, FeedPostOptions, FeedPostVideoView, FeedPostYouTubeEmbeddedView, NSString, Post, TheatreImageView, TheatreMediaItem, UIImage, _TtC6Reddit15RedditVideoNode;
-@protocol TheatreFeedPostViewDelegate;
+@protocol TheatreFeedPostViewDelegate, ViewContext;
 
 @interface TheatreFeedPostView : BaseView <TheatreImageViewDelegate, _TtP6Reddit40TheatreFeedPostRedditVideoPlayerDelegate_, ContentImageViewDelegate, FeedPostVideoViewDelegate, FeedPostYouTubeEmbeddedViewDelegate, FeedPostHlsVideoViewDelegate>
 {
@@ -28,9 +28,12 @@
     FeedPostYouTubeEmbeddedView *_youTubeEmbeddedView;
     _TtC6Reddit15RedditVideoNode *_redditVideoNode;
     FeedPostOptions *_options;
+    id <ViewContext> _viewContext;
 }
 
-+ (struct CGSize)theatreFeedPostContentForSize:(struct CGSize)arg1 forMediaItem:(id)arg2;
++ (struct CGSize)theatreFeedPostContentWithViewContext:(id)arg1 forSize:(struct CGSize)arg2 forMediaItem:(id)arg3;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) _Bool shouldBlurImage; // @synthesize shouldBlurImage=_shouldBlurImage;
 @property(retain, nonatomic) _TtC6Reddit15RedditVideoNode *redditVideoNode; // @synthesize redditVideoNode=_redditVideoNode;
@@ -41,7 +44,6 @@
 @property(retain, nonatomic) FeedPostHlsVideoView *feedPostHlsVideoView; // @synthesize feedPostHlsVideoView=_feedPostHlsVideoView;
 @property(nonatomic) __weak id <TheatreFeedPostViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) TheatreMediaItem *theatreMediaItem; // @synthesize theatreMediaItem=_theatreMediaItem;
-- (void).cxx_destruct;
 - (void)didTapFullscreenFrom:(id)arg1;
 - (void)didTapViewFrom:(id)arg1;
 - (void)didTapCallToActionFrom:(id)arg1 callToAction:(id)arg2;
@@ -69,7 +71,8 @@
 - (void)addSubviewsIfNeeded;
 - (void)initViewsForPostType:(unsigned long long)arg1;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

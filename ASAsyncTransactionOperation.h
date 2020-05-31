@@ -12,9 +12,9 @@
     id _value;
 }
 
+- (void).cxx_destruct;
 @property(retain) id value; // @synthesize value=_value;
 @property(copy, nonatomic) CDUnknownBlockType operationCompletionBlock; // @synthesize operationCompletionBlock=_operationCompletionBlock;
-- (void).cxx_destruct;
 - (id)description;
 - (void)callAndReleaseCompletionBlock:(_Bool)arg1;
 - (void)dealloc;

@@ -16,9 +16,9 @@
 
 + (long long)activityCategory;
 + (id)activityType;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *replacementActivityType; // @synthesize replacementActivityType=_replacementActivityType;
 @property(copy, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (id)redditActivityImage;
 - (void)performActivity;
 - (_Bool)canPerformWithActivityItems:(id)arg1;

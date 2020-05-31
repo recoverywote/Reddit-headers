@@ -16,6 +16,7 @@
 @property(copy, nonatomic) NSString *geoFilter; // @dynamic geoFilter;
 @property(nonatomic) double surveyLastSeenTime; // @dynamic surveyLastSeenTime;
 @property(nonatomic) _Bool allowNSFW; // @dynamic allowNSFW;
+@property(nonatomic) _Bool allowLocationBasedSuggestions; // @dynamic allowLocationBasedSuggestions;
 @property(nonatomic) _Bool allowThirdPartyDataPersonalizedAds; // @dynamic allowThirdPartyDataPersonalizedAds;
 @property(nonatomic) _Bool allowThirdPartySiteDataPersonalizedContent; // @dynamic allowThirdPartySiteDataPersonalizedContent;
 @property(nonatomic) _Bool allowThirdPartySiteDataPersonalizedAds; // @dynamic allowThirdPartySiteDataPersonalizedAds;

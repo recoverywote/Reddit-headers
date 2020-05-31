@@ -22,11 +22,11 @@
 + (id)keyPathsToObserveChanges;
 + (id)persistProperties;
 + (id)tableName;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *membersExceptMe; // @synthesize membersExceptMe=_membersExceptMe;
 @property(copy, nonatomic) NSString *memberString; // @synthesize memberString=_memberString;
 @property(copy, nonatomic) NSArray *members; // @synthesize members=_members;
 @property(copy, nonatomic) NSString *welcomeText; // @synthesize welcomeText=_welcomeText;
-- (void).cxx_destruct;
 - (unsigned long long)membersCount;
 - (id)displayTitle;
 @property(readonly, nonatomic) _Bool hasNSFWMembers;

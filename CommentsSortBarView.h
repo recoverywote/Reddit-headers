@@ -17,11 +17,11 @@
 }
 
 + (id)imageNameForCommentSort:(unsigned long long)arg1 smallSize:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *liveIndicatorView; // @synthesize liveIndicatorView=_liveIndicatorView;
 @property(nonatomic) _Bool hasParentComment; // @synthesize hasParentComment=_hasParentComment;
 @property(nonatomic) unsigned long long configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
-- (void).cxx_destruct;
 - (void)toggleLiveIndicatorView:(_Bool)arg1;
 - (void)layoutSubviews;
 - (void)setLeftButtonTitle:(id)arg1 withImage:(id)arg2;

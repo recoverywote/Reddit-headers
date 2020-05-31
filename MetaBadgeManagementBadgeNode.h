@@ -21,13 +21,13 @@
 
 + (CDUnknownBlockType)modificationBlockForSelectable:(_Bool)arg1;
 + (void)drawRect:(struct CGRect)arg1 withParameters:(id)arg2 isCancelled:(CDUnknownBlockType)arg3 isRasterizing:(_Bool)arg4;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <MetaBadgeManagementActionDelegate> actionDelegate; // @synthesize actionDelegate=_actionDelegate;
 @property(retain, nonatomic) MetaBadgeManagementBadgePlacementViewModel *placementViewModel; // @synthesize placementViewModel=_placementViewModel;
 @property(retain, nonatomic) MetaBadgeManagementBadgeViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) ASImageNode *checkImageNode; // @synthesize checkImageNode=_checkImageNode;
 @property(retain, nonatomic) ASNetworkImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(retain, nonatomic) UIColor *contentColor; // @synthesize contentColor=_contentColor;
-- (void).cxx_destruct;
 - (id)drawParametersForAsyncLayer:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didTapSelf:(id)arg1;

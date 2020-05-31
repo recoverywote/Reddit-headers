@@ -23,11 +23,11 @@
     CDUnknownBlockType _queueConsumer;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType queueConsumer; // @synthesize queueConsumer=_queueConsumer;
 @property(nonatomic) _Bool ensureExclusiveMembership; // @synthesize ensureExclusiveMembership=_ensureExclusiveMembership;
 @property(nonatomic) unsigned long long batchSize; // @synthesize batchSize=_batchSize;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)unlock;
 - (void)lock;
 @property(readonly) _Bool isEmpty;

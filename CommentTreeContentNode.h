@@ -30,6 +30,7 @@
     unsigned long long _awardHighlight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long awardHighlight; // @synthesize awardHighlight=_awardHighlight;
 @property(retain, nonatomic) _TtC6Reddit26AwardBubblingHighlightNode *awardHighlightNode; // @synthesize awardHighlightNode=_awardHighlightNode;
 @property(retain, nonatomic) ASDisplayNode *commandNode; // @synthesize commandNode=_commandNode;
@@ -44,9 +45,10 @@
 @property(retain, nonatomic) CommentMetaViewModel *commentMetaViewModel; // @synthesize commentMetaViewModel=_commentMetaViewModel;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 @property(retain, nonatomic) CommentTreeTextNode *textNode; // @synthesize textNode=_textNode;
-- (void).cxx_destruct;
 - (void)setColorToHighlightView:(id)arg1;
 - (void)updateAwardsHighlight;
+- (void)resetBackgroundColors;
+- (void)setBackgroundColors:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)createLoadMoreNode;
 - (void)createCommandNode;

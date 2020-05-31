@@ -16,11 +16,11 @@
     NSNumber *_cpuSubType;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *cpuSubType; // @synthesize cpuSubType=_cpuSubType;
 @property(copy, nonatomic) NSNumber *cpuType; // @synthesize cpuType=_cpuType;
 @property(copy, nonatomic) NSString *machine; // @synthesize machine=_machine;
 @property(copy, nonatomic) NSString *systemBuildVersion; // @synthesize systemBuildVersion=_systemBuildVersion;
-- (void).cxx_destruct;
 - (void)loadCPUTypeInfo;
 - (id)systemInformationForName:(id)arg1;
 - (void)loadSystemInformation;

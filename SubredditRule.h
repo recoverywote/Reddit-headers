@@ -18,13 +18,13 @@
     long long _type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long type; // @synthesize type=_type;
 @property(nonatomic) long long priority; // @synthesize priority=_priority;
 @property(retain, nonatomic) NSDate *creationDate; // @synthesize creationDate=_creationDate;
 @property(retain, nonatomic) NSString *violationReason; // @synthesize violationReason=_violationReason;
 @property(retain, nonatomic) NSString *fullDescription; // @synthesize fullDescription=_fullDescription;
 @property(retain, nonatomic) NSString *shortName; // @synthesize shortName=_shortName;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

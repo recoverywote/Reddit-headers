@@ -14,9 +14,9 @@
     NSMutableArray *_cells;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *cells; // @synthesize cells=_cells;
 @property(retain, nonatomic) MarkdownTableRowConfiguration *rowConfiguration; // @synthesize rowConfiguration=_rowConfiguration;
-- (void).cxx_destruct;
 - (void)populateWithRowMarkdown:(id)arg1 config:(id)arg2 forcedRowFontOrNil:(id)arg3 rowConfiguration:(id)arg4;
 - (id)init;
 

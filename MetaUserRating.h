@@ -16,11 +16,11 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *userPk; // @synthesize userPk=_userPk;
 @property(readonly, copy, nonatomic) NSDecimalNumber *score; // @synthesize score=_score;
 @property(readonly, nonatomic) long long position; // @synthesize position=_position;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

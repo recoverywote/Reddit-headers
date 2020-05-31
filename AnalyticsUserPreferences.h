@@ -26,6 +26,7 @@
     NSString *_expando;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hide_previously_seen_postsIsSet; // @synthesize hide_previously_seen_postsIsSet=_hide_previously_seen_postsIsSet;
 @property(nonatomic) _Bool hide_previously_seen_posts; // @synthesize hide_previously_seen_posts=_hide_previously_seen_posts;
 @property(nonatomic) _Bool expandoIsSet; // @synthesize expandoIsSet=_expandoIsSet;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSString *language; // @synthesize language=_language;
 @property(nonatomic) _Bool in_betaIsSet; // @synthesize in_betaIsSet=_in_betaIsSet;
 @property(nonatomic) _Bool in_beta; // @synthesize in_beta=_in_beta;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

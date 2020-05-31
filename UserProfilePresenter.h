@@ -17,11 +17,11 @@
     id <UserProfilePresenterDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(nonatomic) __weak id <UserProfilePresenterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (_Bool)isUsernameForActiveService:(id)arg1;
 - (void)addUsersSubreddit:(id)arg1 toCustomFeed:(id)arg2;
 - (void)fetchSubredditForUserWithCompletion:(CDUnknownBlockType)arg1;

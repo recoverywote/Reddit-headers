@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseButton, BaseLabel, NSObject, NSString, Post, UIButton;
-@protocol FeedPostCommentBarViewDelegate;
+@protocol FeedPostCommentBarViewDelegate, ViewContext;
 
 @interface FeedPostCommentsBarView : BaseView <ObjectObserverProtocol>
 {
@@ -25,8 +25,11 @@
     BaseButton *_awardButton;
     UIButton *_upvoteButton;
     UIButton *_downvoteButton;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) UIButton *downvoteButton; // @synthesize downvoteButton=_downvoteButton;
 @property(retain, nonatomic) UIButton *upvoteButton; // @synthesize upvoteButton=_upvoteButton;
 @property(retain, nonatomic) BaseButton *awardButton; // @synthesize awardButton=_awardButton;
@@ -39,7 +42,6 @@
 @property(nonatomic) _Bool shouldApplyStyling; // @synthesize shouldApplyStyling=_shouldApplyStyling;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak NSObject<FeedPostCommentBarViewDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (_Bool)isVoteIconStylingAllowed;
 - (void)updateContentViews;
@@ -64,7 +66,8 @@
 - (SEL)customMetatextColor;
 - (SEL)customActionColor;
 - (SEL)customBackgroundColor;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

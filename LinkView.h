@@ -14,9 +14,9 @@
     BaseTextField *_urlTextField;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseTextField *urlTextField; // @synthesize urlTextField=_urlTextField;
 @property(retain, nonatomic) BaseTextField *linkTextField; // @synthesize linkTextField=_linkTextField;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

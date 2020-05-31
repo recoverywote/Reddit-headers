@@ -21,12 +21,12 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FlairTemplate *template; // @synthesize template=_template;
 @property(copy, nonatomic) NSArray *richText; // @synthesize richText=_richText;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) long long textColorType; // @synthesize textColorType=_textColorType;
 @property(nonatomic) long long textType; // @synthesize textType=_textType;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

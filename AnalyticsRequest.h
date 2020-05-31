@@ -54,6 +54,7 @@
     NSString *_robots_meta_tag;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool robots_meta_tagIsSet; // @synthesize robots_meta_tagIsSet=_robots_meta_tagIsSet;
 @property(copy, nonatomic) NSString *robots_meta_tag; // @synthesize robots_meta_tag=_robots_meta_tag;
 @property(nonatomic) _Bool loginbotIsSet; // @synthesize loginbotIsSet=_loginbotIsSet;
@@ -92,7 +93,6 @@
 @property(copy, nonatomic) NSString *domain; // @synthesize domain=_domain;
 @property(nonatomic) _Bool user_agentIsSet; // @synthesize user_agentIsSet=_user_agentIsSet;
 @property(copy, nonatomic) NSString *user_agent; // @synthesize user_agent=_user_agent;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

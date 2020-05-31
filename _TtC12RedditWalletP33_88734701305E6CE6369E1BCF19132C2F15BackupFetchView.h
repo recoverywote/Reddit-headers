@@ -12,7 +12,7 @@
     // Error parsing type: , name: notchView
     // Error parsing type: , name: navigationBarView
     // Error parsing type: , name: animationView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

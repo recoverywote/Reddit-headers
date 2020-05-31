@@ -22,6 +22,7 @@
 }
 
 + (id)createViewModelWithWidget:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) long long numberOfRowItems; // @synthesize numberOfRowItems=_numberOfRowItems;
 @property(copy, nonatomic) NSString *footerAccessoryImageName; // @synthesize footerAccessoryImageName=_footerAccessoryImageName;
 @property(copy, nonatomic) NSString *footerLabelText; // @synthesize footerLabelText=_footerLabelText;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak NSObject<SubredditWidgetSizerProtocol> *sizerDelegate; // @synthesize sizerDelegate=_sizerDelegate;
 @property(nonatomic) double footerHeight; // @synthesize footerHeight=_footerHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (double)heightForRow:(long long)arg1 rowWidth:(double)arg2;
 @property(readonly, nonatomic) SubredditWidget *widget;
 - (id)initWithSubredditWidget:(id)arg1;

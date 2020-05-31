@@ -7,7 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASControlNode, ASTextNode, BaseButtonNode, NSString, Post;
-@protocol FeedPostCallToActionNodeDelegate;
+@protocol FeedPostCallToActionNodeDelegate, ViewContext;
 
 @interface FeedPostCallToActionNode : BaseFeedDisplayNode
 {
@@ -18,8 +18,11 @@
     BaseButtonNode *_buttonNode;
     unsigned long long _layoutStyle;
     NSString *_domainString;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) NSString *domainString; // @synthesize domainString=_domainString;
 @property(nonatomic) unsigned long long layoutStyle; // @synthesize layoutStyle=_layoutStyle;
 @property(retain, nonatomic) BaseButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
@@ -27,11 +30,10 @@
 @property(retain, nonatomic) ASControlNode *controlNode; // @synthesize controlNode=_controlNode;
 @property(nonatomic) __weak id <FeedPostCallToActionNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)nodeTapped:(id)arg1;
 - (void)configureNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-- (id)initWithPost:(id)arg1 style:(unsigned long long)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 style:(unsigned long long)arg3 delegate:(id)arg4;
 
 @end
 

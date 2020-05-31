@@ -23,7 +23,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: $__lazy_storage_$_notchView
     // Error parsing type: , name: $__lazy_storage_$_modalView
     // Error parsing type: , name: $__lazy_storage_$_stackView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -18,13 +18,13 @@
     RefreshPullLayerAnimation *_animation;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldAnimating; // @synthesize shouldAnimating=_shouldAnimating;
 @property(retain, nonatomic) RefreshPullLayerAnimation *animation; // @synthesize animation=_animation;
 @property(retain, nonatomic) UIImageView *failureView; // @synthesize failureView=_failureView;
 @property(retain, nonatomic) UIColor *animationTintColor; // @synthesize animationTintColor=_animationTintColor;
 @property(nonatomic) double progressPercentage; // @synthesize progressPercentage=_progressPercentage;
 @property(nonatomic) _Bool isAnimating; // @synthesize isAnimating=_isAnimating;
-- (void).cxx_destruct;
 - (id)determineAnimationTintColor;
 - (void)showFailureState;
 - (void)layoutSubviews;

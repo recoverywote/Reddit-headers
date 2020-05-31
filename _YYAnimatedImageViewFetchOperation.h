@@ -16,10 +16,10 @@
     UIImage<YYAnimatedImage> *_curImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage<YYAnimatedImage> *curImage; // @synthesize curImage=_curImage;
 @property(nonatomic) unsigned long long nextIndex; // @synthesize nextIndex=_nextIndex;
 @property(nonatomic) __weak YYAnimatedImageView *view; // @synthesize view=_view;
-- (void).cxx_destruct;
 - (void)main;
 
 @end

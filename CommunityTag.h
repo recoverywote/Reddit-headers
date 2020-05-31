@@ -19,11 +19,11 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isRecommended; // @synthesize isRecommended=_isRecommended;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, nonatomic) NSURL *iconURL;
 @property(readonly) unsigned long long hash;

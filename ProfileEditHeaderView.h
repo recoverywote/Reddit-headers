@@ -19,13 +19,13 @@
 }
 
 + (id)gradientColor;
+- (void).cxx_destruct;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(retain, nonatomic) CAShapeLayer *dottedShapeLayer; // @synthesize dottedShapeLayer=_dottedShapeLayer;
 @property(retain, nonatomic) BaseButton *profileImageButton; // @synthesize profileImageButton=_profileImageButton;
 @property(retain, nonatomic) BaseButton *headerImageButton; // @synthesize headerImageButton=_headerImageButton;
 @property(retain, nonatomic) BorderedImageView *profileImageView; // @synthesize profileImageView=_profileImageView;
 @property(retain, nonatomic) UIImageView *headerImageView; // @synthesize headerImageView=_headerImageView;
-- (void).cxx_destruct;
 - (double)subredditLogoSize;
 - (double)preferredHeaderBarHeight;
 - (void)setFrame:(struct CGRect)arg1;

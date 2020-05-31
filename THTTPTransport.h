@@ -21,6 +21,7 @@
     double _timeout;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double timeout; // @synthesize timeout=_timeout;
 @property(retain, nonatomic) NSString *userAgent; // @synthesize userAgent=_userAgent;
 @property(nonatomic) unsigned long long responseDataOffset; // @synthesize responseDataOffset=_responseDataOffset;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) NSMutableData *requestData; // @synthesize requestData=_requestData;
 @property(retain, nonatomic) NSMutableURLRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (_Bool)flush:(id *)arg1;
 - (_Bool)write:(const char *)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 error:(id *)arg4;
 - (unsigned int)readAvail:(char *)arg1 offset:(unsigned int)arg2 maxLength:(unsigned int)arg3 error:(id *)arg4;

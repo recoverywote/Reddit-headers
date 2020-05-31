@@ -15,10 +15,10 @@
     BaseLabel *_linkLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *linkLabel; // @synthesize linkLabel=_linkLabel;
 @property(retain, nonatomic) BaseImageView *linkTypeView; // @synthesize linkTypeView=_linkTypeView;
 @property(retain, nonatomic) BaseImageView *placeholderBackgroundView; // @synthesize placeholderBackgroundView=_placeholderBackgroundView;
-- (void).cxx_destruct;
 - (void)configureLinkTypeView;
 - (void)configureLinkView;
 - (void)configureBackgroundView;

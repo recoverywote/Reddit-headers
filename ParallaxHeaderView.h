@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseButton, BaseLabel, BaseTextView, BaseViewController, BorderedImageView, CarouselNodeController, FlairContainerNode, IntrinsicSizeNodeWrapper, MultiViewControl, NSArray, NSLayoutConstraint, NSString, ObservableObject, ParallelHeaderTextWrapperView, SubredditBannerBackgroundImageView, SubscribeButtonLarge, TextureBackgroundView, UIColor, UIImageView, UILabel, UIStackView, UIView, _TtC6Reddit15StartChatButton, _TtC6Reddit9ModButton;
-@protocol ParallaxHeaderViewCallback, Subscribable><Styleable;
+@protocol ParallaxHeaderViewCallback, Subscribable><Styleable, ViewContext;
 
 @interface ParallaxHeaderView : BaseView <ObjectObserverProtocol>
 {
@@ -28,6 +28,7 @@
     FlairContainerNode *_flairContainerNode;
     id <ParallaxHeaderViewCallback> _delegate;
     UIColor *_colorBarBackgroundColorOverride;
+    id <ViewContext> _viewContext;
     SubredditBannerBackgroundImageView *_backgroundImageView;
     UIImageView *_shadowOverlayImageView;
     TextureBackgroundView *_backgroundColorView;
@@ -60,6 +61,7 @@
     struct CGSize _previousSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak BaseViewController *subscribableViewController; // @synthesize subscribableViewController=_subscribableViewController;
 @property(retain, nonatomic) NSLayoutConstraint *notificationButtonWidthConstraint; // @synthesize notificationButtonWidthConstraint=_notificationButtonWidthConstraint;
 @property(retain, nonatomic) NSArray *wrapperSideConstraints; // @synthesize wrapperSideConstraints=_wrapperSideConstraints;
@@ -94,6 +96,7 @@
 @property(retain, nonatomic) TextureBackgroundView *backgroundColorView; // @synthesize backgroundColorView=_backgroundColorView;
 @property(retain, nonatomic) UIImageView *shadowOverlayImageView; // @synthesize shadowOverlayImageView=_shadowOverlayImageView;
 @property(retain, nonatomic) SubredditBannerBackgroundImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool shouldShowModToolsButton; // @synthesize shouldShowModToolsButton=_shouldShowModToolsButton;
 @property(retain, nonatomic) UIColor *colorBarBackgroundColorOverride; // @synthesize colorBarBackgroundColorOverride=_colorBarBackgroundColorOverride;
 @property(nonatomic) __weak id <ParallaxHeaderViewCallback> delegate; // @synthesize delegate=_delegate;
@@ -105,7 +108,6 @@
 @property(retain, nonatomic) BaseButton *notificationButton; // @synthesize notificationButton=_notificationButton;
 @property(readonly, nonatomic) _TtC6Reddit9ModButton *moderatorButton; // @synthesize moderatorButton=_moderatorButton;
 @property(retain, nonatomic) SubscribeButtonLarge *followButton; // @synthesize followButton=_followButton;
-- (void).cxx_destruct;
 - (void)themeDidChange:(id)arg1;
 @property(readonly, nonatomic) double notificationButtonSize;
 - (double)subredditLogoSize;
@@ -168,8 +170,8 @@
 - (void)setupViews;
 - (void)setupWithParentView:(id)arg1;
 @property(readonly, nonatomic) _Bool isCarouselViewVisible;
-- (id)initWithDelayOnUpdatingContentImages:(_Bool)arg1 shouldShowStartChatButtonAnimation:(_Bool)arg2;
-- (id)init;
+- (id)initWithDelayOnUpdatingContentImages:(_Bool)arg1 viewContext:(id)arg2 shouldShowStartChatButtonAnimation:(_Bool)arg3;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

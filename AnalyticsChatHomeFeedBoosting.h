@@ -24,6 +24,7 @@
     NSMutableArray *_original_positions;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool original_positionsIsSet; // @synthesize original_positionsIsSet=_original_positionsIsSet;
 @property(retain, nonatomic) NSMutableArray *original_positions; // @synthesize original_positions=_original_positions;
 @property(nonatomic) _Bool positionsIsSet; // @synthesize positionsIsSet=_positionsIsSet;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) NSMutableArray *post_ids; // @synthesize post_ids=_post_ids;
 @property(nonatomic) _Bool subreddit_idsIsSet; // @synthesize subreddit_idsIsSet=_subreddit_idsIsSet;
 @property(retain, nonatomic) NSMutableArray *subreddit_ids; // @synthesize subreddit_ids=_subreddit_ids;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

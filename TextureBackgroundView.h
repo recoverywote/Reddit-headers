@@ -13,8 +13,8 @@
     UIImage *_textureImage;
 }
 
-@property(retain, nonatomic) UIImage *textureImage; // @synthesize textureImage=_textureImage;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIImage *textureImage; // @synthesize textureImage=_textureImage;
 - (void)drawRect:(struct CGRect)arg1;
 
 @end

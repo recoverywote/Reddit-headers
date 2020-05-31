@@ -42,6 +42,7 @@
     NSMutableArray *_body_regex_patterns;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool body_regex_patternsIsSet; // @synthesize body_regex_patternsIsSet=_body_regex_patternsIsSet;
 @property(retain, nonatomic) NSMutableArray *body_regex_patterns; // @synthesize body_regex_patterns=_body_regex_patterns;
 @property(nonatomic) _Bool title_regex_patternsIsSet; // @synthesize title_regex_patternsIsSet=_title_regex_patternsIsSet;
@@ -68,7 +69,6 @@
 @property(retain, nonatomic) NSMutableArray *title_blacklisted_strings; // @synthesize title_blacklisted_strings=_title_blacklisted_strings;
 @property(nonatomic) _Bool title_required_stringsIsSet; // @synthesize title_required_stringsIsSet=_title_required_stringsIsSet;
 @property(retain, nonatomic) NSMutableArray *title_required_strings; // @synthesize title_required_strings=_title_required_strings;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

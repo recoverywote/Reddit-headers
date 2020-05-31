@@ -19,8 +19,8 @@
     CALayer *_containerLayer;
 }
 
-@property(readonly, nonatomic) CALayer *containerLayer; // @synthesize containerLayer=_containerLayer;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) CALayer *containerLayer; // @synthesize containerLayer=_containerLayer;
 - (void)setValueDelegate:(id)arg1 forKeypath:(id)arg2;
 - (void)searchNodesForKeypath:(id)arg1;
 - (id)outputPath;

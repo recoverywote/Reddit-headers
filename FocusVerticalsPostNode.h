@@ -7,7 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, ASTextNode, FeedPostOptions, FeedPostThumbnailNode, FocusVerticalsDiscoveryUnitViewModel, Post, Subreddit;
-@protocol FocusVerticalsPostNodeDelegate;
+@protocol FocusVerticalsPostNodeDelegate, ViewContext;
 
 @interface FocusVerticalsPostNode : BaseFeedDisplayNode
 {
@@ -20,8 +20,11 @@
     ASTextNode *_scoreNode;
     ASDisplayNode *_backgroundNode;
     FeedPostThumbnailNode *_thumbnailNode;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostThumbnailNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
 @property(retain, nonatomic) ASDisplayNode *backgroundNode; // @synthesize backgroundNode=_backgroundNode;
 @property(retain, nonatomic) ASTextNode *scoreNode; // @synthesize scoreNode=_scoreNode;
@@ -31,7 +34,6 @@
 @property(readonly, nonatomic) FocusVerticalsDiscoveryUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didTapNode:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
@@ -44,7 +46,7 @@
 - (void)createScoreNode;
 - (void)createTitleNode;
 - (void)createNodes;
-- (id)initWithFocusVerticalsDiscoveryUnitViewModel:(id)arg1 post:(id)arg2 subreddit:(id)arg3 options:(id)arg4 visibilityTracker:(id)arg5 visibilityOptions:(id)arg6;
+- (id)initWithFocusVerticalsDiscoveryUnitViewModel:(id)arg1 viewContext:(id)arg2 post:(id)arg3 subreddit:(id)arg4 options:(id)arg5 visibilityOptions:(id)arg6;
 
 @end
 

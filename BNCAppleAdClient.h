@@ -18,11 +18,11 @@
     id _adClient;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id adClient; // @synthesize adClient=_adClient;
 @property(nonatomic) SEL adClientRequestAttribution; // @synthesize adClientRequestAttribution=_adClientRequestAttribution;
 @property(nonatomic) SEL adClientSharedClient; // @synthesize adClientSharedClient=_adClientSharedClient;
 @property(retain, nonatomic) Class adClientClass; // @synthesize adClientClass=_adClientClass;
-- (void).cxx_destruct;
 - (void)requestAttributionDetailsWithBlock:(CDUnknownBlockType)arg1;
 - (_Bool)isAdClientAvailable;
 - (id)loadAdClient;

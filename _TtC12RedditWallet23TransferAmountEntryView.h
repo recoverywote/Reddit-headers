@@ -16,7 +16,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: tokenSelectionButton
     // Error parsing type: , name: amountTextField
     // Error parsing type: , name: warningLabel
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

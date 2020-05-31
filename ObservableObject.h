@@ -17,9 +17,9 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isObservingChanges; // @synthesize isObservingChanges=_isObservingChanges;
 @property(retain, nonatomic) NSHashTable *currentObservers; // @synthesize currentObservers=_currentObservers;
-- (void).cxx_destruct;
 - (void)removeObserverForUpdates:(id)arg1;
 - (void)registerObserverForUpdates:(id)arg1;
 - (void)notifyObserversForUpdatedModel;

@@ -11,11 +11,10 @@
 #import "RailsSearchContextCandidate-Protocol.h"
 #import "Styleable-Protocol.h"
 #import "Subscribable-Protocol.h"
-#import "_TtP6Reddit18RoadblockableModel_-Protocol.h"
 
 @class NSArray, NSString, NSURL, UIColor, UIImage;
 
-@interface Subreddit (IGListDiffable) <IGListDiffable, Pillable, RailsSearchContextCandidate, Styleable, Subscribable, _TtP6Reddit18RoadblockableModel_>
+@interface Subreddit (IGListDiffable) <IGListDiffable, Pillable, RailsSearchContextCandidate, Styleable, Subscribable>
 + (id)iconPlaceholderImage;
 + (id)subredditTeamMapping;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
@@ -42,7 +41,6 @@
 @property(readonly, nonatomic) UIColor *styledPrimaryColor;
 - (id)shortDisplayName;
 @property(readonly, copy, nonatomic) NSString *editString;
-@property(readonly, nonatomic) _Bool allowEdit;
 @property(readonly, copy, nonatomic) NSString *unsubscribeErrorString;
 @property(readonly, copy, nonatomic) NSString *subscribeErrorString;
 @property(readonly, copy, nonatomic) NSString *unsubscribeSuccessString;
@@ -52,14 +50,15 @@
 @property(readonly, copy, nonatomic) NSString *subscribedString;
 @property(readonly, copy, nonatomic) NSString *unsubscribeString;
 @property(readonly, copy, nonatomic) NSString *subscribeString;
-@property(readonly, nonatomic) _Bool allowSubscribe;
+- (_Bool)isCurrentUsersSubredditWithAccount:(id)arg1;
 @property(readonly, nonatomic) _Bool isPromoter;
-- (id)supplementalInfoStringWithStyle:(_Bool)arg1;
+- (_Bool)isEditAllowedForAccount:(id)arg1;
+- (_Bool)isSubscribeAllowedForAccount:(id)arg1;
+- (id)supplementalInfoStringWithStyle:(_Bool)arg1 currentAccount:(id)arg2;
 @property(readonly, copy, nonatomic) NSString *displayTitle;
 @property(readonly, copy, nonatomic) NSString *nonPrefixedTitle;
 @property(readonly, copy, nonatomic) NSString *headerTitle;
 @property(readonly, nonatomic) _Bool isPopularSubreddit;
-@property(readonly, nonatomic) _Bool isCurrentUsersSubreddit;
 @property(readonly, copy, nonatomic) NSString *subscriptionPk;
 - (_Bool)isUserSubreddit;
 - (_Bool)canPostInSubreddit:(id)arg1;

@@ -16,32 +16,29 @@
 #import "UICollectionViewDelegate-Protocol.h"
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
-@class BaseCollectionView, LoggedOutView, NSArray, NSString, PageSegmentItem, UIScrollView;
+@class BaseCollectionView, LoggedOutView, NSArray, NSString, UIScrollView;
 
 @interface MailListViewController : ListingViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MessagesRepliesViewControllerProcotol, InboxCellContentViewDelegate, ReportActionSheetDelegate, LoggedOutViewDelegate, PagedTabControllerProtocol, ComposableInboxViewController>
 {
     BaseCollectionView *_collectionView;
-    PageSegmentItem *_pageItem;
+    LoggedOutView *_loggedOutView;
     NSArray *_currentMessages;
     NSArray *_currentMessageSubjects;
-    LoggedOutView *_loggedOutView;
 }
 
-@property(retain, nonatomic) LoggedOutView *loggedOutView; // @synthesize loggedOutView=_loggedOutView;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *currentMessageSubjects; // @synthesize currentMessageSubjects=_currentMessageSubjects;
 @property(copy, nonatomic) NSArray *currentMessages; // @synthesize currentMessages=_currentMessages;
-@property(retain, nonatomic) PageSegmentItem *pageItem; // @synthesize pageItem=_pageItem;
+@property(retain, nonatomic) LoggedOutView *loggedOutView; // @synthesize loggedOutView=_loggedOutView;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (void)logAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 message:(id)arg3;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
 - (_Bool)attemptScrollMainContentViewToTop;
 - (void)userDidPullToRefresh;
 - (void)reloadForCompositeInboxViewController:(id)arg1;
-- (void)loggedOutViewDidTapSignup:(id)arg1;
-- (void)loggedOutViewDidTapLogin:(id)arg1;
-- (void)configureLoggedOutView;
+- (void)loggedOutViewDidTapSignup;
+- (void)loggedOutViewDidTapLogin;
 - (id)pageItemText;
 - (void)didTapOverflowOfCellContentView:(id)arg1;
 - (void)messagesRepliesViewController:(id)arg1 didAddNewMessage:(id)arg2;
@@ -64,7 +61,6 @@
 - (struct UIEdgeInsets)preferredContentInset;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
-- (void)dealloc;
 - (id)initWithPresenter:(id)arg1;
 
 // Remaining properties

@@ -20,12 +20,12 @@
     BaseButton *_actionButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) AttributedLabelRegular *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak NSObject<LocationPrivacyInfoViewDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)locationRequested;
 - (id)privacyDescriptionText;

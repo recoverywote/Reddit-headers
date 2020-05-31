@@ -31,6 +31,7 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) CDUnknownFunctionPointerType currentSnapshotUserReportedExceptionHandler; // @synthesize currentSnapshotUserReportedExceptionHandler=_currentSnapshotUserReportedExceptionHandler;
 @property(nonatomic) CDUnknownFunctionPointerType uncaughtExceptionHandler; // @synthesize uncaughtExceptionHandler=_uncaughtExceptionHandler;
 @property(nonatomic) int maxReportCount; // @synthesize maxReportCount=_maxReportCount;
@@ -47,7 +48,6 @@
 @property(nonatomic) int monitoring; // @synthesize monitoring=_monitoring;
 @property(nonatomic) int deleteBehaviorAfterSendAll; // @synthesize deleteBehaviorAfterSendAll=_deleteBehaviorAfterSendAll;
 @property(retain, nonatomic) id <SentryCrashReportFilter> sink; // @synthesize sink=_sink;
-- (void).cxx_destruct;
 - (void)applicationWillTerminate;
 - (void)applicationWillEnterForeground;
 - (void)applicationDidEnterBackground;

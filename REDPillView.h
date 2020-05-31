@@ -16,11 +16,11 @@
     UIColor *_pillBackgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *pillBackgroundColor; // @synthesize pillBackgroundColor=_pillBackgroundColor;
 @property(retain, nonatomic) UIColor *pillTextColor; // @synthesize pillTextColor=_pillTextColor;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) BaseView *selectedOverlayView; // @synthesize selectedOverlayView=_selectedOverlayView;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)setSelected:(_Bool)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;

@@ -8,7 +8,8 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class BaseButton, BaseLabel, BaseView, ChatAvatarImageView, Contact, NSString, RedditService;
+@class BaseButton, BaseLabel, BaseView, ChatAvatarImageView, Contact, NSString;
+@protocol ViewContext;
 
 @interface ChatUserListCollectionCell : BaseCollectionViewCell <ObjectObserverProtocol>
 {
@@ -25,8 +26,11 @@
     BaseView *_onlineCircle;
     unsigned long long _reportCount;
     NSString *_detailText;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(copy, nonatomic) NSString *detailText; // @synthesize detailText=_detailText;
 @property(nonatomic) unsigned long long reportCount; // @synthesize reportCount=_reportCount;
 @property(nonatomic) _Bool enableBlockedStatus; // @synthesize enableBlockedStatus=_enableBlockedStatus;
@@ -40,15 +44,13 @@
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(nonatomic) _Bool enableSelection; // @synthesize enableSelection=_enableSelection;
 @property(nonatomic) double verticalPadding; // @synthesize verticalPadding=_verticalPadding;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (_Bool)shouldMarkNFSW;
 - (void)configureStatusLabel;
 - (void)setMainLabelBold:(_Bool)arg1;
-- (void)configureWithMainText:(id)arg1 andDetailText:(id)arg2;
-- (void)configureWithContact:(id)arg1 withDetailText:(id)arg2 withReportCount:(unsigned long long)arg3 enableBlockedStatus:(_Bool)arg4;
-- (void)configureWithContact:(id)arg1 enableBlockedStatus:(_Bool)arg2;
+- (void)configureWithViewContext:(id)arg1 mainText:(id)arg2 andDetailText:(id)arg3;
+- (void)configureWithViewContext:(id)arg1 contact:(id)arg2 withDetailText:(id)arg3 withReportCount:(unsigned long long)arg4 enableBlockedStatus:(_Bool)arg5;
+- (void)configureWithViewContext:(id)arg1 contact:(id)arg2 enableBlockedStatus:(_Bool)arg3;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

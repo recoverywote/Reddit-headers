@@ -13,8 +13,8 @@
     NSURL *_url;
 }
 
-@property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 - (id)convertDsnString:(id)arg1 didFailWithError:(id *)arg2;
 - (id)getHash;
 - (id)initWithString:(id)arg1 didFailWithError:(id *)arg2;

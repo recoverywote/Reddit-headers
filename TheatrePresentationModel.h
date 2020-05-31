@@ -22,7 +22,8 @@
     Post *_containerPost;
 }
 
-+ (id)defaultTheatreDetailModel;
++ (id)defaultTheatreDetailModelWithViewContext:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) Post *containerPost; // @synthesize containerPost=_containerPost;
 @property(nonatomic) unsigned long long commentTransitionBehavior; // @synthesize commentTransitionBehavior=_commentTransitionBehavior;
 @property(copy, nonatomic) CDUnknownBlockType postDisplayContextBlock; // @synthesize postDisplayContextBlock=_postDisplayContextBlock;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) ListingNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
 @property(retain, nonatomic) NSObject *startingObject; // @synthesize startingObject=_startingObject;
 @property(readonly, nonatomic) FeedPostOptions *feedPostOptions; // @synthesize feedPostOptions=_feedPostOptions;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *initialMediaId;
 - (id)initWithFeedPostOptions:(id)arg1;
 - (id)fromRedditVideoView:(id)arg1;

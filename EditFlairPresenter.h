@@ -30,6 +30,7 @@
     NSDictionary *_allEmojisDictionary;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *allEmojisDictionary; // @synthesize allEmojisDictionary=_allEmojisDictionary;
 @property(copy, nonatomic) NSArray *allEmojis; // @synthesize allEmojis=_allEmojis;
 @property(copy, nonatomic) NSArray *allRedditEmojis; // @synthesize allRedditEmojis=_allRedditEmojis;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) long long flairType; // @synthesize flairType=_flairType;
 @property(nonatomic) long long editType; // @synthesize editType=_editType;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasModifiedTemplateProperties;
 @property(readonly, nonatomic) _Bool isUpdatingPostFlairTemplate;
 - (_Bool)isValidBasedOnContentTypeAndEmojiRestrictions;

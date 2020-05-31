@@ -13,8 +13,8 @@
     NSMutableArray *_cellConfiguration;
 }
 
-@property(readonly, nonatomic) NSMutableArray *cellConfiguration; // @synthesize cellConfiguration=_cellConfiguration;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableArray *cellConfiguration; // @synthesize cellConfiguration=_cellConfiguration;
 - (id)initWithRowString:(id)arg1;
 - (id)initWithColumeCount:(unsigned long long)arg1;
 

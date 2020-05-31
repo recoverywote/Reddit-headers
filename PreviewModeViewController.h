@@ -31,6 +31,7 @@
     NSMutableSet *_endDisplayViews;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *endDisplayViews; // @synthesize endDisplayViews=_endDisplayViews;
 @property(retain, nonatomic) NSMutableSet *willDisplayViews; // @synthesize willDisplayViews=_willDisplayViews;
 @property(retain, nonatomic) PagingCollectionViewLayout *fullscreenPagingLayout; // @synthesize fullscreenPagingLayout=_fullscreenPagingLayout;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) PreviewModeDataSource *previewModeDataSource; // @synthesize previewModeDataSource=_previewModeDataSource;
 @property(copy, nonatomic) CDUnknownBlockType didScrollToViewController; // @synthesize didScrollToViewController=_didScrollToViewController;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (void)logSwipePreviousEvent;
 - (void)logSwipeNextEvent;
 - (id)analyticsScreenViewName;

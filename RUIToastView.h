@@ -24,6 +24,7 @@
     UIStackView *_bottomHorizontalStackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *bottomHorizontalStackView; // @synthesize bottomHorizontalStackView=_bottomHorizontalStackView;
 @property(retain, nonatomic) UIStackView *topHorizontalStackView; // @synthesize topHorizontalStackView=_topHorizontalStackView;
 @property(retain, nonatomic) UIStackView *contentVerticalStackView; // @synthesize contentVerticalStackView=_contentVerticalStackView;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) RUIToastConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) __weak RUIToastController *controller; // @synthesize controller=_controller;
-- (void).cxx_destruct;
 - (id)createRightActionButton;
 - (id)createBottomActionButton;
 - (void)setupComponents;

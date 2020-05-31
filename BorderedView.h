@@ -24,12 +24,12 @@
 + (void)setBorderColorForView:(id)arg1 borderColor:(id)arg2;
 + (void)setBorderWidthForView:(id)arg1 borderWidth:(double)arg2;
 + (void)setCornerRadiusForView:(id)arg1 cornerRadius:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAShapeLayer *border; // @synthesize border=_border;
 @property(nonatomic) struct CGRect previousBounds; // @synthesize previousBounds=_previousBounds;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(retain, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)init;

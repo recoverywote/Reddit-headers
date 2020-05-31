@@ -21,11 +21,11 @@
 
 + (struct CGSize)sizeForType:(unsigned long long)arg1;
 + (id)checkboxButtonType:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) __weak id context; // @synthesize context=_context;
 @property(nonatomic) _Bool isSelected; // @synthesize isSelected=_isSelected;
 @property(nonatomic) __weak id <CheckboxButtonDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (id)unselectedIconTintColor;
 - (id)selectedIconTintColor;

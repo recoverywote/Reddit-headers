@@ -21,13 +21,13 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *customPrioritizationParams; // @synthesize customPrioritizationParams=_customPrioritizationParams;
 @property(readonly, nonatomic) GDTCORClock *clockSnapshot; // @synthesize clockSnapshot=_clockSnapshot;
 @property(readonly, nonatomic) long long qosTier; // @synthesize qosTier=_qosTier;
 @property(readonly, nonatomic) NSNumber *target; // @synthesize target=_target;
 @property(readonly, nonatomic) NSString *mappingID; // @synthesize mappingID=_mappingID;
 @property(readonly, nonatomic) GDTCORDataFuture *dataFuture; // @synthesize dataFuture=_dataFuture;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithCoder:(id)arg1;

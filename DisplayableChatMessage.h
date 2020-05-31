@@ -19,12 +19,12 @@
     ChatMessage *_chatMessage;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool addExtraPadding; // @synthesize addExtraPadding=_addExtraPadding;
 @property(nonatomic) _Bool showDateline; // @synthesize showDateline=_showDateline;
 @property(nonatomic) _Bool showHeader; // @synthesize showHeader=_showHeader;
 @property(nonatomic) _Bool showFooter; // @synthesize showFooter=_showFooter;
 @property(retain, nonatomic) ChatMessage *chatMessage; // @synthesize chatMessage=_chatMessage;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 - (id)initWithMessage:(id)arg1 showFooter:(_Bool)arg2 showHeader:(_Bool)arg3 showDateline:(_Bool)arg4 addExtraPadding:(_Bool)arg5;

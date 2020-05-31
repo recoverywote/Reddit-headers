@@ -13,8 +13,8 @@
     NSString *_template;
 }
 
-@property(copy, nonatomic) NSString *template; // @synthesize template=_template;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *template; // @synthesize template=_template;
 - (id)renderedTemplateWithContext:(id)arg1;
 - (id)initWithTemplate:(id)arg1;
 

@@ -11,7 +11,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class FeedPostOptions, NSArray, NSString, Post, PostCollection, PostCollectionCarouselNode, PostCollectionHeaderNode, PostCollectionOptions, PostCollectionTitleNode, PostCollectionViewModel;
-@protocol FeedPostCollectionCellNodeDelegate;
+@protocol FeedPostCollectionCellNodeDelegate, ViewContext;
 
 @interface FeedPostCollectionCellNode : BaseCollectionViewCellNode <ObjectObserverProtocol, ASCollectionDelegate, ASCollectionDataSource>
 {
@@ -26,8 +26,11 @@
     PostCollectionCarouselNode *_postCollectionCarouselNode;
     PostCollection *_postCollection;
     NSArray *_orderedCollectionPosts;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(copy, nonatomic) NSArray *orderedCollectionPosts; // @synthesize orderedCollectionPosts=_orderedCollectionPosts;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(retain, nonatomic) PostCollectionCarouselNode *postCollectionCarouselNode; // @synthesize postCollectionCarouselNode=_postCollectionCarouselNode;
@@ -39,7 +42,6 @@
 @property(readonly, nonatomic) PostCollectionOptions *postCollectionOptions; // @synthesize postCollectionOptions=_postCollectionOptions;
 @property(readonly, nonatomic) Post *collectionPost; // @synthesize collectionPost=_collectionPost;
 @property(readonly, nonatomic) PostCollectionViewModel *postCollectionViewModel; // @synthesize postCollectionViewModel=_postCollectionViewModel;
-- (void).cxx_destruct;
 - (void)didBecomeFullyVisible;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
@@ -49,7 +51,7 @@
 - (void)reorderCollectionPosts;
 - (void)loadPostCollection;
 - (void)didEnterPreloadState;
-- (id)initWithPostCollectionViewModel:(id)arg1 collectionPost:(id)arg2 postCollectionOptions:(id)arg3 postOptions:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6 positionInFeed:(long long)arg7;
+- (id)initWithViewContext:(id)arg1 postCollectionViewModel:(id)arg2 collectionPost:(id)arg3 postCollectionOptions:(id)arg4 postOptions:(id)arg5 delegate:(id)arg6 positionInFeed:(long long)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

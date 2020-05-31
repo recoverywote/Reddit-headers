@@ -18,9 +18,9 @@
     NSMutableArray *_categories;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool categoriesIsSet; // @synthesize categoriesIsSet=_categoriesIsSet;
 @property(retain, nonatomic) NSMutableArray *categories; // @synthesize categories=_categories;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

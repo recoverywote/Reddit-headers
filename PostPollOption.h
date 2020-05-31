@@ -15,10 +15,10 @@
     long long _voteCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long voteCount; // @synthesize voteCount=_voteCount;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, copy, nonatomic) NSString *optionId; // @synthesize optionId=_optionId;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 

@@ -13,8 +13,8 @@
     PillButtonNode *_pillNode;
 }
 
-@property(retain, nonatomic) PillButtonNode *pillNode; // @synthesize pillNode=_pillNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) PillButtonNode *pillNode; // @synthesize pillNode=_pillNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithPillNode:(id)arg1;
 

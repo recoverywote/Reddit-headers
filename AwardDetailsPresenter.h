@@ -27,6 +27,7 @@
     NSDictionary *_postAwardingNotificationUserInfo;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *postAwardingNotificationUserInfo; // @synthesize postAwardingNotificationUserInfo=_postAwardingNotificationUserInfo;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
@@ -39,7 +40,6 @@
 @property(nonatomic) __weak id <AwardDetailsPresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) id <AwardDetailsNavigatable> navigator; // @synthesize navigator=_navigator;
 @property(copy, nonatomic) NSArray *awardDetailsCellViewModels; // @synthesize awardDetailsCellViewModels=_awardDetailsCellViewModels;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)processAwardingCompleteNotification:(id)arg1;
 - (void)reportAward:(id)arg1;

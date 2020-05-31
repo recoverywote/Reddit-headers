@@ -18,12 +18,12 @@
 }
 
 + (id)subredditEmojisFromData:(id)arg1 subredditId:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isFlairAvailabilityModOnly; // @synthesize isFlairAvailabilityModOnly=_isFlairAvailabilityModOnly;
 @property(readonly, nonatomic) unsigned long long flairTemplateType; // @synthesize flairTemplateType=_flairTemplateType;
 @property(readonly, copy, nonatomic) NSString *subredditId; // @synthesize subredditId=_subredditId;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithData:(id)arg1 name:(id)arg2 subredditId:(id)arg3;

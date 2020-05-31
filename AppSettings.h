@@ -14,8 +14,9 @@
 }
 
 + (id)sharedSettings;
-@property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
+@property(retain, nonatomic) NSDictionary *anonymousBrowsingInfo;
 @property(nonatomic) _Bool inAppPurchaseSkipReceiptValidation;
 @property(nonatomic) _Bool inAppPurchaseForceDeferredTransaction;
 @property(nonatomic) double surveyLastSeenTime;

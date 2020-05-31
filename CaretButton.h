@@ -17,12 +17,12 @@
     NSLayoutConstraint *_rightViewWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *rightViewWidthConstraint; // @synthesize rightViewWidthConstraint=_rightViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leftViewWidthConstraint; // @synthesize leftViewWidthConstraint=_leftViewWidthConstraint;
 @property(retain, nonatomic) UIView *rightView; // @synthesize rightView=_rightView;
 @property(retain, nonatomic) UIView *leftView; // @synthesize leftView=_leftView;
 @property(nonatomic) long long caretState; // @synthesize caretState=_caretState;
-- (void).cxx_destruct;
 - (void)addRightHalfCaret;
 - (void)addLeftHalfCaret;
 - (void)setTintColor:(id)arg1;

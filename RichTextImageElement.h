@@ -15,10 +15,10 @@
     NSArray *_obfuscatedPreviews;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *obfuscatedPreviews; // @synthesize obfuscatedPreviews=_obfuscatedPreviews;
 @property(copy, nonatomic) NSArray *previewImages; // @synthesize previewImages=_previewImages;
 @property(retain, nonatomic) RichTextImageDescriptor *sourceImage; // @synthesize sourceImage=_sourceImage;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)contentUrl;
 - (struct CGSize)contentSize;

@@ -47,6 +47,7 @@
     StreamingSubredditInfo *_subredditInfo;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isSubredditLiveStreamingEnabled; // @synthesize isSubredditLiveStreamingEnabled=_isSubredditLiveStreamingEnabled;
 @property(readonly, nonatomic) StreamingSubredditInfo *subredditInfo; // @synthesize subredditInfo=_subredditInfo;
 @property(readonly, nonatomic) long long discoveryUnitIndex; // @synthesize discoveryUnitIndex=_discoveryUnitIndex;
@@ -82,7 +83,6 @@
 @property(readonly, nonatomic) _Bool isBroadcastEnabled; // @synthesize isBroadcastEnabled=_isBroadcastEnabled;
 @property(readonly, nonatomic) _Bool isAutoSwitchViewerEnabled; // @synthesize isAutoSwitchViewerEnabled=_isAutoSwitchViewerEnabled;
 @property(readonly, nonatomic) _Bool isViewerEnabled; // @synthesize isViewerEnabled=_isViewerEnabled;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 - (id)init;
 

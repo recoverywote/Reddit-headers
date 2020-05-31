@@ -24,6 +24,7 @@
     long long _event_end_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool event_end_timestampIsSet; // @synthesize event_end_timestampIsSet=_event_end_timestampIsSet;
 @property(nonatomic) long long event_end_timestamp; // @synthesize event_end_timestamp=_event_end_timestamp;
 @property(nonatomic) _Bool event_start_timestampIsSet; // @synthesize event_start_timestampIsSet=_event_start_timestampIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *event_state; // @synthesize event_state=_event_state;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

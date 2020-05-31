@@ -16,7 +16,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: openOngoingTransactionSink
     // Error parsing type: , name: txViews
     // Error parsing type: , name: offscreenViews
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

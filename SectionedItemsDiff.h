@@ -15,10 +15,10 @@
     NSArray *_insertionIndexPaths;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *insertionIndexPaths; // @synthesize insertionIndexPaths=_insertionIndexPaths;
 @property(readonly, nonatomic) NSArray *removalIndexPaths; // @synthesize removalIndexPaths=_removalIndexPaths;
 @property(readonly, nonatomic) NSArray *differences; // @synthesize differences=_differences;
-- (void).cxx_destruct;
 - (id)initWithDiffTo:(id)arg1 from:(id)arg2;
 
 @end

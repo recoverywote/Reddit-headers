@@ -19,9 +19,9 @@
 + (id)nthOfTypeSelector:(struct CSSNthExpression)arg1;
 + (id)nthLastChildSelector:(struct CSSNthExpression)arg1;
 + (id)nthChildSelector:(struct CSSNthExpression)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *className; // @synthesize className=_className;
 @property(readonly, nonatomic) struct CSSNthExpression expression; // @synthesize expression=_expression;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)acceptElement:(id)arg1;
 - (id)initWithClassName:(id)arg1 expression:(struct CSSNthExpression)arg2 block:(CDUnknownBlockType)arg3;

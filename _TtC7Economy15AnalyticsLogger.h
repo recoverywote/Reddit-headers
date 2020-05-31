@@ -9,7 +9,7 @@
 @interface _TtC7Economy15AnalyticsLogger : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: loggerAdapter
-    // Error parsing type: , name: accountPk
+    // Error parsing type: , name: accountId
 }
 
 @end

@@ -14,9 +14,9 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(retain, nonatomic) NSAttributedString *attributedString; // @synthesize attributedString=_attributedString;
-- (void).cxx_destruct;
 
 @end
 

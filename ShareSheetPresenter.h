@@ -17,11 +17,11 @@
     UIViewController *_presentingViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) ShareSheetData *shareData; // @synthesize shareData=_shareData;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool ignoreCheckingAppInstallation; // @synthesize ignoreCheckingAppInstallation=_ignoreCheckingAppInstallation;
-- (void).cxx_destruct;
 - (id)excludedActivityTypes;
 - (id)appActivities;
 - (id)activityItems;

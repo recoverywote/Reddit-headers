@@ -6,12 +6,19 @@
 
 #import <objc/NSObject.h>
 
+@class NSURL;
+
 @interface LiveStreamSubscriptionDetails : NSObject
 {
     _Bool _isSubscribedToSubreddit;
     _Bool _isFollowingBroadcasterProfile;
+    _Bool _isProfileNSFW;
+    NSURL *_iconURL;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
+@property(readonly, nonatomic) _Bool isProfileNSFW; // @synthesize isProfileNSFW=_isProfileNSFW;
 @property(readonly, nonatomic) _Bool isFollowingBroadcasterProfile; // @synthesize isFollowingBroadcasterProfile=_isFollowingBroadcasterProfile;
 @property(readonly, nonatomic) _Bool isSubscribedToSubreddit; // @synthesize isSubscribedToSubreddit=_isSubscribedToSubreddit;
 - (id)initWithData:(id)arg1;

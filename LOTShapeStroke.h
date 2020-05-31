@@ -21,6 +21,7 @@
     NSArray *_lineDashPattern;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *lineDashPattern; // @synthesize lineDashPattern=_lineDashPattern;
 @property(readonly, nonatomic) unsigned long long joinType; // @synthesize joinType=_joinType;
 @property(readonly, nonatomic) unsigned long long capType; // @synthesize capType=_capType;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) LOTKeyframeGroup *color; // @synthesize color=_color;
 @property(readonly, nonatomic) _Bool fillEnabled; // @synthesize fillEnabled=_fillEnabled;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

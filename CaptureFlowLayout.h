@@ -19,6 +19,7 @@
     NSMutableDictionary *_cachedSupplementaryAttributesByKind;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *cachedSupplementaryAttributesByKind; // @synthesize cachedSupplementaryAttributesByKind=_cachedSupplementaryAttributesByKind;
 @property(retain, nonatomic) NSMutableDictionary *cachedCellAttributes; // @synthesize cachedCellAttributes=_cachedCellAttributes;
 @property(retain, nonatomic) NSMutableDictionary *currentSupplementaryAttributesByKind; // @synthesize currentSupplementaryAttributesByKind=_currentSupplementaryAttributesByKind;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) NSMutableArray *removedSections; // @synthesize removedSections=_removedSections;
 @property(retain, nonatomic) NSMutableArray *insertedSections; // @synthesize insertedSections=_insertedSections;
 @property(nonatomic) unsigned long long animationDirection; // @synthesize animationDirection=_animationDirection;
-- (void).cxx_destruct;
 - (struct CATransform3D)disappearTransform;
 - (struct CATransform3D)appearTransform;
 - (id)finalLayoutAttributesForDisappearingSupplementaryElementOfKind:(id)arg1 atIndexPath:(id)arg2;

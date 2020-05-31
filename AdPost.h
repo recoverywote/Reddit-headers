@@ -18,13 +18,13 @@
     NSString *_adCallToAction;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *adCallToAction; // @synthesize adCallToAction=_adCallToAction;
 @property(copy, nonatomic) NSString *adLinkDomain; // @synthesize adLinkDomain=_adLinkDomain;
 @property(copy, nonatomic) NSURL *adLinkURL; // @synthesize adLinkURL=_adLinkURL;
 @property(copy, nonatomic) NSDictionary *adEventURLs; // @synthesize adEventURLs=_adEventURLs;
 @property(nonatomic) _Bool isBlankAd; // @synthesize isBlankAd=_isBlankAd;
 @property(copy, nonatomic) NSString *adInstanceId; // @synthesize adInstanceId=_adInstanceId;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)domain;

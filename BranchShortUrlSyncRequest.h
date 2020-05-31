@@ -25,6 +25,7 @@
 
 + (id)createLongUrlWithBaseUrl:(id)arg1 tags:(id)arg2 alias:(id)arg3 type:(unsigned long long)arg4 matchDuration:(long long)arg5 channel:(id)arg6 feature:(id)arg7 stage:(id)arg8 params:(id)arg9;
 + (id)createLinkFromBranchKey:(id)arg1 tags:(id)arg2 alias:(id)arg3 type:(unsigned long long)arg4 matchDuration:(long long)arg5 channel:(id)arg6 feature:(id)arg7 stage:(id)arg8 params:(id)arg9;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BNCLinkData *linkData; // @synthesize linkData=_linkData;
 @property(retain, nonatomic) BNCLinkCache *linkCache; // @synthesize linkCache=_linkCache;
 @property(retain, nonatomic) NSDictionary *params; // @synthesize params=_params;
@@ -36,7 +37,6 @@
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) NSString *alias; // @synthesize alias=_alias;
 @property(retain, nonatomic) NSArray *tags; // @synthesize tags=_tags;
-- (void).cxx_destruct;
 - (id)createLongUrlForUserUrl:(id)arg1;
 - (id)processResponse:(id)arg1;
 - (id)makeRequest:(id)arg1 key:(id)arg2;

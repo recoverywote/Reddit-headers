@@ -13,8 +13,8 @@
     UIView *_backgroundView;
 }
 
-@property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 - (void)didTapBackground:(id)arg1;
 - (void)dismissalTransitionDidEnd:(_Bool)arg1;
 - (void)dismissalTransitionWillBegin;

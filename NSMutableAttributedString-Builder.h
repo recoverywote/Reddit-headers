@@ -15,6 +15,5 @@
 - (void)appendSpaces:(unsigned long long)arg1 attributes:(id)arg2;
 - (void)addAttributes:(id)arg1;
 - (void)addAttribute:(id)arg1 value:(id)arg2;
-- (void)replaceLinkAttributes:(id)arg1 range:(struct _NSRange)arg2;
 @end
 

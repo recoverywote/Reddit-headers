@@ -27,10 +27,10 @@
 + (id)imageWithData:(id)arg1;
 + (id)imageWithContentsOfFile:(id)arg1;
 + (id)imageNamed:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool preloadAllAnimatedImageFrames; // @synthesize preloadAllAnimatedImageFrames=_preloadAllAnimatedImageFrames;
 @property(readonly, nonatomic) unsigned long long animatedImageMemorySize; // @synthesize animatedImageMemorySize=_animatedImageMemorySize;
 @property(readonly, nonatomic) unsigned long long animatedImageType; // @synthesize animatedImageType=_animatedImageType;
-- (void).cxx_destruct;
 - (double)animatedImageDurationAtIndex:(unsigned long long)arg1;
 - (id)animatedImageFrameAtIndex:(unsigned long long)arg1;
 - (unsigned long long)animatedImageBytesPerFrame;

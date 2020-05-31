@@ -13,7 +13,7 @@
 #import "FeedPostYouTubeEmbeddedViewDelegate-Protocol.h"
 
 @class BaseLabel, BaseTextView, BaseView, ContentImageView, FeedPostHlsVideoView, FeedPostLinkPlaceholderView, FeedPostTitleViewExpanded, FeedPostVideoView, FeedPostWebLinkView, FeedPostYouTubeEmbeddedView, NSLayoutConstraint, NSString, Post, UIStackView, UIView, _TtC6Reddit15RedditVideoNode;
-@protocol CarouselItemPostViewDelegate;
+@protocol CarouselItemPostViewDelegate, ViewContext;
 
 @interface CarouselItemPostView : CarouselItemView <FeedPostImageViewDelegate, FeedPostVideoViewDelegate, FeedPostHlsVideoViewDelegate, FeedPostWebLinkViewDelegate, FeedPostYouTubeEmbeddedViewDelegate>
 {
@@ -34,8 +34,11 @@
     BaseLabel *_metaDataFooter;
     NSLayoutConstraint *_titleViewHeightConstraint;
     id <CarouselItemPostViewDelegate> _delegate;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CarouselItemPostViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSLayoutConstraint *titleViewHeightConstraint; // @synthesize titleViewHeightConstraint=_titleViewHeightConstraint;
 @property(retain, nonatomic) BaseLabel *metaDataFooter; // @synthesize metaDataFooter=_metaDataFooter;
@@ -53,7 +56,6 @@
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(retain, nonatomic) FeedPostHlsVideoView *feedPostHlsVideoView; // @synthesize feedPostHlsVideoView=_feedPostHlsVideoView;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)feedPostTitleView:(id)arg1 didTapLinkURL:(id)arg2 context:(unsigned long long)arg3;
 - (void)feedPostTitleViewDidTapSubscribe:(id)arg1;
 - (_Bool)feedPostYouTubeEmbeddedViewShouldHideNsfw:(id)arg1;
@@ -77,7 +79,8 @@
 - (void)didBecomeFullyVisible;
 - (void)willBeginDisplaying;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 @property(readonly, nonatomic) _Bool isRedditVideoV2Enabled;
 
 // Remaining properties

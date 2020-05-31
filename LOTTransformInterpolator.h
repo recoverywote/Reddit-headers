@@ -21,6 +21,7 @@
 }
 
 + (id)transformForLayer:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *parentKeyName; // @synthesize parentKeyName=_parentKeyName;
 @property(readonly, nonatomic) LOTNumberInterpolator *positionYInterpolator; // @synthesize positionYInterpolator=_positionYInterpolator;
 @property(readonly, nonatomic) LOTNumberInterpolator *positionXInterpolator; // @synthesize positionXInterpolator=_positionXInterpolator;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) LOTPointInterpolator *anchorInterpolator; // @synthesize anchorInterpolator=_anchorInterpolator;
 @property(readonly, nonatomic) LOTPointInterpolator *positionInterpolator; // @synthesize positionInterpolator=_positionInterpolator;
 @property(retain, nonatomic) LOTTransformInterpolator *inputNode; // @synthesize inputNode=_inputNode;
-- (void).cxx_destruct;
 - (struct CATransform3D)transformForFrame:(id)arg1;
 - (_Bool)hasUpdateForFrame:(id)arg1;
 - (void)initializeWithPositionX:(id)arg1 positionY:(id)arg2 position:(id)arg3 rotation:(id)arg4 anchor:(id)arg5 scale:(id)arg6;

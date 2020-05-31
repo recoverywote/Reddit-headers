@@ -29,6 +29,7 @@
     NSLayoutConstraint *_titleLabelCenterYConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelCenterYConstraint; // @synthesize titleLabelCenterYConstraint=_titleLabelCenterYConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelTopAnchorConstraint; // @synthesize titleLabelTopAnchorConstraint=_titleLabelTopAnchorConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *iconBottomConstraint; // @synthesize iconBottomConstraint=_iconBottomConstraint;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <NewsPersonalizeViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) NewsTopic *newsTopic; // @synthesize newsTopic=_newsTopic;
 @property(retain, nonatomic) BaseButton *selectButton; // @synthesize selectButton=_selectButton;
-- (void).cxx_destruct;
 - (void)didChangeCollapseState;
 - (void)didChangeNewsSubtopicSelection:(id)arg1;
 - (void)didChangeNewsTopicSelection;

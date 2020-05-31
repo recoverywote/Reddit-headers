@@ -24,6 +24,7 @@
     id <CommunityViewDataSourceDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <CommunityViewDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak BaseViewController *controller; // @synthesize controller=_controller;
 @property(copy, nonatomic) NSString *headerString; // @synthesize headerString=_headerString;
@@ -32,7 +33,6 @@
 @property(nonatomic) long long section; // @synthesize section=_section;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (_Bool)tableView:(id)arg1 handleDidSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;

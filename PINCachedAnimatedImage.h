@@ -29,9 +29,9 @@
     NSDate *_lastMemoryWarning;
 }
 
+- (void).cxx_destruct;
 @property _Bool weAreTheProblem; // @synthesize weAreTheProblem=_weAreTheProblem;
 @property(retain) NSDate *lastMemoryWarning; // @synthesize lastMemoryWarning=_lastMemoryWarning;
-- (void).cxx_destruct;
 - (struct CGImage *)cachedFrameImageAtIndex:(unsigned long long)arg1;
 - (void)clearAnimatedImageCache;
 @property(copy, nonatomic) CDUnknownBlockType coverImageReadyCallback;

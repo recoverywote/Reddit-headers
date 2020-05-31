@@ -31,6 +31,7 @@
     CDUnknownBlockType _onCallToActionTappedBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType onCallToActionTappedBlock; // @synthesize onCallToActionTappedBlock=_onCallToActionTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType onReplayTappedBlock; // @synthesize onReplayTappedBlock=_onReplayTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType onPauseTappedBlock; // @synthesize onPauseTappedBlock=_onPauseTappedBlock;
@@ -48,7 +49,6 @@
 @property(nonatomic) _Bool iconsVisible; // @synthesize iconsVisible=_iconsVisible;
 @property(nonatomic) _Bool isBuffering; // @synthesize isBuffering=_isBuffering;
 @property unsigned long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (void)onCallToActionTapped:(CDUnknownBlockType)arg1;
 - (void)onReplayTapped:(CDUnknownBlockType)arg1;
 - (void)onPauseTapped:(CDUnknownBlockType)arg1;

@@ -13,8 +13,8 @@
     UITableView *_tableView;
 }
 
-@property(readonly, nonatomic) __weak UITableView *tableView; // @synthesize tableView=_tableView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak UITableView *tableView; // @synthesize tableView=_tableView;
 - (void)allElementsForScrolling:(long long)arg1 rangeMode:(long long)arg2 displaySet:(id *)arg3 preloadSet:(id *)arg4 map:(id)arg5;
 - (id)elementsForScrolling:(long long)arg1 rangeMode:(long long)arg2 rangeType:(long long)arg3 map:(id)arg4;
 - (id)initWithTableView:(id)arg1;

@@ -13,8 +13,8 @@
     RedditService *_service;
 }
 
-@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
+@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (void)handleSubscriptionCompletionWithError:(id)arg1 model:(id)arg2 shouldShowToast:(_Bool)arg3 shouldSubscribe:(_Bool)arg4 successBlock:(CDUnknownBlockType)arg5 failureBlock:(CDUnknownBlockType)arg6;
 - (void)fetchCategoriesForSubreddit:(id)arg1 includeSubreddits:(_Bool)arg2 successBlock:(CDUnknownBlockType)arg3 failureBlock:(CDUnknownBlockType)arg4;
 - (void)subscribeToUser:(id)arg1 shouldSubscribe:(_Bool)arg2 showToastView:(_Bool)arg3 successBlock:(CDUnknownBlockType)arg4 failureBlock:(CDUnknownBlockType)arg5;

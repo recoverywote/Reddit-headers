@@ -16,11 +16,11 @@
     UIStackView *_mainHorizontalStackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *mainHorizontalStackView; // @synthesize mainHorizontalStackView=_mainHorizontalStackView;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseImageView *originalSelectionIcon; // @synthesize originalSelectionIcon=_originalSelectionIcon;
 @property(retain, nonatomic) CheckboxButton *radioButton; // @synthesize radioButton=_radioButton;
-- (void).cxx_destruct;
 - (void)configureWithText:(id)arg1 isSelected:(_Bool)arg2 isAssigned:(_Bool)arg3;
 - (void)updateAccessibility;
 - (void)prepareForReuse;

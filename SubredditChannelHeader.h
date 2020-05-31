@@ -16,11 +16,11 @@
     NSString *_iconImageBackgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSubredditNSFW; // @synthesize isSubredditNSFW=_isSubredditNSFW;
 @property(retain, nonatomic) NSString *iconImageBackgroundColor; // @synthesize iconImageBackgroundColor=_iconImageBackgroundColor;
 @property(retain, nonatomic) NSString *iconImageURL; // @synthesize iconImageURL=_iconImageURL;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)configureWithSubName:(id)arg1 imageURL:(id)arg2 imageBackgroundColor:(id)arg3 isSubredditNSFW:(_Bool)arg4;
 
 @end

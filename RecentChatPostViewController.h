@@ -15,8 +15,8 @@
     RecentChatPostEmptyView *_emptyView;
 }
 
-@property(retain, nonatomic) RecentChatPostEmptyView *emptyView; // @synthesize emptyView=_emptyView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) RecentChatPostEmptyView *emptyView; // @synthesize emptyView=_emptyView;
 - (void)pagedTabControllerDidFinishTransition;
 - (void)recentChatPostEmptyView:(id)arg1 didTapURL:(id)arg2;
 - (void)displayListingContent:(id)arg1 correlationID:(id)arg2;

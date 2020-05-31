@@ -17,12 +17,12 @@
     _TtC6Reddit34MetaClaimablePointsListingProvider *_claimablePointsListingProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit34MetaClaimablePointsListingProvider *claimablePointsListingProvider; // @synthesize claimablePointsListingProvider=_claimablePointsListingProvider;
 @property(retain, nonatomic) DownToChatDataProvider *downToChatBannerProvider; // @synthesize downToChatBannerProvider=_downToChatBannerProvider;
 @property(retain, nonatomic) _TtC6Reddit28MetaMembershipBannerProvider *metaMembershipBannerProvider; // @synthesize metaMembershipBannerProvider=_metaMembershipBannerProvider;
 @property(retain, nonatomic) PostMetaViewModelProvider *postMetaViewModelProvider; // @synthesize postMetaViewModelProvider=_postMetaViewModelProvider;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (id)listingTraceName;
 - (id)postMetaViewModelForPost:(id)arg1;
 - (_Bool)shouldAttachDownToChatDataProvider;

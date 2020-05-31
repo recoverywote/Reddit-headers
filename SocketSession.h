@@ -24,6 +24,7 @@
 }
 
 + (id)keyPathsForValuesAffectingSocketState;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parsingQueue; // @synthesize parsingQueue=_parsingQueue;
 @property(nonatomic) _Bool shouldReconnect; // @synthesize shouldReconnect=_shouldReconnect;
 @property(nonatomic) _Bool hasOpened; // @synthesize hasOpened=_hasOpened;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) SRWebSocket *socket; // @synthesize socket=_socket;
 @property(retain, nonatomic) id <SocketParser> parser; // @synthesize parser=_parser;
 @property(nonatomic) __weak id <SocketSessionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) long long socketState;
 - (void)attemptToReconnect;
 - (void)webSocket:(id)arg1 didFailWithError:(id)arg2;

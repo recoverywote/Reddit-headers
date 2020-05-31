@@ -12,7 +12,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: requirementsLabel
     // Error parsing type: , name: container
     // Error parsing type: , name: requirementsViews
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -20,11 +20,11 @@
     FeedNavigator *_navigator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
 @property(nonatomic) __weak FeedPostDetailDelegator *feedPostDetailDelegator; // @synthesize feedPostDetailDelegator=_feedPostDetailDelegator;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak PostDetailViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didTapSharePost:(id)arg2 sender:(id)arg3;
 - (void)commentAdPostCellNodeDidTapDiscussion:(id)arg1;
 - (void)commentAdPostCellNodeDidTapContent:(id)arg1;

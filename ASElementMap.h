@@ -16,15 +16,15 @@
 {
     NSArray *_sections;
     NSMapTable *_elementToIndexPathMap;
-    struct NSArray *_sectionsOfItems;
-    struct NSDictionary *_supplementaryElements;
+    NSArray *_sectionsOfItems;
+    NSDictionary *_supplementaryElements;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *supplementaryElements; // @synthesize supplementaryElements=_supplementaryElements;
 @property(readonly, nonatomic) NSArray *sectionsOfItems; // @synthesize sectionsOfItems=_sectionsOfItems;
 @property(readonly, nonatomic) NSMapTable *elementToIndexPathMap; // @synthesize elementToIndexPathMap=_elementToIndexPathMap;
 @property(readonly, nonatomic) NSArray *sections; // @synthesize sections=_sections;
-- (void).cxx_destruct;
 - (_Bool)itemIndexPathIsValid:(id)arg1 assert:(_Bool)arg2 item:(out long long *)arg3 section:(out long long *)arg4;
 - (_Bool)sectionIndexIsValid:(long long)arg1 assert:(_Bool)arg2;
 - (id)propertiesForDescription;
@@ -47,7 +47,7 @@
 @property(readonly, copy) NSArray *itemElements;
 @property(readonly, copy) NSArray *itemIndexPaths;
 @property(readonly) unsigned long long count;
-- (id)initWithSections:(id)arg1 items:(struct NSArray *)arg2 supplementaryElements:(struct NSDictionary *)arg3;
+- (id)initWithSections:(id)arg1 items:(id)arg2 supplementaryElements:(id)arg3;
 - (id)init;
 
 @end

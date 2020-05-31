@@ -16,9 +16,9 @@
 
 + (void)checkAndCreateDirectory:(id)arg1 fileCoordinator:(id)arg2;
 + (id)directoryPathURL;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSFileCoordinator *fileCoordinator; // @synthesize fileCoordinator=_fileCoordinator;
 @property(readonly, nonatomic) NSURL *fileURL; // @synthesize fileURL=_fileURL;
-- (void).cxx_destruct;
 - (_Bool)writeDictionary:(id)arg1 forWritingURL:(id)arg2 error:(id *)arg3;
 - (_Bool)setHearbeatDate:(id)arg1 forTag:(id)arg2;
 - (id)heartbeatDateForTag:(id)arg1;

@@ -39,6 +39,7 @@
 
 + (void)setSharedImageManagerWithConfiguration:(id)arg1;
 + (id)sharedImageManager;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *httpHeaderFields; // @synthesize httpHeaderFields=_httpHeaderFields;
 @property(copy, nonatomic) CDUnknownBlockType requestConfigurationHandler; // @synthesize requestConfigurationHandler=_requestConfigurationHandler;
 @property(copy, nonatomic) CDUnknownBlockType authenticationChallengeHandler; // @synthesize authenticationChallengeHandler=_authenticationChallengeHandler;
@@ -57,7 +58,6 @@
 @property(retain, nonatomic) PINURLSessionManager *sessionManager; // @synthesize sessionManager=_sessionManager;
 @property(copy, nonatomic) CDUnknownBlockType retryStrategyCreationBlock; // @synthesize retryStrategyCreationBlock=_retryStrategyCreationBlock;
 @property(retain, nonatomic) id <PINRemoteImageCaching> cache; // @synthesize cache=_cache;
-- (void).cxx_destruct;
 - (id)_locked_taskForUUID:(id)arg1 key:(id *)arg2;
 - (void)storeResumeData:(id)arg1 forURL:(id)arg2;
 - (id)resumeCacheKeyForURL:(id)arg1;

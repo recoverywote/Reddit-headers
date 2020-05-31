@@ -27,6 +27,7 @@
     NSLayoutConstraint *_fakeCaretHeaderViewBottomAnchor;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isAnimationInProgress; // @synthesize isAnimationInProgress=_isAnimationInProgress;
 @property(nonatomic) _Bool isViewSizeChanged; // @synthesize isViewSizeChanged=_isViewSizeChanged;
 @property(retain, nonatomic) NSLayoutConstraint *fakeCaretHeaderViewBottomAnchor; // @synthesize fakeCaretHeaderViewBottomAnchor=_fakeCaretHeaderViewBottomAnchor;
@@ -42,7 +43,6 @@
 @property(nonatomic) __weak UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) _Bool isChildViewControllerDimissed; // @synthesize isChildViewControllerDimissed=_isChildViewControllerDimissed;
 @property(retain, nonatomic) UIViewController *childViewController; // @synthesize childViewController=_childViewController;
-- (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)resizeChildViewController;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;

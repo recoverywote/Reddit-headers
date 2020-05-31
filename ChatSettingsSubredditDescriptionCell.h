@@ -16,10 +16,10 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1 forWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
-- (void).cxx_destruct;
 - (void)configureWithSubredditChannel:(id)arg1;
 - (void)layoutSubviews;
 - (void)prepareForReuse;

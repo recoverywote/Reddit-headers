@@ -12,7 +12,7 @@
     // Error parsing type: , name: isSatisfyingSubject
     // Error parsing type: , name: checkMarkLabel
     // Error parsing type: , name: descriptionLabel
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

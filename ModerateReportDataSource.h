@@ -16,8 +16,8 @@
     id <ReportableModel> _model;
 }
 
-@property(retain, nonatomic) id <ReportableModel> model; // @synthesize model=_model;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <ReportableModel> model; // @synthesize model=_model;
 - (id)viewReportItems;
 - (id)moderateReportData;
 - (void)submitReportWithItem:(id)arg1 completion:(CDUnknownBlockType)arg2;

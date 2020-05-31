@@ -11,8 +11,8 @@
     CDUnknownBlockType _callback;
 }
 
-@property(copy) CDUnknownBlockType callback; // @synthesize callback=_callback;
 - (void).cxx_destruct;
+@property(copy) CDUnknownBlockType callback; // @synthesize callback=_callback;
 - (void)processResponse:(id)arg1 error:(id)arg2;
 - (void)makeRequest:(id)arg1 key:(id)arg2 callback:(CDUnknownBlockType)arg3;
 - (id)initWithCallback:(CDUnknownBlockType)arg1;

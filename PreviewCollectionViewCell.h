@@ -13,8 +13,8 @@
     UIViewController *_previewController;
 }
 
-@property(nonatomic) __weak UIViewController *previewController; // @synthesize previewController=_previewController;
 - (void).cxx_destruct;
+@property(nonatomic) __weak UIViewController *previewController; // @synthesize previewController=_previewController;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

@@ -22,13 +22,13 @@
     long long _install_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool install_timestampIsSet; // @synthesize install_timestampIsSet=_install_timestampIsSet;
 @property(nonatomic) long long install_timestamp; // @synthesize install_timestamp=_install_timestamp;
 @property(nonatomic) _Bool nameIsSet; // @synthesize nameIsSet=_nameIsSet;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool versionIsSet; // @synthesize versionIsSet=_versionIsSet;
 @property(copy, nonatomic) NSString *version; // @synthesize version=_version;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

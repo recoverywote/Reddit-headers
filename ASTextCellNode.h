@@ -18,8 +18,8 @@
 
 + (struct UIEdgeInsets)defaultTextInsets;
 + (id)defaultTextAttributes;
-@property(readonly) ASTextNode *textNode; // @synthesize textNode=_textNode;
 - (void).cxx_destruct;
+@property(readonly) ASTextNode *textNode; // @synthesize textNode=_textNode;
 - (void)locked_updateAttributedText;
 @property(copy) NSString *text;
 @property struct UIEdgeInsets textInsets;

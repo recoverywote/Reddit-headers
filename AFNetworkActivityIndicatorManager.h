@@ -22,6 +22,7 @@
 }
 
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
 @property(copy, nonatomic) CDUnknownBlockType networkActivityActionBlock; // @synthesize networkActivityActionBlock=_networkActivityActionBlock;
 @property(retain, nonatomic) NSTimer *completionDelayTimer; // @synthesize completionDelayTimer=_completionDelayTimer;
@@ -31,7 +32,6 @@
 @property(nonatomic) double activationDelay; // @synthesize activationDelay=_activationDelay;
 @property(nonatomic, getter=isNetworkActivityIndicatorVisible) _Bool networkActivityIndicatorVisible; // @synthesize networkActivityIndicatorVisible=_networkActivityIndicatorVisible;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
-- (void).cxx_destruct;
 - (void)cancelCompletionDelayTimer;
 - (void)cancelActivationDelayTimer;
 - (void)completionDelayTimerFired;

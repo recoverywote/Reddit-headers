@@ -14,9 +14,9 @@
     id <ASSectionContext> _context;
 }
 
+- (void).cxx_destruct;
 @property(readonly) id <ASSectionContext> context; // @synthesize context=_context;
 @property(readonly) long long sectionID; // @synthesize sectionID=_sectionID;
-- (void).cxx_destruct;
 - (id)initWithSectionID:(long long)arg1 context:(id)arg2;
 
 @end

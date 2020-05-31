@@ -26,6 +26,7 @@
 
 + (_Bool)supportsSecureCoding;
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GDTCORRegistrar *registrar; // @synthesize registrar=_registrar;
 @property(retain, nonatomic) GDTCORStorage *storage; // @synthesize storage=_storage;
 @property(readonly, nonatomic) NSMutableDictionary *targetToInFlightPackages; // @synthesize targetToInFlightPackages=_targetToInFlightPackages;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) unsigned long long timerInterval; // @synthesize timerInterval=_timerInterval;
 @property(readonly, nonatomic) NSObject<OS_dispatch_source> *timer; // @synthesize timer=_timer;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *coordinationQueue; // @synthesize coordinationQueue=_coordinationQueue;
-- (void).cxx_destruct;
 - (void)packageExpired:(id)arg1;
 - (void)packageDelivered:(id)arg1 successful:(_Bool)arg2;
 - (void)appWillTerminate:(id)arg1;

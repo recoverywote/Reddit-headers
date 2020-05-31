@@ -9,7 +9,7 @@
 #import "ContentImageViewDelegate-Protocol.h"
 
 @class ContentImageView, FeedPostOptions, NSString, Post;
-@protocol FeedPostImageViewDelegate;
+@protocol FeedPostImageViewDelegate, ViewContext;
 
 @interface FeedPostImageView : BaseView <ContentImageViewDelegate>
 {
@@ -18,20 +18,23 @@
     Post *_crosspost;
     ContentImageView *_imageView;
     FeedPostOptions *_options;
+    id <ViewContext> _viewContext;
 }
 
-+ (double)calculatedHeightWithData:(id)arg1 width:(double)arg2 feedPostOptions:(id)arg3 delegate:(id)arg4;
++ (double)calculatedHeightWithViewContext:(id)arg1 data:(id)arg2 width:(double)arg3 feedPostOptions:(id)arg4 delegate:(id)arg5;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) ContentImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) Post *crosspost; // @synthesize crosspost=_crosspost;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostImageViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)contentImageViewDidTapImage:(id)arg1;
 - (void)layoutSubviews;
 - (void)configureWithData:(id)arg1 feedPostOptions:(id)arg2 delegate:(id)arg3;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

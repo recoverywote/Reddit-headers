@@ -19,9 +19,9 @@
     _ASTablePendingState *_pendingState;
 }
 
-@property(retain, nonatomic) _ASTablePendingState *pendingState; // @synthesize pendingState=_pendingState;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(retain, nonatomic) _ASTablePendingState *pendingState; // @synthesize pendingState=_pendingState;
 - (id)propertiesForDebugDescription;
 - (void)waitUntilAllUpdatesAreCommitted;
 - (void)waitUntilAllUpdatesAreProcessed;

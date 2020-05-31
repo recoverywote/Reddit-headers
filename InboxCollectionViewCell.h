@@ -13,8 +13,8 @@
     InboxCellContentView *_messageView;
 }
 
-@property(retain, nonatomic) InboxCellContentView *messageView; // @synthesize messageView=_messageView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) InboxCellContentView *messageView; // @synthesize messageView=_messageView;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

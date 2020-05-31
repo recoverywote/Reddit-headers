@@ -22,13 +22,13 @@
     NSString *_optimization_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool optimization_typeIsSet; // @synthesize optimization_typeIsSet=_optimization_typeIsSet;
 @property(copy, nonatomic) NSString *optimization_type; // @synthesize optimization_type=_optimization_type;
 @property(nonatomic) _Bool categoryIsSet; // @synthesize categoryIsSet=_categoryIsSet;
 @property(copy, nonatomic) NSString *category; // @synthesize category=_category;
 @property(nonatomic) _Bool file_sizeIsSet; // @synthesize file_sizeIsSet=_file_sizeIsSet;
 @property(nonatomic) long long file_size; // @synthesize file_size=_file_size;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

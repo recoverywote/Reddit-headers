@@ -27,7 +27,7 @@
 }
 
 + (id)awardIconsResolutionsGraphQLKeys;
-+ (id)awardIconsResolutions;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *tags; // @synthesize tags=_tags;
 @property(readonly, nonatomic) NSDate *endDate; // @synthesize endDate=_endDate;
 @property(readonly, nonatomic) NSString *awardDescription; // @synthesize awardDescription=_awardDescription;
@@ -42,9 +42,7 @@
 @property(readonly, nonatomic) long long awardType; // @synthesize awardType=_awardType;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
-- (id)mediaSourceForAwardIconSize:(long long)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 - (id)initWithData:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 name:(id)arg2 awardIcons:(id)arg3 awardType:(long long)arg4 awardSubType:(long long)arg5 isNewAward:(_Bool)arg6 coinPrice:(id)arg7 coinReward:(id)arg8 subredditCoinReward:(id)arg9 daysOfPremium:(id)arg10 stickyDuration:(id)arg11 awardDescription:(id)arg12 endDate:(id)arg13 tags:(id)arg14;

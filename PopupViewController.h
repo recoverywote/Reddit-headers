@@ -24,6 +24,7 @@
     struct UIEdgeInsets _contentEdgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *bottomButtons; // @synthesize bottomButtons=_bottomButtons;
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
 @property(retain, nonatomic) UIStackView *bottomButtonStackView; // @synthesize bottomButtonStackView=_bottomButtonStackView;
@@ -34,7 +35,6 @@
 @property(nonatomic) _Bool shouldBlurBackground; // @synthesize shouldBlurBackground=_shouldBlurBackground;
 @property(nonatomic) _Bool disableDismissingByTappingOutsideContent; // @synthesize disableDismissingByTappingOutsideContent=_disableDismissingByTappingOutsideContent;
 @property(readonly, nonatomic) BaseView *contentView; // @synthesize contentView=_contentView;
-- (void).cxx_destruct;
 - (_Bool)shouldDismissWhenDimmerTapped;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 - (void)configureViewAppearance;

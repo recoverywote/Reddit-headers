@@ -17,8 +17,8 @@
 + (id)backButtonWithTarget:(id)arg1 action:(SEL)arg2;
 + (id)closeButtonWithTarget:(id)arg1 action:(SEL)arg2;
 + (id)barButtonItemWithImage:(id)arg1 target:(id)arg2 action:(SEL)arg3;
-@property(retain, nonatomic) id context; // @synthesize context=_context;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id context; // @synthesize context=_context;
 - (id)initWithImage:(id)arg1 style:(long long)arg2 target:(id)arg3 action:(SEL)arg4;
 
 @end

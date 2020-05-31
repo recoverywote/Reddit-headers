@@ -18,12 +18,12 @@
     AutoCompleteDataProvider *_autoCompleteDataProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AutoCompleteDataProvider *autoCompleteDataProvider; // @synthesize autoCompleteDataProvider=_autoCompleteDataProvider;
 @property(retain, nonatomic) ResultAllItem *resultAllItem; // @synthesize resultAllItem=_resultAllItem;
 @property(retain, nonatomic) ListingNetworkSource *cachedListingNetworkSource; // @synthesize cachedListingNetworkSource=_cachedListingNetworkSource;
 @property(retain, nonatomic) AutoCompleteCache *autoCompleteCache; // @synthesize autoCompleteCache=_autoCompleteCache;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)cacheOrNetworkAutoCompleteSourceWithRailsContext:(id)arg1;
 - (id)autoCompleteDataProviderWithRailsContext:(id)arg1 firstChange:(_Bool)arg2;
 - (id)networkSourceWithRailsContext:(id)arg1 firstChange:(_Bool)arg2;

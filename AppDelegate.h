@@ -28,6 +28,7 @@
     AppRating *_appRating;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AppRating *appRating; // @synthesize appRating=_appRating;
 @property(nonatomic) unsigned long long currentBGTaskID; // @synthesize currentBGTaskID=_currentBGTaskID;
 @property(nonatomic) _Bool didShowWelcomeBack; // @synthesize didShowWelcomeBack=_didShowWelcomeBack;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) UIWindow *window; // @synthesize window=_window;
 @property(retain, nonatomic) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager=_anonymousModeManager;
 @property(retain, nonatomic) ThemeManager *themeManager; // @synthesize themeManager=_themeManager;
-- (void).cxx_destruct;
 - (void)onAppOpenAttributionFailure:(id)arg1;
 - (void)onAppOpenAttribution:(id)arg1;
 - (void)onConversionDataFail:(id)arg1;

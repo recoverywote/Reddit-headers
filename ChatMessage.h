@@ -51,6 +51,7 @@
 + (id)persistProperties;
 + (id)tableName;
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long contactID; // @synthesize contactID=_contactID;
 @property(nonatomic) unsigned long long channelID; // @synthesize channelID=_channelID;
 @property(retain, nonatomic) SBDBaseMessage *sendbirdMessage; // @synthesize sendbirdMessage=_sendbirdMessage;
@@ -83,7 +84,6 @@
 @property(nonatomic) unsigned long long adminType; // @synthesize adminType=_adminType;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) unsigned long long uniqueID; // @synthesize uniqueID=_uniqueID;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 @property(readonly) unsigned long long hash;

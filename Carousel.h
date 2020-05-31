@@ -61,6 +61,7 @@
 }
 
 + (id)identifierWithDiscoveryUnitPk:(id)arg1 additionalId:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<CarouselDataSource><CarouselDataSourceInternal> *dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) AnalyticsVisibilityInput *visibilityInput; // @synthesize visibilityInput=_visibilityInput;
 @property(copy, nonatomic) NSString *seeMoreTab; // @synthesize seeMoreTab=_seeMoreTab;
@@ -105,7 +106,6 @@
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, copy) NSString *debugDescription;
@@ -116,7 +116,6 @@
 - (void)updateHidden:(_Bool)arg1 withAccountSettings:(id)arg2;
 - (_Bool)isHiddenByUserWithAccountSettings:(id)arg1;
 - (id)keyForHiddenByUser;
-- (id)legacyKeyForHiddenByUser;
 - (struct CGSize)compactCarouselSize;
 @property(readonly, nonatomic) _Bool compact;
 @property(readonly, nonatomic) struct CGSize itemSize;

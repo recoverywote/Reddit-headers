@@ -13,7 +13,7 @@
     // Error parsing type: , name: checkMarkView
     // Error parsing type: , name: tokenAmountView
     // Error parsing type: , name: descriptionLabel
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

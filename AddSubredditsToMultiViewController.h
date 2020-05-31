@@ -27,6 +27,7 @@
     EmptyDogeView *_emptyView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) BaseLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) BaseButton *addButton; // @synthesize addButton=_addButton;
 @property(retain, nonatomic) AddSubredditsToMultiPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak id <AddSubredditsToMultiViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)tokenField:(id)arg1 titleForTokenAtIndex:(unsigned long long)arg2;
 - (unsigned long long)numberOfTokensInTokenField:(id)arg1;
 - (void)tokenField:(id)arg1 didDeleteTokenAtIndex:(unsigned long long)arg2;

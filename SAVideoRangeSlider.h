@@ -42,6 +42,7 @@
     long long _scrubSide;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool lockScrubPosition; // @synthesize lockScrubPosition=_lockScrubPosition;
 @property(nonatomic) long long scrubSide; // @synthesize scrubSide=_scrubSide;
 @property(nonatomic) _Bool rightFocused; // @synthesize rightFocused=_rightFocused;
@@ -71,7 +72,6 @@
 @property(nonatomic) double rightPosition; // @synthesize rightPosition=_rightPosition;
 @property(nonatomic) double leftPosition; // @synthesize leftPosition=_leftPosition;
 @property(nonatomic) __weak id <SAVideoRangeSliderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setBubbleText:(double)arg1;
 - (void)hideBubble:(id)arg1;
 - (double)thumbTimeInSeconds;

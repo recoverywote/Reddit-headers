@@ -13,8 +13,8 @@
     Subreddit *_subreddit;
 }
 
-@property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) long long numberOfOnlineUsers;
 - (id)detailString;
 - (id)titleString;

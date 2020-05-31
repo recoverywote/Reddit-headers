@@ -36,6 +36,7 @@
     struct CGSize _keyboardSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ComposeChatOverlayView *channelMutedView; // @synthesize channelMutedView=_channelMutedView;
 @property(retain, nonatomic) ComposeChatOverlayView *channelLockedView; // @synthesize channelLockedView=_channelLockedView;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(nonatomic) struct CGSize keyboardSize; // @synthesize keyboardSize=_keyboardSize;
 @property(nonatomic) __weak id <ChatCompositionViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)photoPickerViewController:(id)arg1 didSelectPhoto:(id)arg2;
 - (void)snoomojiViewController:(id)arg1 didSelectSnoomoji:(id)arg2;
 - (void)trackKeyboardEventWithNoun:(id)arg1;

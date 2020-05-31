@@ -20,11 +20,11 @@
     ChatPostUserTypeAheadView *_userTypeAheadView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak ChatPostUserTypeAheadView *userTypeAheadView; // @synthesize userTypeAheadView=_userTypeAheadView;
 @property(nonatomic) __weak UIResponder<UITextInput> *textInput; // @synthesize textInput=_textInput;
 @property(copy, nonatomic) NSArray *users; // @synthesize users=_users;
 @property(retain, nonatomic) TextInputPrefixListener *prefixListener; // @synthesize prefixListener=_prefixListener;
-- (void).cxx_destruct;
 - (void)chatPostUserTypeAheadView:(id)arg1 didSelectUser:(id)arg2 prefix:(id)arg3 range:(struct _NSRange)arg4;
 - (void)selectTextForRange:(struct _NSRange)arg1;
 - (void)replaceInputTextWithUsername:(id)arg1 prefix:(id)arg2 range:(struct _NSRange)arg3 addSpace:(_Bool)arg4 shouldDispatchSelectText:(_Bool)arg5;

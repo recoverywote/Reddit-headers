@@ -19,7 +19,7 @@
 @interface ASLayoutSpec : NSObject <ASDebugNameProvider, ASLayoutElement, ASLayoutElementStylability, NSFastEnumeration, ASDescriptionProvider, NSLocking>
 {
     // Error parsing type: {RecursiveMutex="_recursive"B""(?="_unfair"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"_runfair"{?="_lock"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"_thread"A^{_opaque_pthread_t}"_count"i}"_m"{_opaque_pthread_mutex_t="__sig"q"__opaque"[56c]})}, name: __instanceLock__
-    // Error parsing type: {atomic<ASPrimitiveTraitCollection>="__a_"A{ASPrimitiveTraitCollection}}, name: _primitiveTraitCollection
+    // Error parsing type: {atomic<ASPrimitiveTraitCollection>="__a_"{__cxx_atomic_impl<ASPrimitiveTraitCollection, std::__1::__cxx_atomic_base_impl<ASPrimitiveTraitCollection> >="__a_value"A{ASPrimitiveTraitCollection}}}, name: _primitiveTraitCollection
     ASLayoutElementStyle *_style;
     NSMutableArray *_childrenArray;
     _Bool _isMutable;
@@ -28,9 +28,9 @@
 
 + (id)asciiArtStringForChildren:(id)arg1 parentName:(id)arg2;
 + (id)asciiArtStringForChildren:(id)arg1 parentName:(id)arg2 direction:(unsigned long long)arg3;
-@property(nonatomic) _Bool isMutable; // @synthesize isMutable=_isMutable;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isMutable; // @synthesize isMutable=_isMutable;
 - (void)unlock;
 - (void)lock;
 - (id)asciiArtName;

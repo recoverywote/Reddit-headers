@@ -23,6 +23,7 @@
     BaseTextView *_titleCharacterLimitIndicatorView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseTextView *titleCharacterLimitIndicatorView; // @synthesize titleCharacterLimitIndicatorView=_titleCharacterLimitIndicatorView;
 @property(nonatomic) __weak id <ProfileSettingTextViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) long long characterLengthLimit; // @synthesize characterLengthLimit=_characterLengthLimit;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) BaseTextView *textView; // @synthesize textView=_textView;
 @property(readonly, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(readonly, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
-- (void).cxx_destruct;
 - (_Bool)textViewShouldChangeSize:(id)arg1;
 - (void)textView:(id)arg1 didChangeToNewSize:(struct CGSize)arg2;
 - (_Bool)baseTextView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;

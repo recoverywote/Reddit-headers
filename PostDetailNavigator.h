@@ -15,9 +15,9 @@
     PostDetailViewController *_vc;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak PostDetailViewController *vc; // @synthesize vc=_vc;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)navigateToAwardDetailsForComment:(id)arg1 parentPost:(id)arg2 correlationId:(id)arg3;
 - (void)presentLoggedOutViewControllerForDownvoting;
 - (void)presentLoggedOutViewControllerForUpvoting;

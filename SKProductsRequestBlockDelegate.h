@@ -15,8 +15,8 @@
     CDUnknownBlockType _block;
 }
 
-@property(readonly, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 - (void)request:(id)arg1 didFailWithError:(id)arg2;
 - (void)productsRequest:(id)arg1 didReceiveResponse:(id)arg2;
 - (id)initWithBlock:(CDUnknownBlockType)arg1;

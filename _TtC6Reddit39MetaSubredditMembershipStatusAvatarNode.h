@@ -8,8 +8,7 @@
 
 @interface _TtC6Reddit39MetaSubredditMembershipStatusAvatarNode : ASDisplayNode
 {
-    // Error parsing type: , name: iconNode
-    // Error parsing type: , name: iconFrameNode
+    // Error parsing type: , name: userFrameNode
     // Error parsing type: , name: usernameNode
     // Error parsing type: , name: dateFromNode
     // Error parsing type: , name: dateToNode

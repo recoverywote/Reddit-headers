@@ -11,8 +11,8 @@
     UIView *_containedView;
 }
 
-@property(readonly, nonatomic) __weak UIView *containedView; // @synthesize containedView=_containedView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak UIView *containedView; // @synthesize containedView=_containedView;
 - (id)initWithContainedView:(id)arg1 insets:(struct UIEdgeInsets)arg2;
 
 @end

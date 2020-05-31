@@ -13,8 +13,8 @@
     NSString *_serviceName;
 }
 
-@property(retain, nonatomic) NSString *serviceName; // @synthesize serviceName=_serviceName;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *serviceName; // @synthesize serviceName=_serviceName;
 - (_Bool)writeMessageBeginWithName:(id)arg1 type:(int)arg2 sequenceID:(int)arg3 error:(id *)arg4;
 - (id)initWithProtocol:(id)arg1 serviceName:(id)arg2;
 

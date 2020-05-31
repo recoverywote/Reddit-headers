@@ -16,11 +16,11 @@
     NSDictionary *_indexedComments;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *indexedComments; // @synthesize indexedComments=_indexedComments;
 @property(nonatomic) _Bool isFetchingBottomComments; // @synthesize isFetchingBottomComments=_isFetchingBottomComments;
 @property(copy, nonatomic) NSArray *threadedComments; // @synthesize threadedComments=_threadedComments;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isTruncatedCommentsFetch;
 - (_Bool)nodeHasChildren:(id)arg1;
 - (void)deleteCommentTreeNode:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;

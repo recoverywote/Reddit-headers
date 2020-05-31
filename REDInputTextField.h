@@ -18,9 +18,9 @@
     NSArray *_keyCommandsInternal;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *keyCommandsInternal; // @synthesize keyCommandsInternal=_keyCommandsInternal;
 @property(nonatomic) __weak id <REDInputTextDelegate> textDelegate; // @synthesize textDelegate=_textDelegate;
-- (void).cxx_destruct;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)textFieldDidChange:(id)arg1;

@@ -14,9 +14,9 @@
     ImageWatermarkInfo *_imageWatermarkInfo;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) ImageWatermarkInfo *imageWatermarkInfo; // @synthesize imageWatermarkInfo=_imageWatermarkInfo;
 @property(copy, nonatomic) NSString *subject; // @synthesize subject=_subject;
-- (void).cxx_destruct;
 - (id)item;
 - (id)activityViewController:(id)arg1 subjectForActivityType:(id)arg2;
 - (id)activityViewController:(id)arg1 itemForActivityType:(id)arg2;

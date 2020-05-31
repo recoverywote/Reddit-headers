@@ -17,11 +17,11 @@
     NSString *_accountCachePath;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *accountCachePath; // @synthesize accountCachePath=_accountCachePath;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *backgroundQueue; // @synthesize backgroundQueue=_backgroundQueue;
 @property(readonly, nonatomic) FMDatabaseQueue *dbQueue; // @synthesize dbQueue=_dbQueue;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *currentDbDirectoryPath;
 - (void)removeOldCacheDirectory;
 - (void)deleteFilesInDirectory:(id)arg1 withCondition:(CDUnknownBlockType)arg2;

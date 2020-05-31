@@ -18,13 +18,13 @@
     BaseButton *_modModeButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *modModeButton; // @synthesize modModeButton=_modModeButton;
 @property(retain, nonatomic) BaseButton *dropdownButton; // @synthesize dropdownButton=_dropdownButton;
 @property(nonatomic) _Bool isInModMode; // @synthesize isInModMode=_isInModMode;
 @property(nonatomic) _Bool isModerator; // @synthesize isModerator=_isModerator;
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
 @property(nonatomic) unsigned long long feedSort; // @synthesize feedSort=_feedSort;
-- (void).cxx_destruct;
 - (id)imageNameForFeedSort:(unsigned long long)arg1 smallSize:(_Bool)arg2;
 - (void)didTapModModeButton:(id)arg1;
 - (void)didTapSortButton:(id)arg1;

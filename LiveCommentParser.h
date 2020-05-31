@@ -17,9 +17,9 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak id <LiveCommentDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)parseData:(id)arg1;
 - (id)initWithService:(id)arg1;
 

@@ -31,6 +31,7 @@
 + (id)persistProperties;
 + (id)tableName;
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isModQueue; // @synthesize isModQueue=_isModQueue;
 @property(nonatomic) _Bool isMuted; // @synthesize isMuted=_isMuted;
 @property(nonatomic) _Bool isLocked; // @synthesize isLocked=_isLocked;
@@ -47,7 +48,6 @@
 @property(copy, nonatomic) NSString *subredditChannelName; // @synthesize subredditChannelName=_subredditChannelName;
 @property(copy, nonatomic) NSString *subredditID; // @synthesize subredditID=_subredditID;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
-- (void).cxx_destruct;
 - (id)displayTitle;
 - (void)configureJoinedStatus:(_Bool)arg1;
 - (void)configureWithSendbirdChannel:(id)arg1;

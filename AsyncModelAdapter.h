@@ -13,8 +13,8 @@
     Class _modelClass;
 }
 
-@property(retain, nonatomic) Class modelClass; // @synthesize modelClass=_modelClass;
 - (void).cxx_destruct;
+@property(retain, nonatomic) Class modelClass; // @synthesize modelClass=_modelClass;
 - (id)copiedModel:(id)arg1 withZone:(struct _NSZone *)arg2;
 - (id)fullPropertiesWithMetadata;
 @property(readonly, nonatomic) NSArray *asyncModelProperties;

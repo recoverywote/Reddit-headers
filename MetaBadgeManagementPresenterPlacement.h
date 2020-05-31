@@ -19,8 +19,8 @@
 + (id)stylePlacement;
 + (id)achievementPlacement;
 + (id)loyaltyPlacement;
-@property(readonly, nonatomic) NSString *stringValue; // @synthesize stringValue=_stringValue;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *stringValue; // @synthesize stringValue=_stringValue;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

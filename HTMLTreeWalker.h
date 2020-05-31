@@ -17,11 +17,11 @@
     HTMLNode *_currentNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HTMLNode *currentNode; // @synthesize currentNode=_currentNode;
 @property(readonly, nonatomic) id <HTMLNodeFilter> filter; // @synthesize filter=_filter;
 @property(readonly, nonatomic) unsigned long long whatToShow; // @synthesize whatToShow=_whatToShow;
 @property(readonly, nonatomic) HTMLNode *root; // @synthesize root=_root;
-- (void).cxx_destruct;
 - (id)nextNode;
 - (id)previousNode;
 - (id)nextSibling;

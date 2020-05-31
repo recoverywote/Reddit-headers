@@ -21,12 +21,12 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(copy, nonatomic) NSString *word; // @synthesize word=_word;
 @property(copy, nonatomic) NSArray *emojiSuggestions; // @synthesize emojiSuggestions=_emojiSuggestions;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) __weak id <EmojiAutocompleteViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)topLine;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

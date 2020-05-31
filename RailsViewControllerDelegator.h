@@ -26,9 +26,9 @@
 }
 
 + (id)subredditListingNetworkSourceWithAccountContext:(id)arg1 railsContext:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedSortOptionController *sortOptionController; // @synthesize sortOptionController=_sortOptionController;
 @property(retain, nonatomic) RailsNavigator *railsNavigator; // @synthesize railsNavigator=_railsNavigator;
-- (void).cxx_destruct;
 - (void)covidSearchSettingNodeDidTapDismiss:(id)arg1;
 - (void)NSFWSearchSettingNodeDidTapDismiss:(id)arg1;
 - (id)elementalDiscoveryNode:(id)arg1 nodeForElement:(id)arg2;

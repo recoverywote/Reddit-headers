@@ -24,10 +24,10 @@
 + (_Bool)userHasSeenTooltipType:(unsigned long long)arg1;
 + (id)tooltipViewWithModel:(id)arg1;
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <AbstractTooltipView> tooltipView; // @synthesize tooltipView=_tooltipView;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(retain, nonatomic) TooltipModel *queuedModel; // @synthesize queuedModel=_queuedModel;
-- (void).cxx_destruct;
 - (void)didDismissTip:(id)arg1;
 - (void)willDismissTip:(id)arg1;
 - (void)didShowTip:(id)arg1;

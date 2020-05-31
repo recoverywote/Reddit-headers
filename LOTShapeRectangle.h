@@ -17,12 +17,12 @@
     LOTKeyframeGroup *_cornerRadius;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool reversed; // @synthesize reversed=_reversed;
 @property(readonly, nonatomic) LOTKeyframeGroup *cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(readonly, nonatomic) LOTKeyframeGroup *size; // @synthesize size=_size;
 @property(readonly, nonatomic) LOTKeyframeGroup *position; // @synthesize position=_position;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

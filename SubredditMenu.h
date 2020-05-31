@@ -17,12 +17,12 @@
     NSArray *_submenus;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSubmenuTab; // @synthesize isSubmenuTab=_isSubmenuTab;
 @property(nonatomic) _Bool isLinkTab; // @synthesize isLinkTab=_isLinkTab;
 @property(copy, nonatomic) NSArray *submenus; // @synthesize submenus=_submenus;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

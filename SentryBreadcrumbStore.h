@@ -16,9 +16,9 @@
     SentryFileManager *_fileManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SentryFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(nonatomic) unsigned long long maxBreadcrumbs; // @synthesize maxBreadcrumbs=_maxBreadcrumbs;
-- (void).cxx_destruct;
 - (id)serialize;
 - (void)clear;
 - (unsigned long long)count;

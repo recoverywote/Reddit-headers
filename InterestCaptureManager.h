@@ -17,12 +17,12 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) long long flow; // @synthesize flow=_flow;
 @property(retain, nonatomic) CaptureButtonListItem *popularNearMeLabel; // @synthesize popularNearMeLabel=_popularNearMeLabel;
 @property(retain, nonatomic) SubredditsCaptureScreen *subredditSuggestionScreen; // @synthesize subredditSuggestionScreen=_subredditSuggestionScreen;
 @property(retain, nonatomic) InterestCaptureScreen *interestCaptureScreen; // @synthesize interestCaptureScreen=_interestCaptureScreen;
-- (void).cxx_destruct;
 - (void)showSubscribedToastForNumber:(unsigned long long)arg1;
 - (void)subscribeToSelectedSubredditsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchSubredditsForCategory:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;

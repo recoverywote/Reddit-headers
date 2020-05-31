@@ -15,10 +15,10 @@
     NSURL *_gifURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *gifURL; // @synthesize gifURL=_gifURL;
 @property(retain, nonatomic) YYImage *image; // @synthesize image=_image;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isAnimated;
 
 @end

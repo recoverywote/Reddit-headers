@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: indexLabel
     // Error parsing type: , name: stringLabel
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

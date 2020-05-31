@@ -18,13 +18,13 @@
     SKProductsRequest *_productsRequest;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SKProductsRequest *productsRequest; // @synthesize productsRequest=_productsRequest;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(retain, nonatomic) CoinSale *coinSale; // @synthesize coinSale=_coinSale;
 @property(retain, nonatomic) NSArray *deals; // @synthesize deals=_deals;
 @property(retain, nonatomic) NSArray *products; // @synthesize products=_products;
-- (void).cxx_destruct;
 - (void)notifyFailure;
 - (void)notifySuccess;
 - (id)productWithIdentifier:(id)arg1;

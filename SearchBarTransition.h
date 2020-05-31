@@ -16,8 +16,8 @@
     Class _eligibleClass;
 }
 
-@property(retain, nonatomic) Class eligibleClass; // @synthesize eligibleClass=_eligibleClass;
 - (void).cxx_destruct;
+@property(retain, nonatomic) Class eligibleClass; // @synthesize eligibleClass=_eligibleClass;
 - (void)animateTransition:(id)arg1;
 - (id)navigationController:(id)arg1 animationControllerForOperation:(long long)arg2 fromViewController:(id)arg3 toViewController:(id)arg4;
 - (double)transitionDuration:(id)arg1;

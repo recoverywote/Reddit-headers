@@ -16,9 +16,9 @@
     NSData *_deviceToken;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isSandbox) _Bool sandbox; // @synthesize sandbox=_sandbox;
 @property(readonly, nonatomic) NSData *deviceToken; // @synthesize deviceToken=_deviceToken;
-- (void).cxx_destruct;
 - (_Bool)isEqualToAPNSInfo:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

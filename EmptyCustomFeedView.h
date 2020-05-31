@@ -16,11 +16,11 @@
     BaseButton *_actionButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) BaseLabel *bodyLabel; // @synthesize bodyLabel=_bodyLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(copy, nonatomic) CDUnknownBlockType onActionButtonPress; // @synthesize onActionButtonPress=_onActionButtonPress;
-- (void).cxx_destruct;
 - (void)didTapActionButton:(id)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (id)init;

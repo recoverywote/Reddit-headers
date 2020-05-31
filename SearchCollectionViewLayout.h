@@ -13,8 +13,8 @@
     id <SearchCollectionViewLayoutDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SearchCollectionViewLayoutDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SearchCollectionViewLayoutDelegate> delegate; // @synthesize delegate=_delegate;
 - (struct CGSize)collectionViewContentSize;
 
 @end

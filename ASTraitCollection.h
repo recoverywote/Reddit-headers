@@ -26,6 +26,7 @@
 + (id)traitCollectionWithHorizontalSizeClass:(long long)arg1 verticalSizeClass:(long long)arg2 displayScale:(double)arg3 displayGamut:(long long)arg4 userInterfaceIdiom:(long long)arg5 forceTouchCapability:(long long)arg6 layoutDirection:(long long)arg7 preferredContentSizeCategory:(id)arg8 containerSize:(struct CGSize)arg9;
 + (id)traitCollectionWithASPrimitiveTraitCollection:(struct ASPrimitiveTraitCollection)arg1;
 + (id)traitCollectionWithDisplayScale:(double)arg1 userInterfaceIdiom:(long long)arg2 horizontalSizeClass:(long long)arg3 verticalSizeClass:(long long)arg4 forceTouchCapability:(long long)arg5 containerSize:(struct CGSize)arg6;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize containerSize; // @synthesize containerSize=_containerSize;
 @property(readonly, nonatomic) NSString *preferredContentSizeCategory; // @synthesize preferredContentSizeCategory=_preferredContentSizeCategory;
 @property(readonly, nonatomic) long long layoutDirection; // @synthesize layoutDirection=_layoutDirection;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) double displayScale; // @synthesize displayScale=_displayScale;
 @property(readonly, nonatomic) long long verticalSizeClass; // @synthesize verticalSizeClass=_verticalSizeClass;
 @property(readonly, nonatomic) long long horizontalSizeClass; // @synthesize horizontalSizeClass=_horizontalSizeClass;
-- (void).cxx_destruct;
 - (_Bool)isEqualToTraitCollection:(id)arg1;
 - (id)initWithHorizontalSizeClass:(long long)arg1 verticalSizeClass:(long long)arg2 displayScale:(double)arg3 displayGamut:(long long)arg4 userInterfaceIdiom:(long long)arg5 forceTouchCapability:(long long)arg6 layoutDirection:(long long)arg7 preferredContentSizeCategory:(id)arg8 containerSize:(struct CGSize)arg9;
 - (struct ASPrimitiveTraitCollection)primitiveTraitCollection;

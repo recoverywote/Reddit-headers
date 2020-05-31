@@ -13,8 +13,8 @@
     id <LOTSizeValueDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <LOTSizeValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <LOTSizeValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)setValueDelegate:(id)arg1;
 - (_Bool)hasDelegateOverride;
 - (struct CGSize)sizeValueForFrame:(id)arg1;

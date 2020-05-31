@@ -17,11 +17,11 @@
     NSOrderedSet *_currentTabs;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSOrderedSet *currentTabs; // @synthesize currentTabs=_currentTabs;
 @property(nonatomic) unsigned long long searchLoadingState; // @synthesize searchLoadingState=_searchLoadingState;
 @property(readonly, nonatomic) unsigned long long searchType; // @synthesize searchType=_searchType;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (long long)indexOfSearchTabType:(unsigned long long)arg1;
 - (id)processedSearchQuery:(id)arg1;
 @property(readonly, nonatomic) RedditService *service;

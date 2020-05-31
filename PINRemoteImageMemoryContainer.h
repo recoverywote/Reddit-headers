@@ -15,10 +15,10 @@
     PINRemoteLock *_lock;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PINRemoteLock *lock; // @synthesize lock=_lock;
 @property(retain, nonatomic) NSData *data; // @synthesize data=_data;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

@@ -22,12 +22,12 @@
     UIPickerView *_maxEmojisNumberPickerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIPickerView *maxEmojisNumberPickerView; // @synthesize maxEmojisNumberPickerView=_maxEmojisNumberPickerView;
 @property(retain, nonatomic) BaseView *pickerViewOverlay; // @synthesize pickerViewOverlay=_pickerViewOverlay;
 @property(nonatomic) long long maxEmojiCount; // @synthesize maxEmojiCount=_maxEmojiCount;
 @property(nonatomic) long long flairType; // @synthesize flairType=_flairType;
 @property(retain, nonatomic) NSObject<MutableFlairProtocol> *mutableFlair; // @synthesize mutableFlair=_mutableFlair;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (long long)pickerView:(id)arg1 numberOfRowsInComponent:(long long)arg2;
 - (long long)numberOfComponentsInPickerView:(id)arg1;

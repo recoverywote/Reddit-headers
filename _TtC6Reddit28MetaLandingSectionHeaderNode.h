@@ -12,6 +12,7 @@
     // Error parsing type: , name: subtitle
     // Error parsing type: , name: titleNode
     // Error parsing type: , name: subtitleNode
+    // Error parsing type: , name: imageNode
 }
 
 - (void).cxx_destruct;

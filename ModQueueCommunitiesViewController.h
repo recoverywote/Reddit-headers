@@ -25,6 +25,7 @@
     NSArray *_filteredSubreddits;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *filteredSubreddits; // @synthesize filteredSubreddits=_filteredSubreddits;
 @property(nonatomic) _Bool isSearching; // @synthesize isSearching=_isSearching;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) BaseSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)searchBarCancelButtonClicked:(id)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;
 - (void)searchBarTextDidEndEditing:(id)arg1;

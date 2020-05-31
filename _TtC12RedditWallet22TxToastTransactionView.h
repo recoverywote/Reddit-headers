@@ -19,7 +19,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: tx
     // Error parsing type: , name: performOngoingTransactionSink
     // Error parsing type: , name: didHideSubject
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

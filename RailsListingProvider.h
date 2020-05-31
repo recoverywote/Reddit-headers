@@ -11,8 +11,8 @@
     CDUnknownBlockType _listingNetworkSourceBlock;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType listingNetworkSourceBlock; // @synthesize listingNetworkSourceBlock=_listingNetworkSourceBlock;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType listingNetworkSourceBlock; // @synthesize listingNetworkSourceBlock=_listingNetworkSourceBlock;
 - (id)listingNetworkSource;
 
 @end

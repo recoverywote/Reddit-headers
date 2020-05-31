@@ -18,12 +18,12 @@
 }
 
 + (id)shared;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ExperimentManager *experimentManager; // @synthesize experimentManager=_experimentManager;
 @property(retain, nonatomic) RUILayout *layout; // @synthesize layout=_layout;
 @property(retain, nonatomic) RUIFontGuidance *font; // @synthesize font=_font;
 @property(retain, nonatomic) _TtC8RedditUI10ColorGuide *color; // @synthesize color=_color;
 @property(retain, nonatomic) UIView *rootView; // @synthesize rootView=_rootView;
-- (void).cxx_destruct;
 - (void)themeDidChange:(id)arg1;
 - (void)updateExperimentManager:(id)arg1;
 - (void)setupWithRootView:(id)arg1 experimentManager:(id)arg2;

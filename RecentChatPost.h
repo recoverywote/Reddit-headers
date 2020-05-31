@@ -14,9 +14,9 @@
     NSDate *_lastVisitTimestamp;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *lastVisitTimestamp; // @synthesize lastVisitTimestamp=_lastVisitTimestamp;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithPost:(id)arg1 lastVisitTimestamp:(id)arg2;

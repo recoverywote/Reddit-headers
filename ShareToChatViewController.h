@@ -43,6 +43,7 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak UIViewController *sourceVC; // @synthesize sourceVC=_sourceVC;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
@@ -66,7 +67,6 @@
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) BaseLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)textFieldDidEndEditing:(id)arg1;
 - (void)textFieldDidBeginEditing:(id)arg1;
 - (void)feedPostCrosspostView:(id)arg1 didTapThumbnailForPost:(id)arg2;

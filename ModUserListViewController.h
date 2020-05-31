@@ -21,12 +21,12 @@
     UIViewController *_fromVC;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController *fromVC; // @synthesize fromVC=_fromVC;
 @property(nonatomic) _Bool showOverflowButtonInCells; // @synthesize showOverflowButtonInCells=_showOverflowButtonInCells;
 @property(retain, nonatomic) NSArray *searchResults; // @synthesize searchResults=_searchResults;
 @property(copy, nonatomic) NSString *currentSearchString; // @synthesize currentSearchString=_currentSearchString;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (id)userAtIndex:(long long)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;

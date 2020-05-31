@@ -18,10 +18,10 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain) NSURL *serverURL; // @synthesize serverURL=_serverURL;
 @property(retain) NSDictionary *eventDictionary; // @synthesize eventDictionary=_eventDictionary;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)processResponse:(id)arg1 error:(id)arg2;

@@ -14,9 +14,9 @@
     NSNumber *_size;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *size; // @synthesize size=_size;
 @property(retain, nonatomic) NSDate *date; // @synthesize date=_date;
-- (void).cxx_destruct;
 
 @end
 

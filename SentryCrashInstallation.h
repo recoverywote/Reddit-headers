@@ -17,12 +17,12 @@
     SentryCrashReportFilterPipeline *_prependedFilters;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SentryCrashReportFilterPipeline *prependedFilters; // @synthesize prependedFilters=_prependedFilters;
 @property(retain, nonatomic) NSArray *requiredProperties; // @synthesize requiredProperties=_requiredProperties;
 @property(retain, nonatomic) NSMutableDictionary *fields; // @synthesize fields=_fields;
 @property(retain, nonatomic) NSMutableData *crashHandlerDataBacking; // @synthesize crashHandlerDataBacking=_crashHandlerDataBacking;
 @property(nonatomic) int nextFieldIndex; // @synthesize nextFieldIndex=_nextFieldIndex;
-- (void).cxx_destruct;
 - (id)sink;
 - (void)addPreFilter:(id)arg1;
 - (void)sendAllReportsWithCompletion:(CDUnknownBlockType)arg1;

@@ -29,6 +29,7 @@
     BaseSearchController *_searchController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseSearchController *searchController; // @synthesize searchController=_searchController;
 @property(nonatomic) _Bool isShowingAutocompleteSearchResults; // @synthesize isShowingAutocompleteSearchResults=_isShowingAutocompleteSearchResults;
 @property(nonatomic) _Bool hasLoadedDataOnce; // @synthesize hasLoadedDataOnce=_hasLoadedDataOnce;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) NSArray *recentSubreddits; // @synthesize recentSubreddits=_recentSubreddits;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <RecentSubredditsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)keyboardWillHide:(id)arg1;
 - (void)keyboardWillShow:(id)arg1;
 - (void)searchBarSearchButtonClicked:(id)arg1;

@@ -16,11 +16,11 @@
     NSData *_receipt;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSData *receipt; // @synthesize receipt=_receipt;
 @property(readonly, copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, copy, nonatomic) NSString *productId; // @synthesize productId=_productId;
 @property(readonly, copy, nonatomic) NSString *transactionId; // @synthesize transactionId=_transactionId;
-- (void).cxx_destruct;
 - (id)formattedParameters;
 - (id)initWithTransactionId:(id)arg1 productId:(id)arg2 correlationId:(id)arg3 receipt:(id)arg4;
 

@@ -13,8 +13,8 @@
     Subreddit *_subreddit;
 }
 
-@property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
+@property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (id)placeHolderImage;
 - (id)pillAttributedStringForAttributes:(id)arg1 pillTextBuilder:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
 - (id)prefix;

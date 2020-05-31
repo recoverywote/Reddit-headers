@@ -21,13 +21,13 @@
 }
 
 + (struct CGSize)calculatedSizeForData:(id)arg1 collectionViewWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) InboxNotification *data; // @synthesize data=_data;
 @property(retain, nonatomic) BaseLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
 @property(retain, nonatomic) BaseImageView *typeIcon; // @synthesize typeIcon=_typeIcon;
 @property(retain, nonatomic) BaseButton *overflowButton; // @synthesize overflowButton=_overflowButton;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)styleLabelsWithData:(id)arg1;
 - (void)configureWithData:(id)arg1;

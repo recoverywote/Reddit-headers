@@ -28,6 +28,7 @@
     NSMutableData *_buffer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableData *buffer; // @synthesize buffer=_buffer;
 @property(retain, nonatomic) NSOutputStream *outputStream; // @synthesize outputStream=_outputStream;
 @property(retain, nonatomic) AFHTTPBodyPart *currentHTTPBodyPart; // @synthesize currentHTTPBodyPart=_currentHTTPBodyPart;
@@ -43,7 +44,6 @@
 - (unsigned long long)streamStatus;
 - (void)setDelegate:(id)arg1;
 - (id)delegate;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)_setCFClientFlags:(unsigned long long)arg1 callback:(CDUnknownFunctionPointerType)arg2 context:(CDStruct_e097db04 *)arg3;
 - (void)_unscheduleFromCFRunLoop:(struct __CFRunLoop *)arg1 forMode:(struct __CFString *)arg2;

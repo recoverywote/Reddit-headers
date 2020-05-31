@@ -22,6 +22,7 @@
     double _previousHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double previousHeight; // @synthesize previousHeight=_previousHeight;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 @property(retain, nonatomic) ParallelHeaderTextWrapperView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(nonatomic) __weak id <MultiPageHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)actionButtonPress:(id)arg1;
 - (void)configureDescriptionLabelForMulti:(id)arg1;
 - (void)configureActionButtonForMulti:(id)arg1;

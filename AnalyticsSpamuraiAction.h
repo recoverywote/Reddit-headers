@@ -32,6 +32,7 @@
     NSString *_channel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool channelIsSet; // @synthesize channelIsSet=_channelIsSet;
 @property(copy, nonatomic) NSString *channel; // @synthesize channel=_channel;
 @property(nonatomic) _Bool is_unban_allIsSet; // @synthesize is_unban_allIsSet=_is_unban_allIsSet;
@@ -48,7 +49,6 @@
 @property(copy, nonatomic) NSString *task_version; // @synthesize task_version=_task_version;
 @property(nonatomic) _Bool task_nameIsSet; // @synthesize task_nameIsSet=_task_nameIsSet;
 @property(copy, nonatomic) NSString *task_name; // @synthesize task_name=_task_name;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

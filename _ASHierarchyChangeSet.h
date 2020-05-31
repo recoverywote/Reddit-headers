@@ -39,6 +39,8 @@
     NSMutableArray *_reloadSectionChanges;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *reloadSectionChanges; // @synthesize reloadSectionChanges=_reloadSectionChanges;
 @property(readonly, nonatomic) NSMutableArray *originalDeleteSectionChanges; // @synthesize originalDeleteSectionChanges=_originalDeleteSectionChanges;
 @property(readonly, nonatomic) NSMutableArray *deleteSectionChanges; // @synthesize deleteSectionChanges=_deleteSectionChanges;
@@ -56,8 +58,6 @@
 @property(readonly, nonatomic) _Bool completed; // @synthesize completed=_completed;
 @property(readonly, nonatomic) NSIndexSet *insertedSections; // @synthesize insertedSections=_insertedSections;
 @property(readonly, nonatomic) NSIndexSet *deletedSections; // @synthesize deletedSections=_deletedSections;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (id)propertiesForDebugDescription;
 - (id)propertiesForDescription;
 - (id)debugDescription;

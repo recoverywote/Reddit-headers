@@ -22,12 +22,12 @@
     FeedSpinnerView *_loadingIndicatorView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedSpinnerView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
 @property(retain, nonatomic) AwardDetailsPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) BaseButton *awardButton; // @synthesize awardButton=_awardButton;
 @property(retain, nonatomic) BaseView *footerView; // @synthesize footerView=_footerView;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;

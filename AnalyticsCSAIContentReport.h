@@ -46,6 +46,7 @@
     NSString *_permalink;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool permalinkIsSet; // @synthesize permalinkIsSet=_permalinkIsSet;
 @property(copy, nonatomic) NSString *permalink; // @synthesize permalink=_permalink;
 @property(nonatomic) _Bool reporter_idIsSet; // @synthesize reporter_idIsSet=_reporter_idIsSet;
@@ -76,7 +77,6 @@
 @property(copy, nonatomic) NSString *content_url; // @synthesize content_url=_content_url;
 @property(nonatomic) _Bool reported_urlIsSet; // @synthesize reported_urlIsSet=_reported_urlIsSet;
 @property(copy, nonatomic) NSString *reported_url; // @synthesize reported_url=_reported_url;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

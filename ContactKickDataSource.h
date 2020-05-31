@@ -18,11 +18,11 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(copy, nonatomic) NSString *selectedDuration; // @synthesize selectedDuration=_selectedDuration;
-- (void).cxx_destruct;
 - (void)submitReportWithItem:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)reportingSubject;
 - (id)actionButtonTitle;

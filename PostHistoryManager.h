@@ -17,11 +17,11 @@
     NSObject<OS_dispatch_queue> *_backgroundQueue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *backgroundQueue; // @synthesize backgroundQueue=_backgroundQueue;
 @property(retain, nonatomic) NSMutableDictionary *info; // @synthesize info=_info;
 @property(retain, nonatomic) NSMutableOrderedSet *postIDSet; // @synthesize postIDSet=_postIDSet;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
-- (void).cxx_destruct;
 - (id)currentHistoryPostsPKs;
 @property(readonly, nonatomic) NSString *recentHistoryFetchUrlString;
 - (void)clearAllPostHistory;

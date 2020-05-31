@@ -15,10 +15,10 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, copy, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(readonly, copy, nonatomic) NSURL *previewURL; // @synthesize previewURL=_previewURL;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithData:(id)arg1;
 

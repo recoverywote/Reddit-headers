@@ -20,11 +20,11 @@
     NSString *_version;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool night_modeIsSet; // @synthesize night_modeIsSet=_night_modeIsSet;
 @property(nonatomic) _Bool night_mode; // @synthesize night_mode=_night_mode;
 @property(nonatomic) _Bool versionIsSet; // @synthesize versionIsSet=_versionIsSet;
 @property(copy, nonatomic) NSString *version; // @synthesize version=_version;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

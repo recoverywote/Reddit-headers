@@ -9,7 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet27WalletOngoingTransactionRow : _TtC12RedditWallet20SingleTransactionRow
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

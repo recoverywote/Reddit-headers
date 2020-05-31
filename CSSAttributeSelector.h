@@ -18,10 +18,10 @@
 + (id)hasAttributeSelector:(id)arg1;
 + (id)idSelector:(id)arg1;
 + (id)classSelector:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *value; // @synthesize value=_value;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)acceptElement:(id)arg1;
 - (id)initWithType:(unsigned long long)arg1 attributeName:(id)arg2 attrbiuteValue:(id)arg3;

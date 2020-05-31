@@ -23,6 +23,7 @@
 }
 
 + (void)drawRect:(struct CGRect)arg1 withParameters:(id)arg2 isCancelled:(CDUnknownBlockType)arg3 isRasterizing:(_Bool)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *progressFillColor; // @synthesize progressFillColor=_progressFillColor;
 @property(retain, nonatomic) UIColor *progressTrackColor; // @synthesize progressTrackColor=_progressTrackColor;
 @property(retain, nonatomic) UIImage *retryIcon; // @synthesize retryIcon=_retryIcon;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) CABasicAnimation *fadeInOutAnimation; // @synthesize fadeInOutAnimation=_fadeInOutAnimation;
 @property(nonatomic) _Bool didFailed; // @synthesize didFailed=_didFailed;
 @property(nonatomic) double progress; // @synthesize progress=_progress;
-- (void).cxx_destruct;
 - (void)updateIconImage;
 - (void)updateAnimation;
 - (void)configureIcons;

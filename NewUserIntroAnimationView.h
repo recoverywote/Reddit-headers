@@ -14,9 +14,9 @@
     LOTAnimationView *_animationPartTwo;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LOTAnimationView *animationPartTwo; // @synthesize animationPartTwo=_animationPartTwo;
 @property(retain, nonatomic) LOTAnimationView *animationPartOne; // @synthesize animationPartOne=_animationPartOne;
-- (void).cxx_destruct;
 - (void)pauseAnimations;
 - (void)playAnimationsWithFirstAnimationCompletion:(CDUnknownBlockType)arg1;
 - (void)layoutSubviews;

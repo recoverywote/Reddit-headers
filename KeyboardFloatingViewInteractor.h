@@ -16,10 +16,10 @@
     NSArray *_viewsToAdjust;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *viewsToAdjust; // @synthesize viewsToAdjust=_viewsToAdjust;
 @property(nonatomic) double keyboardVisibleHeight; // @synthesize keyboardVisibleHeight=_keyboardVisibleHeight;
 @property(nonatomic) __weak id <KeyboardInteractorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)animateViewsWithNotification:(id)arg1 willShowKeyboard:(_Bool)arg2;
 - (void)keyboardWillHide:(id)arg1;
 - (void)keyboardWillShow:(id)arg1;

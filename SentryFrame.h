@@ -24,6 +24,7 @@
     NSNumber *_columnNumber;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *columnNumber; // @synthesize columnNumber=_columnNumber;
 @property(copy, nonatomic) NSNumber *lineNumber; // @synthesize lineNumber=_lineNumber;
 @property(copy, nonatomic) NSString *instructionAddress; // @synthesize instructionAddress=_instructionAddress;
@@ -34,7 +35,6 @@
 @property(copy, nonatomic) NSString *function; // @synthesize function=_function;
 @property(copy, nonatomic) NSString *fileName; // @synthesize fileName=_fileName;
 @property(copy, nonatomic) NSString *symbolAddress; // @synthesize symbolAddress=_symbolAddress;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)init;
 

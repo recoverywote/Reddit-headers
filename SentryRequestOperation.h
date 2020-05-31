@@ -14,9 +14,9 @@
     NSURLRequest *_request;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURLRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) NSURLSessionTask *task; // @synthesize task=_task;
-- (void).cxx_destruct;
 - (void)main;
 - (void)cancel;
 - (id)initWithSession:(id)arg1 request:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;

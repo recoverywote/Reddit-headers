@@ -18,11 +18,11 @@
     AFMultipartBodyStream *_bodyStream;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AFMultipartBodyStream *bodyStream; // @synthesize bodyStream=_bodyStream;
 @property(copy, nonatomic) NSString *boundary; // @synthesize boundary=_boundary;
 @property(nonatomic) unsigned long long stringEncoding; // @synthesize stringEncoding=_stringEncoding;
 @property(copy, nonatomic) NSMutableURLRequest *request; // @synthesize request=_request;
-- (void).cxx_destruct;
 - (id)requestByFinalizingMultipartFormData;
 - (void)throttleBandwidthWithPacketSize:(unsigned long long)arg1 delay:(double)arg2;
 - (void)appendPartWithHeaders:(id)arg1 body:(id)arg2;

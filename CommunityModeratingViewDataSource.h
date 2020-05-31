@@ -13,8 +13,8 @@
     ModSubreddit *_modSubreddit;
 }
 
-@property(retain, nonatomic) ModSubreddit *modSubreddit; // @synthesize modSubreddit=_modSubreddit;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ModSubreddit *modSubreddit; // @synthesize modSubreddit=_modSubreddit;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (id)sortedAndFilteredSubscriptions:(id)arg1;
 

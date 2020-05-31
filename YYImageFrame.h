@@ -24,6 +24,7 @@
 }
 
 + (id)frameWithImage:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(nonatomic) unsigned long long blend; // @synthesize blend=_blend;
 @property(nonatomic) unsigned long long dispose; // @synthesize dispose=_dispose;
@@ -33,7 +34,6 @@
 @property(nonatomic) unsigned long long height; // @synthesize height=_height;
 @property(nonatomic) unsigned long long width; // @synthesize width=_width;
 @property(nonatomic) unsigned long long index; // @synthesize index=_index;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

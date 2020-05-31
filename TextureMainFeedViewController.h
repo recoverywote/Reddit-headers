@@ -18,9 +18,9 @@
     _TtC6Reddit25AnonymousBrowsingExitView *_anonymousBrowsingEmptyView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit25AnonymousBrowsingExitView *anonymousBrowsingEmptyView; // @synthesize anonymousBrowsingEmptyView=_anonymousBrowsingEmptyView;
 @property(retain, nonatomic) EmptyFeedNUXView *emptyFeedNUXView; // @synthesize emptyFeedNUXView=_emptyFeedNUXView;
-- (void).cxx_destruct;
 - (void)feedSortOptionController:(id)arg1 didFinishSelectingFeedSort:(unsigned long long)arg2 feedRange:(unsigned long long)arg3;
 - (void)emptyFeedNuxDidTapSignUp:(id)arg1;
 - (void)emptyFeedNuxDidTapExplore:(id)arg1;

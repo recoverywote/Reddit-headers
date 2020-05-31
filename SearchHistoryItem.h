@@ -15,8 +15,8 @@
     NSObject<NSCoding> *_associatedObject;
 }
 
-@property(retain, nonatomic) NSObject<NSCoding> *associatedObject; // @synthesize associatedObject=_associatedObject;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSObject<NSCoding> *associatedObject; // @synthesize associatedObject=_associatedObject;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (void)encodeWithCoder:(id)arg1;

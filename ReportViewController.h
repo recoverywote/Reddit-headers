@@ -25,6 +25,7 @@
     BaseTableView *_tableView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) BaseButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) BaseView *footerView; // @synthesize footerView=_footerView;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <ReportViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) _Bool disableReportToasts; // @synthesize disableReportToasts=_disableReportToasts;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
-- (void).cxx_destruct;
 - (void)didTapCloseButton:(id)arg1;
 - (void)didTapActionButton:(id)arg1;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;

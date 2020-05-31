@@ -16,8 +16,8 @@
     id <VisibilitySignalReceiver> _delegate;
 }
 
-@property(nonatomic) __weak id <VisibilitySignalReceiver> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <VisibilitySignalReceiver> delegate; // @synthesize delegate=_delegate;
 - (void)addSignalReceiver:(id)arg1;
 - (void)checkVisibility;
 

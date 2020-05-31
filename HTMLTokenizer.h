@@ -28,9 +28,9 @@
     HTMLParser *_parser;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak HTMLParser *parser; // @synthesize parser=_parser;
 @property(nonatomic) unsigned long long state; // @synthesize state=_currentState;
-- (void).cxx_destruct;
 - (void)HTMLTokenizerStateCDATASection;
 - (void)HTMLTokenizerStateBogusDOCTYPE;
 - (void)HTMLTokenizerStateAfterDOCTYPESystemIdentifier;

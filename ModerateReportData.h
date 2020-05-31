@@ -17,12 +17,12 @@
     unsigned long long _reportsCount;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long reportsCount; // @synthesize reportsCount=_reportsCount;
 @property(readonly, copy, nonatomic) NSString *removedBy; // @synthesize removedBy=_removedBy;
 @property(readonly, copy, nonatomic) NSString *approvedBy; // @synthesize approvedBy=_approvedBy;
 @property(readonly, copy, nonatomic) NSArray *userReports; // @synthesize userReports=_userReports;
 @property(readonly, copy, nonatomic) NSArray *modReports; // @synthesize modReports=_modReports;
-- (void).cxx_destruct;
 - (id)initWithModReports:(id)arg1 userReports:(id)arg2 approvedBy:(id)arg3 removedBy:(id)arg4 reportsCount:(unsigned long long)arg5;
 
 @end

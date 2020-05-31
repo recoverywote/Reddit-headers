@@ -10,12 +10,12 @@
 #import "PurchaseAwardCoordinatorDelegate-Protocol.h"
 #import "SelectAwardEditOptionsViewControllerDelegate-Protocol.h"
 #import "SelectAwardViewControllerDelegate-Protocol.h"
-#import "_TtP6Reddit22AwardSelectionDelegate_-Protocol.h"
+#import "_TtP7Economy22AwardSelectionDelegate_-Protocol.h"
 
 @class Comment, GildingEventLogger, GoldProduct, NSNumber, NSString, Post, PurchaseAwardCoordinator, UIViewController, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit25GildingPurchaseController, _TtC6Reddit34GoldUpsellImagePopupViewController, _TtC7Economy19AwardSelectionState, _TtC7Economy21AwardSelectionOptions;
 @protocol AccountContext, AwardCoordinatorDelegate;
 
-@interface AwardCoordinatorV2 : UIResponder <SelectAwardViewControllerDelegate, SelectAwardEditOptionsViewControllerDelegate, PurchaseAwardCoordinatorDelegate, _TtP6Reddit22AwardSelectionDelegate_, AwardCoordinator>
+@interface AwardCoordinatorV2 : UIResponder <SelectAwardViewControllerDelegate, SelectAwardEditOptionsViewControllerDelegate, PurchaseAwardCoordinatorDelegate, _TtP7Economy22AwardSelectionDelegate_, AwardCoordinator>
 {
     id <AwardCoordinatorDelegate> _delegate;
     id <AccountContext> _accountContext;
@@ -38,13 +38,14 @@
     GoldProduct *_lowCoinOfferProduct;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak GoldProduct *lowCoinOfferProduct; // @synthesize lowCoinOfferProduct=_lowCoinOfferProduct;
 @property(copy, nonatomic) _TtC7Economy21AwardSelectionOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *coinMarketingEventLogger; // @synthesize coinMarketingEventLogger=_coinMarketingEventLogger;
 @property(retain, nonatomic) _TtC6Reddit25GildingPurchaseController *gildPurchaseController; // @synthesize gildPurchaseController=_gildPurchaseController;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *goldUpsellImagePopupViewController; // @synthesize goldUpsellImagePopupViewController=_goldUpsellImagePopupViewController;
 @property(retain, nonatomic) NSString *previousLastGivenAwardIdentifier; // @synthesize previousLastGivenAwardIdentifier=_previousLastGivenAwardIdentifier;
-@property(retain, nonatomic) GildingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
+@property(readonly, nonatomic) GildingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) PurchaseAwardCoordinator *purchaseAwardCoordinator; // @synthesize purchaseAwardCoordinator=_purchaseAwardCoordinator;
 @property(retain, nonatomic) UIViewController *selectAwardViewController; // @synthesize selectAwardViewController=_selectAwardViewController;
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
@@ -57,10 +58,10 @@
 @property(retain, nonatomic) _TtC7Economy19AwardSelectionState *state; // @synthesize state=_state;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AwardCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)showGoldUpsell;
 - (void)checkForGoldUpsell;
 - (void)purchaseLowCoinOffer;
+- (void)presentErrorWithOptions:(id)arg1 state:(id)arg2 redditDomainError:(id)arg3;
 - (void)dismissForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
 - (void)sendAwardForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
 - (void)getCoinsForAwardSelectionWithOptions:(id)arg1 state:(id)arg2;
@@ -78,6 +79,7 @@
 - (void)presentGetCoinsInViewController:(id)arg1;
 - (void)dismissAwardSelection;
 - (void)sendAward;
+- (void)sendAwardWithOptions:(id)arg1 award:(id)arg2 isAnonymous:(_Bool)arg3 message:(id)arg4 hostViewController:(id)arg5;
 - (void)restorePreviousLastGivenAwardIdentifier;
 - (void)handleGildingCompletionWithError:(id)arg1;
 - (void)optimisticallyUpdateGivenAwardsCache;
@@ -88,11 +90,12 @@
 - (void)showAwardsHelpPage;
 - (void)showSelectAward;
 - (void)dismissSelectAwardViewControllerWithCompletion:(CDUnknownBlockType)arg1 dismissalReason:(unsigned long long)arg2;
-- (void)startFromViewController:(id)arg1 config:(id)arg2;
+- (void)startFromViewController:(id)arg1 options:(id)arg2;
 - (_Bool)useAwardingTrayV2ForRPAN:(_Bool)arg1;
-- (id)initWithComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;
-- (id)initWithPost:(id)arg1 stream:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;
-- (id)initWithPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3;
+@property(nonatomic) _Bool isProcessing;
+- (id)initWithComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4 eventLogger:(id)arg5;
+- (id)initWithPost:(id)arg1 stream:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4 eventLogger:(id)arg5;
+- (id)initWithPost:(id)arg1 accountContext:(id)arg2 correlationId:(id)arg3 eventLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -15,10 +15,10 @@
     long long _textAlignment;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long textAlignment; // @synthesize textAlignment=_textAlignment;
 @property(retain, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

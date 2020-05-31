@@ -20,13 +20,13 @@
     NSDictionary *_meta;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *meta; // @synthesize meta=_meta;
 @property(copy, nonatomic) NSString *helpLink; // @synthesize helpLink=_helpLink;
 @property(copy, nonatomic) NSNumber *handled; // @synthesize handled=_handled;
 @property(retain, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(copy, nonatomic) NSString *desc; // @synthesize desc=_desc;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)initWithType:(id)arg1;
 

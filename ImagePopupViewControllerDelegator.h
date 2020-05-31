@@ -14,9 +14,9 @@
     struct CGSize _imageSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 @property(readonly, nonatomic) CDUnknownBlockType actionHandler; // @synthesize actionHandler=_actionHandler;
-- (void).cxx_destruct;
 - (struct CGSize)imagePopupViewControllerSizeForImage:(id)arg1;
 - (void)imagePopupViewControllerDidClose:(id)arg1;
 - (void)imagePopupViewControllerDidCancel:(id)arg1;

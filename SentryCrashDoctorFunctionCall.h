@@ -14,9 +14,9 @@
     NSArray *_params;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *params; // @synthesize params=_params;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)descriptionWithParamCount:(int)arg1;
 - (id)descriptionForObjCCall;
 

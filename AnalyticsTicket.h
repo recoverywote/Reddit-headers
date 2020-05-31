@@ -24,6 +24,7 @@
     NSString *_status;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool statusIsSet; // @synthesize statusIsSet=_statusIsSet;
 @property(copy, nonatomic) NSString *status; // @synthesize status=_status;
 @property(nonatomic) _Bool queue_idIsSet; // @synthesize queue_idIsSet=_queue_idIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

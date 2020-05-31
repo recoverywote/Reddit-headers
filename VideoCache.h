@@ -20,13 +20,13 @@
 }
 
 + (id)sharedCache;
+- (void).cxx_destruct;
 @property(retain, nonatomic) AFHTTPSessionManager *sessionManager; // @synthesize sessionManager=_sessionManager;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *diskQueue; // @synthesize diskQueue=_diskQueue;
 @property(nonatomic) _Bool isHouseClean; // @synthesize isHouseClean=_isHouseClean;
 @property(nonatomic) _Bool running; // @synthesize running=_running;
 @property(retain) NSMutableDictionary *currentDownloads; // @synthesize currentDownloads=_currentDownloads;
 @property(copy, nonatomic) NSString *cacheFolderPath; // @synthesize cacheFolderPath=_cacheFolderPath;
-- (void).cxx_destruct;
 - (void)stopHouseKeeping;
 - (void)clearCacheAll:(_Bool)arg1;
 - (void)startHouseKeeping;

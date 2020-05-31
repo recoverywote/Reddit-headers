@@ -19,11 +19,11 @@
 }
 
 + (void)presentPermissionViewControllerWithTitle:(id)arg1 message:(id)arg2 allowButtonTitle:(id)arg3 denyButtonTitle:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(retain, nonatomic) BaseButton *denyButton; // @synthesize denyButton=_denyButton;
 @property(retain, nonatomic) BaseButton *allowButton; // @synthesize allowButton=_allowButton;
 @property(retain, nonatomic) BaseLabel *textLabel; // @synthesize textLabel=_textLabel;
-- (void).cxx_destruct;
 - (void)viewWillLayoutSubviews;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;

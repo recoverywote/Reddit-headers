@@ -15,7 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: declineButton
     // Error parsing type: , name: overwriteButton
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

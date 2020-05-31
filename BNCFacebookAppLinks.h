@@ -13,9 +13,9 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) SEL fetchDeferredAppLink; // @synthesize fetchDeferredAppLink=_fetchDeferredAppLink;
 @property(retain, nonatomic) id appLinkUtility; // @synthesize appLinkUtility=_appLinkUtility;
-- (void).cxx_destruct;
 - (void)fetchFacebookAppLinkWithCompletion:(CDUnknownBlockType)arg1;
 - (_Bool)isDeepLinkingClassAvailable;
 - (void)registerFacebookDeepLinkingClass:(id)arg1;

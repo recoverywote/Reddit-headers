@@ -14,9 +14,9 @@
     BaseButton *_imagePickerButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *imagePickerButton; // @synthesize imagePickerButton=_imagePickerButton;
 @property(retain, nonatomic) BaseButton *cameraButton; // @synthesize cameraButton=_cameraButton;
-- (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

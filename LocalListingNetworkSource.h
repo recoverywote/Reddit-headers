@@ -11,8 +11,8 @@
     CDUnknownBlockType _localObjectFetch;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType localObjectFetch; // @synthesize localObjectFetch=_localObjectFetch;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType localObjectFetch; // @synthesize localObjectFetch=_localObjectFetch;
 - (void)fetchListingDataWithParameters:(id)arg1 correlationId:(id)arg2 successBlock:(CDUnknownBlockType)arg3 failureBlock:(CDUnknownBlockType)arg4;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;

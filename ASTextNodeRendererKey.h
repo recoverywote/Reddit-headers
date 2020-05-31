@@ -13,10 +13,10 @@
     struct ASTextKitAttributes _attributes;
 }
 
-@property(nonatomic) struct CGSize constrainedSize; // @synthesize constrainedSize=_constrainedSize;
-@property(nonatomic) struct ASTextKitAttributes attributes; // @synthesize attributes=_attributes;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) struct CGSize constrainedSize; // @synthesize constrainedSize=_constrainedSize;
+@property(nonatomic) struct ASTextKitAttributes attributes; // @synthesize attributes=_attributes;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 

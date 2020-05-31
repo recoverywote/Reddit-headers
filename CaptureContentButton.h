@@ -22,6 +22,7 @@
     CDUnknownBlockType _action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(nonatomic) _Bool enableTopBorder; // @synthesize enableTopBorder=_enableTopBorder;
 @property(nonatomic) long long textAlignment; // @synthesize textAlignment=_textAlignment;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) UIImage *icon; // @synthesize icon=_icon;
 @property(retain, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(retain, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 
 @end
 

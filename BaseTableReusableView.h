@@ -13,8 +13,8 @@
     UIView *_contentView;
 }
 
-@property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 - (double)maxContentWidthWithSize:(struct CGSize)arg1;
 - (double)maxContentWidth;
 - (void)layoutSubviews;

@@ -18,9 +18,9 @@
     NSDictionary *_childMap;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *childMap; // @synthesize childMap=_childMap;
 @property(readonly, nonatomic) NSArray *childLayers; // @synthesize childLayers=_childLayers;
-- (void).cxx_destruct;
 - (void)maskSublayer:(id)arg1 toKeypathLayer:(id)arg2;
 - (void)addSublayer:(id)arg1 toKeypathLayer:(id)arg2;
 - (struct CGRect)convertRect:(struct CGRect)arg1 fromKeypathLayer:(id)arg2 withParentLayer:(id)arg3;

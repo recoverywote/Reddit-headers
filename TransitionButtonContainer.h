@@ -12,9 +12,9 @@
     UIView *_secondView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *secondView; // @synthesize secondView=_secondView;
 @property(retain, nonatomic) UIView *firstView; // @synthesize firstView=_firstView;
-- (void).cxx_destruct;
 - (void)transition:(_Bool)arg1;
 
 @end

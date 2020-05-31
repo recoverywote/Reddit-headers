@@ -37,6 +37,7 @@
 + (id)animationFromJSON:(id)arg1;
 + (id)animationNamed:(id)arg1 inBundle:(id)arg2;
 + (id)animationNamed:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldRasterizeWhenIdle; // @synthesize shouldRasterizeWhenIdle=_shouldRasterizeWhenIdle;
 @property(retain, nonatomic) LOTComposition *sceneModel; // @synthesize sceneModel=_sceneModel;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
@@ -46,7 +47,6 @@
 @property(nonatomic) _Bool loopAnimation; // @synthesize loopAnimation=_loopAnimation;
 @property(readonly, nonatomic) _Bool isAnimationPlaying; // @synthesize isAnimationPlaying=_isAnimationPlaying;
 @property(retain, nonatomic) NSString *animation; // @synthesize animation=_animation;
-- (void).cxx_destruct;
 - (void)logHierarchyKeypaths;
 - (void)setValue:(id)arg1 forKeypath:(id)arg2 atFrame:(id)arg3;
 - (struct CGRect)convertRect:(struct CGRect)arg1 toLayerNamed:(id)arg2;

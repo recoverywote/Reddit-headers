@@ -23,6 +23,7 @@
     NSLayoutConstraint *_rightButtonWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *rightButtonWidthConstraint; // @synthesize rightButtonWidthConstraint=_rightButtonWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleImageViewTrailingConstraint; // @synthesize titleImageViewTrailingConstraint=_titleImageViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleImageViewWidthConstraint; // @synthesize titleImageViewWidthConstraint=_titleImageViewWidthConstraint;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) BaseImageView *titleImageView; // @synthesize titleImageView=_titleImageView;
 @property(nonatomic) __weak id <MultiCommunityListHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isEditing; // @synthesize isEditing=_isEditing;
-- (void).cxx_destruct;
 - (void)didTapTitle:(id)arg1;
 - (void)didTapRightButton:(id)arg1;
 - (void)updateRightButton;

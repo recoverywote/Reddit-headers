@@ -20,6 +20,7 @@
     struct CGPoint _arrowTip;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGPoint arrowTip; // @synthesize arrowTip=_arrowTip;
 @property(retain, nonatomic) UIView *dismissOverlay; // @synthesize dismissOverlay=_dismissOverlay;
 @property(nonatomic) __weak UIView *presentingView; // @synthesize presentingView=_presentingView;
@@ -27,7 +28,6 @@
 @property(nonatomic) __weak id <RCEasyTipViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly) long long ID; // @synthesize ID=_ID;
-- (void).cxx_destruct;
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)showAnimated:(_Bool)arg1 forItem:(id)arg2 withinSuperView:(id)arg3;
 - (void)showAnimated:(_Bool)arg1 forView:(id)arg2 withinSuperView:(id)arg3;

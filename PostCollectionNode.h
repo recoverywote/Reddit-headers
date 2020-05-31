@@ -21,12 +21,12 @@
     id <PostCollectionNodeDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <PostCollectionNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostCollectionOptions *postCollectionOptions; // @synthesize postCollectionOptions=_postCollectionOptions;
 @property(retain, nonatomic) PostCollectionTitleNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(retain, nonatomic) PostCollectionHeaderNode *headerNode; // @synthesize headerNode=_headerNode;
 @property(readonly, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double heightWithoutDescription;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)createPostCollectionHeaderNode;

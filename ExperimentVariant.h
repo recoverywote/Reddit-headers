@@ -19,11 +19,11 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *version; // @synthesize version=_version;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *experimentName; // @synthesize experimentName=_experimentName;
 @property(readonly, copy, nonatomic) NSString *experimentId; // @synthesize experimentId=_experimentId;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

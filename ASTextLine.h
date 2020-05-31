@@ -30,6 +30,7 @@
 }
 
 + (id)lineWithCTLine:(struct __CTLine *)arg1 position:(struct CGPoint)arg2 vertical:(_Bool)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *attachmentRects; // @synthesize attachmentRects=_attachmentRects;
 @property(readonly, nonatomic) NSArray *attachmentRanges; // @synthesize attachmentRanges=_attachmentRanges;
 @property(readonly, nonatomic) NSArray *attachments; // @synthesize attachments=_attachments;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) NSArray *verticalRotateRange; // @synthesize verticalRotateRange=_verticalRotateRange;
 @property(nonatomic) unsigned long long row; // @synthesize row=_row;
 @property(nonatomic) unsigned long long index; // @synthesize index=_index;
-- (void).cxx_destruct;
 - (id)description;
 @property(readonly, nonatomic) double right;
 @property(readonly, nonatomic) double left;

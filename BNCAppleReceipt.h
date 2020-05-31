@@ -15,9 +15,9 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSandboxReceipt; // @synthesize isSandboxReceipt=_isSandboxReceipt;
 @property(copy, nonatomic) NSString *receipt; // @synthesize receipt=_receipt;
-- (void).cxx_destruct;
 - (_Bool)isTestFlight;
 - (id)installReceipt;
 - (void)readReceipt;

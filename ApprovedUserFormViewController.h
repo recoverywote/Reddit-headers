@@ -15,8 +15,8 @@
     ModFormTextField *_usernameField;
 }
 
-@property(retain, nonatomic) ModFormTextField *usernameField; // @synthesize usernameField=_usernameField;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ModFormTextField *usernameField; // @synthesize usernameField=_usernameField;
 - (void)addApprovedSubmitter:(id)arg1;
 - (void)addButtonPress:(id)arg1;
 - (void)buildForm;

@@ -11,7 +11,7 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: innerView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

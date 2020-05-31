@@ -20,6 +20,7 @@
     unsigned long long _sortOrder;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSelectedByDefault; // @synthesize isSelectedByDefault=_isSelectedByDefault;
 @property(readonly, nonatomic) unsigned long long sortOrder; // @synthesize sortOrder=_sortOrder;
 @property(nonatomic) _Bool isNotificationEnabled; // @synthesize isNotificationEnabled=_isNotificationEnabled;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *subtopicId; // @synthesize subtopicId=_subtopicId;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

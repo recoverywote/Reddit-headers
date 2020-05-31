@@ -16,9 +16,9 @@
 
 + (long long)activityCategory;
 + (id)activityType;
+- (void).cxx_destruct;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (void)image:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (void)processAndSaveImage:(id)arg1;
 - (void)performActivity;

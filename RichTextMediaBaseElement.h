@@ -18,13 +18,13 @@
     struct CGSize _contentSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *contentUrl; // @synthesize contentUrl=_contentUrl;
 @property(readonly, nonatomic) struct CGSize contentSize; // @synthesize contentSize=_contentSize;
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(nonatomic) long long obfuscation; // @synthesize obfuscation=_obfuscation;
 @property(copy, nonatomic) NSString *caption; // @synthesize caption=_caption;
 @property(copy, nonatomic) NSString *assetId; // @synthesize assetId=_assetId;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)attributedStringWithConfig:(id)arg1;
 - (long long)statusWithString:(id)arg1;

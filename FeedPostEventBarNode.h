@@ -26,6 +26,7 @@
 }
 
 + (struct CGSize)nodeSizeForPost:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) KeyValueObservation *postFollowedObservation; // @synthesize postFollowedObservation=_postFollowedObservation;
 @property(retain, nonatomic) NSTimer *updateTimer; // @synthesize updateTimer=_updateTimer;
 @property(retain, nonatomic) ASDisplayNode *borderLineNode; // @synthesize borderLineNode=_borderLineNode;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) FeedPostEventBarOptions *options; // @synthesize options=_options;
 @property(nonatomic) __weak id <FeedPostEventBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)textNode:(id)arg1 tappedLinkAttribute:(id)arg2 value:(id)arg3 atPoint:(struct CGPoint)arg4 textRange:(struct _NSRange)arg5;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didTapEventHeader:(id)arg1;

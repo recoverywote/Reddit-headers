@@ -9,8 +9,8 @@
 #import "AvatarImageNodeDelegate-Protocol.h"
 #import "ChatMessageContentNodeDelegate-Protocol.h"
 
-@class ASTextNode, AvatarImageNode, BubbleBackgroundNode, ChatDatelineNode, ChatMessageContentNode, DisplayableChatMessage, RedditService;
-@protocol ChatMessageCellDelegate, FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate;
+@class ASTextNode, AvatarImageNode, BubbleBackgroundNode, ChatDatelineNode, ChatMessageContentNode, DisplayableChatMessage;
+@protocol AccountContext, ChatMessageCellDelegate, FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate;
 
 @interface ChatMessageCellNode : ASCellNode <AvatarImageNodeDelegate, ChatMessageContentNodeDelegate>
 {
@@ -24,8 +24,11 @@
     BubbleBackgroundNode *_bubbleNode;
     ChatDatelineNode *_datelineNode;
     ChatMessageContentNode *_contentNode;
+    id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatMessageContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) ChatDatelineNode *datelineNode; // @synthesize datelineNode=_datelineNode;
 @property(retain, nonatomic) BubbleBackgroundNode *bubbleNode; // @synthesize bubbleNode=_bubbleNode;
@@ -36,17 +39,15 @@
 @property(nonatomic) _Bool showMessageOnly; // @synthesize showMessageOnly=_showMessageOnly;
 @property(retain, nonatomic) DisplayableChatMessage *message; // @synthesize message=_message;
 @property(nonatomic) __weak id <ChatMessageCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didLongPress:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)didEnterVisibleState;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)chatMessageContendNodeDidTapAvatarImageNode:(id)arg1;
 - (void)didTapHeaderTextNode:(id)arg1;
 - (void)avatarImageNodeWasTapped:(id)arg1;
 - (void)didLoad;
-- (void)configureWithAccountContext:(id)arg1 displayableMessage:(id)arg2 channel:(id)arg3;
-- (id)init;
+- (void)configureWithDisplayableMessage:(id)arg1 channel:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

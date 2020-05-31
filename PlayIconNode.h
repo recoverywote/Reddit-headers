@@ -13,8 +13,8 @@
     ASImageNode *_imageNode;
 }
 
-@property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNode;
 - (id)init;

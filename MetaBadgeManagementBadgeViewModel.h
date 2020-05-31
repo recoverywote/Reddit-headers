@@ -19,6 +19,7 @@
     NSString *_placement;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *placement; // @synthesize placement=_placement;
 @property(readonly, nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(readonly, nonatomic) _Bool isSelected; // @synthesize isSelected=_isSelected;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) NSString *collection; // @synthesize collection=_collection;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) MetaBadge *badge; // @synthesize badge=_badge;
-- (void).cxx_destruct;
 - (id)initWithBadge:(id)arg1 identifier:(id)arg2 collection:(id)arg3 isSelectable:(_Bool)arg4 isSelected:(_Bool)arg5 position:(unsigned long long)arg6 placement:(id)arg7;
 
 @end

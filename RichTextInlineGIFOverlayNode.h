@@ -14,9 +14,9 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) ASDisplayNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(readonly, nonatomic) struct _NSRange range; // @synthesize range=_range;
-- (void).cxx_destruct;
 - (id)initWithRange:(struct _NSRange)arg1 imageNode:(id)arg2;
 
 @end

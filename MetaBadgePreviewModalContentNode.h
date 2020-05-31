@@ -19,13 +19,13 @@
     id <MetaBadgePreviewActionDelegate> _actionDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <MetaBadgePreviewActionDelegate> actionDelegate; // @synthesize actionDelegate=_actionDelegate;
 @property(retain, nonatomic) ASButtonNode *actionButtonNode; // @synthesize actionButtonNode=_actionButtonNode;
 @property(retain, nonatomic) UIColor *contentColor; // @synthesize contentColor=_contentColor;
 @property(retain, nonatomic) ASButtonNode *closeButtonNode; // @synthesize closeButtonNode=_closeButtonNode;
 @property(retain, nonatomic) MetaBadgePreviewModalBadgePagerNode *badgePagerNode; // @synthesize badgePagerNode=_badgePagerNode;
 @property(retain, nonatomic) MetaBadgePreviewLoaderNode *spinnerNode; // @synthesize spinnerNode=_spinnerNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)setBadges:(id)arg1 selectedBadgePK:(id)arg2 actionTitle:(id)arg3;
 - (void)didTapActionButton:(id)arg1;

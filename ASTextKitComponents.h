@@ -18,11 +18,11 @@
 
 + (id)componentsWithTextStorage:(id)arg1 textContainerSize:(struct CGSize)arg2 layoutManager:(id)arg3;
 + (id)componentsWithAttributedSeedString:(id)arg1 textContainerSize:(struct CGSize)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextKitComponentsTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) NSLayoutManager *layoutManager; // @synthesize layoutManager=_layoutManager;
 @property(retain, nonatomic) NSTextContainer *textContainer; // @synthesize textContainer=_textContainer;
 @property(retain, nonatomic) NSTextStorage *textStorage; // @synthesize textStorage=_textStorage;
-- (void).cxx_destruct;
 - (struct CGSize)sizeForConstrainedWidth:(double)arg1 forMaxNumberOfLines:(long long)arg2;
 - (struct CGSize)sizeForConstrainedWidth:(double)arg1;
 - (void)dealloc;

@@ -24,6 +24,7 @@
 
 + (id)awardDetailsInfoDialogMetadataViewForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
 + (id)inAppPurchasePopupWithImage:(id)arg1 title:(id)arg2 message:(id)arg3 confirmText:(id)arg4 cancelText:(id)arg5 actionHandler:(CDUnknownBlockType)arg6;
++ (id)cancelPremiumOfferDialogWithActionHandler:(CDUnknownBlockType)arg1;
 + (id)awardDetailsInfoDialogForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
 + (id)gildingFailureAfterPurchaseDialogWithActionHandler:(CDUnknownBlockType)arg1;
 + (id)inAppPurchaseValidationErrorDialogForPackageType:(long long)arg1 actionHandler:(CDUnknownBlockType)arg2;
@@ -32,6 +33,7 @@
 + (id)inAppPurchaseTransactionInFlightDialogForProductDescription:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
 + (id)inAppPurchaseTransactionInFlightDialogForProduct:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
 + (id)roadblockForRoadblockViewModel:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) BaseButton *activeButton; // @synthesize activeButton=_activeButton;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
@@ -39,7 +41,6 @@
 @property(retain, nonatomic) id context; // @synthesize context=_context;
 @property(nonatomic) __weak id <ImagePopupViewControllerActiveDelegate> activeDelegate; // @synthesize activeDelegate=_activeDelegate;
 @property(nonatomic) __weak id <ImagePopupViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 @property(readonly, nonatomic) AttributedLabelRegular *bodyMarkdownTextLabel;
 @property(readonly, nonatomic) ImagePopupContentView *imagePopupView;

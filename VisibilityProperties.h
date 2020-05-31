@@ -23,6 +23,7 @@
 }
 
 + (id)identifierForTarget:(id)arg1 action:(SEL)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) double timeIntervalVisibilityStateDuration; // @synthesize timeIntervalVisibilityStateDuration=_timeIntervalVisibilityStateDuration;
 @property(nonatomic) double timeIntervalEnteredVisibilityState; // @synthesize timeIntervalEnteredVisibilityState=_timeIntervalEnteredVisibilityState;
 @property(nonatomic) double timeIntervalEnteredVisibilityThreshold; // @synthesize timeIntervalEnteredVisibilityThreshold=_timeIntervalEnteredVisibilityThreshold;
@@ -33,7 +34,6 @@
 @property(nonatomic) double visibleThreshold; // @synthesize visibleThreshold=_visibleThreshold;
 @property(nonatomic) SEL action; // @synthesize action=_action;
 @property(nonatomic) __weak NSObject *target; // @synthesize target=_target;
-- (void).cxx_destruct;
 - (void)resetVisibilityEnterTimeIntervals;
 - (void)resetVisibleState;
 @property(readonly, nonatomic) NSDate *timeExitedVisibilityState;

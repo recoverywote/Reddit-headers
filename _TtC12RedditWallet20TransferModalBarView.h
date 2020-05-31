@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet20TransferModalBarView : UIView
 {
     // Error parsing type: , name: themeProvider
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

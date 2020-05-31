@@ -35,6 +35,7 @@
     NSString *_tracingLabelOverride;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *tracingLabelOverride; // @synthesize tracingLabelOverride=_tracingLabelOverride;
 @property(retain, nonatomic) NSUUID *parentCorrelationId; // @synthesize parentCorrelationId=_parentCorrelationId;
 @property(copy, nonatomic) NSArray *dataProviders; // @synthesize dataProviders=_dataProviders;
@@ -55,7 +56,6 @@
 @property __weak NSObject<ListingNetworkSourceDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parsingQueue; // @synthesize parsingQueue=_parsingQueue;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (void)notifyWillFetchDataForDataProvider:(id)arg1 correlationId:(id)arg2 parentId:(id)arg3;
 - (void)notifyDataProviderParentDidFetchDataWithParentId:(id)arg1;
 - (_Bool)shouldPostNotifications;

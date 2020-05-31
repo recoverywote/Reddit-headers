@@ -15,8 +15,8 @@
     ListingNetworkSource *_listingNetworkSource;
 }
 
-@property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
 - (void)listingNetworkSourceDidFail:(id)arg1;
 - (void)listingNetworkSourceDidFetchMoreData:(id)arg1;
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;

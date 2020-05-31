@@ -18,13 +18,13 @@
     NSString *_selectedIconName;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldRoundButtons; // @synthesize shouldRoundButtons=_shouldRoundButtons;
 @property(copy, nonatomic) NSString *selectedIconName; // @synthesize selectedIconName=_selectedIconName;
 @property(copy, nonatomic) NSString *normalIconName; // @synthesize normalIconName=_normalIconName;
 @property(retain, nonatomic) UIColor *highlightedBackgroundColor; // @synthesize highlightedBackgroundColor=_highlightedBackgroundColor;
 @property(retain, nonatomic) UIColor *selectedIconTintColor; // @synthesize selectedIconTintColor=_selectedIconTintColor;
 @property(retain, nonatomic) UIColor *normalIconTintColor; // @synthesize normalIconTintColor=_normalIconTintColor;
-- (void).cxx_destruct;
 - (void)updateSelectedIcon;
 - (void)updateNormalIcon;
 - (void)layout;

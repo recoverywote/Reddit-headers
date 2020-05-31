@@ -15,8 +15,8 @@
 }
 
 + (id)savedPostsAllCategoryName;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)fetchCategoriesWithCompletion:(CDUnknownBlockType)arg1;
 @property(readonly, nonatomic) RedditService *service;
 - (id)initWithAccountContext:(id)arg1;

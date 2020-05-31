@@ -21,6 +21,7 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) LOTKeyframeGroup *rotation; // @synthesize rotation=_rotation;
 @property(readonly, nonatomic) LOTKeyframeGroup *numberOfPoints; // @synthesize numberOfPoints=_numberOfPoints;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) LOTKeyframeGroup *outerRoundness; // @synthesize outerRoundness=_outerRoundness;
 @property(readonly, nonatomic) LOTKeyframeGroup *outerRadius; // @synthesize outerRadius=_outerRadius;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

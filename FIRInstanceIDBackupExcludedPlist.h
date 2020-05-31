@@ -15,10 +15,10 @@
     NSString *_subDirectoryName;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *subDirectoryName; // @synthesize subDirectoryName=_subDirectoryName;
 @property(copy, nonatomic) NSString *fileName; // @synthesize fileName=_fileName;
 @property(retain, nonatomic) NSDictionary *cachedPlistContents; // @synthesize cachedPlistContents=_cachedPlistContents;
-- (void).cxx_destruct;
 - (unsigned long long)supportedDirectory;
 - (id)plistPathInDirectory;
 - (_Bool)doesFileExist;

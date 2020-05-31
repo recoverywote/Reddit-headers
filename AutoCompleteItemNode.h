@@ -7,28 +7,31 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, ASTextNode, AutoCompleteItem;
+@protocol ViewContext;
 
 @interface AutoCompleteItemNode : BaseFeedDisplayNode
 {
     _Bool _shouldUseSafeBrowsingMode;
+    id <ViewContext> _viewContext;
     ASTextNode *_titleTextNode;
     ASTextNode *_detailTextNode;
     ASDisplayNode *_iconNode;
     AutoCompleteItem *_item;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldUseSafeBrowsingMode; // @synthesize shouldUseSafeBrowsingMode=_shouldUseSafeBrowsingMode;
 @property(retain, nonatomic) AutoCompleteItem *item; // @synthesize item=_item;
 @property(retain, nonatomic) ASDisplayNode *iconNode; // @synthesize iconNode=_iconNode;
 @property(retain, nonatomic) ASTextNode *detailTextNode; // @synthesize detailTextNode=_detailTextNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)detailStringForResult:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)configureSubredditCategory:(id)arg1;
 - (void)configureSubscribable:(id)arg1;
-- (id)initWithAutoCompleteItem:(id)arg1 shouldUseSafeBrowsingMode:(_Bool)arg2;
+- (id)initWithAutoCompleteItem:(id)arg1 viewContext:(id)arg2 shouldUseSafeBrowsingMode:(_Bool)arg3;
 
 @end
 

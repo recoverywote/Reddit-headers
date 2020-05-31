@@ -7,11 +7,13 @@
 #import <RedditUI/BaseControl.h>
 
 @class BaseButton, LocationControl, NSString, RoundedImageView, UIColor, UIImageView, UILabel, UIView;
+@protocol ViewContext;
 
 @interface SubredditBarView : BaseControl
 {
     LocationControl *_locationControl;
     RoundedImageView *_iconImageView;
+    id <ViewContext> _viewContext;
     id _dropDownTarget;
     id _rulesTarget;
     SEL _dropDownSelector;
@@ -24,6 +26,7 @@
     UIColor *_highlightImageColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *highlightImageColor; // @synthesize highlightImageColor=_highlightImageColor;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
 @property(retain, nonatomic) UIView *bottomLine; // @synthesize bottomLine=_bottomLine;
@@ -34,9 +37,9 @@
 @property(nonatomic) SEL dropDownSelector; // @synthesize dropDownSelector=_dropDownSelector;
 @property(nonatomic) __weak id rulesTarget; // @synthesize rulesTarget=_rulesTarget;
 @property(nonatomic) __weak id dropDownTarget; // @synthesize dropDownTarget=_dropDownTarget;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) RoundedImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) LocationControl *locationControl; // @synthesize locationControl=_locationControl;
-- (void).cxx_destruct;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
@@ -47,7 +50,7 @@
 - (void)layoutSubviews;
 - (void)updateWithSubreddit:(id)arg1;
 - (struct CGSize)calculatedSize;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

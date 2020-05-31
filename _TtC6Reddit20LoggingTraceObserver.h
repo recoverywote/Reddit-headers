@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP6Tracer13TraceObserver_-Protocol.h"
-
-@interface _TtC6Reddit20LoggingTraceObserver : NSObject <_TtP6Tracer13TraceObserver_>
+@interface _TtC6Reddit20LoggingTraceObserver : NSObject
 {
     // Error parsing type: , name: log
     // Error parsing type: , name: signpostName

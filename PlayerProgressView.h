@@ -48,6 +48,7 @@
     CDStruct_1b6d18a9 _elapsed;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PlayerProgressViewOptions *options; // @synthesize options=_options;
 @property(nonatomic) double initialScrubX; // @synthesize initialScrubX=_initialScrubX;
 @property(nonatomic) CDStruct_1b6d18a9 elapsed; // @synthesize elapsed=_elapsed;
@@ -82,7 +83,6 @@
 @property(nonatomic) _Bool isLiveStream; // @synthesize isLiveStream=_isLiveStream;
 @property(retain, nonatomic) NSString *playerItemURLString; // @synthesize playerItemURLString=_playerItemURLString;
 @property(nonatomic) _Bool isMinimized; // @synthesize isMinimized=_isMinimized;
-- (void).cxx_destruct;
 - (void)onReplayButtonTapped:(CDUnknownBlockType)arg1;
 - (void)onPauseButtonTapped:(CDUnknownBlockType)arg1;
 - (void)onPlayButtonTapped:(CDUnknownBlockType)arg1;

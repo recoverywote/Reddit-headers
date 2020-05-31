@@ -19,12 +19,12 @@
 }
 
 + (double)calculatedHeightWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <FeedPostCallToActionViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long style; // @synthesize style=_style;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) BaseLabel *callToActionButton; // @synthesize callToActionButton=_callToActionButton;
 @property(retain, nonatomic) BaseLabel *urlLabel; // @synthesize urlLabel=_urlLabel;
-- (void).cxx_destruct;
 - (void)viewDidTap:(id)arg1;
 - (void)layoutSubviews;
 - (void)configureWithData:(id)arg1 style:(unsigned long long)arg2 andDelegate:(id)arg3;

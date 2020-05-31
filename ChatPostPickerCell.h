@@ -7,14 +7,18 @@
 #import <RedditUI/BaseCollectionViewCell.h>
 
 @class ChatPostView;
+@protocol ViewContext;
 
 @interface ChatPostPickerCell : BaseCollectionViewCell
 {
     ChatPostView *_postView;
+    id <ViewContext> _viewContext;
 }
 
-@property(retain, nonatomic) ChatPostView *postView; // @synthesize postView=_postView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
+@property(retain, nonatomic) ChatPostView *postView; // @synthesize postView=_postView;
+- (void)configureWithViewContext:(id)arg1;
 - (void)prepareForReuse;
 - (void)commonInit;
 - (id)initWithCoder:(id)arg1;

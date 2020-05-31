@@ -9,30 +9,32 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class Carousel, CarouselContainerNode, LineNode, NSString;
-@protocol CarouselContainerNodeDelegate;
+@protocol CarouselContainerNodeDelegate, ViewContext;
 
 @interface FeedCarouselCellNode : BaseCollectionViewCellNode <ObjectObserverProtocol>
 {
     id <CarouselContainerNodeDelegate> _delegate;
     Carousel *_carousel;
     CarouselContainerNode *_containerNode;
+    id <ViewContext> _viewContext;
     CarouselContainerNode *_contentNode;
     LineNode *_lineNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LineNode *lineNode; // @synthesize lineNode=_lineNode;
 @property(retain, nonatomic) CarouselContainerNode *contentNode; // @synthesize contentNode=_contentNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) CarouselContainerNode *containerNode; // @synthesize containerNode=_containerNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(nonatomic) __weak id <CarouselContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)willBeginDisplayingCell;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didPassVisibilityThreshold;
 - (void)didBecomeFullyVisible;
 - (void)didExitVisibleState;
 - (void)createNodes;
-- (id)initWithCarousel:(id)arg1 delegate:(id)arg2;
+- (id)initWithViewContext:(id)arg1 carousel:(id)arg2 delegate:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

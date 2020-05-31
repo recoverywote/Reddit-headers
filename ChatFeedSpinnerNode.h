@@ -13,8 +13,8 @@
     ASDisplayNode *_spinnerNode;
 }
 
-@property(retain, nonatomic) ASDisplayNode *spinnerNode; // @synthesize spinnerNode=_spinnerNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ASDisplayNode *spinnerNode; // @synthesize spinnerNode=_spinnerNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)showFailureState;
 - (void)stopSpinning;

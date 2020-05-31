@@ -15,10 +15,10 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) ChatAvatarImageView *iconView; // @synthesize iconView=_iconView;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

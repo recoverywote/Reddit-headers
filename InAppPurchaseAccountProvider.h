@@ -15,8 +15,8 @@
     AccountManager *_accountManager;
 }
 
-@property(readonly, nonatomic) __weak AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 @property(readonly, nonatomic) NSString *usernameForInAppPurchase; // @synthesize usernameForInAppPurchase=_usernameForInAppPurchase;
 @property(readonly, nonatomic) RedditService *currentService; // @synthesize currentService=_currentService;
 @property(readonly, nonatomic) Account *currentAccount;

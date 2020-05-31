@@ -15,8 +15,8 @@
     ImageLabelContentView *_imageLabelContentView;
 }
 
-@property(retain, nonatomic) ImageLabelContentView *imageLabelContentView; // @synthesize imageLabelContentView=_imageLabelContentView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ImageLabelContentView *imageLabelContentView; // @synthesize imageLabelContentView=_imageLabelContentView;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 // Remaining properties

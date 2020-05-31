@@ -21,6 +21,7 @@
     struct UIEdgeInsets _originalScrollViewContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldHide; // @synthesize shouldHide=_shouldHide;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) PullRefreshView *spinner; // @synthesize spinner=_spinner;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) struct UIEdgeInsets originalScrollViewContentInsets; // @synthesize originalScrollViewContentInsets=_originalScrollViewContentInsets;
 @property(nonatomic) _Bool isSpinning; // @synthesize isSpinning=_isSpinning;
-- (void).cxx_destruct;
 - (void)impactLightOccured;
 - (struct CGSize)intrinsicContentSize;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;

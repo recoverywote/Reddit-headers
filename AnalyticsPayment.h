@@ -26,6 +26,7 @@
     NSString *_stored_credit_card_state;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool stored_credit_card_stateIsSet; // @synthesize stored_credit_card_stateIsSet=_stored_credit_card_stateIsSet;
 @property(copy, nonatomic) NSString *stored_credit_card_state; // @synthesize stored_credit_card_state=_stored_credit_card_state;
 @property(nonatomic) _Bool default_optionIsSet; // @synthesize default_optionIsSet=_default_optionIsSet;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSString *currency; // @synthesize currency=_currency;
 @property(nonatomic) _Bool methodIsSet; // @synthesize methodIsSet=_methodIsSet;
 @property(copy, nonatomic) NSString *method; // @synthesize method=_method;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -19,13 +19,13 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) double timeOut; // @synthesize timeOut=_timeOut;
 @property(nonatomic) double delay; // @synthesize delay=_delay;
 @property(nonatomic) long long maxAttempts; // @synthesize maxAttempts=_maxAttempts;
 @property(retain, nonatomic) id <BNCAppleAdClientProtocol> adClient; // @synthesize adClient=_adClient;
 @property(nonatomic) _Bool ignoreAppleTestData; // @synthesize ignoreAppleTestData=_ignoreAppleTestData;
 @property(nonatomic) _Bool enableAppleSearchAdsCheck; // @synthesize enableAppleSearchAdsCheck=_enableAppleSearchAdsCheck;
-- (void).cxx_destruct;
 - (void)requestAttributionWithCompletion:(CDUnknownBlockType)arg1;
 - (void)requestAttributionWithMaxAttempts:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)checkAppleSearchAdsSaveTo:(id)arg1 installDate:(id)arg2 completion:(CDUnknownBlockType)arg3;

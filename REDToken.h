@@ -17,12 +17,12 @@
     BaseView *_backgroundView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(copy, nonatomic) CDUnknownBlockType didTapTokenBlock; // @synthesize didTapTokenBlock=_didTapTokenBlock;
 @property(nonatomic) _Bool highlighted; // @synthesize highlighted=_highlighted;
-- (void).cxx_destruct;
 - (void)didTapToken:(id)arg1;
 - (void)layoutSubviews;
 - (void)setTitleText:(id)arg1;

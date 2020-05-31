@@ -15,10 +15,10 @@
     UIView *_originalParentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *originalParentView; // @synthesize originalParentView=_originalParentView;
 @property(readonly, nonatomic) RootViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
 @property(readonly, nonatomic) UserDrawerViewController *userDrawerViewController; // @synthesize userDrawerViewController=_userDrawerViewController;
-- (void).cxx_destruct;
 - (void)dismissalTransitionDidEnd:(_Bool)arg1;
 - (void)presentationTransitionDidEnd:(_Bool)arg1;
 - (void)presentationTransitionWillBegin;

@@ -18,13 +18,13 @@
     UIColor *_selectedColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *selectedColor; // @synthesize selectedColor=_selectedColor;
 @property(retain, nonatomic) ASDisplayNode *selectedLineNode; // @synthesize selectedLineNode=_selectedLineNode;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 @property(nonatomic) _Bool isSelected; // @synthesize isSelected=_isSelected;
 @property(retain, nonatomic) MetaBadgeManagementTab *tab; // @synthesize tab=_tab;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)lineColor;
 - (id)contentColor;

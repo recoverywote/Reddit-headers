@@ -15,8 +15,8 @@
 
 + (id)searchViewControllerWithAccountContext:(id)arg1 deepLinkURL:(id)arg2 error:(id *)arg3;
 + (id)searchViewControllerWithAccountContext:(id)arg1 objects:(id)arg2 attemptAutopill:(_Bool)arg3 promotedOrigin:(_Bool)arg4 analyticsContext:(id)arg5;
-@property(nonatomic) __weak UIViewController *vc; // @synthesize vc=_vc;
 - (void).cxx_destruct;
+@property(nonatomic) __weak UIViewController *vc; // @synthesize vc=_vc;
 - (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContext:(id)arg2 object:(id)arg3;
 - (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContextSeeMoreTopFlairs:(id)arg2 model:(id)arg3;
 - (void)navigateToSearchViewControllerWithAccountContext:(id)arg1 railsContextSeeMoreSubreddits:(id)arg2;

@@ -15,10 +15,10 @@
     UISwitch *_accessorySwitch;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UISwitch *accessorySwitch; // @synthesize accessorySwitch=_accessorySwitch;
 @property(readonly, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(readonly, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (double)maxTextViewWidth;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;

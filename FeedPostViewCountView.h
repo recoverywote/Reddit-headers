@@ -16,9 +16,9 @@
 
 + (double)topPaddingForPostType:(unsigned long long)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *viewCountLabel; // @synthesize viewCountLabel=_viewCountLabel;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)configureWithData:(id)arg1;
 - (void)prepareForReuse;

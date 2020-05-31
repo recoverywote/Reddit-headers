@@ -16,9 +16,9 @@
 
 + (double)calculatedHeightForWidth:(double)arg1 withAttributedString:(id)arg2;
 + (double)calculatedHeightForWidth:(double)arg1 withData:(id)arg2 andFont:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *accessoryImageView; // @synthesize accessoryImageView=_accessoryImageView;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)setCustomImageAccessory:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

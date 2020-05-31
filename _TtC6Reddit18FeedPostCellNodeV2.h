@@ -15,6 +15,7 @@
 @interface _TtC6Reddit18FeedPostCellNodeV2 : BaseCollectionViewCellNode <ChainedCarouselDisplaying, FeedPostCollectionViewItem>
 {
     // Error parsing type: , name: post
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: options
     // Error parsing type: , name: observations
     // Error parsing type: , name: delegate
@@ -35,7 +36,7 @@
 - (id)init;
 - (id)initWithViewControllerBlock:(CDUnknownBlockType)arg1 didLoadBlock:(CDUnknownBlockType)arg2;
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 visibilityTracker:(id)arg4 carouselContainerNodeDelegate:(id)arg5 postVisibilityDelegate:(id)arg6 delegate:(id)arg7;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 visibilityTracker:(id)arg5 carouselContainerNodeDelegate:(id)arg6 postVisibilityDelegate:(id)arg7 delegate:(id)arg8;
 @property(nonatomic, retain) Carousel *chainedCarousel; // @synthesize chainedCarousel;
 @property(nonatomic, retain) ASDisplayNode *chainedCarouselContainerNode; // @synthesize chainedCarouselContainerNode;
 @property(nonatomic, retain) _TtC6Reddit24FeedPostModActionBarNode *modBarNode; // @synthesize modBarNode;

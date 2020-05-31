@@ -21,6 +21,7 @@
     BaseButtonNode *_joinNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButtonNode *joinNode; // @synthesize joinNode=_joinNode;
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
 @property(retain, nonatomic) ASTextNode *subTitleNode; // @synthesize subTitleNode=_subTitleNode;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <FocusVerticalsSubredditNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) FocusVerticalsDiscoveryUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didTapNode:(id)arg1;
 - (void)didTapSubscriptionNode:(id)arg1;

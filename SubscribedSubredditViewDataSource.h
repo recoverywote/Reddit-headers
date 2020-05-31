@@ -18,12 +18,12 @@
     _TtC6Reddit29CommunityCreateFlowController *_flowController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) AccountSubscriptionDataSource *dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) NSString *analyticsPageType; // @synthesize analyticsPageType=_analyticsPageType;
 @property(nonatomic) _Bool shouldShowCommunityCreation; // @synthesize shouldShowCommunityCreation=_shouldShowCommunityCreation;
-- (void).cxx_destruct;
 - (void)setController:(id)arg1;
 - (_Bool)tableView:(id)arg1 handleDidSelectRowAtIndexPath:(id)arg2;
 - (id)viewControllerForIndexPath:(id)arg1;

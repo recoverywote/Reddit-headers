@@ -13,8 +13,8 @@
     CarouselItemNode *_itemNode;
 }
 
-@property(retain, nonatomic) CarouselItemNode *itemNode; // @synthesize itemNode=_itemNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) CarouselItemNode *itemNode; // @synthesize itemNode=_itemNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didEndDisplayingCell;
 - (void)didPassVisibilityThreshold;

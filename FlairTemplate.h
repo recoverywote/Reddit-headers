@@ -27,6 +27,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *backgroundColorString; // @synthesize backgroundColorString=_backgroundColorString;
 @property(nonatomic) unsigned long long contentType; // @synthesize contentType=_contentType;
 @property(nonatomic) long long maxEmojis; // @synthesize maxEmojis=_maxEmojis;
@@ -37,7 +38,6 @@
 @property(copy, nonatomic) NSArray *richText; // @synthesize richText=_richText;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) long long textType; // @synthesize textType=_textType;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

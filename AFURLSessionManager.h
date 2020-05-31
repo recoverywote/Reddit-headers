@@ -47,6 +47,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType downloadTaskDidResume; // @synthesize downloadTaskDidResume=_downloadTaskDidResume;
 @property(copy, nonatomic) CDUnknownBlockType downloadTaskDidWriteData; // @synthesize downloadTaskDidWriteData=_downloadTaskDidWriteData;
 @property(copy, nonatomic) CDUnknownBlockType downloadTaskDidFinishDownloading; // @synthesize downloadTaskDidFinishDownloading=_downloadTaskDidFinishDownloading;
@@ -73,7 +74,6 @@
 @property(retain, nonatomic) AFSecurityPolicy *securityPolicy; // @synthesize securityPolicy=_securityPolicy;
 @property(retain, nonatomic) id <AFURLResponseSerialization> responseSerializer; // @synthesize responseSerializer=_responseSerializer;
 @property(retain, nonatomic) NSOperationQueue *operationQueue; // @synthesize operationQueue=_operationQueue;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

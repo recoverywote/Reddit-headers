@@ -13,8 +13,8 @@
     NSString *_adDistance;
 }
 
-@property(copy, nonatomic) NSString *adDistance; // @synthesize adDistance=_adDistance;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *adDistance; // @synthesize adDistance=_adDistance;
 - (id)dynamicParameters;
 - (id)postsAndCommentsFromData:(id)arg1;
 - (void)parseMoreData:(id)arg1;

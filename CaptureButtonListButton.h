@@ -16,10 +16,10 @@
     KeyValueObservation *_selectionObservation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) KeyValueObservation *selectionObservation; // @synthesize selectionObservation=_selectionObservation;
 @property(nonatomic) __weak id <CaptureButtonListButtonDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) CaptureButtonListItem *buttonData; // @synthesize buttonData=_buttonData;
-- (void).cxx_destruct;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;

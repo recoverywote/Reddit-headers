@@ -14,9 +14,9 @@
     NSArray *_categoryNames;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *categoryNames; // @synthesize categoryNames=_categoryNames;
 @property(retain, nonatomic) SavedCategoryPresenter *savedCategoryPresenter; // @synthesize savedCategoryPresenter=_savedCategoryPresenter;
-- (void).cxx_destruct;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;

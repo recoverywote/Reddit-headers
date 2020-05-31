@@ -17,9 +17,9 @@
 }
 
 + (id)filterWithSeparatorFmt:(id)arg1 keys:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *keys; // @synthesize keys=_keys;
 @property(retain, nonatomic) NSString *separatorFmt; // @synthesize separatorFmt=_separatorFmt;
-- (void).cxx_destruct;
 - (void)filterReports:(id)arg1 onCompletion:(CDUnknownBlockType)arg2;
 - (id)initWithSeparatorFmt:(id)arg1 keysArray:(id)arg2;
 - (id)initWithSeparatorFmt:(id)arg1 keys:(id)arg2;

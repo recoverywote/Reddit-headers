@@ -19,13 +19,13 @@
     struct UIEdgeInsets _internalInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <FeedPostGalleryCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct UIEdgeInsets internalInsets; // @synthesize internalInsets=_internalInsets;
 @property(retain, nonatomic) ASTextNode *labelNode; // @synthesize labelNode=_labelNode;
 @property(retain, nonatomic) FeedPostMediaContentNode *mediaNode; // @synthesize mediaNode=_mediaNode;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;

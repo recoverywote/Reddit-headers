@@ -16,9 +16,9 @@
 }
 
 + (id)sharedSession;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) NSMutableDictionary *assetCache; // @synthesize assetCache=_assetCache;
-- (void).cxx_destruct;
 - (void)handleInitializationFailedForHLSAsset:(id)arg1;
 - (id)invalidAssetError;
 - (void)startDownloadForPlaylist:(id)arg1 completion:(CDUnknownBlockType)arg2;

@@ -17,10 +17,10 @@
     unsigned long long _feedRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
 @property(nonatomic) unsigned long long feedSort; // @synthesize feedSort=_feedSort;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (id)diffIdentifier;

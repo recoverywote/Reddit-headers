@@ -23,23 +23,20 @@
 {
     BaseCollectionView *_collectionView;
     LoggedOutView *_loggedOutView;
-    unsigned long long _filterType;
 }
 
 + (id)nameForFilterType:(unsigned long long)arg1;
-@property(nonatomic) unsigned long long filterType; // @synthesize filterType=_filterType;
+- (void).cxx_destruct;
 @property(retain, nonatomic) LoggedOutView *loggedOutView; // @synthesize loggedOutView=_loggedOutView;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (void)logAnalyticsEventWithAction:(id)arg1 notification:(id)arg2;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 @property(readonly, nonatomic) NSString *analyticsScreenViewName;
 - (_Bool)attemptScrollMainContentViewToTop;
 - (void)userDidPullToRefresh;
 - (void)reloadForCompositeInboxViewController:(id)arg1;
-- (void)loggedOutViewDidTapSignup:(id)arg1;
-- (void)loggedOutViewDidTapLogin:(id)arg1;
-- (void)configureLoggedOutView;
+- (void)loggedOutViewDidTapSignup;
+- (void)loggedOutViewDidTapLogin;
 - (void)reportActionSheetDidBlockUser:(id)arg1;
 - (void)userWasBlocked:(id)arg1;
 - (id)pageItemId;
@@ -69,7 +66,6 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (void)dealloc;
 - (id)initWithPresenter:(id)arg1;
 
 // Remaining properties

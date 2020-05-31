@@ -29,6 +29,7 @@
     FloatingUpdateView *_commentUpdateView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FloatingUpdateView *commentUpdateView; // @synthesize commentUpdateView=_commentUpdateView;
 @property(retain, nonatomic) NSLayoutConstraint *trailingConstraint; // @synthesize trailingConstraint=_trailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingConstraint; // @synthesize leadingConstraint=_leadingConstraint;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(nonatomic) __weak PostDetailViewController *postDetailViewController; // @synthesize postDetailViewController=_postDetailViewController;
 @property(retain, nonatomic) ASDisplayNode *commentBarNode; // @synthesize commentBarNode=_commentBarNode;
-- (void).cxx_destruct;
 - (void)didTapCommentUpdate:(id)arg1;
 - (void)didReceiveNewLiveComment:(id)arg1;
 - (void)createCommentBarNode;

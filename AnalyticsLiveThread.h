@@ -20,11 +20,11 @@
     NSString *_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool is_announcementIsSet; // @synthesize is_announcementIsSet=_is_announcementIsSet;
 @property(nonatomic) _Bool is_announcement; // @synthesize is_announcement=_is_announcement;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

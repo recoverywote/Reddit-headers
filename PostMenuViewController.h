@@ -27,6 +27,7 @@
 }
 
 + (id)allPostTypes;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *analyticBaseURL; // @synthesize analyticBaseURL=_analyticBaseURL;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) TextureBackgroundView *menuContainerView; // @synthesize menuContainerView=_menuContainerView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGSize)preferredContentSize;
 - (void)applySafeContrastTitleColor;
 - (void)layoutViews;

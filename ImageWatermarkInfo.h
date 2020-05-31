@@ -15,10 +15,10 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldAddLogo; // @synthesize shouldAddLogo=_shouldAddLogo;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
-- (void).cxx_destruct;
 - (id)initWithSubredditName:(id)arg1 username:(id)arg2 shouldAddLogo:(_Bool)arg3;
 
 @end

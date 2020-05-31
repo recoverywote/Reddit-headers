@@ -21,10 +21,10 @@
 + (void)sendDiagnosticsData:(id)arg1;
 + (id)deviceModel;
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GULHeartbeatDateStorage *heartbeatDateStorage; // @synthesize heartbeatDateStorage=_heartbeatDateStorage;
 @property(readonly, nonatomic) GDTCORTransport *transport; // @synthesize transport=_transport;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *diagnosticsQueue; // @synthesize diagnosticsQueue=_diagnosticsQueue;
-- (void).cxx_destruct;
 - (_Bool)isDate:(id)arg1 inSameDayOrBeforeThan:(id)arg2;
 - (void)setHeartbeatFlagIfNeededToConfig:(struct _logs_proto_mobilesdk_ios_ICoreConfiguration *)arg1;
 - (void)sendDiagnosticsData:(id)arg1;

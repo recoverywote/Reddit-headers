@@ -18,12 +18,12 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool thirdPartyAudioWasSilenced; // @synthesize thirdPartyAudioWasSilenced=_thirdPartyAudioWasSilenced;
 @property(nonatomic) _Bool thirdPartyAudioIsPlaying; // @synthesize thirdPartyAudioIsPlaying=_thirdPartyAudioIsPlaying;
 @property(retain, nonatomic) NSTimer *audioDeactivationTimer; // @synthesize audioDeactivationTimer=_audioDeactivationTimer;
 @property(nonatomic) long long numberOfAudioSessionsActive; // @synthesize numberOfAudioSessionsActive=_numberOfAudioSessionsActive;
 @property(nonatomic) _Bool audioSessionActive; // @synthesize audioSessionActive=_audioSessionActive;
-- (void).cxx_destruct;
 - (void)activateAudioSession;
 - (void)deactivateAudioSession;
 - (void)tryDeactivateAudioSession;

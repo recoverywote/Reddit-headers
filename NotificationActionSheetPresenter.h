@@ -17,10 +17,10 @@
     CDUnknownBlockType _completionHandler;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)present;
 - (id)initWithController:(id)arg1 subreddit:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;

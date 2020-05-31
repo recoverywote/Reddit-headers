@@ -34,6 +34,7 @@
     EmptyCustomFeedView *_emptyCustomFeedView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) EmptyCustomFeedView *emptyCustomFeedView; // @synthesize emptyCustomFeedView=_emptyCustomFeedView;
 @property(retain, nonatomic) MultiCommunityListHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(nonatomic) _Bool isOwner; // @synthesize isOwner=_isOwner;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabParentDelegate; // @synthesize pagedTabParentDelegate=_pagedTabParentDelegate;
 @property(nonatomic) __weak id <MultiSubredditListDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)pageItemText;
 - (void)multiCommunityListHeaderViewDidTapJoinAllButton:(id)arg1;

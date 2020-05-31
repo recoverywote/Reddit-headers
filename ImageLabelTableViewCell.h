@@ -13,8 +13,8 @@
     ImageLabelContentView *_imageLabelView;
 }
 
-@property(retain, nonatomic) ImageLabelContentView *imageLabelView; // @synthesize imageLabelView=_imageLabelView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ImageLabelContentView *imageLabelView; // @synthesize imageLabelView=_imageLabelView;
 - (void)setCustomAccessoryView:(id)arg1;
 - (void)setCustomAccessoryImage:(id)arg1;
 - (void)setAccessoryView:(id)arg1;

@@ -28,6 +28,7 @@
 + (id)dictionaryFromJSONData:(id)arg1 error:(id *)arg2;
 + (id)authTokenWithJSONDict:(id)arg1 date:(id)arg2 error:(id *)arg3;
 + (id)authTokenWithGenerateTokenAPIJSONData:(id)arg1 date:(id)arg2 error:(id *)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *IIDDefaultToken; // @synthesize IIDDefaultToken=_IIDDefaultToken;
 @property(nonatomic) long long registrationStatus; // @synthesize registrationStatus=_registrationStatus;
 @property(retain, nonatomic) FIRInstallationsStoredAuthToken *authToken; // @synthesize authToken=_authToken;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) NSString *firebaseInstallationID; // @synthesize firebaseInstallationID=_firebaseInstallationID;
 @property(readonly, nonatomic) NSString *firebaseAppName; // @synthesize firebaseAppName=_firebaseAppName;
 @property(readonly, nonatomic) NSString *appID; // @synthesize appID=_appID;
-- (void).cxx_destruct;
 - (id)identifier;
 - (id)storedItem;
 - (void)updateWithStoredItem:(id)arg1;

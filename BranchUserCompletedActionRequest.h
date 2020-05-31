@@ -14,9 +14,9 @@
     NSDictionary *_state;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *state; // @synthesize state=_state;
 @property(retain, nonatomic) NSString *action; // @synthesize action=_action;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)processResponse:(id)arg1 error:(id)arg2;

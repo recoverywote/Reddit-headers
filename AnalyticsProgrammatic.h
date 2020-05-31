@@ -24,6 +24,7 @@
     NSString *_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool partnerIsSet; // @synthesize partnerIsSet=_partnerIsSet;
@@ -32,7 +33,6 @@
 @property(nonatomic) long long count; // @synthesize count=_count;
 @property(nonatomic) _Bool ad_unitIsSet; // @synthesize ad_unitIsSet=_ad_unitIsSet;
 @property(copy, nonatomic) NSString *ad_unit; // @synthesize ad_unit=_ad_unit;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

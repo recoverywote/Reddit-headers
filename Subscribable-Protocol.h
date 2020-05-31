@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class Account, NSString;
 
 @protocol Subscribable <NSObject>
 @property(readonly, nonatomic) long long notificationLevel;
@@ -19,8 +19,6 @@
 @property(readonly, copy, nonatomic) NSString *unsubscribeString;
 @property(readonly, copy, nonatomic) NSString *subscribeString;
 @property(readonly, copy, nonatomic) NSString *editString;
-@property(readonly, nonatomic) _Bool allowEdit;
-@property(readonly, nonatomic) _Bool allowSubscribe;
 @property(readonly, nonatomic) _Bool isSubscribed;
 @property(readonly, nonatomic) long long subscribersCount;
 @property(readonly, copy, nonatomic) NSString *nonPrefixedTitle;
@@ -32,6 +30,8 @@
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, copy, nonatomic) NSString *subscriptionPk;
 - (NSString *)subscriptionStatusStringForSuccess:(_Bool)arg1;
-- (NSString *)supplementalInfoStringWithStyle:(_Bool)arg1;
+- (_Bool)isEditAllowedForAccount:(Account *)arg1;
+- (_Bool)isSubscribeAllowedForAccount:(Account *)arg1;
+- (NSString *)supplementalInfoStringWithStyle:(_Bool)arg1 currentAccount:(Account *)arg2;
 @end
 

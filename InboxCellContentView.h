@@ -21,6 +21,7 @@
     BaseButton *_overflowButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *overflowButton; // @synthesize overflowButton=_overflowButton;
 @property(nonatomic) double metadataViewVerticalPadding; // @synthesize metadataViewVerticalPadding=_metadataViewVerticalPadding;
 @property(retain, nonatomic) UIView *metadataView; // @synthesize metadataView=_metadataView;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
 @property(nonatomic) __weak id <InboxCellContentViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) id <ReportableModel> model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)didTapOverflowButton:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -20,12 +20,12 @@
     FeedSpinnerView *_firstLoadSpinner;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) SubredditMenuSet *menuSet; // @synthesize menuSet=_menuSet;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
 - (id)screenViewAnalyticsEvent;

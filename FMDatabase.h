@@ -35,6 +35,7 @@
 + (id)FMDBUserVersion;
 + (id)databaseWithURL:(id)arg1;
 + (id)databaseWithPath:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *databasePath; // @synthesize databasePath=_databasePath;
 @property(readonly, nonatomic) _Bool isInTransaction; // @synthesize isInTransaction=_isInTransaction;
 @property(nonatomic) _Bool isOpen; // @synthesize isOpen=_isOpen;
@@ -43,7 +44,6 @@
 @property _Bool crashOnErrors; // @synthesize crashOnErrors=_crashOnErrors;
 @property _Bool checkedOut; // @synthesize checkedOut=_checkedOut;
 @property _Bool traceExecution; // @synthesize traceExecution=_traceExecution;
-- (void).cxx_destruct;
 - (void)resultErrorTooBigInContext:(void *)arg1;
 - (void)resultErrorNoMemoryInContext:(void *)arg1;
 - (void)resultErrorCode:(int)arg1 context:(void *)arg2;

@@ -27,6 +27,7 @@
     DiscoveryUnitFetcher *_discoveryUnitFetcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) DiscoveryUnitFetcher *discoveryUnitFetcher; // @synthesize discoveryUnitFetcher=_discoveryUnitFetcher;
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
 @property(nonatomic) unsigned long long feedSort; // @synthesize feedSort=_feedSort;
@@ -39,7 +40,6 @@
 @property(nonatomic) __weak id <SubredditPagePresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)addSubredditToCustomFeed:(id)arg1;
 - (_Bool)hasMenuTab;
 - (id)subredditTabs;

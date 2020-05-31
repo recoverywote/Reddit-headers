@@ -19,11 +19,11 @@
     BaseButton *_closeButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) TextStylerPickerView *pickerView; // @synthesize pickerView=_pickerView;
 @property(retain, nonatomic) BaseButton *keyboardStyleButton; // @synthesize keyboardStyleButton=_keyboardStyleButton;
 @property(nonatomic) __weak id <KeyboardStyleEditorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)textStylerPickerView:(id)arg1 didSelectFontColor:(id)arg2;
 - (void)textStylerPickerView:(id)arg1 didSelectFontBackgroundColor:(id)arg2;
 - (void)textStylerPickerView:(id)arg1 didSelectFont:(id)arg2;

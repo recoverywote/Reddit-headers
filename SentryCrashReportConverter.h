@@ -20,6 +20,7 @@
     NSString *_diagnosis;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *diagnosis; // @synthesize diagnosis=_diagnosis;
 @property(retain, nonatomic) NSDictionary *systemContext; // @synthesize systemContext=_systemContext;
 @property(retain, nonatomic) NSArray *threads; // @synthesize threads=_threads;
@@ -28,7 +29,6 @@
 @property(nonatomic) long long crashedThreadIndex; // @synthesize crashedThreadIndex=_crashedThreadIndex;
 @property(retain, nonatomic) NSDictionary *report; // @synthesize report=_report;
 @property(retain, nonatomic) NSDictionary *userContext; // @synthesize userContext=_userContext;
-- (void).cxx_destruct;
 - (id)convertThreads;
 - (id)extractMechanism;
 - (void)enhanceValueFromNotableAddresses:(id)arg1;

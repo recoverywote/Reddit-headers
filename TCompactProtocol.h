@@ -23,6 +23,7 @@
     NSString *_currentMessageName;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *currentMessageName; // @synthesize currentMessageName=_currentMessageName;
 @property(retain, nonatomic) NSNumber *booleanValue; // @synthesize booleanValue=_booleanValue;
 @property(retain, nonatomic) NSNumber *boolFieldId; // @synthesize boolFieldId=_boolFieldId;
@@ -31,7 +32,6 @@
 @property(nonatomic) short lastFieldId; // @synthesize lastFieldId=_lastFieldId;
 @property(retain, nonatomic) NSMutableArray *lastField; // @synthesize lastField=_lastField;
 @property(retain, nonatomic) id <TTransport> transport; // @synthesize transport=_transport;
-- (void).cxx_destruct;
 - (unsigned char)compactTypeForTType:(unsigned char)arg1;
 - (_Bool)ttype:(char *)arg1 forCompactType:(unsigned char)arg2 error:(id *)arg3;
 - (long long)zigZagToi64:(unsigned long long)arg1;

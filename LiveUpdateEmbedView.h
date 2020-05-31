@@ -17,9 +17,9 @@
     NSArray *_embeds;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *embeds; // @synthesize embeds=_embeds;
 @property(nonatomic) __weak id <LiveUpdateEmbedViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)configureWithEmbedData:(id)arg1;
 - (void)themeDidChange:(id)arg1;
 - (void)prepareForReuse;

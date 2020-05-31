@@ -14,9 +14,9 @@
     UnfairLock *_lock;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UnfairLock *lock; // @synthesize lock=_lock;
 @property(retain, nonatomic) AccountSettings *accountSettings; // @synthesize accountSettings=_accountSettings;
-- (void).cxx_destruct;
 - (void)didLoadPost:(id)arg1;
 - (void)clearHiddenPosts;
 - (_Bool)isPostHidden:(id)arg1;

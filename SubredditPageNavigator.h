@@ -15,9 +15,9 @@
     SubredditPageViewController *_vc;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SubredditPageViewController *vc; // @synthesize vc=_vc;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)presentViewController:(id)arg1;
 - (void)pushViewController:(id)arg1;
 - (void)navigateToCustomFeed:(id)arg1;

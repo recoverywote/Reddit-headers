@@ -17,12 +17,12 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool isFinished; // @synthesize isFinished=_isFinished;
 @property(nonatomic) _Bool isExecuting; // @synthesize isExecuting=_isExecuting;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) InAppPurchaseMetadata *metadata; // @synthesize metadata=_metadata;
-- (void).cxx_destruct;
 - (void)didFinishWithError:(id)arg1;
 - (void)willBegin;
 - (void)start;

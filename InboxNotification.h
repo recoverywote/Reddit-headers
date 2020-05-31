@@ -26,6 +26,7 @@
 
 + (_Bool)isKindEqualToComment:(id)arg1;
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isUnread; // @synthesize isUnread=_isUnread;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(copy, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
@@ -38,7 +39,6 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldHideNotificationWhenUnauthorized;
 - (id)initWithData:(id)arg1;
 

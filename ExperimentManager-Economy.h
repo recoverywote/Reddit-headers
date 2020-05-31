@@ -7,6 +7,7 @@
 #import <RedditCore/ExperimentManager.h>
 
 @interface ExperimentManager (Economy)
+@property(nonatomic, readonly) _Bool isEconAwardsPlaqueEnabled;
 @property(nonatomic, readonly) _Bool isEconCommentHighlightingEnabled;
 @property(nonatomic, readonly) _Bool isEconFeedAwardsV2SheetEnabled;
 @property(nonatomic, readonly) _Bool isEconRPANAwardsV2SheetEnabled;

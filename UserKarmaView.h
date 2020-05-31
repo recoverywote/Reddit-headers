@@ -19,12 +19,12 @@
 
 + (double)defaultHeight;
 + (id)karmaStringWithKarma:(id)arg1 withText:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *horizontalLine; // @synthesize horizontalLine=_horizontalLine;
 @property(retain, nonatomic) BaseView *verticalLine; // @synthesize verticalLine=_verticalLine;
 @property(retain, nonatomic) BaseLabel *commentKarmaLabel; // @synthesize commentKarmaLabel=_commentKarmaLabel;
 @property(retain, nonatomic) BaseLabel *postKarmaLabel; // @synthesize postKarmaLabel=_postKarmaLabel;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
-- (void).cxx_destruct;
 - (void)configureUser;
 - (void)addConstraints;
 - (void)addContentViews;

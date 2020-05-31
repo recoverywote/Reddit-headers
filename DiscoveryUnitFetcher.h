@@ -13,8 +13,8 @@
     NSObject<TemplateParserContext> *_delegate;
 }
 
-@property(nonatomic) __weak NSObject<TemplateParserContext> *delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak NSObject<TemplateParserContext> *delegate; // @synthesize delegate=_delegate;
 - (void)fetchDataWithDiscoveryUnit:(id)arg1 forDiscoveryUnitViewModel:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)initWithDataProviderDelegate:(id)arg1;
 

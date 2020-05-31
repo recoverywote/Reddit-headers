@@ -16,8 +16,8 @@
 + (id)tokenInfoFromKeychainItem:(id)arg1;
 + (id)serviceKeyForAuthorizedEntity:(id)arg1 scope:(id)arg2;
 + (id)defaultStore;
-@property(retain, nonatomic) FIRInstanceIDAuthKeychain *keychain; // @synthesize keychain=_keychain;
 - (void).cxx_destruct;
+@property(retain, nonatomic) FIRInstanceIDAuthKeychain *keychain; // @synthesize keychain=_keychain;
 - (void)removeAllTokensWithHandler:(CDUnknownBlockType)arg1;
 - (void)removeTokenWithAuthorizedEntity:(id)arg1 scope:(id)arg2;
 - (void)saveTokenInfo:(id)arg1 handler:(CDUnknownBlockType)arg2;

@@ -24,6 +24,7 @@
 + (id)checkinSecretFromKeychainContent:(id)arg1;
 + (id)checkinDeviceIDFromKeychainContent:(id)arg1;
 + (id)preferencesFromKeychainContents:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasPreCachedAuthCredentials; // @synthesize hasPreCachedAuthCredentials=_hasPreCachedAuthCredentials;
 @property(retain, nonatomic) NSMutableDictionary *gServicesData; // @synthesize gServicesData=_gServicesData;
 @property(nonatomic) long long lastCheckinTimestampMillis; // @synthesize lastCheckinTimestampMillis=_lastCheckinTimestampMillis;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *deviceDataVersion; // @synthesize deviceDataVersion=_deviceDataVersion;
 @property(copy, nonatomic) NSString *secretToken; // @synthesize secretToken=_secretToken;
 @property(copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
-- (void).cxx_destruct;
 - (_Bool)hasValidCheckinInfo;
 - (_Bool)hasCheckinInfo;
 - (id)checkinPlistContents;

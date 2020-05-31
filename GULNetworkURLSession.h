@@ -35,9 +35,9 @@
 + (id)sessionIDToFetcherMap;
 + (id)fetcherWithSessionIdentifier:(id)arg1;
 + (void)handleEventsForBackgroundURLSessionID:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <GULNetworkLoggerDelegate> loggerDelegate; // @synthesize loggerDelegate=_loggerDelegate;
 @property(nonatomic, getter=isBackgroundNetworkEnabled) _Bool backgroundNetworkEnabled; // @synthesize backgroundNetworkEnabled=_backgroundNetworkEnabled;
-- (void).cxx_destruct;
 - (void)populateSessionConfig:(id)arg1 withRequest:(id)arg2;
 - (void)callCompletionHandler:(CDUnknownBlockType)arg1 withResponse:(id)arg2 data:(id)arg3 error:(id)arg4;
 - (void)URLSession:(id)arg1 task:(id)arg2 willPerformHTTPRedirection:(id)arg3 newRequest:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;

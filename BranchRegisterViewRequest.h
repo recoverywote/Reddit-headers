@@ -14,9 +14,9 @@
     CDUnknownBlockType _callback;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 @property(retain, nonatomic) NSDictionary *params; // @synthesize params=_params;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)processResponse:(id)arg1 error:(id)arg2;

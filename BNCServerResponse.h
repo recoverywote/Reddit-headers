@@ -14,9 +14,9 @@
     id _data;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id data; // @synthesize data=_data;
 @property(retain, nonatomic) NSNumber *statusCode; // @synthesize statusCode=_statusCode;
-- (void).cxx_destruct;
 - (id)description;
 
 @end

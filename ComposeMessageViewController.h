@@ -21,13 +21,13 @@
     Subreddit *_subreddit;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool messageModeratorsMode; // @synthesize messageModeratorsMode=_messageModeratorsMode;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(retain, nonatomic) ComposeMessageView *composeView; // @synthesize composeView=_composeView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak NSObject<ComposeMessageViewControllerDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)analyticsScreenViewName;
 - (void)requestToNavigateAwayWithCompletion:(CDUnknownBlockType)arg1;
 - (void)didTapPostButton:(id)arg1;

@@ -15,8 +15,8 @@
 
 + (unsigned long long)themeType;
 + (id)themeName;
-@property(readonly, nonatomic) _TtC8RedditUI10ColorGuide *colorGuide; // @synthesize colorGuide=_colorGuide;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _TtC8RedditUI10ColorGuide *colorGuide; // @synthesize colorGuide=_colorGuide;
 @property(readonly, nonatomic) long long navigationBarStyle;
 @property(readonly, nonatomic) long long statusBarStyle;
 @property(readonly, nonatomic) NSString *feedPostThumbnailPlaceholderImageName;

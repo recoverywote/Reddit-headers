@@ -26,9 +26,9 @@
 + (id)temporaryDirectory;
 + (id)sharedManager;
 + (void)load;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *serialProcessingQueue; // @synthesize serialProcessingQueue=_serialProcessingQueue;
 @property(readonly, nonatomic) NSMapTable *animatedImages; // @synthesize animatedImages=_animatedImages;
-- (void).cxx_destruct;
 - (void)animatedPathForImageData:(id)arg1 infoCompletion:(CDUnknownBlockType)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)init;
 

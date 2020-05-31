@@ -10,7 +10,7 @@
 #import "FeedPostContentVisibilityChangeObserving-Protocol.h"
 
 @class ASDisplayNode, FeedPostCallToActionNode, FeedPostOptions, FeedPostTextWithThumbnailNode, NSString, Post, PostMetaViewModel, UIImage;
-@protocol FeedPostContentNodeDelegate;
+@protocol FeedPostContentNodeDelegate, ViewContext;
 
 @interface FeedPostContentNode : BaseFeedDisplayNode <FeedPostContentDisplaying, FeedPostContentVisibilityChangeObserving>
 {
@@ -22,8 +22,11 @@
     FeedPostOptions *_options;
     PostMetaViewModel *_postMetaViewModel;
     id <FeedPostContentNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -31,7 +34,6 @@
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) FeedPostTextWithThumbnailNode *textNode; // @synthesize textNode=_textNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)noLongerPastVisibilityThreshold;
 - (void)didPassVisibilityThreshold;
@@ -47,7 +49,7 @@
 - (void)createTextNodeWithStyle:(unsigned long long)arg1;
 - (void)createNodes;
 @property(readonly, nonatomic) _Bool hasTextContent; // @synthesize hasTextContent=_hasTextContent;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 delegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

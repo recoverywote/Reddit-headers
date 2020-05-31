@@ -19,13 +19,13 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSString *collectionId; // @synthesize collectionId=_collectionId;
 @property __weak NSObject<CollectionDataSourceDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(retain, nonatomic) NSURL *primaryPostLink; // @synthesize primaryPostLink=_primaryPostLink;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (void)fetchData;
 - (id)initWithService:(id)arg1 collectionId:(id)arg2;
 

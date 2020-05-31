@@ -22,13 +22,13 @@
     NSString *_public_note;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool public_noteIsSet; // @synthesize public_noteIsSet=_public_noteIsSet;
 @property(copy, nonatomic) NSString *public_note; // @synthesize public_note=_public_note;
 @property(nonatomic) _Bool reasonIsSet; // @synthesize reasonIsSet=_reasonIsSet;
 @property(copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
 @property(nonatomic) _Bool countriesIsSet; // @synthesize countriesIsSet=_countriesIsSet;
 @property(retain, nonatomic) NSMutableArray *countries; // @synthesize countries=_countries;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

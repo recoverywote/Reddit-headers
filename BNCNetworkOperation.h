@@ -24,6 +24,7 @@
     CDUnknownBlockType _completionBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(retain) NSURLSessionTask *sessionTask; // @synthesize sessionTask=_sessionTask;
 @property(retain) BNCNetworkService *networkService; // @synthesize networkService=_networkService;
@@ -34,7 +35,6 @@
 @property(retain) NSData *responseData; // @synthesize responseData=_responseData;
 @property(copy) NSHTTPURLResponse *response; // @synthesize response=_response;
 @property(copy) NSURLRequest *request; // @synthesize request=_request;
-- (void).cxx_destruct;
 - (id)stringFromResponseData;
 - (void)cancel;
 - (void)start;

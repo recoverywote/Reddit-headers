@@ -17,11 +17,11 @@
     Subreddit *_subreddit;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseView *createPostView; // @synthesize createPostView=_createPostView;
 @property(nonatomic) __weak id <SubredditFeedAddPostControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isAddPostViewAlreadyShown; // @synthesize isAddPostViewAlreadyShown=_isAddPostViewAlreadyShown;
-- (void).cxx_destruct;
 - (void)didTapCreatePost:(id)arg1;
 - (void)stopObservingFromPostSubmissionNotification;
 - (void)startObservingForPostSubmissionNotification;

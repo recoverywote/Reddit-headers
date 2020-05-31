@@ -15,8 +15,8 @@
     id <Pillable> _pill;
 }
 
-@property(retain, nonatomic) id <Pillable> pill; // @synthesize pill=_pill;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <Pillable> pill; // @synthesize pill=_pill;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 - (id)initWithPill:(id)arg1;

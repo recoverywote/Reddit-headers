@@ -22,13 +22,13 @@
     NSString *_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool target_subreddit_idIsSet; // @synthesize target_subreddit_idIsSet=_target_subreddit_idIsSet;
 @property(copy, nonatomic) NSString *target_subreddit_id; // @synthesize target_subreddit_id=_target_subreddit_id;
 @property(nonatomic) _Bool target_subreddit_nameIsSet; // @synthesize target_subreddit_nameIsSet=_target_subreddit_nameIsSet;
 @property(copy, nonatomic) NSString *target_subreddit_name; // @synthesize target_subreddit_name=_target_subreddit_name;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

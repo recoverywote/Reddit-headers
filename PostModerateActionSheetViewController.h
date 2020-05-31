@@ -18,10 +18,10 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostModerateActionSheetDelegate> postModerateActionSheetDelegate; // @synthesize postModerateActionSheetDelegate=_postModerateActionSheetDelegate;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)setSticky:(_Bool)arg1 forPost:(id)arg2;
 - (void)unlockComments:(id)arg1;
 - (void)lockComments:(id)arg1;

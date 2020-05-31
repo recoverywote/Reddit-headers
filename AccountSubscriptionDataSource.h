@@ -19,11 +19,11 @@
     SubredditsNetworkSource *_subscriptionNetworkSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasPendingUpdate; // @synthesize hasPendingUpdate=_hasPendingUpdate;
 @property(retain, nonatomic) SubredditsNetworkSource *subscriptionNetworkSource; // @synthesize subscriptionNetworkSource=_subscriptionNetworkSource;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSArray *subscriptions; // @synthesize subscriptions=_subscriptions;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (_Bool)listingNetworkSourceShouldFilterObject:(id)arg1;
 - (void)listingNetworkSourceDidFail:(id)arg1;

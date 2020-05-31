@@ -21,11 +21,11 @@
     NSArray *_carouselItems;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) NSNumber *maximumNumberOfItems; // @synthesize maximumNumberOfItems=_maximumNumberOfItems;
 @property(readonly, nonatomic) __weak id <TemplateParserContext> templateContext; // @synthesize templateContext=_templateContext;
-- (void).cxx_destruct;
 - (void)trimCarouselItemsToCount:(unsigned long long)arg1;
 - (_Bool)listingNetworkSourceShouldFilterObject:(id)arg1;
 - (void)listingNetworkSourceDidFail:(id)arg1;

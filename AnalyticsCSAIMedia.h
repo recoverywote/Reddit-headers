@@ -36,6 +36,7 @@
     NSString *_retry_media_url;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool retry_media_urlIsSet; // @synthesize retry_media_urlIsSet=_retry_media_urlIsSet;
 @property(copy, nonatomic) NSString *retry_media_url; // @synthesize retry_media_url=_retry_media_url;
 @property(nonatomic) _Bool media_urlIsSet; // @synthesize media_urlIsSet=_media_urlIsSet;
@@ -56,7 +57,6 @@
 @property(nonatomic) _Bool match; // @synthesize match=_match;
 @property(nonatomic) _Bool tracking_idIsSet; // @synthesize tracking_idIsSet=_tracking_idIsSet;
 @property(copy, nonatomic) NSString *tracking_id; // @synthesize tracking_id=_tracking_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

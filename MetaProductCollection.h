@@ -20,6 +20,7 @@
     NSDictionary *_extra;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *extra; // @synthesize extra=_extra;
 @property(readonly, copy, nonatomic) NSArray *mediaCollection; // @synthesize mediaCollection=_mediaCollection;
 @property(readonly, copy, nonatomic) NSString *subredditPK; // @synthesize subredditPK=_subredditPK;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class ASTextNode, FeedPostOptions, FeedPostThumbnailNode, FlairContainerNode, NSString, Post;
-@protocol FeedPostTextWithThumbnailNodeDelegate><PillContainerNodeDelegate;
+@protocol FeedPostTextWithThumbnailNodeDelegate><PillContainerNodeDelegate, ViewContext;
 
 @interface FeedPostTextWithThumbnailNode : BaseFeedDisplayNode <ObjectObserverProtocol>
 {
@@ -21,8 +21,11 @@
     ASTextNode *_previewTextNode;
     unsigned long long _layoutStyle;
     FeedPostOptions *_options;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) unsigned long long layoutStyle; // @synthesize layoutStyle=_layoutStyle;
 @property(retain, nonatomic) ASTextNode *previewTextNode; // @synthesize previewTextNode=_previewTextNode;
@@ -31,7 +34,6 @@
 @property(retain, nonatomic) FeedPostThumbnailNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
 @property(nonatomic) __weak id <FeedPostTextWithThumbnailNodeDelegate><PillContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)applyAdditionalTopOffset:(double)arg1;
 - (double)calculateBaseTopTextContainerInset;
@@ -48,7 +50,7 @@
 - (struct UIEdgeInsets)pillsInsets;
 - (void)postAttributedStringChanged:(id)arg1;
 - (void)dealloc;
-- (id)initWithPost:(id)arg1 style:(unsigned long long)arg2 options:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 style:(unsigned long long)arg3 options:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

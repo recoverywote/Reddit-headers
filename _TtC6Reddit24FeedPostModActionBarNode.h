@@ -13,6 +13,7 @@
 {
     // Error parsing type: , name: post
     // Error parsing type: , name: options
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: $__lazy_storage_$_viewModel
     // Error parsing type: , name: $__lazy_storage_$_actionBarNode
     // Error parsing type: , name: delegate
@@ -21,7 +22,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-- (id)initWithPost:(id)arg1 options:(id)arg2;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 @property(nonatomic) __weak id <_TtP6Reddit32FeedPostModActionBarNodeDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic) struct UIEdgeInsets contentInsets;
 @property(nonatomic, readonly) Post *post; // @synthesize post;

@@ -16,10 +16,10 @@
     BaseButton *_button;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *button; // @synthesize button=_button;
 @property(nonatomic) __weak id <SubredditWidgetButtonCollectionViewCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSURL *buttonURL; // @synthesize buttonURL=_buttonURL;
-- (void).cxx_destruct;
 - (void)setButtonColoring:(id)arg1 forControlState:(unsigned long long)arg2;
 - (void)subredditWidgetButtonPressed:(id)arg1;
 - (void)configureWithButton:(id)arg1;

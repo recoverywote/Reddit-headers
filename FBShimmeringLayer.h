@@ -26,6 +26,7 @@
     double _shimmeringEndFadeDuration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FBShimmeringMaskLayer *maskLayer; // @synthesize maskLayer=_maskLayer;
 @property(retain, nonatomic) CALayer *contentLayer; // @synthesize contentLayer=_contentLayer;
 @property(nonatomic) double shimmeringEndFadeDuration; // @synthesize shimmeringEndFadeDuration=_shimmeringEndFadeDuration;
@@ -38,7 +39,6 @@
 @property(nonatomic) double shimmeringAnimationOpacity; // @synthesize shimmeringAnimationOpacity=_shimmeringAnimationOpacity;
 @property(nonatomic) double shimmeringPauseDuration; // @synthesize shimmeringPauseDuration=_shimmeringPauseDuration;
 @property(nonatomic, getter=isShimmering) _Bool shimmering; // @synthesize shimmering=_shimmering;
-- (void).cxx_destruct;
 - (void)animationDidStop:(id)arg1 finished:(_Bool)arg2;
 - (id)actionForLayer:(id)arg1 forKey:(id)arg2;
 - (void)_updateShimmering;

@@ -25,6 +25,7 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) PannableCellManager *pannableCellManager; // @synthesize pannableCellManager=_pannableCellManager;
 @property(retain, nonatomic) CommentSwipeView *swipeView; // @synthesize swipeView=_swipeView;
 @property(nonatomic) _Bool isPanningEnabled; // @synthesize isPanningEnabled=_isPanningEnabled;
@@ -33,7 +34,6 @@
 @property(nonatomic) _Bool isInModMode; // @synthesize isInModMode=_isInModMode;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) CommentView *commentView; // @synthesize commentView=_commentView;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (_Bool)shouldCellPan;
 - (unsigned long long)panCellStateForStateNum:(unsigned long long)arg1;

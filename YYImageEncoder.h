@@ -20,11 +20,11 @@
 
 + (id)encodeImageWithDecoder:(id)arg1 type:(unsigned long long)arg2 quality:(double)arg3;
 + (id)encodeImage:(id)arg1 type:(unsigned long long)arg2 quality:(double)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) double quality; // @synthesize quality=_quality;
 @property(nonatomic) _Bool lossless; // @synthesize lossless=_lossless;
 @property(nonatomic) unsigned long long loopCount; // @synthesize loopCount=_loopCount;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (_Bool)encodeToFile:(id)arg1;
 - (id)encode;
 - (id)_encodeWebP;

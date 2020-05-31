@@ -25,6 +25,7 @@
     UIView *_badgeView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasViewAppeared; // @synthesize hasViewAppeared=_hasViewAppeared;
 @property(retain, nonatomic) UIView *badgeView; // @synthesize badgeView=_badgeView;
 @property(retain, nonatomic) LoggedOutViewController *loggedOutViewController; // @synthesize loggedOutViewController=_loggedOutViewController;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) ChatInboxListingViewController *directInboxViewController; // @synthesize directInboxViewController=_directInboxViewController;
 @property(retain, nonatomic) BaseBarButtonItem *chatButton; // @synthesize chatButton=_chatButton;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)themeDidChange:(id)arg1;
 - (void)trackAnalyticEventWithAction:(id)arg1 noun:(id)arg2 currentChannels:(id)arg3 requestsChannels:(id)arg4;
 - (void)updateContentViewsForData:(id)arg1;
@@ -49,6 +49,7 @@
 - (void)configureRightBarButton;
 - (void)setupTabBarItem;
 - (void)toggleLoggedOutView:(_Bool)arg1;
+- (void)navigateToDirectTab;
 - (id)chatTabs;
 - (id)viewControllersForChatTabs:(id)arg1;
 - (void)configurePageControllers;

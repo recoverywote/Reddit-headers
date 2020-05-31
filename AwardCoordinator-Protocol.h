@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIViewController, _TtC7Economy20AwardSelectionConfig;
+@class UIViewController, _TtC7Economy21AwardSelectionOptions;
 @protocol AwardCoordinatorDelegate;
 
 @protocol AwardCoordinator <NSObject>
 @property(nonatomic) __weak id <AwardCoordinatorDelegate> delegate;
-- (void)startFromViewController:(UIViewController *)arg1 config:(_TtC7Economy20AwardSelectionConfig *)arg2;
+- (void)startFromViewController:(UIViewController *)arg1 options:(_TtC7Economy21AwardSelectionOptions *)arg2;
 @end
 

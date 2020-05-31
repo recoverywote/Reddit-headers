@@ -26,6 +26,7 @@
     BaseButton *_declineButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *declineButton; // @synthesize declineButton=_declineButton;
 @property(retain, nonatomic) BaseButton *acceptButton; // @synthesize acceptButton=_acceptButton;
 @property(retain, nonatomic) BaseButton *joinButton; // @synthesize joinButton=_joinButton;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) id <ChatRequestDelegator> delegator; // @synthesize delegator=_delegator;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
-- (void).cxx_destruct;
 - (void)trackPreviewAnalyticsEventWithAction:(id)arg1 noun:(id)arg2;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2;
 - (void)showToastWithErrorCode:(long long)arg1;

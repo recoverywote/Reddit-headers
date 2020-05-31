@@ -15,9 +15,9 @@
 }
 
 + (id)contextForNode:(id)arg1 alpha:(double)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(retain, nonatomic) ASDisplayNode *node; // @synthesize node=_node;
-- (void).cxx_destruct;
 
 @end
 

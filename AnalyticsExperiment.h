@@ -50,6 +50,7 @@
     NSString *_bucketing_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool bucketing_typeIsSet; // @synthesize bucketing_typeIsSet=_bucketing_typeIsSet;
 @property(copy, nonatomic) NSString *bucketing_type; // @synthesize bucketing_type=_bucketing_type;
 @property(nonatomic) _Bool qa_proxy_eventIsSet; // @synthesize qa_proxy_eventIsSet=_qa_proxy_eventIsSet;
@@ -84,7 +85,6 @@
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(nonatomic) long long id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -25,11 +25,11 @@
     CDUnknownBlockType _overrideDisplayTraitsWithWindowSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool neverShowPlaceholders; // @synthesize neverShowPlaceholders=_neverShowPlaceholders;
 @property(copy, nonatomic) CDUnknownBlockType overrideDisplayTraitsWithWindowSize; // @synthesize overrideDisplayTraitsWithWindowSize=_overrideDisplayTraitsWithWindowSize;
 @property(copy, nonatomic) CDUnknownBlockType overrideDisplayTraitsWithTraitCollection; // @synthesize overrideDisplayTraitsWithTraitCollection=_overrideDisplayTraitsWithTraitCollection;
 @property(readonly, nonatomic) ASDisplayNode *node; // @synthesize node=_node;
-- (void).cxx_destruct;
 - (void)didRotateFromInterfaceOrientation:(long long)arg1;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)propagateNewTraitCollection:(struct ASPrimitiveTraitCollection)arg1;

@@ -27,6 +27,7 @@
 + (id)animationWithFilePath:(id)arg1;
 + (id)animationNamed:(id)arg1 inBundle:(id)arg2;
 + (id)animationNamed:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *cacheKey; // @synthesize cacheKey=_cacheKey;
 @property(readonly, nonatomic) NSBundle *assetBundle; // @synthesize assetBundle=_assetBundle;
 @property(retain, nonatomic) NSString *rootDirectory; // @synthesize rootDirectory=_rootDirectory;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) NSNumber *endFrame; // @synthesize endFrame=_endFrame;
 @property(readonly, nonatomic) NSNumber *startFrame; // @synthesize startFrame=_startFrame;
 @property(readonly, nonatomic) struct CGRect compBounds; // @synthesize compBounds=_compBounds;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1 withAssetBundle:(id)arg2;
 - (id)initWithJSON:(id)arg1 withAssetBundle:(id)arg2;
 

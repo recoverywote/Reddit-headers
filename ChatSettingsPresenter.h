@@ -18,10 +18,10 @@
     Channel *_channel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)channelStore;
 - (void)toggleMuteBadgesWithSwitchValue:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)toggleMuteNotificationsWithSwitchValue:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;

@@ -13,8 +13,8 @@
     UIView *_mainView;
 }
 
-@property(retain, nonatomic) UIView *mainView; // @synthesize mainView=_mainView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *mainView; // @synthesize mainView=_mainView;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

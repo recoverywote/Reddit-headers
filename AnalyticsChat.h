@@ -72,6 +72,7 @@
     NSString *_channel_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool channel_nameIsSet; // @synthesize channel_nameIsSet=_channel_nameIsSet;
 @property(copy, nonatomic) NSString *channel_name; // @synthesize channel_name=_channel_name;
 @property(nonatomic) _Bool message_bodyIsSet; // @synthesize message_bodyIsSet=_message_bodyIsSet;
@@ -128,7 +129,6 @@
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
 @property(nonatomic) _Bool blocked_user_idIsSet; // @synthesize blocked_user_idIsSet=_blocked_user_idIsSet;
 @property(copy, nonatomic) NSString *blocked_user_id; // @synthesize blocked_user_id=_blocked_user_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

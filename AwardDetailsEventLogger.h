@@ -18,13 +18,13 @@
     AnalyticsManager *_analyticsManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didLogScreenViewEvent; // @synthesize didLogScreenViewEvent=_didLogScreenViewEvent;
 @property(readonly, nonatomic) AnalyticsManager *analyticsManager; // @synthesize analyticsManager=_analyticsManager;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
-- (void).cxx_destruct;
 - (id)eventWithAction:(id)arg1 noun:(id)arg2;
 - (void)logClickGiveAwardButtonEvent;
 - (void)logClickCloseButtonEvent;

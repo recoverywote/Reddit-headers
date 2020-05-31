@@ -11,7 +11,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class ASDisplayNode, ASTextNode, FeedPostOptions, NSString, Post, UrlLabelNode;
-@protocol PostCollectionGalleryPostNodeDelegate;
+@protocol PostCollectionGalleryPostNodeDelegate, ViewContext;
 
 @interface PostCollectionGalleryPostNode : BaseFeedDisplayNode <ObjectObserverProtocol, ASNetworkImageNodeDelegate, BaseCollectionViewCellSelected>
 {
@@ -23,8 +23,11 @@
     ASDisplayNode *_playNode;
     UrlLabelNode *_domainNode;
     FeedPostOptions *_options;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) UrlLabelNode *domainNode; // @synthesize domainNode=_domainNode;
 @property(retain, nonatomic) ASDisplayNode *playNode; // @synthesize playNode=_playNode;
@@ -33,7 +36,6 @@
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
 @property(nonatomic) __weak id <PostCollectionGalleryPostNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)didTapImage:(id)arg1;
 @property(readonly, nonatomic) Post *displayPost;
 - (void)imageNode:(id)arg1 didLoadImage:(id)arg2;
@@ -52,7 +54,7 @@
 - (void)createWebsiteDomainNode;
 - (void)createTitleTextNode;
 - (void)createNodes;
-- (id)initWithPost:(id)arg1;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

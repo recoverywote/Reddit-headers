@@ -20,11 +20,11 @@
 }
 
 + (id)attachmentWithContent:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *userInfo; // @synthesize userInfo=_userInfo;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) long long contentMode; // @synthesize contentMode=_contentMode;
 @property(retain, nonatomic) id content; // @synthesize content=_content;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

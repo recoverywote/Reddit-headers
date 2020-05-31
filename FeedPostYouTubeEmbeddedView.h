@@ -10,7 +10,7 @@
 #import "YoutubePlayerViewDelegate-Protocol.h"
 
 @class AudioInstance, BaseImageView, ContentImageView, NSString, Post, PreviewSpinnerView, YoutubePlayerView;
-@protocol FeedPostYouTubeEmbeddedViewDelegate;
+@protocol FeedPostYouTubeEmbeddedViewDelegate, ViewContext;
 
 @interface FeedPostYouTubeEmbeddedView : BaseView <UIGestureRecognizerDelegate, YoutubePlayerViewDelegate>
 {
@@ -25,9 +25,12 @@
     BaseImageView *_videoPlayButtonOverlay;
     AudioInstance *_audioInstance;
     long long _currentState;
+    id <ViewContext> _viewContext;
 }
 
-+ (double)calculatedHeightWithData:(id)arg1 forWidth:(double)arg2 andDelegate:(id)arg3;
++ (double)calculatedHeightWithViewContext:(id)arg1 data:(id)arg2 forWidth:(double)arg3 andDelegate:(id)arg4;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isDisplayed; // @synthesize isDisplayed=_isDisplayed;
 @property(nonatomic) _Bool isVideoPlayerLoaded; // @synthesize isVideoPlayerLoaded=_isVideoPlayerLoaded;
 @property(nonatomic) _Bool allowYoutubeProgressTimeRecovery; // @synthesize allowYoutubeProgressTimeRecovery=_allowYoutubeProgressTimeRecovery;
@@ -39,7 +42,6 @@
 @property(retain, nonatomic) ContentImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostYouTubeEmbeddedViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)playerView:(id)arg1 didPlayTime:(float)arg2;
 - (_Bool)playerView:(id)arg1 handleNavigationToUrl:(id)arg2;
 - (void)playerView:(id)arg1 receivedError:(long long)arg2;
@@ -61,6 +63,8 @@
 - (void)loadEmbeddedVideoStackForPlayback;
 - (void)didTapVideoPlayButton;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

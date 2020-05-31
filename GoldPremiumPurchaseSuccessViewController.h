@@ -23,6 +23,7 @@
     GoldProduct *_product;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GoldProduct *product; // @synthesize product=_product;
 @property(retain, nonatomic) NSArray *premiumBenefitTexts; // @synthesize premiumBenefitTexts=_premiumBenefitTexts;
 @property(retain, nonatomic) BaseView *dialogContentView; // @synthesize dialogContentView=_dialogContentView;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UILabel *successTitleLabel; // @synthesize successTitleLabel=_successTitleLabel;
 @property(retain, nonatomic) UIImageView *premiumLogoImageView; // @synthesize premiumLogoImageView=_premiumLogoImageView;
 @property(nonatomic) __weak id <GoldPremiumPurchaseSuccessViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)horizontalStackViewWithBenefitText:(id)arg1;
 - (void)setupViews;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;

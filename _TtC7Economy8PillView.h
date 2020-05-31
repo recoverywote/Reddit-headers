@@ -6,6 +6,7 @@
 
 #import <UIKit/UIView.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtC7Economy8PillView : UIView
 {
 }

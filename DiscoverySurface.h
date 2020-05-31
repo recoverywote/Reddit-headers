@@ -15,9 +15,9 @@
 }
 
 + (unsigned long long)surfaceTypeForKey:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutDescriptors; // @synthesize layoutDescriptors=_layoutDescriptors;
 @property(nonatomic) unsigned long long surfaceType; // @synthesize surfaceType=_surfaceType;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

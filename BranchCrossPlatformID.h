@@ -18,11 +18,11 @@
 
 + (void)requestCrossPlatformIdData:(id)arg1 key:(id)arg2 completion:(CDUnknownBlockType)arg3;
 + (id)buildFromJSON:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *probabiliticCrossPlatformIDs; // @synthesize probabiliticCrossPlatformIDs=_probabiliticCrossPlatformIDs;
 @property(readonly, nonatomic) NSArray *pastCrossPlatformIDs; // @synthesize pastCrossPlatformIDs=_pastCrossPlatformIDs;
 @property(readonly, copy, nonatomic) NSString *developerID; // @synthesize developerID=_developerID;
 @property(readonly, copy, nonatomic) NSString *crossPlatformID; // @synthesize crossPlatformID=_crossPlatformID;
-- (void).cxx_destruct;
 
 @end
 

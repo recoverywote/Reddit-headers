@@ -23,6 +23,7 @@
 
 + (id)bodyForLiveUpdateWithoutEmbedUrls:(id)arg1;
 + (id)liveUpdateFromData:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isStricken; // @synthesize isStricken=_isStricken;
 @property(copy, nonatomic) NSArray *renderedEmbeds; // @synthesize renderedEmbeds=_renderedEmbeds;
 @property(copy, nonatomic) NSArray *embeds; // @synthesize embeds=_embeds;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSAttributedString *markdownBody; // @synthesize markdownBody=_markdownBody;
 @property(copy, nonatomic) NSString *body; // @synthesize body=_body;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 
 @end
 

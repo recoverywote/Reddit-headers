@@ -7,12 +7,13 @@
 #import "BaseCollectionViewCellNode.h"
 
 @class AFNetworkImageNode, ASDisplayNode, ASImageNode, ASTextNode, BaseButtonNode, DownToChatBanner, NSArray;
-@protocol DownToChatBannerNodeDelegate;
+@protocol DownToChatBannerNodeDelegate, ViewContext;
 
 @interface DownToChatBannerNode : BaseCollectionViewCellNode
 {
     DownToChatBanner *_banner;
     id <DownToChatBannerNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     NSArray *_avatarDisplayNodes;
     NSArray *_avatarNodes;
     ASTextNode *_titleNode;
@@ -25,6 +26,7 @@
     ASImageNode *_backgroundImageNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASImageNode *backgroundImageNode; // @synthesize backgroundImageNode=_backgroundImageNode;
 @property(retain, nonatomic) ASDisplayNode *activityIndicatorNode; // @synthesize activityIndicatorNode=_activityIndicatorNode;
 @property(retain, nonatomic) ASTextNode *activityCountTextNode; // @synthesize activityCountTextNode=_activityCountTextNode;
@@ -35,9 +37,9 @@
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(copy, nonatomic) NSArray *avatarNodes; // @synthesize avatarNodes=_avatarNodes;
 @property(copy, nonatomic) NSArray *avatarDisplayNodes; // @synthesize avatarDisplayNodes=_avatarDisplayNodes;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <DownToChatBannerNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) DownToChatBanner *banner; // @synthesize banner=_banner;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didTapDismissNode:(id)arg1;
 - (void)didTapCtaNode:(id)arg1;
@@ -46,7 +48,7 @@
 - (id)subredditIconURL;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initWithBanner:(id)arg1 visibilityTracker:(id)arg2;
+- (id)initWithBanner:(id)arg1 viewContext:(id)arg2;
 
 @end
 

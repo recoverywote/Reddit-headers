@@ -19,13 +19,13 @@
 }
 
 + (_Bool)createDirectoryAtPath:(id)arg1 withError:(id *)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long currentFileCounter; // @synthesize currentFileCounter=_currentFileCounter;
 @property(copy, nonatomic) NSString *eventsPath; // @synthesize eventsPath=_eventsPath;
 @property(copy, nonatomic) NSString *breadcrumbsPath; // @synthesize breadcrumbsPath=_breadcrumbsPath;
 @property(copy, nonatomic) NSString *sentryPath; // @synthesize sentryPath=_sentryPath;
 @property(nonatomic) unsigned long long maxBreadcrumbs; // @synthesize maxBreadcrumbs=_maxBreadcrumbs;
 @property(nonatomic) unsigned long long maxEvents; // @synthesize maxEvents=_maxEvents;
-- (void).cxx_destruct;
 - (void)handleFileManagerLimit:(id)arg1 maxCount:(unsigned long long)arg2;
 - (id)storeDictionary:(id)arg1 toPath:(id)arg2;
 - (id)storeBreadcrumb:(id)arg1 maxCount:(unsigned long long)arg2;

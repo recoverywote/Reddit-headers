@@ -13,8 +13,8 @@
     BaseSearchBar *_searchBar;
 }
 
-@property(retain, nonatomic) BaseSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

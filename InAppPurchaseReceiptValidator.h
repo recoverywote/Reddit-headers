@@ -18,12 +18,12 @@
     NSOperationQueue *_processingQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSOperationQueue *processingQueue; // @synthesize processingQueue=_processingQueue;
 @property(readonly, nonatomic) NSOperationQueue *validationQueue; // @synthesize validationQueue=_validationQueue;
 @property(readonly, nonatomic) InAppPurchaseReceiptValidationOperationFactory *validationOperationFactory; // @synthesize validationOperationFactory=_validationOperationFactory;
 @property(readonly, nonatomic) InAppPurchaseAccountProvider *accountProvider; // @synthesize accountProvider=_accountProvider;
 @property(nonatomic) __weak id <InAppPurchaseReceiptValidatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)containsPendingOperationForMetdata:(id)arg1;
 - (void)enqueuePurchaseValidationOperationForMetadata:(id)arg1;
 - (void)validatePurchaseWithMetadata:(id)arg1;

@@ -23,6 +23,7 @@
     ASDisplayNode *_texturedBackgroundNode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isTransitioning; // @synthesize isTransitioning=_isTransitioning;
 @property(retain, nonatomic) ASDisplayNode *texturedBackgroundNode; // @synthesize texturedBackgroundNode=_texturedBackgroundNode;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) ASButtonNode *dismissButtonNode; // @synthesize dismissButtonNode=_dismissButtonNode;
 @property(retain, nonatomic) ASButtonNode *declineButtonNode; // @synthesize declineButtonNode=_declineButtonNode;
 @property(retain, nonatomic) ASButtonNode *confirmButtonNode; // @synthesize confirmButtonNode=_confirmButtonNode;
-- (void).cxx_destruct;
 - (void)didTapNode:(id)arg1;
 - (void)didTapDismiss:(id)arg1;
 - (void)didTapDecline:(id)arg1;

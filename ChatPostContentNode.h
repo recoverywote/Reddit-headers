@@ -12,13 +12,14 @@
 #import "_TtP6Reddit36ChatPostMessageParentCommentDelegate_-Protocol.h"
 
 @class AvatarImageNode, CommentTreeHeaderNode, CommentTreeNode, CommentTreeNodeOptions, NSString, _TtC6Reddit16ChatPostTextNode, _TtC6Reddit18ChatPostVotingNode, _TtC6Reddit22ChatPostAwardImageNode, _TtC6Reddit32ChatPostMessageParentCommentView, _TtC6Reddit33ChatPostAwardBubbleBackgroundNode;
-@protocol ChatPostContentNodeDelegate;
+@protocol ChatPostContentNodeDelegate, ViewContext;
 
 @interface ChatPostContentNode : BaseFeedDisplayNode <AvatarImageNodeDelegate, ChatPostTextNodeDelegate, _TtP6Reddit36ChatPostMessageParentCommentDelegate_, _TtP6Reddit26ChatPostVotingNodeDelegate_>
 {
     _Bool _isReplyFeatureEnabled;
     _Bool _shouldShowDownvote;
     CommentTreeNode *_commentNode;
+    id <ViewContext> _viewContext;
     _TtC6Reddit16ChatPostTextNode *_textNode;
     AvatarImageNode *_avatarNode;
     _TtC6Reddit22ChatPostAwardImageNode *_awardImageNode;
@@ -31,6 +32,7 @@
     CDUnknownBlockType _shouldShowVotingNodeBlock;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowDownvote; // @synthesize shouldShowDownvote=_shouldShowDownvote;
 @property(copy, nonatomic) CDUnknownBlockType shouldShowVotingNodeBlock; // @synthesize shouldShowVotingNodeBlock=_shouldShowVotingNodeBlock;
 @property(nonatomic) _Bool isReplyFeatureEnabled; // @synthesize isReplyFeatureEnabled=_isReplyFeatureEnabled;
@@ -43,8 +45,8 @@
 @property(retain, nonatomic) _TtC6Reddit22ChatPostAwardImageNode *awardImageNode; // @synthesize awardImageNode=_awardImageNode;
 @property(retain, nonatomic) AvatarImageNode *avatarNode; // @synthesize avatarNode=_avatarNode;
 @property(retain, nonatomic) _TtC6Reddit16ChatPostTextNode *textNode; // @synthesize textNode=_textNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
-- (void).cxx_destruct;
 - (void)chatPostVotingNodeDidTapDownvoteWithComment:(id)arg1;
 - (void)chatPostVotingNodeDidTapUpvoteWithComment:(id)arg1;
 - (unsigned long long)presentationStyle;
@@ -57,7 +59,7 @@
 - (void)configureNodes;
 - (void)addKeyValueObservations;
 - (void)didLoad;
-- (id)initWithCommentNode:(id)arg1 options:(id)arg2 delegate:(id)arg3 isReplyFeatureEnabled:(_Bool)arg4 shouldShowVotingNodeBlock:(CDUnknownBlockType)arg5 shouldShowDownvote:(_Bool)arg6;
+- (id)initWithViewContext:(id)arg1 commentNode:(id)arg2 options:(id)arg3 delegate:(id)arg4 isReplyFeatureEnabled:(_Bool)arg5 shouldShowVotingNodeBlock:(CDUnknownBlockType)arg6 shouldShowDownvote:(_Bool)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

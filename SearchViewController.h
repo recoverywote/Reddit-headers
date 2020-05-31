@@ -30,6 +30,7 @@
     struct UIEdgeInsets _previousSearchInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasAddedContentOffsetObserver; // @synthesize hasAddedContentOffsetObserver=_hasAddedContentOffsetObserver;
 @property(nonatomic) struct UIEdgeInsets previousSearchInsets; // @synthesize previousSearchInsets=_previousSearchInsets;
 @property(retain, nonatomic) NSLayoutConstraint *topYAnchor; // @synthesize topYAnchor=_topYAnchor;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SearchPresenter *searchPresenter; // @synthesize searchPresenter=_searchPresenter;
 @property(retain, nonatomic) SearchBarTransition *searchBarTransition; // @synthesize searchBarTransition=_searchBarTransition;
-- (void).cxx_destruct;
 - (void)resetFloatingHeaderManagerWithViewController:(id)arg1;
 - (void)floatingHeaderShouldMove:(id)arg1;
 - (void)pagedTabViewController:(id)arg1 transitionCompleted:(_Bool)arg2 fromViewController:(id)arg3 toViewController:(id)arg4 navigationMethod:(long long)arg5;

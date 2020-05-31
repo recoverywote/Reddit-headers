@@ -17,8 +17,8 @@
     NSMutableDictionary *_userInfo;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *userInfo; // @synthesize userInfo=_userInfo;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *userInfo; // @synthesize userInfo=_userInfo;
 - (void)removeAllBranchSearchableItemsWithCallback:(CDUnknownBlockType)arg1;
 - (void)removeSearchableItemsWithIdentifiers:(id)arg1 callback:(CDUnknownBlockType)arg2;
 - (void)removeSearchableItemsWithIdentifier:(id)arg1 callback:(CDUnknownBlockType)arg2;

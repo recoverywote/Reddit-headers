@@ -14,8 +14,8 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
-@property(retain, nonatomic) SuspendedBannerContentView *bannerView; // @synthesize bannerView=_bannerView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SuspendedBannerContentView *bannerView; // @synthesize bannerView=_bannerView;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

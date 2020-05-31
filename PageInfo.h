@@ -16,9 +16,9 @@
     NSString *_endCursor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *endCursor; // @synthesize endCursor=_endCursor;
 @property(nonatomic) _Bool hasNextPage; // @synthesize hasNextPage=_hasNextPage;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithData:(id)arg1;

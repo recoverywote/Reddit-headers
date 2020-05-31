@@ -6,9 +6,7 @@
 
 #import "BaseViewController.h"
 
-#import "_TtP6Reddit41MetaClaimablePointsViewControllerDelegate_-Protocol.h"
-
-@interface _TtC6Reddit20WalletViewController : BaseViewController <_TtP6Reddit41MetaClaimablePointsViewControllerDelegate_>
+@interface _TtC6Reddit20WalletViewController : BaseViewController
 {
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: walletInstance

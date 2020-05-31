@@ -24,6 +24,7 @@
     NSString *_group_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool group_typeIsSet; // @synthesize group_typeIsSet=_group_typeIsSet;
 @property(copy, nonatomic) NSString *group_type; // @synthesize group_type=_group_type;
 @property(nonatomic) _Bool ticket_typeIsSet; // @synthesize ticket_typeIsSet=_ticket_typeIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

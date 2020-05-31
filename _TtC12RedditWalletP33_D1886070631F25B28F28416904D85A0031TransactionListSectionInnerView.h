@@ -12,7 +12,7 @@
     // Error parsing type: , name: cardView
     // Error parsing type: , name: performTransactionSink
     // Error parsing type: , name: performOngoingTransactionSink
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

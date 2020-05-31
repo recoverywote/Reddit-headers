@@ -18,16 +18,17 @@
     BaseButton *_loginButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *loginButton; // @synthesize loginButton=_loginButton;
 @property(retain, nonatomic) BaseButton *signupButton; // @synthesize signupButton=_signupButton;
 @property(retain, nonatomic) BaseLabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak id <LoggedOutViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapSignupButton:(id)arg1;
 - (void)didTapLoginButton:(id)arg1;
 - (void)configureViews;
 - (void)configureViewAppearance;
+- (id)initWithDelegate:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

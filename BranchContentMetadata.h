@@ -36,6 +36,7 @@
 }
 
 + (id)contentMetadataWithDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double longitude; // @synthesize longitude=_longitude;
 @property(nonatomic) double latitude; // @synthesize latitude=_latitude;
 @property(retain, nonatomic) NSString *addressPostalCode; // @synthesize addressPostalCode=_addressPostalCode;
@@ -57,7 +58,6 @@
 @property(retain, nonatomic) NSDecimalNumber *price; // @synthesize price=_price;
 @property(nonatomic) double quantity; // @synthesize quantity=_quantity;
 @property(retain, nonatomic) NSString *contentSchema; // @synthesize contentSchema=_contentSchema;
-- (void).cxx_destruct;
 - (id)description;
 @property(copy, nonatomic) NSMutableArray *imageCaptions;
 @property(copy, nonatomic) NSMutableDictionary *customMetadata;

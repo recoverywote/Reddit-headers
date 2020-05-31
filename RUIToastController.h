@@ -20,13 +20,13 @@
 }
 
 + (id)defaultController;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUUID *iconURLImageFetchToken; // @synthesize iconURLImageFetchToken=_iconURLImageFetchToken;
 @property(nonatomic) struct CGRect currentKeyboardFrame; // @synthesize currentKeyboardFrame=_currentKeyboardFrame;
 @property(retain, nonatomic) NSTimer *autoDismissTimer; // @synthesize autoDismissTimer=_autoDismissTimer;
 @property(retain, nonatomic) RUIToastView *currentToast; // @synthesize currentToast=_currentToast;
 @property(retain, nonatomic) RUIToastConfiguration *currentToastConfiguration; // @synthesize currentToastConfiguration=_currentToastConfiguration;
 @property(nonatomic) __weak id <REDToastControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGAffineTransform)visibleTransformForCurrentToast;
 - (void)keyboardWillChangeFrame:(id)arg1;
 - (void)toastViewDidPan:(id)arg1;

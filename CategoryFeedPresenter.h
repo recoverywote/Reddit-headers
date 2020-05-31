@@ -13,8 +13,8 @@
     SubredditCategory *_category;
 }
 
-@property(retain, nonatomic) SubredditCategory *category; // @synthesize category=_category;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SubredditCategory *category; // @synthesize category=_category;
 - (id)listingTraceName;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

@@ -13,8 +13,8 @@
     UIRefreshControl *_refreshControl;
 }
 
-@property(readonly, nonatomic) __weak UIRefreshControl *refreshControl; // @synthesize refreshControl=_refreshControl;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak UIRefreshControl *refreshControl; // @synthesize refreshControl=_refreshControl;
 - (void)dealloc;
 - (void)af_endRefreshing;
 - (void)af_beginRefreshing;

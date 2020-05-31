@@ -24,6 +24,7 @@
     struct CGSize _sizeValue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *arrayValue; // @synthesize arrayValue=_arrayValue;
 @property(readonly, nonatomic) LOTBezierData *pathData; // @synthesize pathData=_pathData;
 @property(readonly, nonatomic) UIColor *colorValue; // @synthesize colorValue=_colorValue;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) struct CGPoint inTangent; // @synthesize inTangent=_inTangent;
 @property(readonly, nonatomic) _Bool isHold; // @synthesize isHold=_isHold;
 @property(readonly, nonatomic) NSNumber *keyframeTime; // @synthesize keyframeTime=_keyframeTime;
-- (void).cxx_destruct;
 - (id)_colorValueFromArray:(id)arg1;
 - (struct CGPoint)_pointFromValueDict:(id)arg1;
 - (struct CGPoint)_pointFromValueArray:(id)arg1;

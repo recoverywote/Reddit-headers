@@ -18,10 +18,10 @@
 + (id)managerForAddress:(const void *)arg1;
 + (id)managerForDomain:(id)arg1;
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType networkReachabilityStatusBlock; // @synthesize networkReachabilityStatusBlock=_networkReachabilityStatusBlock;
 @property(readonly, nonatomic) struct __SCNetworkReachability *networkReachability; // @synthesize networkReachability=_networkReachability;
 @property(nonatomic) long long networkReachabilityStatus; // @synthesize networkReachabilityStatus=_networkReachabilityStatus;
-- (void).cxx_destruct;
 - (void)setReachabilityStatusChangeBlock:(CDUnknownBlockType)arg1;
 - (id)localizedNetworkReachabilityStatusString;
 - (void)stopMonitoring;

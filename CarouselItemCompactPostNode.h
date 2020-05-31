@@ -29,6 +29,7 @@
     CarouselItemCommentNode *_commentNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CarouselItemCommentNode *commentNode; // @synthesize commentNode=_commentNode;
 @property(retain, nonatomic) ASDisplayNode *divider; // @synthesize divider=_divider;
 @property(retain, nonatomic) ASTextNode *scoreNode; // @synthesize scoreNode=_scoreNode;
@@ -43,7 +44,6 @@
 @property(nonatomic) _Bool shouldDisplaySubredditHeader; // @synthesize shouldDisplaySubredditHeader=_shouldDisplaySubredditHeader;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)scoreText;
 - (id)postTitleText;
 - (id)subredditHeaderText;
@@ -59,7 +59,7 @@
 - (void)createSubredditHeaderNode;
 - (void)createNodes;
 - (void)didLoad;
-- (id)initWithCarouselItem:(id)arg1 comment:(id)arg2;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2 comment:(id)arg3;
 - (void)createCommentNode;
 @property(readonly, nonatomic) _Bool shouldDisplayThumbnail;
 

@@ -16,9 +16,9 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(retain, nonatomic) RichTextSpoilerTextElement *spoilerText; // @synthesize spoilerText=_spoilerText;
-- (void).cxx_destruct;
 - (id)initWithSpoilerText:(id)arg1 range:(struct _NSRange)arg2;
 
 @end

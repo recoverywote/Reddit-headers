@@ -14,9 +14,9 @@
     ResultAllItem *_item;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ResultAllItem *item; // @synthesize item=_item;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)configureTitle;

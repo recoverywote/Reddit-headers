@@ -35,6 +35,7 @@
 }
 
 + (id)sunrisesetWithDate:(id)arg1 timezone:(id)arg2 latitude:(double)arg3 longitude:(double)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimeZone *utcTimeZone; // @synthesize utcTimeZone=_utcTimeZone;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
 @property(retain, nonatomic) NSTimeZone *timezone; // @synthesize timezone=_timezone;
@@ -57,7 +58,6 @@
 @property(retain) NSDate *sunrise; // @synthesize sunrise=_sunrise;
 @property(retain) NSDate *sunset; // @synthesize sunset=_sunset;
 @property(retain) NSDate *date; // @synthesize date=_date;
-- (void).cxx_destruct;
 - (id)initWithDate:(id)arg1 timezone:(id)arg2 latitude:(double)arg3 longitude:(double)arg4;
 - (int)sunRiseSetHelperForYear:(int)arg1 month:(int)arg2 day:(int)arg3 longitude:(double)arg4 latitude:(double)arg5 altitude:(double)arg6 upper_limb:(int)arg7 trise:(double *)arg8 tset:(double *)arg9;
 - (int)astronomicalTwilightForYear:(int)arg1 month:(int)arg2 day:(int)arg3 longitude:(double)arg4 latitude:(double)arg5 trise:(double *)arg6 tset:(double *)arg7;

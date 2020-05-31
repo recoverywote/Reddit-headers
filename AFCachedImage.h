@@ -17,12 +17,12 @@
     unsigned long long _currentMemoryUsage;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long currentMemoryUsage; // @synthesize currentMemoryUsage=_currentMemoryUsage;
 @property(retain) NSDate *lastAccessDate; // @synthesize lastAccessDate=_lastAccessDate;
 @property(nonatomic) unsigned long long totalBytes; // @synthesize totalBytes=_totalBytes;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (id)description;
 - (id)accessImage;
 - (id)initWithImage:(id)arg1 identifier:(id)arg2;

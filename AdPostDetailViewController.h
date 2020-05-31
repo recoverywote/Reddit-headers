@@ -30,6 +30,7 @@
     _TtC6Reddit15RedditVideoNode *_redditVideoNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit15RedditVideoNode *redditVideoNode; // @synthesize redditVideoNode=_redditVideoNode;
 @property(nonatomic) double topConstraintMax; // @synthesize topConstraintMax=_topConstraintMax;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) id <_TtP11RedditVideo12VideoContext_> videoContext; // @synthesize videoContext=_videoContext;
 @property(retain, nonatomic) AdPost *adPost; // @synthesize adPost=_adPost;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)didTapOverflow:(id)arg1;
 - (void)productViewControllerDidFinish:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;

@@ -16,11 +16,11 @@
     NSString *_userListIdParam;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *userListIdParam; // @synthesize userListIdParam=_userListIdParam;
 @property(copy, nonatomic) NSString *userDataParam; // @synthesize userDataParam=_userDataParam;
 @property(retain, nonatomic) Class objectClass; // @synthesize objectClass=_objectClass;
 @property(nonatomic) _Bool invitePending; // @synthesize invitePending=_invitePending;
-- (void).cxx_destruct;
 - (id)usersFromData:(id)arg1;
 - (void)parseMoreData:(id)arg1;
 - (void)parseData:(id)arg1;

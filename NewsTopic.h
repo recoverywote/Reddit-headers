@@ -21,6 +21,7 @@
     NSArray *_allowedPostTypes;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSelectedByDefault; // @synthesize isSelectedByDefault=_isSelectedByDefault;
 @property(copy, nonatomic) NSArray *allowedPostTypes; // @synthesize allowedPostTypes=_allowedPostTypes;
 @property(copy, nonatomic) NSString *multiPath; // @synthesize multiPath=_multiPath;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *topicId; // @synthesize topicId=_topicId;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

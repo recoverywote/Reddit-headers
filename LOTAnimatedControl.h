@@ -15,8 +15,8 @@
     LOTAnimationView *_animationView;
 }
 
-@property(readonly, nonatomic) LOTAnimationView *animationView; // @synthesize animationView=_animationView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) LOTAnimationView *animationView; // @synthesize animationView=_animationView;
 - (void)checkStateChangedAndUpdate:(_Bool)arg1;
 - (_Bool)isAccessibilityElement;
 - (unsigned long long)accessibilityTraits;

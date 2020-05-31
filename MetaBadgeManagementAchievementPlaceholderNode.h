@@ -17,12 +17,12 @@
     ASTextNode *_descriptionNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(retain, nonatomic) ASDisplayNode *comingSoonNodeBackground; // @synthesize comingSoonNodeBackground=_comingSoonNodeBackground;
 @property(retain, nonatomic) ASTextNode *comingSoonNode; // @synthesize comingSoonNode=_comingSoonNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithContentColor:(id)arg1;
 

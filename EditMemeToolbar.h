@@ -17,12 +17,12 @@
     UIBarButtonItem *_drawLineButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *drawLineButton; // @synthesize drawLineButton=_drawLineButton;
 @property(retain, nonatomic) UIBarButtonItem *filtersButton; // @synthesize filtersButton=_filtersButton;
 @property(retain, nonatomic) UIBarButtonItem *imagesButton; // @synthesize imagesButton=_imagesButton;
 @property(retain, nonatomic) UIBarButtonItem *stickersButton; // @synthesize stickersButton=_stickersButton;
 @property(retain, nonatomic) UIBarButtonItem *textEditButton; // @synthesize textEditButton=_textEditButton;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

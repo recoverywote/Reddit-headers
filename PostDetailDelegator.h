@@ -24,10 +24,10 @@
     PostDetailNavigator *_navigator;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak PostDetailNavigator *navigator; // @synthesize navigator=_navigator;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak PostDetailViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (void)subredditDisplayViewDidTap:(id)arg1;
 - (void)showNotificationsVotingPrompt;
 - (void)trackDidTapConfirmationDeleteComment:(id)arg1;

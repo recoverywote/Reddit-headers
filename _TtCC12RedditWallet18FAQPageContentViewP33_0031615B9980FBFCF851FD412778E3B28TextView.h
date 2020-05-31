@@ -9,7 +9,7 @@
 @interface _TtCC12RedditWallet18FAQPageContentViewP33_0031615B9980FBFCF851FD412778E3B28TextView : UIView
 {
     // Error parsing type: , name: label
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

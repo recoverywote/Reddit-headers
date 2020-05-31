@@ -20,12 +20,12 @@
     struct _NSRange _queryRange;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RichTextLoader *richTextLoader; // @synthesize richTextLoader=_richTextLoader;
 @property(nonatomic) struct _NSRange queryRange; // @synthesize queryRange=_queryRange;
 @property(retain, nonatomic) NSObject *associatedObject; // @synthesize associatedObject=_associatedObject;
 @property(copy, nonatomic) NSString *pillId; // @synthesize pillId=_pillId;
 @property(nonatomic) _Bool typeaheadSupported; // @synthesize typeaheadSupported=_typeaheadSupported;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly, copy, nonatomic) NSString *pillName;
 - (void)encodeAssociatedObjectWithCoder:(id)arg1;

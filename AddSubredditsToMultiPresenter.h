@@ -14,12 +14,12 @@
     _Bool _isEmpty;
     _Bool _noMoreSubredditRecommendations;
     _Bool _isFetchingRecommendations;
+    id <AccountContext> _accountContext;
     Multi *_multi;
     unsigned long long _currentState;
     NSMutableOrderedSet *_selectedSubreddits;
     CDUnknownBlockType _onNewData;
     CDUnknownBlockType _onCurrentStateChange;
-    id <AccountContext> _accountContext;
     NSArray *_subredditNames;
     SubredditTypeaheadSearch *_subredditSearch;
     NSMutableArray *_recommendedSubreddits;
@@ -28,6 +28,7 @@
     NSMutableArray *_subredditNamesToExclude;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetchingRecommendations; // @synthesize isFetchingRecommendations=_isFetchingRecommendations;
 @property(nonatomic) _Bool noMoreSubredditRecommendations; // @synthesize noMoreSubredditRecommendations=_noMoreSubredditRecommendations;
 @property(retain, nonatomic) NSMutableArray *subredditNamesToExclude; // @synthesize subredditNamesToExclude=_subredditNamesToExclude;
@@ -36,14 +37,13 @@
 @property(copy, nonatomic) NSMutableArray *recommendedSubreddits; // @synthesize recommendedSubreddits=_recommendedSubreddits;
 @property(retain, nonatomic) SubredditTypeaheadSearch *subredditSearch; // @synthesize subredditSearch=_subredditSearch;
 @property(copy, nonatomic) NSArray *subredditNames; // @synthesize subredditNames=_subredditNames;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType onCurrentStateChange; // @synthesize onCurrentStateChange=_onCurrentStateChange;
 @property(copy, nonatomic) CDUnknownBlockType onNewData; // @synthesize onNewData=_onNewData;
 @property(retain, nonatomic) NSMutableOrderedSet *selectedSubreddits; // @synthesize selectedSubreddits=_selectedSubreddits;
 @property(nonatomic) _Bool isEmpty; // @synthesize isEmpty=_isEmpty;
 @property(nonatomic) unsigned long long currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)fetchMoreSubredditRecommendations;
 - (void)fetchRecentlyViewedSubreddits;
 @property(readonly, nonatomic) long long numberOfSubredditsLeft;

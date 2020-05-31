@@ -13,8 +13,8 @@
 
 + (id)wrapper;
 + (id)sharedInstance;
-@property(retain, nonatomic) id crashlytics; // @synthesize crashlytics=_crashlytics;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id crashlytics; // @synthesize crashlytics=_crashlytics;
 - (void)setBoolValue:(_Bool)arg1 forKey:(id)arg2;
 - (void)setFloatValue:(float)arg1 forKey:(id)arg2;
 - (void)setIntValue:(int)arg1 forKey:(id)arg2;

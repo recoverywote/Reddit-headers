@@ -14,9 +14,9 @@
     FeedSpinnerView *_firstLoadSpinner;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (void)reloadSubredditRules;
 - (void)setupLoadingSpinner;
 - (void)viewDidLoad;

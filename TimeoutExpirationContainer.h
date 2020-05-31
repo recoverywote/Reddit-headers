@@ -15,10 +15,10 @@
     CDUnknownBlockType _validationPredicate;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType validationPredicate; // @synthesize validationPredicate=_validationPredicate;
 @property(copy, nonatomic) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
 @property(retain, nonatomic) id value; // @synthesize value=_value;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isValid;
 - (id)initWithValue:(id)arg1 expirationDate:(id)arg2;
 - (id)initWithValue:(id)arg1 expirationDate:(id)arg2 validationPredicate:(CDUnknownBlockType)arg3;

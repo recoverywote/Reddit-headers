@@ -16,11 +16,11 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(copy, nonatomic) NSAttributedString *attributedName; // @synthesize attributedName=_attributedName;
 @property(copy, nonatomic) NSString *templateText; // @synthesize templateText=_templateText;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 
 @end
 

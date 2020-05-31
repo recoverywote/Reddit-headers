@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: imageView
     // Error parsing type: , name: circleView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -16,10 +16,10 @@
     BaseButton *_cancelButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) BaseImageView *mediaImageView; // @synthesize mediaImageView=_mediaImageView;
 @property(nonatomic) __weak id <ChatSelectedViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapCancelButton:(id)arg1;
 - (id)imageForSource:(long long)arg1;
 - (void)configureWithSource:(long long)arg1;

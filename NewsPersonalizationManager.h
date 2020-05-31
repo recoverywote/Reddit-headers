@@ -15,10 +15,10 @@
     Account *_account;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak Account *account; // @synthesize account=_account;
 @property(copy, nonatomic) NSSet *subscribedSubtopics; // @synthesize subscribedSubtopics=_subscribedSubtopics;
 @property(copy, nonatomic) NSOrderedSet *subscribedTopics; // @synthesize subscribedTopics=_subscribedTopics;
-- (void).cxx_destruct;
 - (void)writeNewsTopicSubtopicPersonalization;
 - (id)descriptionInfoFromMulti:(id)arg1;
 - (id)newsTopicsWithMultis:(id)arg1;

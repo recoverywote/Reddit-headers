@@ -20,12 +20,12 @@
 }
 
 + (id)imageFilePathForSubmittedPost:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *submissionContexts; // @synthesize submissionContexts=_submissionContexts;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(copy, nonatomic) NSArray *submittedPostIDs; // @synthesize submittedPostIDs=_submittedPostIDs;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
-- (void).cxx_destruct;
 - (void)transcodingUpdateParser:(id)arg1 didUpdateState:(long long)arg2;
 - (id)findSubmittedPostForSocketSession:(id)arg1;
 - (void)saveCurrentSubmissionPostIDs;

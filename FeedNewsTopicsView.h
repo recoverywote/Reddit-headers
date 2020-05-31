@@ -28,6 +28,7 @@
 
 + (double)compactViewHeight;
 + (double)viewHeight;
+- (void).cxx_destruct;
 @property(nonatomic) double settingControlTopY; // @synthesize settingControlTopY=_settingControlTopY;
 @property(copy, nonatomic) NSOrderedSet *topics; // @synthesize topics=_topics;
 @property(retain, nonatomic) BaseButton *personalizeControl; // @synthesize personalizeControl=_personalizeControl;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) NewsSubtopic *selectedSubtopic; // @synthesize selectedSubtopic=_selectedSubtopic;
 @property(retain, nonatomic) NewsTopic *selectedTopic; // @synthesize selectedTopic=_selectedTopic;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
-- (void).cxx_destruct;
 - (void)didTapView:(id)arg1;
 - (void)dateDidChange:(id)arg1;
 - (void)updatePersistentControls;

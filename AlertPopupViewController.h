@@ -14,8 +14,8 @@
 }
 
 + (id)blockUserPopupWithSource:(id)arg1 confirmAction:(CDUnknownBlockType)arg2;
-@property(copy, nonatomic) NSArray *actions; // @synthesize actions=_actions;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *actions; // @synthesize actions=_actions;
 - (void)dismissAction;
 - (id)initWithTitle:(id)arg1 message:(id)arg2 bottomButtons:(id)arg3;
 - (id)initWithTitle:(id)arg1 message:(id)arg2 actions:(id)arg3;

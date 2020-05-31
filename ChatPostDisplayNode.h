@@ -15,13 +15,13 @@
     _TtC6Reddit27ChatPostBlockedMessagesNode *_blockedMessagesNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit27ChatPostBlockedMessagesNode *blockedMessagesNode; // @synthesize blockedMessagesNode=_blockedMessagesNode;
 @property(retain, nonatomic) ChatPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithBlockedMessagesBucket:(id)arg1 delegate:(id)arg2;
-- (id)initWithCommentNode:(id)arg1 options:(id)arg2 delegate:(id)arg3 isReplyFeatureEnabled:(_Bool)arg4 shouldShowVotingNodeBlock:(CDUnknownBlockType)arg5 shouldShowDownvote:(_Bool)arg6;
+- (id)initWithViewContext:(id)arg1 commentNode:(id)arg2 options:(id)arg3 delegate:(id)arg4 isReplyFeatureEnabled:(_Bool)arg5 shouldShowVotingNodeBlock:(CDUnknownBlockType)arg6 shouldShowDownvote:(_Bool)arg7;
 
 @end
 

@@ -15,10 +15,10 @@
     CDUnknownBlockType _validationPredicate;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType validationPredicate; // @synthesize validationPredicate=_validationPredicate;
 @property(nonatomic) double timeout; // @synthesize timeout=_timeout;
 @property(retain, nonatomic) NSCache *underlyingCache; // @synthesize underlyingCache=_underlyingCache;
-- (void).cxx_destruct;
 - (void)removeAllObjects;
 - (void)removeObjectForKey:(id)arg1;
 - (void)setObject:(id)arg1 forKey:(id)arg2;

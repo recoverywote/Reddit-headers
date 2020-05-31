@@ -22,6 +22,7 @@
     BaseImageView *_checkmark;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *checkmark; // @synthesize checkmark=_checkmark;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) BaseButton *confirmationButton; // @synthesize confirmationButton=_confirmationButton;
@@ -30,7 +31,6 @@
 @property(nonatomic) unsigned long long maximumTextSize; // @synthesize maximumTextSize=_maximumTextSize;
 @property(copy, nonatomic) CDUnknownBlockType onConfirmation; // @synthesize onConfirmation=_onConfirmation;
 @property(copy, nonatomic) CDUnknownBlockType inputValidation; // @synthesize inputValidation=_inputValidation;
-- (void).cxx_destruct;
 - (_Bool)shouldDismissWhenDimmerTapped;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 - (void)keyboardWillShow:(id)arg1;

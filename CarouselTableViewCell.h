@@ -13,10 +13,10 @@
     CarouselContainerNode *_carouselContainerNode;
 }
 
-+ (struct CGSize)calculatedSizeWithData:(id)arg1 delegate:(id)arg2 width:(double)arg3;
-@property(retain, nonatomic) CarouselContainerNode *carouselContainerNode; // @synthesize carouselContainerNode=_carouselContainerNode;
++ (struct CGSize)calculatedSizeWithViewContext:(id)arg1 data:(id)arg2 delegate:(id)arg3 width:(double)arg4;
 - (void).cxx_destruct;
-- (void)configureWithCarousel:(id)arg1 delegate:(id)arg2;
+@property(retain, nonatomic) CarouselContainerNode *carouselContainerNode; // @synthesize carouselContainerNode=_carouselContainerNode;
+- (void)configureWithViewContext:(id)arg1 carousel:(id)arg2 delegate:(id)arg3;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

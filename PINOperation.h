@@ -20,13 +20,13 @@
 }
 
 + (id)operationWithBlock:(CDUnknownBlockType)arg1 reference:(id)arg2 priority:(unsigned long long)arg3 identifier:(id)arg4 data:(id)arg5 completion:(CDUnknownBlockType)arg6;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id data; // @synthesize data=_data;
 @property(retain, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) NSMutableArray *completions; // @synthesize completions=_completions;
 @property(nonatomic) unsigned long long priority; // @synthesize priority=_priority;
 @property(retain, nonatomic) id <PINOperationReference> reference; // @synthesize reference=_reference;
 @property(copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
-- (void).cxx_destruct;
 - (void)addCompletion:(CDUnknownBlockType)arg1;
 
 @end

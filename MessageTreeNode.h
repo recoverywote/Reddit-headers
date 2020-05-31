@@ -17,12 +17,12 @@
     Message *_object;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isTopLevel; // @synthesize isTopLevel=_isTopLevel;
 @property(nonatomic) _Bool isLastChildNode; // @synthesize isLastChildNode=_isLastChildNode;
 @property(nonatomic) _Bool isCollapsed; // @synthesize isCollapsed=_isCollapsed;
 @property(retain, nonatomic) Message *object; // @synthesize object=_object;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

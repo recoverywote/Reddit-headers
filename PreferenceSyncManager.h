@@ -17,10 +17,10 @@
 
 + (id)nsfwBlurPreferencesUpdateEvent:(_Bool)arg1;
 + (id)nsfwPreferencesUpdateEvent:(_Bool)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) KeyValueObservation *accountNSFWSettingObservation; // @synthesize accountNSFWSettingObservation=_accountNSFWSettingObservation;
 @property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (void)nsfwShouldBlurPreferencesDidUpdate;
 - (void)nsfwOver18PreferencesDidUpdate;
 - (void)updateRemoteNSFWSetting:(_Bool)arg1 shouldUseSafeBrowsing:(_Bool)arg2;

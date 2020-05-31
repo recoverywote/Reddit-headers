@@ -19,13 +19,13 @@
     UIColor *_thumbColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *thumbColor; // @synthesize thumbColor=_thumbColor;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) BaseSlider *slider; // @synthesize slider=_slider;
 @property(nonatomic) __weak id <LabeledStepSliderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long step; // @synthesize step=_step;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
-- (void).cxx_destruct;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
 - (unsigned long long)currentStep;
 - (void)didEndSliderTracking:(id)arg1;

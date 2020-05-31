@@ -15,9 +15,9 @@
 }
 
 + (id)queryItemWithName:(id)arg1 value:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *value; // @synthesize value=_value;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 value:(id)arg2;
 
 @end

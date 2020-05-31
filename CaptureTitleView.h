@@ -21,11 +21,11 @@
 + (double)heightForSubtitleString:(id)arg1;
 + (double)heightForTitleString:(id)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) CaptureContentTitle *content; // @synthesize content=_content;
 @property(nonatomic) __weak CaptureScreen *screen; // @synthesize screen=_screen;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)layoutSubviews;
 - (void)configureWithContent:(id)arg1 screen:(id)arg2;

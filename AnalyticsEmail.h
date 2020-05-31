@@ -28,6 +28,7 @@
     NSString *_listing_source;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool listing_sourceIsSet; // @synthesize listing_sourceIsSet=_listing_sourceIsSet;
 @property(copy, nonatomic) NSString *listing_source; // @synthesize listing_source=_listing_source;
 @property(nonatomic) _Bool post_has_thumbnailIsSet; // @synthesize post_has_thumbnailIsSet=_post_has_thumbnailIsSet;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) NSString *preview_text; // @synthesize preview_text=_preview_text;
 @property(nonatomic) _Bool subject_lineIsSet; // @synthesize subject_lineIsSet=_subject_lineIsSet;
 @property(copy, nonatomic) NSString *subject_line; // @synthesize subject_line=_subject_line;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

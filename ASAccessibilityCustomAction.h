@@ -17,10 +17,10 @@
     ASDisplayNode *_containerNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *containerNode; // @synthesize containerNode=_containerNode;
 @property(retain, nonatomic) ASDisplayNode *node; // @synthesize node=_node;
 @property(retain, nonatomic) UIView *container; // @synthesize container=_container;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGRect accessibilityFrame;
 
 @end

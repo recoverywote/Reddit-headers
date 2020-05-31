@@ -20,6 +20,7 @@
     struct CGSize _imageSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageHeightConstraint; // @synthesize imageHeightConstraint=_imageHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageWidthConstraint; // @synthesize imageWidthConstraint=_imageWidthConstraint;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 @property(nonatomic) double preferredHeight; // @synthesize preferredHeight=_preferredHeight;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
 - (id)initWithAnimatedImageURL:(id)arg1 placeholderImage:(id)arg2 titleText:(id)arg3 attributedBodyText:(id)arg4 metadataView:(id)arg5;

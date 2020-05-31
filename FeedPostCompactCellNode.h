@@ -32,6 +32,7 @@
     FeedPostEventBarNode *_eventBarNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostEventBarNode *eventBarNode; // @synthesize eventBarNode=_eventBarNode;
 @property(retain, nonatomic) CarouselContainerNode *chainedDiscoveryNode; // @synthesize chainedDiscoveryNode=_chainedDiscoveryNode;
 @property(retain, nonatomic) ASDisplayNode *chainedDiscoveryNodeSeparator; // @synthesize chainedDiscoveryNodeSeparator=_chainedDiscoveryNodeSeparator;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) FeedPostTitleNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) Carousel *chainedCarousel; // @synthesize chainedCarousel=_chainedCarousel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImage *previewImage;
 - (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;

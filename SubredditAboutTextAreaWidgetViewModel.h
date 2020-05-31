@@ -14,9 +14,9 @@
     SubredditTextAreaWidget *_textAreaWidget;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditTextAreaWidget *textAreaWidget; // @synthesize textAreaWidget=_textAreaWidget;
 @property(copy, nonatomic) NSAttributedString *attributedText; // @synthesize attributedText=_attributedText;
-- (void).cxx_destruct;
 - (long long)numberOfRowItems;
 - (id)titleLabelText;
 - (double)heightForRow:(long long)arg1 rowWidth:(double)arg2;

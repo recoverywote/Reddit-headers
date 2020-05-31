@@ -16,11 +16,11 @@
     ASTextNode *_badgeDescriptionNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *badgeDescriptionNode; // @synthesize badgeDescriptionNode=_badgeDescriptionNode;
 @property(retain, nonatomic) ASTextNode *badgeTitleNode; // @synthesize badgeTitleNode=_badgeTitleNode;
 @property(retain, nonatomic) ASNetworkImageNode *badgeImageNode; // @synthesize badgeImageNode=_badgeImageNode;
 @property(retain, nonatomic) ASTextNode *collectionNameNode; // @synthesize collectionNameNode=_collectionNameNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithBadge:(id)arg1;
 

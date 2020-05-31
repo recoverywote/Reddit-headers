@@ -17,9 +17,9 @@
     NSUserDefaults *_userDefaults;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(retain, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (void)processResponse:(id)arg1;
 - (void)processRequest:(id)arg1;

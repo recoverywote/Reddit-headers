@@ -16,9 +16,9 @@
     NSDictionary *_registers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *registers; // @synthesize registers=_registers;
 @property(retain, nonatomic) NSArray *frames; // @synthesize frames=_frames;
-- (void).cxx_destruct;
 - (id)serialize;
 - (void)fixDuplicateFrames;
 - (id)initWithFrames:(id)arg1 registers:(id)arg2;

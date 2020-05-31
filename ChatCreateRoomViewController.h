@@ -30,6 +30,7 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatRoomMuteSettings *muteSettings; // @synthesize muteSettings=_muteSettings;
 @property(readonly, nonatomic) NSArray *muteNewMemberOrderedKeys; // @synthesize muteNewMemberOrderedKeys=_muteNewMemberOrderedKeys;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) WarningTextView *descriptionView; // @synthesize descriptionView=_descriptionView;
 @property(retain, nonatomic) WarningTextView *roomNameView; // @synthesize roomNameView=_roomNameView;
 @property(retain, nonatomic) BaseScrollView *scrollView; // @synthesize scrollView=_scrollView;
-- (void).cxx_destruct;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 channel:(id)arg3;
 - (void)warningTextView:(id)arg1 didChangeSize:(struct CGSize)arg2;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;

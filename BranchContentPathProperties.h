@@ -14,9 +14,9 @@
     NSDictionary *_pathInfo;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isClearText; // @synthesize isClearText=_isClearText;
 @property(retain, nonatomic) NSDictionary *pathInfo; // @synthesize pathInfo=_pathInfo;
-- (void).cxx_destruct;
 - (_Bool)isSkipContentDiscovery;
 - (id)getFilteredElements;
 - (id)init:(id)arg1;

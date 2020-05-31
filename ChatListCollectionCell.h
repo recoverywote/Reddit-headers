@@ -8,8 +8,8 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class BaseButton, BaseLabel, ChatAvatarImageView, NSString, ObservableObject, RedditService;
-@protocol ChatListCollectionCellModel;
+@class BaseButton, BaseLabel, ChatAvatarImageView, NSString, ObservableObject;
+@protocol AccountContext, ChatListCollectionCellModel;
 
 @interface ChatListCollectionCell : BaseCollectionViewCell <ObjectObserverProtocol>
 {
@@ -21,8 +21,11 @@
     BaseButton *_selectionButton;
     ChatAvatarImageView *_avatarImageView;
     ChatAvatarImageView *_secondAvatarImageView;
+    id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatAvatarImageView *secondAvatarImageView; // @synthesize secondAvatarImageView=_secondAvatarImageView;
 @property(retain, nonatomic) ChatAvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
 @property(retain, nonatomic) BaseButton *selectionButton; // @synthesize selectionButton=_selectionButton;
@@ -31,12 +34,11 @@
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(retain, nonatomic) ObservableObject<ChatListCollectionCellModel> *model; // @synthesize model=_model;
 @property(nonatomic) unsigned long long style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)setSelected:(_Bool)arg1;
 - (void)configureContacts;
 - (void)configureMessagePreview;
+- (void)configureWithAccountContext:(id)arg1 model:(id)arg2;
 - (void)configureWithModel:(id)arg1;
 - (void)layoutSelectionStyle;
 - (void)layoutMessagePreviewStyle;

@@ -13,8 +13,8 @@
     UILabel *_label;
 }
 
-@property(retain, nonatomic) UILabel *label; // @synthesize label=_label;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UILabel *label; // @synthesize label=_label;
 - (void)setSelected:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)prepareForReuse;

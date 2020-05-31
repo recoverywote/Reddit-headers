@@ -14,7 +14,7 @@
     // Error parsing type: , name: scrollView
     // Error parsing type: , name: page
     // Error parsing type: , name: themeProvider
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -40,6 +40,7 @@
     NSString *_type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool filtered_by_recipientIsSet; // @synthesize filtered_by_recipientIsSet=_filtered_by_recipientIsSet;
@@ -64,7 +65,6 @@
 @property(copy, nonatomic) NSString *recipient_id; // @synthesize recipient_id=_recipient_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

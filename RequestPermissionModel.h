@@ -17,12 +17,12 @@
     NSString *_confirmButtonTitle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *confirmButtonTitle; // @synthesize confirmButtonTitle=_confirmButtonTitle;
 @property(readonly, copy, nonatomic) NSString *cancelButtonTitle; // @synthesize cancelButtonTitle=_cancelButtonTitle;
 @property(readonly, nonatomic) UIImage *centerImage; // @synthesize centerImage=_centerImage;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 text:(id)arg2 centerImage:(id)arg3 cancelButtonTitle:(id)arg4 confirmButtonTitle:(id)arg5;
 
 @end

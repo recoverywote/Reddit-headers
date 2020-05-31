@@ -34,6 +34,7 @@
     NSString *_region;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool region_numIsSet; // @synthesize region_numIsSet=_region_numIsSet;
 @property(nonatomic) int region_num; // @synthesize region_num=_region_num;
 @property(nonatomic) _Bool regionIsSet; // @synthesize regionIsSet=_regionIsSet;
@@ -52,7 +53,6 @@
 @property(copy, nonatomic) NSString *message_type; // @synthesize message_type=_message_type;
 @property(nonatomic) _Bool message_idIsSet; // @synthesize message_idIsSet=_message_idIsSet;
 @property(copy, nonatomic) NSString *message_id; // @synthesize message_id=_message_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

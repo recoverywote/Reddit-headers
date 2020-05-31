@@ -13,8 +13,8 @@
     NSURLSession *_urlSession;
 }
 
-@property(readonly, nonatomic) NSURLSession *urlSession; // @synthesize urlSession=_urlSession;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURLSession *urlSession; // @synthesize urlSession=_urlSession;
 - (id)urlRequestWithBody:(id)arg1;
 - (id)hmacString:(id)arg1;
 - (void)sendEvents:(id)arg1 completion:(CDUnknownBlockType)arg2;

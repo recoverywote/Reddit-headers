@@ -6,6 +6,7 @@
 
 #import <UIKit/UIButton.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtCC7Economy14AwardSelection9CTAButton : UIButton
 {
     // Error parsing type: , name: theme

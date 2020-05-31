@@ -18,11 +18,11 @@
     NSDictionary *_extra;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *extra; // @synthesize extra=_extra;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(copy, nonatomic) NSString *userId; // @synthesize userId=_userId;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)init;
 - (id)initWithUserId:(id)arg1;

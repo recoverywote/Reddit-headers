@@ -23,6 +23,7 @@
     LineNode *_seeMoreSeparator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LineNode *seeMoreSeparator; // @synthesize seeMoreSeparator=_seeMoreSeparator;
 @property(retain, nonatomic) ASImageNode *seeMoreArrowNode; // @synthesize seeMoreArrowNode=_seeMoreArrowNode;
 @property(retain, nonatomic) BaseButtonNode *seeMoreButton; // @synthesize seeMoreButton=_seeMoreButton;
@@ -33,7 +34,6 @@
 @property(nonatomic) long long maxNumberOfLines; // @synthesize maxNumberOfLines=_maxNumberOfLines;
 @property(nonatomic) __weak id <PillWidgetNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) PillWidgetModel *pillWidgetModel; // @synthesize pillWidgetModel=_pillWidgetModel;
-- (void).cxx_destruct;
 - (void)didTapSeeMoreButton:(id)arg1;
 - (void)didNodeTap:(id)arg1;
 - (void)configureTextNodes;

@@ -19,6 +19,7 @@
     NSString *_callToAction;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *callToAction; // @synthesize callToAction=_callToAction;
 @property(readonly, nonatomic) long long maxDismissCount; // @synthesize maxDismissCount=_maxDismissCount;
 @property(readonly, nonatomic) long long iconType; // @synthesize iconType=_iconType;
@@ -26,7 +27,6 @@
 @property(readonly, copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *announcementId; // @synthesize announcementId=_announcementId;
-- (void).cxx_destruct;
 - (id)initWithGraphQLData:(id)arg1;
 
 @end

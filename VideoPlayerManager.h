@@ -21,6 +21,7 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool audioIOPauseRequested; // @synthesize audioIOPauseRequested=_audioIOPauseRequested;
 @property(retain, nonatomic) NSArray *playerWasPlaying; // @synthesize playerWasPlaying=_playerWasPlaying;
 @property(retain, nonatomic) NSMutableArray *wasPlayingArray; // @synthesize wasPlayingArray=_wasPlayingArray;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSArray *avPlayerPool; // @synthesize avPlayerPool=_avPlayerPool;
 @property(retain) AVPlayer *thumbnailAVPlayer; // @synthesize thumbnailAVPlayer=_thumbnailAVPlayer;
 @property(nonatomic) _Bool postOverlayOpen; // @synthesize postOverlayOpen=_postOverlayOpen;
-- (void).cxx_destruct;
 - (void)resetPlayerForStreamPlayerView:(id)arg1;
 - (void)resumeVideosWithPlaybackData;
 - (void)pauseVideosWithPlaybackData;

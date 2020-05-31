@@ -23,13 +23,13 @@
     struct CGRect _previousSuperviewFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect previousSuperviewFrame; // @synthesize previousSuperviewFrame=_previousSuperviewFrame;
 @property(nonatomic) __weak id <NextCommentButtonInteractorDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct CGPoint nextCommentLongPressOffset; // @synthesize nextCommentLongPressOffset=_nextCommentLongPressOffset;
 @property(retain, nonatomic) UILongPressGestureRecognizer *nextCommentLongPressGestureRecognizer; // @synthesize nextCommentLongPressGestureRecognizer=_nextCommentLongPressGestureRecognizer;
 @property(readonly, nonatomic) NSIndexPath *currentCommentIndexPath; // @synthesize currentCommentIndexPath=_currentCommentIndexPath;
 @property(retain, nonatomic) BaseButton *scrollToNextCommentButton; // @synthesize scrollToNextCommentButton=_scrollToNextCommentButton;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasComments;
 @property(readonly, nonatomic) double floatingHeaderTopInset;
 - (void)didChangeOffsetForCollectionNode:(id)arg1;

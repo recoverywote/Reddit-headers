@@ -30,6 +30,7 @@
     struct UIEdgeInsets _contentInset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showsHorizontalScrollIndicator; // @synthesize showsHorizontalScrollIndicator=_showsHorizontalScrollIndicator;
 @property(nonatomic) _Bool showsVerticalScrollIndicator; // @synthesize showsVerticalScrollIndicator=_showsVerticalScrollIndicator;
 @property(nonatomic) _Bool animatesContentOffset; // @synthesize animatesContentOffset=_animatesContentOffset;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) UICollectionViewLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(nonatomic) __weak id <ASCollectionDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <ASCollectionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

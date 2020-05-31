@@ -28,6 +28,7 @@
     NSMutableArray *_options_vote_totals;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool options_vote_totalsIsSet; // @synthesize options_vote_totalsIsSet=_options_vote_totalsIsSet;
 @property(retain, nonatomic) NSMutableArray *options_vote_totals; // @synthesize options_vote_totals=_options_vote_totals;
 @property(nonatomic) _Bool vote_affects_score_reasonIsSet; // @synthesize vote_affects_score_reasonIsSet=_vote_affects_score_reasonIsSet;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) NSMutableArray *options; // @synthesize options=_options;
 @property(nonatomic) _Bool options_lengthIsSet; // @synthesize options_lengthIsSet=_options_lengthIsSet;
 @property(nonatomic) int options_length; // @synthesize options_length=_options_length;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -20,12 +20,12 @@
     double _initialXOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double initialXOffset; // @synthesize initialXOffset=_initialXOffset;
 @property(retain, nonatomic) BaseLabel *postTitleLabel; // @synthesize postTitleLabel=_postTitleLabel;
 @property(retain, nonatomic) BaseImageView *communityIconImageView; // @synthesize communityIconImageView=_communityIconImageView;
 @property(retain, nonatomic) RecentChatPost *recentChatPost; // @synthesize recentChatPost=_recentChatPost;
 @property(nonatomic) __weak id <RecentChatPostBubbleViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)configureCommunityIcon;
 - (void)resetView;
 - (void)dismissView;

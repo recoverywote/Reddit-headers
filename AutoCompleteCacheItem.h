@@ -14,9 +14,9 @@
     NSString *_queryId;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *queryId; // @synthesize queryId=_queryId;
 @property(copy, nonatomic) NSArray *objects; // @synthesize objects=_objects;
-- (void).cxx_destruct;
 
 @end
 

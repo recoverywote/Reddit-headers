@@ -19,6 +19,7 @@
     NSString *_variant;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *variant; // @synthesize variant=_variant;
 @property(retain, nonatomic) NSString *category; // @synthesize category=_category;
 @property(retain, nonatomic) NSString *brand; // @synthesize brand=_brand;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) NSDecimalNumber *price; // @synthesize price=_price;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSString *sku; // @synthesize sku=_sku;
-- (void).cxx_destruct;
 - (id)description;
 - (id)dictionary;
 

@@ -15,10 +15,10 @@
     BaseView *_dividerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *dividerView; // @synthesize dividerView=_dividerView;
 @property(retain, nonatomic) BaseButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)configureActionButtonWithImage:(id)arg1;
 - (void)prepareForReuse;
 - (void)setupConstraints;

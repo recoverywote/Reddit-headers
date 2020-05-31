@@ -28,6 +28,7 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) HLSAssetDownloadSession *videoCache; // @synthesize videoCache=_videoCache;
 @property(retain, nonatomic) VideoPlayerManager *videoPlayerManager; // @synthesize videoPlayerManager=_videoPlayerManager;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) AVPlayerLayer *playerLayer; // @synthesize playerLayer=_playerLayer;
 @property(retain, nonatomic) AVPlayerItem *playerItem; // @synthesize playerItem=_playerItem;
 @property(retain, nonatomic) AVPlayer *player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)clearPlayerData;
 - (void)prepareForNewVideo;
 - (void)removePlayer;

@@ -27,6 +27,7 @@
 }
 
 + (id)dataWithSender:(id)arg1 analyticsPageType:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *utmContent; // @synthesize utmContent=_utmContent;
 @property(copy, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;
 @property(copy, nonatomic) NSString *utmName; // @synthesize utmName=_utmName;
@@ -40,7 +41,6 @@
 @property(nonatomic) unsigned long long origin; // @synthesize origin=_origin;
 @property(readonly, copy, nonatomic) NSString *analyticsPageType; // @synthesize analyticsPageType=_analyticsPageType;
 @property(readonly, nonatomic) __weak id <ShareSheetSenderProtocol> sender; // @synthesize sender=_sender;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *shareablePostURL;
 - (id)shareableURL:(id)arg1;
 - (id)gifDownloadActivityItemForPost;

@@ -8,7 +8,7 @@
 
 @interface _TtCC12RedditWallet12ModalBarViewP33_30B2EE74D403AE5037C5CAE73AFD85E711CloseButton : UIButton
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -14,9 +14,9 @@
     Post *_post;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) FeedPostCrosspostView *crosspostablePostView; // @synthesize crosspostablePostView=_crosspostablePostView;
-- (void).cxx_destruct;
 - (void)willResignResponderAndDismiss;
 - (void)didTapPostButton:(id)arg1;
 - (void)didTapDropDown;

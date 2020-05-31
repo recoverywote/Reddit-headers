@@ -12,13 +12,14 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class AccountSubscriptionDataSource, BaseTableView, CommunityDefaultSubscriptionViewDataSource, CommunityFollowingViewDataSource, CommunityModeratingViewDataSource, CommunityPopularViewDataSource, CommunityRecentlyViewedDataSource, FavoriteSubredditViewDataSource, NSArray, NSString, RedditService, ScrollViewIndexBar, SubscribedSubredditViewDataSource, UIScrollView;
+@class AccountSubscriptionDataSource, BaseTableView, CommunityDefaultSubscriptionViewDataSource, CommunityFollowingViewDataSource, CommunityModeratingViewDataSource, CommunityPopularViewDataSource, CommunityRecentlyViewedDataSource, FavoriteSubredditViewDataSource, NSArray, NSString, RedditService, ScrollViewIndexBar, SubscribedSubredditViewDataSource, UIScrollView, _TtC6Reddit36CommunitiesTableViewDelegateMediator;
 @protocol AccountContext;
 
 @interface CommunitiesViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, CommunityViewDataSourceDelegate, ScrollViewIndexBarDelegate, PagedTabControllerProtocol>
 {
     _Bool _hasPerformedInitialFetch;
     BaseTableView *_tableView;
+    _TtC6Reddit36CommunitiesTableViewDelegateMediator *_tableViewDelegateMediator;
     ScrollViewIndexBar *_indexBar;
     AccountSubscriptionDataSource *_subscribedSubredditDataSource;
     CommunityPopularViewDataSource *_popularViewDataSource;
@@ -32,6 +33,7 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool hasPerformedInitialFetch; // @synthesize hasPerformedInitialFetch=_hasPerformedInitialFetch;
 @property(copy, nonatomic) NSArray *dataSources; // @synthesize dataSources=_dataSources;
@@ -44,8 +46,8 @@
 @property(retain, nonatomic) CommunityPopularViewDataSource *popularViewDataSource; // @synthesize popularViewDataSource=_popularViewDataSource;
 @property(retain, nonatomic) AccountSubscriptionDataSource *subscribedSubredditDataSource; // @synthesize subscribedSubredditDataSource=_subscribedSubredditDataSource;
 @property(retain, nonatomic) ScrollViewIndexBar *indexBar; // @synthesize indexBar=_indexBar;
+@property(retain, nonatomic) _TtC6Reddit36CommunitiesTableViewDelegateMediator *tableViewDelegateMediator; // @synthesize tableViewDelegateMediator=_tableViewDelegateMediator;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
 - (id)pageItemText;
@@ -61,21 +63,17 @@
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
-- (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-- (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2;
-- (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
-- (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;
-- (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)fetchAllData;
-- (id)majorContentView;
-- (struct UIEdgeInsets)preferredContentInset;
-- (void)viewDidAppear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
 - (id)orderedDataSources;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)configureDataSources;
+- (id)majorContentView;
+- (struct UIEdgeInsets)preferredContentInset;
+- (void)viewDidLayoutSubviews;
+- (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 @property(readonly, nonatomic) RedditService *service;
 - (id)initWithRecentSubreddits:(id)arg1 accountContext:(id)arg2;

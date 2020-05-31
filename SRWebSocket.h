@@ -59,6 +59,7 @@
 }
 
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool allowsUntrustedSSLCertificates; // @synthesize allowsUntrustedSSLCertificates=_allowsUntrustedSSLCertificates;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *delegateDispatchQueue; // @synthesize delegateDispatchQueue=_delegateDispatchQueue;
 @property(retain, nonatomic) NSOperationQueue *delegateOperationQueue; // @synthesize delegateOperationQueue=_delegateOperationQueue;
@@ -68,7 +69,6 @@
 @property(nonatomic) long long readyState; // @synthesize readyState=_readyState;
 @property(readonly, retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(nonatomic) __weak id <SRWebSocketDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)safeHandleEvent:(unsigned long long)arg1 stream:(id)arg2;
 - (void)stream:(id)arg1 handleEvent:(unsigned long long)arg2;
 - (void)_sendFrameWithOpcode:(int)arg1 data:(id)arg2;

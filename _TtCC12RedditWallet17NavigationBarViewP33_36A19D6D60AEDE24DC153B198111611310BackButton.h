@@ -8,7 +8,7 @@
 
 @interface _TtCC12RedditWallet17NavigationBarViewP33_36A19D6D60AEDE24DC153B198111611310BackButton : UIButton
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -18,13 +18,13 @@
     NSArray *_events;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *events; // @synthesize events=_events;
 @property(nonatomic) _Bool shouldShowDate; // @synthesize shouldShowDate=_shouldShowDate;
 @property(nonatomic) _Bool shouldShowTitle; // @synthesize shouldShowTitle=_shouldShowTitle;
 @property(nonatomic) _Bool shouldShowDescription; // @synthesize shouldShowDescription=_shouldShowDescription;
 @property(nonatomic) _Bool shouldShowTime; // @synthesize shouldShowTime=_shouldShowTime;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

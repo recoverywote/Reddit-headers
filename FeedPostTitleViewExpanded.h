@@ -23,6 +23,7 @@
 }
 
 + (double)calculatedHeightWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) RichTextLoader *richTextLoader; // @synthesize richTextLoader=_richTextLoader;
 @property(nonatomic) _Bool needsShowBigSubscribeButton; // @synthesize needsShowBigSubscribeButton=_needsShowBigSubscribeButton;
 @property(retain, nonatomic) BaseButton *communityIconButton; // @synthesize communityIconButton=_communityIconButton;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) SubscribeButtonCompact *subscribeButton; // @synthesize subscribeButton=_subscribeButton;
 @property(retain, nonatomic) AttributedLabelRegular *detailsLabel; // @synthesize detailsLabel=_detailsLabel;
 @property(copy, nonatomic) NSString *communityIconUrlString; // @synthesize communityIconUrlString=_communityIconUrlString;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)configureBigSubscribeButton;
@@ -50,7 +50,8 @@
 @property(readonly, nonatomic) UIView *subscribeTooltipAnchor;
 - (void)prepareForReuse;
 - (void)themeDidChange:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

@@ -13,8 +13,8 @@
     NSArray *_widgets;
 }
 
-@property(copy, nonatomic) NSArray *widgets; // @synthesize widgets=_widgets;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *widgets; // @synthesize widgets=_widgets;
 - (id)initWithData:(id)arg1;
 
 @end

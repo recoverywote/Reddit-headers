@@ -8,9 +8,9 @@
 
 @interface NSMapTable (ASCollectionLayoutConvenience)
 + (id)elementToLayoutAttributesTable;
-+ (struct NSMapTable *)pageTableWithLayoutAttributes:(id)arg1 contentSize:(struct CGSize)arg2 pageSize:(struct CGSize)arg3;
-+ (struct NSMapTable *)pageTableForWeakObjectPointers;
-+ (struct NSMapTable *)pageTableForStrongObjectPointers;
++ (id)pageTableWithLayoutAttributes:(id)arg1 contentSize:(struct CGSize)arg2 pageSize:(struct CGSize)arg3;
++ (id)pageTableForWeakObjectPointers;
++ (id)pageTableForStrongObjectPointers;
 + (id)pageTableWithValuePointerFunctions:(id)arg1;
 - (void)removeObjectForPage:(unsigned long long)arg1;
 - (void)setObject:(id)arg1 forPage:(unsigned long long)arg2;

@@ -17,12 +17,12 @@
     UIStackView *_mainStackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *mainStackView; // @synthesize mainStackView=_mainStackView;
 @property(retain, nonatomic) UIStackView *topStackView; // @synthesize topStackView=_topStackView;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)configureWithViewModel:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

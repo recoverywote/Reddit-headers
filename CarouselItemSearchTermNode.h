@@ -13,12 +13,12 @@
     BaseButtonNode *_buttonNode;
 }
 
-@property(retain, nonatomic) BaseButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initWithCarouselItem:(id)arg1;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2;
 
 @end
 

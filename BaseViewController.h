@@ -27,6 +27,7 @@
     UIView *_fakeNavBarView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *fakeNavBarView; // @synthesize fakeNavBarView=_fakeNavBarView;
 @property(nonatomic) __weak BaseViewController *parentContentViewController; // @synthesize parentContentViewController=_parentContentViewController;
 @property(nonatomic) _Bool isViewCurrentlyDisplayed; // @synthesize isViewCurrentlyDisplayed=_isViewCurrentlyDisplayed;
@@ -38,7 +39,6 @@
 @property(copy, nonatomic) NSURL *analyticsReferringURL; // @synthesize analyticsReferringURL=_analyticsReferringURL;
 @property(nonatomic) _Bool prefersTabBarHidden; // @synthesize prefersTabBarHidden=_prefersTabBarHidden;
 @property(retain, nonatomic) UILayoutGuide *contentLayoutGuide; // @synthesize contentLayoutGuide=_contentLayoutGuide;
-- (void).cxx_destruct;
 - (void)configureNavigationBarAppearance;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForOperation:(long long)arg2 fromViewController:(id)arg3 toViewController:(id)arg4;

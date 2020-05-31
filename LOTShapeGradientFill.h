@@ -20,6 +20,7 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) _Bool evenOddFillRule; // @synthesize evenOddFillRule=_evenOddFillRule;
 @property(readonly, nonatomic) LOTKeyframeGroup *opacity; // @synthesize opacity=_opacity;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) LOTKeyframeGroup *startPoint; // @synthesize startPoint=_startPoint;
 @property(readonly, nonatomic) NSNumber *numberOfColors; // @synthesize numberOfColors=_numberOfColors;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

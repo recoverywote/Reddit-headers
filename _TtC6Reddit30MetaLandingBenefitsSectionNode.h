@@ -9,12 +9,9 @@
 @interface _TtC6Reddit30MetaLandingBenefitsSectionNode : ASDisplayNode
 {
     // Error parsing type: , name: color
-    // Error parsing type: , name: chickenImageNode
-    // Error parsing type: , name: commentTreeImageNode
-    // Error parsing type: , name: commentTreeOverlayNode
-    // Error parsing type: , name: titleNode
-    // Error parsing type: , name: titleContainerNode
+    // Error parsing type: , name: pillNode
     // Error parsing type: , name: subtitleNode
+    // Error parsing type: , name: benefitsList
 }
 
 - (void).cxx_destruct;

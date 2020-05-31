@@ -19,6 +19,7 @@
     double _contentHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double contentHeight; // @synthesize contentHeight=_contentHeight;
 @property(retain, nonatomic) BaseButton *button; // @synthesize button=_button;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) RUITheme *themeOverride; // @synthesize themeOverride=_themeOverride;
 @property(nonatomic) _Bool useButton; // @synthesize useButton=_useButton;
-- (void).cxx_destruct;
 - (void)setDescription:(id)arg1;
 - (void)setTitle:(id)arg1;
 - (void)setImage:(id)arg1 withTintColor:(id)arg2;

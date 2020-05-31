@@ -24,6 +24,7 @@
 }
 
 + (double)calculatedHeightWithData:(id)arg1 forWidth:(double)arg2 withFeedPostOptions:(id)arg3 delegate:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) UIVisualEffectView *blurEffectView; // @synthesize blurEffectView=_blurEffectView;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) Post *crossPost; // @synthesize crossPost=_crossPost;
 @property(nonatomic) __weak id <FeedPostHlsVideoViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) HlsPlayerView *hlsVideoView; // @synthesize hlsVideoView=_hlsVideoView;
-- (void).cxx_destruct;
 - (void)playerViewWillHideControls;
 - (void)playerViewWillShowControls;
 - (_Bool)parentIsCarouselView;

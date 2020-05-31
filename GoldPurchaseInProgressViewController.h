@@ -23,6 +23,7 @@
 
 + (id)viewControllerForPremiumMembershipPurchase;
 + (id)viewControllerForCoinPurchase;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *headerImageName; // @synthesize headerImageName=_headerImageName;
 @property(copy, nonatomic) NSString *loadingMessage; // @synthesize loadingMessage=_loadingMessage;
 @property(copy, nonatomic) NSString *loadingTitle; // @synthesize loadingTitle=_loadingTitle;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UILabel *loadingMessageLabel; // @synthesize loadingMessageLabel=_loadingMessageLabel;
 @property(retain, nonatomic) UILabel *loadingTitleLabel; // @synthesize loadingTitleLabel=_loadingTitleLabel;
 @property(retain, nonatomic) UIImageView *headerImageView; // @synthesize headerImageView=_headerImageView;
-- (void).cxx_destruct;
 - (void)requestToNavigateAwayWithCompletion:(CDUnknownBlockType)arg1;
 - (void)setupViews;
 - (void)viewDidLoad;

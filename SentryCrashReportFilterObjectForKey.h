@@ -17,9 +17,9 @@
 }
 
 + (id)filterWithKey:(id)arg1 allowNotFound:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool allowNotFound; // @synthesize allowNotFound=_allowNotFound;
 @property(retain, nonatomic) id key; // @synthesize key=_key;
-- (void).cxx_destruct;
 - (void)filterReports:(id)arg1 onCompletion:(CDUnknownBlockType)arg2;
 - (id)initWithKey:(id)arg1 allowNotFound:(_Bool)arg2;
 

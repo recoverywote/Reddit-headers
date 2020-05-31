@@ -9,12 +9,14 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet13OutlineButton : UIButton
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
+@property(nonatomic) _Bool enabled;
+- (_Bool)isEnabled;
 
 @end
 

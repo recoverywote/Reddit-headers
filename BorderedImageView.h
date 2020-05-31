@@ -19,12 +19,12 @@
     struct CGRect _previousBounds;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAShapeLayer *border; // @synthesize border=_border;
 @property(nonatomic) struct CGRect previousBounds; // @synthesize previousBounds=_previousBounds;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(retain, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)init;

@@ -18,7 +18,7 @@
     // Error parsing type: , name: mode
     // Error parsing type: , name: currentTransferCancellable
     // Error parsing type: , name: debouncer
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 @end

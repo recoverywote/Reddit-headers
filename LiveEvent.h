@@ -22,6 +22,7 @@
     unsigned long long _viewerCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long viewerCount; // @synthesize viewerCount=_viewerCount;
 @property(copy, nonatomic) NSString *resourcesHTML; // @synthesize resourcesHTML=_resourcesHTML;
 @property(nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *shareUrl;

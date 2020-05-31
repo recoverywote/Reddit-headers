@@ -19,11 +19,11 @@
 }
 
 + (id)requestWithURL:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) PHImageRequestOptions *options; // @synthesize options=_options;
 @property(nonatomic) long long contentMode; // @synthesize contentMode=_contentMode;
 @property(nonatomic) struct CGSize targetSize; // @synthesize targetSize=_targetSize;
 @property(readonly, nonatomic) NSString *assetIdentifier; // @synthesize assetIdentifier=_assetIdentifier;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSURL *url;
 - (id)copyWithZone:(struct _NSZone *)arg1;

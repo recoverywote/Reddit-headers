@@ -21,12 +21,12 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PostActionSheetDelegate> postActionSheetDelegate; // @synthesize postActionSheetDelegate=_postActionSheetDelegate;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(retain, nonatomic) PostActionSheetConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)logAnalyticsForRUIActionSheetItemSelection:(id)arg1 post:(id)arg2;
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
 - (void)setSendRepliesStatus:(_Bool)arg1 forPost:(id)arg2;

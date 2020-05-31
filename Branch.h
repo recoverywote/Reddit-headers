@@ -65,6 +65,7 @@
 + (void)closeLog;
 + (void)openLog;
 + (id)returnNonUniversalLink:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BNCURLBlackList *URLBlackList; // @synthesize URLBlackList=_URLBlackList;
 @property(retain, nonatomic) NSMutableArray *whiteListedSchemeList; // @synthesize whiteListedSchemeList=_whiteListedSchemeList;
 @property(retain, nonatomic) NSDictionary *deepLinkDebugParams; // @synthesize deepLinkDebugParams=_deepLinkDebugParams;
@@ -82,7 +83,6 @@
 @property(copy, nonatomic) CDUnknownBlockType sessionInitWithBranchUniversalObjectCallback; // @synthesize sessionInitWithBranchUniversalObjectCallback=_sessionInitWithBranchUniversalObjectCallback;
 @property(copy, nonatomic) CDUnknownBlockType sessionInitWithParamsCallback; // @synthesize sessionInitWithParamsCallback=_sessionInitWithParamsCallback;
 @property __weak NSObject<BranchDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)deepLinkingControllerCompletedFrom:(id)arg1;
 - (void)deepLinkingControllerCompleted;
 - (void)registerPluginName:(id)arg1 version:(id)arg2;

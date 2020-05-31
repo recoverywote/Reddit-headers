@@ -21,12 +21,12 @@
 
 + (_Bool)enableHitTestDebug;
 + (void)setEnableHitTestDebug:(_Bool)arg1;
+- (void).cxx_destruct;
 @property(getter=isTouchInside) _Bool touchInside; // @synthesize touchInside=_touchInside;
 @property(getter=isTracking) _Bool tracking; // @synthesize tracking=_tracking;
 @property(getter=isSelected) _Bool selected; // @synthesize selected=_selected;
 @property(getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
-- (void).cxx_destruct;
 - (id)debugHighlightOverlay;
 - (void)endTrackingWithTouch:(id)arg1 withEvent:(id)arg2;
 - (void)cancelTrackingWithEvent:(id)arg1;

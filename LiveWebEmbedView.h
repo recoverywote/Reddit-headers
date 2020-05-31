@@ -23,6 +23,7 @@
 + (double)textWidth;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
 + (double)thumbnailHeightForDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) BaseView *urlLabelDimmerView; // @synthesize urlLabelDimmerView=_urlLabelDimmerView;
 @property(retain, nonatomic) BaseLabel *urlLabel; // @synthesize urlLabel=_urlLabel;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) BaseView *imageContainer; // @synthesize imageContainer=_imageContainer;
 @property(retain, nonatomic) NSDictionary *embedData; // @synthesize embedData=_embedData;
-- (void).cxx_destruct;
 - (id)domainNameFromURL:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

@@ -66,6 +66,7 @@
     NSString *_md5;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool md5IsSet; // @synthesize md5IsSet=_md5IsSet;
 @property(copy, nonatomic) NSString *md5; // @synthesize md5=_md5;
 @property(nonatomic) _Bool stream_ended_timestampIsSet; // @synthesize stream_ended_timestampIsSet=_stream_ended_timestampIsSet;
@@ -116,7 +117,6 @@
 @property(nonatomic) long long height; // @synthesize height=_height;
 @property(nonatomic) _Bool widthIsSet; // @synthesize widthIsSet=_widthIsSet;
 @property(nonatomic) long long width; // @synthesize width=_width;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

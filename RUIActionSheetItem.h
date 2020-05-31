@@ -26,6 +26,7 @@
     double _customFrameHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldAdjustFontSizeToFitWidth; // @synthesize shouldAdjustFontSizeToFitWidth=_shouldAdjustFontSizeToFitWidth;
 @property(nonatomic) _Bool shouldRenderLeftIconAsTemplate; // @synthesize shouldRenderLeftIconAsTemplate=_shouldRenderLeftIconAsTemplate;
 @property(nonatomic) double customFrameHeight; // @synthesize customFrameHeight=_customFrameHeight;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
 @property(retain, nonatomic) id context; // @synthesize context=_context;
 @property(readonly, nonatomic) id identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)initWithLeftIconImage:(id)arg1 text:(id)arg2 identifier:(id)arg3 context:(id)arg4;
 - (id)initWithLeftIconImage:(id)arg1 text:(id)arg2 identifier:(id)arg3 context:(id)arg4 stylePreference:(long long)arg5;
 - (id)initWithIdentifier:(id)arg1 context:(id)arg2 customView:(id)arg3;

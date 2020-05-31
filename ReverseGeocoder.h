@@ -15,9 +15,9 @@
     id <ReverseGeocoderDataSource> _reverseGeoderDataSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <ReverseGeocoderDataSource> reverseGeoderDataSource; // @synthesize reverseGeoderDataSource=_reverseGeoderDataSource;
 @property(retain, nonatomic) LocationManager *locationManager; // @synthesize locationManager=_locationManager;
-- (void).cxx_destruct;
 - (void)requestPlacesForLocation:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)requestNearPlacesWithCompletion:(CDUnknownBlockType)arg1 permissionHandler:(CDUnknownBlockType)arg2;
 

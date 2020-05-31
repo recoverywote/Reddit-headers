@@ -14,9 +14,9 @@
     struct CGSize _attributedRepresentationSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize attributedRepresentationSize; // @synthesize attributedRepresentationSize=_attributedRepresentationSize;
 @property(retain, nonatomic) NSAttributedString *attributedRepresentation; // @synthesize attributedRepresentation=_attributedRepresentation;
-- (void).cxx_destruct;
 - (void)populateWithCellMarkdown:(id)arg1 config:(id)arg2 forcedCellFontOrNil:(id)arg3 cellConfiguration:(id)arg4;
 
 @end

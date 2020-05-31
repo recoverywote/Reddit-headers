@@ -18,11 +18,11 @@
     id <GULReachabilityDelegate> reachabilityDelegate_;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <GULReachabilityDelegate> reachabilityDelegate; // @synthesize reachabilityDelegate=reachabilityDelegate_;
 @property(copy, nonatomic) NSString *host; // @synthesize host=host_;
 @property(nonatomic) int reachabilityStatus; // @synthesize reachabilityStatus=reachabilityStatus_;
 @property(nonatomic) struct __SCNetworkReachability *reachability; // @synthesize reachability=reachability_;
-- (void).cxx_destruct;
 - (void)reachabilityFlagsChanged:(unsigned int)arg1;
 - (int)statusForFlags:(unsigned int)arg1;
 - (void)stop;

@@ -9,6 +9,7 @@
 @protocol AwardCoordinator;
 
 @protocol AwardCoordinatorDelegate <NSObject>
+- (void)awardCoordinator:(id <AwardCoordinator>)arg1 didChangeProcessing:(_Bool)arg2;
 - (void)awardCoordinatorDidFail:(id <AwardCoordinator>)arg1;
 - (void)awardCoordinatorDidFinish:(id <AwardCoordinator>)arg1;
 - (void)awardCoordinatorDidStart:(id <AwardCoordinator>)arg1;

@@ -14,7 +14,7 @@
 #import "CarouselItemSubredditNodeDelegate-Protocol.h"
 
 @class Carousel, CarouselNode, NSArray, NSDate, NSIndexPath, NSMutableArray, NSMutableSet, NSString, UICollectionView;
-@protocol CarouselNodeDelegate;
+@protocol CarouselNodeDelegate, ViewContext;
 
 @interface CarouselNodeController : NSObject <CarouselItemNodeDelegate, CarouselItemCompactPostNodeDelegate, CarouselItemPostViewDelegate, CarouselItemSubredditNodeDelegate, ASCollectionDataSource, ASCollectionDelegate>
 {
@@ -22,6 +22,7 @@
     NSArray *_registeredCellClasses;
     CarouselNode *_node;
     Carousel *_carousel;
+    id <ViewContext> _viewContext;
     NSArray *_currentObjects;
     NSMutableSet *_itemsSeen;
     NSIndexPath *_maxScrollIndexPath;
@@ -30,16 +31,17 @@
 }
 
 + (id)placeholderColorForIndex:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *keyValueObservations; // @synthesize keyValueObservations=_keyValueObservations;
 @property(retain, nonatomic) NSDate *didBecomeVisibleTime; // @synthesize didBecomeVisibleTime=_didBecomeVisibleTime;
 @property(retain, nonatomic) NSIndexPath *maxScrollIndexPath; // @synthesize maxScrollIndexPath=_maxScrollIndexPath;
 @property(retain, nonatomic) NSMutableSet *itemsSeen; // @synthesize itemsSeen=_itemsSeen;
 @property(copy, nonatomic) NSArray *currentObjects; // @synthesize currentObjects=_currentObjects;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(retain, nonatomic) CarouselNode *node; // @synthesize node=_node;
 @property(readonly, nonatomic) NSArray *registeredCellClasses; // @synthesize registeredCellClasses=_registeredCellClasses;
 @property(readonly, nonatomic) __weak id <CarouselNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)addHideKeyValueObservationForCarouselItem:(id)arg1;
 - (void)carouselItemPostView:(id)arg1 didTapVideoCallToAction:(unsigned long long)arg2;
 - (void)carouselItemPostView:(id)arg1 didTapSubscribe:(id)arg2;
@@ -66,7 +68,7 @@
 - (void)collectionNode:(id)arg1 willDisplayItemWithNode:(id)arg2;
 - (void)didLoad;
 - (void)reloadCarousel;
-- (id)initWithCarousel:(id)arg1 delegate:(id)arg2;
+- (id)initWithViewContext:(id)arg1 carousel:(id)arg2 delegate:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

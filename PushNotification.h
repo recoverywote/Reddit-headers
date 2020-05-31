@@ -14,9 +14,9 @@
     long long _authorizationStatus;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long authorizationStatus; // @synthesize authorizationStatus=_authorizationStatus;
 @property(readonly, copy, nonatomic) NSDictionary *userInfo; // @synthesize userInfo=_userInfo;
-- (void).cxx_destruct;
 - (id)debugDescription;
 @property(readonly, nonatomic) _Bool isUnauthorized;
 @property(readonly, nonatomic) NSURL *deeplinkURL;

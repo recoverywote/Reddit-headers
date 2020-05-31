@@ -17,9 +17,9 @@
     UIViewController<_TtP8RedditUI21ActionSheetAnimatable_> *_viewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController<_TtP8RedditUI21ActionSheetAnimatable_> *viewController; // @synthesize viewController=_viewController;
 @property(nonatomic) _Bool presenting; // @synthesize presenting=_presenting;
-- (void).cxx_destruct;
 - (void)animateTransition:(id)arg1;
 - (double)transitionDuration:(id)arg1;
 - (id)initWithViewController:(id)arg1;

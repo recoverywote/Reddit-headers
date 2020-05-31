@@ -18,11 +18,11 @@
 }
 
 + (id)initWithTextInput:(id)arg1 listenForPrefixes:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *prefixes; // @synthesize prefixes=_prefixes;
 @property(retain, nonatomic) UIResponder<UITextInput> *textInput; // @synthesize textInput=_textInput;
 @property(nonatomic) unsigned long long minimumMatchCharCount; // @synthesize minimumMatchCharCount=_minimumMatchCharCount;
 @property(nonatomic) __weak id <TextInputPrefixListenerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct _NSRange)caretRange;
 - (id)text;
 - (_Bool)isValidWord:(id)arg1 prefix:(id)arg2 wordRange:(struct _NSRange)arg3;

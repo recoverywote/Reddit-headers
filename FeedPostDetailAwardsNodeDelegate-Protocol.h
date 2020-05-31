@@ -6,12 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class FeedPostDetailAwardsNode;
+@class FeedPostDetailAwardsNode, NSString;
 
 @protocol FeedPostDetailAwardsNodeDelegate <NSObject>
-- (void)feedPostDetailAwardsNodeDidTap:(FeedPostDetailAwardsNode *)arg1;
-
-@optional
-- (void)feedPostDetailsAwardsNodeNeedsLayoutUpdate:(FeedPostDetailAwardsNode *)arg1;
+- (void)feedPostDetailAwardsNodeDidTap:(FeedPostDetailAwardsNode *)arg1 awardIdentifier:(NSString *)arg2;
 @end
 

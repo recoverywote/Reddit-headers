@@ -17,12 +17,12 @@
     struct UIEdgeInsets _imageInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets imageInsets; // @synthesize imageInsets=_imageInsets;
 @property(retain, nonatomic) UIColor *circleFillColor; // @synthesize circleFillColor=_circleFillColor;
 @property(nonatomic) _Bool cropCircle; // @synthesize cropCircle=_cropCircle;
 @property(nonatomic) long long iconShape; // @synthesize iconShape=_iconShape;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)drawRect:(struct CGRect)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

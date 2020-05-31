@@ -15,8 +15,8 @@
     NSCache *_cache;
 }
 
-@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void)removeAllObjects;
 - (void)removeObjectForKey:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)removeObjectForKey:(id)arg1;

@@ -17,9 +17,9 @@
     BNCSpotlightService *_spotlight;
 }
 
+- (void).cxx_destruct;
 @property(retain) BNCSpotlightService *spotlight; // @synthesize spotlight=_spotlight;
 @property(readonly) NSObject<OS_dispatch_queue> *workQueue; // @synthesize workQueue=_workQueue;
-- (void).cxx_destruct;
 - (void)indexContentWithTitle:(id)arg1 description:(id)arg2 canonicalId:(id)arg3 publiclyIndexable:(_Bool)arg4 type:(id)arg5 thumbnailUrl:(id)arg6 keywords:(id)arg7 userInfo:(id)arg8 expirationDate:(id)arg9 callback:(CDUnknownBlockType)arg10 spotlightCallback:(CDUnknownBlockType)arg11;
 - (void)indexObject:(id)arg1 onCompletion:(CDUnknownBlockType)arg2;
 - (void)indexContentWithTitle:(id)arg1 description:(id)arg2 publiclyIndexable:(_Bool)arg3 type:(id)arg4 thumbnailUrl:(id)arg5 keywords:(id)arg6 userInfo:(id)arg7 spotlightCallback:(CDUnknownBlockType)arg8;

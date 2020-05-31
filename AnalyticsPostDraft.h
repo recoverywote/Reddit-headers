@@ -42,6 +42,7 @@
     NSString *_flair;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool number_rte_videosIsSet; // @synthesize number_rte_videosIsSet=_number_rte_videosIsSet;
 @property(nonatomic) int number_rte_videos; // @synthesize number_rte_videos=_number_rte_videos;
 @property(nonatomic) _Bool number_rte_imagesIsSet; // @synthesize number_rte_imagesIsSet=_number_rte_imagesIsSet;
@@ -68,7 +69,6 @@
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

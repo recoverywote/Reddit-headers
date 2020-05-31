@@ -53,6 +53,7 @@
     CDStruct_1b6d18a9 _rightBarPos;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(retain, nonatomic) AudioInstance *audioInstance; // @synthesize audioInstance=_audioInstance;
 @property(nonatomic) unsigned long long allowedExportType; // @synthesize allowedExportType=_allowedExportType;
@@ -91,7 +92,6 @@
 @property(retain, nonatomic) AVPlayerLayer *playerLayer; // @synthesize playerLayer=_playerLayer;
 @property(retain, nonatomic) AVPlayer *player; // @synthesize player=_player;
 @property(nonatomic) __weak id <ImagePostViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)createVideoFromExportSession;
 - (void)trimVideo:(id)arg1;
 - (void)updateExportDisplay;

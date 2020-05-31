@@ -17,12 +17,12 @@
     NSNumber *_enabled;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *enabled; // @synthesize enabled=_enabled;
 @property(copy, nonatomic) NSString *environment; // @synthesize environment=_environment;
 @property(copy, nonatomic) NSString *dist; // @synthesize dist=_dist;
 @property(copy, nonatomic) NSString *releaseName; // @synthesize releaseName=_releaseName;
 @property(retain, nonatomic) SentryDsn *dsn; // @synthesize dsn=_dsn;
-- (void).cxx_destruct;
 - (void)validateOptions:(id)arg1 didFailWithError:(id *)arg2;
 - (id)initWithOptions:(id)arg1 didFailWithError:(id *)arg2;
 

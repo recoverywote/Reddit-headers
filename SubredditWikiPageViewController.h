@@ -36,6 +36,7 @@
     _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
 @property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(retain, nonatomic) NSLayoutConstraint *scrollViewTrailingConstraint; // @synthesize scrollViewTrailingConstraint=_scrollViewTrailingConstraint;
@@ -53,7 +54,6 @@
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
 @property(retain, nonatomic) BaseScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(readonly, nonatomic) SubredditWikiPagePresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (_Bool)screenViewLoggingEnabled;
 - (id)analyticsScreenViewName;
 - (id)analyticsPageType;

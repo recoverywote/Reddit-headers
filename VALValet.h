@@ -24,12 +24,12 @@
 + (id)mutableBaseQueryWithSharedAccessGroupIdentifier:(id)arg1 accessibility:(unsigned long long)arg2 initializer:(SEL)arg3;
 + (id)mutableBaseQueryWithIdentifier:(id)arg1 accessibility:(unsigned long long)arg2 initializer:(SEL)arg3;
 + (id)sharedValetForValet:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy) NSDictionary *baseQuery; // @synthesize baseQuery=_baseQuery;
 @property(readonly, copy) NSLock *lockForSetAndRemoveOperations; // @synthesize lockForSetAndRemoveOperations=_lockForSetAndRemoveOperations;
 @property(readonly) unsigned long long accessibility; // @synthesize accessibility=_accessibility;
 @property(readonly, getter=isSharedAcrossApplications) _Bool sharedAcrossApplications; // @synthesize sharedAcrossApplications=_sharedAcrossApplications;
 @property(readonly, copy) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)_secItemFormatDictionaryWithKey:(id)arg1;
 @property(readonly, copy) NSString *secServiceIdentifier;
 - (_Bool)removeAllObjectsWithOptions:(id)arg1;

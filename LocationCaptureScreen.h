@@ -14,9 +14,9 @@
     ReverseGeocoder *_reverseGeocoder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ReverseGeocoder *reverseGeocoder; // @synthesize reverseGeocoder=_reverseGeocoder;
 @property(retain, nonatomic) CaptureContentTextEntry *textEntryContent; // @synthesize textEntryContent=_textEntryContent;
-- (void).cxx_destruct;
 - (void)findLocation;
 - (id)contentItems;
 

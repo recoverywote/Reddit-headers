@@ -11,12 +11,13 @@
 #import "TemplateParserContext-Protocol.h"
 
 @class AFNetworkImageNode, ASDisplayNode, ASTextNode, BaseButtonNode, FeedPostOptions, FeedPostTitleOptions, NSString, Post, PostMetaViewModel, RichTextLoader, UIView, _TtC6Reddit34FeedPostMetaUsernameDecorationNode;
-@protocol FeedPostTitleNodeDelegate;
+@protocol FeedPostTitleNodeDelegate, ViewContext;
 
 @interface FeedPostTitleNode : BaseFeedDisplayNode <ASTextNodeDelegate, ObjectObserverProtocol, TemplateParserContext>
 {
     id <FeedPostTitleNodeDelegate> _delegate;
     Post *_post;
+    id <ViewContext> _viewContext;
     FeedPostOptions *_options;
     FeedPostTitleOptions *_titleOptions;
     PostMetaViewModel *_postMetaViewModel;
@@ -31,6 +32,7 @@
     RichTextLoader *_richTextLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RichTextLoader *richTextLoader; // @synthesize richTextLoader=_richTextLoader;
 @property(retain, nonatomic) ASDisplayNode *checkboxNode; // @synthesize checkboxNode=_checkboxNode;
 @property(retain, nonatomic) BaseButtonNode *overflowButtonNode; // @synthesize overflowButtonNode=_overflowButtonNode;
@@ -43,9 +45,9 @@
 @property(retain, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(retain, nonatomic) FeedPostTitleOptions *titleOptions; // @synthesize titleOptions=_titleOptions;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostTitleNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isSubscribed;
 @property(readonly, nonatomic) _Bool shouldShowSubscribeButton;
 @property(readonly, nonatomic) UIView *subscribeTooltipAnchorView;
@@ -79,7 +81,7 @@
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didLoad;
 - (void)enableCheckBoxWithDelegate:(id)arg1 isSelected:(_Bool)arg2;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 delegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

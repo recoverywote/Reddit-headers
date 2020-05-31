@@ -24,6 +24,7 @@
     SubredditChannel *_channel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditChannel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
@@ -36,12 +37,12 @@
 @property(retain, nonatomic) SearchTerm *searchTerm; // @synthesize searchTerm=_searchTerm;
 @property(retain, nonatomic) id object; // @synthesize object=_object;
 @property(nonatomic) unsigned long long itemType; // @synthesize itemType=_itemType;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSString *itemPk;
-- (id)keyForHiddenByUser;
-@property(nonatomic) _Bool hiddenByUser;
+- (id)legacyKeyForHiddenByUserWithAccount:(id)arg1;
+- (_Bool)isHiddenByUserWithAccount:(id)arg1;
+- (void)updateHidden:(_Bool)arg1 withAccount:(id)arg2;
 - (id)initWithSubredditCategory:(id)arg1;
 - (id)initWithSubredditChannel:(id)arg1;
 - (id)initWithComment:(id)arg1 forPost:(id)arg2;

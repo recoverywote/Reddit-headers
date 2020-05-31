@@ -13,8 +13,8 @@
     Subreddit *_subreddit;
 }
 
-@property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
+@property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void)fetchData;
 - (void)configureWithSubreddit:(id)arg1;
 

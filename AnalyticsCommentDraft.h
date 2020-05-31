@@ -18,9 +18,9 @@
     NSString *_body_text;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool body_textIsSet; // @synthesize body_textIsSet=_body_textIsSet;
 @property(copy, nonatomic) NSString *body_text; // @synthesize body_text=_body_text;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

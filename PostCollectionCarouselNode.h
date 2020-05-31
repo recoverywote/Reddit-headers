@@ -10,7 +10,7 @@
 #import "ASCollectionDelegate-Protocol.h"
 
 @class ASCollectionNode, FeedPostOptions, NSArray, NSString, PostCollection, UICollectionViewFlowLayout;
-@protocol FeedPostCollectionSeeAllNodeDelegate><PostCollectionCarouselPostNodeDelegate;
+@protocol FeedPostCollectionSeeAllNodeDelegate><PostCollectionCarouselPostNodeDelegate, ViewContext;
 
 @interface PostCollectionCarouselNode : BaseFeedDisplayNode <ASCollectionDataSource, ASCollectionDelegate>
 {
@@ -21,8 +21,11 @@
     PostCollection *_postCollection;
     FeedPostOptions *_postOptions;
     id <FeedPostCollectionSeeAllNodeDelegate><PostCollectionCarouselPostNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostCollectionSeeAllNodeDelegate><PostCollectionCarouselPostNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) FeedPostOptions *postOptions; // @synthesize postOptions=_postOptions;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
@@ -30,7 +33,6 @@
 @property(retain, nonatomic) UICollectionViewFlowLayout *layout; // @synthesize layout=_layout;
 @property(retain, nonatomic) ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(nonatomic) long long positionInFeed; // @synthesize positionInFeed=_positionInFeed;
-- (void).cxx_destruct;
 - (void)collectionNode:(id)arg1 willDisplayItemWithNode:(id)arg2;
 - (CDStruct_90e057aa)collectionNode:(id)arg1 constrainedSizeForItemAtIndexPath:(id)arg2;
 - (CDUnknownBlockType)collectionNode:(id)arg1 nodeBlockForItemAtIndexPath:(id)arg2;
@@ -38,7 +40,7 @@
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createCollectionNode;
-- (id)initWithPostCollection:(id)arg1 posts:(id)arg2 postOptions:(id)arg3 delegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 postCollection:(id)arg2 posts:(id)arg3 postOptions:(id)arg4 delegate:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,8 +9,8 @@
 #import "ChatReportFooterNodeDelegate-Protocol.h"
 #import "ChatReportHeaderNodeDelegate-Protocol.h"
 
-@class Channel, ChatMessage, ChatReportFooterNode, ChatReportHeaderNode, RedditService;
-@protocol ChatModqueueMessageNodeDelegate;
+@class Channel, ChatMessage, ChatReportFooterNode, ChatReportHeaderNode;
+@protocol AccountContext, ChatModqueueMessageNodeDelegate;
 
 @interface ChatModqueueMessageNode : ASDisplayNode <ChatReportFooterNodeDelegate, ChatReportHeaderNodeDelegate>
 {
@@ -19,20 +19,21 @@
     Channel *_channel;
     ChatReportHeaderNode *_reportHeaderNode;
     ChatReportFooterNode *_reportFooterNode;
+    id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ChatReportFooterNode *reportFooterNode; // @synthesize reportFooterNode=_reportFooterNode;
 @property(retain, nonatomic) ChatReportHeaderNode *reportHeaderNode; // @synthesize reportHeaderNode=_reportHeaderNode;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(nonatomic) __weak id <ChatModqueueMessageNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ChatMessage *message; // @synthesize message=_message;
-- (void).cxx_destruct;
 - (id)layoutSpecWithEmbededNode:(id)arg1;
 - (void)footerNodeDidTapDeleteMessage:(id)arg1;
 - (void)footerNodeDidTapIgnoreReports:(id)arg1;
 - (void)chatReportHeaderDidTapAvatarImageNode:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
-- (id)initWithMessage:(id)arg1 channel:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 message:(id)arg2 channel:(id)arg3;
 
 @end
 

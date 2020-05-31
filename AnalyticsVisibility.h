@@ -30,6 +30,7 @@
     long long _off_screen_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool off_screen_timestampIsSet; // @synthesize off_screen_timestampIsSet=_off_screen_timestampIsSet;
 @property(nonatomic) long long off_screen_timestamp; // @synthesize off_screen_timestamp=_off_screen_timestamp;
 @property(nonatomic) _Bool on_screen_timestampIsSet; // @synthesize on_screen_timestampIsSet=_on_screen_timestampIsSet;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) NSMutableArray *seen_items; // @synthesize seen_items=_seen_items;
 @property(nonatomic) _Bool seenIsSet; // @synthesize seenIsSet=_seenIsSet;
 @property(nonatomic) _Bool seen; // @synthesize seen=_seen;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

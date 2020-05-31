@@ -15,10 +15,10 @@
     NSValue *_value;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSValue *value; // @synthesize value=_value;
 @property(readonly, nonatomic) NSValue *oldValue; // @synthesize oldValue=_oldValue;
 @property(readonly, nonatomic) long long option; // @synthesize option=_option;
-- (void).cxx_destruct;
 - (id)initWithKVODictionary:(id)arg1 option:(long long)arg2;
 
 @end

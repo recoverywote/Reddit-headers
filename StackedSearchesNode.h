@@ -17,11 +17,11 @@
     NSMutableArray *_buttonTargets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *buttonTargets; // @synthesize buttonTargets=_buttonTargets;
 @property(copy, nonatomic) NSArray *buttonNodes; // @synthesize buttonNodes=_buttonNodes;
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
 @property(nonatomic) __weak id <StackedSearchesNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)createButtonNodeForCarouselItem:(id)arg1 shouldAddSeparator:(_Bool)arg2;
 - (void)createNodes;

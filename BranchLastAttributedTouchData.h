@@ -16,9 +16,9 @@
 
 + (void)requestLastTouchAttributedData:(id)arg1 key:(id)arg2 attributionWindow:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 + (id)buildFromJSON:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSNumber *attributionWindow; // @synthesize attributionWindow=_attributionWindow;
 @property(readonly, nonatomic) NSDictionary *lastAttributedTouchJSON; // @synthesize lastAttributedTouchJSON=_lastAttributedTouchJSON;
-- (void).cxx_destruct;
 
 @end
 

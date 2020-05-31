@@ -19,11 +19,11 @@
     NSDictionary *_analytics;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *analytics; // @synthesize analytics=_analytics;
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
 @property(readonly, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(readonly, nonatomic) __weak id <TemplateParserContext> templateContext; // @synthesize templateContext=_templateContext;
-- (void).cxx_destruct;
 - (_Bool)hasMoreContent;
 - (void)filterCarouselItems;
 - (void)fetchCarouselItemsWithCompletion:(CDUnknownBlockType)arg1;

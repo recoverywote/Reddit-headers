@@ -7,11 +7,10 @@
 #import <RedditCore/Multi.h>
 
 #import "Pillable-Protocol.h"
-#import "_TtP6Reddit18RoadblockableModel_-Protocol.h"
 
 @class NSString, NSURL;
 
-@interface Multi (Reddit) <Pillable, _TtP6Reddit18RoadblockableModel_>
+@interface Multi (Reddit) <Pillable>
 + (_Bool)isValidMultiName:(id)arg1;
 + (struct CGSize)defaultLargeIconSize;
 + (long long)maximumDescriptionLength;

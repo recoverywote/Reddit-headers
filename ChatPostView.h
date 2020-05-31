@@ -8,7 +8,8 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ContentImageView, FeedPostAwardsNode, FeedPostCommentsBarView, FeedPostCrosspostView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostTitleViewExpanded, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, RedditService, UITextView;
+@class ContentImageView, FeedPostAwardsNode, FeedPostCommentsBarView, FeedPostCrosspostView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostTitleViewExpanded, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView;
+@protocol ViewContext;
 
 @interface ChatPostView : BaseView <ObjectObserverProtocol>
 {
@@ -29,12 +30,15 @@
     FeedPostHlsVideoView *_feedPostHlsVideoView;
     FeedPostYouTubeEmbeddedView *_youTubeEmbeddedView;
     FeedPostCrosspostView *_crosspostView;
+    id <ViewContext> _viewContext;
 }
 
 + (id)attributedPostTitleForSizing:(id)arg1;
 + (_Bool)shouldShowThumbnailForPost:(id)arg1 useCompactView:(_Bool)arg2;
 + (_Bool)showImageForSizingForPost:(id)arg1;
-+ (struct CGSize)calculatedSizeWithData:(id)arg1 forWidth:(double)arg2 withFeedPostOptions:(id)arg3 delegate:(id)arg4;
++ (struct CGSize)calculatedSizeWithViewContext:(id)arg1 data:(id)arg2 forWidth:(double)arg3 withFeedPostOptions:(id)arg4 delegate:(id)arg5;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostCrosspostView *crosspostView; // @synthesize crosspostView=_crosspostView;
 @property(retain, nonatomic) FeedPostYouTubeEmbeddedView *youTubeEmbeddedView; // @synthesize youTubeEmbeddedView=_youTubeEmbeddedView;
 @property(retain, nonatomic) FeedPostHlsVideoView *feedPostHlsVideoView; // @synthesize feedPostHlsVideoView=_feedPostHlsVideoView;
@@ -52,8 +56,6 @@
 @property(nonatomic) _Bool isChatPostPickerPostView; // @synthesize isChatPostPickerPostView=_isChatPostPickerPostView;
 @property(nonatomic) _Bool hideCrosspost; // @synthesize hideCrosspost=_hideCrosspost;
 @property(nonatomic) __weak id delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
-@property(readonly, nonatomic) RedditService *service;
 - (id)attributedPostTitle;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)prepareForReuse;
@@ -61,10 +63,12 @@
 - (_Bool)showImageForPost:(id)arg1;
 - (id)thumbnailExclusionPath;
 - (void)layoutSubviews;
+- (void)configureWithData:(id)arg1 displayMode:(unsigned long long)arg2;
 - (void)configureWithData:(id)arg1;
 - (void)commonInit;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

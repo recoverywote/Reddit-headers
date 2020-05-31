@@ -24,6 +24,7 @@
     NSString *_subtopic_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool subtopic_nameIsSet; // @synthesize subtopic_nameIsSet=_subtopic_nameIsSet;
 @property(copy, nonatomic) NSString *subtopic_name; // @synthesize subtopic_name=_subtopic_name;
 @property(nonatomic) _Bool subtopic_idIsSet; // @synthesize subtopic_idIsSet=_subtopic_idIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *topic_name; // @synthesize topic_name=_topic_name;
 @property(nonatomic) _Bool topic_idIsSet; // @synthesize topic_idIsSet=_topic_idIsSet;
 @property(copy, nonatomic) NSString *topic_id; // @synthesize topic_id=_topic_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -14,9 +14,9 @@
     NSString *_cachePath;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSArray *subreddits; // @synthesize subreddits=_subreddits;
-- (void).cxx_destruct;
 - (void)removeSubreddit:(id)arg1;
 - (void)addSubreddit:(id)arg1;
 - (void)addSubreddits:(id)arg1;

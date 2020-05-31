@@ -13,8 +13,8 @@
     SortBarView *_sortBarView;
 }
 
-@property(retain, nonatomic) SortBarView *sortBarView; // @synthesize sortBarView=_sortBarView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SortBarView *sortBarView; // @synthesize sortBarView=_sortBarView;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;
 

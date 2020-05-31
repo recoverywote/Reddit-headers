@@ -21,12 +21,12 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1 maxWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldAnimateLastGivenAward; // @synthesize shouldAnimateLastGivenAward=_shouldAnimateLastGivenAward;
 @property(retain, nonatomic) ASTextNode *totalAwardsReceivedNode; // @synthesize totalAwardsReceivedNode=_totalAwardsReceivedNode;
 @property(retain, nonatomic) NSDictionary *awardsNodes; // @synthesize awardsNodes=_awardsNodes;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostAwardsNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)createNodes;
 - (void)processAwardingCompleteNotification:(id)arg1;
 - (void)awardsNodeDidTap:(id)arg1;

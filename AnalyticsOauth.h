@@ -24,6 +24,7 @@
     NSMutableArray *_scopes;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool scopesIsSet; // @synthesize scopesIsSet=_scopesIsSet;
 @property(retain, nonatomic) NSMutableArray *scopes; // @synthesize scopes=_scopes;
 @property(nonatomic) _Bool client_idIsSet; // @synthesize client_idIsSet=_client_idIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *client_name; // @synthesize client_name=_client_name;
 @property(nonatomic) _Bool client_app_typeIsSet; // @synthesize client_app_typeIsSet=_client_app_typeIsSet;
 @property(copy, nonatomic) NSString *client_app_type; // @synthesize client_app_type=_client_app_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

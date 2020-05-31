@@ -55,6 +55,7 @@
 }
 
 + (id)decoderWithData:(id)arg1 scale:(double)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isFinalized) _Bool finalized; // @synthesize finalized=_finalized;
 @property(readonly, nonatomic) unsigned long long height; // @synthesize height=_height;
 @property(readonly, nonatomic) unsigned long long width; // @synthesize width=_width;
@@ -63,7 +64,6 @@
 @property(readonly, nonatomic) double scale; // @synthesize scale=_scale;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) NSData *data; // @synthesize data=_data;
-- (void).cxx_destruct;
 - (struct CGImage *)_newBlendedImageWithFrame:(id)arg1;
 - (void)_blendImageWithFrame:(id)arg1;
 - (_Bool)_createBlendContextIfNeeded;

@@ -22,6 +22,7 @@
     NSLayoutConstraint *_contentViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *contentViewHeightConstraint; // @synthesize contentViewHeightConstraint=_contentViewHeightConstraint;
 @property(copy, nonatomic) NSAttributedString *attributedString; // @synthesize attributedString=_attributedString;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)handleLinkURL:(id)arg1;
 - (void)attributedLabel:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)setupUI;

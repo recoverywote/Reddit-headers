@@ -32,6 +32,7 @@
     NSString *_experiment_version;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool experiment_versionIsSet; // @synthesize experiment_versionIsSet=_experiment_versionIsSet;
 @property(copy, nonatomic) NSString *experiment_version; // @synthesize experiment_version=_experiment_version;
 @property(nonatomic) _Bool experiment_variantIsSet; // @synthesize experiment_variantIsSet=_experiment_variantIsSet;
@@ -48,7 +49,6 @@
 @property(nonatomic) int min; // @synthesize min=_min;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

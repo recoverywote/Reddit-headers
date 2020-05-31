@@ -19,9 +19,9 @@
 
 + (void)setup;
 + (id)instance;
+- (void).cxx_destruct;
 @property _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) AnalyticsEventProcessor *eventProcessor; // @synthesize eventProcessor=_eventProcessor;
-- (void).cxx_destruct;
 - (void)persistInstallTimeStamp;
 - (void)appBackgrounded;
 - (void)logAnalyticsEvents:(id)arg1;

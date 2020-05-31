@@ -20,13 +20,13 @@
 
 + (double)calculatedHeightForAttributedString:(id)arg1 width:(double)arg2 includingHorizontalPadding:(_Bool)arg3;
 + (double)calculatedHeightForString:(id)arg1 width:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *detailLabelZeroHeightConstraint; // @synthesize detailLabelZeroHeightConstraint=_detailLabelZeroHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *accessoryIconWidthConstraint; // @synthesize accessoryIconWidthConstraint=_accessoryIconWidthConstraint;
 @property(nonatomic) _Bool isExpanded; // @synthesize isExpanded=_isExpanded;
 @property(retain, nonatomic) BaseImageView *accessoryIconImageView; // @synthesize accessoryIconImageView=_accessoryIconImageView;
 @property(retain, nonatomic) AttributedLabel *descriptionAttributedLabel; // @synthesize descriptionAttributedLabel=_descriptionAttributedLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)configureDescriptionLabelCollapsed:(_Bool)arg1 accessoryIconHidden:(_Bool)arg2;
 - (void)setupConstraints;

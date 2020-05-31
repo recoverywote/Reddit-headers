@@ -16,10 +16,10 @@
 }
 
 + (id)indentationAttributesForLevel:(unsigned long long)arg1 config:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *elementRanges; // @synthesize elementRanges=_elementRanges;
 @property(nonatomic) unsigned long long indentationLevel; // @synthesize indentationLevel=_indentationLevel;
 @property(nonatomic) _Bool isOrdered; // @synthesize isOrdered=_isOrdered;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)prefixForLevel:(unsigned long long)arg1 count:(unsigned long long)arg2 config:(id)arg3;
 - (id)applyParagraphStyleIndentationToString:(id)arg1 config:(id)arg2;

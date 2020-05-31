@@ -25,6 +25,7 @@
 }
 
 + (id)membersCountStringForCount:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASImageNode *bannerImageNode; // @synthesize bannerImageNode=_bannerImageNode;
 @property(retain, nonatomic) ASNetworkImageNode *communityIconNode; // @synthesize communityIconNode=_communityIconNode;
 @property(retain, nonatomic) ASImageNode *channelDetailIconNode; // @synthesize channelDetailIconNode=_channelDetailIconNode;
@@ -37,13 +38,12 @@
 @property(retain, nonatomic) UIColor *defaultPlaceholderColor; // @synthesize defaultPlaceholderColor=_defaultPlaceholderColor;
 @property(copy, nonatomic) NSString *communityIconUrlString; // @synthesize communityIconUrlString=_communityIconUrlString;
 @property(retain, nonatomic) SubredditChannel *channel; // @synthesize channel=_channel;
-- (void).cxx_destruct;
 - (id)subredditBackgroundColor;
 - (void)updateCommunityIconBackgroundColor;
 - (void)configureThemableNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
-- (id)initWithCarouselItem:(id)arg1 defaultPlaceHolderColor:(id)arg2;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2 defaultPlaceHolderColor:(id)arg3;
 
 @end
 

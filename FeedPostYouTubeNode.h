@@ -27,6 +27,7 @@
 }
 
 + (id)playedTimeCache;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isDisplayed; // @synthesize isDisplayed=_isDisplayed;
 @property(nonatomic) _Bool isVideoPlayerLoaded; // @synthesize isVideoPlayerLoaded=_isVideoPlayerLoaded;
 @property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) ASNetworkImageNode *previewImageNode; // @synthesize previewImageNode=_previewImageNode;
 @property(nonatomic) __weak id <FeedPostYouTubeNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)playerView:(id)arg1 didChangeToState:(long long)arg2;
 - (void)playerView:(id)arg1 didPlayTime:(float)arg2;
 - (_Bool)playerView:(id)arg1 handleNavigationToUrl:(id)arg2;

@@ -20,6 +20,7 @@
     FeedPostOptions *_feedPostOptions;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didLayoutPillNode; // @synthesize didLayoutPillNode=_didLayoutPillNode;
 @property(retain, nonatomic) FeedPostOptions *feedPostOptions; // @synthesize feedPostOptions=_feedPostOptions;
 @property(retain, nonatomic) CAShapeLayer *pillShapeLayer; // @synthesize pillShapeLayer=_pillShapeLayer;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) ASDisplayNode *circle3; // @synthesize circle3=_circle3;
 @property(retain, nonatomic) ASDisplayNode *circle2; // @synthesize circle2=_circle2;
 @property(retain, nonatomic) ASDisplayNode *circle1; // @synthesize circle1=_circle1;
-- (void).cxx_destruct;
 - (void)beginAnimation;
 - (id)standardLayoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)compactLayoutSpecThatFits:(CDStruct_90e057aa)arg1;

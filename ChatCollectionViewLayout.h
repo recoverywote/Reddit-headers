@@ -24,6 +24,7 @@
     struct CGSize _previousCachedContentSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize previousCachedContentSize; // @synthesize previousCachedContentSize=_previousCachedContentSize;
 @property(nonatomic) struct CGSize cachedContentSize; // @synthesize cachedContentSize=_cachedContentSize;
 @property(retain, nonatomic) NSMutableDictionary *previousCachedAttributes; // @synthesize previousCachedAttributes=_previousCachedAttributes;
@@ -35,7 +36,6 @@
 @property(nonatomic) _Bool scrollToBottom; // @synthesize scrollToBottom=_scrollToBottom;
 @property(nonatomic) double minimumInteritemSpacing; // @synthesize minimumInteritemSpacing=_minimumInteritemSpacing;
 @property(nonatomic) __weak id <ChatCollectionViewLayoutDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double maxContentOffsetY;
 - (void)scrollToEnd:(_Bool)arg1;
 - (void)finalizeCollectionViewUpdates;

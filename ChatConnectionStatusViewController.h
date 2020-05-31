@@ -21,6 +21,7 @@
     unsigned long long _currentState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldHideConnectingView; // @synthesize shouldHideConnectingView=_shouldHideConnectingView;
 @property(nonatomic) unsigned long long currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) NSTimer *autoDismissTimer; // @synthesize autoDismissTimer=_autoDismissTimer;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) BaseLabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) BaseImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(nonatomic) __weak id <ChatConnectionStatusViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)retryButtonTapped:(id)arg1;
 - (void)autoDismissTimerDidFire:(id)arg1;
 - (void)stopAutoDimissTimer;

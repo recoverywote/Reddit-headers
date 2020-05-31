@@ -27,6 +27,7 @@
     UIColor *_postDownvoteCountColor;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldTileBannerImage; // @synthesize shouldTileBannerImage=_shouldTileBannerImage;
 @property(nonatomic) _Bool shouldShowCustomPostVoteIcons; // @synthesize shouldShowCustomPostVoteIcons=_shouldShowCustomPostVoteIcons;
 @property(retain, nonatomic) UIColor *postDownvoteCountColor; // @synthesize postDownvoteCountColor=_postDownvoteCountColor;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) NSURL *mobileBannerBackgroundImageURL; // @synthesize mobileBannerBackgroundImageURL=_mobileBannerBackgroundImageURL;
 @property(retain, nonatomic) NSURL *bannerBackgroundImageURL; // @synthesize bannerBackgroundImageURL=_bannerBackgroundImageURL;
 @property(retain, nonatomic) NSURL *communityIconURL; // @synthesize communityIconURL=_communityIconURL;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

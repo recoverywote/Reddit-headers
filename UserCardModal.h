@@ -32,6 +32,7 @@
     NSLayoutConstraint *_actionTableHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *actionTableHeightConstraint; // @synthesize actionTableHeightConstraint=_actionTableHeightConstraint;
 @property(retain, nonatomic) UIActivityIndicatorView *actionsActivityIndicator; // @synthesize actionsActivityIndicator=_actionsActivityIndicator;
 @property(retain, nonatomic) UIActivityIndicatorView *userActivityIndicator; // @synthesize userActivityIndicator=_userActivityIndicator;
@@ -48,7 +49,6 @@
 @property(retain, nonatomic) BaseView *modalView; // @synthesize modalView=_modalView;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <UserCardModalDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;

@@ -15,6 +15,7 @@
     // Error parsing type: , name: badgeNodes
     // Error parsing type: , name: usernameNode
     // Error parsing type: , name: gradientNode
+    // Error parsing type: , name: imageNode
     // Error parsing type: , name: badgeChangeTimer
 }
 

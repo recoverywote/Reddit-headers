@@ -18,11 +18,11 @@
     double _currentTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double currentTime; // @synthesize currentTime=_currentTime;
 @property(copy, nonatomic) NSDictionary *adEventURLs; // @synthesize adEventURLs=_adEventURLs;
 @property(copy, nonatomic) NSString *adInstanceId; // @synthesize adInstanceId=_adInstanceId;
 @property(copy, nonatomic) NSString *postId; // @synthesize postId=_postId;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)copyWithCurrentTime:(double)arg1;

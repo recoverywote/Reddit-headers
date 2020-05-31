@@ -22,6 +22,7 @@
     CALayer *_planet2Layer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *planet2Layer; // @synthesize planet2Layer=_planet2Layer;
 @property(retain, nonatomic) CALayer *planet1Layer; // @synthesize planet1Layer=_planet1Layer;
 @property(retain, nonatomic) CAShapeLayer *orbit2Layer; // @synthesize orbit2Layer=_orbit2Layer;
@@ -32,7 +33,6 @@
 @property(nonatomic) _Bool isFinishingAnimation; // @synthesize isFinishingAnimation=_isFinishingAnimation;
 @property(nonatomic) double progressPercentage; // @synthesize progressPercentage=_progressPercentage;
 @property(retain, nonatomic) UIColor *tintColor; // @synthesize tintColor=_tintColor;
-- (void).cxx_destruct;
 - (id)circlePathForRadius:(double)arg1;
 - (id)createCircleWith:(double)arg1 color:(id)arg2;
 - (id)orbitPlanet:(double)arg1 angle:(double)arg2 layer:(id)arg3 size:(struct CGSize)arg4 planetDiameter:(double)arg5 tintColor:(id)arg6;

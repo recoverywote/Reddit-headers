@@ -16,10 +16,10 @@
 }
 
 + (struct CGSize)calculatedCarouselItemSize:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *associatedActions; // @synthesize associatedActions=_associatedActions;
 @property(nonatomic) _Bool compact; // @synthesize compact=_compact;
 @property(retain, nonatomic) CarouselItem *carouselItem; // @synthesize carouselItem=_carouselItem;
-- (void).cxx_destruct;
 - (void)performActionForKey:(id)arg1;
 - (void)associateAction:(CDUnknownBlockType)arg1 forKey:(id)arg2;
 - (void)didBecomeFullyVisible;

@@ -36,6 +36,7 @@
 
 + (struct CGSize)calculatedSizeForAttributedText:(id)arg1 maxWidth:(double)arg2 includingHorizontalPadding:(_Bool)arg3 shouldParseRichText:(_Bool)arg4;
 + (id)messageTextLabel;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldParseRichText; // @synthesize shouldParseRichText=_shouldParseRichText;
 @property(retain, nonatomic) SelectableTextView *selectableView; // @synthesize selectableView=_selectableView;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
@@ -51,7 +52,6 @@
 @property(nonatomic) long long numberOfLines; // @synthesize numberOfLines=_numberOfLines;
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(retain, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 - (void)theatreViewDidClose;
 - (void)attributedLabelDidTapMediaView:(id)arg1 didTapRichTextMedia:(id)arg2;
 - (void)textViewDidEndEditing:(id)arg1;

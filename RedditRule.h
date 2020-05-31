@@ -22,6 +22,7 @@
     NSURL *_complaintURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *complaintURL; // @synthesize complaintURL=_complaintURL;
 @property(readonly, nonatomic) NSString *complaintButtonText; // @synthesize complaintButtonText=_complaintButtonText;
 @property(readonly, nonatomic) NSString *complaintPrompt; // @synthesize complaintPrompt=_complaintPrompt;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) NSString *nextStepHeader; // @synthesize nextStepHeader=_nextStepHeader;
 @property(retain, nonatomic) NSString *reasonText; // @synthesize reasonText=_reasonText;
 @property(retain, nonatomic) NSString *reasonTextToShow; // @synthesize reasonTextToShow=_reasonTextToShow;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasNextSteps;
 - (id)complaintURLForReportable:(id)arg1;
 - (id)initWithData:(id)arg1;

@@ -25,6 +25,7 @@
 
 + (id)sharedInstance;
 + (void)load;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *testServerURL; // @synthesize testServerURL=_testServerURL;
 @property(retain, nonatomic) GDTCORClock *FLLNextUploadTime; // @synthesize FLLNextUploadTime=_FLLNextUploadTime;
 @property(retain, nonatomic) GDTCORClock *CCTNextUploadTime; // @synthesize CCTNextUploadTime=_CCTNextUploadTime;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) NSURLSessionUploadTask *currentTask; // @synthesize currentTask=_currentTask;
 @property(readonly, nonatomic) NSURLSession *uploaderSession; // @synthesize uploaderSession=_uploaderSession;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *uploaderQueue; // @synthesize uploaderQueue=_uploaderQueue;
-- (void).cxx_destruct;
 - (void)URLSession:(id)arg1 task:(id)arg2 willPerformHTTPRedirection:(id)arg3 newRequest:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (void)appWillTerminate:(id)arg1;
 - (void)packageExpired:(id)arg1;

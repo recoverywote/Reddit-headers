@@ -12,6 +12,7 @@
     // Error parsing type: , name: options
     // Error parsing type: , name: rui
     // Error parsing type: , name: postMetaViewModel
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: subredditIconModel
     // Error parsing type: , name: promotedLabelModel
     // Error parsing type: , name: subredditLabelModel

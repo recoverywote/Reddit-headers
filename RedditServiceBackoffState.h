@@ -15,10 +15,10 @@
     NSMutableDictionary *_infoMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *infoMap; // @synthesize infoMap=_infoMap;
 @property(nonatomic) double backoffTime; // @synthesize backoffTime=_backoffTime;
 @property(nonatomic) long long backoffAmount; // @synthesize backoffAmount=_backoffAmount;
-- (void).cxx_destruct;
 - (id)keyForRequest:(id)arg1;
 - (_Bool)resetForRequest:(id)arg1;
 - (void)incrementForRequest:(id)arg1;

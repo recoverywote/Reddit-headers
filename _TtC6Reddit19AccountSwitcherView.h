@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: kHeaderHeight
     // Error parsing type: , name: kFooterHeight
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: accounts
     // Error parsing type: , name: currentAccount
     // Error parsing type: , name: contentStackView

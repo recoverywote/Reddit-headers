@@ -18,12 +18,12 @@
 }
 
 + (void)presentFromViewController:(id)arg1 fromModalView:(id)arg2 linkedFromNavView:(id)arg3 toViewController:(id)arg4;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool transitionCompleted; // @synthesize transitionCompleted=_transitionCompleted;
 @property(retain, nonatomic) UIView *snapshotView; // @synthesize snapshotView=_snapshotView;
 @property(retain, nonatomic) BaseNavigationViewController *linkedFromModalView; // @synthesize linkedFromModalView=_linkedFromModalView;
 @property(retain, nonatomic) BaseViewController *fromModalView; // @synthesize fromModalView=_fromModalView;
 @property(retain, nonatomic) UIViewController *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (_Bool)prefersNavigationBarHidden;
 - (_Bool)prefersTabBarHidden;
 - (void)viewWillDisappear:(_Bool)arg1;

@@ -20,6 +20,7 @@
     id <ModUserListable> _user;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <ModUserListable> user; // @synthesize user=_user;
 @property(retain, nonatomic) BaseButton *overflowButton; // @synthesize overflowButton=_overflowButton;
 @property(retain, nonatomic) BaseLabel *detailsLabel; // @synthesize detailsLabel=_detailsLabel;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) ChatAvatarImageView *iconView; // @synthesize iconView=_iconView;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
 @property(nonatomic) __weak id <ModUserTableCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)overflowButtonPressed:(id)arg1;
 - (void)setupLayout;
 - (void)configureWithUser:(id)arg1;

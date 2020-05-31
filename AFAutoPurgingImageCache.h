@@ -20,12 +20,12 @@
     NSObject<OS_dispatch_queue> *_synchronizationQueue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *synchronizationQueue; // @synthesize synchronizationQueue=_synchronizationQueue;
 @property(nonatomic) unsigned long long currentMemoryUsage; // @synthesize currentMemoryUsage=_currentMemoryUsage;
 @property(retain, nonatomic) NSMutableDictionary *cachedImages; // @synthesize cachedImages=_cachedImages;
 @property(nonatomic) unsigned long long preferredMemoryUsageAfterPurge; // @synthesize preferredMemoryUsageAfterPurge=_preferredMemoryUsageAfterPurge;
 @property(nonatomic) unsigned long long memoryCapacity; // @synthesize memoryCapacity=_memoryCapacity;
-- (void).cxx_destruct;
 - (_Bool)shouldCacheImage:(id)arg1 forRequest:(id)arg2 withAdditionalIdentifier:(id)arg3;
 - (id)imageCacheKeyFromURLRequest:(id)arg1 withAdditionalIdentifier:(id)arg2;
 - (id)imageforRequest:(id)arg1 withAdditionalIdentifier:(id)arg2;

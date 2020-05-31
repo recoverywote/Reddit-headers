@@ -13,8 +13,8 @@
     id <LOTPathValueDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <LOTPathValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <LOTPathValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (_Bool)hasDelegateOverride;
 - (void)setValueDelegate:(id)arg1;
 - (id)pathForFrame:(id)arg1 cacheLengths:(_Bool)arg2;

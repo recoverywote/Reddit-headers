@@ -38,6 +38,7 @@
     NSURL *_uploadedImageUrl;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *uploadedImageUrl; // @synthesize uploadedImageUrl=_uploadedImageUrl;
 @property(nonatomic) _Bool isUploadingImage; // @synthesize isUploadingImage=_isUploadingImage;
 @property(retain, nonatomic) BaseLabel *showOnProfileDescription; // @synthesize showOnProfileDescription=_showOnProfileDescription;
@@ -58,7 +59,6 @@
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(readonly, nonatomic) MultiPagePresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak id <EditCustomFeedViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)keyboardWillHide:(id)arg1;
 - (void)keyboardWillShow:(id)arg1;
 - (void)imagePickerControllerDidCancel:(id)arg1;

@@ -18,12 +18,12 @@
     NSString *_subscribedString;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *subscribedString; // @synthesize subscribedString=_subscribedString;
 @property(copy, nonatomic) NSString *subscribeString; // @synthesize subscribeString=_subscribeString;
 @property(nonatomic) _Bool shouldApplyStyling; // @synthesize shouldApplyStyling=_shouldApplyStyling;
 @property(retain, nonatomic) id <Subscribable><Styleable> model; // @synthesize model=_model;
 @property(retain, nonatomic) UIColor *colorBarBackgroundColorOverride; // @synthesize colorBarBackgroundColorOverride=_colorBarBackgroundColorOverride;
-- (void).cxx_destruct;
 - (_Bool)isColorEqualToWhite:(id)arg1;
 - (id)followButtonColorWithAdjustedBrightness:(_Bool)arg1;
 - (void)configureButtonForSubscribedState:(_Bool)arg1;

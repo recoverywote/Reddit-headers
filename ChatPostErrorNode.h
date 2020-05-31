@@ -15,10 +15,10 @@
     ASTextNode *_textNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) ASNetworkImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(retain, nonatomic) ASDisplayNode *imageBackgroundNode; // @synthesize imageBackgroundNode=_imageBackgroundNode;
-- (void).cxx_destruct;
 - (id)stringForEmbedStatus:(unsigned long long)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureWithEmbedStatus:(unsigned long long)arg1;

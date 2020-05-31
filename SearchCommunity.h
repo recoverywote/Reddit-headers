@@ -20,12 +20,12 @@
     UIColor *_fillColor;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
 @property(retain, nonatomic) UIColor *fillColor; // @synthesize fillColor=_fillColor;
 @property(copy, nonatomic) NSString *iconName; // @synthesize iconName=_iconName;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (id)placeHolderImage;
 @property(readonly, nonatomic) NSString *namePrefixed;
 @property(readonly, nonatomic) NSString *prefix;

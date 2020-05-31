@@ -15,8 +15,8 @@
 
 + (void)_augmentBaseQuery:(id)arg1;
 + (_Bool)supportsSynchronizableKeychainItems;
-- (id)baseQuery;
 - (void).cxx_destruct;
+- (id)baseQuery;
 - (id)initWithSharedAccessGroupIdentifier:(id)arg1 accessibility:(unsigned long long)arg2;
 - (id)initWithIdentifier:(id)arg1 accessibility:(unsigned long long)arg2;
 

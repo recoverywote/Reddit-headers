@@ -7,26 +7,29 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASTextNode, BaseButtonNode, SubscribableButtonNode, SubscribableDetailModel;
+@protocol ViewContext;
 
 @interface SubscribableDetailNode : BaseFeedDisplayNode
 {
     SubscribableButtonNode *_buttonNode;
+    id <ViewContext> _viewContext;
     ASTextNode *_titleTextNode;
     ASTextNode *_detailTextNode;
     BaseButtonNode *_detailButtonNode;
     SubscribableDetailModel *_model;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubscribableDetailModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) BaseButtonNode *detailButtonNode; // @synthesize detailButtonNode=_detailButtonNode;
 @property(retain, nonatomic) ASTextNode *detailTextNode; // @synthesize detailTextNode=_detailTextNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) SubscribableButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initWithModel:(id)arg1;
+- (id)initWithViewContext:(id)arg1 model:(id)arg2;
 - (id)detailStringForResult:(id)arg1;
 
 @end

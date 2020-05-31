@@ -15,10 +15,10 @@
     NSArray *_removals;
 }
 
+- (void).cxx_destruct;
 @property(readonly) _Bool hasChanges; // @synthesize hasChanges=_hasChanges;
 @property(readonly) NSArray *removals; // @synthesize removals=_removals;
 @property(readonly) NSArray *insertions; // @synthesize insertions=_insertions;
-- (void).cxx_destruct;
 - (_Bool)isEqualToNSOrderedCollectionDifference:(id)arg1;
 - (id)initWithRemovals:(id)arg1 insertions:(id)arg2;
 

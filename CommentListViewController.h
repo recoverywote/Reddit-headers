@@ -33,6 +33,7 @@
     NSMutableArray *_notifObservers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSMutableArray *notifObservers; // @synthesize notifObservers=_notifObservers;
 @property(readonly, nonatomic) NSNotificationCenter *notifCenter; // @synthesize notifCenter=_notifCenter;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) User *analyticsUser; // @synthesize analyticsUser=_analyticsUser;
 @property(copy, nonatomic) NSString *overrideAnalyticsScreenName; // @synthesize overrideAnalyticsScreenName=_overrideAnalyticsScreenName;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> userProfileDelegate; // @synthesize userProfileDelegate=_userProfileDelegate;
-- (void).cxx_destruct;
 - (void)addNotificationCenterObservers;
 - (id)analyticsScreenViewName;
 @property(readonly, nonatomic) _Bool shouldDisableReloadContentForBlockedUser;

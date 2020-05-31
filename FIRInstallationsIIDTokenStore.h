@@ -13,8 +13,8 @@
     NSString *_GCMSenderID;
 }
 
-@property(readonly, nonatomic) NSString *GCMSenderID; // @synthesize GCMSenderID=_GCMSenderID;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *GCMSenderID; // @synthesize GCMSenderID=_GCMSenderID;
 - (id)serviceKeyForAuthorizedEntity:(id)arg1 scope:(id)arg2;
 - (id)IIDAppIdentifier;
 - (id)IIDDefaultTokenDataKeychainQuery;

@@ -20,13 +20,13 @@
     BaseButton *_rSlashButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *rSlashButton; // @synthesize rSlashButton=_rSlashButton;
 @property(retain, nonatomic) BaseButton *uSlashButton; // @synthesize uSlashButton=_uSlashButton;
 @property(retain, nonatomic) BaseButton *photosButton; // @synthesize photosButton=_photosButton;
 @property(retain, nonatomic) BaseButton *snoomojiButton; // @synthesize snoomojiButton=_snoomojiButton;
 @property(retain, nonatomic) BaseButton *postsButton; // @synthesize postsButton=_postsButton;
 @property(nonatomic) long long source; // @synthesize source=_source;
-- (void).cxx_destruct;
 - (void)themeDidChange:(id)arg1;
 - (void)buttonTapped:(id)arg1;
 - (void)configureButton:(id)arg1 withImageName:(id)arg2 theme:(id)arg3;

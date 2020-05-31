@@ -16,11 +16,11 @@
     NSString *_message;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isWithCoinsPurchase; // @synthesize isWithCoinsPurchase=_isWithCoinsPurchase;
 @property(readonly, nonatomic) _Bool isAnonymous; // @synthesize isAnonymous=_isAnonymous;
 @property(readonly, nonatomic) NSString *message; // @synthesize message=_message;
 @property(readonly, nonatomic) NSString *awardId; // @synthesize awardId=_awardId;
-- (void).cxx_destruct;
 - (id)gildInputWithNodeId:(id)arg1 correlationId:(id)arg2;
 - (id)networkParameters;
 - (id)initWithAwardId:(id)arg1 message:(id)arg2 isAnonymous:(_Bool)arg3 isWithCoinsPurchase:(_Bool)arg4;

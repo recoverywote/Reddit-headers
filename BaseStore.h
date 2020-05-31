@@ -21,13 +21,13 @@
 + (id)ephemeralStoreWithModelClass:(Class)arg1;
 + (id)persistentStoreWithModelClass:(Class)arg1 baseURLString:(id)arg2 fileManager:(id)arg3;
 + (id)serialQueue;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(retain, nonatomic) UnfairLock *lock; // @synthesize lock=_lock;
 @property(copy, nonatomic) NSString *baseURLString; // @synthesize baseURLString=_baseURLString;
 @property(readonly, nonatomic) NSMutableDictionary *inMemStorage; // @synthesize inMemStorage=_inMemStorage;
 @property(readonly, nonatomic) Class modelClass; // @synthesize modelClass=_modelClass;
 @property(readonly, nonatomic) _Bool shouldPersist; // @synthesize shouldPersist=_shouldPersist;
-- (void).cxx_destruct;
 - (void)removeAllObjects;
 - (void)enumerateObjects:(CDUnknownBlockType)arg1;
 - (void)fetchObjectsWithPks:(id)arg1 completion:(CDUnknownBlockType)arg2;

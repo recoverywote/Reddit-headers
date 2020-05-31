@@ -16,11 +16,11 @@
     CaptureContentButton *_modeButtonContent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool useBackupCode; // @synthesize useBackupCode=_useBackupCode;
 @property(retain, nonatomic) CaptureContentButton *modeButtonContent; // @synthesize modeButtonContent=_modeButtonContent;
 @property(retain, nonatomic) CaptureContentTextEntry *textEntryContent; // @synthesize textEntryContent=_textEntryContent;
 @property(retain, nonatomic) CaptureContentTitle *titleContent; // @synthesize titleContent=_titleContent;
-- (void).cxx_destruct;
 - (void)toggleUseBackupCode;
 - (void)updateText;
 - (_Bool)validateContent;

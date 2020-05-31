@@ -12,9 +12,9 @@
     CDUnknownBlockType _viewControllerBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType viewControllerBlock; // @synthesize viewControllerBlock=_viewControllerBlock;
 @property(nonatomic) unsigned long long tabType; // @synthesize tabType=_tabType;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithSearchTabType:(unsigned long long)arg1 withViewControllerBlock:(CDUnknownBlockType)arg2;

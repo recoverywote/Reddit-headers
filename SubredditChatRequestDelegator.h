@@ -25,6 +25,7 @@
     BaseCollectionView *_collectionView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(readonly, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(nonatomic) _Bool didPerformSecondFetchForPopularMembersPreview; // @synthesize didPerformSecondFetchForPopularMembersPreview=_didPerformSecondFetchForPopularMembersPreview;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSArray *contacts; // @synthesize contacts=_contacts;
 @property(retain, nonatomic) SubredditChannel *subredditChannel; // @synthesize subredditChannel=_subredditChannel;
 @property(nonatomic) __weak id <ChatRequestDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSAttributedString *subredditDescriptionHeaderAttributedString;
 @property(readonly, copy, nonatomic) NSAttributedString *subredditMembersHeaderAttributedString;
 @property(readonly, copy, nonatomic) NSAttributedString *subredditDescriptionAttributedString;

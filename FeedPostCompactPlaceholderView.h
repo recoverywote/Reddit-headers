@@ -19,13 +19,13 @@
 }
 
 + (struct CGSize)preferredSize;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *mask; // @synthesize mask=_mask;
 @property(retain, nonatomic) AnimatedGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) UIView *thumbnailView; // @synthesize thumbnailView=_thumbnailView;
 @property(retain, nonatomic) UIView *descriptionView; // @synthesize descriptionView=_descriptionView;
 @property(retain, nonatomic) UIView *subtitleView; // @synthesize subtitleView=_subtitleView;
 @property(retain, nonatomic) UIView *titleView; // @synthesize titleView=_titleView;
-- (void).cxx_destruct;
 - (void)configureView:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

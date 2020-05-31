@@ -13,8 +13,8 @@
     NSArray *_sections;
 }
 
-@property(readonly, copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 - (id)sectionedItemsDiffFrom:(id)arg1;
 - (id)itemAtIndexPath:(id)arg1;
 @property(readonly, nonatomic) long long numberOfSections;

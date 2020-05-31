@@ -18,7 +18,7 @@
     ASMainSerialQueue *_mainSerialQueue;
     NSObject<OS_dispatch_queue> *_editingTransactionQueue;
     NSObject<OS_dispatch_group> *_editingTransactionGroup;
-    // Error parsing type: {atomic<int>="__a_"Ai}, name: _editingTransactionGroupCount
+    // Error parsing type: {atomic<int>="__a_"{__cxx_atomic_impl<int, std::__1::__cxx_atomic_base_impl<int> >="__a_value"Ai}}, name: _editingTransactionGroupCount
     _Bool _initialReloadDataHasBeenCalled;
     _Bool _synchronized;
     NSMutableSet *_onDidFinishSynchronizingBlocks;
@@ -39,6 +39,8 @@
     id <ASDataControllerDelegate> _delegate;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool usesSynchronousDataLoading; // @synthesize usesSynchronousDataLoading=_usesSynchronousDataLoading;
 @property(readonly, nonatomic) _Bool initialReloadDataHasBeenCalled; // @synthesize initialReloadDataHasBeenCalled=_initialReloadDataHasBeenCalled;
 @property(nonatomic) __weak id <ASDataControllerDelegate> delegate; // @synthesize delegate=_delegate;
@@ -47,8 +49,6 @@
 @property(copy) ASElementMap *pendingMap; // @synthesize pendingMap=_pendingMap;
 @property(copy) ASElementMap *visibleMap; // @synthesize visibleMap=_visibleMap;
 @property(readonly, nonatomic) __weak id <ASRangeManagingNode> node; // @synthesize node=_node;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)_scheduleBlockOnMainSerialQueue:(CDUnknownBlockType)arg1;
 - (void)clearData;
 - (void)environmentDidChange;

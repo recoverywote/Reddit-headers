@@ -14,9 +14,9 @@
     NSArray *_elementRanges;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *elementRanges; // @synthesize elementRanges=_elementRanges;
 @property(readonly, nonatomic) unsigned long long indentationLevel; // @synthesize indentationLevel=_indentationLevel;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)applyParagraphStyleIndentationToString:(id)arg1 config:(id)arg2;
 - (id)attributedStringWithPrefix:(id)arg1 withConfig:(id)arg2;

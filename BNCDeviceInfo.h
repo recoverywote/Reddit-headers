@@ -40,6 +40,7 @@
 }
 
 + (id)getInstance;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *randomId; // @synthesize randomId=_randomId;
 @property(retain, nonatomic) BNCReachability *reachability; // @synthesize reachability=_reachability;
 @property(copy, nonatomic) NSString *branchSDKVersion; // @synthesize branchSDKVersion=_branchSDKVersion;
@@ -67,7 +68,6 @@
 @property(nonatomic) _Bool isRealHardwareId; // @synthesize isRealHardwareId=_isRealHardwareId;
 @property(copy, nonatomic) NSString *hardwareIdType; // @synthesize hardwareIdType=_hardwareIdType;
 @property(copy, nonatomic) NSString *hardwareId; // @synthesize hardwareId=_hardwareId;
-- (void).cxx_destruct;
 - (id)v2dictionary;
 - (void)checkAdvertisingIdentifier;
 - (id)userAgentString;

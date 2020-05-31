@@ -21,6 +21,7 @@
 }
 
 + (id)defaultOptions;
+- (void).cxx_destruct;
 @property(retain, nonatomic) RUITheme *themeOverride; // @synthesize themeOverride=_themeOverride;
 @property(nonatomic) _Bool shouldBoldAuthorName; // @synthesize shouldBoldAuthorName=_shouldBoldAuthorName;
 @property(nonatomic) _Bool shouldIgnoreLeveling; // @synthesize shouldIgnoreLeveling=_shouldIgnoreLeveling;
@@ -29,7 +30,6 @@
 @property(nonatomic) _Bool shouldShowCrowdControlLabel; // @synthesize shouldShowCrowdControlLabel=_shouldShowCrowdControlLabel;
 @property(nonatomic) _Bool shouldShowModIcons; // @synthesize shouldShowModIcons=_shouldShowModIcons;
 @property(nonatomic) _Bool shouldShowSubredditName; // @synthesize shouldShowSubredditName=_shouldShowSubredditName;
-- (void).cxx_destruct;
 
 @end
 

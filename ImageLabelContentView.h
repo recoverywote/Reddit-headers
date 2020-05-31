@@ -34,6 +34,7 @@
     struct CGSize _imageSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasSetupConstraints; // @synthesize hasSetupConstraints=_hasSetupConstraints;
 @property(retain, nonatomic) NSLayoutConstraint *imageHeightConstraint; // @synthesize imageHeightConstraint=_imageHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageWidthConstraint; // @synthesize imageWidthConstraint=_imageWidthConstraint;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(readonly, nonatomic) AttributedLabelRegular *mainLabel; // @synthesize mainLabel=_mainLabel;
 @property(readonly, nonatomic) RoundedImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)prepareContentViewForReuse;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 - (void)layoutSubviews;

@@ -20,11 +20,11 @@
 
 + (id)highlightWithBackgroundColor:(id)arg1;
 + (id)highlightWithAttributes:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType longPressAction; // @synthesize longPressAction=_longPressAction;
 @property(copy, nonatomic) CDUnknownBlockType tapAction; // @synthesize tapAction=_tapAction;
 @property(copy, nonatomic) NSDictionary *userInfo; // @synthesize userInfo=_userInfo;
 @property(copy, nonatomic) NSDictionary *attributes; // @synthesize attributes=_attributes;
-- (void).cxx_destruct;
 - (void)setAttachment:(id)arg1;
 - (void)setBorder:(id)arg1;
 - (void)setBackgroundBorder:(id)arg1;

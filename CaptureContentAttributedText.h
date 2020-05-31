@@ -15,10 +15,10 @@
     struct UIEdgeInsets _padding;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets padding; // @synthesize padding=_padding;
 @property(copy, nonatomic) CDUnknownBlockType selectLinkAction; // @synthesize selectLinkAction=_selectLinkAction;
 @property(retain, nonatomic) NSAttributedString *attributedText; // @synthesize attributedText=_attributedText;
-- (void).cxx_destruct;
 
 @end
 

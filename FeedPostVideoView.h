@@ -25,6 +25,7 @@
 }
 
 + (double)calculatedHeightWithData:(id)arg1 forWidth:(double)arg2 withFeedPostOptions:(id)arg3 delegate:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ContentIngestedVideoView *ingestedVideoView; // @synthesize ingestedVideoView=_ingestedVideoView;
 @property(retain, nonatomic) ContentVideoView *videoView; // @synthesize videoView=_videoView;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) Post *crosspost; // @synthesize crosspost=_crosspost;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostVideoViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)stopBlur;
 - (void)startBlur;
 - (void)didTapBlurView;

@@ -13,8 +13,8 @@
     BaseLabel *_label;
 }
 
-@property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

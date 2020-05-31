@@ -10,11 +10,12 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class BaseCollectionView, BaseView, NSArray, NSLayoutConstraint, NSString;
-@protocol ChatUserMentionViewControllerDelegate;
+@protocol AccountContext, ChatUserMentionViewControllerDelegate;
 
 @interface ChatUserMentionViewController : BaseViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
     id <ChatUserMentionViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     BaseCollectionView *_collectionView;
     NSArray *_contacts;
     BaseView *_topLineView;
@@ -24,6 +25,7 @@
     struct _NSRange _currentRange;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *currentWord; // @synthesize currentWord=_currentWord;
 @property(copy, nonatomic) NSString *currentPrefix; // @synthesize currentPrefix=_currentPrefix;
 @property(nonatomic) struct _NSRange currentRange; // @synthesize currentRange=_currentRange;
@@ -31,8 +33,8 @@
 @property(retain, nonatomic) BaseView *topLineView; // @synthesize topLineView=_topLineView;
 @property(retain, nonatomic) NSArray *contacts; // @synthesize contacts=_contacts;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <ChatUserMentionViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGSize)sizeForNormalCell;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (id)contactForIndexPath:(id)arg1;
@@ -47,6 +49,7 @@
 - (void)configureWithContacts:(id)arg1;
 - (void)updateWithWord:(id)arg1 prefix:(id)arg2 range:(struct _NSRange)arg3;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

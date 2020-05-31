@@ -42,6 +42,7 @@
     double _previousTopInset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double previousTopInset; // @synthesize previousTopInset=_previousTopInset;
 @property(retain, nonatomic) ChatUserMentionTypeAheadAccessory *userMentionTypeAheadAccessory; // @synthesize userMentionTypeAheadAccessory=_userMentionTypeAheadAccessory;
 @property(retain, nonatomic) ChatUserMentionViewController *userMentionViewController; // @synthesize userMentionViewController=_userMentionViewController;
@@ -62,7 +63,6 @@
 @property(retain, nonatomic) ChatCompositionViewController *compositionController; // @synthesize compositionController=_compositionController;
 @property(retain, nonatomic) ChatFeedInteractor *feedInteractor; // @synthesize feedInteractor=_feedInteractor;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
-- (void).cxx_destruct;
 - (void)showShareViewForPost:(id)arg1 sender:(id)arg2 origin:(unsigned long long)arg3;
 - (void)actionSheetViewController:(id)arg1 didTapSharePost:(id)arg2 sender:(id)arg3;
 - (id)analyticsPageType;

@@ -19,8 +19,8 @@
 }
 
 + (id)sharedInstance;
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *registrarQueue; // @synthesize registrarQueue=_registrarQueue;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *registrarQueue; // @synthesize registrarQueue=_registrarQueue;
 - (void)appWillTerminate:(id)arg1;
 - (void)appWillForeground:(id)arg1;
 - (void)appWillBackground:(id)arg1;

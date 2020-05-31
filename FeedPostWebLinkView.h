@@ -24,6 +24,7 @@
 
 + (_Bool)shouldUseLargeLayoutForPost:(id)arg1;
 + (double)calculatedHeightWithData:(id)arg1 forWidth:(double)arg2 shouldCropImage:(_Bool)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *linkTextButton; // @synthesize linkTextButton=_linkTextButton;
 @property(retain, nonatomic) BaseView *linkView; // @synthesize linkView=_linkView;
 @property(nonatomic) _Bool shouldShowLinkIcon; // @synthesize shouldShowLinkIcon=_shouldShowLinkIcon;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostWebLinkViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ContentImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)linkDidTap:(id)arg1;
 - (void)contentImageViewDidTapImage:(id)arg1;
 - (void)layoutSubviews;

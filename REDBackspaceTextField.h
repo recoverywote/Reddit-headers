@@ -13,8 +13,8 @@
     id <REDBackspaceTextFieldDelegate> _backspaceDelegate;
 }
 
-@property(nonatomic) __weak id <REDBackspaceTextFieldDelegate> backspaceDelegate; // @synthesize backspaceDelegate=_backspaceDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <REDBackspaceTextFieldDelegate> backspaceDelegate; // @synthesize backspaceDelegate=_backspaceDelegate;
 - (_Bool)keyboardInputShouldDelete:(id)arg1;
 
 @end

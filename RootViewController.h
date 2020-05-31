@@ -11,7 +11,7 @@
 #import "MainTabBarControllerDelegate-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class AccountManager, CaptureViewController, FeedSpinnerView, IntroViewController, MainTabBarController, NSDictionary, NSString, UIView, UserDrawerViewController;
+@class AccountManager, CaptureViewController, FeedSpinnerView, IntroViewController, MainTabBarController, NSDictionary, NSString, UIView, UserDrawerViewController, _TtC6Reddit20AnonymousModeManager;
 @protocol AccountContext, RootViewControllerDelegate;
 
 @interface RootViewController : BaseViewController <IntroViewControllerDelegate, MainTabBarControllerDelegate, CaptureViewControllerDelegate, UIGestureRecognizerDelegate>
@@ -21,6 +21,7 @@
     id <RootViewControllerDelegate> _delegate;
     MainTabBarController *_tabController;
     AccountManager *_accountManager;
+    _TtC6Reddit20AnonymousModeManager *_anonymousModeManager;
     id <AccountContext> _accountContext;
     UserDrawerViewController *_userDrawerViewController;
     IntroViewController *_introController;
@@ -32,6 +33,7 @@
 
 + (void)reloadAllControllers;
 + (id)currentAccountContext;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *blockInputView; // @synthesize blockInputView=_blockInputView;
 @property(nonatomic) _Bool didInstallNewMainTabController; // @synthesize didInstallNewMainTabController=_didInstallNewMainTabController;
 @property(nonatomic) double timeFirstInitialized; // @synthesize timeFirstInitialized=_timeFirstInitialized;
@@ -41,10 +43,10 @@
 @property(retain, nonatomic) IntroViewController *introController; // @synthesize introController=_introController;
 @property(retain, nonatomic) UserDrawerViewController *userDrawerViewController; // @synthesize userDrawerViewController=_userDrawerViewController;
 @property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+@property(readonly, nonatomic) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager=_anonymousModeManager;
 @property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 @property(retain, nonatomic) MainTabBarController *tabController; // @synthesize tabController=_tabController;
 @property(nonatomic) __weak id <RootViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handlePanOnBlockInputView:(id)arg1;
 - (void)handleTapOnBlockInputView:(id)arg1;
 - (void)handleScreenEdgePan:(id)arg1;
@@ -78,7 +80,7 @@
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccountManager:(id)arg1;
+- (id)initWithAccountManager:(id)arg1 anonymousModeManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

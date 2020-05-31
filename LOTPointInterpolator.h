@@ -13,8 +13,8 @@
     id <LOTPointValueDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <LOTPointValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <LOTPointValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)setValueDelegate:(id)arg1;
 - (_Bool)hasDelegateOverride;
 - (struct CGPoint)pointValueForFrame:(id)arg1;

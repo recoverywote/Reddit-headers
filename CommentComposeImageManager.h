@@ -16,8 +16,8 @@
     UIViewController *_viewControllerForPresentation;
 }
 
-@property(nonatomic) __weak UIViewController *viewControllerForPresentation; // @synthesize viewControllerForPresentation=_viewControllerForPresentation;
 - (void).cxx_destruct;
+@property(nonatomic) __weak UIViewController *viewControllerForPresentation; // @synthesize viewControllerForPresentation=_viewControllerForPresentation;
 - (void)imagePickerControllerDidCancel:(id)arg1;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
 - (void)presentImagePickerForSourceType:(long long)arg1;

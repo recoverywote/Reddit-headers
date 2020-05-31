@@ -15,9 +15,9 @@
 }
 
 + (id)key:(id)arg1 value:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *value; // @synthesize value=_value;
 @property(retain, nonatomic) NSString *key; // @synthesize key=_key;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;
 

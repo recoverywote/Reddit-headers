@@ -17,10 +17,10 @@
 
 + (id)currentGuidance;
 + (double)iPadMaxContentWidth;
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect windowBounds; // @synthesize windowBounds=_windowBounds;
 @property(nonatomic) __weak UITraitCollection *traitCollection; // @synthesize traitCollection=_traitCollection;
 @property(nonatomic) __weak UIWindow *window; // @synthesize window=_window;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct UIEdgeInsets gridPaddingDoubleInsets;
 @property(readonly, nonatomic) struct UIEdgeInsets gridPaddingQuarterInsets;
 @property(readonly, nonatomic) struct UIEdgeInsets gridPaddingHalfInsets;

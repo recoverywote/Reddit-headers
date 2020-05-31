@@ -14,9 +14,9 @@
     SubredditCalendarWidget *_calendarWidget;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditCalendarWidget *calendarWidget; // @synthesize calendarWidget=_calendarWidget;
 @property(copy, nonatomic) NSArray *calendarWidgetAttributedStringEventTitles; // @synthesize calendarWidgetAttributedStringEventTitles=_calendarWidgetAttributedStringEventTitles;
-- (void).cxx_destruct;
 - (long long)numberOfRowItems;
 - (id)titleLabelText;
 - (double)heightForRow:(long long)arg1 rowWidth:(double)arg2;

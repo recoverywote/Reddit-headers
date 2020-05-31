@@ -27,6 +27,7 @@
     GoldPurchaseInProgressViewController *_purchaseInProgressViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetchingRecommendedProduct; // @synthesize isFetchingRecommendedProduct=_isFetchingRecommendedProduct;
 @property(retain, nonatomic) GoldPurchaseInProgressViewController *purchaseInProgressViewController; // @synthesize purchaseInProgressViewController=_purchaseInProgressViewController;
 @property(retain, nonatomic) GoldCoinPurchaseConfirmationViewController *confirmationViewController; // @synthesize confirmationViewController=_confirmationViewController;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PurchaseAwardCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;
 - (void)inAppPurchaseManager:(id)arg1 encounteredUninishedTransactionForDifferentAccount:(id)arg2 transactionId:(id)arg3 productId:(id)arg4 correlationId:(id)arg5 removalHandler:(CDUnknownBlockType)arg6;
 - (void)inAppPurchaseManager:(id)arg1 transactionDidFailWithId:(id)arg2 correlationId:(id)arg3 error:(id)arg4;

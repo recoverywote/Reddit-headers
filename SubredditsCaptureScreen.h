@@ -17,12 +17,12 @@
     CaptureContentTitle *_titleContent;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CaptureContentTitle *titleContent; // @synthesize titleContent=_titleContent;
 @property(retain, nonatomic) NSMutableDictionary *categoriesExpanded; // @synthesize categoriesExpanded=_categoriesExpanded;
 @property(copy, nonatomic) NSString *locationName; // @synthesize locationName=_locationName;
 @property(retain, nonatomic) NSMutableArray *subredditsPopularNearMe; // @synthesize subredditsPopularNearMe=_subredditsPopularNearMe;
 @property(retain, nonatomic) NSMutableDictionary *subredditsByCategory; // @synthesize subredditsByCategory=_subredditsByCategory;
-- (void).cxx_destruct;
 - (void)logTapNextAnalyticsEvent;
 - (void)logTapSkipAnalyticsEvent;
 - (void)logTapBackAnalyticsEvent;

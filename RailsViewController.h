@@ -28,6 +28,7 @@
     struct CGPoint _contentOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGPoint contentOffset; // @synthesize contentOffset=_contentOffset;
 @property(copy, nonatomic) NSArray<IGListDiffable> *currentBatchObjects; // @synthesize currentBatchObjects=_currentBatchObjects;
 @property(copy, nonatomic) NSArray *currentMoves; // @synthesize currentMoves=_currentMoves;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(nonatomic) __weak SearchViewController *searchViewController; // @synthesize searchViewController=_searchViewController;
 @property(retain, nonatomic) RailsNavigator *railsNavigator; // @synthesize railsNavigator=_railsNavigator;
-- (void).cxx_destruct;
 - (void)nsfwPreferencesDidUpdate:(id)arg1;
 - (id)screenViewAnalyticsEvent;
 - (double)heightForHeader;

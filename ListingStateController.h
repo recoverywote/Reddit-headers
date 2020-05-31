@@ -22,6 +22,7 @@
     _TtC8RedditUI17RUIRefreshControl *_refreshControl;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC8RedditUI17RUIRefreshControl *refreshControl; // @synthesize refreshControl=_refreshControl;
 @property(retain, nonatomic) UIControl<LoadingSpinner> *loadingSpinner; // @synthesize loadingSpinner=_loadingSpinner;
 @property(retain, nonatomic) UIView *emptyView; // @synthesize emptyView=_emptyView;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(retain, nonatomic) UIView *customEmptyView; // @synthesize customEmptyView=_customEmptyView;
 @property(nonatomic) __weak id <ListingStateControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)refreshControlDidPullToRefresh:(id)arg1;
 - (void)didTapLoadingSpinner:(id)arg1;
 - (void)showFailureState;

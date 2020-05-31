@@ -18,12 +18,12 @@
     ASDisplayNode *_borderNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *borderNode; // @synthesize borderNode=_borderNode;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(nonatomic) long long positionInFeed; // @synthesize positionInFeed=_positionInFeed;
 @property(nonatomic) __weak id <FeedPostCollectionSeeAllNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
-- (void).cxx_destruct;
 - (void)nodeDidTap:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureBorderNode;

@@ -14,9 +14,9 @@
     // Error parsing type: , name: playerObserver
     // Error parsing type: , name: player
     // Error parsing type: , name: currentItem
-    // Error parsing type: , name: assetProvider
     // Error parsing type: , name: audioCoordinator
     // Error parsing type: , name: decoderPool
+    // Error parsing type: , name: assetProvider
     // Error parsing type: , name: videoAnalyticsLogger
     // Error parsing type: , name: delegate
     // Error parsing type: , name: playerLayerContainer

@@ -16,8 +16,8 @@
 }
 
 + (id)titleViewWithSearchBar:(id)arg1;
-@property(copy, nonatomic) NSString *placeholderString; // @synthesize placeholderString=_placeholderString;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *placeholderString; // @synthesize placeholderString=_placeholderString;
 - (void)applyThemeColors;
 - (void)themeDidChange:(id)arg1;
 - (void)setPlaceholder:(id)arg1;

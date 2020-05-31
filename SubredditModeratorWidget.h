@@ -14,9 +14,9 @@
     long long _totalModerators;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long totalModerators; // @synthesize totalModerators=_totalModerators;
 @property(copy, nonatomic) NSArray *moderators; // @synthesize moderators=_moderators;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

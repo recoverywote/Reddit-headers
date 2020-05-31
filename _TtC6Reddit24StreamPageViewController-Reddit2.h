@@ -7,8 +7,9 @@
 #import "_TtC6Reddit24StreamPageViewController.h"
 
 @interface _TtC6Reddit24StreamPageViewController (Reddit2)
+- (void)didUpdateFollowingStateFor:(id)arg1;
 - (void)didUpdateSubscriptionStateFor:(id)arg1;
-- (void)didLoadLiveStreamSubscriptionDetailsFor:(id)arg1;
+- (void)didLoadLiveStreamSubscriptionDetailsFor:(id)arg1 shouldMarkNSFW:(_Bool)arg2;
 - (void)didLoadRecommendedSubredditPrompt:(id)arg1;
 - (void)didLoadSubredditInfoFromConfig:(id)arg1;
 - (id)presenterForCurrentStream:(id)arg1;

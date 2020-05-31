@@ -21,13 +21,13 @@
     NSOrderedSet *_feedSorts;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSOrderedSet *feedSorts; // @synthesize feedSorts=_feedSorts;
 @property(retain, nonatomic) RUIActionSheetViewController *actionSheet; // @synthesize actionSheet=_actionSheet;
 @property(nonatomic) unsigned long long selectedFeedRange; // @synthesize selectedFeedRange=_selectedFeedRange;
 @property(nonatomic) unsigned long long selectedFeedSort; // @synthesize selectedFeedSort=_selectedFeedSort;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <FeedSortOptionControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didGetDismissedFromOutside:(_Bool)arg2;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)setupForTimeOptionsWithRetainPreviouslySelectedRange:(_Bool)arg1;

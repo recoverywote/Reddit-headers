@@ -14,9 +14,9 @@
     TwoFactorCaptureScreen *_twoFactorScreen;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) TwoFactorCaptureScreen *twoFactorScreen; // @synthesize twoFactorScreen=_twoFactorScreen;
 @property(retain, nonatomic) LoginCaptureScreen *loginScreen; // @synthesize loginScreen=_loginScreen;
-- (void).cxx_destruct;
 - (void)handleAccountManagerError:(id)arg1;
 - (void)checkAuthCodeWithCompletion:(CDUnknownBlockType)arg1 progressHandler:(CDUnknownBlockType)arg2;
 - (void)loginWithCompletion:(CDUnknownBlockType)arg1 progressHandler:(CDUnknownBlockType)arg2;

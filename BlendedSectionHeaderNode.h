@@ -14,9 +14,9 @@
     BlendedSectionHeaderModel *_headerModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BlendedSectionHeaderModel *headerModel; // @synthesize headerModel=_headerModel;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (id)initWithBlendedSectionHeaderModel:(id)arg1;

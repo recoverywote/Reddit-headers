@@ -17,10 +17,10 @@
     NSDictionary *_appContext;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *appContext; // @synthesize appContext=_appContext;
 @property(retain, nonatomic) NSDictionary *deviceContext; // @synthesize deviceContext=_deviceContext;
 @property(retain, nonatomic) NSDictionary *osContext; // @synthesize osContext=_osContext;
-- (void).cxx_destruct;
 - (id)systemInfo;
 - (id)generatedAppContext;
 - (id)generatedDeviceContext;

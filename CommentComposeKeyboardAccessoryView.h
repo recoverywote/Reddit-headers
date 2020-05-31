@@ -22,6 +22,7 @@
     UIStackView *_rightStackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *rightStackView; // @synthesize rightStackView=_rightStackView;
 @property(retain, nonatomic) BaseButton *gifButton; // @synthesize gifButton=_gifButton;
 @property(retain, nonatomic) BaseButton *cameraButton; // @synthesize cameraButton=_cameraButton;
@@ -31,7 +32,6 @@
 @property(nonatomic) _Bool isEmoteComposeEnabled; // @synthesize isEmoteComposeEnabled=_isEmoteComposeEnabled;
 @property(retain, nonatomic) _TtC6Reddit25MetaEmoteActivationButton *emoteActivationButton; // @synthesize emoteActivationButton=_emoteActivationButton;
 @property(nonatomic) __weak id <CommentComposeKeyboardAccessoryViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)gifButtonTouched:(id)arg1;
 - (void)emoteButtonTouched:(id)arg1;
 - (void)cameraButtonTouched:(id)arg1;

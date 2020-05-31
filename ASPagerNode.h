@@ -28,8 +28,8 @@
     _Bool _allowsAutomaticInsetsAdjustment;
 }
 
-@property(nonatomic) _Bool allowsAutomaticInsetsAdjustment; // @synthesize allowsAutomaticInsetsAdjustment=_allowsAutomaticInsetsAdjustment;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool allowsAutomaticInsetsAdjustment; // @synthesize allowsAutomaticInsetsAdjustment=_allowsAutomaticInsetsAdjustment;
 - (void)didEnterHierarchy;
 - (void)proxyTargetHasDeallocated:(id)arg1;
 - (void)setDelegate:(id)arg1;

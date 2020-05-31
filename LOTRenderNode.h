@@ -13,8 +13,8 @@
     CAShapeLayer *_outputLayer;
 }
 
-@property(readonly, nonatomic) CAShapeLayer *outputLayer; // @synthesize outputLayer=_outputLayer;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) CAShapeLayer *outputLayer; // @synthesize outputLayer=_outputLayer;
 - (id)outputPath;
 - (id)localPath;
 - (void)rebuildOutputs;

@@ -18,10 +18,10 @@
     id <PostCollectionNodeDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <PostCollectionNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostCollectionPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) PostCollectionNode *headerNode; // @synthesize headerNode=_headerNode;
-- (void).cxx_destruct;
 - (id)collectionNode:(id)arg1 supplementaryElementKindsInSection:(long long)arg2;
 - (CDUnknownBlockType)collectionNode:(id)arg1 nodeBlockForSupplementaryElementOfKind:(id)arg2 atIndexPath:(id)arg3;
 - (CDUnknownBlockType)collectionNode:(id)arg1 nodeBlockForItemAtIndexPath:(id)arg2;

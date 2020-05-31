@@ -17,12 +17,12 @@
     NSSet *_allocatedUnits;
 }
 
+- (void).cxx_destruct;
 @property(copy) NSSet *allocatedUnits; // @synthesize allocatedUnits=_allocatedUnits;
 @property(copy) NSDictionary *fixedMapByIndex; // @synthesize fixedMapByIndex=_fixedMapByIndex;
 @property(copy) NSOrderedSet *spacedSet; // @synthesize spacedSet=_spacedSet;
 @property(nonatomic) long long distance; // @synthesize distance=_distance;
 @property(nonatomic) long long start; // @synthesize start=_start;
-- (void).cxx_destruct;
 - (id)distributedObjectsInArray:(id)arg1 range:(struct _NSRange)arg2 limitedTo:(id)arg3;
 - (id)distributedObjectsInArray:(id)arg1 range:(struct _NSRange)arg2;
 - (id)indicesInArray:(id)arg1 range:(struct _NSRange)arg2 limitedTo:(id)arg3;

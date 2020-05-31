@@ -22,12 +22,12 @@
 }
 
 + (id)nameForFilterType:(long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UICollectionView *filteredImagesCollectionView; // @synthesize filteredImagesCollectionView=_filteredImagesCollectionView;
 @property(copy, nonatomic) NSArray *imageFilterTypes; // @synthesize imageFilterTypes=_imageFilterTypes;
 @property(retain, nonatomic) ImageProcessor *imageProcessor; // @synthesize imageProcessor=_imageProcessor;
 @property(retain, nonatomic) NSIndexPath *selectedIndexPath; // @synthesize selectedIndexPath=_selectedIndexPath;
 @property(nonatomic) __weak id <FilterViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;

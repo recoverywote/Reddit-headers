@@ -16,11 +16,11 @@
     PillStyle *_pillStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) IntrinsicSizeNodeWrapper *pillButton; // @synthesize pillButton=_pillButton;
 @property(retain, nonatomic) BaseLabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) PillButtonNode *pillButtonNode; // @synthesize pillButtonNode=_pillButtonNode;
-- (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1 pillStyle:(id)arg2;
 - (void)prepareForReuse;
 - (void)setupConstraints;

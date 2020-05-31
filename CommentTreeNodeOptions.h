@@ -25,6 +25,7 @@
 }
 
 + (id)defaultCommentTreeNodeOptions;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowHighlightedAwardAnimation; // @synthesize shouldShowHighlightedAwardAnimation=_shouldShowHighlightedAwardAnimation;
 @property(nonatomic) _Bool shouldHighlightBasedOnAwards; // @synthesize shouldHighlightBasedOnAwards=_shouldHighlightBasedOnAwards;
 @property(nonatomic) _Bool shouldShowNewUI; // @synthesize shouldShowNewUI=_shouldShowNewUI;
@@ -37,7 +38,6 @@
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
 @property(retain, nonatomic) CommentTreeNodeCommandOptions *commandOptions; // @synthesize commandOptions=_commandOptions;
 @property(retain, nonatomic) CommentTreeNodeHeaderOptions *headerOptions; // @synthesize headerOptions=_headerOptions;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

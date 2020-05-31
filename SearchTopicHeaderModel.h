@@ -16,11 +16,11 @@
     SubredditCategory *_subredditCategory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditCategory *subredditCategory; // @synthesize subredditCategory=_subredditCategory;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *subtitleText; // @synthesize subtitleText=_subtitleText;
 @property(copy, nonatomic) NSString *titleText; // @synthesize titleText=_titleText;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 subtitle:(id)arg2 description:(id)arg3 showFollowButton:(_Bool)arg4 subredditCategory:(id)arg5;
 
 @end

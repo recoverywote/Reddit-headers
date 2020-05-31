@@ -37,6 +37,7 @@
     CollectionDataSource *_collectionDataSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didShowTrendingToaster; // @synthesize didShowTrendingToaster=_didShowTrendingToaster;
 @property(retain, nonatomic) CollectionDataSource *collectionDataSource; // @synthesize collectionDataSource=_collectionDataSource;
 @property(nonatomic) _Bool isSorting; // @synthesize isSorting=_isSorting;
@@ -58,7 +59,6 @@
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(readonly, nonatomic) PostDetailOptions *postDetailOptions; // @synthesize postDetailOptions=_postDetailOptions;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)excludeSubredditFromTrendingToaster:(id)arg1;
 - (void)turnOffTrendingNotificationForSubreddit:(id)arg1;
 - (void)showTrendingToasterIfNeeded;
@@ -110,6 +110,7 @@
 - (void)configureWithPermalink:(id)arg1;
 - (_Bool)shouldHideFooterView;
 - (void)exposeChatPostHoldoutExperiment;
+- (_Bool)shouldUseNewCommentComposer;
 - (_Bool)shouldDisplayChatView;
 - (id)currentObjects;
 - (void)displayListingContentWithCorrelationId:(id)arg1;

@@ -18,12 +18,12 @@
     NSMutableDictionary *_completionCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *completionCache; // @synthesize completionCache=_completionCache;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *processingQueue; // @synthesize processingQueue=_processingQueue;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSMutableDictionary *recommendations; // @synthesize recommendations=_recommendations;
-- (void).cxx_destruct;
 - (void)fetchFocusVerticalsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)distributeRecommendations;
 - (void)cacheAndDistributeRecommendations;

@@ -46,6 +46,7 @@
     double _maxHlsVideoHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didLoadSortBarOnce; // @synthesize didLoadSortBarOnce=_didLoadSortBarOnce;
 @property(nonatomic) double maxHlsVideoHeight; // @synthesize maxHlsVideoHeight=_maxHlsVideoHeight;
 @property(retain, nonatomic) RefreshPillController *refreshPillController; // @synthesize refreshPillController=_refreshPillController;
@@ -63,7 +64,6 @@
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
 @property(retain, nonatomic) FeedViewControllerDelegator *feedVCDelegator; // @synthesize feedVCDelegator=_feedVCDelegator;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
-- (void).cxx_destruct;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
 - (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;

@@ -20,10 +20,10 @@
 
 + (id)containerViewWithLabels:(id)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *container; // @synthesize container=_container;
 @property(retain, nonatomic) CaptureContentButtonList *content; // @synthesize content=_content;
 @property(nonatomic) __weak CaptureScreen *screen; // @synthesize screen=_screen;
-- (void).cxx_destruct;
 - (void)captureLabelDidTap:(id)arg1;
 - (void)layoutSubviews;
 - (void)prepareForReuse;

@@ -22,6 +22,7 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool isCancelled; // @synthesize isCancelled=_isCancelled;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
@@ -31,7 +32,6 @@
 @property(nonatomic) _Bool hasFinishedFirstFetch; // @synthesize hasFinishedFirstFetch=_hasFinishedFirstFetch;
 @property(nonatomic) __weak id <ChannelHistorySourceDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSArray *objects; // @synthesize objects=_objects;
-- (void).cxx_destruct;
 - (id)sortedMessages:(id)arg1;
 - (id)mergeNewObjects:(id)arg1;
 - (void)markEarliestMessage:(id)arg1;

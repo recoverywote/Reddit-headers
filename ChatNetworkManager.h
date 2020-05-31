@@ -28,6 +28,7 @@
 
 + (_Bool)isValidUserName:(id)arg1;
 + (id)getMentionedUsernamesFromString:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *embedSemaphore; // @synthesize embedSemaphore=_embedSemaphore;
 @property(nonatomic) long long refreshAccessTokenRetryCount; // @synthesize refreshAccessTokenRetryCount=_refreshAccessTokenRetryCount;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) NSMutableDictionary *channelObservers; // @synthesize channelObservers=_channelObservers;
 @property(nonatomic) _Bool configuring; // @synthesize configuring=_configuring;
 @property(retain, nonatomic) AFURLSessionManager *sessionManager; // @synthesize sessionManager=_sessionManager;
-- (void).cxx_destruct;
 - (id)messageStoreForChannel:(id)arg1;
 - (id)channelStoreForSendbirdChannel:(id)arg1;
 - (id)channelStoreForChannel:(id)arg1;

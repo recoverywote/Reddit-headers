@@ -24,6 +24,7 @@
 
 + (id)append:(id)arg1;
 + (id)prepend:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject *associatedObject; // @synthesize associatedObject=_associatedObject;
 @property(nonatomic) _Bool buttonDisabled; // @synthesize buttonDisabled=_buttonDisabled;
 @property(copy, nonatomic) NSString *targetTab; // @synthesize targetTab=_targetTab;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) NSString *iconName; // @synthesize iconName=_iconName;
 @property(copy, nonatomic) NSAttributedString *label; // @synthesize label=_label;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToDiffableObject:(id)arg1;

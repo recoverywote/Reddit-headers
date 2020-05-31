@@ -17,12 +17,12 @@
     NSDate *_offScreenDateTime;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDate *offScreenDateTime; // @synthesize offScreenDateTime=_offScreenDateTime;
 @property(copy, nonatomic) NSDate *onScreenDateTime; // @synthesize onScreenDateTime=_onScreenDateTime;
 @property(nonatomic) long long numberOfScrolledPages; // @synthesize numberOfScrolledPages=_numberOfScrolledPages;
 @property(nonatomic) long long numberOfTotalItems; // @synthesize numberOfTotalItems=_numberOfTotalItems;
 @property(copy, nonatomic) NSSet *seenItems; // @synthesize seenItems=_seenItems;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasBeenSeen;
 @property(readonly, nonatomic) long long numberOfItemsSeen;
 

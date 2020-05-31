@@ -19,10 +19,10 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
 @property(copy) NSString *token; // @synthesize token=_token;
 @property long long status; // @synthesize status=_status;
-- (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

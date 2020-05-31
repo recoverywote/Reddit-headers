@@ -104,10 +104,10 @@
 
 + (Class)dataControllerClass;
 + (Class)layerClass;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool test_enableSuperUpdateCallLogging; // @synthesize test_enableSuperUpdateCallLogging=_test_enableSuperUpdateCallLogging;
 @property(retain, nonatomic) ASDataController *dataController; // @synthesize dataController=_dataController;
 @property(nonatomic) __weak ASTableNode *tableNode; // @synthesize tableNode=_tableNode;
-- (void).cxx_destruct;
 - (void)didMoveToSuperview;
 - (void)willMoveToSuperview:(id)arg1;
 - (void)didMoveToWindow;

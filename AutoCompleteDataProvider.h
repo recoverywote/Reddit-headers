@@ -15,8 +15,8 @@
     ResultAllItem *_resultAllItem;
 }
 
-@property(retain, nonatomic) ResultAllItem *resultAllItem; // @synthesize resultAllItem=_resultAllItem;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ResultAllItem *resultAllItem; // @synthesize resultAllItem=_resultAllItem;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;

@@ -44,6 +44,7 @@
     UILabel *_collapsedLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *collapsedLabel; // @synthesize collapsedLabel=_collapsedLabel;
 @property(retain, nonatomic) UIColor *colorScheme; // @synthesize colorScheme=_colorScheme;
 @property(retain, nonatomic) REDBackspaceTextField *inputTextField; // @synthesize inputTextField=_inputTextField;
@@ -73,7 +74,6 @@
 @property(nonatomic) double maxHeight; // @synthesize maxHeight=_maxHeight;
 @property(nonatomic) __weak id <REDTokenFieldDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <REDTokenFieldDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)textFieldDidEnterBackspace:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)textFieldDidBeginEditing:(id)arg1;

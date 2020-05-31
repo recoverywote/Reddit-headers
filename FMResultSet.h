@@ -17,10 +17,10 @@
 }
 
 + (id)resultSetWithStatement:(id)arg1 usingParentDatabase:(id)arg2;
+- (void).cxx_destruct;
 @property(retain) FMStatement *statement; // @synthesize statement=_statement;
 @property(retain) NSString *query; // @synthesize query=_query;
 @property(retain, nonatomic) FMDatabase *parentDB; // @synthesize parentDB=_parentDB;
-- (void).cxx_destruct;
 - (id)objectForKeyedSubscript:(id)arg1;
 - (id)objectAtIndexedSubscript:(int)arg1;
 - (id)columnNameForIndex:(int)arg1;

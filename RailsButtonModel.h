@@ -18,11 +18,11 @@
     NSObject *_associatedObject;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak NSObject *associatedObject; // @synthesize associatedObject=_associatedObject;
 @property(copy, nonatomic) NSString *targetTab; // @synthesize targetTab=_targetTab;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToDiffableObject:(id)arg1;

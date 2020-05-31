@@ -19,11 +19,11 @@
     Post *_post;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <CommentModerateActionSheetDelegate> commentModerateActionSheetDelegate; // @synthesize commentModerateActionSheetDelegate=_commentModerateActionSheetDelegate;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
-- (void).cxx_destruct;
 - (void)viewReports;
 - (void)modUnlockComment:(id)arg1;
 - (void)modLockComment:(id)arg1;

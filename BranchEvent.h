@@ -31,6 +31,7 @@
 + (id)customEventWithName:(id)arg1;
 + (id)standardEvent:(id)arg1 withContentItem:(id)arg2;
 + (id)standardEvent:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
 @property(copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
 @property(copy, nonatomic) NSArray *contentItems; // @synthesize contentItems=_contentItems;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) NSString *currency; // @synthesize currency=_currency;
 @property(retain, nonatomic) NSString *transactionID; // @synthesize transactionID=_transactionID;
 @property(retain, nonatomic) NSString *alias; // @synthesize alias=_alias;
-- (void).cxx_destruct;
 - (id)description;
 - (id)buildEventDictionary;
 - (id)buildRequestWithEventDictionary:(id)arg1;

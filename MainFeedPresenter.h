@@ -14,8 +14,8 @@
     _TtC6Tracer5Trace *_workaroundForApplicationLaunchTrace;
 }
 
-@property(retain, nonatomic) _TtC6Tracer5Trace *workaroundForApplicationLaunchTrace; // @synthesize workaroundForApplicationLaunchTrace=_workaroundForApplicationLaunchTrace;
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Tracer5Trace *workaroundForApplicationLaunchTrace; // @synthesize workaroundForApplicationLaunchTrace=_workaroundForApplicationLaunchTrace;
 - (id)preferredTrace;
 - (id)listingTraceName;
 - (unsigned long long)surfaceType;

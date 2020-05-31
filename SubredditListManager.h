@@ -18,12 +18,12 @@
 }
 
 + (void)clearSubredditsWithIdentifier:(id)arg1 service:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool allowLoggedOut; // @synthesize allowLoggedOut=_allowLoggedOut;
 @property(nonatomic) unsigned long long maxRecordCount; // @synthesize maxRecordCount=_maxRecordCount;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSArray *subredditIDs; // @synthesize subredditIDs=_subredditIDs;
-- (void).cxx_destruct;
 - (id)stringForFavoriteList;
 - (id)urlStringForSubredditMulti;
 - (void)clearList;

@@ -15,10 +15,10 @@
     ASTextNode *_subtextLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *subtextLabel; // @synthesize subtextLabel=_subtextLabel;
 @property(retain, nonatomic) ASTextNode *mainLabel; // @synthesize mainLabel=_mainLabel;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithErrorMessage:(id)arg1;
 

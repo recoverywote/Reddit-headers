@@ -12,9 +12,9 @@
     CDUnknownBlockType _impProviderBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType impProviderBlock; // @synthesize impProviderBlock=_impProviderBlock;
 @property(nonatomic) SEL selector; // @synthesize selector=_selector;
-- (void).cxx_destruct;
 - (CDUnknownFunctionPointerType)getOriginalImplementation;
 
 @end

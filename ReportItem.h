@@ -15,10 +15,10 @@
     NSString *_localizedName;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showCheckbox; // @synthesize showCheckbox=_showCheckbox;
 @property(copy, nonatomic) NSString *localizedName; // @synthesize localizedName=_localizedName;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)initWithIdentifier:(id)arg1 localizedName:(id)arg2 showCheckbox:(_Bool)arg3;
 
 @end

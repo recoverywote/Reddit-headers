@@ -20,6 +20,7 @@
     CALayer *_bottomBorder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *bottomBorder; // @synthesize bottomBorder=_bottomBorder;
 @property(retain, nonatomic) BaseButton *rightButton; // @synthesize rightButton=_rightButton;
 @property(retain, nonatomic) BaseButton *middleButton; // @synthesize middleButton=_middleButton;
@@ -27,7 +28,6 @@
 @property(nonatomic) double leftPadding; // @synthesize leftPadding=_leftPadding;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) __weak NSObject<HeaderBarViewDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapMiddleButton:(id)arg1;
 - (void)didTapRightButton:(id)arg1;
 - (void)didTapLeftButton:(id)arg1;

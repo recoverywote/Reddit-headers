@@ -14,9 +14,9 @@
     UIImageView *_imageView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)unhighlightCell;
 - (void)highlightCell;

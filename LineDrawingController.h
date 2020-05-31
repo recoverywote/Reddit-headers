@@ -22,6 +22,7 @@
     struct CGPoint _lastPoint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *currentLineDrawColor; // @synthesize currentLineDrawColor=_currentLineDrawColor;
 @property(retain, nonatomic) CALayer *currentLineDrawLayer; // @synthesize currentLineDrawLayer=_currentLineDrawLayer;
 @property(nonatomic) struct CGPoint lastPoint; // @synthesize lastPoint=_lastPoint;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <LineDrawingControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSArray *lineDrawingLayers; // @synthesize lineDrawingLayers=_lineDrawingLayers;
 @property(nonatomic) _Bool isDrawing; // @synthesize isDrawing=_isDrawing;
-- (void).cxx_destruct;
 - (void)colorPickerDidSelectColor:(id)arg1;
 - (void)undoLine;
 - (void)continueLineDrawingToNewPoint:(struct CGPoint)arg1;

@@ -14,9 +14,9 @@
     NSMutableArray *_selectedItems;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *selectedItems; // @synthesize selectedItems=_selectedItems;
 @property(nonatomic) unsigned long long maxSelectable; // @synthesize maxSelectable=_maxSelectable;
-- (void).cxx_destruct;
 - (void)removeSelectable:(id)arg1;
 - (void)addSelectable:(id)arg1;
 - (void)deselectAll;

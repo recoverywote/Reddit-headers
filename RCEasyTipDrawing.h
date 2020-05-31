@@ -22,6 +22,7 @@
     UIFont *_font;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIFont *font; // @synthesize font=_font;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(retain, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
@@ -32,7 +33,6 @@
 @property(nonatomic) double arrowHeight; // @synthesize arrowHeight=_arrowHeight;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) long long arrowPostion; // @synthesize arrowPostion=_arrowPostion;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

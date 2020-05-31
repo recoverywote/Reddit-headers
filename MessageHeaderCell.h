@@ -15,9 +15,9 @@
     id <MessageHeaderCellDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <MessageHeaderCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) MessageHeaderView *messageHeaderView; // @synthesize messageHeaderView=_messageHeaderView;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

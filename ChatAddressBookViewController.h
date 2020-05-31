@@ -44,6 +44,7 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool isCreatingGroupChat; // @synthesize isCreatingGroupChat=_isCreatingGroupChat;
 @property(retain, nonatomic) BaseLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
@@ -67,7 +68,6 @@
 @property(nonatomic) _Bool allowSelection; // @synthesize allowSelection=_allowSelection;
 @property(nonatomic) __weak id <ChatAddressBookViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long mode; // @synthesize mode=_mode;
-- (void).cxx_destruct;
 - (void)trackAnalyticsViewEventWithAction:(id)arg1 noun:(id)arg2;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 addedMethod:(unsigned long long)arg3;
 - (id)analyticsScreenViewName;

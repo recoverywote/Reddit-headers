@@ -21,11 +21,11 @@
     SubredditFeedAddPostController *_subredditFeedAddPostController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditFeedAddPostController *subredditFeedAddPostController; // @synthesize subredditFeedAddPostController=_subredditFeedAddPostController;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
 @property(nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
 @property(retain, nonatomic) SortBarView *sortBarView; // @synthesize sortBarView=_sortBarView;
-- (void).cxx_destruct;
 - (void)subredditFeedAddPostControllerDidTapAddPost;
 - (void)subredditFeedAddPostControllerDidRemoveView;
 - (void)displayAddPostViewIfNeeded;

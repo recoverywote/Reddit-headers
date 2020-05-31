@@ -32,10 +32,10 @@
     _Bool _reconsume;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType errorCallback; // @synthesize errorCallback=_errorCallback;
 @property(readonly, nonatomic) unsigned long long currentLocation; // @synthesize currentLocation=_location;
 @property(readonly, nonatomic) NSString *string; // @synthesize string=_string;
-- (void).cxx_destruct;
 - (void)reset;
 - (void)rewindToMarkedLocation;
 - (void)markCurrentLocation;

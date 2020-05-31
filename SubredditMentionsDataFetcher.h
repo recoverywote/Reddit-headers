@@ -14,9 +14,9 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) NSDictionary *subredditNamesWithAttributedStrings; // @synthesize subredditNamesWithAttributedStrings=_subredditNamesWithAttributedStrings;
-- (void).cxx_destruct;
 - (void)attributedStringForSubredditMention:(id)arg1 originalAttributedString:(id)arg2 shouldShowIcon:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)enhanceAttributedStringsWithSubredditMentions:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchEnhancedAttributedStrings:(CDUnknownBlockType)arg1;

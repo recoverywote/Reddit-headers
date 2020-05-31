@@ -23,8 +23,8 @@
 }
 
 + (id)calculateLayoutWithContext:(id)arg1;
-@property(nonatomic) __weak id <ASCollectionGalleryLayoutPropertiesProviding> propertiesProvider; // @synthesize propertiesProvider=_propertiesProvider;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <ASCollectionGalleryLayoutPropertiesProviding> propertiesProvider; // @synthesize propertiesProvider=_propertiesProvider;
 - (id)additionalInfoForLayoutWithElements:(id)arg1;
 - (long long)scrollableDirections;
 - (id)initWithScrollableDirections:(long long)arg1;

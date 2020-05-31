@@ -12,7 +12,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: imageView
     // Error parsing type: , name: label
     // Error parsing type: , name: buttonState
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

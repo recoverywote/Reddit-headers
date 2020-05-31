@@ -13,8 +13,8 @@
     NSMutableArray *_handlers;
 }
 
-@property(readonly) NSMutableArray *handlers; // @synthesize handlers=_handlers;
 - (void).cxx_destruct;
+@property(readonly) NSMutableArray *handlers; // @synthesize handlers=_handlers;
 - (CDUnknownBlockType)combinedHandler;
 - (void)addHandler:(CDUnknownBlockType)arg1;
 - (id)init;

@@ -24,6 +24,7 @@
     NSString *_target_queue_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool target_queue_idIsSet; // @synthesize target_queue_idIsSet=_target_queue_idIsSet;
 @property(copy, nonatomic) NSString *target_queue_id; // @synthesize target_queue_id=_target_queue_id;
 @property(nonatomic) _Bool priorityIsSet; // @synthesize priorityIsSet=_priorityIsSet;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *ticket_type; // @synthesize ticket_type=_ticket_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

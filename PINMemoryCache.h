@@ -36,6 +36,7 @@
 }
 
 + (id)sharedCache;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *costs; // @synthesize costs=_costs;
 @property(retain, nonatomic) NSMutableDictionary *dates; // @synthesize dates=_dates;
 @property(retain, nonatomic) NSMutableDictionary *dictionary; // @synthesize dictionary=_dictionary;
@@ -44,7 +45,6 @@
 @property _Bool removeAllObjectsOnEnteringBackground; // @synthesize removeAllObjectsOnEnteringBackground=_removeAllObjectsOnEnteringBackground;
 @property _Bool removeAllObjectsOnMemoryWarning; // @synthesize removeAllObjectsOnMemoryWarning=_removeAllObjectsOnMemoryWarning;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)unlock;
 - (void)lock;
 @property(nonatomic, getter=isTTLCache) _Bool ttlCache; // @synthesize ttlCache=_ttlCache;

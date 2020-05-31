@@ -11,11 +11,10 @@
 #import "RailsSearchContextCandidate-Protocol.h"
 #import "Styleable-Protocol.h"
 #import "Subscribable-Protocol.h"
-#import "_TtP6Reddit18RoadblockableModel_-Protocol.h"
 
 @class NSArray, NSString, NSURL, UIColor, UIImage;
 
-@interface User (Author) <Pillable, RailsSearchContextCandidate, Styleable, IGListDiffable, Subscribable, _TtP6Reddit18RoadblockableModel_>
+@interface User (Author) <Pillable, RailsSearchContextCandidate, Styleable, IGListDiffable, Subscribable>
 + (id)iconPlaceholderImageForUserPk:(id)arg1;
 - (_Bool)isAuthorOfComment:(id)arg1;
 - (_Bool)isAuthorOfPost:(id)arg1;
@@ -39,7 +38,6 @@
 - (id)diffIdentifier;
 @property(readonly, nonatomic) long long notificationLevel;
 @property(readonly, copy, nonatomic) NSString *editString;
-@property(readonly, nonatomic) _Bool allowEdit;
 @property(readonly, copy, nonatomic) NSString *unsubscribeErrorString;
 @property(readonly, copy, nonatomic) NSString *subscribeErrorString;
 @property(readonly, copy, nonatomic) NSString *unsubscribeSuccessString;
@@ -49,12 +47,13 @@
 @property(readonly, copy, nonatomic) NSString *subscribedString;
 @property(readonly, copy, nonatomic) NSString *unsubscribeString;
 @property(readonly, copy, nonatomic) NSString *subscribeString;
-@property(readonly, nonatomic) _Bool allowSubscribe;
 @property(readonly, nonatomic) long long subscribersCount;
 @property(readonly, nonatomic) _Bool isPromoter;
 @property(readonly, copy, nonatomic) NSString *publicDescriptionText;
 @property(readonly, copy, nonatomic) NSString *descriptionText;
-- (id)supplementalInfoStringWithStyle:(_Bool)arg1;
+- (_Bool)isEditAllowedForAccount:(id)arg1;
+- (_Bool)isSubscribeAllowedForAccount:(id)arg1;
+- (id)supplementalInfoStringWithStyle:(_Bool)arg1 currentAccount:(id)arg2;
 @property(readonly, copy, nonatomic) NSString *nonPrefixedTitle;
 @property(readonly, copy, nonatomic) NSString *displayTitle;
 @property(readonly, copy, nonatomic) NSString *headerTitle;

@@ -17,11 +17,11 @@
 }
 
 + (id)getInstance;
+- (void).cxx_destruct;
 @property(nonatomic) long long numOfViewsDiscovered; // @synthesize numOfViewsDiscovered=_numOfViewsDiscovered;
 @property(retain, nonatomic) NSTimer *contentDiscoveryTimer; // @synthesize contentDiscoveryTimer=_contentDiscoveryTimer;
 @property(retain, nonatomic) NSString *lastViewControllerName; // @synthesize lastViewControllerName=_lastViewControllerName;
 @property(retain, nonatomic) BranchContentDiscoveryManifest *contentManifest; // @synthesize contentManifest=_contentManifest;
-- (void).cxx_destruct;
 - (id)getContentText:(id)arg1;
 - (void)addFormattedContentData:(id)arg1 withText:(id)arg2 clearText:(_Bool)arg3;
 - (id)getViewText:(id)arg1 forController:(id)arg2;

@@ -23,6 +23,7 @@
 }
 
 + (unsigned long long)elementTypeForPill:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool enableViewedItemDeduplication; // @synthesize enableViewedItemDeduplication=_enableViewedItemDeduplication;
 @property(retain, nonatomic) NSMutableSet *viewedItems; // @synthesize viewedItems=_viewedItems;
 @property(nonatomic) unsigned long long searchTabType; // @synthesize searchTabType=_searchTabType;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) NSString *originPageType; // @synthesize originPageType=_originPageType;
 @property(copy, nonatomic) NSString *queryId; // @synthesize queryId=_queryId;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)updateQueryId;
 - (_Bool)hasItemAlreadyBeenViewed:(id)arg1;

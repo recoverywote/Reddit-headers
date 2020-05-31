@@ -49,6 +49,7 @@
     double _rulesViewMaxFrameHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double rulesViewMaxFrameHeight; // @synthesize rulesViewMaxFrameHeight=_rulesViewMaxFrameHeight;
 @property(nonatomic) _Bool isRulesViewCollapsed; // @synthesize isRulesViewCollapsed=_isRulesViewCollapsed;
 @property(nonatomic) double postFrameMaxY; // @synthesize postFrameMaxY=_postFrameMaxY;
@@ -77,7 +78,6 @@
 @property(copy, nonatomic) CDUnknownBlockType onDismiss; // @synthesize onDismiss=_onDismiss;
 @property(nonatomic) __weak PostDetailViewController *postDetailViewController; // @synthesize postDetailViewController=_postDetailViewController;
 @property(retain, nonatomic) ChatPostPresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (unsigned long long)currentPresentationStyle;
 - (void)cellTappedWithBucket:(id)arg1;

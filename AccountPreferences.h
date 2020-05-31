@@ -19,13 +19,14 @@
 
 + (id)keyPathsForValuesAffectingValueForKey:(id)arg1;
 + (_Bool)supportsSecureCoding;
-@property(copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 - (id)mutableCopyWithZone:(struct _NSZone *)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly, nonatomic) double surveyLastSeenTime;
 @property(readonly, nonatomic) _Bool allowNSFW;
 @property(readonly, copy, nonatomic) NSString *geoFilter;
+@property(readonly, nonatomic) _Bool allowLocationBasedSuggestions;
 @property(readonly, nonatomic) _Bool allowThirdPartyDataPersonalizedAds;
 @property(readonly, nonatomic) _Bool allowThirdPartySiteDataPersonalizedContent;
 @property(readonly, nonatomic) _Bool allowThirdPartySiteDataPersonalizedAds;

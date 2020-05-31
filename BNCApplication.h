@@ -29,6 +29,7 @@
 + (id)createCurrentApplication;
 + (id)currentApplication;
 + (void)loadCurrentApplicationWithCompletion:(CDUnknownBlockType)arg1;
+- (void).cxx_destruct;
 @property(readonly) NSString *teamID; // @synthesize teamID=_teamID;
 @property(readonly) NSDate *firstInstallDate; // @synthesize firstInstallDate=_firstInstallDate;
 @property(readonly) NSDate *currentInstallDate; // @synthesize currentInstallDate=_currentInstallDate;
@@ -39,7 +40,6 @@
 @property(readonly) NSString *shortDisplayName; // @synthesize shortDisplayName=_shortDisplayName;
 @property(readonly) NSString *displayName; // @synthesize displayName=_displayName;
 @property(readonly) NSString *bundleID; // @synthesize bundleID=_bundleID;
-- (void).cxx_destruct;
 @property(readonly) NSDictionary *deviceKeyIdentityValueDictionary;
 - (void)setAppOriginalInstallDate:(id)arg1 firstInstallDate:(id)arg2 lastUpdateDate:(id)arg3;
 

@@ -25,6 +25,7 @@
 + (id)targetingInfoFilePathForAccount:(id)arg1;
 + (id)exposureEventsFilePathForAccount:(id)arg1;
 + (id)experimentsFilePathForAccount:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *exposureQueue; // @synthesize exposureQueue=_exposureQueue;
 @property(retain, nonatomic) NSMutableArray *exposureEvents; // @synthesize exposureEvents=_exposureEvents;
 @property(nonatomic) _Bool isSendingEvents; // @synthesize isSendingEvents=_isSendingEvents;
@@ -34,7 +35,6 @@
 @property(copy, nonatomic) NSDictionary *employeeBetaTesterOverrides; // @synthesize employeeBetaTesterOverrides=_employeeBetaTesterOverrides;
 @property(copy, nonatomic) NSDictionary *targetingInfo; // @synthesize targetingInfo=_targetingInfo;
 @property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (id)targetingInfoFilePath;
 - (void)storeTargetingInfo:(id)arg1;
 - (id)loadTargetingInfo;

@@ -54,6 +54,7 @@
     NSFileManager *_fileManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(retain, nonatomic) EditMemeViewController *editMemeViewController; // @synthesize editMemeViewController=_editMemeViewController;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
@@ -88,7 +89,6 @@
 @property(retain, nonatomic) NSURL *videoURL; // @synthesize videoURL=_videoURL;
 @property(retain, nonatomic) UIImage *currentImage; // @synthesize currentImage=_currentImage;
 @property(retain, nonatomic) BaseTextView *titleView; // @synthesize titleView=_titleView;
-- (void).cxx_destruct;
 - (void)editMemeViewController:(id)arg1 didCreateMemeImage:(id)arg2;
 - (_Bool)shouldForceAutoplay;
 - (_Bool)shouldDisableAutoplay;

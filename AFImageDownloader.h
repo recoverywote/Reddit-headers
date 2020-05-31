@@ -25,6 +25,7 @@
 + (id)defaultInstance;
 + (id)defaultURLSessionConfiguration;
 + (id)defaultURLCache;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *mergedTasks; // @synthesize mergedTasks=_mergedTasks;
 @property(retain, nonatomic) NSMutableArray *queuedMergedTasks; // @synthesize queuedMergedTasks=_queuedMergedTasks;
 @property(nonatomic) long long activeRequestCount; // @synthesize activeRequestCount=_activeRequestCount;
@@ -34,7 +35,6 @@
 @property(nonatomic) long long downloadPrioritization; // @synthesize downloadPrioritization=_downloadPrioritization;
 @property(retain, nonatomic) AFHTTPSessionManager *sessionManager; // @synthesize sessionManager=_sessionManager;
 @property(retain, nonatomic) id <AFImageRequestCache> imageCache; // @synthesize imageCache=_imageCache;
-- (void).cxx_destruct;
 - (id)safelyGetMergedTask:(id)arg1;
 - (_Bool)isActiveRequestCountBelowMaximumLimit;
 - (id)dequeueMergedTask;

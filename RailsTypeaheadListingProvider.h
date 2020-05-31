@@ -18,12 +18,12 @@
     ZeroStateSearchNetworkSourceBuilder *_zeroStateSearchNetworkSourceBuilder;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isAutoComplete; // @synthesize isAutoComplete=_isAutoComplete;
 @property(retain, nonatomic) ZeroStateSearchNetworkSourceBuilder *zeroStateSearchNetworkSourceBuilder; // @synthesize zeroStateSearchNetworkSourceBuilder=_zeroStateSearchNetworkSourceBuilder;
 @property(retain, nonatomic) AutoCompleteNetworkSourceBuilder *autoCompleteNetworkSourceBuilder; // @synthesize autoCompleteNetworkSourceBuilder=_autoCompleteNetworkSourceBuilder;
 @property(retain, nonatomic) RailsContext *railsContext; // @synthesize railsContext=_railsContext;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)createListingNetworkSource;
 @property(readonly, nonatomic) RedditService *service;
 - (id)initWithRailsContext:(id)arg1 accountContext:(id)arg2;

@@ -22,12 +22,12 @@
 
 + (double)heightForDescriptionString:(id)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) TextFieldAccessoryButton *accessoryButton; // @synthesize accessoryButton=_accessoryButton;
 @property(retain, nonatomic) BaseLabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseTextField *textField; // @synthesize textField=_textField;
 @property(retain, nonatomic) CaptureContentTextEntry *content; // @synthesize content=_content;
 @property(nonatomic) __weak CaptureScreen *screen; // @synthesize screen=_screen;
-- (void).cxx_destruct;
 - (void)textFieldDidEndEditing:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)textFieldDidChange:(id)arg1;

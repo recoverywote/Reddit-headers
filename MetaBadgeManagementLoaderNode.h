@@ -13,8 +13,8 @@
     MetaBadgePreviewLoaderNode *_innerLoaderNode;
 }
 
-@property(retain, nonatomic) MetaBadgePreviewLoaderNode *innerLoaderNode; // @synthesize innerLoaderNode=_innerLoaderNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) MetaBadgePreviewLoaderNode *innerLoaderNode; // @synthesize innerLoaderNode=_innerLoaderNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithContentColor:(id)arg1;
 

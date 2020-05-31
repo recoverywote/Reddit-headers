@@ -20,11 +20,11 @@
 
 + (struct CGRect)frameForImage:(id)arg1 forFrame:(struct CGRect)arg2 withContentMode:(long long)arg3;
 + (struct CGRect)frameForTransitionalVideoMediaContentView:(id)arg1 withPlayerLayer:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(nonatomic) long long operation; // @synthesize operation=_operation;
 @property(copy, nonatomic) CDUnknownBlockType endingMedia; // @synthesize endingMedia=_endingMedia;
 @property(copy, nonatomic) CDUnknownBlockType startingMedia; // @synthesize startingMedia=_startingMedia;
-- (void).cxx_destruct;
 - (_Bool)performReparentVideoAnimationForTransitionContext:(id)arg1 withStartingVideoMedia:(id)arg2 withEndingVideoMedia:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
 - (_Bool)performVideoAnimationForTransitionContext:(id)arg1 withStartingVideoMedia:(id)arg2 withEndingVideoMedia:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
 - (_Bool)performImageAnimationForTransitionContext:(id)arg1 withStartingImageMedia:(id)arg2 withEndingImageMedia:(id)arg3 completion:(CDUnknownBlockType)arg4;

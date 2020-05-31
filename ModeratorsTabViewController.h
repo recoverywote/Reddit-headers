@@ -20,12 +20,12 @@
     Subreddit *_subreddit;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) ModeratorsViewController *editableModeratorsVC; // @synthesize editableModeratorsVC=_editableModeratorsVC;
 @property(retain, nonatomic) ModeratorsViewController *allModeratorsVC; // @synthesize allModeratorsVC=_allModeratorsVC;
-- (void).cxx_destruct;
 - (void)invitationAccepted;
 - (void)floatingHeaderShouldMove:(id)arg1;
 - (id)pageSegmentItemsForControllers:(id)arg1;

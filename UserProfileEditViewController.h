@@ -35,6 +35,7 @@
     NSString *_uploadedImageUrlString;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *uploadedImageUrlString; // @synthesize uploadedImageUrlString=_uploadedImageUrlString;
 @property(copy, nonatomic) NSString *currentImageUrlString; // @synthesize currentImageUrlString=_currentImageUrlString;
 @property(copy, nonatomic) NSString *currentActionIdentifier; // @synthesize currentActionIdentifier=_currentActionIdentifier;
@@ -51,7 +52,6 @@
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <UserProfileEditViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)keyboardWillHide:(id)arg1;
 - (void)keyboardWillShow:(id)arg1;
 - (void)showProfileUpdateFailedError;

@@ -15,10 +15,10 @@
     unsigned long long _maxNumberOfRecentChatPosts;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long maxNumberOfRecentChatPosts; // @synthesize maxNumberOfRecentChatPosts=_maxNumberOfRecentChatPosts;
 @property(retain, nonatomic) NSMutableOrderedSet *recentObjects; // @synthesize recentObjects=_recentObjects;
 @property(retain, nonatomic) NSMutableOrderedSet *allObjects; // @synthesize allObjects=_allObjects;
-- (void).cxx_destruct;
 - (id)recentChatPostsFetchUrlString;
 - (void)markChatPostDismissed:(id)arg1;
 - (void)addChatPost:(id)arg1;

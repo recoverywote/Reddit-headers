@@ -17,9 +17,9 @@
     TheatreFeedPresenter *_theatrePresenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak TheatreFeedPresenter *theatrePresenter; // @synthesize theatrePresenter=_theatrePresenter;
 @property(nonatomic) __weak TheatreViewController *theatreViewController; // @synthesize theatreViewController=_theatreViewController;
-- (void).cxx_destruct;
 - (void)handleScrollStateChangeForScrollView:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewDidEndScrollingAnimation:(id)arg1;

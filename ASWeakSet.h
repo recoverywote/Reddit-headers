@@ -15,8 +15,8 @@
     NSHashTable *_hashTable;
 }
 
-@property(readonly, nonatomic) NSHashTable *hashTable; // @synthesize hashTable=_hashTable;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSHashTable *hashTable; // @synthesize hashTable=_hashTable;
 - (id)description;
 - (unsigned long long)countByEnumeratingWithState:(CDStruct_70511ce9 *)arg1 objects:(id *)arg2 count:(unsigned long long)arg3;
 @property(readonly, nonatomic) unsigned long long count;

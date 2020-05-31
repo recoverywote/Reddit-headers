@@ -15,10 +15,10 @@
     NSNumber *_subredditCoins;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *subredditCoins; // @synthesize subredditCoins=_subredditCoins;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) long long sectionType; // @synthesize sectionType=_sectionType;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *coinBalanceText;
 @property(readonly, nonatomic) NSString *coinBalanceTitleText;
 @property(readonly, nonatomic) NSString *titleText;

@@ -19,7 +19,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: betaCheckbox
     // Error parsing type: , name: agreeButton
     // Error parsing type: , name: existingVaultButton
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

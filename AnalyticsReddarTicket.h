@@ -32,6 +32,7 @@
     NSString *_copyright_owner;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool copyright_ownerIsSet; // @synthesize copyright_ownerIsSet=_copyright_ownerIsSet;
 @property(copy, nonatomic) NSString *copyright_owner; // @synthesize copyright_owner=_copyright_owner;
 @property(nonatomic) _Bool requestor_nameIsSet; // @synthesize requestor_nameIsSet=_requestor_nameIsSet;
@@ -48,7 +49,6 @@
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

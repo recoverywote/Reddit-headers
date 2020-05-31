@@ -26,6 +26,7 @@
     id <AnalyticsViewProtocol> _analyticsViewProtocol;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <AnalyticsViewProtocol> analyticsViewProtocol; // @synthesize analyticsViewProtocol=_analyticsViewProtocol;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
@@ -36,7 +37,6 @@
 @property(nonatomic) __weak id <ListingAnalyticsProtocol> listingAnalytics; // @synthesize listingAnalytics=_listingAnalytics;
 @property(nonatomic) __weak ListingPresenter *listingPresenter; // @synthesize listingPresenter=_listingPresenter;
 @property(nonatomic) __weak id <CarouselDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)subscribeToUser:(id)arg1;
 - (void)subscribeToSubreddit:(id)arg1;
 - (void)toggleSubscriptionToSubscribable:(id)arg1;

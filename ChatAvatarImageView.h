@@ -8,25 +8,27 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class Contact, NSString, RedditService;
+@class Contact, NSString;
+@protocol ViewContext;
 
 @interface ChatAvatarImageView : BaseImageView <ObjectObserverProtocol>
 {
     NSString *_url;
     Contact *_contact;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
-- (void)configureWithURL:(id)arg1;
-- (void)configureWithUserID:(id)arg1;
+- (void)configureWithViewContext:(id)arg1 url:(id)arg2;
+- (void)configureWithViewContext:(id)arg1 userID:(id)arg2;
 - (void)configureWithNSFW;
 - (_Bool)shouldMarkNFSW;
-- (void)configureWithUser:(id)arg1;
-- (void)configureWithContact:(id)arg1;
+- (void)configureWithViewContext:(id)arg1 user:(id)arg2;
+- (void)configureWithViewContext:(id)arg1 contact:(id)arg2;
 - (void)prepareForReuse;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

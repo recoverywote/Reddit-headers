@@ -20,8 +20,8 @@
 
 + (id)keypathWithKeys:(id)arg1;
 + (id)keypathWithString:(id)arg1;
-@property(readonly, nonatomic) NSString *absoluteKeypath; // @synthesize absoluteKeypath=_absoluteKeypath;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *absoluteKeypath; // @synthesize absoluteKeypath=_absoluteKeypath;
 @property(readonly, nonatomic) NSDictionary *searchResults;
 - (void)addSearchResultForCurrentPath:(id)arg1;
 @property(readonly, nonatomic) _Bool endOfKeypath;

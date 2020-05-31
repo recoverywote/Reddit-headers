@@ -17,12 +17,12 @@
     CDUnknownBlockType _action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(nonatomic) unsigned long long options; // @synthesize options=_options;
 @property(copy, nonatomic) NSArray *keyPaths; // @synthesize keyPaths=_keyPaths;
 @property(retain, nonatomic) id object; // @synthesize object=_object;
 @property(nonatomic) __weak id observer; // @synthesize observer=_observer;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (id)debugDescription;

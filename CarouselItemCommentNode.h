@@ -16,11 +16,11 @@
     ASTextNode *_scoreNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *scoreNode; // @synthesize scoreNode=_scoreNode;
 @property(retain, nonatomic) ASTextNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
-- (void).cxx_destruct;
 - (id)scoreAttributedText;
 - (id)headerAttributedText;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
@@ -28,8 +28,7 @@
 - (void)configureContentNode;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initWithCarouselItem:(id)arg1 withComment:(id)arg2;
-- (id)initWithCarouselItem:(id)arg1;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2 Ñomment:(id)arg3;
 
 @end
 

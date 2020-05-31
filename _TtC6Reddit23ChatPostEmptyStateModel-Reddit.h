@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit23ChatPostEmptyStateModel.h"
 
-#import "IGListDiffable-Protocol.h"
-
-@interface _TtC6Reddit23ChatPostEmptyStateModel (Reddit) <IGListDiffable>
+@interface _TtC6Reddit23ChatPostEmptyStateModel (Reddit)
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 @end

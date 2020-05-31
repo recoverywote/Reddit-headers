@@ -7,6 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASImageNode, ASNetworkImageNode, ASTextNode, Post, TrendingSearch;
+@protocol ViewContext;
 
 @interface DetailedTrendingSearchNode : BaseFeedDisplayNode
 {
@@ -18,8 +19,11 @@
     ASNetworkImageNode *_subredditButtonNode;
     ASTextNode *_subredditDescriptionNode;
     TrendingSearch *_trendingSearch;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) TrendingSearch *trendingSearch; // @synthesize trendingSearch=_trendingSearch;
 @property(retain, nonatomic) ASTextNode *subredditDescriptionNode; // @synthesize subredditDescriptionNode=_subredditDescriptionNode;
 @property(retain, nonatomic) ASNetworkImageNode *subredditButtonNode; // @synthesize subredditButtonNode=_subredditButtonNode;
@@ -28,7 +32,6 @@
 @property(retain, nonatomic) ASImageNode *iconImageNode; // @synthesize iconImageNode=_iconImageNode;
 @property(retain, nonatomic) ASTextNode *queryTextNode; // @synthesize queryTextNode=_queryTextNode;
 @property(retain, nonatomic) ASTextNode *promotedLabelNode; // @synthesize promotedLabelNode=_promotedLabelNode;
-- (void).cxx_destruct;
 - (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
@@ -40,7 +43,7 @@
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureThumbnailNode;
 - (void)configureNodes;
-- (id)initWithTrendingSearch:(id)arg1 visibilityTracker:(id)arg2 visibilityOptions:(id)arg3;
+- (id)initWithViewContext:(id)arg1 trendingSearch:(id)arg2 visibilityTracker:(id)arg3 visibilityOptions:(id)arg4;
 @property(readonly, nonatomic) struct CGSize thumbnailSize;
 @property(readonly, nonatomic) Post *trendingPost;
 

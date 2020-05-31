@@ -14,9 +14,9 @@
     NSMutableArray *_coloredDots;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *coloredDots; // @synthesize coloredDots=_coloredDots;
 @property(nonatomic) unsigned long long numberOfValues; // @synthesize numberOfValues=_numberOfValues;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (struct CGRect)thumbRectForBounds:(struct CGRect)arg1 trackRect:(struct CGRect)arg2 value:(float)arg3;
 - (struct CGRect)trackRectForBounds:(struct CGRect)arg1;

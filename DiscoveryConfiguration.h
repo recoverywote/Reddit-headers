@@ -21,12 +21,12 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *layouts; // @synthesize layouts=_layouts;
 @property(copy, nonatomic) NSDictionary *surfaces; // @synthesize surfaces=_surfaces;
 @property(copy, nonatomic) NSArray *units; // @synthesize units=_units;
 @property(retain, nonatomic) NSMutableDictionary *mutableExperimentParameters; // @synthesize mutableExperimentParameters=_mutableExperimentParameters;
 @property(nonatomic) unsigned long long version; // @synthesize version=_version;
-- (void).cxx_destruct;
 - (id)description;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;

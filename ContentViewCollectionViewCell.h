@@ -14,9 +14,9 @@
     Class _contentClass;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Class contentClass; // @synthesize contentClass=_contentClass;
 @property(retain, nonatomic) UIView *mainContentView; // @synthesize mainContentView=_mainContentView;
-- (void).cxx_destruct;
 - (void)configureWithMainContentViewClass:(Class)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

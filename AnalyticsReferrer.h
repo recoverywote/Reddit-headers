@@ -22,13 +22,13 @@
     NSString *_element;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool elementIsSet; // @synthesize elementIsSet=_elementIsSet;
 @property(copy, nonatomic) NSString *element; // @synthesize element=_element;
 @property(nonatomic) _Bool urlIsSet; // @synthesize urlIsSet=_urlIsSet;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
 @property(nonatomic) _Bool domainIsSet; // @synthesize domainIsSet=_domainIsSet;
 @property(copy, nonatomic) NSString *domain; // @synthesize domain=_domain;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

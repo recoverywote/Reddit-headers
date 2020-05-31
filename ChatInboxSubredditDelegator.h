@@ -11,7 +11,7 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
 @class NSArray, NSMutableArray, NSMutableDictionary, NSMutableOrderedSet, NSString;
-@protocol ChatInboxSubredditDelegatorDelegate;
+@protocol AccountContext, ChatInboxSubredditDelegatorDelegate;
 
 @interface ChatInboxSubredditDelegator : NSObject <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
@@ -22,8 +22,11 @@
     NSArray *_currentRequestObjects;
     NSArray *_currentChannelObjects;
     NSArray *_currentPopularObjects;
+    id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSArray *currentPopularObjects; // @synthesize currentPopularObjects=_currentPopularObjects;
 @property(copy, nonatomic) NSArray *currentChannelObjects; // @synthesize currentChannelObjects=_currentChannelObjects;
 @property(copy, nonatomic) NSArray *currentRequestObjects; // @synthesize currentRequestObjects=_currentRequestObjects;
@@ -31,7 +34,6 @@
 @property(retain, nonatomic) NSMutableDictionary *currentSubredditSections; // @synthesize currentSubredditSections=_currentSubredditSections;
 @property(retain, nonatomic) NSMutableArray *currentSubredditChannelObjects; // @synthesize currentSubredditChannelObjects=_currentSubredditChannelObjects;
 @property(nonatomic) __weak id <ChatInboxSubredditDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)shouldBlurHeaderCommunityIcon:(id)arg1;
 - (_Bool)shouldShowEmptyViewForSection:(long long)arg1;
 - (id)subredditChannelForIndexPath:(id)arg1;
@@ -56,7 +58,7 @@
 - (long long)adjustedHeaderIndexForSection:(long long)arg1;
 - (_Bool)isPopularSection:(long long)arg1 collectionView:(id)arg2;
 - (void)updateContentViewsWithChannels:(id)arg1 invited:(id)arg2 popular:(id)arg3;
-- (id)init;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

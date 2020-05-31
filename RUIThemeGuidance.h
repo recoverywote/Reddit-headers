@@ -17,17 +17,18 @@
 }
 
 + (id)sharedGuidance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observerPool; // @synthesize observerPool=_observerPool;
 @property(retain, nonatomic) UIWindow *window; // @synthesize window=_window;
 @property(readonly, nonatomic) double lastUpdatedTimestamp; // @synthesize lastUpdatedTimestamp=_lastUpdatedTimestamp;
 @property(retain, nonatomic) RUITheme *currentTheme; // @synthesize currentTheme=_currentTheme;
-- (void).cxx_destruct;
 - (long long)scrollViewIndicatorStyleForThemeType:(unsigned long long)arg1;
 - (void)performAppearanceAPIUpdatesForTheme:(id)arg1;
-- (void)notifyThemeObservers;
+- (void)notifyThemeObserversWithOnVisibleObserversDidUpdate:(CDUnknownBlockType)arg1;
 - (id)contrastSafeColorFromColor:(id)arg1;
 - (void)removeThemeObserver:(id)arg1;
 - (void)addThemeObserver:(id)arg1;
+- (void)updateCurrentTheme:(id)arg1 onVisibleObserversDidUpdate:(CDUnknownBlockType)arg2;
 - (id)init;
 
 @end

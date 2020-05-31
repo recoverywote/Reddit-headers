@@ -18,13 +18,13 @@
     long long _subscriberCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long subscriberCount; // @synthesize subscriberCount=_subscriberCount;
 @property(retain, nonatomic) UIColor *primaryColor; // @synthesize primaryColor=_primaryColor;
 @property(nonatomic) long long type; // @synthesize type=_type;
 @property(retain, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool isSubscribed; // @synthesize isSubscribed=_isSubscribed;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

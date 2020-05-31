@@ -22,10 +22,10 @@
 + (void)sortAndCoalesceItemChanges:(id)arg1 ignoringChangesInSections:(id)arg2;
 + (void)ensureItemChanges:(id)arg1 ofSameType:(long long)arg2;
 + (id)sectionToIndexSetMapFromChanges:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long changeType; // @synthesize changeType=_changeType;
 @property(readonly, nonatomic) NSArray *indexPaths; // @synthesize indexPaths=_indexPaths;
 @property(readonly, nonatomic) unsigned long long animationOptions; // @synthesize animationOptions=_animationOptions;
-- (void).cxx_destruct;
 - (id)propertiesForDebugDescription;
 - (id)propertiesForDescription;
 - (id)debugDescription;

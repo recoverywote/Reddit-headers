@@ -17,10 +17,10 @@
 
 + (id)resultWithError:(id)arg1 correlationId:(id)arg2;
 + (id)resultWithObjects:(id)arg1 correlationId:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSUUID *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) NSArray *objects; // @synthesize objects=_objects;
-- (void).cxx_destruct;
 - (id)initWithObjects:(id)arg1 error:(id)arg2 correlationId:(id)arg3;
 
 @end

@@ -13,8 +13,8 @@
     NSMutableString *_characters;
 }
 
-@property(copy, nonatomic) NSString *characters; // @synthesize characters=_characters;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *characters; // @synthesize characters=_characters;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

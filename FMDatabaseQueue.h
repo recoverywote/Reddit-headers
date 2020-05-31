@@ -22,10 +22,10 @@
 + (id)databaseQueueWithPath:(id)arg1 flags:(int)arg2;
 + (id)databaseQueueWithURL:(id)arg1;
 + (id)databaseQueueWithPath:(id)arg1;
+- (void).cxx_destruct;
 @property(copy) NSString *vfsName; // @synthesize vfsName=_vfsName;
 @property(readonly) int openFlags; // @synthesize openFlags=_openFlags;
 @property(retain) NSString *path; // @synthesize path=_path;
-- (void).cxx_destruct;
 - (_Bool)checkpoint:(int)arg1 name:(id)arg2 logFrameCount:(int *)arg3 checkpointCount:(int *)arg4 error:(id *)arg5;
 - (_Bool)checkpoint:(int)arg1 name:(id)arg2 error:(id *)arg3;
 - (_Bool)checkpoint:(int)arg1 error:(id *)arg2;

@@ -16,9 +16,9 @@
     NSObject<NSCopying> *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSObject<NSCopying> *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) NSObject *object; // @synthesize object=_object;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 - (id)initWithDiffable:(id)arg1;

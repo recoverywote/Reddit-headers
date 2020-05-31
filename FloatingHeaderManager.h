@@ -23,6 +23,7 @@
     struct UIEdgeInsets _originalScrollViewInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double suggestedTransformYBeforeCalculatingResistance; // @synthesize suggestedTransformYBeforeCalculatingResistance=_suggestedTransformYBeforeCalculatingResistance;
 @property(nonatomic) double initialResistanceDistance; // @synthesize initialResistanceDistance=_initialResistanceDistance;
 @property(nonatomic) struct UIEdgeInsets originalScrollViewInsets; // @synthesize originalScrollViewInsets=_originalScrollViewInsets;
@@ -33,7 +34,6 @@
 @property(nonatomic) double lastNewOffsetY; // @synthesize lastNewOffsetY=_lastNewOffsetY;
 @property(nonatomic) double suggestedTransformY; // @synthesize suggestedTransformY=_suggestedTransformY;
 @property(nonatomic) __weak id <FloatingHeaderCallbackProtocol> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)adjustFloatingHeaderPositionForScrollView:(id)arg1;
 - (void)resetFloatingHeaderPositionAndResistance;
 - (void)resetFloatingHeaderPosition;

@@ -17,12 +17,12 @@
     NSString *_analyticsSource;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) long long dismissMethod; // @synthesize dismissMethod=_dismissMethod;
 @property(retain, nonatomic) CaptureScreen *currentScreen; // @synthesize currentScreen=_currentScreen;
 @property(copy, nonatomic) NSArray *screens; // @synthesize screens=_screens;
-- (void).cxx_destruct;
 - (void)screenFailedValidation:(id)arg1;
 - (void)screenDidDisappear:(id)arg1;
 - (void)screenDidAppear:(id)arg1;

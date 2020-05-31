@@ -16,11 +16,11 @@
     unsigned long long _position;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(readonly, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) NSArray *badgeViewModels; // @synthesize badgeViewModels=_badgeViewModels;
-- (void).cxx_destruct;
 - (id)initWithBadgeViewModels:(id)arg1 title:(id)arg2 descriptionText:(id)arg3 position:(unsigned long long)arg4;
 
 @end

@@ -18,12 +18,12 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long order; // @synthesize order=_order;
 @property(nonatomic) long long length; // @synthesize length=_length;
 @property(retain, nonatomic) NSString *creditTransactionId; // @synthesize creditTransactionId=_creditTransactionId;
 @property(retain, nonatomic) NSString *bucket; // @synthesize bucket=_bucket;
 @property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)processResponse:(id)arg1 error:(id)arg2;

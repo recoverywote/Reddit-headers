@@ -24,13 +24,13 @@
     ContactActionSheetDelegate *_contactActionSheetDelegate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ContactActionSheetDelegate *contactActionSheetDelegate; // @synthesize contactActionSheetDelegate=_contactActionSheetDelegate;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(readonly, nonatomic) SubredditChannel *channel; // @synthesize channel=_channel;
 @property(readonly, nonatomic) ChatMembersNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)trackAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 reportedContact:(id)arg3 blockedContact:(id)arg4;
 - (void)showContactActionSheetWithContact:(id)arg1;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;

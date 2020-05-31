@@ -19,6 +19,7 @@
     CDStruct_1b6d18a9 _elapsed;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool soundDetected; // @synthesize soundDetected=_soundDetected;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(retain, nonatomic) NSDate *storeDate; // @synthesize storeDate=_storeDate;
@@ -26,7 +27,6 @@
 @property(nonatomic) _Bool muted; // @synthesize muted=_muted;
 @property(nonatomic) CDStruct_1b6d18a9 elapsed; // @synthesize elapsed=_elapsed;
 @property(nonatomic) CDStruct_1b6d18a9 duration; // @synthesize duration=_duration;
-- (void).cxx_destruct;
 
 @end
 

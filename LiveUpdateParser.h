@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SocketParser-Protocol.h"
+#import <RedditCore/SocketParser-Protocol.h>
 
 @class LiveEvent, NSString;
 @protocol LiveUpdateDelegate;
@@ -18,9 +18,9 @@
 }
 
 + (id)liveEventSessionForEvent:(id)arg1 withDelegate:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) LiveEvent *liveEvent; // @synthesize liveEvent=_liveEvent;
 @property(nonatomic) __weak id <LiveUpdateDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)parseData:(id)arg1;
 - (id)initWithEvent:(id)arg1;
 

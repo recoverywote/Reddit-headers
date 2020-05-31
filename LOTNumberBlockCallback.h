@@ -16,8 +16,8 @@
 }
 
 + (id)withBlock:(CDUnknownBlockType)arg1;
-@property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 - (double)floatValueForFrame:(double)arg1 startKeyframe:(double)arg2 endKeyframe:(double)arg3 interpolatedProgress:(double)arg4 startValue:(double)arg5 endValue:(double)arg6 currentValue:(double)arg7;
 
 // Remaining properties

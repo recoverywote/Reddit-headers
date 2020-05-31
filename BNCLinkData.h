@@ -26,6 +26,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long duration; // @synthesize duration=_duration;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) NSString *ignoreUAString; // @synthesize ignoreUAString=_ignoreUAString;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) NSString *alias; // @synthesize alias=_alias;
 @property(retain, nonatomic) NSArray *tags; // @synthesize tags=_tags;
 @property(retain, nonatomic) NSMutableDictionary *data; // @synthesize data=_data;
-- (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (unsigned long long)hash;

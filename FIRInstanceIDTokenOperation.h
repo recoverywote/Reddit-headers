@@ -29,6 +29,7 @@
 + (id)standardQueryItemsWithDeviceID:(id)arg1 scope:(id)arg2;
 + (id)requestWithAuthHeader:(id)arg1 FISAuthToken:(id)arg2;
 + (id)sharedURLSession;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType testBlock; // @synthesize testBlock=_testBlock;
 @property(retain) NSString *FISAuthToken; // @synthesize FISAuthToken=_FISAuthToken;
 @property(readonly) NSMutableArray *completionHandlers; // @synthesize completionHandlers=_completionHandlers;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) NSString *scope; // @synthesize scope=_scope;
 @property(readonly, nonatomic) NSString *authorizedEntity; // @synthesize authorizedEntity=_authorizedEntity;
 @property(readonly, nonatomic) long long action; // @synthesize action=_action;
-- (void).cxx_destruct;
 - (id)queryItemsWithInstanceID:(id)arg1;
 - (id)tokenRequest;
 - (void)performTokenOperation;

@@ -31,6 +31,7 @@
     // Error parsing type: , name: duration
     // Error parsing type: , name: isUserScrubbing
     // Error parsing type: , name: playAfterScrub
+    // Error parsing type: , name: service
     // Error parsing type: , name: visibilityDelegate
 }
 

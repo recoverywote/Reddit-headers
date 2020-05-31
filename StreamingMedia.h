@@ -18,11 +18,11 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isGIF; // @synthesize isGIF=_isGIF;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(retain, nonatomic) NSURL *scrubberMediaURL; // @synthesize scrubberMediaURL=_scrubberMediaURL;
 @property(retain, nonatomic) NSURL *hlsURL; // @synthesize hlsURL=_hlsURL;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescriptionWithPrefix:(id)arg1;

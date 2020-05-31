@@ -14,9 +14,9 @@
     SubredditModeratorWidget *_moderatorWidget;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasMoreModerators; // @synthesize hasMoreModerators=_hasMoreModerators;
 @property(retain, nonatomic) SubredditModeratorWidget *moderatorWidget; // @synthesize moderatorWidget=_moderatorWidget;
-- (void).cxx_destruct;
 - (long long)numberOfRowItems;
 - (id)titleLabelText;
 - (id)footerAccessoryImageName;

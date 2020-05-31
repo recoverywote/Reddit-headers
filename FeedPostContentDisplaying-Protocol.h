@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class FeedPostOptions, Post, PostMetaViewModel;
-@protocol FeedPostContentNodeDelegate;
+@protocol FeedPostContentNodeDelegate, ViewContext;
 
 @protocol FeedPostContentDisplaying <NSObject>
-@property(readonly, nonatomic) _Bool hasTextContent;
-@property(readonly, nonatomic) Post *post;
-- (id)initWithPost:(Post *)arg1 postMetaViewModel:(PostMetaViewModel *)arg2 options:(FeedPostOptions *)arg3 delegate:(id <FeedPostContentNodeDelegate>)arg4;
+- (id)initWithViewContext:(id <ViewContext>)arg1 post:(Post *)arg2 postMetaViewModel:(PostMetaViewModel *)arg3 options:(FeedPostOptions *)arg4 delegate:(id <FeedPostContentNodeDelegate>)arg5;
+@property(nonatomic, readonly) _Bool hasTextContent;
+@property(nonatomic, readonly) Post *post;
 @end
 

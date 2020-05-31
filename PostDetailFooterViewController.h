@@ -28,6 +28,7 @@
     struct UIEdgeInsets _windowSafeAreaInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasAddedObservers; // @synthesize hasAddedObservers=_hasAddedObservers;
 @property(nonatomic) __weak id <CommentsFooterBarViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) BaseView *safeAreaFooterView; // @synthesize safeAreaFooterView=_safeAreaFooterView;
@@ -41,7 +42,6 @@
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(retain, nonatomic) ASDisplayNode *actionBarNode; // @synthesize actionBarNode=_actionBarNode;
-- (void).cxx_destruct;
 - (void)createReplyFooterBarView;
 - (void)createSafeAreaFooterView;
 - (void)commentsFooterBarViewDidTapButton:(id)arg1;

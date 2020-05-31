@@ -12,9 +12,9 @@
     id _value;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id value; // @synthesize value=_value;
 @property(retain, nonatomic) id field; // @synthesize field=_field;
-- (void).cxx_destruct;
 - (id)URLEncodedStringValue;
 - (id)initWithField:(id)arg1 value:(id)arg2;
 

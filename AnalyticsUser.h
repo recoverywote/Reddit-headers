@@ -62,6 +62,7 @@
     NSString *_email_domain;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool email_domainIsSet; // @synthesize email_domainIsSet=_email_domainIsSet;
 @property(copy, nonatomic) NSString *email_domain; // @synthesize email_domain=_email_domain;
 @property(nonatomic) _Bool masked_email_userIsSet; // @synthesize masked_email_userIsSet=_masked_email_userIsSet;
@@ -108,7 +109,6 @@
 @property(nonatomic) long long created_timestamp; // @synthesize created_timestamp=_created_timestamp;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

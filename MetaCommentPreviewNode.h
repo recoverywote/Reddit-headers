@@ -16,11 +16,11 @@
     UIColor *_usernameColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *usernameColor; // @synthesize usernameColor=_usernameColor;
 @property(retain, nonatomic) ASTextNode *commentNode; // @synthesize commentNode=_commentNode;
 @property(retain, nonatomic) ASTextNode *usernameNode; // @synthesize usernameNode=_usernameNode;
 @property(retain, nonatomic) NSArray *badgeNodes; // @synthesize badgeNodes=_badgeNodes;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)setAttribute:(id)arg1 value:(id)arg2 forTextNode:(id)arg3;
 - (void)setCommentBodyFont:(id)arg1;

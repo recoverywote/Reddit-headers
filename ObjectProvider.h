@@ -20,12 +20,12 @@
     NSArray *_objects;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(copy, nonatomic) NSArray *objects; // @synthesize objects=_objects;
 @property(nonatomic) __weak id <ObjectProviderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isNonBlocking; // @synthesize isNonBlocking=_isNonBlocking;
 @property(nonatomic) _Bool supportsFetchingMore; // @synthesize supportsFetchingMore=_supportsFetchingMore;
-- (void).cxx_destruct;
 - (void)fetchMoreWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchWithCompletion:(CDUnknownBlockType)arg1;
 

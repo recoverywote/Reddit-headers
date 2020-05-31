@@ -21,9 +21,9 @@
 + (_Bool)_macOSSierraOrLater;
 + (_Bool)_macOSElCapitanOrLater;
 + (_Bool)supportsSecureEnclaveKeychainItems;
+- (void).cxx_destruct;
 @property(readonly) unsigned long long accessControl; // @synthesize accessControl=_accessControl;
 - (id)baseQuery;
-- (void).cxx_destruct;
 - (id)_optionsDictionaryForUserPrompt:(id)arg1;
 - (id)stringForKey:(id)arg1 userPrompt:(id)arg2 userCancelled:(inout _Bool *)arg3 options:(id)arg4;
 - (id)objectForKey:(id)arg1 userPrompt:(id)arg2 userCancelled:(inout _Bool *)arg3 options:(id)arg4;

@@ -11,8 +11,8 @@
     CDUnknownBlockType _buttonBlock;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType buttonBlock; // @synthesize buttonBlock=_buttonBlock;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType buttonBlock; // @synthesize buttonBlock=_buttonBlock;
 - (id)initWithButtonNode:(id)arg1;
 - (void)didTapButton:(id)arg1;
 

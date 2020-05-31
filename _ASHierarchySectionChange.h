@@ -21,10 +21,10 @@
 + (id)smallDescriptionForSectionChanges:(id)arg1;
 + (id)allIndexesInSectionChanges:(id)arg1;
 + (void)sortAndCoalesceSectionChanges:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long changeType; // @synthesize changeType=_changeType;
 @property(readonly, nonatomic) NSIndexSet *indexSet; // @synthesize indexSet=_indexSet;
 @property(readonly, nonatomic) unsigned long long animationOptions; // @synthesize animationOptions=_animationOptions;
-- (void).cxx_destruct;
 - (id)propertiesForDebugDescription;
 - (id)propertiesForDescription;
 - (id)smallDescription;

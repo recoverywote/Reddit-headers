@@ -14,8 +14,8 @@
 }
 
 + (id)universalSelector;
-@property(readonly, nonatomic) NSString *type; // @synthesize type=_type;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *type; // @synthesize type=_type;
 - (id)debugDescription;
 - (_Bool)acceptElement:(id)arg1;
 - (id)initWithType:(id)arg1;

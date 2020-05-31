@@ -22,13 +22,13 @@
     NSString *_queue_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool queue_nameIsSet; // @synthesize queue_nameIsSet=_queue_nameIsSet;
 @property(copy, nonatomic) NSString *queue_name; // @synthesize queue_name=_queue_name;
 @property(nonatomic) _Bool dropped_reasonIsSet; // @synthesize dropped_reasonIsSet=_dropped_reasonIsSet;
 @property(copy, nonatomic) NSString *dropped_reason; // @synthesize dropped_reason=_dropped_reason;
 @property(nonatomic) _Bool message_typeIsSet; // @synthesize message_typeIsSet=_message_typeIsSet;
 @property(copy, nonatomic) NSString *message_type; // @synthesize message_type=_message_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

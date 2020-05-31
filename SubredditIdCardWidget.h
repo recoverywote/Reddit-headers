@@ -14,9 +14,9 @@
     NSString *_subscribersText;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *subscribersText; // @synthesize subscribersText=_subscribersText;
 @property(copy, nonatomic) NSString *currentlyViewingText; // @synthesize currentlyViewingText=_currentlyViewingText;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

@@ -7,11 +7,12 @@
 #import "BaseCollectionViewCellNode.h"
 
 @class ASButtonNode, ASDisplayNode, ASTextNode, AdPost, FeedPostOptions, FeedPostThumbnailNode, FeedPostTitleNode;
-@protocol CommentAdPostCellNodeDelegate;
+@protocol CommentAdPostCellNodeDelegate, ViewContext;
 
 @interface CommentAdPostCellNode : BaseCollectionViewCellNode
 {
     AdPost *_post;
+    id <ViewContext> _viewContext;
     id <CommentAdPostCellNodeDelegate> _delegate;
     FeedPostOptions *_options;
     ASDisplayNode *_spacer;
@@ -23,6 +24,7 @@
     ASButtonNode *_buttonNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
 @property(retain, nonatomic) ASButtonNode *commentNode; // @synthesize commentNode=_commentNode;
 @property(retain, nonatomic) FeedPostThumbnailNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
@@ -32,8 +34,8 @@
 @property(retain, nonatomic) ASDisplayNode *spacer; // @synthesize spacer=_spacer;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) __weak id <CommentAdPostCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) AdPost *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
@@ -51,7 +53,7 @@
 - (void)configureNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didLoad;
-- (id)initWithAdPost:(id)arg1 delegate:(id)arg2 visibilityTracker:(id)arg3;
+- (id)initWithViewContext:(id)arg1 adPost:(id)arg2 delegate:(id)arg3;
 
 @end
 

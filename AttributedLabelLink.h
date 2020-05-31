@@ -17,10 +17,10 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(copy, nonatomic) NSString *caption; // @synthesize caption=_caption;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)initWithURL:(id)arg1 caption:(id)arg2 range:(struct _NSRange)arg3;
 - (id)initWithURL:(id)arg1 range:(struct _NSRange)arg2;
 

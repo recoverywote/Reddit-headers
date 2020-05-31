@@ -16,8 +16,8 @@
     id <TProtocol> _concreteProtocol;
 }
 
-@property(retain, nonatomic) id <TProtocol> concreteProtocol; // @synthesize concreteProtocol=_concreteProtocol;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <TProtocol> concreteProtocol; // @synthesize concreteProtocol=_concreteProtocol;
 - (_Bool)writeListEnd:(id *)arg1;
 - (_Bool)writeListBeginWithElementType:(int)arg1 size:(int)arg2 error:(id *)arg3;
 - (_Bool)writeSetEnd:(id *)arg1;

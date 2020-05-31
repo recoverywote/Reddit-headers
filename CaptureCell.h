@@ -17,8 +17,8 @@
 + (id)reuseIdentifierForContentClass:(Class)arg1;
 + (Class)contentViewClassForContentClass:(Class)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
-@property(retain, nonatomic) BaseView<CaptureCellContentViewProtocol> *mainContentView; // @synthesize mainContentView=_mainContentView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseView<CaptureCellContentViewProtocol> *mainContentView; // @synthesize mainContentView=_mainContentView;
 - (void)becomeFirstResponderIfNeeded;
 - (void)layoutSubviews;
 - (void)prepareForReuse;

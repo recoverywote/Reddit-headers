@@ -13,8 +13,8 @@
     BaseLabel *_contentLabel;
 }
 
-@property(retain, nonatomic) BaseLabel *contentLabel; // @synthesize contentLabel=_contentLabel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseLabel *contentLabel; // @synthesize contentLabel=_contentLabel;
 - (void)configureWithText:(id)arg1;
 - (void)layoutSubviews;
 - (id)init;

@@ -13,8 +13,8 @@
     MessageTextView *_messageTextView;
 }
 
-@property(retain, nonatomic) MessageTextView *messageTextView; // @synthesize messageTextView=_messageTextView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) MessageTextView *messageTextView; // @synthesize messageTextView=_messageTextView;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

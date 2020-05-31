@@ -19,6 +19,7 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(nonatomic) _Bool isGif; // @synthesize isGif=_isGif;
 @property(copy, nonatomic) NSURL *hlsUrl; // @synthesize hlsUrl=_hlsUrl;
@@ -26,7 +27,6 @@
 @property(copy, nonatomic) NSArray *obfuscatedPreviews; // @synthesize obfuscatedPreviews=_obfuscatedPreviews;
 @property(copy, nonatomic) NSArray *previewImages; // @synthesize previewImages=_previewImages;
 @property(retain, nonatomic) RichTextImageElement *posterImage; // @synthesize posterImage=_posterImage;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)contentUrl;
 - (struct CGSize)contentSize;

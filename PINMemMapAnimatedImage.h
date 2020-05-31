@@ -31,13 +31,13 @@
 + (unsigned int)heightFromMemoryMap:(id)arg1;
 + (unsigned int)widthFromMemoryMap:(id)arg1;
 + (struct CGImage *)imageAtIndex:(unsigned long long)arg1 inMemoryMap:(id)arg2 width:(unsigned int)arg3 height:(unsigned int)arg4 bitsPerPixel:(unsigned int)arg5 bitmapInfo:(unsigned int)arg6;
+- (void).cxx_destruct;
 @property _Bool infoCompleted; // @synthesize infoCompleted=_infoCompleted;
 @property(retain) PINSharedAnimatedImage *sharedAnimatedImage; // @synthesize sharedAnimatedImage=_sharedAnimatedImage;
 @property(nonatomic) unsigned long long status; // @synthesize status=_status;
 @property(copy, nonatomic) CDUnknownBlockType animatedImageReady; // @synthesize animatedImageReady=_animatedImageReady;
 @property(copy, nonatomic) CDUnknownBlockType fileReady; // @synthesize fileReady=_fileReady;
 @property(copy, nonatomic) CDUnknownBlockType infoCompletion; // @synthesize infoCompletion=_infoCompletion;
-- (void).cxx_destruct;
 - (void)clearAnimatedImageCache;
 @property(readonly, nonatomic) _Bool playbackReady;
 @property(readonly, nonatomic) _Bool coverImageReady;

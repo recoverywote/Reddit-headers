@@ -20,11 +20,11 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) VisibilityOptions *defaultOptions; // @synthesize defaultOptions=_defaultOptions;
 @property(retain, nonatomic) NSMutableDictionary *viewsToTrack; // @synthesize viewsToTrack=_viewsToTrack;
 @property(retain, nonatomic) NSMutableDictionary *allViews; // @synthesize allViews=_allViews;
 @property(retain, nonatomic) id <VisibilitySignaler> visibilitySignaler; // @synthesize visibilitySignaler=_visibilitySignaler;
-- (void).cxx_destruct;
 - (void)didReceiveSignalFromVisibilitySignaler:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)updateViewsToTrack;
 - (void)queueViewsToTrackWithCompletion:(CDUnknownBlockType)arg1;

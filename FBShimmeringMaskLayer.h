@@ -13,8 +13,8 @@
     CALayer *_fadeLayer;
 }
 
-@property(readonly, nonatomic) CALayer *fadeLayer; // @synthesize fadeLayer=_fadeLayer;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) CALayer *fadeLayer; // @synthesize fadeLayer=_fadeLayer;
 - (void)layoutSublayers;
 - (id)init;
 

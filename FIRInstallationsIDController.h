@@ -22,6 +22,7 @@
     FIRInstallationsSingleOperationPromiseCache *_deleteInstallationPromiseCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) FIRInstallationsSingleOperationPromiseCache *deleteInstallationPromiseCache; // @synthesize deleteInstallationPromiseCache=_deleteInstallationPromiseCache;
 @property(readonly, nonatomic) FIRInstallationsSingleOperationPromiseCache *authTokenForcingRefreshPromiseCache; // @synthesize authTokenForcingRefreshPromiseCache=_authTokenForcingRefreshPromiseCache;
 @property(readonly, nonatomic) FIRInstallationsSingleOperationPromiseCache *authTokenPromiseCache; // @synthesize authTokenPromiseCache=_authTokenPromiseCache;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) FIRInstallationsStore *installationsStore; // @synthesize installationsStore=_installationsStore;
 @property(readonly, nonatomic) NSString *appName; // @synthesize appName=_appName;
 @property(readonly, nonatomic) NSString *appID; // @synthesize appID=_appID;
-- (void).cxx_destruct;
 - (_Bool)isDefaultApp;
 - (void)postFIDDidChangeNotification;
 - (id)mostRecentInstallationOperation;

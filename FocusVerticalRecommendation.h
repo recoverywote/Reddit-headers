@@ -17,12 +17,12 @@
     long long _focusVerticalRecommendationType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long focusVerticalRecommendationType; // @synthesize focusVerticalRecommendationType=_focusVerticalRecommendationType;
 @property(readonly, nonatomic) NSString *category; // @synthesize category=_category;
 @property(readonly, nonatomic) Subreddit *interactedSubreddit; // @synthesize interactedSubreddit=_interactedSubreddit;
 @property(readonly, copy, nonatomic) NSArray *posts; // @synthesize posts=_posts;
 @property(readonly, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (id)initWithSubreddit:(id)arg1 posts:(id)arg2 interactedSubreddit:(id)arg3 category:(id)arg4 focusVerticalRecommendationType:(long long)arg5;
 
 @end

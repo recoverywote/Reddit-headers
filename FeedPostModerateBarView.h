@@ -25,6 +25,7 @@
     BaseButton *_flairButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *flairButton; // @synthesize flairButton=_flairButton;
 @property(retain, nonatomic) BaseButton *overflowButton; // @synthesize overflowButton=_overflowButton;
 @property(retain, nonatomic) HighlightableButton *distinguishButton; // @synthesize distinguishButton=_distinguishButton;
@@ -35,7 +36,6 @@
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak NSObject<FeedPostModerateBarViewDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)configureButtons;
 - (void)flairButtonTapped:(id)arg1;

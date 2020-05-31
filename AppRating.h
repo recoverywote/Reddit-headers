@@ -17,10 +17,10 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool userInteractedWithPrompt; // @synthesize userInteractedWithPrompt=_userInteractedWithPrompt;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) AppSettings *appSettings; // @synthesize appSettings=_appSettings;
-- (void).cxx_destruct;
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
 - (void)didDismissRatingToast;
 - (void)didTapFeedbackButton;

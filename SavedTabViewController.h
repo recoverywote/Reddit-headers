@@ -17,11 +17,11 @@
     CommentListViewController *_savedCommentsController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CommentListViewController *savedCommentsController; // @synthesize savedCommentsController=_savedCommentsController;
 @property(retain, nonatomic) FeedViewController *savedPostsController; // @synthesize savedPostsController=_savedPostsController;
 @property(retain, nonatomic) NSString *categoryName; // @synthesize categoryName=_categoryName;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)setupSavedFeedViewTabBar;
 - (void)viewDidLoad;
 - (id)initWithCategoryName:(id)arg1 accountContext:(id)arg2;

@@ -17,12 +17,12 @@
     long long _depth;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long depth; // @synthesize depth=_depth;
 @property(readonly, nonatomic) _Bool isPagePresent; // @synthesize isPagePresent=_isPagePresent;
 @property(readonly, copy, nonatomic) NSString *parent; // @synthesize parent=_parent;
 @property(readonly, copy, nonatomic) NSString *path; // @synthesize path=_path;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithGraphQLData:(id)arg1;
 
 @end

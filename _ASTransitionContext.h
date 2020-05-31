@@ -18,10 +18,10 @@
     id <_ASTransitionContextCompletionDelegate> _completionDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <_ASTransitionContextCompletionDelegate> completionDelegate; // @synthesize completionDelegate=_completionDelegate;
 @property(nonatomic) __weak id <_ASTransitionContextLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(readonly, nonatomic, getter=isAnimated) _Bool animated; // @synthesize animated=_animated;
-- (void).cxx_destruct;
 - (void)completeTransition:(_Bool)arg1;
 - (id)removedSubnodes;
 - (id)insertedSubnodes;

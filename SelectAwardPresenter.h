@@ -28,6 +28,7 @@
 }
 
 + (id)keyPathsForValuesAffectingCoinBalance;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(retain, nonatomic) GildingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) NSDictionary *awardViewModelById; // @synthesize awardViewModelById=_awardViewModelById;
@@ -42,7 +43,6 @@
 @property(nonatomic) __weak id <UIScrollViewDelegate> scrollingDelegate; // @synthesize scrollingDelegate=_scrollingDelegate;
 @property(nonatomic) __weak id <SelectAwardPresentable> presentable; // @synthesize presentable=_presentable;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)didTapReloadButton;
 - (void)didSelectItemAtIndexPath:(id)arg1;
 - (void)didLoad;

@@ -16,10 +16,10 @@
     Carousel *_topKarmaSubredditCarousel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Carousel *topKarmaSubredditCarousel; // @synthesize topKarmaSubredditCarousel=_topKarmaSubredditCarousel;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
-- (void).cxx_destruct;
 - (id)listingTraceName;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

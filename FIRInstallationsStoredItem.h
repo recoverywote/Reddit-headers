@@ -20,12 +20,12 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *IIDDefaultToken; // @synthesize IIDDefaultToken=_IIDDefaultToken;
 @property(nonatomic) long long registrationStatus; // @synthesize registrationStatus=_registrationStatus;
 @property(retain, nonatomic) FIRInstallationsStoredAuthToken *authToken; // @synthesize authToken=_authToken;
 @property(copy, nonatomic) NSString *refreshToken; // @synthesize refreshToken=_refreshToken;
 @property(copy, nonatomic) NSString *firebaseInstallationID; // @synthesize firebaseInstallationID=_firebaseInstallationID;
-- (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 @property(readonly, nonatomic) long long storageVersion;

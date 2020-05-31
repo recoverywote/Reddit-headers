@@ -27,11 +27,11 @@
 + (void)setCurrentConfig:(id)arg1;
 + (id)currentConfig;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) long long lastOrderedListIndex; // @synthesize lastOrderedListIndex=_lastOrderedListIndex;
 @property(nonatomic) double baselineOffset; // @synthesize baselineOffset=_baselineOffset;
 @property(nonatomic) _Bool isCandidateForEndOfOrderedList; // @synthesize isCandidateForEndOfOrderedList=_isCandidateForEndOfOrderedList;
 @property(copy, nonatomic) MarkdownParserConfig *config; // @synthesize config=_config;
-- (void).cxx_destruct;
 - (void)consumeToken:(int)arg1 text:(char *)arg2;
 - (void)recurseOnString:(id)arg1 withFont:(id)arg2;
 - (id)attributesForFont:(id)arg1;

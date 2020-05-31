@@ -13,8 +13,8 @@
     BaseButton *_accessoryButton;
 }
 
-@property(retain, nonatomic) BaseButton *accessoryButton; // @synthesize accessoryButton=_accessoryButton;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseButton *accessoryButton; // @synthesize accessoryButton=_accessoryButton;
 
 @end
 

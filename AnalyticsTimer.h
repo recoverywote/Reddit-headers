@@ -28,6 +28,7 @@
     long long _first_input_delay;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool first_input_delayIsSet; // @synthesize first_input_delayIsSet=_first_input_delayIsSet;
 @property(nonatomic) long long first_input_delay; // @synthesize first_input_delay=_first_input_delay;
 @property(nonatomic) _Bool first_meaningful_paintIsSet; // @synthesize first_meaningful_paintIsSet=_first_meaningful_paintIsSet;
@@ -40,7 +41,6 @@
 @property(nonatomic) long long millis; // @synthesize millis=_millis;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

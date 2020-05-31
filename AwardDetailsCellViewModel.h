@@ -20,6 +20,7 @@
 }
 
 + (id)viewModelForAwardingTotal:(id)arg1 maxCountDigits:(unsigned long long)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowOverflowButton; // @synthesize shouldShowOverflowButton=_shouldShowOverflowButton;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *subtitleIconName; // @synthesize subtitleIconName=_subtitleIconName;
@@ -27,7 +28,6 @@
 @property(nonatomic) unsigned long long maxCountDigits; // @synthesize maxCountDigits=_maxCountDigits;
 @property(copy, nonatomic) NSString *countString; // @synthesize countString=_countString;
 @property(retain, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
-- (void).cxx_destruct;
 
 @end
 

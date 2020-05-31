@@ -13,8 +13,8 @@
     NSString *_text;
 }
 
-@property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 - (_Bool)isEqual:(id)arg1;
 - (id)attributedStringWithConfig:(id)arg1;
 - (id)initWithData:(id)arg1 mediaMetadata:(id)arg2;

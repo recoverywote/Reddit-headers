@@ -20,10 +20,10 @@
 + (unsigned long long)dataTypeForClass:(Class)arg1 propertyName:(id)arg2;
 + (id)capitalizedPropertyName:(id)arg1;
 + (id)propertyWithGetter:(id)arg1 setter:(id)arg2 dataType:(unsigned long long)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long dataType; // @synthesize dataType=_dataType;
 @property(copy, nonatomic) NSString *setter; // @synthesize setter=_setter;
 @property(copy, nonatomic) NSString *getter; // @synthesize getter=_getter;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *storageType;
 
 @end

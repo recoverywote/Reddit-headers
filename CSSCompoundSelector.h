@@ -15,8 +15,8 @@
 
 + (id)orSelector:(id)arg1;
 + (id)andSelector:(id)arg1;
-@property(readonly, nonatomic) NSArray *selectors; // @synthesize selectors=_selectors;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *selectors; // @synthesize selectors=_selectors;
 - (void)addSelector:(id)arg1;
 - (id)initWithSelectors:(id)arg1;
 

@@ -25,6 +25,7 @@
     NSMutableDictionary *_headerFonts;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *headerFonts; // @synthesize headerFonts=_headerFonts;
 @property(copy, nonatomic) NSDictionary *quoteAttributes; // @synthesize quoteAttributes=_quoteAttributes;
 @property(retain, nonatomic) UIFont *tableBoldFont; // @synthesize tableBoldFont=_tableBoldFont;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) UIFont *italicFont; // @synthesize italicFont=_italicFont;
 @property(retain, nonatomic) UIFont *boldFont; // @synthesize boldFont=_boldFont;
 @property(retain, nonatomic) UIFont *paragraphFont; // @synthesize paragraphFont=_paragraphFont;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly, nonatomic) NSParagraphStyle *paragraphStyle;
 - (id)keyForHeader:(int)arg1;

@@ -15,10 +15,10 @@
     NSIndexPath *_indexPath;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) UIImage *icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithTitle:(id)arg1 indexPath:(id)arg2;
 - (id)initWithIcon:(id)arg1 indexPath:(id)arg2;

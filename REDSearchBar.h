@@ -34,6 +34,7 @@
 }
 
 + (id)titleViewWithSearchBar:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *placeholderLabel; // @synthesize placeholderLabel=_placeholderLabel;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) UIImageView *resultsIconView; // @synthesize resultsIconView=_resultsIconView;
@@ -51,7 +52,6 @@
 @property(nonatomic) _Bool showsCancelButton; // @synthesize showsCancelButton=_showsCancelButton;
 @property(copy, nonatomic) NSString *placeholder; // @synthesize placeholder=_placeholder;
 @property(nonatomic) _Bool showsSettingsButton; // @synthesize showsSettingsButton=_showsSettingsButton;
-- (void).cxx_destruct;
 - (void)stopLoadingIndication:(id)arg1;
 - (void)startLoadingIndication:(id)arg1;
 @property(retain, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;

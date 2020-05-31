@@ -14,9 +14,9 @@
     NSString *_title;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) long long enumValue; // @synthesize enumValue=_enumValue;
-- (void).cxx_destruct;
 - (id)initWithValue:(long long)arg1 title:(id)arg2;
 
 @end

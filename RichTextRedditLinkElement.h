@@ -14,9 +14,9 @@
     long long _linkType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long linkType; // @synthesize linkType=_linkType;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)urlString;
 - (id)attributedStringWithConfig:(id)arg1;

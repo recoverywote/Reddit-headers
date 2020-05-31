@@ -21,6 +21,7 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *pillViews; // @synthesize pillViews=_pillViews;
 @property(retain, nonatomic) REDPillView *selectedPillView; // @synthesize selectedPillView=_selectedPillView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
@@ -28,7 +29,6 @@
 @property(nonatomic) double textPosition; // @synthesize textPosition=_textPosition;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) _Bool containsPills; // @synthesize containsPills=_containsPills;
-- (void).cxx_destruct;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)textFieldDidChange:(id)arg1;
 - (_Bool)keyboardInputShouldDelete:(id)arg1;

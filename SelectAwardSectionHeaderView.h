@@ -23,6 +23,7 @@
 }
 
 + (double)calculateHeightForViewModel:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *coinBalanceLabel; // @synthesize coinBalanceLabel=_coinBalanceLabel;
 @property(retain, nonatomic) BaseLabel *coinBalanceTitleLabel; // @synthesize coinBalanceTitleLabel=_coinBalanceTitleLabel;
 @property(retain, nonatomic) UIImageView *coinBalanceIconImageView; // @synthesize coinBalanceIconImageView=_coinBalanceIconImageView;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIStackView *titleStackView; // @synthesize titleStackView=_titleStackView;
 @property(retain, nonatomic) BaseView *titleView; // @synthesize titleView=_titleView;
 @property(retain, nonatomic) UIStackView *mainStackView; // @synthesize mainStackView=_mainStackView;
-- (void).cxx_destruct;
 - (void)configureCoinBalanceViewWithViewModel:(id)arg1;
 - (void)configureSectionTitleViewWithViewModel:(id)arg1;
 - (void)configureWithViewModel:(id)arg1;

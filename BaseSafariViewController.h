@@ -18,10 +18,10 @@
     NSURL *_analyticsURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *analyticsURL; // @synthesize analyticsURL=_analyticsURL;
 @property(readonly, nonatomic) WebViewInteractor *interactor; // @synthesize interactor=_interactor;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (void)safariViewControllerDidFinish:(id)arg1;
 - (void)sendScreenViewEventFromBackground:(_Bool)arg1;

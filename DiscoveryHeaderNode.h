@@ -24,6 +24,7 @@
     Carousel *_carousel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) BaseButtonNode *overflowButtonNode; // @synthesize overflowButtonNode=_overflowButtonNode;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) ASTextNode *subtitleTextNode; // @synthesize subtitleTextNode=_subtitleTextNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
 @property(nonatomic) __weak id <DiscoveryHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didNodeTap:(id)arg1;
 - (void)overflowButtonTapped:(id)arg1;
 - (void)appendSubtitleIconToText:(id)arg1 withSubtitleIconName:(id)arg2;

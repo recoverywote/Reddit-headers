@@ -27,6 +27,7 @@
 + (id)sidebarColorForRUIToastType:(long long)arg1;
 + (id)configurationWithMessage:(id)arg1 toastType:(long long)arg2 buildBlock:(CDUnknownBlockType)arg3;
 + (id)configurationWithMessage:(id)arg1 toastType:(long long)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *bottomButtonActions; // @synthesize bottomButtonActions=_bottomButtonActions;
 @property(retain, nonatomic) RUIToastAction *rightButtonAction; // @synthesize rightButtonAction=_rightButtonAction;
 @property(copy, nonatomic) CDUnknownBlockType dismissCallBack; // @synthesize dismissCallBack=_dismissCallBack;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) UIImage *icon; // @synthesize icon=_icon;
 @property(retain, nonatomic) UIColor *sideBarColor; // @synthesize sideBarColor=_sideBarColor;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

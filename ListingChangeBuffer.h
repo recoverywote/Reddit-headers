@@ -13,8 +13,8 @@
     NSMutableOrderedSet *_updates;
 }
 
-@property(retain, nonatomic) NSMutableOrderedSet *updates; // @synthesize updates=_updates;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableOrderedSet *updates; // @synthesize updates=_updates;
 @property(readonly, nonatomic) NSArray *flushUpdates;
 - (void)removeObject:(id)arg1;
 - (void)insertObject:(id)arg1 atIndex:(unsigned long long)arg2;

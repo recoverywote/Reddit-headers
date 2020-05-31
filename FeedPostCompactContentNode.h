@@ -9,7 +9,7 @@
 #import "FeedPostContentDisplaying-Protocol.h"
 
 @class FeedPostCallToActionNode, FeedPostCrossPostNode, FeedPostOptions, FeedPostTextWithThumbnailNode, NSString, Post;
-@protocol FeedPostContentNodeDelegate;
+@protocol FeedPostContentNodeDelegate, ViewContext;
 
 @interface FeedPostCompactContentNode : BaseFeedDisplayNode <FeedPostContentDisplaying>
 {
@@ -21,8 +21,11 @@
     FeedPostTextWithThumbnailNode *_textNode;
     FeedPostCrossPostNode *_crossPostNode;
     FeedPostCallToActionNode *_callToActionNode;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostCallToActionNode *callToActionNode; // @synthesize callToActionNode=_callToActionNode;
 @property(retain, nonatomic) FeedPostCrossPostNode *crossPostNode; // @synthesize crossPostNode=_crossPostNode;
 @property(retain, nonatomic) FeedPostTextWithThumbnailNode *textNode; // @synthesize textNode=_textNode;
@@ -30,7 +33,6 @@
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) double textContentTopInset; // @synthesize textContentTopInset=_textContentTopInset;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)createCallToActionNodeIfNecessary;
 - (void)createNodesForCrossPost;
@@ -38,7 +40,7 @@
 - (void)createNodes;
 @property(readonly, nonatomic) _Bool hasTextThumbnail;
 @property(readonly, nonatomic) _Bool hasTextContent; // @synthesize hasTextContent=_hasTextContent;
-- (id)initWithPost:(id)arg1 postMetaViewModel:(id)arg2 options:(id)arg3 delegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -16,11 +16,11 @@
     NSURL *_linkURL;
 }
 
-@property(readonly, nonatomic) NSURL *linkURL; // @synthesize linkURL=_linkURL;
-@property(copy, nonatomic) NSString *icon70UrlString; // @synthesize icon70UrlString=_icon70UrlString;
-@property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-@property(copy, nonatomic) NSString *descriptionStr; // @synthesize descriptionStr=_descriptionStr;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *linkURL; // @synthesize linkURL=_linkURL;
+@property(readonly, copy, nonatomic) NSString *icon70UrlString; // @synthesize icon70UrlString=_icon70UrlString;
+@property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
+@property(readonly, copy, nonatomic) NSString *descriptionStr; // @synthesize descriptionStr=_descriptionStr;
 - (id)debugDescription;
 - (id)initWithData:(id)arg1;
 

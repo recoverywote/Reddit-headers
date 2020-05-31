@@ -16,10 +16,10 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <ReportActionSheetDelegate> reportActionSheetDelegate; // @synthesize reportActionSheetDelegate=_reportActionSheetDelegate;
 @property(readonly, nonatomic) id <ReportableModel> model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)performBlockUserRequest;
 - (void)presentBlockUserPromptForModel:(id)arg1;
 - (void)presentReportControllerForModel:(id)arg1;

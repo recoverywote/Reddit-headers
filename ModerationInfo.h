@@ -24,6 +24,7 @@
 + (id)keyPathsForValuesAffectingIsModRemoved;
 + (id)keyPathsForValuesAffectingIsModApprovedBy;
 + (id)keyPathsForValuesAffectingIsModApproved;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *modRemovalReason; // @synthesize modRemovalReason=_modRemovalReason;
 @property(readonly, nonatomic) _Bool isAutoCollapsedFromCrowdControl; // @synthesize isAutoCollapsedFromCrowdControl=_isAutoCollapsedFromCrowdControl;
 @property(retain, nonatomic) NSArray *modReports; // @synthesize modReports=_modReports;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSString *verdictReason; // @synthesize verdictReason=_verdictReason;
 @property(retain, nonatomic) NSString *verdictBy; // @synthesize verdictBy=_verdictBy;
 @property(nonatomic) long long verdict; // @synthesize verdict=_verdict;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isSpam;
 @property(readonly, nonatomic) NSString *modRemovedBy;
 @property(readonly, nonatomic) _Bool isModRemoved;

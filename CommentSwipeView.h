@@ -14,9 +14,9 @@
     BaseImageView *_chevronImageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *chevronImageView; // @synthesize chevronImageView=_chevronImageView;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
 - (id)chevronImageForPanState:(unsigned long long)arg1;
 - (id)textForPanState:(unsigned long long)arg1;
 - (SEL)backgroundColorForPanState:(unsigned long long)arg1;

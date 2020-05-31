@@ -17,9 +17,9 @@
 + (void)setWaitNeededForOpenResponseLock;
 + (void)initialize;
 + (id)appUpdateState;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isInstall; // @synthesize isInstall=_isInstall;
 @property(copy) CDUnknownBlockType callback; // @synthesize callback=_callback;
-- (void).cxx_destruct;
 - (id)getActionName;
 - (void)processResponse:(id)arg1 error:(id)arg2;
 - (void)makeRequest:(id)arg1 key:(id)arg2 callback:(CDUnknownBlockType)arg3;

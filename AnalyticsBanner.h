@@ -20,11 +20,11 @@
     NSString *_button_text;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool button_textIsSet; // @synthesize button_textIsSet=_button_textIsSet;
 @property(copy, nonatomic) NSString *button_text; // @synthesize button_text=_button_text;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

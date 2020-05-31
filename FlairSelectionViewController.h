@@ -29,6 +29,7 @@
     FlairSelectionFooterViewController *_showMyFlairFooterViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowNoneRow; // @synthesize shouldShowNoneRow=_shouldShowNoneRow;
 @property(nonatomic) _Bool isInEditMode; // @synthesize isInEditMode=_isInEditMode;
 @property(nonatomic) _Bool isDisplayingShowMyFlairFooter; // @synthesize isDisplayingShowMyFlairFooter=_isDisplayingShowMyFlairFooter;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) FeedSpinnerView *spinner; // @synthesize spinner=_spinner;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) FlairSelectionPresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (id)analyticsScreenViewName;
 - (void)logApplyFlair;
 - (void)clearSearchBar;

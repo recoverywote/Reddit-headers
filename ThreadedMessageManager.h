@@ -18,11 +18,11 @@
 
 + (id)getInvalidationRangesFromChanges:(id)arg1;
 + (id)calculateChangesFromOldVisualsNodes:(id)arg1 toNewVisualNodes:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *optmizedObjectTree; // @synthesize optmizedObjectTree=_optmizedObjectTree;
 @property(copy, nonatomic) NSArray *objects; // @synthesize objects=_objects;
 @property(copy, nonatomic) NSArray *flattenedObjects; // @synthesize flattenedObjects=_flattenedObjects;
 @property(copy, nonatomic) NSArray *objectVisualNodes; // @synthesize objectVisualNodes=_objectVisualNodes;
-- (void).cxx_destruct;
 - (id)optimizeTree:(id)arg1 atLevel:(unsigned long long)arg2;
 - (id)convertObjectTreeToFlatObjectArray:(id)arg1 atLevel:(unsigned long long)arg2;
 - (id)convertObjectTreeToFlatObjectArray:(id)arg1;

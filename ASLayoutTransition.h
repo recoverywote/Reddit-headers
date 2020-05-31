@@ -23,11 +23,11 @@
     shared_ptr_8af51647 _pendingLayout;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) shared_ptr_8af51647 pendingLayout; // @synthesize pendingLayout=_pendingLayout;
 @property(readonly, nonatomic) shared_ptr_8af51647 previousLayout; // @synthesize previousLayout=_previousLayout;
 @property(readonly, nonatomic) __weak ASDisplayNode *node; // @synthesize node=_node;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (CDStruct_42a63532)transitionContext:(id)arg1 constrainedSizeForKey:(id)arg2;
 - (id)transitionContext:(id)arg1 layoutForKey:(id)arg2;
 - (id)removedSubnodesWithTransitionContext:(id)arg1;

@@ -15,8 +15,8 @@
     CLGeocoder *_geocoder;
 }
 
-@property(retain, nonatomic) CLGeocoder *geocoder; // @synthesize geocoder=_geocoder;
 - (void).cxx_destruct;
+@property(retain, nonatomic) CLGeocoder *geocoder; // @synthesize geocoder=_geocoder;
 - (void)requestPlacesForLocation:(id)arg1 limit:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 @end

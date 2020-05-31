@@ -16,10 +16,10 @@
     id <AccountContext> _accountContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(retain, nonatomic) UIViewController<EditFlairViewControllerDelegate> *fromVC; // @synthesize fromVC=_fromVC;
-- (void).cxx_destruct;
 - (void)presentEditFlairViewControllerWithFlair:(id)arg1 flairType:(long long)arg2 flairEditType:(long long)arg3 subreddit:(id)arg4 post:(id)arg5 modPermissions:(unsigned long long)arg6;
 - (void)navigateToEditFlairViewControllerWithFlair:(id)arg1 flairType:(long long)arg2 flairEditType:(long long)arg3 subreddit:(id)arg4 post:(id)arg5 modPermissions:(unsigned long long)arg6;
 - (id)navBarTitleTextAttributes;

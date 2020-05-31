@@ -16,16 +16,15 @@
     unsigned long long _timeout;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long timeout; // @synthesize timeout=_timeout;
 @property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *waitSemaphore; // @synthesize waitSemaphore=_waitSemaphore;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *serialQueue; // @synthesize serialQueue=_serialQueue;
-- (void).cxx_destruct;
 - (void)completeTask;
 - (void)enqueueTask:(CDUnknownBlockType)arg1 timeout:(CDUnknownBlockType)arg2;
 - (void)enqueueTask:(CDUnknownBlockType)arg1;
 - (id)initWithDispatchTime:(unsigned long long)arg1;
 - (id)initWithTimeoutSeconds:(double)arg1;
-- (id)init;
 - (void)dealloc;
 
 @end

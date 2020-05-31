@@ -28,6 +28,7 @@
     SessionTracker *_sessionTracker;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
 @property(readonly, nonatomic) PersistedSet *pendingEventsSet; // @synthesize pendingEventsSet=_pendingEventsSet;
 @property(readonly, nonatomic) AnalyticsAPIClient *apiClient; // @synthesize apiClient=_apiClient;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) PersistedSet *eventsSet; // @synthesize eventsSet=_eventsSet;
 @property(nonatomic) __weak id <AnalyticsProcessorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateWithReferrerUrlString:(id)arg1 referrerDomain:(id)arg2;
 - (id)analyticsNameForTheme:(id)arg1;
 - (id)analyticsNameForFontContentSize:(id)arg1;

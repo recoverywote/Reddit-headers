@@ -15,9 +15,9 @@
     NSMutableOrderedSet *_tokens;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *attribute; // @synthesize attribute=_attribute;
 @property(readonly, nonatomic) HTMLElement *element; // @synthesize element=_element;
-- (void).cxx_destruct;
 - (id)stringify;
 - (void)setObject:(id)arg1 atIndexedSubscript:(unsigned long long)arg2;
 - (id)objectAtIndexedSubscript:(unsigned long long)arg1;

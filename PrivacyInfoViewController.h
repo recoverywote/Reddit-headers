@@ -19,11 +19,11 @@
     LocationManager *_locationManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) LocationManager *locationManager; // @synthesize locationManager=_locationManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PrivacyViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) LocationPrivacyInfoView *privacyView; // @synthesize privacyView=_privacyView;
-- (void).cxx_destruct;
 - (void)locationPrivacyInfoViewDidRequestLocation:(id)arg1;
 - (void)locationPrivacyInfoView:(id)arg1 didSelectPrivacyURL:(id)arg2;
 - (void)requestLocation;

@@ -24,12 +24,12 @@
 + (id)plistFilePathWithName:(id)arg1;
 + (id)defaultOptionsDictionary;
 + (id)defaultOptions;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isEditingLocked) _Bool editingLocked; // @synthesize editingLocked=_editingLocked;
 @property(nonatomic) _Bool usingOptionsFromDefaultPlist; // @synthesize usingOptionsFromDefaultPlist=_usingOptionsFromDefaultPlist;
 @property(retain, nonatomic) NSMutableDictionary *optionsDictionary; // @synthesize optionsDictionary=_optionsDictionary;
 @property(copy, nonatomic) NSString *appGroupID; // @synthesize appGroupID=_appGroupID;
 @property(copy, nonatomic) NSString *deepLinkURLScheme; // @synthesize deepLinkURLScheme=_deepLinkURLScheme;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isSignInEnabled;
 @property(readonly, nonatomic) _Bool isAnalyticsEnabled;
 @property(readonly, nonatomic) _Bool isAnalyticsCollectionDeactivated;

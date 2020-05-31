@@ -14,9 +14,9 @@
     NSData *_data;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSData *data; // @synthesize data=_data;
 @property(retain, nonatomic) NSHTTPURLResponse *HTTPResponse; // @synthesize HTTPResponse=_HTTPResponse;
-- (void).cxx_destruct;
 - (id)initWithResponse:(id)arg1 data:(id)arg2;
 
 @end

@@ -18,22 +18,22 @@
 {
     // Error parsing type: {RecursiveMutex="_recursive"B""(?="_unfair"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"_runfair"{?="_lock"{os_unfair_lock_s="_os_unfair_lock_opaque"I}"_thread"A^{_opaque_pthread_t}"_count"i}"_m"{_opaque_pthread_mutex_t="__sig"q"__opaque"[56c]})}, name: __instanceLock__
     struct ASLayoutElementStyleExtensions _extensions;
-    // Error parsing type: {atomic<ASLayoutElementSize>="__a_"A{?}}, name: _size
-    // Error parsing type: {atomic<double>="__a_"Ad}, name: _spacingBefore
-    // Error parsing type: {atomic<double>="__a_"Ad}, name: _spacingAfter
-    // Error parsing type: {atomic<double>="__a_"Ad}, name: _flexGrow
-    // Error parsing type: {atomic<double>="__a_"Ad}, name: _flexShrink
-    // Error parsing type: {atomic<ASDimension>="__a_"A{?}}, name: _flexBasis
-    // Error parsing type: {atomic<ASStackLayoutAlignSelf>="__a_"AQ}, name: _alignSelf
-    // Error parsing type: {atomic<double>="__a_"Ad}, name: _ascender
-    // Error parsing type: {atomic<double>="__a_"Ad}, name: _descender
-    // Error parsing type: {atomic<CGPoint>="__a_"A{CGPoint}}, name: _layoutPosition
+    // Error parsing type: {atomic<ASLayoutElementSize>="__a_"{__cxx_atomic_impl<ASLayoutElementSize, std::__1::__cxx_atomic_base_impl<ASLayoutElementSize> >="__a_value"A{?}}}, name: _size
+    // Error parsing type: {atomic<double>="__a_"{__cxx_atomic_impl<double, std::__1::__cxx_atomic_base_impl<double> >="__a_value"Ad}}, name: _spacingBefore
+    // Error parsing type: {atomic<double>="__a_"{__cxx_atomic_impl<double, std::__1::__cxx_atomic_base_impl<double> >="__a_value"Ad}}, name: _spacingAfter
+    // Error parsing type: {atomic<double>="__a_"{__cxx_atomic_impl<double, std::__1::__cxx_atomic_base_impl<double> >="__a_value"Ad}}, name: _flexGrow
+    // Error parsing type: {atomic<double>="__a_"{__cxx_atomic_impl<double, std::__1::__cxx_atomic_base_impl<double> >="__a_value"Ad}}, name: _flexShrink
+    // Error parsing type: {atomic<ASDimension>="__a_"{__cxx_atomic_impl<ASDimension, std::__1::__cxx_atomic_base_impl<ASDimension> >="__a_value"A{?}}}, name: _flexBasis
+    // Error parsing type: {atomic<ASStackLayoutAlignSelf>="__a_"{__cxx_atomic_impl<ASStackLayoutAlignSelf, std::__1::__cxx_atomic_base_impl<ASStackLayoutAlignSelf> >="__a_value"AQ}}, name: _alignSelf
+    // Error parsing type: {atomic<double>="__a_"{__cxx_atomic_impl<double, std::__1::__cxx_atomic_base_impl<double> >="__a_value"Ad}}, name: _ascender
+    // Error parsing type: {atomic<double>="__a_"{__cxx_atomic_impl<double, std::__1::__cxx_atomic_base_impl<double> >="__a_value"Ad}}, name: _descender
+    // Error parsing type: {atomic<CGPoint>="__a_"{__cxx_atomic_impl<CGPoint, std::__1::__cxx_atomic_base_impl<CGPoint> >="__a_value"A{CGPoint}}}, name: _layoutPosition
     id <ASLayoutElementStyleDelegate> _delegate;
 }
 
-@property(readonly, nonatomic) __weak id <ASLayoutElementStyleDelegate> delegate; // @synthesize delegate=_delegate;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <ASLayoutElementStyleDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)propertyDidChange:(id)arg1;
 - (id)propertiesForDescription;
 @property(readonly, copy) NSString *description;

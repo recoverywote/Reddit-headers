@@ -26,13 +26,13 @@
 + (struct CGSize)calculatedSizeOfTextViewWithData:(id)arg1 useRawMarkdown:(_Bool)arg2;
 + (struct CGSize)calculatedSizeWithData:(id)arg1 useRawMarkdown:(_Bool)arg2;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
 @property(retain, nonatomic) UITapGestureRecognizer *doubleTapRecognizer; // @synthesize doubleTapRecognizer=_doubleTapRecognizer;
 @property(retain, nonatomic) StructuredStyle *subredditStyling; // @synthesize subredditStyling=_subredditStyling;
 @property(retain, nonatomic) AttributedLabel *textViewLabel; // @synthesize textViewLabel=_textViewLabel;
 @property(nonatomic) __weak id <CommentTextViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
-- (void).cxx_destruct;
 - (void)attributedLabelDidChangeSelection:(id)arg1;
 - (void)didLongTapComment:(id)arg1;
 - (void)didDoubleTapComment:(id)arg1;

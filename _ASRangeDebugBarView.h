@@ -29,10 +29,10 @@
 }
 
 + (id)whiteAttributedStringFromString:(id)arg1 withSize:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *debugString; // @synthesize debugString=_debugString;
 @property(nonatomic) _Bool destroyOnLayout; // @synthesize destroyOnLayout=_destroyOnLayout;
 @property(nonatomic) __weak ASRangeController *rangeController; // @synthesize rangeController=_rangeController;
-- (void).cxx_destruct;
 - (id)createRangeNodeWithColor:(id)arg1;
 - (id)createDebugTextNode;
 - (void)setBarDebugLabelsWithSize:(double)arg1;

@@ -20,7 +20,7 @@
     // Error parsing type: , name: tokenAmountView
     // Error parsing type: , name: button
     // Error parsing type: , name: detailsView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

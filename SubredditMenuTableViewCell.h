@@ -19,6 +19,7 @@
     NSLayoutConstraint *_menuTextLabelLeadingToVerticalViewTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *menuTextLabelLeadingToVerticalViewTrailingConstraint; // @synthesize menuTextLabelLeadingToVerticalViewTrailingConstraint=_menuTextLabelLeadingToVerticalViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *menuTextLabelLeadingToSuperLeadingConstraint; // @synthesize menuTextLabelLeadingToSuperLeadingConstraint=_menuTextLabelLeadingToSuperLeadingConstraint;
 @property(retain, nonatomic) BaseView *indentationSupplementaryTopVerticalView; // @synthesize indentationSupplementaryTopVerticalView=_indentationSupplementaryTopVerticalView;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) BaseView *indentationVerticalView; // @synthesize indentationVerticalView=_indentationVerticalView;
 @property(retain, nonatomic) BaseLabel *menuTextLabel; // @synthesize menuTextLabel=_menuTextLabel;
 @property(copy, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)configureSubmenuLinkTabForSubmenu:(id)arg1 submenuPosition:(long long)arg2;
 - (void)configureSubmenuTabForMenu:(id)arg1;
 - (void)configureLinkTabForMenu:(id)arg1;

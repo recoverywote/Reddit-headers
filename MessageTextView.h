@@ -17,9 +17,9 @@
 + (struct CGSize)calculatedSizeOfTextViewWithData:(id)arg1;
 + (id)sizingLabel;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) Message *message; // @synthesize message=_message;
 @property(retain, nonatomic) AttributedLabel *textViewLabel; // @synthesize textViewLabel=_textViewLabel;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)configureWithData:(id)arg1 andDelegate:(id)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;

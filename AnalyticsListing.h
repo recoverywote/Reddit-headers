@@ -44,6 +44,7 @@
     NSString *_metadata;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool metadataIsSet; // @synthesize metadataIsSet=_metadataIsSet;
 @property(copy, nonatomic) NSString *metadata; // @synthesize metadata=_metadata;
 @property(nonatomic) _Bool aggregatorIsSet; // @synthesize aggregatorIsSet=_aggregatorIsSet;
@@ -72,7 +73,6 @@
 @property(retain, nonatomic) NSMutableArray *links; // @synthesize links=_links;
 @property(nonatomic) _Bool lengthIsSet; // @synthesize lengthIsSet=_lengthIsSet;
 @property(nonatomic) long long length; // @synthesize length=_length;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

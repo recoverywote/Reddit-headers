@@ -19,13 +19,13 @@
     UIColor *_contentColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *contentColor; // @synthesize contentColor=_contentColor;
 @property(retain, nonatomic) NSString *userPK; // @synthesize userPK=_userPK;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <MetaBadgeManagementPresenterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSDictionary *viewModels; // @synthesize viewModels=_viewModels;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) MetaUsernameDecoration *usernameDecoration;
 - (void)updateSelectedBadgeViewModel:(id)arg1;
 - (void)modifyRemoteSelectedBadgeViewModel:(id)arg1;

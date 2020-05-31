@@ -32,14 +32,14 @@
     unsigned long long _pendingInterfaceState;
     UIView *_view;
     CALayer *_layer;
-    // Error parsing type: {atomic<unsigned int>="__a_"AI}, name: _atomicFlags
+    // Error parsing type: {atomic<unsigned int>="__a_"{__cxx_atomic_impl<unsigned int, std::__1::__cxx_atomic_base_impl<unsigned int> >="__a_value"AI}}, name: _atomicFlags
     struct ASDisplayNodeFlags _flags;
     ASDisplayNode *_supernode;
     NSMutableArray *_subnodes;
     NSArray *_cachedSubnodes;
     ASLayoutElementStyle *_style;
-    // Error parsing type: {atomic<ASPrimitiveTraitCollection>="__a_"A{ASPrimitiveTraitCollection}}, name: _primitiveTraitCollection
-    // Error parsing type: {atomic<unsigned int>="__a_"AI}, name: _displaySentinel
+    // Error parsing type: {atomic<ASPrimitiveTraitCollection>="__a_"{__cxx_atomic_impl<ASPrimitiveTraitCollection, std::__1::__cxx_atomic_base_impl<ASPrimitiveTraitCollection> >="__a_value"A{ASPrimitiveTraitCollection}}}, name: _primitiveTraitCollection
+    // Error parsing type: {atomic<unsigned int>="__a_"{__cxx_atomic_impl<unsigned int, std::__1::__cxx_atomic_base_impl<unsigned int> >="__a_value"AI}}, name: _displaySentinel
     double _contentsScaleForDisplay;
     unsigned long long _methodOverrides;
     struct UIEdgeInsets _hitTestSlop;
@@ -49,12 +49,12 @@
     double _defaultLayoutTransitionDelay;
     unsigned long long _defaultLayoutTransitionOptions;
     CDUnknownBlockType _layoutSpecBlock;
-    // Error parsing type: {atomic<int>="__a_"Ai}, name: _transitionID
-    // Error parsing type: {atomic<int>="__a_"Ai}, name: _pendingTransitionID
+    // Error parsing type: {atomic<int>="__a_"{__cxx_atomic_impl<int, std::__1::__cxx_atomic_base_impl<int> >="__a_value"Ai}}, name: _transitionID
+    // Error parsing type: {atomic<int>="__a_"{__cxx_atomic_impl<int, std::__1::__cxx_atomic_base_impl<int> >="__a_value"Ai}}, name: _pendingTransitionID
     ASLayoutTransition *_pendingLayoutTransition;
     shared_ptr_8af51647 _calculatedDisplayNodeLayout;
     shared_ptr_8af51647 _pendingDisplayNodeLayout;
-    // Error parsing type: {atomic<unsigned long>="__a_"AQ}, name: _layoutVersion
+    // Error parsing type: {atomic<unsigned long>="__a_"{__cxx_atomic_impl<unsigned long, std::__1::__cxx_atomic_base_impl<unsigned long> >="__a_value"AQ}}, name: _layoutVersion
     CDUnknownBlockType _viewBlock;
     CDUnknownBlockType _layerBlock;
     NSMutableArray *_onDidLoadBlocks;
@@ -124,14 +124,14 @@
 + (void)setTipDisplayBlock:(CDUnknownBlockType)arg1;
 + (_Bool)enableTips;
 + (void)setEnableTips:(_Bool)arg1;
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool interfaceStateSuspended; // @synthesize interfaceStateSuspended=_interfaceStateSuspended;
 @property(readonly, nonatomic) unsigned long long methodOverrides; // @synthesize methodOverrides=_methodOverrides;
 @property(nonatomic) __weak id <ASInterfaceStateDelegate> interfaceStateDelegate; // @synthesize interfaceStateDelegate=_interfaceStateDelegate;
 @property long long drawingPriority; // @synthesize drawingPriority=_drawingPriority;
 @property double placeholderFadeDuration; // @synthesize placeholderFadeDuration=_placeholderFadeDuration;
 @property _Bool placeholderEnabled; // @synthesize placeholderEnabled=_placeholderEnabled;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)asyncTraitCollectionDidChange;
 - (struct CGRect)_frameInWindow;
 @property(readonly, copy) NSString *debugDescription;

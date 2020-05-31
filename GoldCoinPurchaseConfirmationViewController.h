@@ -25,6 +25,7 @@
     AttributedLabelRegular *_userAgreementLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AttributedLabelRegular *userAgreementLabel; // @synthesize userAgreementLabel=_userAgreementLabel;
 @property(retain, nonatomic) UILabel *confirmationMessageLabel; // @synthesize confirmationMessageLabel=_confirmationMessageLabel;
 @property(retain, nonatomic) UILabel *confirmationTitleLabel; // @synthesize confirmationTitleLabel=_confirmationTitleLabel;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) Award *award; // @synthesize award=_award;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <GoldCoinPurchaseConfirmationViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)closeButtonDidTap:(id)arg1;

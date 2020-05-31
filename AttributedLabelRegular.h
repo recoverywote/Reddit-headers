@@ -30,6 +30,7 @@
 }
 
 + (struct CGSize)calculatedSizeWithText:(id)arg1 withWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSAttributedString *linkedAttributedString; // @synthesize linkedAttributedString=_linkedAttributedString;
 @property(retain, nonatomic) NSMutableArray *spoilersExposed; // @synthesize spoilersExposed=_spoilersExposed;
 @property(retain, nonatomic) NSMutableOrderedSet *interactableObjects; // @synthesize interactableObjects=_interactableObjects;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) NSDictionary *activeLinkAttributes; // @synthesize activeLinkAttributes=_activeLinkAttributes;
 @property(retain, nonatomic) NSDictionary *linkAttributes; // @synthesize linkAttributes=_linkAttributes;
 @property(nonatomic) __weak id <AttributedLabelRegularDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)spoilerTextTapped:(id)arg1;
 - (struct CGRect)boundingForRange:(struct _NSRange)arg1;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;

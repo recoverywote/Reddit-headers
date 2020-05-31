@@ -21,6 +21,7 @@
 }
 
 + (id)getInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *manifestVersion; // @synthesize manifestVersion=_manifestVersion;
 @property(retain, nonatomic) NSMutableArray *contentPaths; // @synthesize contentPaths=_contentPaths;
 @property(nonatomic) _Bool isCDEnabled; // @synthesize isCDEnabled=_isCDEnabled;
@@ -29,7 +30,6 @@
 @property(nonatomic) long long maxTextLen; // @synthesize maxTextLen=_maxTextLen;
 @property(retain, nonatomic) NSString *referredLink; // @synthesize referredLink=_referredLink;
 @property(retain, nonatomic) NSMutableDictionary *cdManifest; // @synthesize cdManifest=_cdManifest;
-- (void).cxx_destruct;
 - (id)getContentPathProperties:(id)arg1;
 - (id)getManifestVersion;
 - (void)onBranchInitialised:(id)arg1 withUrl:(id)arg2;

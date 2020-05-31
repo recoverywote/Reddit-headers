@@ -29,6 +29,7 @@
     NSNumber *_shouldUseCompactStyle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool v2ShouldShowAuthorLabel; // @synthesize v2ShouldShowAuthorLabel=_v2ShouldShowAuthorLabel;
 @property(nonatomic) _Bool v2ShouldShowUserSubredditLink; // @synthesize v2ShouldShowUserSubredditLink=_v2ShouldShowUserSubredditLink;
 @property(nonatomic) _Bool shouldShowSubredditName; // @synthesize shouldShowSubredditName=_shouldShowSubredditName;
@@ -44,7 +45,6 @@
 @property(nonatomic) _Bool shouldShowLocation; // @synthesize shouldShowLocation=_shouldShowLocation;
 @property(nonatomic) _Bool shouldColorAuthorUsername; // @synthesize shouldColorAuthorUsername=_shouldColorAuthorUsername;
 @property(nonatomic) __weak FeedPostOptions *feedPostOptions; // @synthesize feedPostOptions=_feedPostOptions;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool v2ShouldShowOverflowButton;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

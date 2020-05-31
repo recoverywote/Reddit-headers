@@ -20,11 +20,11 @@
     NSAttributedString *_tableAttributedString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSAttributedString *tableAttributedString; // @synthesize tableAttributedString=_tableAttributedString;
 @property(retain, nonatomic) UIScrollView *scroller; // @synthesize scroller=_scroller;
 @property(retain, nonatomic) AttributedLabelRegular *tableAttributedLabelView; // @synthesize tableAttributedLabelView=_tableAttributedLabelView;
 @property(nonatomic) __weak NSObject<AttributedLabelTableViewDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 @property(readonly, nonatomic) _Bool linkActive;
 - (void)setActiveLinkAttributes:(id)arg1;

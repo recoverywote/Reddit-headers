@@ -16,8 +16,8 @@
 }
 
 + (id)withBlock:(CDUnknownBlockType)arg1;
-@property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 - (struct CGPoint)pointForFrame:(double)arg1 startKeyframe:(double)arg2 endKeyframe:(double)arg3 interpolatedProgress:(double)arg4 startPoint:(struct CGPoint)arg5 endPoint:(struct CGPoint)arg6 currentPoint:(struct CGPoint)arg7;
 
 // Remaining properties

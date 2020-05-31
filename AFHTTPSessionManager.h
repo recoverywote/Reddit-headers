@@ -20,9 +20,9 @@
 
 + (_Bool)supportsSecureCoding;
 + (id)manager;
+- (void).cxx_destruct;
 @property(retain, nonatomic) AFHTTPRequestSerializer<AFURLRequestSerialization> *requestSerializer; // @synthesize requestSerializer=_requestSerializer;
 @property(retain, nonatomic) NSURL *baseURL; // @synthesize baseURL=_baseURL;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

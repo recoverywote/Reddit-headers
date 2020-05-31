@@ -34,6 +34,7 @@
     ASDisplayNode *_separator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *separator; // @synthesize separator=_separator;
 @property(retain, nonatomic) CarouselContainerNode *chainedDiscoveryNode; // @synthesize chainedDiscoveryNode=_chainedDiscoveryNode;
 @property(retain, nonatomic) ASDisplayNode *chainedDiscoveryNodeSeparator; // @synthesize chainedDiscoveryNodeSeparator=_chainedDiscoveryNodeSeparator;
@@ -50,7 +51,6 @@
 @property(retain, nonatomic) FeedPostTitleNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) Carousel *chainedCarousel; // @synthesize chainedCarousel=_chainedCarousel;
-- (void).cxx_destruct;
 - (id)voteTooltipAnchorView;
 - (id)subscribeTooltipAnchorView;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;

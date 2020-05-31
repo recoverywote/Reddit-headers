@@ -30,6 +30,7 @@
     long long _submit_scheduled_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool submit_scheduled_timestampIsSet; // @synthesize submit_scheduled_timestampIsSet=_submit_scheduled_timestampIsSet;
 @property(nonatomic) long long submit_scheduled_timestamp; // @synthesize submit_scheduled_timestamp=_submit_scheduled_timestamp;
 @property(nonatomic) _Bool post_scheduledIsSet; // @synthesize post_scheduledIsSet=_post_scheduledIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *input_type; // @synthesize input_type=_input_type;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

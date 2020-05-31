@@ -15,8 +15,8 @@
 
 + (long long)activityCategory;
 + (id)activityType;
-@property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 - (void)performActivity;
 - (void)prepareWithActivityItems:(id)arg1;
 - (_Bool)canPerformWithActivityItems:(id)arg1;

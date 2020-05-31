@@ -15,10 +15,10 @@
     NSArray *_badgeNodes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *badgeNodes; // @synthesize badgeNodes=_badgeNodes;
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithViewModel:(id)arg1 contentColor:(id)arg2 placementViewModel:(id)arg3 actionDelegate:(id)arg4;
 

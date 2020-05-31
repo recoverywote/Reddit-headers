@@ -19,11 +19,11 @@
     FeedPostOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) ASDisplayNode *mediaNode; // @synthesize mediaNode=_mediaNode;
 @property(nonatomic) __weak id <FeedPostMediaContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)createLegacyHLSVideoNodeForPost:(id)arg1 withOptions:(id)arg2 delegate:(id)arg3 parentPost:(id)arg4;
 - (id)createLegacyVideoNodeForPost:(id)arg1 withOptions:(id)arg2 delegate:(id)arg3 parentPost:(id)arg4;
 - (struct CGSize)mediaSizeForTargetWidth:(double)arg1;

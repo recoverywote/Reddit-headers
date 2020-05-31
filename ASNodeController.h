@@ -17,8 +17,8 @@
     _Bool _shouldInvertStrongReference;
 }
 
-@property(nonatomic) _Bool shouldInvertStrongReference; // @synthesize shouldInvertStrongReference=_shouldInvertStrongReference;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool shouldInvertStrongReference; // @synthesize shouldInvertStrongReference=_shouldInvertStrongReference;
 - (void)interfaceStateDidChange:(unsigned long long)arg1 fromState:(unsigned long long)arg2;
 - (void)didExitPreloadState;
 - (void)didEnterPreloadState;

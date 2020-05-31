@@ -14,11 +14,10 @@
 }
 
 + (struct CGSize)calculatedSizeWithAccountContext:(id)arg1 data:(id)arg2 forWidth:(double)arg3;
-@property(retain, nonatomic) ChatMessageCellNode *messageNode; // @synthesize messageNode=_messageNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ChatMessageCellNode *messageNode; // @synthesize messageNode=_messageNode;
 - (void)layoutSubviews;
 - (void)configureWithAccountContext:(id)arg1 message:(id)arg2 channel:(id)arg3;
-- (id)initWithFrame:(struct CGRect)arg1;
 
 @end
 

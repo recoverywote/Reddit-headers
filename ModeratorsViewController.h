@@ -20,10 +20,10 @@
     NSString *_subredditName;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
 @property(nonatomic) __weak id <ModeratorsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long listType; // @synthesize listType=_listType;
-- (void).cxx_destruct;
 - (void)handleInvitationAcceptance:(_Bool)arg1;
 - (id)pageItemText;
 - (void)form:(id)arg1 completed:(_Bool)arg2 context:(id)arg3;

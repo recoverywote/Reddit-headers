@@ -20,6 +20,7 @@
     struct CGRect _imageDrawRect;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType imageModificationBlock; // @synthesize imageModificationBlock=_imageModificationBlock;
 @property(copy, nonatomic) CDUnknownBlockType didDisplayNodeContentWithRenderingContext; // @synthesize didDisplayNodeContentWithRenderingContext=_didDisplayNodeContentWithRenderingContext;
 @property(copy, nonatomic) CDUnknownBlockType willDisplayNodeContentWithRenderingContext; // @synthesize willDisplayNodeContentWithRenderingContext=_willDisplayNodeContentWithRenderingContext;
@@ -28,7 +29,6 @@
 @property struct CGRect imageDrawRect; // @synthesize imageDrawRect=_imageDrawRect;
 @property struct CGSize backingSize; // @synthesize backingSize=_backingSize;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 

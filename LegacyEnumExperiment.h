@@ -15,9 +15,9 @@
     id <LegacyEnumExperimentDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <LegacyEnumExperimentDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSArray *items; // @synthesize items=_items;
-- (void).cxx_destruct;
 - (id)itemWithTitle:(id)arg1;
 @property(retain, nonatomic) LegacyEnumExperimentItem *currentItem;
 - (id)initWithName:(id)arg1 getter:(SEL)arg2 setter:(SEL)arg3 delegate:(id)arg4 items:(id)arg5;

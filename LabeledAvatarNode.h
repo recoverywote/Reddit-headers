@@ -7,19 +7,22 @@
 #import <AsyncDisplayKit/ASDisplayNode.h>
 
 @class ASTextNode, AvatarImageNode;
+@protocol ViewContext;
 
 @interface LabeledAvatarNode : ASDisplayNode
 {
+    id <ViewContext> _viewContext;
     AvatarImageNode *_avatarNode;
     ASTextNode *_titleLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) AvatarImageNode *avatarNode; // @synthesize avatarNode=_avatarNode;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureWithContact:(id)arg1 isLastItem:(_Bool)arg2;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

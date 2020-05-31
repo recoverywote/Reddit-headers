@@ -13,8 +13,8 @@
     NSArray *_allChannels;
 }
 
-@property(retain, nonatomic) NSArray *allChannels; // @synthesize allChannels=_allChannels;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *allChannels; // @synthesize allChannels=_allChannels;
 - (_Bool)hasMoreContent;
 - (void)fetchData;
 

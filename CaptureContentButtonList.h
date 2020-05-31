@@ -15,10 +15,10 @@
     CDUnknownBlockType _action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(retain, nonatomic) NSMutableArray *selectedButtons; // @synthesize selectedButtons=_selectedButtons;
 @property(retain, nonatomic) NSArray *buttonList; // @synthesize buttonList=_buttonList;
-- (void).cxx_destruct;
 
 @end
 

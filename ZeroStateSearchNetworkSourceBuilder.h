@@ -14,8 +14,8 @@
     id <AccountContext> _accountContext;
 }
 
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (id)trendingObjectProviderForRailsContext:(id)arg1;
 - (id)historyIndexProvider;
 - (id)networkSourceWithRailsContext:(id)arg1;

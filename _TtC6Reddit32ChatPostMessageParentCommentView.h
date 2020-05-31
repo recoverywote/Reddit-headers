@@ -20,7 +20,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
-- (id)initWithChatPresentationStyle:(unsigned long long)arg1 delegate:(id)arg2;
+- (id)initWithChatPresentationStyle:(unsigned long long)arg1 delegate:(id)arg2 viewContext:(id)arg3;
 
 @end
 

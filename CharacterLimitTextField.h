@@ -17,12 +17,12 @@
     BaseLabel *_characterLimitIndicatorLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *characterLimitIndicatorLabel; // @synthesize characterLimitIndicatorLabel=_characterLimitIndicatorLabel;
 @property(nonatomic) _Bool enforceCharacterLimit; // @synthesize enforceCharacterLimit=_enforceCharacterLimit;
 @property(nonatomic) _Bool displayCharacterCount; // @synthesize displayCharacterCount=_displayCharacterCount;
 @property(nonatomic) long long characterLengthLimit; // @synthesize characterLengthLimit=_characterLengthLimit;
 @property(nonatomic) long long characterLengthWarningThreshold; // @synthesize characterLengthWarningThreshold=_characterLengthWarningThreshold;
-- (void).cxx_destruct;
 - (struct CGRect)editingRectForBounds:(struct CGRect)arg1;
 - (void)setText:(id)arg1;
 - (void)textFieldDidChange:(id)arg1;

@@ -27,6 +27,7 @@
     struct CGRect _contentViewStartBounds;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <TheatrePhysicsControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIAttachmentBehavior *attachmentBehavior; // @synthesize attachmentBehavior=_attachmentBehavior;
 @property(retain, nonatomic) UIDynamicAnimator *animator; // @synthesize animator=_animator;
@@ -41,7 +42,6 @@
 @property(nonatomic) __weak UIView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic) long long panState; // @synthesize panState=_panState;
 @property(retain, nonatomic) UIPanGestureRecognizer *panRecognizer; // @synthesize panRecognizer=_panRecognizer;
-- (void).cxx_destruct;
 - (id)pushView:(id)arg1 offScreenBehaviorUsingVelocity:(struct CGPoint)arg2;
 - (long long)physicsStateFromPanGestureRecognizer:(id)arg1;
 - (void)handlePanDidBecomeExitEnding:(id)arg1;

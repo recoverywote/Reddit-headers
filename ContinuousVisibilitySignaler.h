@@ -18,10 +18,10 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *signalReceivers; // @synthesize signalReceivers=_signalReceivers;
 @property(retain, nonatomic) CADisplayLink *slowTimer; // @synthesize slowTimer=_slowTimer;
 @property(retain, nonatomic) CADisplayLink *trackingTimer; // @synthesize trackingTimer=_trackingTimer;
-- (void).cxx_destruct;
 - (void)addSignalReceiver:(id)arg1;
 - (void)didPing:(id)arg1;
 - (void)didTrack:(id)arg1;

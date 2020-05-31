@@ -64,13 +64,13 @@
     UIColor *_defaultControlsColor;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) int periodicTimeObserverTimescale; // @synthesize periodicTimeObserverTimescale=_periodicTimeObserverTimescale;
 @property(nonatomic) _Bool muted; // @synthesize muted=_muted;
 @property(nonatomic) _Bool shouldAutoRepeat; // @synthesize shouldAutoRepeat=_shouldAutoRepeat;
 @property(nonatomic) _Bool shouldAutoPlay; // @synthesize shouldAutoPlay=_shouldAutoPlay;
 @property(nonatomic) _Bool controlsDisabled; // @synthesize controlsDisabled=_controlsDisabled;
 @property(readonly, nonatomic) CDStruct_1b6d18a9 duration; // @synthesize duration=_duration;
-- (void).cxx_destruct;
 - (id)timeStringForCMTime:(CDStruct_1b6d18a9)arg1 forTimeLabelType:(long long)arg2;
 @property(nonatomic) _Bool shouldAggressivelyRecoverFromStall;
 @property(readonly, nonatomic) ASVideoNode *videoNode;

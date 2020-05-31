@@ -19,13 +19,13 @@
     TimeoutExpirationContainer *_cachedCommunities;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) TimeoutExpirationContainer *cachedCommunities; // @synthesize cachedCommunities=_cachedCommunities;
 @property(nonatomic) double cacheExpirationTimeout; // @synthesize cacheExpirationTimeout=_cacheExpirationTimeout;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) NSMutableArray *fetchCompletionBlocks; // @synthesize fetchCompletionBlocks=_fetchCompletionBlocks;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(nonatomic) __weak RedditService *redditService; // @synthesize redditService=_redditService;
-- (void).cxx_destruct;
 - (void)didFetchCommunities:(id)arg1 withError:(id)arg2;
 - (void)fetchCommunitiesWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithRedditService:(id)arg1 queue:(id)arg2 cacheExpirationTimeout:(double)arg3;

@@ -14,9 +14,9 @@
     UIView *_featuredLabelContainerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *featuredLabelContainerView; // @synthesize featuredLabelContainerView=_featuredLabelContainerView;
 @property(retain, nonatomic) UILabel *featuredLabel; // @synthesize featuredLabel=_featuredLabel;
-- (void).cxx_destruct;
 - (id)highlightColor;
 - (void)setupViews;
 - (void)configureWithProduct:(id)arg1 forAccount:(id)arg2;

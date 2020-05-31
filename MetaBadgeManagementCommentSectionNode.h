@@ -16,11 +16,11 @@
     MetaBadgeManagementTabNode *_tabNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MetaBadgeManagementTabNode *tabNode; // @synthesize tabNode=_tabNode;
 @property(retain, nonatomic) MetaCommentPreviewNode *commentPreviewNode; // @synthesize commentPreviewNode=_commentPreviewNode;
 @property(retain, nonatomic) ASImageNode *downvoteImageNode; // @synthesize downvoteImageNode=_downvoteImageNode;
 @property(retain, nonatomic) ASImageNode *upvoteImageNode; // @synthesize upvoteImageNode=_upvoteImageNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithContentColor:(id)arg1 tabs:(id)arg2 selectedTab:(id)arg3 usernameDecoration:(id)arg4 actionDelegate:(id)arg5;
 

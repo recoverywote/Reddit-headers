@@ -18,10 +18,10 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIView *overlayView; // @synthesize overlayView=_overlayView;
 @property(retain, nonatomic) UIColor *listBackgroundColor; // @synthesize listBackgroundColor=_listBackgroundColor;
 @property(nonatomic) _Bool shouldHighlightBackground; // @synthesize shouldHighlightBackground=_shouldHighlightBackground;
-- (void).cxx_destruct;
 - (void)enableOverlay:(_Bool)arg1;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)updateContentViewsForData:(id)arg1;

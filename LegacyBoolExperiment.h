@@ -13,8 +13,8 @@
     id <LegacyBoolExperimentDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <LegacyBoolExperimentDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <LegacyBoolExperimentDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isEnabled;
 - (id)initWithName:(id)arg1 getter:(SEL)arg2 setter:(SEL)arg3 delegate:(id)arg4;
 

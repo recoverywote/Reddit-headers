@@ -15,9 +15,9 @@
 }
 
 + (id)defaultImageFilterTypes;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *filteredImages; // @synthesize filteredImages=_filteredImages;
 @property(retain, nonatomic) UIImage *originalImage; // @synthesize originalImage=_originalImage;
-- (void).cxx_destruct;
 - (id)ciFilterForFilterType:(long long)arg1;
 - (void)precacheImagesWithCompletion:(CDUnknownBlockType)arg1;
 - (id)applyImageFilterType:(long long)arg1 toImage:(id)arg2;

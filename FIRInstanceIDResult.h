@@ -16,9 +16,9 @@
     NSString *_token;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *token; // @synthesize token=_token;
 @property(copy, nonatomic) NSString *instanceID; // @synthesize instanceID=_instanceID;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

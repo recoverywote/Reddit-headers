@@ -19,10 +19,10 @@
     EmptyCustomFeedView *_emptyCustomFeedView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) EmptyCustomFeedView *emptyCustomFeedView; // @synthesize emptyCustomFeedView=_emptyCustomFeedView;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabParentDelegate; // @synthesize pagedTabParentDelegate=_pagedTabParentDelegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

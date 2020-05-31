@@ -18,11 +18,11 @@
     BaseSearchBar *_searchBar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) UIView *separatorLine; // @synthesize separatorLine=_separatorLine;
 @property(nonatomic) __weak Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)reloadSearchResults;
 - (void)searchBarCancelButtonClicked:(id)arg1;
 - (void)searchBarTextDidBeginEditing:(id)arg1;

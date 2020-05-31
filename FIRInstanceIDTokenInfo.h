@@ -21,6 +21,7 @@
     NSDate *_cacheTime;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDate *cacheTime; // @synthesize cacheTime=_cacheTime;
 @property(retain, nonatomic) FIRInstanceIDAPNSInfo *APNSInfo; // @synthesize APNSInfo=_APNSInfo;
 @property(readonly, copy, nonatomic) NSString *firebaseAppID; // @synthesize firebaseAppID=_firebaseAppID;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *token; // @synthesize token=_token;
 @property(readonly, copy, nonatomic) NSString *scope; // @synthesize scope=_scope;
 @property(readonly, copy, nonatomic) NSString *authorizedEntity; // @synthesize authorizedEntity=_authorizedEntity;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (_Bool)isDefaultToken;

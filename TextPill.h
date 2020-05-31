@@ -20,13 +20,13 @@
     UIImage *_pillIconImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *pillIconImage; // @synthesize pillIconImage=_pillIconImage;
 @property(copy, nonatomic) NSArray *pillRichText; // @synthesize pillRichText=_pillRichText;
 @property(copy, nonatomic) NSString *pillAttributedType; // @synthesize pillAttributedType=_pillAttributedType;
 @property(retain, nonatomic) UIColor *pillBackgroundColor; // @synthesize pillBackgroundColor=_pillBackgroundColor;
 @property(retain, nonatomic) UIColor *pillTextColor; // @synthesize pillTextColor=_pillTextColor;
 @property(copy, nonatomic) NSString *pillText; // @synthesize pillText=_pillText;
-- (void).cxx_destruct;
 - (id)pillAttributedStringForAttributes:(id)arg1 pillTextBuilder:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
 - (id)initWithPillable:(id)arg1;
 - (id)initWithString:(id)arg1;

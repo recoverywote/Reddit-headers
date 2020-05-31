@@ -24,6 +24,7 @@
 }
 
 + (id)discoveryUnitPkForFeedType:(unsigned long long)arg1 subredditName:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject *parentDidFetchObserver; // @synthesize parentDidFetchObserver=_parentDidFetchObserver;
 @property(retain, nonatomic) NSObject *providerWillFetchObserver; // @synthesize providerWillFetchObserver=_providerWillFetchObserver;
 @property(copy, nonatomic) NSUUID *parentCorrelationId; // @synthesize parentCorrelationId=_parentCorrelationId;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) _TtC6Reddit13StreamManager *streamManager; // @synthesize streamManager=_streamManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)invalidate;
 - (void)fetchSubredditConfig;

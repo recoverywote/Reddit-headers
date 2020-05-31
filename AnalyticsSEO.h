@@ -18,9 +18,9 @@
     NSString *_internal_link_url;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool internal_link_urlIsSet; // @synthesize internal_link_urlIsSet=_internal_link_urlIsSet;
 @property(copy, nonatomic) NSString *internal_link_url; // @synthesize internal_link_url=_internal_link_url;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -16,10 +16,10 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *systemBuildVersion; // @synthesize systemBuildVersion=_systemBuildVersion;
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(copy, nonatomic) NSString *userAgent; // @synthesize userAgent=_userAgent;
-- (void).cxx_destruct;
 - (void)collectUserAgentWithCompletion:(CDUnknownBlockType)arg1;
 - (void)saveUserAgent:(id)arg1 forSystemBuildVersion:(id)arg2;
 - (id)loadUserAgentForSystemBuildVersion:(id)arg1;

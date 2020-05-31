@@ -47,6 +47,7 @@
 + (struct dispatch_queue_s *)sharedTrashQueue;
 + (id)cacheURLWithRootPath:(id)arg1 prefix:(id)arg2 name:(id)arg3;
 + (id)sharedCache;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool diskStateKnown; // @synthesize diskStateKnown=_diskStateKnown;
 @property(nonatomic) struct _opaque_pthread_cond_t diskStateKnownCondition; // @synthesize diskStateKnownCondition=_diskStateKnownCondition;
 @property(nonatomic) _Bool diskWritable; // @synthesize diskWritable=_diskWritable;
@@ -58,7 +59,6 @@
 @property unsigned long long byteCount; // @synthesize byteCount=_byteCount;
 @property(retain, nonatomic) NSURL *cacheURL; // @synthesize cacheURL=_cacheURL;
 @property(readonly) NSString *prefix; // @synthesize prefix=_prefix;
-- (void).cxx_destruct;
 - (void)unlock;
 - (void)lock;
 - (void)lockAndWaitForKnownState;

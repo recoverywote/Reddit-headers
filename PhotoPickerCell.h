@@ -15,10 +15,10 @@
     UIView *_hightlightView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) int imageRequestID; // @synthesize imageRequestID=_imageRequestID;
 @property(retain, nonatomic) UIView *hightlightView; // @synthesize hightlightView=_hightlightView;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)configureWithAsset:(id)arg1;
 - (void)prepareForReuse;
 - (void)setHighlighted:(_Bool)arg1;

@@ -24,6 +24,7 @@
     UIView *_mask;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *mask; // @synthesize mask=_mask;
 @property(retain, nonatomic) AnimatedGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) UIView *shareView; // @synthesize shareView=_shareView;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) UIView *titleViewSecond; // @synthesize titleViewSecond=_titleViewSecond;
 @property(retain, nonatomic) UIView *titleViewFirst; // @synthesize titleViewFirst=_titleViewFirst;
 @property(retain, nonatomic) UIView *userIconView; // @synthesize userIconView=_userIconView;
-- (void).cxx_destruct;
 - (void)configureView:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

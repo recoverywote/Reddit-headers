@@ -26,6 +26,7 @@
     Comment *_commentBeingInspectedForReports;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Comment *commentBeingInspectedForReports; // @synthesize commentBeingInspectedForReports=_commentBeingInspectedForReports;
 @property(nonatomic) _Bool tappedOnReportFlag; // @synthesize tappedOnReportFlag=_tappedOnReportFlag;
 @property(nonatomic) long long queueType; // @synthesize queueType=_queueType;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) ModQueueBulkActionsView *bulkActionView; // @synthesize bulkActionView=_bulkActionView;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) ModQueueHeaderBar *headerBar; // @synthesize headerBar=_headerBar;
-- (void).cxx_destruct;
 - (void)postBulkActionOfType:(id)arg1 items:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)commentCommandViewDidTapDistinguish:(id)arg1;
 - (void)commentCommandViewDidTapRemoveAsSpam:(id)arg1;

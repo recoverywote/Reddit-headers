@@ -21,14 +21,14 @@
     id <VideoContext> _videoContext;
 }
 
-+ (id)defaultPostDetailOptions;
++ (id)defaultPostDetailOptionsWithViewContext:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <VideoContext> videoContext; // @synthesize videoContext=_videoContext;
 @property(nonatomic) _Bool shouldShowTrendingToaster; // @synthesize shouldShowTrendingToaster=_shouldShowTrendingToaster;
 @property(nonatomic) _Bool shouldUsePostCollectionLayout; // @synthesize shouldUsePostCollectionLayout=_shouldUsePostCollectionLayout;
 @property(copy, nonatomic) NSString *initialPostId; // @synthesize initialPostId=_initialPostId;
 @property(nonatomic) _Bool shouldScrollToComments; // @synthesize shouldScrollToComments=_shouldScrollToComments;
 @property(readonly, nonatomic) FeedPostOptions *feedPostOptions; // @synthesize feedPostOptions=_feedPostOptions;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithFeedPostOptions:(id)arg1;
 

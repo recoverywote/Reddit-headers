@@ -17,10 +17,10 @@
     UIImageView *_failureImageView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldStartSpinning; // @synthesize shouldStartSpinning=_shouldStartSpinning;
 @property(retain, nonatomic) UIImageView *failureImageView; // @synthesize failureImageView=_failureImageView;
 @property(retain, nonatomic) OrbitLoaderView *spinnerView; // @synthesize spinnerView=_spinnerView;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)showFailureState;
 - (void)stopSpinning;

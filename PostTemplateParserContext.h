@@ -15,8 +15,8 @@
     Post *_post;
 }
 
-@property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void).cxx_destruct;
+@property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (id)pillForTemplateName:(id)arg1;
 - (id)valueForTemplateName:(id)arg1;
 - (id)initWithPost:(id)arg1;

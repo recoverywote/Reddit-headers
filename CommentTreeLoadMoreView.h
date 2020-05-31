@@ -17,10 +17,10 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *moreCommentLabel; // @synthesize moreCommentLabel=_moreCommentLabel;
 @property(nonatomic) __weak id <CommentTreeLoadMoreViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) Comment *comment;
 - (void)didTapLabel:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;

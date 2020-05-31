@@ -35,6 +35,7 @@
     PillStyle *_pillStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(nonatomic) long long lastClickedImageWidgetSection; // @synthesize lastClickedImageWidgetSection=_lastClickedImageWidgetSection;
 @property(retain, nonatomic) SubredditImageWidget *lastClickedImageWidget; // @synthesize lastClickedImageWidget=_lastClickedImageWidget;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
-- (void).cxx_destruct;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (id)analyticsPageType;

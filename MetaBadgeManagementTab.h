@@ -15,10 +15,10 @@
     UIImage *_image;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) id value; // @synthesize value=_value;
-- (void).cxx_destruct;
 - (id)initWithValue:(id)arg1 title:(id)arg2 image:(id)arg3;
 
 @end

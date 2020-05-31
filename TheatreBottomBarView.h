@@ -18,12 +18,12 @@
     GradientView *_gradientView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) BaseButton *linkTextButton; // @synthesize linkTextButton=_linkTextButton;
 @property(retain, nonatomic) BaseView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(retain, nonatomic) TheatreMediaItem *mediaItem; // @synthesize mediaItem=_mediaItem;
 @property(nonatomic) __weak id <TheatreBottomBarViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapLinkButton:(id)arg1;
 - (void)updateWithData:(id)arg1;
 - (void)updateTextWithPercentDisplayed:(double)arg1;

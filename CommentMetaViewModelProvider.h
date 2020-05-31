@@ -20,6 +20,7 @@
     NSMutableArray *_queuedUserPKs;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *queuedUserPKs; // @synthesize queuedUserPKs=_queuedUserPKs;
 @property(readonly, nonatomic) NSMutableDictionary *viewModels; // @synthesize viewModels=_viewModels;
 @property(readonly, nonatomic) NextRunLoopScheduler *nextRunLoopScheduler; // @synthesize nextRunLoopScheduler=_nextRunLoopScheduler;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) _TtC6Reddit33MetaSubredditPointBalanceProvider *subredditPointBalanceProvider; // @synthesize subredditPointBalanceProvider=_subredditPointBalanceProvider;
 @property(readonly, nonatomic) MetaBadgeManager *badgeManager; // @synthesize badgeManager=_badgeManager;
-- (void).cxx_destruct;
 - (id)commentMetaViewModelForUserPK:(id)arg1;
 - (void)updateWithBalances:(id)arg1;
 - (void)updateViewModelsForUserPKs:(id)arg1;

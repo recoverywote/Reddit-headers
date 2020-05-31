@@ -14,6 +14,7 @@
     // Error parsing type: , name: imageProvider
     // Error parsing type: , name: insertedTransactionsSubject
     // Error parsing type: , name: completedTransactionsSubject
+    // Error parsing type: , name: failedTransactionsSubject
     // Error parsing type: , name: openOngoingTransactionSink
     // Error parsing type: , name: openOngoingTransactionSubscription
     // Error parsing type: , name: container

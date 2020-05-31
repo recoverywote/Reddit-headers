@@ -22,6 +22,7 @@
     NSMutableDictionary *_queuedPosts;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *queuedPosts; // @synthesize queuedPosts=_queuedPosts;
 @property(readonly, nonatomic) NSMutableArray *queuedUserPKs; // @synthesize queuedUserPKs=_queuedUserPKs;
 @property(readonly, nonatomic) NSMutableDictionary *viewModelsByPosts; // @synthesize viewModelsByPosts=_viewModelsByPosts;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) _TtC6Reddit33MetaSubredditPointBalanceProvider *subredditPointBalanceProvider; // @synthesize subredditPointBalanceProvider=_subredditPointBalanceProvider;
 @property(readonly, nonatomic) MetaBadgeManager *badgeManager; // @synthesize badgeManager=_badgeManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)postMetaViewModelForPost:(id)arg1;
 - (void)fetchViewModelsForPosts:(id)arg1 viewModels:(id)arg2 service:(id)arg3;
 - (void)updateWithBalances:(id)arg1;

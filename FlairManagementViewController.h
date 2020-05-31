@@ -23,13 +23,13 @@
     EditFlairThemedNavigationHelper *_themeHelper;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) EditFlairThemedNavigationHelper *themeHelper; // @synthesize themeHelper=_themeHelper;
 @property(retain, nonatomic) BaseView *searchBarContainer; // @synthesize searchBarContainer=_searchBarContainer;
 @property(retain, nonatomic) REDSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(retain, nonatomic) FlairManagementPresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (id)analyticsScreenViewName;
 - (void)clearSearchBar;
 - (void)searchBarClearButtonClicked:(id)arg1;

@@ -21,6 +21,7 @@
     UIButton *_purchaseButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *purchaseButton; // @synthesize purchaseButton=_purchaseButton;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) UILabel *baseCoinValueLabel; // @synthesize baseCoinValueLabel=_baseCoinValueLabel;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UIImageView *productImageView; // @synthesize productImageView=_productImageView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) UILabel *optionLabel; // @synthesize optionLabel=_optionLabel;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)setupSaleLabelWithCoins:(id)arg1;
 - (void)handleCellDidTap:(id)arg1;

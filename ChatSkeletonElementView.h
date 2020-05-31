@@ -18,12 +18,12 @@
 }
 
 + (id)style;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ChatSkeletonElementViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) BaseView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) BaseView *timestampView; // @synthesize timestampView=_timestampView;
 @property(retain, nonatomic) BaseView *nameView; // @synthesize nameView=_nameView;
 @property(retain, nonatomic) BaseView *avatarView; // @synthesize avatarView=_avatarView;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)init;

@@ -19,11 +19,11 @@
     NSArray *_textSizes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *textSizes; // @synthesize textSizes=_textSizes;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) double padding; // @synthesize padding=_padding;
 @property(retain, nonatomic) NSArray *items; // @synthesize items=_items;
-- (void).cxx_destruct;
 - (void)calculateTextSizes;
 - (id)layout;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;

@@ -17,9 +17,9 @@
 }
 
 + (id)textViewWithPlaceholder:(id)arg1 height:(double)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(nonatomic) _Bool isOptional; // @synthesize isOptional;
-- (void).cxx_destruct;
 - (double)heightWithMaxSize:(struct CGSize)arg1;
 @property(retain, nonatomic) NSArray *keyboardFields;
 - (_Bool)requirementMet;

@@ -31,6 +31,7 @@
     GoldProduct *_targetedOfferDeal;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GoldProduct *targetedOfferDeal; // @synthesize targetedOfferDeal=_targetedOfferDeal;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *dealPopupController; // @synthesize dealPopupController=_dealPopupController;
 @property(readonly, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *backgroundImageWidthConstraint; // @synthesize backgroundImageWidthConstraint=_backgroundImageWidthConstraint;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) UIImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
-- (void).cxx_destruct;
 - (void)hidePurchasingModalIfPresented;
 - (struct UIEdgeInsets)contentInsetForRowAtIndexPath:(id)arg1;
 - (void)showValidationFailureDialog;

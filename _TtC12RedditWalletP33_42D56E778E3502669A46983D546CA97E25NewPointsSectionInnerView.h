@@ -11,7 +11,7 @@
     // Error parsing type: , name: stackView
     // Error parsing type: , name: repository
     // Error parsing type: , name: performClaimSink
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

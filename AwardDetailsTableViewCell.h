@@ -21,6 +21,7 @@
     NSLayoutConstraint *_countLabelWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *countLabelWidthConstraint; // @synthesize countLabelWidthConstraint=_countLabelWidthConstraint;
 @property(retain, nonatomic) UIStackView *rightContentStackView; // @synthesize rightContentStackView=_rightContentStackView;
 @property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseLabel *countLabel; // @synthesize countLabel=_countLabel;
 @property(nonatomic) __weak id <AwardDetailsTabelViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)overflowButtonDidTap:(id)arg1;
 - (void)configureWithViewModel:(id)arg1;

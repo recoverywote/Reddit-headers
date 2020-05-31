@@ -19,8 +19,8 @@
 + (id)languageDictionaries;
 + (id)applicationLanguage;
 + (id)shared;
-@property(readonly) NSDictionary *currentLanguageDictionary; // @synthesize currentLanguageDictionary=_currentLanguageDictionary;
 - (void).cxx_destruct;
+@property(readonly) NSDictionary *currentLanguageDictionary; // @synthesize currentLanguageDictionary=_currentLanguageDictionary;
 - (id)localizeString:(id)arg1;
 @property(copy) NSString *currentLanguage;
 - (id)init;

@@ -23,12 +23,12 @@
     _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
 @property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak PostDetailViewController *viewController; // @synthesize viewController=_viewController;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
-- (void).cxx_destruct;
 - (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
 - (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
@@ -72,7 +72,7 @@
 - (void)trendingToasterDidTapCancel:(id)arg1;
 - (void)trendingToasterDidTapClose:(id)arg1;
 - (void)postDetailHeaderNodeDidTap:(id)arg1;
-- (void)feedPostDetailAwardsNodeDidTap:(id)arg1;
+- (void)feedPostDetailAwardsNodeDidTap:(id)arg1 awardIdentifier:(id)arg2;
 - (void)handleDidTapUrl:(id)arg1 forPost:(id)arg2;
 - (void)presentPostModerateActionSheetForPost:(id)arg1 sender:(id)arg2;
 - (void)showViewReportsForPost:(id)arg1 fromNode:(id)arg2;

@@ -20,6 +20,7 @@
     Subreddit *_subreddit;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak BaseViewController *subscribableViewController; // @synthesize subscribableViewController=_subscribableViewController;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
@@ -28,7 +29,6 @@
 @property(nonatomic) __weak UIView *animationRootView; // @synthesize animationRootView=_animationRootView;
 @property(nonatomic) _Bool isResizing; // @synthesize isResizing=_isResizing;
 @property(nonatomic) _Bool descriptionExpanded; // @synthesize descriptionExpanded=_descriptionExpanded;
-- (void).cxx_destruct;
 - (id)buttonTitle;
 - (void)didTapDescriptionText:(id)arg1;
 - (void)layoutSubviews;

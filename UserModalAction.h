@@ -16,11 +16,11 @@
     SEL _action;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(nonatomic) SEL action; // @synthesize action=_action;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) UIImage *icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 
 @end
 

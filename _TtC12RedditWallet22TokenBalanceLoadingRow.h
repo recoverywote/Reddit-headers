@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet22TokenBalanceLoadingRow : UIView
 {
     // Error parsing type: , name: animationView
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

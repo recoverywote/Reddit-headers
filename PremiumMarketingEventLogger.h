@@ -16,11 +16,11 @@
     AnalyticsManager *_analyticsManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didLogScreenViewEvent; // @synthesize didLogScreenViewEvent=_didLogScreenViewEvent;
 @property(readonly, nonatomic) AnalyticsManager *analyticsManager; // @synthesize analyticsManager=_analyticsManager;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
-- (void).cxx_destruct;
 - (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
 - (void)logViewPurchaseSuccessEventWithGoldProduct:(id)arg1 transactionId:(id)arg2;
 - (void)logViewPurchaseProcessingEventWithGoldProduct:(id)arg1;

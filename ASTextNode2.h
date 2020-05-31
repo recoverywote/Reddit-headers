@@ -44,12 +44,12 @@
 + (void)drawRect:(struct CGRect)arg1 withParameters:(id)arg2 isCancelled:(CDUnknownBlockType)arg3 isRasterizing:(_Bool)arg4;
 + (id)compatibleLayoutWithContainer:(id)arg1 text:(id)arg2;
 + (double)ascenderWithAttributedString:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool passthroughNonlinkTouches; // @synthesize passthroughNonlinkTouches=_passthroughNonlinkTouches;
 @property(nonatomic) _Bool longPressCancelsTouches; // @synthesize longPressCancelsTouches=_longPressCancelsTouches;
 @property __weak id <ASTextNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSArray *linkAttributeNames; // @synthesize linkAttributeNames=_linkAttributeNames;
 @property struct UIEdgeInsets placeholderInsets; // @synthesize placeholderInsets=_placeholderInsets;
-- (void).cxx_destruct;
 - (_Bool)usingExperiment;
 - (id)_locked_prepareTruncationStringForDrawing:(id)arg1;
 - (id)_locked_composedTruncationText;

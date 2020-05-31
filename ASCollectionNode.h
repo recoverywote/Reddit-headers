@@ -20,9 +20,9 @@
     _ASCollectionPendingState *_pendingState;
 }
 
-@property(retain, nonatomic) _ASCollectionPendingState *pendingState; // @synthesize pendingState=_pendingState;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(retain, nonatomic) _ASCollectionPendingState *pendingState; // @synthesize pendingState=_pendingState;
 - (void)_configureCollectionViewLayout:(id)arg1;
 - (id)propertiesForDebugDescription;
 - (void)setPrimitiveTraitCollection:(struct ASPrimitiveTraitCollection)arg1;

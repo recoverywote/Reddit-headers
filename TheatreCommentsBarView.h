@@ -13,15 +13,15 @@
     GradientView *_gradientView;
 }
 
-@property(retain, nonatomic) GradientView *gradientView; // @synthesize gradientView=_gradientView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) GradientView *gradientView; // @synthesize gradientView=_gradientView;
 - (void)layoutSubviews;
 - (double)seperatorSpacing;
 - (SEL)customLineColor;
 - (SEL)customMetatextColor;
 - (SEL)customActionColor;
 - (SEL)customBackgroundColor;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 
 @end
 

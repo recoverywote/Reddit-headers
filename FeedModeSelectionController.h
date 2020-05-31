@@ -14,9 +14,9 @@
     FeedPresenter *_feedPresenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak FeedPresenter *feedPresenter; // @synthesize feedPresenter=_feedPresenter;
 @property(nonatomic) __weak BaseViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (id)identifierForFeedDisplayMode:(unsigned long long)arg1;
 - (id)galleryModeItem;
 - (id)compactModeItem;

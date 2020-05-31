@@ -22,10 +22,10 @@
 
 + (id)defaultValueForKey:(id)arg1;
 + (id)displayQueue;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isDisplaySuspended) _Bool displaySuspended; // @synthesize displaySuspended=_displaySuspended;
 @property __weak id <_ASDisplayLayerDelegate> asyncDelegate; // @synthesize asyncDelegate=_asyncDelegate;
 @property(nonatomic) __weak ASDisplayNode *asyncdisplaykit_node; // @synthesize asyncdisplaykit_node=_asyncdisplaykit_node;
-- (void).cxx_destruct;
 - (id)description;
 - (void)cancelAsyncDisplay;
 - (void)display:(_Bool)arg1;

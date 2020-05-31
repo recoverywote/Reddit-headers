@@ -22,13 +22,13 @@
     NSString *_target_user_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool target_user_idIsSet; // @synthesize target_user_idIsSet=_target_user_idIsSet;
 @property(copy, nonatomic) NSString *target_user_id; // @synthesize target_user_id=_target_user_id;
 @property(nonatomic) _Bool titleIsSet; // @synthesize titleIsSet=_titleIsSet;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

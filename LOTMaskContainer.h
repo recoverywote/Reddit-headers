@@ -14,8 +14,8 @@
     NSNumber *_currentFrame;
 }
 
-@property(retain, nonatomic) NSNumber *currentFrame; // @synthesize currentFrame=_currentFrame;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSNumber *currentFrame; // @synthesize currentFrame=_currentFrame;
 - (id)initWithMasks:(id)arg1;
 
 @end

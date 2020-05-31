@@ -22,13 +22,13 @@
     NSString *_target_user_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool is_target_removed_by_stewardIsSet; // @synthesize is_target_removed_by_stewardIsSet=_is_target_removed_by_stewardIsSet;
 @property(nonatomic) _Bool is_target_removed_by_steward; // @synthesize is_target_removed_by_steward=_is_target_removed_by_steward;
 @property(nonatomic) _Bool is_automoderatorIsSet; // @synthesize is_automoderatorIsSet=_is_automoderatorIsSet;
 @property(nonatomic) _Bool is_automoderator; // @synthesize is_automoderator=_is_automoderator;
 @property(nonatomic) _Bool target_user_idIsSet; // @synthesize target_user_idIsSet=_target_user_idIsSet;
 @property(copy, nonatomic) NSString *target_user_id; // @synthesize target_user_id=_target_user_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

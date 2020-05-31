@@ -14,9 +14,9 @@
     UIImage *_templateImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *templateImage; // @synthesize templateImage=_templateImage;
 @property(retain, nonatomic) UIColor *actionColor; // @synthesize actionColor=_actionColor;
-- (void).cxx_destruct;
 - (id)initWithImage:(id)arg1 highlightColor:(id)arg2;
 
 @end

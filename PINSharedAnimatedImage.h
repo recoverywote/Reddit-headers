@@ -28,6 +28,7 @@
     unsigned long long _bitsPerPixel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned int bitmapInfo; // @synthesize bitmapInfo=_bitmapInfo;
 @property(readonly, nonatomic) unsigned long long bitsPerPixel; // @synthesize bitsPerPixel=_bitsPerPixel;
 @property(readonly, nonatomic) unsigned int height; // @synthesize height=_height;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) NSArray *infoCompletions; // @synthesize infoCompletions=_infoCompletions;
 @property(retain, nonatomic) NSArray *completions; // @synthesize completions=_completions;
 @property(retain) NSArray *maps; // @synthesize maps=_maps;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)setInfoProcessedWithCoverImage:(id)arg1 UUID:(id)arg2 durations:(float *)arg3 totalDuration:(double)arg4 loopCount:(unsigned long long)arg5 frameCount:(unsigned long long)arg6 width:(unsigned int)arg7 height:(unsigned int)arg8 bitsPerPixel:(unsigned long long)arg9 bitmapInfo:(unsigned int)arg10;
 - (id)init;

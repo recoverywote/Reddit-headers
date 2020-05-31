@@ -6,6 +6,7 @@
 
 #import <UIKit/UIView.h>
 
+__attribute__((visibility("hidden")))
 @interface _TtCC7Economy14AwardSelection13AwardInfoView : UIView
 {
     // Error parsing type: , name: awardViewModel

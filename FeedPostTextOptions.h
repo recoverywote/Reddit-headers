@@ -20,13 +20,13 @@
     FeedPostOptions *_feedPostOptions;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldApplyTextContainerInset; // @synthesize shouldApplyTextContainerInset=_shouldApplyTextContainerInset;
 @property(nonatomic) _Bool shouldShowSelfText; // @synthesize shouldShowSelfText=_shouldShowSelfText;
 @property(nonatomic) _Bool shouldShowMetaFlair; // @synthesize shouldShowMetaFlair=_shouldShowMetaFlair;
 @property(nonatomic) _Bool shouldShowFlair; // @synthesize shouldShowFlair=_shouldShowFlair;
 @property(nonatomic) _Bool shouldDimReadPost; // @synthesize shouldDimReadPost=_shouldDimReadPost;
 @property(nonatomic) __weak FeedPostOptions *feedPostOptions; // @synthesize feedPostOptions=_feedPostOptions;
-- (void).cxx_destruct;
 - (_Bool)isCompactMode;
 @property(readonly, nonatomic) struct CGSize thumbnailSizeWithInsets;
 @property(readonly, nonatomic) struct UIEdgeInsets thumbnailInsets;

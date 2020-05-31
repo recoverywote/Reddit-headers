@@ -8,7 +8,7 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ASDisplayNode, ASTextNode, AwardingTotal, AwardingTotalNode, Comment, NSArray, NSDictionary, NSString;
+@class ASDisplayNode, ASTextNode, AwardingTotal, Comment, NSArray, NSDictionary, NSString, _TtC6Reddit17AwardingTotalNode;
 
 @interface CommentAwardsNode : BaseFeedDisplayNode <ObjectObserverProtocol>
 {
@@ -16,7 +16,7 @@
     Comment *_comment;
     AwardingTotal *_firstModeratorAwardingTotal;
     NSArray *_otherAwardingTotals;
-    AwardingTotalNode *_firstModAwardNode;
+    _TtC6Reddit17AwardingTotalNode *_firstModAwardNode;
     NSArray *_otherAwardNodes;
     NSDictionary *_otherAwardNodeByAwardId;
     ASTextNode *_totalCountNode;
@@ -24,22 +24,22 @@
 }
 
 + (double)estimatedHeightForComment:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldAnimateLastGivenAward; // @synthesize shouldAnimateLastGivenAward=_shouldAnimateLastGivenAward;
 @property(retain, nonatomic) ASDisplayNode *awardsBackgroundNode; // @synthesize awardsBackgroundNode=_awardsBackgroundNode;
 @property(retain, nonatomic) ASTextNode *totalCountNode; // @synthesize totalCountNode=_totalCountNode;
 @property(retain, nonatomic) NSDictionary *otherAwardNodeByAwardId; // @synthesize otherAwardNodeByAwardId=_otherAwardNodeByAwardId;
 @property(retain, nonatomic) NSArray *otherAwardNodes; // @synthesize otherAwardNodes=_otherAwardNodes;
-@property(retain, nonatomic) AwardingTotalNode *firstModAwardNode; // @synthesize firstModAwardNode=_firstModAwardNode;
+@property(retain, nonatomic) _TtC6Reddit17AwardingTotalNode *firstModAwardNode; // @synthesize firstModAwardNode=_firstModAwardNode;
 @property(retain, nonatomic) NSArray *otherAwardingTotals; // @synthesize otherAwardingTotals=_otherAwardingTotals;
 @property(retain, nonatomic) AwardingTotal *firstModeratorAwardingTotal; // @synthesize firstModeratorAwardingTotal=_firstModeratorAwardingTotal;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)layoutDidFinish;
 - (void)didExitHierarchy;
 - (void)didEnterHierarchy;
-@property(readonly, nonatomic) AwardingTotalNode *awardingTotalNodeForLastGivenAward;
+@property(readonly, nonatomic) _TtC6Reddit17AwardingTotalNode *awardingTotalNodeForLastGivenAward;
 - (void)processAwardingCompleteNotification:(id)arg1;
 - (void)configureTotalCountTextNode;
 - (void)configureOtherAwardsNode;

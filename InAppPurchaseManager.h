@@ -27,6 +27,7 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *correlationIdForRepurchase; // @synthesize correlationIdForRepurchase=_correlationIdForRepurchase;
 @property(retain, nonatomic) SKProduct *productForRepurchase; // @synthesize productForRepurchase=_productForRepurchase;
 @property(readonly, nonatomic) InAppPurchaseManagerConfig *config; // @synthesize config=_config;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <InAppPurchaseReceiptLoading> receiptLoader; // @synthesize receiptLoader=_receiptLoader;
 @property(readonly, nonatomic) SKPaymentQueue *paymentQueue; // @synthesize paymentQueue=_paymentQueue;
 @property(nonatomic) __weak id <InAppPurchaseManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)correlationIdForTransactionBelongingToCurrentAccount:(id)arg1;
 - (_Bool)isTransactionPersistedForCurrentAccount:(id)arg1;
 - (void)finishTransactionsWithProductId:(id)arg1;

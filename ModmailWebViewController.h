@@ -27,6 +27,7 @@
     double _headerObservationOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double headerObservationOffset; // @synthesize headerObservationOffset=_headerObservationOffset;
 @property(retain, nonatomic) WebNavigationControlsView *navigationControlView; // @synthesize navigationControlView=_navigationControlView;
 @property(retain, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIViewController *fromVC; // @synthesize fromVC=_fromVC;
 @property(retain, nonatomic) WebViewInteractor *interactor; // @synthesize interactor=_interactor;
-- (void).cxx_destruct;
 - (void)sendScreenViewEventFromBackground:(_Bool)arg1;
 - (id)originalRequestURL;
 - (void)refresh;

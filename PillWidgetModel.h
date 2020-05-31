@@ -19,12 +19,12 @@
     ListingNetworkSource *_listingNetworkSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
 @property(copy, nonatomic) NSArray *presentedPills; // @synthesize presentedPills=_presentedPills;
 @property(copy, nonatomic) NSArray *pills; // @synthesize pills=_pills;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToDiffableObject:(id)arg1;

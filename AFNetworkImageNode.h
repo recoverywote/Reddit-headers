@@ -16,9 +16,9 @@
     _Bool _isImageLoaded;
 }
 
+- (void).cxx_destruct;
 @property _Bool isImageLoaded; // @synthesize isImageLoaded=_isImageLoaded;
 @property(copy) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)_locked_setDefaultImage:(id)arg1;
 @property(retain) UIImage *defaultImage;
 - (void)setURL:(id)arg1 maxDimension:(double)arg2;

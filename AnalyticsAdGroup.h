@@ -50,6 +50,7 @@
     NSString *_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool nameIsSet; // @synthesize nameIsSet=_nameIsSet;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(nonatomic) _Bool effective_statusIsSet; // @synthesize effective_statusIsSet=_effective_statusIsSet;
@@ -84,7 +85,6 @@
 @property(nonatomic) long long start_timestamp; // @synthesize start_timestamp=_start_timestamp;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

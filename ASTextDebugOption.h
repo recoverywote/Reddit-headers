@@ -29,6 +29,7 @@
 + (id)sharedDebugOption;
 + (void)removeDebugTarget:(id)arg1;
 + (void)addDebugTarget:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *CGGlyphFillColor; // @synthesize CGGlyphFillColor=_CGGlyphFillColor;
 @property(retain, nonatomic) UIColor *CGGlyphBorderColor; // @synthesize CGGlyphBorderColor=_CGGlyphBorderColor;
 @property(retain, nonatomic) UIColor *CTRunNumberColor; // @synthesize CTRunNumberColor=_CTRunNumberColor;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) UIColor *CTFrameFillColor; // @synthesize CTFrameFillColor=_CTFrameFillColor;
 @property(retain, nonatomic) UIColor *CTFrameBorderColor; // @synthesize CTFrameBorderColor=_CTFrameBorderColor;
 @property(retain, nonatomic) UIColor *baselineColor; // @synthesize baselineColor=_baselineColor;
-- (void).cxx_destruct;
 - (void)clear;
 - (_Bool)needDrawDebug;
 - (id)copyWithZone:(struct _NSZone *)arg1;

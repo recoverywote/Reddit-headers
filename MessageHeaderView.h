@@ -20,11 +20,11 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) Message *message; // @synthesize message=_message;
 @property(retain, nonatomic) AttributedLabelRegular *commentUserAndTimeLabel; // @synthesize commentUserAndTimeLabel=_commentUserAndTimeLabel;
 @property(retain, nonatomic) UIView *messageArrow; // @synthesize messageArrow=_messageArrow;
 @property(nonatomic) __weak id <MessageHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)layoutSubviews;
 - (void)configureWithData:(id)arg1 andDelegate:(id)arg2;

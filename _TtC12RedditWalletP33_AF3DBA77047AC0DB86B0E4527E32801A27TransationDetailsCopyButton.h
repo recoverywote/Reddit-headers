@@ -9,7 +9,7 @@
 @interface _TtC12RedditWalletP33_AF3DBA77047AC0DB86B0E4527E32801A27TransationDetailsCopyButton : UIButton
 {
     // Error parsing type: , name: contents
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

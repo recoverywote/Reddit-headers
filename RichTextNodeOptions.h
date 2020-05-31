@@ -15,9 +15,9 @@
 }
 
 + (id)defaultOptions;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *linkAttributes; // @synthesize linkAttributes=_linkAttributes;
 @property(nonatomic) _Bool shouldDrawLinkBackgroundColorOnContext; // @synthesize shouldDrawLinkBackgroundColorOnContext=_shouldDrawLinkBackgroundColorOnContext;
-- (void).cxx_destruct;
 
 @end
 

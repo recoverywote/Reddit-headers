@@ -56,6 +56,7 @@
     NSString *_post_added_note;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool is_live_streamIsSet; // @synthesize is_live_streamIsSet=_is_live_streamIsSet;
 @property(nonatomic) _Bool is_live_stream; // @synthesize is_live_stream=_is_live_stream;
 @property(nonatomic) _Bool post_added_noteIsSet; // @synthesize post_added_noteIsSet=_post_added_noteIsSet;
@@ -96,7 +97,6 @@
 @property(copy, nonatomic) NSString *classification_type; // @synthesize classification_type=_classification_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(nonatomic) int id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

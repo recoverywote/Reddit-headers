@@ -31,6 +31,7 @@
 }
 
 + (double)popoverWidth;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GenericContainerView *footerView; // @synthesize footerView=_footerView;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) struct CGRect senderFrame; // @synthesize senderFrame=_senderFrame;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) UIView *senderView; // @synthesize senderView=_senderView;
 @property(nonatomic) __weak UIViewController *senderViewController; // @synthesize senderViewController=_senderViewController;
 @property(nonatomic) __weak NSObject<RUIActionSheetViewControllerDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)handleDidSelectActionSheetItem:(id)arg1;
 - (void)didTapButton:(id)arg1;

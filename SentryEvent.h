@@ -38,6 +38,7 @@
     NSDictionary *_infoDict;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *infoDict; // @synthesize infoDict=_infoDict;
 @property(retain, nonatomic) NSDictionary *breadcrumbsSerialized; // @synthesize breadcrumbsSerialized=_breadcrumbsSerialized;
 @property(retain, nonatomic) NSArray *debugMeta; // @synthesize debugMeta=_debugMeta;
@@ -62,7 +63,6 @@
 @property(retain, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(copy, nonatomic) NSString *eventId; // @synthesize eventId=_eventId;
-- (void).cxx_destruct;
 - (void)addSimpleProperties:(id)arg1;
 - (void)addSdkInformation:(id)arg1;
 - (void)addThreads:(id)arg1;

@@ -13,7 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: headingLabel
     // Error parsing type: , name: subredditIcon
     // Error parsing type: , name: tapSubject
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

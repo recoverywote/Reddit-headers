@@ -13,8 +13,8 @@
     PillButton *_pillButton;
 }
 
-@property(retain, nonatomic) PillButton *pillButton; // @synthesize pillButton=_pillButton;
 - (void).cxx_destruct;
+@property(retain, nonatomic) PillButton *pillButton; // @synthesize pillButton=_pillButton;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

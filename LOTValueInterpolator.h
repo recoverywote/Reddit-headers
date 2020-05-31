@@ -16,11 +16,11 @@
     NSArray *_keyframes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *keyframes; // @synthesize keyframes=_keyframes;
 @property(readonly, nonatomic) _Bool hasDelegateOverride; // @synthesize hasDelegateOverride=_hasDelegateOverride;
 @property(nonatomic) __weak LOTKeyframe *trailingKeyframe; // @synthesize trailingKeyframe=_trailingKeyframe;
 @property(nonatomic) __weak LOTKeyframe *leadingKeyframe; // @synthesize leadingKeyframe=_leadingKeyframe;
-- (void).cxx_destruct;
 - (void)setValueDelegate:(id)arg1;
 - (double)progressForFrame:(id)arg1;
 - (void)updateKeyframeSpanForFrame:(id)arg1;

@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit29AccountSettingsViewController.h"
 
-#import "_TtP6Reddit35AccountStatusViewControllerDelegate_-Protocol.h"
-
-@interface _TtC6Reddit29AccountSettingsViewController (Reddit) <_TtP6Reddit35AccountStatusViewControllerDelegate_>
+@interface _TtC6Reddit29AccountSettingsViewController (Reddit)
 - (void)accountStatusViewControllerDismissedWithCompletion:(CDUnknownBlockType)arg1;
 @end
 

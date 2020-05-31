@@ -8,7 +8,6 @@
 
 @interface _TtC6RedditP33_71B507CE60FFB23638C102E0403D251A27MetaLandingIntroShimmerNode : ASDisplayNode
 {
-    // Error parsing type: , name: crownNode
     // Error parsing type: , name: star1Node
     // Error parsing type: , name: star2Node
     // Error parsing type: , name: star3Node

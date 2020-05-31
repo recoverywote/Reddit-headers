@@ -13,9 +13,9 @@
     SEL _action;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool createdWithNoTarget; // @synthesize createdWithNoTarget=_createdWithNoTarget;
 @property(nonatomic) SEL action; // @synthesize action=_action;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 @property(nonatomic) __weak id target;

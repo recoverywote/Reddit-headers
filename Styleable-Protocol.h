@@ -9,15 +9,15 @@
 @class NSString, UIColor, UIImage;
 
 @protocol Styleable <NSObject>
-@property(readonly, nonatomic) UIColor *preferredBannerBackgroundColor;
-@property(readonly, copy, nonatomic) NSString *styledBannerImageURLString;
-@property(readonly, copy, nonatomic) NSString *styledIconImageURLString;
-@property(readonly, nonatomic) UIColor *styledPrimaryColor;
-@property(readonly, nonatomic) long long iconShape;
-@property(readonly, nonatomic) UIImage *iconPlaceholderImage;
-@property(readonly, nonatomic) _Bool shouldTileBannerImage;
-@property(readonly, nonatomic) UIColor *preferredIconBackgroundColor;
-@property(readonly, nonatomic) UIColor *preferredHeaderColor;
-@property(readonly, nonatomic) UIColor *styledSecondaryColor;
+@property(nonatomic, readonly) UIColor *preferredBannerBackgroundColor;
+@property(nonatomic, readonly) NSString *styledBannerImageURLString;
+@property(nonatomic, readonly) NSString *styledIconImageURLString;
+@property(nonatomic, readonly) UIColor *styledPrimaryColor;
+@property(nonatomic, readonly) long long iconShape;
+@property(nonatomic, readonly) UIImage *iconPlaceholderImage;
+@property(nonatomic, readonly) _Bool shouldTileBannerImage;
+@property(nonatomic, readonly) UIColor *preferredIconBackgroundColor;
+@property(nonatomic, readonly) UIColor *preferredHeaderColor;
+@property(nonatomic, readonly) UIColor *styledSecondaryColor;
 @end
 

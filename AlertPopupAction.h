@@ -16,10 +16,10 @@
 }
 
 + (id)cancelAction;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(nonatomic) unsigned long long style; // @synthesize style=_style;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)performAction;
 - (id)initWithTitle:(id)arg1 style:(unsigned long long)arg2 action:(CDUnknownBlockType)arg3;
 - (id)initWithTitle:(id)arg1 action:(CDUnknownBlockType)arg2;

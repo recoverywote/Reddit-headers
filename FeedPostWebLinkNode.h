@@ -18,12 +18,12 @@
     FeedPostWebLinkOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostWebLinkOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) UrlLabelNode *urlLabelNode; // @synthesize urlLabelNode=_urlLabelNode;
 @property(retain, nonatomic) ASNetworkImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(nonatomic) __weak id <FeedPostWebLinkNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)imageNodeTapped:(id)arg1;
 - (id)imageURLForPost:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

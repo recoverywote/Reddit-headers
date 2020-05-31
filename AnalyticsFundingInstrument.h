@@ -86,6 +86,7 @@
     long long _rollup_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool rollup_timestampIsSet; // @synthesize rollup_timestampIsSet=_rollup_timestampIsSet;
 @property(nonatomic) long long rollup_timestamp; // @synthesize rollup_timestamp=_rollup_timestamp;
 @property(nonatomic) _Bool adzerk_lifetime_microsIsSet; // @synthesize adzerk_lifetime_microsIsSet=_adzerk_lifetime_microsIsSet;
@@ -156,7 +157,6 @@
 @property(nonatomic) long long created_timestamp; // @synthesize created_timestamp=_created_timestamp;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(nonatomic) long long id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

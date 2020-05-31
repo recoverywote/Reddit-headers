@@ -14,9 +14,9 @@
     CaptureContentTextEntry *_textEntryContent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isEmailValid; // @synthesize isEmailValid=_isEmailValid;
 @property(retain, nonatomic) CaptureContentTextEntry *textEntryContent; // @synthesize textEntryContent=_textEntryContent;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *email;
 - (_Bool)validateContent;
 - (void)validateEmail:(id)arg1;

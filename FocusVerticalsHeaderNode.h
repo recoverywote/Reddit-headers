@@ -18,12 +18,12 @@
     ASButtonNode *_subredditNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASButtonNode *subredditNode; // @synthesize subredditNode=_subredditNode;
 @property(retain, nonatomic) ASTextNode *subTitleNode; // @synthesize subTitleNode=_subTitleNode;
 @property(retain, nonatomic) ASTextNode *titleNode; // @synthesize titleNode=_titleNode;
 @property(nonatomic) __weak id <FocusVerticalsHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) FocusVerticalsDiscoveryUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)didTapInteractedSubreddit:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 @property(readonly, nonatomic) NSAttributedString *subredditAttributedName;

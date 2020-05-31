@@ -28,6 +28,7 @@
     BaseButtonNode *_overflowButtonNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButtonNode *overflowButtonNode; // @synthesize overflowButtonNode=_overflowButtonNode;
 @property(retain, nonatomic) BaseButtonNode *awardButtonNode; // @synthesize awardButtonNode=_awardButtonNode;
 @property(retain, nonatomic) BaseButtonNode *moderateButtonNode; // @synthesize moderateButtonNode=_moderateButtonNode;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) CommentTreeVisualDepthNode *visualDepthNode; // @synthesize visualDepthNode=_visualDepthNode;
 @property(nonatomic) __weak id <CommentTreeCommandBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldApplySubredditStyling;
 - (void)moderateButtonNodeTapped:(id)arg1;

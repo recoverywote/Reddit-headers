@@ -16,8 +16,8 @@
 }
 
 + (id)sharedCache;
-@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 - (void)themeDidChange:(id)arg1;
 - (void)clearCache;
 - (void)cacheHeight:(double)arg1 forPostWithIdentifier:(id)arg2 atWidth:(double)arg3;

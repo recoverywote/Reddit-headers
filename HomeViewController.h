@@ -30,6 +30,7 @@
     long long _categoryScrollerVariant;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long categoryScrollerVariant; // @synthesize categoryScrollerVariant=_categoryScrollerVariant;
 @property(retain, nonatomic) RecentChatPostBubbleViewController *chatPostBubbleViewController; // @synthesize chatPostBubbleViewController=_chatPostBubbleViewController;
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
@@ -41,7 +42,6 @@
 @property(copy, nonatomic) NSArray *tabs; // @synthesize tabs=_tabs;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (void)mainScreenTabProviderDidChangeTabs:(id)arg1;
 - (void)logTabScrollEvent;

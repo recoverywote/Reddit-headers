@@ -14,9 +14,9 @@
     long long _loadingState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long loadingState; // @synthesize loadingState=_loadingState;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1;
 - (id)image;
 - (void)loadImageWithCompletion:(CDUnknownBlockType)arg1;

@@ -18,6 +18,7 @@
     _Bool _isSuspended;
     _Bool _shouldResetPassword;
     _Bool _doNotTrack;
+    _Bool _isPasswordSet;
     _Bool _canEditName;
     _Bool _isGroupChatEnabled;
     _Bool _isChatMessageReportingEnabled;
@@ -33,6 +34,7 @@
     NSArray *_linkedIdentities;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *linkedIdentities; // @synthesize linkedIdentities=_linkedIdentities;
 @property(nonatomic) _Bool isEmailPermissionRequired; // @synthesize isEmailPermissionRequired=_isEmailPermissionRequired;
 @property(nonatomic) _Bool isChatUserReportingEnabled; // @synthesize isChatUserReportingEnabled=_isChatUserReportingEnabled;
@@ -40,6 +42,7 @@
 @property(nonatomic) _Bool isGroupChatEnabled; // @synthesize isGroupChatEnabled=_isGroupChatEnabled;
 @property(copy, nonatomic) AccountPreferences *preferences; // @synthesize preferences=_preferences;
 @property(nonatomic) _Bool canEditName; // @synthesize canEditName=_canEditName;
+@property(nonatomic) _Bool isPasswordSet; // @synthesize isPasswordSet=_isPasswordSet;
 @property(nonatomic) _Bool doNotTrack; // @synthesize doNotTrack=_doNotTrack;
 @property(retain, nonatomic) NSDate *suspensionExpiration; // @synthesize suspensionExpiration=_suspensionExpiration;
 @property(nonatomic) _Bool shouldResetPassword; // @synthesize shouldResetPassword=_shouldResetPassword;
@@ -54,7 +57,6 @@
 @property(nonatomic) _Bool hasVerifiedEmail; // @synthesize hasVerifiedEmail=_hasVerifiedEmail;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic) _Bool canAccessEmail; // @synthesize canAccessEmail=_canAccessEmail;
-- (void).cxx_destruct;
 - (id)debugDescription;
 @property(readonly, nonatomic) _Bool isLoggedIn;
 @property(readonly, nonatomic) _Bool isNotLoggedIn;

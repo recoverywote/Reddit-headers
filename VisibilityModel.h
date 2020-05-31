@@ -19,6 +19,7 @@
     struct Visibility _visibility;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *closestViewController; // @synthesize closestViewController=_closestViewController;
 @property(retain, nonatomic) NSMutableDictionary *visibilityTargetActions; // @synthesize visibilityTargetActions=_visibilityTargetActions;
 @property(nonatomic) struct Visibility visibility; // @synthesize visibility=_visibility;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) VisibilityOptions *visibilityOptions; // @synthesize visibilityOptions=_visibilityOptions;
 @property(nonatomic) __weak UIView *associatedView; // @synthesize associatedView=_associatedView;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (struct Visibility)computeVisibilityStruct;
 - (void)computeVisibility;
 - (void)_handleVisibility;

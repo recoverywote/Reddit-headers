@@ -13,8 +13,8 @@
     FeedSpinnerView *_spinnerView;
 }
 
-@property(readonly, nonatomic) FeedSpinnerView *spinnerView; // @synthesize spinnerView=_spinnerView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) FeedSpinnerView *spinnerView; // @synthesize spinnerView=_spinnerView;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

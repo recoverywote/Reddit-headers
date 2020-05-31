@@ -16,9 +16,9 @@
     RefreshPullAnimatedView *_pullView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RefreshPullAnimatedView *pullView; // @synthesize pullView=_pullView;
 @property(nonatomic) double progressPercentage; // @synthesize progressPercentage=_progressPercentage;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)setAnimationTintColor:(id)arg1;
 - (void)stopSpinning;

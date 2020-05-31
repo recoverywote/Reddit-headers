@@ -37,6 +37,7 @@
     struct CGRect _layerBounds;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long matteType; // @synthesize matteType=_matteType;
 @property(readonly, nonatomic) LOTKeyframeGroup *scale; // @synthesize scale=_scale;
 @property(readonly, nonatomic) LOTKeyframeGroup *anchor; // @synthesize anchor=_anchor;
@@ -62,7 +63,6 @@
 @property(readonly, nonatomic) NSNumber *layerID; // @synthesize layerID=_layerID;
 @property(readonly, nonatomic) NSString *referenceID; // @synthesize referenceID=_referenceID;
 @property(readonly, nonatomic) NSString *layerName; // @synthesize layerName=_layerName;
-- (void).cxx_destruct;
 - (id)description;
 - (void)_mapFromJSON:(id)arg1 withAssetGroup:(id)arg2 withFramerate:(id)arg3;
 - (id)initWithJSON:(id)arg1 withAssetGroup:(id)arg2 withFramerate:(id)arg3;

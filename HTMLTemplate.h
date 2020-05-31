@@ -13,8 +13,8 @@
     HTMLDocumentFragment *_content;
 }
 
-@property(retain, nonatomic) HTMLDocumentFragment *content; // @synthesize content=_content;
 - (void).cxx_destruct;
+@property(retain, nonatomic) HTMLDocumentFragment *content; // @synthesize content=_content;
 - (id)childNodes;
 - (void)setOwnerDocument:(id)arg1;
 - (id)init;

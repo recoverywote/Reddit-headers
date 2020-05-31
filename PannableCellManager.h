@@ -22,6 +22,7 @@
     struct CGPoint _viewToPanStartPoint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGPoint viewToPanStartPoint; // @synthesize viewToPanStartPoint=_viewToPanStartPoint;
 @property(nonatomic) unsigned long long previousIndex; // @synthesize previousIndex=_previousIndex;
 @property(retain, nonatomic) UIView *revealedView; // @synthesize revealedView=_revealedView;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) UIPanGestureRecognizer *panGestureRecognizer; // @synthesize panGestureRecognizer=_panGestureRecognizer;
 @property(retain, nonatomic) NSArray *indexThresholds; // @synthesize indexThresholds=_indexThresholds;
 @property(nonatomic) __weak id <PannableCellManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (float)percentageViewIsPanned;
 - (void)animateViewSlidingBackToStartPoint;

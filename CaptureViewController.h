@@ -35,6 +35,7 @@
     CaptureContent *_currentTextFieldContent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak CaptureContent *currentTextFieldContent; // @synthesize currentTextFieldContent=_currentTextFieldContent;
 @property(nonatomic) _Bool showRetry; // @synthesize showRetry=_showRetry;
 @property(retain, nonatomic) CaptureFlowLayout *flowLayout; // @synthesize flowLayout=_flowLayout;
@@ -52,7 +53,6 @@
 @property(nonatomic) _Bool shouldReloadAllControllersItself; // @synthesize shouldReloadAllControllersItself=_shouldReloadAllControllersItself;
 @property(nonatomic) _Bool preventReloadAllControllers; // @synthesize preventReloadAllControllers=_preventReloadAllControllers;
 @property(nonatomic) __weak id <CaptureViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)analyticsScreenViewName;
 - (void)configureTopAndBottomButtonsInProgress:(_Bool)arg1;
 - (void)registerCollectionViewClasses;

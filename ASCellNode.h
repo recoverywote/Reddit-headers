@@ -33,6 +33,7 @@
 }
 
 + (_Bool)requestsVisibilityNotifications;
+- (void).cxx_destruct;
 @property __weak ASCollectionElement *collectionElement; // @synthesize collectionElement=_collectionElement;
 @property(nonatomic) __weak UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property struct UIEdgeInsets separatorInset; // @synthesize separatorInset=_separatorInset;
@@ -44,7 +45,6 @@
 @property(retain) id nodeModel; // @synthesize nodeModel=_nodeModel;
 @property _Bool neverShowPlaceholders; // @synthesize neverShowPlaceholders=_neverShowPlaceholders;
 @property(nonatomic) __weak id <ASCellNodeInteractionDelegate> interactionDelegate; // @synthesize interactionDelegate=_interactionDelegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldUseUIKitCell;
 - (_Bool)supportsLayerBacking;
 @property(readonly, copy) NSString *supplementaryElementKind;

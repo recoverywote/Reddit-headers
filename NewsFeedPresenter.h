@@ -22,6 +22,7 @@
     NSPredicate *_defaultSubtopicsPredicate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSPredicate *defaultSubtopicsPredicate; // @synthesize defaultSubtopicsPredicate=_defaultSubtopicsPredicate;
 @property(readonly, nonatomic) NSPredicate *defaultTopicsPredicate; // @synthesize defaultTopicsPredicate=_defaultTopicsPredicate;
 @property(retain, nonatomic) NewsTopic *allTopic; // @synthesize allTopic=_allTopic;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSOrderedSet *allTopics; // @synthesize allTopics=_allTopics;
 @property(retain, nonatomic) MultiNetworkSource *newsTopicsSource; // @synthesize newsTopicsSource=_newsTopicsSource;
 @property(nonatomic) _Bool isWaitingForListingFetchToBegin; // @synthesize isWaitingForListingFetchToBegin=_isWaitingForListingFetchToBegin;
-- (void).cxx_destruct;
 - (_Bool)isSubscribedSubtopic:(id)arg1;
 - (_Bool)isSubscribedTopic:(id)arg1;
 @property(readonly, copy, nonatomic) NSSet *subscribedSubtopics;

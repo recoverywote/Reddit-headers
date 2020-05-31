@@ -21,10 +21,10 @@
 + (id)pathForSupportSubDirectory:(id)arg1;
 + (unsigned long long)supportedDirectory;
 + (_Bool)hasSubDirectory:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FIRInstanceIDTokenStore *tokenStore; // @synthesize tokenStore=_tokenStore;
 @property(retain, nonatomic) FIRInstanceIDCheckinStore *checkinStore; // @synthesize checkinStore=_checkinStore;
 @property(readonly, nonatomic) __weak NSObject<FIRInstanceIDStoreDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)removeCheckinPreferencesWithHandler:(CDUnknownBlockType)arg1;
 - (id)cachedCheckinPreferences;
 - (void)saveCheckinPreferences:(id)arg1 handler:(CDUnknownBlockType)arg2;

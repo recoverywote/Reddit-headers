@@ -18,9 +18,9 @@
     NSString *_trace_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool trace_idIsSet; // @synthesize trace_idIsSet=_trace_idIsSet;
 @property(copy, nonatomic) NSString *trace_id; // @synthesize trace_id=_trace_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

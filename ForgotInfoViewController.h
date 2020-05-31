@@ -28,6 +28,7 @@
     NSLayoutConstraint *_buttonContainerBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *buttonContainerBottomConstraint; // @synthesize buttonContainerBottomConstraint=_buttonContainerBottomConstraint;
 @property(nonatomic) _Bool isInForgotPasswordState; // @synthesize isInForgotPasswordState=_isInForgotPasswordState;
 @property(readonly, nonatomic) KeyboardFloatingViewInteractor *keyboardFloatingViewInteractor; // @synthesize keyboardFloatingViewInteractor=_keyboardFloatingViewInteractor;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) BaseTextField *usernameField; // @synthesize usernameField=_usernameField;
 @property(copy, nonatomic) NSString *initialUsername; // @synthesize initialUsername=_initialUsername;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)keyboardDidChange;
 - (void)updateSendEmailButtonState;

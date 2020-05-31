@@ -18,10 +18,10 @@
     unsigned long long _placeholderType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool enableShimmer; // @synthesize enableShimmer=_enableShimmer;
 @property(nonatomic) unsigned long long placeholderType; // @synthesize placeholderType=_placeholderType;
 @property(copy, nonatomic) NSUUID *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 - (id)copyWithZone:(struct _NSZone *)arg1;

@@ -58,6 +58,7 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *bodyRichTextData; // @synthesize bodyRichTextData=_bodyRichTextData;
 @property(copy, nonatomic) NSAttributedString *bodyRichTextAttributed; // @synthesize bodyRichTextAttributed=_bodyRichTextAttributed;
 @property(copy, nonatomic) NSString *sharingPermalinkIncludingDomain; // @synthesize sharingPermalinkIncludingDomain=_sharingPermalinkIncludingDomain;
@@ -100,7 +101,6 @@
 @property(copy, nonatomic) NSString *linkedPostID; // @synthesize linkedPostID=_linkedPostID;
 @property(nonatomic) _Bool isLoadingMoreNode; // @synthesize isLoadingMoreNode=_isLoadingMoreNode;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (void)markAsRemoved;
 - (void)markAsDeleted;
 - (void)updateTextWithString:(id)arg1;

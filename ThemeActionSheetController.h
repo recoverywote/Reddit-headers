@@ -18,10 +18,10 @@
     ThemeManager *_themeManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) ThemeManager *themeManager; // @synthesize themeManager=_themeManager;
 @property(nonatomic) _Bool nightMode; // @synthesize nightMode=_nightMode;
 @property(nonatomic) __weak id <ThemeActionSheetDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)presentFromController:(id)arg1 fromView:(id)arg2;
 - (id)initWithThemeManager:(id)arg1 isNightMode:(_Bool)arg2;

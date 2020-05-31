@@ -13,8 +13,8 @@
     id <LOTNumberValueDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <LOTNumberValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <LOTNumberValueDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)setValueDelegate:(id)arg1;
 - (_Bool)hasDelegateOverride;
 - (double)floatValueForFrame:(id)arg1;

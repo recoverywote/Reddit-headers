@@ -15,10 +15,10 @@
     NSMutableSet *_assetIdentifiers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *assetIdentifiers; // @synthesize assetIdentifiers=_assetIdentifiers;
 @property(readonly, nonatomic) AVAggregateAssetDownloadTask *task; // @synthesize task=_task;
 @property(readonly, nonatomic) HLSPlaylist *playlist; // @synthesize playlist=_playlist;
-- (void).cxx_destruct;
 - (id)initWithPlaylist:(id)arg1 task:(id)arg2;
 
 @end

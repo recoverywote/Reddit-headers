@@ -13,8 +13,8 @@
     id <LastGivenAwardCaching> _cache;
 }
 
-@property(retain, nonatomic) id <LastGivenAwardCaching> cache; // @synthesize cache=_cache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <LastGivenAwardCaching> cache; // @synthesize cache=_cache;
 - (id)lastGivenAwardIdentifierForTargetIdentifier:(id)arg1;
 - (void)saveGivenAwardWithIdentifier:(id)arg1 forTargetWithIdentifier:(id)arg2;
 - (id)orderedAwardingTotalsForTargetWithIdentifier:(id)arg1 awardingTotals:(id)arg2;

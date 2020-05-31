@@ -19,6 +19,7 @@
     NSString *_timeLeftText;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldHidePrice; // @synthesize shouldHidePrice=_shouldHidePrice;
 @property(readonly, nonatomic) _Bool shouldShowPremiumBadge; // @synthesize shouldShowPremiumBadge=_shouldShowPremiumBadge;
 @property(readonly, nonatomic) _Bool shouldShowNewBadge; // @synthesize shouldShowNewBadge=_shouldShowNewBadge;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) NSAttributedString *attributedPrice; // @synthesize attributedPrice=_attributedPrice;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
-- (void).cxx_destruct;
 - (id)initWithAward:(id)arg1 shouldHidePrice:(_Bool)arg2;
 
 @end

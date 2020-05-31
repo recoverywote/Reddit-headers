@@ -19,11 +19,11 @@
     unsigned long long _readOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long readOffset; // @synthesize readOffset=_readOffset;
 @property(retain, nonatomic) NSMutableData *readBuffer; // @synthesize readBuffer=_readBuffer;
 @property(retain, nonatomic) NSMutableData *writeBuffer; // @synthesize writeBuffer=_writeBuffer;
 @property(retain, nonatomic) id <TTransport> transport; // @synthesize transport=_transport;
-- (void).cxx_destruct;
 - (_Bool)readFrame:(id *)arg1;
 - (unsigned int)readAvail:(char *)arg1 offset:(unsigned int)arg2 maxLength:(unsigned int)arg3 error:(id *)arg4;
 - (_Bool)readAll:(char *)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 error:(id *)arg4;

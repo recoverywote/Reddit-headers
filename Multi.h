@@ -32,6 +32,7 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long feedMode; // @synthesize feedMode=_feedMode;
 @property(nonatomic) _Bool isFollowed; // @synthesize isFollowed=_isFollowed;
 @property(nonatomic) _Bool isFavorited; // @synthesize isFavorited=_isFavorited;
@@ -49,7 +50,6 @@
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)configureWithData:(id)arg1;

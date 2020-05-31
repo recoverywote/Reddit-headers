@@ -23,13 +23,13 @@
 + (void)showLocationNeededAlert;
 + (_Bool)isAuthorizationStatusDetermined;
 + (_Bool)locationAuthorized;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURLSessionTask *venuesTask; // @synthesize venuesTask=_venuesTask;
 @property(copy, nonatomic) CDUnknownBlockType permissionHandler; // @synthesize permissionHandler=_permissionHandler;
 @property(copy, nonatomic) CDUnknownBlockType locationCompletion; // @synthesize locationCompletion=_locationCompletion;
 @property(retain, nonatomic) CLLocation *currentLocation; // @synthesize currentLocation=_currentLocation;
 @property(retain, nonatomic) CLLocationManager *clLocationManager; // @synthesize clLocationManager=_clLocationManager;
 @property(nonatomic) _Bool didRequestAuthorization; // @synthesize didRequestAuthorization=_didRequestAuthorization;
-- (void).cxx_destruct;
 - (void)locationManager:(id)arg1 didFailWithError:(id)arg2;
 - (void)locationManager:(id)arg1 didUpdateLocations:(id)arg2;
 - (void)locationManager:(id)arg1 didChangeAuthorizationStatus:(int)arg2;

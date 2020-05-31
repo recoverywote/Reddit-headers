@@ -14,9 +14,9 @@
     NSMutableDictionary *_contentDiskCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *contentDiskCache; // @synthesize contentDiskCache=_contentDiskCache;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
-- (void).cxx_destruct;
 - (void)persistContentToDiskCache;
 - (id)cachedContentForKey:(id)arg1;
 - (void)removeContentForKey:(id)arg1;

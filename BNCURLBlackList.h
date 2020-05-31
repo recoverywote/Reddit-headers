@@ -21,13 +21,13 @@
 }
 
 + (id)compileRegexArray:(id)arg1 error:(id *)arg2;
+- (void).cxx_destruct;
 @property(retain) NSURL *blackListJSONURL; // @synthesize blackListJSONURL=_blackListJSONURL;
 @property(retain) NSError *error; // @synthesize error=_error;
 @property(retain) id <BNCNetworkServiceProtocol> networkService; // @synthesize networkService=_networkService;
 @property long long blackListVersion; // @synthesize blackListVersion=_blackListVersion;
 @property(retain) NSArray *blackListRegex; // @synthesize blackListRegex=_blackListRegex;
 @property _Bool hasRefreshedBlackListFromServer; // @synthesize hasRefreshedBlackListFromServer=_hasRefreshedBlackListFromServer;
-- (void).cxx_destruct;
 - (void)processServerOperation:(id)arg1;
 - (void)refreshBlackListFromServerWithCompletion:(CDUnknownBlockType)arg1;
 - (void)refreshBlackListFromServer;

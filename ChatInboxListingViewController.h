@@ -29,6 +29,7 @@
     Channel *_currentlyOpenedChannel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Channel *currentlyOpenedChannel; // @synthesize currentlyOpenedChannel=_currentlyOpenedChannel;
 @property(retain, nonatomic) NSMutableDictionary *preloadingSources; // @synthesize preloadingSources=_preloadingSources;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(copy, nonatomic) NSArray *currentChannelObjects; // @synthesize currentChannelObjects=_currentChannelObjects;
 @property(copy, nonatomic) NSArray *currentRequestObjects; // @synthesize currentRequestObjects=_currentRequestObjects;
-- (void).cxx_destruct;
 - (void)updateContentViews;
 @property(readonly, nonatomic) ChatInboxNetworkSource *inboxNetworkSource;
 - (void)trackAnalyticEventWithAction:(id)arg1 noun:(id)arg2;

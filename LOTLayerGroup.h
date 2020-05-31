@@ -15,8 +15,8 @@
     NSArray *_layers;
 }
 
-@property(readonly, nonatomic) NSArray *layers; // @synthesize layers=_layers;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *layers; // @synthesize layers=_layers;
 - (id)layerForReferenceID:(id)arg1;
 - (id)layerModelForID:(id)arg1;
 - (void)_mapFromJSON:(id)arg1 withAssetGroup:(id)arg2 withFramerate:(id)arg3;

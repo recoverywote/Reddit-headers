@@ -16,11 +16,11 @@
     ImageWatermarkInfo *_imageWatermarkInfo;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ImageWatermarkInfo *imageWatermarkInfo; // @synthesize imageWatermarkInfo=_imageWatermarkInfo;
 @property(nonatomic) _Bool isUrlProvider; // @synthesize isUrlProvider=_isUrlProvider;
 @property(nonatomic) _Bool allowTextSharing; // @synthesize allowTextSharing=_allowTextSharing;
 @property(copy, nonatomic) NSString *subject; // @synthesize subject=_subject;
-- (void).cxx_destruct;
 - (id)item;
 - (id)activityViewControllerPlaceholderItem:(id)arg1;
 - (id)activityViewController:(id)arg1 subjectForActivityType:(id)arg2;

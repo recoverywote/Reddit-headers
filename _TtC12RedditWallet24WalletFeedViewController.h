@@ -15,9 +15,10 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: launchOptions
     // Error parsing type: , name: walletFlow
     // Error parsing type: , name: serviceLocator
+    // Error parsing type: , name: staticCardManager
     // Error parsing type: , name: $__lazy_storage_$_contentView
     // Error parsing type: , name: $__lazy_storage_$_delayedClaimHandler
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

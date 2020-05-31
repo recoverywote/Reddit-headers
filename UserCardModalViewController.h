@@ -32,6 +32,7 @@
 }
 
 + (id)userCardModalNavigationControllerWithAccountContext:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *modalViewTrailingConstraint; // @synthesize modalViewTrailingConstraint=_modalViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *modalViewLeadingConstraint; // @synthesize modalViewLeadingConstraint=_modalViewLeadingConstraint;
 @property(nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) UIViewController *fromVC; // @synthesize fromVC=_fromVC;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)logShowHovercardAnalyticsEventWithModPermsSet:(_Bool)arg1;
 - (id)commentContext;

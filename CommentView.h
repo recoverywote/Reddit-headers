@@ -25,6 +25,7 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isUserAModerator; // @synthesize isUserAModerator=_isUserAModerator;
 @property(nonatomic) __weak id <CommentViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) CommentTextView *textView; // @synthesize textView=_textView;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(retain, nonatomic) CommentCommandView *commandView; // @synthesize commandView=_commandView;
 @property(retain, nonatomic) CommentHeaderView *headerView; // @synthesize headerView=_headerView;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)setShouldHighlightBackground:(_Bool)arg1;

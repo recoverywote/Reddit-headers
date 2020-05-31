@@ -32,6 +32,7 @@
     double _percent_tickets_included;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool percent_tickets_includedIsSet; // @synthesize percent_tickets_includedIsSet=_percent_tickets_includedIsSet;
 @property(nonatomic) double percent_tickets_included; // @synthesize percent_tickets_included=_percent_tickets_included;
 @property(nonatomic) _Bool included_range_end_timestampIsSet; // @synthesize included_range_end_timestampIsSet=_included_range_end_timestampIsSet;
@@ -48,7 +49,6 @@
 @property(copy, nonatomic) NSString *auditor_id; // @synthesize auditor_id=_auditor_id;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

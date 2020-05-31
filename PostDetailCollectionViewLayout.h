@@ -15,10 +15,10 @@
     NSMutableDictionary *_layoutAttributeCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *layoutAttributeCache; // @synthesize layoutAttributeCache=_layoutAttributeCache;
 @property(nonatomic) _Bool shouldFixContentOffset; // @synthesize shouldFixContentOffset=_shouldFixContentOffset;
 @property(nonatomic) double offsetChange; // @synthesize offsetChange=_offsetChange;
-- (void).cxx_destruct;
 - (double)calcuateExpectedOffsetAdjustmentWithUpdateItems:(id)arg1;
 - (void)cacheCurrentCollectionViewLayoutAttributes;
 - (void)finalizeCollectionViewUpdates;

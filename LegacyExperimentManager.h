@@ -52,6 +52,7 @@
 + (id)experimentNames;
 + (id)experimentManagerForService:(id)arg1;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *experimentFilePath; // @synthesize experimentFilePath=_experimentFilePath;
 @property(nonatomic) _Bool isRefreshingConfig; // @synthesize isRefreshingConfig=_isRefreshingConfig;
 @property(retain, nonatomic) NSMutableDictionary *selectorMappings; // @synthesize selectorMappings=_selectorMappings;
@@ -84,7 +85,6 @@
 @property(copy, nonatomic) NSString *startupDialogActionURL; // @synthesize startupDialogActionURL=_startupDialogActionURL;
 @property(copy, nonatomic) NSString *startupDialogMessage; // @synthesize startupDialogMessage=_startupDialogMessage;
 @property(nonatomic) _Bool hasPerformedInitialFetch; // @synthesize hasPerformedInitialFetch=_hasPerformedInitialFetch;
-- (void).cxx_destruct;
 - (void)enableDiscoveryUnit:(id)arg1 withPercentage:(double)arg2;
 - (void)enableDiscoveryUnitsForBeta;
 - (void)associateExperimentGetter:(SEL)arg1 withExperimentName:(id)arg2;

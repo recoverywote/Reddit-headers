@@ -8,7 +8,7 @@
 
 #import <RedditCore/MutableFlairProtocol-Protocol.h>
 
-@class FlairTemplate, NSArray, NSString;
+@class MutableFlairTemplate, NSArray, NSString;
 
 @interface MutablePostFlair : PostFlair <MutableFlairProtocol>
 {
@@ -19,11 +19,11 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(readonly, copy, nonatomic) NSArray *richText;
+@property(copy, nonatomic) NSArray *richText;
 @property(readonly) Class superclass;
-@property(readonly, nonatomic) FlairTemplate *template;
-@property(readonly, copy, nonatomic) NSString *text;
-@property(readonly, nonatomic) long long textColorType;
-@property(readonly, nonatomic) long long textType;
+@property(readonly, nonatomic) MutableFlairTemplate *template;
+@property(copy, nonatomic) NSString *text;
+@property(nonatomic) long long textColorType;
+@property(nonatomic) long long textType;
 @end
 

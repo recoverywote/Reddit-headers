@@ -13,8 +13,8 @@
     NSMutableArray *_rows;
 }
 
-@property(readonly, nonatomic) NSMutableArray *rows; // @synthesize rows=_rows;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableArray *rows; // @synthesize rows=_rows;
 - (id)attributedStringRepresentation;
 - (id)recommendedTabStopsForRow:(id)arg1;
 - (double)recommendedWidthForColumn:(unsigned long long)arg1 inRow:(id)arg2;

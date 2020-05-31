@@ -22,6 +22,7 @@
     UIImage *_placeholder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *placeholder; // @synthesize placeholder=_placeholder;
 @property(retain, nonatomic) PreviewSpinnerView *loaderView; // @synthesize loaderView=_loaderView;
 @property(retain, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UIScrollView *internalScrollView; // @synthesize internalScrollView=_internalScrollView;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(readonly, nonatomic) UITapGestureRecognizer *doubleTap; // @synthesize doubleTap=_doubleTap;
-- (void).cxx_destruct;
 - (void)didDoubleTap:(id)arg1;
 - (struct CGRect)resizedFrameForAutorotatingImageView:(struct CGSize)arg1;
 - (struct UIEdgeInsets)contentInsetForScrollView:(double)arg1;

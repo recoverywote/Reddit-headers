@@ -13,8 +13,8 @@
     Multi *_multi;
 }
 
-@property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 - (void).cxx_destruct;
+@property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)configureWithMulti:(id)arg1;
 - (id)initWithAccountContext:(id)arg1;

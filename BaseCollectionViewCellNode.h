@@ -22,12 +22,12 @@
 }
 
 + (id)currentThemeInfo;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *previousThemeInfo; // @synthesize previousThemeInfo=_previousThemeInfo;
 @property(copy, nonatomic) VisibilityOptions *visibilityOptions; // @synthesize visibilityOptions=_visibilityOptions;
 @property(retain, nonatomic) VisibilityTracker *visibilityTracker; // @synthesize visibilityTracker=_visibilityTracker;
 @property(nonatomic) _Bool isPastVisibilityThreshold; // @synthesize isPastVisibilityThreshold=_isPastVisibilityThreshold;
 @property(nonatomic) _Bool fullyVisible; // @synthesize fullyVisible=_fullyVisible;
-- (void).cxx_destruct;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;

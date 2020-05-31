@@ -24,6 +24,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *subredditIds; // @synthesize subredditIds=_subredditIds;
 @property(copy, nonatomic) NSURL *bannerImage; // @synthesize bannerImage=_bannerImage;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSArray *subreddits; // @synthesize subreddits=_subreddits;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *categoryId; // @synthesize categoryId=_categoryId;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

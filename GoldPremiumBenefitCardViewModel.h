@@ -15,10 +15,10 @@
     NSString *_iconImageName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *iconImageName; // @synthesize iconImageName=_iconImageName;
 @property(readonly, nonatomic) NSString *benefitDetail; // @synthesize benefitDetail=_benefitDetail;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 benefitDetail:(id)arg2 iconImageName:(id)arg3;
 
 @end

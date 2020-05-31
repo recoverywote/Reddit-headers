@@ -19,12 +19,12 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) ConcurrentMapTable *inMemoryStorage; // @synthesize inMemoryStorage=_inMemoryStorage;
 @property(retain, nonatomic) DatabaseManager *dbManager; // @synthesize dbManager=_dbManager;
 @property(retain, nonatomic) Class modelClass; // @synthesize modelClass=_modelClass;
 @property(retain, nonatomic) AsyncModelAdapter *modelAdapter; // @synthesize modelAdapter=_modelAdapter;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)registerObserver:(id)arg1;
 - (void)notifyObserversRemovedModelWithKey:(id)arg1 value:(id)arg2;

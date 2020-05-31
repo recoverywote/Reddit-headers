@@ -15,10 +15,10 @@
     BaseLabel *_label;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) ScrollViewIndex *index; // @synthesize index=_index;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)init;
 

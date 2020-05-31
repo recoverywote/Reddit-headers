@@ -20,12 +20,12 @@
 
 + (void)openBrowserActionViewController:(id)arg1 didSelectItem:(id)arg2;
 + (id)createViewControllerWithURL:(id)arg1 accountContext:(id)arg2 browserActionDelegate:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly) NSString *pageTitle; // @synthesize pageTitle=_pageTitle;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak NSObject<OpenBrowserActionViewDelegate> *browserActionDelegate; // @synthesize browserActionDelegate=_browserActionDelegate;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AnalyticsViewProtocol> sourceView; // @synthesize sourceView=_sourceView;
-- (void).cxx_destruct;
 - (void)handleSelectionOfItem:(id)arg1;
 - (void)userDidSelectPostToReddit;
 - (void)userDidSelectRefresh;

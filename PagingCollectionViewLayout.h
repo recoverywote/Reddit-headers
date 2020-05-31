@@ -18,12 +18,12 @@
     NSMutableSet *_willNotBeVisibleIndexPaths;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isObservingContentOffset; // @synthesize isObservingContentOffset=_isObservingContentOffset;
 @property(retain, nonatomic) NSMutableSet *willNotBeVisibleIndexPaths; // @synthesize willNotBeVisibleIndexPaths=_willNotBeVisibleIndexPaths;
 @property(retain, nonatomic) NSMutableSet *willBeVisibleIndexPaths; // @synthesize willBeVisibleIndexPaths=_willBeVisibleIndexPaths;
 @property(retain, nonatomic) NSMutableSet *displayedIndexPaths; // @synthesize displayedIndexPaths=_displayedIndexPaths;
 @property(nonatomic) __weak id <PagingCollectionViewLayoutDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)collectionViewDidEndDecelerating:(id)arg1;
 - (_Bool)isScrolling;

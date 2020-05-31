@@ -21,6 +21,7 @@
     ASNetworkImageNode *_previewImageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASNetworkImageNode *previewImageView; // @synthesize previewImageView=_previewImageView;
 @property(retain, nonatomic) ASNetworkImageNode *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) ASTextNode *linkLabel; // @synthesize linkLabel=_linkLabel;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) ASTextNode *siteNamelabel; // @synthesize siteNamelabel=_siteNamelabel;
 @property(nonatomic) __weak id <ChatExternalLinkNodeDelegate> delegateVC; // @synthesize delegateVC=_delegateVC;
 @property(retain, nonatomic) ChatMessage *chatMessage; // @synthesize chatMessage=_chatMessage;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)externalLinkNodeWasTapped:(id)arg1;
 - (void)didLoad;

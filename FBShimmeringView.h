@@ -16,8 +16,8 @@
 }
 
 + (Class)layerClass;
-@property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic) double shimmeringEndFadeDuration;
 @property(nonatomic) double shimmeringBeginFadeDuration;
 @property(readonly, nonatomic) double shimmeringFadeTime;

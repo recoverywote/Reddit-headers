@@ -14,11 +14,11 @@
     long long _associatedIndex;
 }
 
+- (void).cxx_destruct;
 @property(readonly) long long associatedIndex; // @synthesize associatedIndex=_associatedIndex;
 @property(readonly) long long index; // @synthesize index=_index;
 @property(readonly) long long changeType; // @synthesize changeType=_changeType;
 @property(readonly) id object; // @synthesize object=_object;
-- (void).cxx_destruct;
 - (long long)changeTypeForNSCollectionChangeType:(long long)arg1;
 - (_Bool)isEqualToNSOrderedCollectionChange:(id)arg1;
 - (id)initWithObject:(id)arg1 type:(long long)arg2 index:(long long)arg3 associatedIndex:(long long)arg4;

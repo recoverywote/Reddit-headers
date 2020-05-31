@@ -12,7 +12,7 @@
     // Error parsing type: , name: contentView
     // Error parsing type: , name: copyDebugDataButton
     // Error parsing type: , name: doneButton
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -25,6 +25,7 @@
     CDUnknownBlockType _callback;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 @property(retain, nonatomic) BNCLinkData *linkData; // @synthesize linkData=_linkData;
 @property(retain, nonatomic) BNCLinkCache *linkCache; // @synthesize linkCache=_linkCache;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) NSString *alias; // @synthesize alias=_alias;
 @property(retain, nonatomic) NSArray *tags; // @synthesize tags=_tags;
 @property(nonatomic) _Bool isSpotlightRequest; // @synthesize isSpotlightRequest=_isSpotlightRequest;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)createLongUrlForUserUrl:(id)arg1;

@@ -20,12 +20,13 @@
 + (void)saveAccount:(id)arg1 inDirectoryAtPath:(id)arg2;
 + (id)loadAccountsFromDiskAtPath:(id)arg1;
 + (id)defaultAccountsDirectoryPath;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *accountCachePath; // @synthesize accountCachePath=_accountCachePath;
 @property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
 @property(readonly, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(copy, nonatomic) NSArray *services; // @synthesize services=_services;
 @property(retain, nonatomic) RedditService *currentService; // @synthesize currentService=_currentService;
-- (void).cxx_destruct;
+- (void)addAdditionalHeadersToRequest:(id)arg1;
 - (_Bool)isPOSIXError:(id)arg1 withCode:(long long)arg2;
 - (_Bool)isURLError:(id)arg1 withCode:(long long)arg2;
 - (id)generateHMACForInput:(id)arg1 epochTime:(unsigned long long)arg2;

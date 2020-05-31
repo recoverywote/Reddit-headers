@@ -35,11 +35,11 @@
 }
 
 + (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long maxBufferSize; // @synthesize maxBufferSize=_maxBufferSize;
 @property(copy, nonatomic) NSString *runloopMode; // @synthesize runloopMode=_runloopMode;
 @property(nonatomic) _Bool currentIsPlayingAnimation; // @synthesize currentIsPlayingAnimation=_currentIsPlayingAnimation;
 @property(nonatomic) _Bool autoPlayAnimatedImage; // @synthesize autoPlayAnimatedImage=_autoPlayAnimatedImage;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 @property(nonatomic) unsigned long long currentAnimatedImageIndex;

@@ -25,12 +25,12 @@
 }
 
 + (_Bool)needsDisplayForKey:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *valueInterpolators; // @synthesize valueInterpolators=_valueInterpolators;
 @property(readonly, nonatomic) CALayer *wrapperLayer; // @synthesize wrapperLayer=_wrapperLayer;
 @property(nonatomic) struct CGRect viewportBounds; // @synthesize viewportBounds=_viewportBounds;
 @property(readonly, nonatomic) NSNumber *timeStretchFactor; // @synthesize timeStretchFactor=_timeStretchFactor;
 @property(readonly, nonatomic) NSString *layerName; // @synthesize layerName=_layerName;
-- (void).cxx_destruct;
 - (void)setValueDelegate:(id)arg1 forKeypath:(id)arg2;
 - (void)searchNodesForKeypath:(id)arg1;
 - (void)displayWithFrame:(id)arg1 forceUpdate:(_Bool)arg2;

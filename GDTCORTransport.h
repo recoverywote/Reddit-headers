@@ -16,11 +16,11 @@
     GDTCORTransformer *_transformerInstance;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GDTCORTransformer *transformerInstance; // @synthesize transformerInstance=_transformerInstance;
 @property(nonatomic) long long target; // @synthesize target=_target;
 @property(retain, nonatomic) NSArray *transformers; // @synthesize transformers=_transformers;
 @property(retain, nonatomic) NSString *mappingID; // @synthesize mappingID=_mappingID;
-- (void).cxx_destruct;
 - (void)sendEvent:(id)arg1 onComplete:(CDUnknownBlockType)arg2;
 - (id)eventForTransport;
 - (void)sendDataEvent:(id)arg1;

@@ -14,11 +14,11 @@
     double _requestTime;
 }
 
+- (void).cxx_destruct;
 @property(readonly) double requestTime; // @synthesize requestTime=_requestTime;
 @property(copy) CDUnknownBlockType progressDownloadBlock; // @synthesize progressDownloadBlock=_progressDownloadBlock;
 @property(copy) CDUnknownBlockType progressImageBlock; // @synthesize progressImageBlock=_progressImageBlock;
 @property(copy) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

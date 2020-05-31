@@ -11,13 +11,15 @@
 
 @interface RedditPremiumPreferencesViewController : BaseViewController
 {
+    _Bool _cancelOfferShown;
     id <AccountContext> _accountContext;
     UIStackView *_contentStackView;
 }
 
-@property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
+@property(nonatomic) _Bool cancelOfferShown; // @synthesize cancelOfferShown=_cancelOfferShown;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (id)lineSeparatorView;
 - (id)spacerWithHeight:(double)arg1;
 - (id)buttonWithTitle:(id)arg1 action:(SEL)arg2;
@@ -25,6 +27,8 @@
 - (id)labelWithTitle:(id)arg1;
 - (void)manageWebSubscriptionDidTap:(id)arg1;
 - (void)manageInAppSubscriptionDidTap:(id)arg1;
+- (_Bool)shouldShowCancellationOffer;
+- (void)showCancellationOffer;
 - (void)setupViewsForNonSubscriber;
 - (void)setupViewsForSubscriber;
 - (void)viewDidLoad;

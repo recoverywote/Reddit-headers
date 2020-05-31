@@ -56,6 +56,7 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURLSession *backgroundSession; // @synthesize backgroundSession=_backgroundSession;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) NSMutableDictionary *videoMRCViewableStart; // @synthesize videoMRCViewableStart=_videoMRCViewableStart;
@@ -98,7 +99,6 @@
 @property(retain, nonatomic) NSMutableDictionary *firedPixels; // @synthesize firedPixels=_firedPixels;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(readonly, nonatomic) NSMutableArray *logEntriesForDebug; // @synthesize logEntriesForDebug=_logEntriesForDebug;
-- (void).cxx_destruct;
 - (void)logEventWithType:(long long)arg1 andPayload:(id)arg2;
 - (void)postVideoPlay:(id)arg1 elapsed:(double)arg2 duration:(double)arg3 muted:(_Bool)arg4;
 - (void)postVideoScrub:(id)arg1;

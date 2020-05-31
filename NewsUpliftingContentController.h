@@ -6,30 +6,31 @@
 
 #import <objc/NSObject.h>
 
-@class FeedNavigator, FeedNetworkSource, RedditService, UIViewController;
+@class FeedNavigator, FeedNetworkSource, UIViewController;
+@protocol AccountContext;
 
 @interface NewsUpliftingContentController : NSObject
 {
+    id <AccountContext> _accountContext;
     UIViewController *_viewContoller;
     FeedNavigator *_navigator;
-    RedditService *_service;
     FeedNetworkSource *_networkSource;
     unsigned long long _newsPostDetailsViewCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long newsPostDetailsViewCount; // @synthesize newsPostDetailsViewCount=_newsPostDetailsViewCount;
 @property(retain, nonatomic) FeedNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
-@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak FeedNavigator *navigator; // @synthesize navigator=_navigator;
 @property(nonatomic) __weak UIViewController *viewContoller; // @synthesize viewContoller=_viewContoller;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)willNavigateToPost:(id)arg1;
 - (void)showUpliftNewsToast;
 - (void)showUpliftingNews;
 - (_Bool)shouldShowUpliftNewsToast;
 - (_Bool)hasUpliftNewsAlertBeenShown;
 - (void)prefetchContent;
-- (id)initWithService:(id)arg1 withViewContoller:(id)arg2 withNavigator:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 withViewContoller:(id)arg2 withNavigator:(id)arg3;
 
 @end
 

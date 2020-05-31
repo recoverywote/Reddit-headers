@@ -305,6 +305,7 @@
 }
 
 + (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool batch_load_idIsSet; // @synthesize batch_load_idIsSet=_batch_load_idIsSet;
 @property(copy, nonatomic) NSString *batch_load_id; // @synthesize batch_load_id=_batch_load_id;
 @property(nonatomic) _Bool event_hmac_keyIsSet; // @synthesize event_hmac_keyIsSet=_event_hmac_keyIsSet;
@@ -593,7 +594,6 @@
 @property(copy, nonatomic) NSString *action; // @synthesize action=_action;
 @property(nonatomic) _Bool sourceIsSet; // @synthesize sourceIsSet=_sourceIsSet;
 @property(copy, nonatomic) NSString *source; // @synthesize source=_source;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

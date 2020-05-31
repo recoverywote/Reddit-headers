@@ -29,6 +29,7 @@
     NSString *_prefilledTitle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *prefilledTitle; // @synthesize prefilledTitle=_prefilledTitle;
 @property(copy, nonatomic) NSString *prefilledLinkUrl; // @synthesize prefilledLinkUrl=_prefilledLinkUrl;
 @property(retain, nonatomic) _TtC6Reddit25PostKeyboardAccessoryView *postKeyboardAccessoryView; // @synthesize postKeyboardAccessoryView=_postKeyboardAccessoryView;
@@ -43,7 +44,8 @@
 @property(retain, nonatomic) BaseTextView *titleView; // @synthesize titleView=_titleView;
 @property(retain, nonatomic) BaseTextView *linkView; // @synthesize linkView=_linkView;
 @property(retain, nonatomic) BaseScrollView *wrapperScrollView; // @synthesize wrapperScrollView=_wrapperScrollView;
-- (void).cxx_destruct;
+- (void)fetchLinkTitle:(id)arg1 success:(CDUnknownBlockType)arg2;
+- (_Bool)wasLinkPasted;
 - (id)analyticsPostComposerType;
 - (id)analyticsScreenViewName;
 - (_Bool)textViewShouldChangeSize:(id)arg1;

@@ -44,8 +44,8 @@
     _Bool _shouldCacheImage;
 }
 
-@property _Bool shouldCacheImage; // @synthesize shouldCacheImage=_shouldCacheImage;
 - (void).cxx_destruct;
+@property _Bool shouldCacheImage; // @synthesize shouldCacheImage=_shouldCacheImage;
 - (void)displayDidFinish;
 - (void)_lazilyLoadImageIfNecessary;
 - (void)_downloadImageWithCompletion:(CDUnknownBlockType)arg1;

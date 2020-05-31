@@ -14,9 +14,9 @@
     unsigned long long _location;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long location; // @synthesize location=_location;
 @property(copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithReasonMessage:(id)arg1 andStreamLocation:(unsigned long long)arg2;
 

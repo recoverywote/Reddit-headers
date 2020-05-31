@@ -15,10 +15,10 @@
     NSString *_confirmButtonTitle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *confirmButtonTitle; // @synthesize confirmButtonTitle=_confirmButtonTitle;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 
 @end
 

@@ -16,9 +16,9 @@
     UIView *_originalView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIView *originalView; // @synthesize originalView=_originalView;
 @property(nonatomic) unsigned long long previewAnimationState; // @synthesize previewAnimationState=_previewAnimationState;
-- (void).cxx_destruct;
 - (double)transitionDuration:(id)arg1;
 - (void)dismissAnimationWithTransition:(id)arg1;
 - (void)presentAnimationWithTransition:(id)arg1;

@@ -20,12 +20,12 @@
     CDUnknownBlockType _popCompletion;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPopping; // @synthesize isPopping=_isPopping;
 @property(copy, nonatomic) CDUnknownBlockType popCompletion; // @synthesize popCompletion=_popCompletion;
 @property(nonatomic) __weak UINavigationController *navController; // @synthesize navController=_navController;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactivePopTransition; // @synthesize interactivePopTransition=_interactivePopTransition;
 @property(readonly, nonatomic) UIPanGestureRecognizer *panToPopGestureRecognizer; // @synthesize panToPopGestureRecognizer=_panToPopGestureRecognizer;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)animateTransition:(id)arg1;

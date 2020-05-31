@@ -16,11 +16,11 @@
     RCEasyTipAnimating *_animating;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldDismissOnTouchOutside; // @synthesize shouldDismissOnTouchOutside=_shouldDismissOnTouchOutside;
 @property(retain, nonatomic) RCEasyTipAnimating *animating; // @synthesize animating=_animating;
 @property(retain, nonatomic) RCEasyTipPositioning *positioning; // @synthesize positioning=_positioning;
 @property(retain, nonatomic) RCEasyTipDrawing *drawing; // @synthesize drawing=_drawing;
-- (void).cxx_destruct;
 - (id)initWithDefaultPreferences;
 
 @end

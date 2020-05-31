@@ -17,9 +17,9 @@
     ListingNetworkSource *_networkSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak ListingNetworkSource *networkSource; // @synthesize networkSource=_networkSource;
 @property(copy, nonatomic) NSDictionary *blankPromotedPostObjects; // @synthesize blankPromotedPostObjects=_blankPromotedPostObjects;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;

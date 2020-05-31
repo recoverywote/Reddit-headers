@@ -21,6 +21,7 @@
     struct UIEdgeInsets _edgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PillTextBuilder *pillTextBuilder; // @synthesize pillTextBuilder=_pillTextBuilder;
 @property(retain, nonatomic) BaseView *highlightView; // @synthesize highlightView=_highlightView;
 @property(nonatomic) double minWidth; // @synthesize minWidth=_minWidth;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSAttributedString *attributedTitle; // @synthesize attributedTitle=_attributedTitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)setHighlighted:(_Bool)arg1;
 @property(retain, nonatomic) UIColor *titleColor;

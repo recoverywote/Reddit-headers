@@ -17,12 +17,12 @@
     MetaPollResult *_byLockedVotingPower;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) MetaPollResult *byLockedVotingPower; // @synthesize byLockedVotingPower=_byLockedVotingPower;
 @property(readonly, nonatomic) MetaPollResult *byVoters; // @synthesize byVoters=_byVoters;
 @property(readonly, nonatomic) MetaPollResult *byVotingPower; // @synthesize byVotingPower=_byVotingPower;
 @property(readonly, copy, nonatomic) NSDecimalNumber *rewardPoints; // @synthesize rewardPoints=_rewardPoints;
 @property(readonly, copy, nonatomic) NSString *pollId; // @synthesize pollId=_pollId;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

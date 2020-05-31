@@ -20,9 +20,9 @@
 + (id)mediaSourceFromResolutions:(id)arg1 fittingSize:(struct CGSize)arg2;
 + (id)resolutionsFromMetaAPIData:(id)arg1;
 + (id)resolutionsFromGraphQLData:(id)arg1 prefix:(id)arg2 omittingSource:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

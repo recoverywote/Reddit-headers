@@ -14,9 +14,9 @@
     NSArray *_subreddits;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowShareButton; // @synthesize shouldShowShareButton=_shouldShowShareButton;
 @property(copy, nonatomic) NSArray *subreddits; // @synthesize subreddits=_subreddits;
-- (void).cxx_destruct;
 - (id)initWithSubreddits:(id)arg1 shouldShowShareButton:(_Bool)arg2;
 
 @end

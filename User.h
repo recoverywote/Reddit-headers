@@ -31,6 +31,7 @@
 + (id)usernameFromRedditorInfo:(id)arg1;
 + (id)keyPathsToObserveChanges;
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(nonatomic) long long totalKarma; // @synthesize totalKarma=_totalKarma;
 @property(nonatomic) _Bool isEmployeeUser; // @synthesize isEmployeeUser=_isEmployeeUser;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy, nonatomic) NSString *displayNamePrefixed;
 @property(readonly, nonatomic) NSString *profileDescriptionText;

@@ -16,9 +16,9 @@
     NSURLSession *_session;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) NSOperationQueue *queue; // @synthesize queue=_queue;
-- (void).cxx_destruct;
 - (void)cancelAllOperations;
 - (void)addRequest:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic, getter=isReady) _Bool ready;

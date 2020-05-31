@@ -19,10 +19,10 @@
 }
 
 + (id)documentWithString:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) short readyState; // @synthesize readyState=_readyState;
 @property(nonatomic) short quirksMode; // @synthesize quirksMode=_quirksMode;
 @property(retain, nonatomic) HTMLDocumentType *documentType; // @synthesize documentType=_documentType;
-- (void).cxx_destruct;
 - (id)debugQuickLookObject;
 - (id)associatedInertTemplateDocument;
 - (id)adoptNode:(id)arg1;

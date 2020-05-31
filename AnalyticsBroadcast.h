@@ -28,6 +28,7 @@
     NSString *_stream_state;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool stream_stateIsSet; // @synthesize stream_stateIsSet=_stream_stateIsSet;
 @property(copy, nonatomic) NSString *stream_state; // @synthesize stream_state=_stream_state;
 @property(nonatomic) _Bool time_added_msIsSet; // @synthesize time_added_msIsSet=_time_added_msIsSet;
@@ -40,7 +41,6 @@
 @property(nonatomic) long long max_concurrent_watchers; // @synthesize max_concurrent_watchers=_max_concurrent_watchers;
 @property(nonatomic) _Bool unique_watchersIsSet; // @synthesize unique_watchersIsSet=_unique_watchersIsSet;
 @property(nonatomic) long long unique_watchers; // @synthesize unique_watchers=_unique_watchers;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

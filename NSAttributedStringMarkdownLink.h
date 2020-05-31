@@ -15,10 +15,10 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *tooltip; // @synthesize tooltip=_tooltip;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 
 @end
 

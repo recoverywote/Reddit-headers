@@ -22,13 +22,13 @@
     NSMutableDictionary *_completions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *completions; // @synthesize completions=_completions;
 @property(retain, nonatomic) NSMutableDictionary *delegateQueues; // @synthesize delegateQueues=_delegateQueues;
 @property(retain, nonatomic) NSOperationQueue *operationQueue; // @synthesize operationQueue=_operationQueue;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) NSLock *sessionManagerLock; // @synthesize sessionManagerLock=_sessionManagerLock;
 @property __weak id <PINURLSessionManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)responseRecoverableFrom404:(id)arg1;
 - (void)URLSession:(id)arg1 task:(id)arg2 didFinishCollectingMetrics:(id)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithError:(id)arg3;

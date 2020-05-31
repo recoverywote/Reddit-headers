@@ -17,10 +17,10 @@
     long long _uploadCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long uploadCount; // @synthesize uploadCount=_uploadCount;
 @property(readonly, nonatomic) AFHTTPSessionManager *uploadManager; // @synthesize uploadManager=_uploadManager;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (void)uploadToAmazonS3:(id)arg1 attachPost:(id)arg2 withFilepath:(id)arg3 successHandler:(CDUnknownBlockType)arg4 progressHandler:(CDUnknownBlockType)arg5 failureHandler:(CDUnknownBlockType)arg6;
 - (void)uploadVideoFilePath:(id)arg1 attachPost:(id)arg2 successHandler:(CDUnknownBlockType)arg3 progressHandler:(CDUnknownBlockType)arg4 failureHandler:(CDUnknownBlockType)arg5;
 - (void)uploadImageFilePath:(id)arg1 apiUrl:(id)arg2 parameters:(id)arg3 successHandler:(CDUnknownBlockType)arg4 progressHandler:(CDUnknownBlockType)arg5 failureHandler:(CDUnknownBlockType)arg6;

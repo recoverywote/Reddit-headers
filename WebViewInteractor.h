@@ -18,12 +18,12 @@
     unsigned long long _numberOfTimesWebUrlViewLogged;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long numberOfTimesWebUrlViewLogged; // @synthesize numberOfTimesWebUrlViewLogged=_numberOfTimesWebUrlViewLogged;
 @property(readonly, nonatomic) NSString *analyticsCorrelationId; // @synthesize analyticsCorrelationId=_analyticsCorrelationId;
 @property(copy, nonatomic) NSString *analyticsScreenViewName; // @synthesize analyticsScreenViewName=_analyticsScreenViewName;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak UIViewController<WebViewControllerProtocol> *delegateVC; // @synthesize delegateVC=_delegateVC;
-- (void).cxx_destruct;
 - (void)closingBrowser;
 - (void)logViewedWebPageWithURL:(id)arg1;
 - (id)screenViewAnalyticsEvent;

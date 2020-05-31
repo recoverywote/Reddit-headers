@@ -15,10 +15,10 @@
     unsigned long long _commentSort;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (id)diffIdentifier;

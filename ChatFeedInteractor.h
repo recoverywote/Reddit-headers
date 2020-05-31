@@ -30,6 +30,7 @@
     id _batchContext;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id batchContext; // @synthesize batchContext=_batchContext;
 @property(retain, nonatomic) ChannelSyncService *syncService; // @synthesize syncService=_syncService;
 @property(retain, nonatomic) ChannelHistorySource *networkSource; // @synthesize networkSource=_networkSource;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <ChatFeedInteractorFetchDelegate> fetchDelegate; // @synthesize fetchDelegate=_fetchDelegate;
 @property(nonatomic) __weak id <ChatFeedInteractorDelegate><PostActionSheetDelegate><AnalyticsViewProtocol> delegateVC; // @synthesize delegateVC=_delegateVC;
 @property(copy, nonatomic) NSArray *objects; // @synthesize objects=_objects;
-- (void).cxx_destruct;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
 - (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;

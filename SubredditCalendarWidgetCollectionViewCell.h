@@ -19,13 +19,13 @@
 }
 
 + (double)calendarWidgetCellSizeThatFitsWithWidth:(double)arg1 font:(id)arg2 shouldShowDate:(_Bool)arg3 shouldShowTime:(_Bool)arg4 shouldShowDescription:(_Bool)arg5 eventTitleAttributedText:(id)arg6 eventDescription:(id)arg7;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *smallSpacerView; // @synthesize smallSpacerView=_smallSpacerView;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(retain, nonatomic) BaseView *dividerView; // @synthesize dividerView=_dividerView;
 @property(retain, nonatomic) BaseLabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseLabel *dateLabel; // @synthesize dateLabel=_dateLabel;
 @property(retain, nonatomic) AttributedLabelRegular *eventTitleAttributedLabel; // @synthesize eventTitleAttributedLabel=_eventTitleAttributedLabel;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)configureCellWithCalendarEvent:(id)arg1 eventTitleAttributedText:(id)arg2 linkColor:(id)arg3 shouldShowDate:(_Bool)arg4 shouldShowTime:(_Bool)arg5 shouldShowDescription:(_Bool)arg6 shouldShowDivider:(_Bool)arg7;
 - (void)hideDateLabel:(_Bool)arg1;

@@ -24,6 +24,7 @@
 }
 
 + (void)initialize;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *imageColor; // @synthesize imageColor=_imageColor;
 @property(nonatomic) long long imageType; // @synthesize imageType=_imageType;
 @property(nonatomic) _Bool shouldAnimateFading; // @synthesize shouldAnimateFading=_shouldAnimateFading;
@@ -35,7 +36,6 @@
 @property(nonatomic) _Bool isLoadingGifContent; // @synthesize isLoadingGifContent=_isLoadingGifContent;
 @property(nonatomic) _Bool failed; // @synthesize failed=_failed;
 @property(nonatomic) double progressPercentage; // @synthesize progressPercentage=_progressPercentage;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
 - (void)setImageType:(long long)arg1 color:(id)arg2;

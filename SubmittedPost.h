@@ -51,6 +51,7 @@
 
 + (id)keyPathsToObserveChanges;
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *draftPostId; // @synthesize draftPostId=_draftPostId;
 @property(retain, nonatomic) NSString *crosspostId; // @synthesize crosspostId=_crosspostId;
 @property(nonatomic) _Bool isSpoiler; // @synthesize isSpoiler=_isSpoiler;
@@ -85,7 +86,6 @@
 @property(copy, nonatomic) NSString *linkURL; // @synthesize linkURL=_linkURL;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *dictionaryRepresentation;
 @property(readonly, nonatomic) NSDictionary *draftPostParameters;
 @property(readonly, copy) NSString *debugDescription;

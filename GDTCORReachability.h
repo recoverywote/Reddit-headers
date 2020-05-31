@@ -19,8 +19,8 @@
 + (unsigned int)currentFlags;
 + (id)sharedInstance;
 + (void)load;
-@property(nonatomic) unsigned int flags; // @synthesize flags=_flags;
 - (void).cxx_destruct;
+@property(nonatomic) unsigned int flags; // @synthesize flags=_flags;
 - (void)setCallbackFlags:(unsigned int)arg1;
 - (id)init;
 

@@ -21,12 +21,12 @@
 + (id)metadataStringWithLiveEvent:(id)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
 + (id)titleLabelFactory;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *chevronImageView; // @synthesize chevronImageView=_chevronImageView;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) AttributedLabelRegular *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) LiveEvent *liveEvent; // @synthesize liveEvent=_liveEvent;
 @property(nonatomic) __weak id <LiveBannerContentViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTap:(id)arg1;
 - (void)layoutSubviews;
 - (void)configureWithData:(id)arg1 andDelegate:(id)arg2;

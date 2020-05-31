@@ -16,9 +16,9 @@
     NSURL *_scrubberMediaURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *scrubberMediaURL; // @synthesize scrubberMediaURL=_scrubberMediaURL;
 @property(retain, nonatomic) NSURL *hlsURL; // @synthesize hlsURL=_hlsURL;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescriptionWithPrefix:(id)arg1;

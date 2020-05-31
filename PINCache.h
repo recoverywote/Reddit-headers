@@ -20,11 +20,11 @@
 }
 
 + (id)sharedCache;
+- (void).cxx_destruct;
 @property(retain, nonatomic) PINOperationQueue *operationQueue; // @synthesize operationQueue=_operationQueue;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly) PINMemoryCache *memoryCache; // @synthesize memoryCache=_memoryCache;
 @property(readonly) PINDiskCache *diskCache; // @synthesize diskCache=_diskCache;
-- (void).cxx_destruct;
 - (void)removeAllObjects;
 - (void)trimToDate:(id)arg1;
 - (void)removeObjectForKey:(id)arg1;

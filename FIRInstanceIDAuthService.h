@@ -19,6 +19,7 @@
     NSTimer *_scheduledCheckinTimer;
 }
 
+- (void).cxx_destruct;
 @property int checkinRetryCount; // @synthesize checkinRetryCount=_checkinRetryCount;
 @property(retain) NSTimer *scheduledCheckinTimer; // @synthesize scheduledCheckinTimer=_scheduledCheckinTimer;
 @property _Bool isCheckinInProgress; // @synthesize isCheckinInProgress=_isCheckinInProgress;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) FIRInstanceIDCheckinPreferences *checkinPreferences; // @synthesize checkinPreferences=_checkinPreferences;
 @property(retain, nonatomic) FIRInstanceIDCheckinService *checkinService; // @synthesize checkinService=_checkinService;
 @property(retain, nonatomic) FIRInstanceIDStore *store; // @synthesize store=_store;
-- (void).cxx_destruct;
 - (_Bool)cachedCheckinMatchesCheckin:(id)arg1;
 - (void)notifyCheckinHandlersWithCheckin:(id)arg1 error:(id)arg2;
 - (void)resetCheckinWithHandler:(CDUnknownBlockType)arg1;

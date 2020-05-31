@@ -15,8 +15,8 @@
 
 + (id)sortObjects:(id)arg1;
 + (id)mergeObjects:(id)arg1 newObjects:(id)arg2;
-@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (void)getDirectAndInvitedChannelsForContact:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchChannelsForContactId:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)configureLastMessageForChannel:(id)arg1 completion:(CDUnknownBlockType)arg2;

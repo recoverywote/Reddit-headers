@@ -15,10 +15,10 @@
     UIActivityIndicatorView *_spinner;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIActivityIndicatorView *spinner; // @synthesize spinner=_spinner;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (void).cxx_destruct;
 - (void)configureWithURL:(id)arg1;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

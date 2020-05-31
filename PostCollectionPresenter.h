@@ -22,6 +22,7 @@
     NSString *_postCollectionId;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isForceRefresh; // @synthesize isForceRefresh=_isForceRefresh;
 @property(copy, nonatomic) NSString *postCollectionId; // @synthesize postCollectionId=_postCollectionId;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 - (void)unfollowPost;
 - (void)followPost;

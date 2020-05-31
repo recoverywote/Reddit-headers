@@ -74,6 +74,7 @@
     NSString *_subreddit_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool subreddit_nameIsSet; // @synthesize subreddit_nameIsSet=_subreddit_nameIsSet;
 @property(copy, nonatomic) NSString *subreddit_name; // @synthesize subreddit_name=_subreddit_name;
 @property(nonatomic) _Bool subreddit_idIsSet; // @synthesize subreddit_idIsSet=_subreddit_idIsSet;
@@ -132,7 +133,6 @@
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -18,11 +18,11 @@
     CDUnknownBlockType _cellProvider;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasLoadedFirstCells; // @synthesize hasLoadedFirstCells=_hasLoadedFirstCells;
 @property(readonly, copy, nonatomic) CDUnknownBlockType cellProvider; // @synthesize cellProvider=_cellProvider;
 @property(readonly, nonatomic) __weak UITableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SectionedItems *sectionedItems; // @synthesize sectionedItems=_sectionedItems;
-- (void).cxx_destruct;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

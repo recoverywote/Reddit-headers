@@ -20,12 +20,12 @@
     DiscoveryUnit *_unit;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) DiscoveryUnit *unit; // @synthesize unit=_unit;
 @property(nonatomic) long long index; // @synthesize index=_index;
 @property(retain, nonatomic) FocusVerticalRecommendation *recommendation; // @synthesize recommendation=_recommendation;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(retain) id <DiscoveryUnitViewModel> subDiscoveryUnitViewModel; // @synthesize subDiscoveryUnitViewModel;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)shouldShowLessForUserWithAccountSettings:(id)arg1;

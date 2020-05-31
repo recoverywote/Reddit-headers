@@ -13,8 +13,8 @@
     AttributedLabelRegular *_label;
 }
 
-@property(retain, nonatomic) AttributedLabelRegular *label; // @synthesize label=_label;
 - (void).cxx_destruct;
+@property(retain, nonatomic) AttributedLabelRegular *label; // @synthesize label=_label;
 - (id)initWithFrame:(struct CGRect)arg1 insets:(struct UIEdgeInsets)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;
 

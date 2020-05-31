@@ -19,13 +19,13 @@
 }
 
 + (id)fieldWithIndex:(int)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SentryCrashCString *valueBacking; // @synthesize valueBacking=_valueBacking;
 @property(retain, nonatomic) SentryCrashCString *keyBacking; // @synthesize keyBacking=_keyBacking;
 @property(retain, nonatomic) NSMutableData *fieldBacking; // @synthesize fieldBacking=_fieldBacking;
 @property(retain, nonatomic) id value; // @synthesize value=_value;
 @property(retain, nonatomic) NSString *key; // @synthesize key=_key;
 @property(readonly, nonatomic) int index; // @synthesize index=_index;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) CDStruct_91a0c811 *field;
 - (id)initWithIndex:(int)arg1;
 

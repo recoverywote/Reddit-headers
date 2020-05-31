@@ -14,9 +14,9 @@
     NSDate *_suspensionExpiration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *suspensionExpiration; // @synthesize suspensionExpiration=_suspensionExpiration;
 @property(nonatomic) _Bool isSuspended; // @synthesize isSuspended=_isSuspended;
-- (void).cxx_destruct;
 - (id)rulesInfo;
 - (id)messageToTheUser;
 - (id)initWithAccountIfSuspended:(id)arg1;

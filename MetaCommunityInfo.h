@@ -15,18 +15,20 @@
     _Bool _showsSpecialMembershipBanner;
     _Bool _showsSubredditLockedPoints;
     NSArray *_activeMemberships;
+    long long _pointDecimals;
     NSString *_subredditPointsName;
     NSDate *_specialMembershipEndsAt;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDate *specialMembershipEndsAt; // @synthesize specialMembershipEndsAt=_specialMembershipEndsAt;
 @property(readonly, copy, nonatomic) NSString *subredditPointsName; // @synthesize subredditPointsName=_subredditPointsName;
+@property(readonly, nonatomic) long long pointDecimals; // @synthesize pointDecimals=_pointDecimals;
 @property(readonly, nonatomic) _Bool showsSubredditLockedPoints; // @synthesize showsSubredditLockedPoints=_showsSubredditLockedPoints;
 @property(readonly, nonatomic) _Bool showsSpecialMembershipBanner; // @synthesize showsSpecialMembershipBanner=_showsSpecialMembershipBanner;
 @property(readonly, nonatomic) _Bool isSpecialMembershipRenewing; // @synthesize isSpecialMembershipRenewing=_isSpecialMembershipRenewing;
 @property(readonly, nonatomic) _Bool isSpecialMembershipSupported; // @synthesize isSpecialMembershipSupported=_isSpecialMembershipSupported;
 @property(readonly, nonatomic) NSArray *activeMemberships; // @synthesize activeMemberships=_activeMemberships;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isSpecialMembershipActive;
 - (id)initWithData:(id)arg1;
 

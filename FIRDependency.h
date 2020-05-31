@@ -16,9 +16,9 @@
 
 + (id)dependencyWithProtocol:(id)arg1 isRequired:(_Bool)arg2;
 + (id)dependencyWithProtocol:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isRequired; // @synthesize isRequired=_isRequired;
 @property(readonly, nonatomic) Protocol *protocol; // @synthesize protocol=_protocol;
-- (void).cxx_destruct;
 - (id)initWithProtocol:(id)arg1 isRequired:(_Bool)arg2;
 
 @end

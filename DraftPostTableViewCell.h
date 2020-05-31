@@ -16,10 +16,10 @@
 }
 
 + (double)cellHeight;
+- (void).cxx_destruct;
 @property(retain, nonatomic) DraftPost *draftPost; // @synthesize draftPost=_draftPost;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
-- (void).cxx_destruct;
 - (id)titleText;
 - (id)headerText;
 - (void)layoutSubviews;

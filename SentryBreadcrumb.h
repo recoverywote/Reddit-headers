@@ -20,13 +20,13 @@
     NSDictionary *_data;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(retain, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(copy, nonatomic) NSString *category; // @synthesize category=_category;
 @property(nonatomic) long long level; // @synthesize level=_level;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)initWithLevel:(long long)arg1 category:(id)arg2;
 

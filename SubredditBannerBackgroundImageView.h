@@ -17,12 +17,12 @@
     NSURL *_backgroundImageURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *backgroundImageURL; // @synthesize backgroundImageURL=_backgroundImageURL;
 @property(nonatomic) _Bool isImageTiled; // @synthesize isImageTiled=_isImageTiled;
 @property(retain, nonatomic) UIImage *loadedImage; // @synthesize loadedImage=_loadedImage;
 @property(retain, nonatomic) NSString *loadedURLString; // @synthesize loadedURLString=_loadedURLString;
 @property(retain, nonatomic) UIColor *imagePrimaryColor; // @synthesize imagePrimaryColor=_imagePrimaryColor;
-- (void).cxx_destruct;
 - (void)setBackgroundImageWithURLString:(id)arg1 placeholderImage:(id)arg2 shouldTileImage:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)applyImage:(id)arg1 shouldTileImage:(_Bool)arg2;
 - (void)setImage:(id)arg1;

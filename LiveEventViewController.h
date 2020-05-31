@@ -31,6 +31,7 @@
     NSTimer *_trackingTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *trackingTimer; // @synthesize trackingTimer=_trackingTimer;
 @property(retain, nonatomic) NSURLSession *trackingSession; // @synthesize trackingSession=_trackingSession;
 @property(retain, nonatomic) NSIndexPath *maxScrollIndexPath; // @synthesize maxScrollIndexPath=_maxScrollIndexPath;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) LiveEvent *liveEvent; // @synthesize liveEvent=_liveEvent;
 @property(retain, nonatomic) SocketSession *socketSession; // @synthesize socketSession=_socketSession;
-- (void).cxx_destruct;
 - (void)sendActivityTrackingRequest;
 - (void)stopTrackingTimer;
 - (void)setupTrackingTimer;

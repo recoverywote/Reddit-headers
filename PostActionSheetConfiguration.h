@@ -17,12 +17,12 @@
     NSString *_newsSubtopicTitle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowGiveAwardItem; // @synthesize shouldShowGiveAwardItem=_shouldShowGiveAwardItem;
 @property(nonatomic) _Bool shouldShowFlairItem; // @synthesize shouldShowFlairItem=_shouldShowFlairItem;
 @property(nonatomic) _Bool shouldShowSaveItem; // @synthesize shouldShowSaveItem=_shouldShowSaveItem;
 @property(retain, nonatomic) NSString *newsSubtopicTitle; // @synthesize newsSubtopicTitle=_newsSubtopicTitle;
 @property(nonatomic) _Bool shouldShowNewsUnfollow; // @synthesize shouldShowNewsUnfollow=_shouldShowNewsUnfollow;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

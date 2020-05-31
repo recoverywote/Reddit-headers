@@ -14,9 +14,9 @@
     AFImageDownloader *_imageDownloader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AFImageDownloader *imageDownloader; // @synthesize imageDownloader=_imageDownloader;
 @property(retain, nonatomic) MetaUsernameDecoration *decoration; // @synthesize decoration=_decoration;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIFont *usernameFont;
 @property(readonly, nonatomic) UIColor *usernameColor;
 - (id)attributedStringWithFont:(id)arg1 updateHandler:(CDUnknownBlockType)arg2;

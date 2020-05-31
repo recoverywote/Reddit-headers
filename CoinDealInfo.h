@@ -16,11 +16,11 @@
     long long _delay;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long delay; // @synthesize delay=_delay;
 @property(readonly, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) long long dealType; // @synthesize dealType=_dealType;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

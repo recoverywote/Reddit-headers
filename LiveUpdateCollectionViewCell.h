@@ -13,8 +13,8 @@
     LiveUpdateContentView *_liveUpdateContentView;
 }
 
-@property(retain, nonatomic) LiveUpdateContentView *liveUpdateContentView; // @synthesize liveUpdateContentView=_liveUpdateContentView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) LiveUpdateContentView *liveUpdateContentView; // @synthesize liveUpdateContentView=_liveUpdateContentView;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

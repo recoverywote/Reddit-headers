@@ -15,10 +15,10 @@
     CaptureContentButtonList *_buttonListContent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isUsernameValid; // @synthesize isUsernameValid=_isUsernameValid;
 @property(retain, nonatomic) CaptureContentButtonList *buttonListContent; // @synthesize buttonListContent=_buttonListContent;
 @property(retain, nonatomic) CaptureContentTextEntry *textEntryContent; // @synthesize textEntryContent=_textEntryContent;
-- (void).cxx_destruct;
 - (void)updateCaptureScreen;
 - (_Bool)validateContent;
 - (void)validateUsername:(id)arg1;

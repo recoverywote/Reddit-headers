@@ -16,8 +16,8 @@
     LOTMask *_maskNode;
 }
 
-@property(readonly, nonatomic) LOTMask *maskNode; // @synthesize maskNode=_maskNode;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) LOTMask *maskNode; // @synthesize maskNode=_maskNode;
 - (_Bool)hasUpdateForFrame:(id)arg1;
 - (void)updateForFrame:(id)arg1 withViewBounds:(struct CGRect)arg2;
 - (id)initWithMask:(id)arg1;

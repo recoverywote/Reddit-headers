@@ -11,8 +11,8 @@
     CDUnknownBlockType _spotlightCallback;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType spotlightCallback; // @synthesize spotlightCallback=_spotlightCallback;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType spotlightCallback; // @synthesize spotlightCallback=_spotlightCallback;
 - (void)processResponse:(id)arg1 error:(id)arg2;
 - (id)initWithParams:(id)arg1 callback:(CDUnknownBlockType)arg2;
 

@@ -19,6 +19,7 @@
     NSLayoutConstraint *_descriptionToContainerConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *descriptionToContainerConstraint; // @synthesize descriptionToContainerConstraint=_descriptionToContainerConstraint;
 @property(retain, nonatomic) UIButton *purchaseButton; // @synthesize purchaseButton=_purchaseButton;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) BaseLabel *bonusLabel; // @synthesize bonusLabel=_bonusLabel;
 @property(retain, nonatomic) UIImageView *premiumLogoImageView; // @synthesize premiumLogoImageView=_premiumLogoImageView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)setBonusLabelHidden:(_Bool)arg1;
 - (void)handleCellDidTap:(id)arg1;

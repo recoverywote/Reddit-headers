@@ -22,6 +22,7 @@
     NSURL *_mobileHeroImageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *mobileHeroImageURL; // @synthesize mobileHeroImageURL=_mobileHeroImageURL;
 @property(readonly, nonatomic) NSString *heroSubtext; // @synthesize heroSubtext=_heroSubtext;
 @property(readonly, nonatomic) NSString *heroText; // @synthesize heroText=_heroText;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) NSURL *dropdownHeaderBackgroundAsset; // @synthesize dropdownHeaderBackgroundAsset=_dropdownHeaderBackgroundAsset;
 @property(readonly, nonatomic) NSString *dropdownHeaderText; // @synthesize dropdownHeaderText=_dropdownHeaderText;
 @property(readonly, nonatomic) NSString *ctaText; // @synthesize ctaText=_ctaText;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

@@ -15,8 +15,8 @@
     AwardDetailsViewController *_awardDetailsViewController;
 }
 
-@property(nonatomic) __weak AwardDetailsViewController *awardDetailsViewController; // @synthesize awardDetailsViewController=_awardDetailsViewController;
 - (void).cxx_destruct;
+@property(nonatomic) __weak AwardDetailsViewController *awardDetailsViewController; // @synthesize awardDetailsViewController=_awardDetailsViewController;
 - (void)showReportConfirmationDialogForAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)showAwardInfoForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
 - (void)showSelectAwardScreenForComment:(id)arg1 parentPost:(id)arg2 accountContext:(id)arg3 correlationId:(id)arg4;

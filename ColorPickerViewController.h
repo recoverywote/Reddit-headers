@@ -17,11 +17,11 @@
     UIButton *_selectedColorButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *selectedColorButton; // @synthesize selectedColorButton=_selectedColorButton;
 @property(retain, nonatomic) UIStackView *colorStackView; // @synthesize colorStackView=_colorStackView;
 @property(retain, nonatomic) NSArray *colors; // @synthesize colors=_colors;
 @property(nonatomic) __weak id <ColorPickerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapColorButton:(id)arg1;
 - (void)setupButtons;
 - (void)setupColorStackView;

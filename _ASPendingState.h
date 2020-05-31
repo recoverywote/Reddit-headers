@@ -139,6 +139,7 @@
 
 + (id)pendingViewStateFromView:(id)arg1;
 + (id)pendingViewStateFromLayer:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool insetsLayoutMarginsFromSafeArea; // @synthesize insetsLayoutMarginsFromSafeArea;
 @property(nonatomic) _Bool preservesSuperviewLayoutMargins; // @synthesize preservesSuperviewLayoutMargins;
 @property(nonatomic) struct UIEdgeInsets layoutMargins; // @synthesize layoutMargins;
@@ -178,7 +179,6 @@
 @property(nonatomic) struct CGRect frame; // @synthesize frame;
 @property(nonatomic, getter=isOpaque) _Bool opaque; // @synthesize opaque;
 @property(nonatomic) _Bool clipsToBounds; // @synthesize clipsToBounds;
-- (void).cxx_destruct;
 - (void)dealloc;
 @property(readonly, nonatomic) _Bool hasChanges;
 @property(readonly, nonatomic) _Bool hasSetNeedsDisplay;

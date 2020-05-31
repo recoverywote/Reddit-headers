@@ -35,6 +35,7 @@
     id <CommentComposeViewControllerDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <CommentComposeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) _TtC6Reddit21MetaRichTextConverter *richTextConverter; // @synthesize richTextConverter=_richTextConverter;
 @property(retain, nonatomic) _TtC6Reddit23MetaGIPHYComposeManager *giphyComposeManager; // @synthesize giphyComposeManager=_giphyComposeManager;
@@ -50,7 +51,6 @@
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) CommentComposeView *composeView; // @synthesize composeView=_composeView;
-- (void).cxx_destruct;
 - (id)clickEventForComment:(id)arg1 noun:(id)arg2;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

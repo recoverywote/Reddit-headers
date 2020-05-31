@@ -19,12 +19,12 @@
 
 + (void)presentRequestWithPresentingViewController:(id)arg1 requestModel:(id)arg2 completion:(CDUnknownBlockType)arg3;
 + (void)showRequestWithParentViewController:(id)arg1 requestModel:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseImageView *centerImageView; // @synthesize centerImageView=_centerImageView;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) BaseButton *confirmButton; // @synthesize confirmButton=_confirmButton;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
-- (void).cxx_destruct;
 - (void)dismissWithSuccess:(_Bool)arg1;
 - (void)cancelButtonAction;
 - (void)confirmButtonAction;

@@ -21,13 +21,13 @@
     ASTextNode *_subredditTitletNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *subredditTitletNode; // @synthesize subredditTitletNode=_subredditTitletNode;
 @property(retain, nonatomic) ASNetworkImageNode *subredditIconNode; // @synthesize subredditIconNode=_subredditIconNode;
 @property(nonatomic) long long positionInFeed; // @synthesize positionInFeed=_positionInFeed;
 @property(readonly, copy, nonatomic) PostCollectionOptions *postCollectionOptions; // @synthesize postCollectionOptions=_postCollectionOptions;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(readonly, nonatomic) __weak id <PostCollectionHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)subredditButtonTapped:(id)arg1;
 - (void)configureSubredditIconNode;

@@ -9,13 +9,14 @@
 #import "ChatModqueueMessageNodeDelegate-Protocol.h"
 
 @class ASTextNode, Channel, ChatExternalLinkNode, ChatMessage, ChatMessageSnoomojiNode, ChatModqueueMessageNode, ChatPostNode;
-@protocol ChatMessageContentNodeDelegate, FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate;
+@protocol AccountContext, ChatMessageContentNodeDelegate, FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate;
 
 @interface ChatMessageContentNode : ASDisplayNode <ChatModqueueMessageNodeDelegate>
 {
     _Bool _shouldShowModqueueMessage;
     id <FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate> _delegateVC;
     id <ChatMessageContentNodeDelegate> _delegate;
+    id <AccountContext> _accountContext;
     ChatMessage *_chatMessage;
     Channel *_channel;
     ASTextNode *_textNode;
@@ -25,6 +26,7 @@
     ChatModqueueMessageNode *_modQueueMessageNode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowModqueueMessage; // @synthesize shouldShowModqueueMessage=_shouldShowModqueueMessage;
 @property(retain, nonatomic) ChatModqueueMessageNode *modQueueMessageNode; // @synthesize modQueueMessageNode=_modQueueMessageNode;
 @property(retain, nonatomic) ChatPostNode *postNode; // @synthesize postNode=_postNode;
@@ -33,16 +35,16 @@
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) ChatMessage *chatMessage; // @synthesize chatMessage=_chatMessage;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <ChatMessageContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate><ChatExternalLinkNodeDelegate><ASTextNodeDelegate> delegateVC; // @synthesize delegateVC=_delegateVC;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)chatModqueueMessageNodeDidTapAvatarImageNode:(id)arg1;
 - (void)addModAnnouncementToString;
 - (void)addUserMentionsToString;
 - (void)addLinksToString;
-- (void)configureWithAccountContext:(id)arg1 message:(id)arg2 channel:(id)arg3;
-- (id)init;
+- (void)configureWithMessage:(id)arg1 channel:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

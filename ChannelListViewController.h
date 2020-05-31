@@ -24,13 +24,13 @@
     BaseCollectionView *_collectionView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
 @property(copy, nonatomic) NSArray *channels; // @synthesize channels=_channels;
 @property(readonly, nonatomic) ChannelNetworkSource *dataSource; // @synthesize dataSource=_dataSource;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)logViewEvent;
 - (id)analyticsScreenViewName;
 - (id)majorContentScrollView;

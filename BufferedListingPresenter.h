@@ -23,6 +23,7 @@
     NSArray *_dataSourceObjects;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isCurrentQueueBusy; // @synthesize isCurrentQueueBusy=_isCurrentQueueBusy;
 @property(copy, nonatomic) NSArray *dataSourceObjects; // @synthesize dataSourceObjects=_dataSourceObjects;
 @property(retain, nonatomic) NSTimer *bufferTimer; // @synthesize bufferTimer=_bufferTimer;
@@ -30,7 +31,6 @@
 @property(nonatomic) double queueBufferTime; // @synthesize queueBufferTime=_queueBufferTime;
 @property(retain, nonatomic) ListingBuffer *listingBuffer; // @synthesize listingBuffer=_listingBuffer;
 @property(retain, nonatomic) NSMutableArray *currentUpdateQueue; // @synthesize currentUpdateQueue=_currentUpdateQueue;
-- (void).cxx_destruct;
 - (id)currentObjects;
 @property(readonly, nonatomic) unsigned long long bufferedSectionIndex;
 - (void)liveNetworkSource:(id)arg1 didParseEmbedForUpdate:(id)arg2;

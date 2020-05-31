@@ -17,8 +17,8 @@
 
 + (unsigned long long)appropriateImageIdxForURLsGivenHistoricalNetworkConditions:(id)arg1 lowQualityQPSThreshold:(float)arg2 highQualityQPSThreshold:(float)arg3;
 + (id)sharedRecorder;
-@property(retain, nonatomic) PINRemoteLock *lock; // @synthesize lock=_lock;
 - (void).cxx_destruct;
+@property(retain, nonatomic) PINRemoteLock *lock; // @synthesize lock=_lock;
 - (unsigned long long)networkStatusForFlags:(unsigned int)arg1;
 - (unsigned long long)connectionStatus;
 - (double)weightedTimeToFirstByteForHost:(id)arg1;

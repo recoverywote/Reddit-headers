@@ -15,10 +15,10 @@
     NSString *_subredditPrompt;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *subredditPrompt; // @synthesize subredditPrompt=_subredditPrompt;
 @property(readonly, copy, nonatomic) NSString *subredditId; // @synthesize subredditId=_subredditId;
 @property(readonly, copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *subredditVisualName;
 - (id)initWithSubredditPromptData:(id)arg1;

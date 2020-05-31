@@ -22,6 +22,7 @@
     UIImageView *_clock;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *clock; // @synthesize clock=_clock;
 @property(retain, nonatomic) UIStackView *timerStackView; // @synthesize timerStackView=_timerStackView;
 @property(retain, nonatomic) UILabel *subheaderTextLabel; // @synthesize subheaderTextLabel=_subheaderTextLabel;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(retain, nonatomic) UIImageView *bannerImageView; // @synthesize bannerImageView=_bannerImageView;
 @property(nonatomic) __weak id <GoldCoinMarketingPageHeaderCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setupViews;
 - (void)learnMoreButtonDidTap:(id)arg1;
 - (void)configureWithViewModel:(id)arg1;

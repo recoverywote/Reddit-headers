@@ -26,6 +26,7 @@
     MetaCommunityInfo *_communityInfo;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MetaCommunityInfo *communityInfo; // @synthesize communityInfo=_communityInfo;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) NSString *correlationID; // @synthesize correlationID=_correlationID;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) _TtC6Reddit34MetaSubredditMembershipContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
-- (void).cxx_destruct;
 - (id)pageItemId;
 - (id)pageItemText;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;

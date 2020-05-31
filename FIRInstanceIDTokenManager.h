@@ -18,11 +18,11 @@
     FIRInstanceIDAPNSInfo *_currentAPNSInfo;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FIRInstanceIDAPNSInfo *currentAPNSInfo; // @synthesize currentAPNSInfo=_currentAPNSInfo;
 @property(readonly, nonatomic) NSOperationQueue *tokenOperations; // @synthesize tokenOperations=_tokenOperations;
 @property(retain, nonatomic) FIRInstanceIDStore *instanceIDStore; // @synthesize instanceIDStore=_instanceIDStore;
 @property(retain, nonatomic) FIRInstanceIDAuthService *authService; // @synthesize authService=_authService;
-- (void).cxx_destruct;
 - (id)updateTokensToAPNSDeviceToken:(id)arg1 isSandbox:(_Bool)arg2;
 - (_Bool)checkTokenRefreshPolicyWithIID:(id)arg1;
 - (id)createDeleteOperationWithAuthorizedEntity:(id)arg1 scope:(id)arg2 checkinPreferences:(id)arg3 instanceID:(id)arg4 action:(long long)arg5;

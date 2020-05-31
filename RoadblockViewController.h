@@ -20,13 +20,13 @@
     CALayer *_lineLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *lineLayer; // @synthesize lineLayer=_lineLayer;
 @property(retain, nonatomic) UIButton *doneButton; // @synthesize doneButton=_doneButton;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
-- (void).cxx_destruct;
 - (void)didTapDone:(id)arg1;
 - (void)viewWillLayoutSubviews;
 - (void)configureViewAppearance;

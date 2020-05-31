@@ -19,8 +19,8 @@
 + (id)profileSettingsEventWithAction:(id)arg1 noun:(id)arg2;
 + (id)profileSettingsViewEventWithNoun:(id)arg1;
 + (id)profileSettingsClickEventWithNoun:(id)arg1;
-@property(retain, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 
 @end
 

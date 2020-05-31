@@ -13,8 +13,8 @@
     ModSubreddit *_subreddit;
 }
 
-@property(retain, nonatomic) ModSubreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ModSubreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (id)analyticsScreenViewName;
 - (void)presentModQueueViewController;
 - (void)modButtonTapped:(id)arg1;

@@ -27,6 +27,7 @@
     NSString *_contentCategory;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *contentCategory; // @synthesize contentCategory=_contentCategory;
 @property(copy, nonatomic) NSString *selfText; // @synthesize selfText=_selfText;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
@@ -42,7 +43,6 @@
 @property(nonatomic) _Bool isSpoiler; // @synthesize isSpoiler=_isSpoiler;
 @property(nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
 @property(copy, nonatomic) NSString *draftPostId; // @synthesize draftPostId=_draftPostId;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1 subreddits:(id)arg2;
 
 @end

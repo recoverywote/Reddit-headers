@@ -10,6 +10,7 @@
 {
 }
 
++ (id)swipeEventWithPost:(id)arg1 comment:(id)arg2 source:(id)arg3 noun:(id)arg4 pageType:(id)arg5;
 + (id)outboundSourceReferringDataForURL:(id)arg1 redditService:(id)arg2;
 + (id)outboundEventWithURL:(id)arg1 outboundSourceElement:(unsigned long long)arg2 outboundSourceReferringData:(id)arg3;
 + (id)createOutboundLinkClickEventWithURL:(id)arg1 referringData:(id)arg2 source:(id)arg3 noun:(id)arg4 pageType:(id)arg5 outboundSourceElement:(unsigned long long)arg6 outboundSourceReferringData:(id)arg7;

@@ -13,8 +13,8 @@
     ASTextNode *_textNode;
 }
 
-@property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureWithMessage:(id)arg1;
 - (id)init;

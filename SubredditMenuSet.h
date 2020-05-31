@@ -14,9 +14,9 @@
     NSArray *_menus;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool showWiki; // @synthesize showWiki=_showWiki;
 @property(copy, nonatomic) NSArray *menus; // @synthesize menus=_menus;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1 subredditName:(id)arg2;
 
 @end

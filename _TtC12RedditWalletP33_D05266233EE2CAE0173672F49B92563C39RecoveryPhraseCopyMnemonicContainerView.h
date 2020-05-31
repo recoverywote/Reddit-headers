@@ -14,7 +14,7 @@
     // Error parsing type: , name: copyButtonContainer
     // Error parsing type: , name: cardView
     // Error parsing type: , name: isCopiedSubject
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

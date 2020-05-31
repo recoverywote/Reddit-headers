@@ -9,13 +9,7 @@
 @interface _TtC12RedditWallet30CryptoMembershipFlowController : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: user
-    // Error parsing type: , name: redditService
-    // Error parsing type: , name: transactionRepository
-    // Error parsing type: , name: repository
-    // Error parsing type: , name: walletProvider
-    // Error parsing type: , name: ethereumProvider
-    // Error parsing type: , name: themeProvider
-    // Error parsing type: , name: imageProvider
+    // Error parsing type: , name: serviceLocator
 }
 
 @end

@@ -18,9 +18,9 @@
     NSString *_editor_mode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool editor_modeIsSet; // @synthesize editor_modeIsSet=_editor_modeIsSet;
 @property(copy, nonatomic) NSString *editor_mode; // @synthesize editor_mode=_editor_mode;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

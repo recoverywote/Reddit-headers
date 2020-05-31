@@ -15,9 +15,9 @@
     PillStyle *_pillStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(nonatomic) __weak id <FlairViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)defaultButtonTitle;
 - (void)didTapFlair:(id)arg1;
 - (void)setTitle:(id)arg1;

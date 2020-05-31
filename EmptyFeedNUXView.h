@@ -11,7 +11,7 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
 @class BaseButton, BaseCollectionView, NSString;
-@protocol EmptyFeedNuxViewDelegate;
+@protocol EmptyFeedNuxViewDelegate, ViewContext;
 
 @interface EmptyFeedNUXView : BaseView <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RUIThemeUpdateCallbackProtocol>
 {
@@ -20,14 +20,16 @@
     BaseButton *_secondaryCtaButton;
     BaseCollectionView *_collectionView;
     BaseView *_backgroundView;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) BaseView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) BaseButton *secondaryCtaButton; // @synthesize secondaryCtaButton=_secondaryCtaButton;
 @property(retain, nonatomic) BaseButton *primaryCtaButton; // @synthesize primaryCtaButton=_primaryCtaButton;
 @property(nonatomic) __weak id <EmptyFeedNuxViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)numberOfSectionsInCollectionView:(id)arg1;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
@@ -37,7 +39,7 @@
 - (void)layoutSubviews;
 - (void)configureButtonsForNuxType:(unsigned long long)arg1;
 - (void)themeDidChange:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 - (void)dealloc;
 
 // Remaining properties

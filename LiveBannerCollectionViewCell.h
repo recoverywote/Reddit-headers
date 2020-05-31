@@ -14,8 +14,8 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
-@property(retain, nonatomic) LiveBannerContentView *eventView; // @synthesize eventView=_eventView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) LiveBannerContentView *eventView; // @synthesize eventView=_eventView;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

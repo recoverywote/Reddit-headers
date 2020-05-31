@@ -9,15 +9,12 @@
 @interface _TtC6Reddit25ChangeEmailViewController : BaseViewController
 {
     // Error parsing type: , name: accountContext
-    // Error parsing type: , name: kAvatarImageSize
+    // Error parsing type: , name: accountHeaderView
     // Error parsing type: , name: kTextFieldHeight
     // Error parsing type: , name: delegate
     // Error parsing type: , name: saveButton
     // Error parsing type: , name: scrollView
     // Error parsing type: , name: contentView
-    // Error parsing type: , name: avatarImageView
-    // Error parsing type: , name: usernameLabel
-    // Error parsing type: , name: emailLabel
     // Error parsing type: , name: descriptionContentView
     // Error parsing type: , name: descriptionTitleLabel
     // Error parsing type: , name: descriptionDetailsLabel

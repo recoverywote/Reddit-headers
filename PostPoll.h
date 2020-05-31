@@ -18,11 +18,11 @@
     long long _totalVoteCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long totalVoteCount; // @synthesize totalVoteCount=_totalVoteCount;
 @property(copy, nonatomic) NSArray *options; // @synthesize options=_options;
 @property(readonly, copy, nonatomic) NSDate *votingEndsAt; // @synthesize votingEndsAt=_votingEndsAt;
 @property(copy, nonatomic) NSString *selectedOptionId; // @synthesize selectedOptionId=_selectedOptionId;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)updatedPollWithOptionsData:(id)arg1 selectedOptionId:(id)arg2;
 - (id)initWithData:(id)arg1;

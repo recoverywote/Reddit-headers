@@ -18,16 +18,16 @@
     _Bool _isTrackingScrollView;
     _Bool _initialItemsRead;
     id <ChatMessageCellDelegate> _messageCellDelegate;
+    id <AccountContext> _accountContext;
     SerialAsyncQueue *_serialQueue;
     ASTableNode *_tableNode;
     Channel *_channel;
     ChatFeedInteractor *_interactor;
     NSArray *_items;
     ASBatchContext *_batchContext;
-    id <AccountContext> _accountContext;
 }
 
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASBatchContext *batchContext; // @synthesize batchContext=_batchContext;
 @property(retain, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) _Bool initialItemsRead; // @synthesize initialItemsRead=_initialItemsRead;
@@ -35,9 +35,9 @@
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(retain, nonatomic) ASTableNode *tableNode; // @synthesize tableNode=_tableNode;
 @property(retain, nonatomic) SerialAsyncQueue *serialQueue; // @synthesize serialQueue=_serialQueue;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool isTrackingScrollView; // @synthesize isTrackingScrollView=_isTrackingScrollView;
 @property(nonatomic) __weak id <ChatMessageCellDelegate> messageCellDelegate; // @synthesize messageCellDelegate=_messageCellDelegate;
-- (void).cxx_destruct;
 - (void)chatFeedInteractor:(id)arg1 didUpdateObjects:(id)arg2;
 - (void)chatFeedInteractor:(id)arg1 didReloadToObjects:(id)arg2;
 - (void)chatFeedInteractorDidFailFetch:(id)arg1 forContext:(id)arg2;

@@ -16,11 +16,11 @@
     CAGradientLayer *_gradientLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
 @property(nonatomic) double gradientHighlightPercentage; // @synthesize gradientHighlightPercentage=_gradientHighlightPercentage;
 @property(retain, nonatomic) UIColor *gradientHighlightColor; // @synthesize gradientHighlightColor=_gradientHighlightColor;
 @property(retain, nonatomic) UIColor *gradientColor; // @synthesize gradientColor=_gradientColor;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)configureGradientAnimation:(id)arg1 endLocations:(id)arg2;
 - (void)setGradientLayerColors;

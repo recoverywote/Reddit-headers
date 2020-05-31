@@ -19,11 +19,11 @@
 }
 
 + (id)instance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit23RequestPermissionRouter *requestPermissionRouter; // @synthesize requestPermissionRouter=_requestPermissionRouter;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(nonatomic) _Bool requestedSystemPermissionDialog; // @synthesize requestedSystemPermissionDialog=_requestedSystemPermissionDialog;
 @property(copy, nonatomic) NSString *token; // @synthesize token=_token;
-- (void).cxx_destruct;
 - (void)logPushNotificationDialogConfirmed:(_Bool)arg1 promptStyle:(unsigned long long)arg2 requestModel:(id)arg3;
 - (void)logPushNotificationViewEventWithPromptStyle:(unsigned long long)arg1 requestModel:(id)arg2;
 - (void)logPermissionsChangedInSystemSettings;

@@ -13,8 +13,8 @@
     NSMutableArray *_elements;
 }
 
-@property(retain, nonatomic) NSMutableArray *elements; // @synthesize elements=_elements;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *elements; // @synthesize elements=_elements;
 - (void)fadeOutElementsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)layoutSubviews;
 - (void)populateSkeletonElements;

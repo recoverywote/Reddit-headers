@@ -14,9 +14,9 @@
     NSString *_shouldMuteMinimumAccountAgeKey;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *shouldMuteMinimumAccountAgeKey; // @synthesize shouldMuteMinimumAccountAgeKey=_shouldMuteMinimumAccountAgeKey;
 @property(copy, nonatomic) NSString *shouldMuteNewMembersKey; // @synthesize shouldMuteNewMembersKey=_shouldMuteNewMembersKey;
-- (void).cxx_destruct;
 
 @end
 

@@ -31,6 +31,7 @@
 
 + (id)universalEndpointSourceFromOrigin:(unsigned long long)arg1;
 + (id)combinedQueryFromContexts:(id)arg1 query:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType railsQueryResolver; // @synthesize railsQueryResolver=_railsQueryResolver;
 @property(copy, nonatomic) NSArray *queryContexts; // @synthesize queryContexts=_queryContexts;
 @property(retain, nonatomic) RailsAnalyticsContext *analyticsContext; // @synthesize analyticsContext=_analyticsContext;
@@ -44,7 +45,6 @@
 @property(nonatomic) _Bool isFilterChangeIntent; // @synthesize isFilterChangeIntent=_isFilterChangeIntent;
 @property(nonatomic) _Bool isTypeaheadActive; // @synthesize isTypeaheadActive=_isTypeaheadActive;
 @property(copy, nonatomic) NSDictionary *cachedResults; // @synthesize cachedResults=_cachedResults;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *universalEndpointSource;
 - (id)valueForTemplateName:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

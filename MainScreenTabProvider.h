@@ -22,6 +22,7 @@
     NSArray *_requiredTabs;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *requiredTabs; // @synthesize requiredTabs=_requiredTabs;
 @property(readonly, nonatomic) _Bool isStayHomeFeedEnabled; // @synthesize isStayHomeFeedEnabled=_isStayHomeFeedEnabled;
 @property(readonly, nonatomic) _Bool isForYouFeedEnabled; // @synthesize isForYouFeedEnabled=_isForYouFeedEnabled;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) AccountSettings *settings; // @synthesize settings=_settings;
 @property(copy, nonatomic) NSArray *tabs; // @synthesize tabs=_tabs;
 @property(nonatomic) __weak id <MainScreenTabProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)changeTabsTo:(id)arg1;
 - (_Bool)areTabsValid:(id)arg1;

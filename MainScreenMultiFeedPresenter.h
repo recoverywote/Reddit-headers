@@ -17,9 +17,9 @@
     MainScreenMultiTab *_multiTab;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MainScreenMultiTab *multiTab; // @synthesize multiTab=_multiTab;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)configureWithMulti:(id)arg1;

@@ -15,10 +15,10 @@
 
 @interface RailsSearchDataSource : NSObject <ListingNetworkSourceDelegate, DiscoveryUnitViewModelDataProviderDelegate, SearchDataSource>
 {
+    id <AccountContext> _accountContext;
     TrendingRailsListingNetworkSource *_trendingRailsListingNetworkSource;
     CDUnknownBlockType _headerContentView;
     CDUnknownBlockType _searchTabProviderBlock;
-    id <AccountContext> _accountContext;
     RailsContext *_railsContext;
     NSString *_query;
     NSString *_analyticsPageType;
@@ -27,15 +27,15 @@
 
 + (id)processedSearchQueryWithQuery:(id)arg1 withHistorySubreddit:(id)arg2 withPostFlair:(id)arg3 withCategory:(id)arg4 forTypeahead:(_Bool)arg5;
 + (_Bool)needsRailsEndpointFetchForRailsContext:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(copy, nonatomic) NSString *analyticsPageType; // @synthesize analyticsPageType=_analyticsPageType;
 @property(retain, nonatomic) NSString *query; // @synthesize query=_query;
 @property(retain, nonatomic) RailsContext *railsContext; // @synthesize railsContext=_railsContext;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType searchTabProviderBlock; // @synthesize searchTabProviderBlock=_searchTabProviderBlock;
 @property(copy, nonatomic) CDUnknownBlockType headerContentView; // @synthesize headerContentView=_headerContentView;
 @property(retain, nonatomic) TrendingRailsListingNetworkSource *trendingRailsListingNetworkSource; // @synthesize trendingRailsListingNetworkSource=_trendingRailsListingNetworkSource;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)convertToPillViewsForSearchViewController:(id)arg1 withRailsContext:(id)arg2;
 - (unsigned long long)surfaceType;
 - (id)valueForTemplateName:(id)arg1;

@@ -15,8 +15,8 @@
     UIViewController *_viewController;
 }
 
-@property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
 - (void).cxx_destruct;
+@property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
 - (void)navigateBack;
 - (void)navigateToUrl:(id)arg1;
 - (id)initWithViewController:(id)arg1;

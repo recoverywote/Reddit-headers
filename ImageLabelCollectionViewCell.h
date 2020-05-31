@@ -16,11 +16,11 @@
     BaseImageView *_imageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) UISwitch *accessorySwitch; // @synthesize accessorySwitch=_accessorySwitch;
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(nonatomic) _Bool shouldShowToggle; // @synthesize shouldShowToggle=_shouldShowToggle;
-- (void).cxx_destruct;
 - (void)configureWithText:(id)arg1 image:(id)arg2;
 - (void)layoutSubviews;
 - (void)prepareForReuse;

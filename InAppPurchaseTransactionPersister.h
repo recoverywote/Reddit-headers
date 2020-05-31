@@ -14,8 +14,8 @@
     id <InAppPurchaseTransactionStoring> _storage;
 }
 
-@property(readonly, nonatomic) id <InAppPurchaseTransactionStoring> storage; // @synthesize storage=_storage;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <InAppPurchaseTransactionStoring> storage; // @synthesize storage=_storage;
 @property(copy) NSDictionary *savedTransactions;
 - (_Bool)doesTransaction:(id)arg1 belongToAccount:(id)arg2;
 - (id)correlationIdForTransaction:(id)arg1 belongingToAccount:(id)arg2;

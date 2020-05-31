@@ -6,21 +6,22 @@
 
 #import <RedditUI/BaseBarButtonItem.h>
 
-@class AccountManager, ChatAvatarImageView;
+@class ChatAvatarImageView;
+@protocol AccountContext;
 
 @interface UserAccountDrawerBarButtonItem : BaseBarButtonItem
 {
-    AccountManager *_accountManager;
+    id <AccountContext> _accountContext;
     ChatAvatarImageView *_userAvatarImageView;
 }
 
-@property(retain, nonatomic) ChatAvatarImageView *userAvatarImageView; // @synthesize userAvatarImageView=_userAvatarImageView;
-@property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 - (void).cxx_destruct;
+@property(retain, nonatomic) ChatAvatarImageView *userAvatarImageView; // @synthesize userAvatarImageView=_userAvatarImageView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)userAccountUpdated:(id)arg1;
 - (void)updateUserAvatarImage;
 - (void)setUpCustomView;
-- (id)initWithAccountManager:(id)arg1 target:(id)arg2 action:(SEL)arg3;
+- (id)initWithAccountContext:(id)arg1 target:(id)arg2 action:(SEL)arg3;
 - (void)dealloc;
 
 @end

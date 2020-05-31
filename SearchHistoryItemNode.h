@@ -7,7 +7,7 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, BaseButtonNode, NSArray, PillStyle, SearchHistoryItem, SubscribableButtonNode;
-@protocol SearchHistoryItemNodeDelegate;
+@protocol SearchHistoryItemNodeDelegate, ViewContext;
 
 @interface SearchHistoryItemNode : BaseFeedDisplayNode
 {
@@ -16,27 +16,29 @@
     SubscribableButtonNode *_subscribeSearchButtonNode;
     id <SearchHistoryItemNodeDelegate> _delegate;
     SearchHistoryItem *_searchHistoryItem;
+    id <ViewContext> _viewContext;
     PillStyle *_pillStyle;
     NSArray *_pillNodes;
     ASDisplayNode *_iconNode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldUseSafeBrowsingMode; // @synthesize shouldUseSafeBrowsingMode=_shouldUseSafeBrowsingMode;
 @property(retain, nonatomic) ASDisplayNode *iconNode; // @synthesize iconNode=_iconNode;
 @property(retain, nonatomic) NSArray *pillNodes; // @synthesize pillNodes=_pillNodes;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) SearchHistoryItem *searchHistoryItem; // @synthesize searchHistoryItem=_searchHistoryItem;
 @property(nonatomic) __weak id <SearchHistoryItemNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SubscribableButtonNode *subscribeSearchButtonNode; // @synthesize subscribeSearchButtonNode=_subscribeSearchButtonNode;
 @property(retain, nonatomic) BaseButtonNode *clearButtonNode; // @synthesize clearButtonNode=_clearButtonNode;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureIconForPill:(id)arg1;
 - (id)pillNodesForRailsContext:(id)arg1;
 - (id)pillsForRailsContext:(id)arg1;
 - (void)configureNodes;
-- (id)initWithSearchHistoryItem:(id)arg1 shouldUseSafeBrowsingMode:(_Bool)arg2;
+- (id)initWithSearchHistoryItem:(id)arg1 viewContext:(id)arg2 shouldUseSafeBrowsingMode:(_Bool)arg3;
 
 @end
 

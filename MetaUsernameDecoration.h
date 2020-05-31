@@ -15,9 +15,9 @@
     NSArray *_badges;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *badges; // @synthesize badges=_badges;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) UIFont *font;
 @property(readonly, copy, nonatomic) UIColor *color; // @synthesize color=_color;
 - (id)initWithBadges:(id)arg1;

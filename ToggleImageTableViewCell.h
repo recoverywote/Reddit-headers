@@ -13,8 +13,8 @@
     UISwitch *_accessorySwitch;
 }
 
-@property(retain, nonatomic) UISwitch *accessorySwitch; // @synthesize accessorySwitch=_accessorySwitch;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UISwitch *accessorySwitch; // @synthesize accessorySwitch=_accessorySwitch;
 - (void)prepareForReuse;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

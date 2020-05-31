@@ -17,7 +17,7 @@
     // Error parsing type: , name: containerView
     // Error parsing type: , name: scrollingView
     // Error parsing type: , name: nextButton
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

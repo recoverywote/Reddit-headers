@@ -10,11 +10,12 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class BaseCollectionView, NSArray, NSString;
-@protocol ChatPostUserTypeAheadViewDelegate;
+@protocol ChatPostUserTypeAheadViewDelegate, ViewContext;
 
 @interface ChatPostUserTypeAheadView : BaseView <UICollectionViewDelegate, UICollectionViewDataSource>
 {
     id <ChatPostUserTypeAheadViewDelegate> _delegate;
+    id <ViewContext> _viewContext;
     NSArray *_userSuggestions;
     BaseCollectionView *_collectionView;
     BaseView *_topLineView;
@@ -23,14 +24,15 @@
     struct _NSRange _currentRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange currentRange; // @synthesize currentRange=_currentRange;
 @property(copy, nonatomic) NSString *currentPrefix; // @synthesize currentPrefix=_currentPrefix;
 @property(copy, nonatomic) NSString *currentWord; // @synthesize currentWord=_currentWord;
 @property(retain, nonatomic) BaseView *topLineView; // @synthesize topLineView=_topLineView;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(copy, nonatomic) NSArray *userSuggestions; // @synthesize userSuggestions=_userSuggestions;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <ChatPostUserTypeAheadViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (double)heightForCell;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (id)userForIndexPath:(id)arg1;
@@ -41,7 +43,7 @@
 - (struct CGSize)intrinsicContentSize;
 - (void)clearSuggestions;
 - (void)configureWithTypeAheadUsers:(id)arg1 word:(id)arg2 prefix:(id)arg3 range:(struct _NSRange)arg4;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

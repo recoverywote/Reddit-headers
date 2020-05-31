@@ -22,10 +22,10 @@
     ActivityViewController *_activityController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ActivityViewController *activityController; // @synthesize activityController=_activityController;
 @property(retain, nonatomic) MailListViewController *mailController; // @synthesize mailController=_mailController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)navigateToNotificationSettingsViewController;
 - (void)logAnalyticsEventWithAction:(id)arg1 noun:(id)arg2;
 - (void)updateContentViewsForData:(id)arg1;

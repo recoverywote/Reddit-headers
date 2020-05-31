@@ -8,7 +8,7 @@
 
 @interface NSMutableURLRequest (Reddit)
 - (void)addRedditAdIdHeaderWithId:(id)arg1;
-- (void)addDeviceAdIdHeader;
+- (void)addDeviceAdIdHeaderWithIDFA:(id)arg1;
 - (void)setHTTPBodyWithParameters:(id)arg1;
 - (void)addQueryParameter:(id)arg1 withValue:(id)arg2;
 - (void)addDeviceIdHeaderWithDeviceId:(id)arg1;
@@ -16,6 +16,5 @@
 - (void)addBasicAuthorizationHeaderWithClientId:(id)arg1;
 - (void)addRedditUserIdHeader:(id)arg1;
 - (void)addClientVendorIdHeader;
-- (void)addAdditionalHeaders;
 @end
 

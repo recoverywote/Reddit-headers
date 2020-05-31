@@ -28,6 +28,7 @@
     NSMutableArray *_slots;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool slotsIsSet; // @synthesize slotsIsSet=_slotsIsSet;
 @property(retain, nonatomic) NSMutableArray *slots; // @synthesize slots=_slots;
 @property(nonatomic) _Bool platformIsSet; // @synthesize platformIsSet=_platformIsSet;
@@ -40,7 +41,6 @@
 @property(nonatomic) _Bool first_chunk; // @synthesize first_chunk=_first_chunk;
 @property(nonatomic) _Bool number_min_distanceIsSet; // @synthesize number_min_distanceIsSet=_number_min_distanceIsSet;
 @property(nonatomic) long long number_min_distance; // @synthesize number_min_distance=_number_min_distance;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

@@ -24,6 +24,7 @@
     NSString *_tier;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool tier_reason_whitelistIsSet; // @synthesize tier_reason_whitelistIsSet=_tier_reason_whitelistIsSet;
 @property(nonatomic) _Bool tier_reason_whitelist; // @synthesize tier_reason_whitelist=_tier_reason_whitelist;
 @property(nonatomic) _Bool tier_reason_sortIsSet; // @synthesize tier_reason_sortIsSet=_tier_reason_sortIsSet;
@@ -32,7 +33,6 @@
 @property(nonatomic) _Bool tier_reason_rall; // @synthesize tier_reason_rall=_tier_reason_rall;
 @property(nonatomic) _Bool tierIsSet; // @synthesize tierIsSet=_tierIsSet;
 @property(copy, nonatomic) NSString *tier; // @synthesize tier=_tier;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

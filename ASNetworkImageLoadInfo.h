@@ -18,11 +18,11 @@
     id _userInfo;
 }
 
+- (void).cxx_destruct;
 @property(readonly) id userInfo; // @synthesize userInfo=_userInfo;
 @property(readonly) id downloadIdentifier; // @synthesize downloadIdentifier=_downloadIdentifier;
 @property(readonly) NSURL *url; // @synthesize url=_url;
 @property(readonly) long long sourceType; // @synthesize sourceType=_sourceType;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithURL:(id)arg1 sourceType:(long long)arg2 downloadIdentifier:(id)arg3 userInfo:(id)arg4;
 

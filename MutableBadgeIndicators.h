@@ -20,6 +20,7 @@
     BadgeIndicator *appBadge;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BadgeIndicator *appBadge; // @synthesize appBadge;
 @property(retain, nonatomic) BadgeIndicator *inboxTab; // @synthesize inboxTab;
 @property(retain, nonatomic) BadgeIndicator *activityTab; // @synthesize activityTab;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) BadgeIndicator *directMessages; // @synthesize directMessages;
 @property(retain, nonatomic) BadgeIndicator *chatRoomMentions; // @synthesize chatRoomMentions;
 @property(retain, nonatomic) BadgeIndicator *chatRooms; // @synthesize chatRooms;
-- (void).cxx_destruct;
 
 @end
 

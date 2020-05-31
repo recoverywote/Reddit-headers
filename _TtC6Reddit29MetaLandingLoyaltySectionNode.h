@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit29MetaLandingLoyaltySectionNode : ASDisplayNode
 {
+    // Error parsing type: , name: pillNode
     // Error parsing type: , name: headerNode
     // Error parsing type: , name: badgeNodes
     // Error parsing type: , name: progressNode

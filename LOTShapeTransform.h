@@ -18,13 +18,13 @@
     LOTKeyframeGroup *_opacity;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) LOTKeyframeGroup *opacity; // @synthesize opacity=_opacity;
 @property(readonly, nonatomic) LOTKeyframeGroup *rotation; // @synthesize rotation=_rotation;
 @property(readonly, nonatomic) LOTKeyframeGroup *scale; // @synthesize scale=_scale;
 @property(readonly, nonatomic) LOTKeyframeGroup *anchor; // @synthesize anchor=_anchor;
 @property(readonly, nonatomic) LOTKeyframeGroup *position; // @synthesize position=_position;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (id)description;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;

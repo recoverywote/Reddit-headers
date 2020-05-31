@@ -17,12 +17,12 @@
     ASDisplayNode *_maskNode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool bordered; // @synthesize bordered=_bordered;
 @property(retain, nonatomic) ASDisplayNode *maskNode; // @synthesize maskNode=_maskNode;
 @property(retain, nonatomic) ASDisplayNode *borderNode; // @synthesize borderNode=_borderNode;
 @property(retain, nonatomic) CAShapeLayer *maskLayer; // @synthesize maskLayer=_maskLayer;
 @property(retain, nonatomic) CAShapeLayer *borderLayer; // @synthesize borderLayer=_borderLayer;
-- (void).cxx_destruct;
 - (void)configureWithMessage:(id)arg1;
 - (void)layout;
 - (void)didLoad;

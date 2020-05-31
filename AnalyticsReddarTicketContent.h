@@ -36,6 +36,7 @@
     long long _target_created_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool target_created_timestampIsSet; // @synthesize target_created_timestampIsSet=_target_created_timestampIsSet;
 @property(nonatomic) long long target_created_timestamp; // @synthesize target_created_timestamp=_target_created_timestamp;
 @property(nonatomic) _Bool content_typeIsSet; // @synthesize content_typeIsSet=_content_typeIsSet;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSString *reported_url; // @synthesize reported_url=_reported_url;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

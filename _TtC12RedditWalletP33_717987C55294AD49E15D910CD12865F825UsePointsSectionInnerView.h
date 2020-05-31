@@ -12,7 +12,7 @@
     // Error parsing type: , name: repository
     // Error parsing type: , name: performMembershipSink
     // Error parsing type: , name: shouldReloadSubject
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

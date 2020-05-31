@@ -21,6 +21,7 @@
 }
 
 + (id)getBranchLinkPropertiesFromDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *controlParams; // @synthesize controlParams=_controlParams;
 @property(nonatomic) unsigned long long matchDuration; // @synthesize matchDuration=_matchDuration;
 @property(retain, nonatomic) NSString *campaign; // @synthesize campaign=_campaign;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSString *alias; // @synthesize alias=_alias;
 @property(retain, nonatomic) NSString *feature; // @synthesize feature=_feature;
 @property(retain, nonatomic) NSArray *tags; // @synthesize tags=_tags;
-- (void).cxx_destruct;
 - (id)description;
 - (void)addControlParam:(id)arg1 withValue:(id)arg2;
 

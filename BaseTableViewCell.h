@@ -15,10 +15,10 @@
     UILayoutGuide *_contentAreaGuide;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILayoutGuide *contentAreaGuide; // @synthesize contentAreaGuide=_contentAreaGuide;
 @property(retain, nonatomic) NSLayoutConstraint *widthConstraint; // @synthesize widthConstraint=_widthConstraint;
 @property(retain, nonatomic) UIView *mainContentView; // @synthesize mainContentView=_mainContentView;
-- (void).cxx_destruct;
 - (double)maxContentWidthWithSize:(struct CGSize)arg1;
 @property(readonly, nonatomic) double maxContentWidth;
 - (void)didTransitionToState:(unsigned long long)arg1;

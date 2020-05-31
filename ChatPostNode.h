@@ -21,6 +21,7 @@
     CAShapeLayer *_maskLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAShapeLayer *maskLayer; // @synthesize maskLayer=_maskLayer;
 @property(retain, nonatomic) CAShapeLayer *borderLayer; // @synthesize borderLayer=_borderLayer;
 @property(retain, nonatomic) FeedPostCellNode *cellNode; // @synthesize cellNode=_cellNode;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) ChatMessage *chatMessage; // @synthesize chatMessage=_chatMessage;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate> delegateVC; // @synthesize delegateVC=_delegateVC;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)errorNodeTapped:(id)arg1;
 - (void)layout;

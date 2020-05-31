@@ -21,13 +21,13 @@
     EmptyDogeView *_emptyView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
 @property(nonatomic) _Bool allowObservingScrollViewContentOffset; // @synthesize allowObservingScrollViewContentOffset=_allowObservingScrollViewContentOffset;
 @property(nonatomic) _Bool hasStartedObservingScrollViewNearBottom; // @synthesize hasStartedObservingScrollViewNearBottom=_hasStartedObservingScrollViewNearBottom;
 @property(retain, nonatomic) RefreshControl *refreshControl; // @synthesize refreshControl=_refreshControl;
 @property(retain, nonatomic) ListingPresenter *listingPresenter; // @synthesize listingPresenter=_listingPresenter;
-- (void).cxx_destruct;
 - (void)scheduleRenderingSpanEnd;
 - (void)beginRenderingSpan;
 - (_Bool)shouldTraceDisplayingListingContent;

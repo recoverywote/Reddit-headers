@@ -15,10 +15,10 @@
     DropdownView *_dropdownView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) DropdownView *dropdownView; // @synthesize dropdownView=_dropdownView;
 @property(retain, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
-- (void).cxx_destruct;
 - (double)maxTextViewWidth;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;

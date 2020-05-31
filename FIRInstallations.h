@@ -24,10 +24,10 @@
 + (void)validateAppOptions:(id)arg1 appName:(id)arg2;
 + (id)componentsToRegister;
 + (void)load;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) FIRInstallationsIDController *installationsIDController; // @synthesize installationsIDController=_installationsIDController;
 @property(readonly, nonatomic) NSString *appName; // @synthesize appName=_appName;
 @property(readonly, nonatomic) FIROptions *appOptions; // @synthesize appOptions=_appOptions;
-- (void).cxx_destruct;
 - (void)deleteWithCompletion:(CDUnknownBlockType)arg1;
 - (void)authTokenForcingRefresh:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)authTokenWithCompletion:(CDUnknownBlockType)arg1;

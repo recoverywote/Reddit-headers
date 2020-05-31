@@ -14,9 +14,9 @@
     NSDateInterval *_interval;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDateInterval *interval; // @synthesize interval=_interval;
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)initWithGraphQLData:(id)arg1;
 - (id)initWithData:(id)arg1;

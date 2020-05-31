@@ -25,6 +25,7 @@
     BaseCollectionView *_snoomojiCollectionView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseCollectionView *snoomojiCollectionView; // @synthesize snoomojiCollectionView=_snoomojiCollectionView;
 @property(retain, nonatomic) NSArray *snoomojiImages; // @synthesize snoomojiImages=_snoomojiImages;
 @property(copy, nonatomic) NSString *confirmationDialogButtonText; // @synthesize confirmationDialogButtonText=_confirmationDialogButtonText;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) SnoomojiImage *selectedSnoomojiImage; // @synthesize selectedSnoomojiImage=_selectedSnoomojiImage;
 @property(nonatomic) _Bool disableAnimatedImages; // @synthesize disableAnimatedImages=_disableAnimatedImages;
 @property(nonatomic) __weak id <SnoomojiViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak RUIActionSheetViewController *actionSheetViewController;
 - (void)actionSheetViewController:(id)arg1 didGetDismissedFromOutside:(_Bool)arg2;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;

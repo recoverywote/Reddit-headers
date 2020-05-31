@@ -9,8 +9,8 @@
 #import "ObjectObserverProtocol-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class Contact, NSString, RedditService;
-@protocol AvatarImageNodeDelegate;
+@class Contact, NSString;
+@protocol AvatarImageNodeDelegate, ViewContext;
 
 @interface AvatarImageNode : ASNetworkImageNode <UIGestureRecognizerDelegate, ObjectObserverProtocol>
 {
@@ -18,15 +18,16 @@
     NSString *_username;
     NSString *_url;
     Contact *_contact;
+    id <ViewContext> _viewContext;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
 @property(retain, nonatomic) NSString *username; // @synthesize username=_username;
 @property(nonatomic) __weak id <AvatarImageNodeDelegate> delegateCell; // @synthesize delegateCell=_delegateCell;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
-@property(readonly, nonatomic) RedditService *service;
 - (void)configureWithURL:(id)arg1;
 - (void)configureWithNSFW;
 - (_Bool)shouldMarkNFSW;
@@ -37,7 +38,7 @@
 - (void)configureWithUserID:(id)arg1 username:(id)arg2;
 - (void)configureWithUserID:(id)arg1;
 - (void)configureWithContact:(id)arg1;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

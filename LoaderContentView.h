@@ -14,9 +14,9 @@
     PreviewSpinnerView *_previewSpinnerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PreviewSpinnerView *previewSpinnerView; // @synthesize previewSpinnerView=_previewSpinnerView;
 @property(retain, nonatomic) BaseView *initialFetchPlaceHolderView; // @synthesize initialFetchPlaceHolderView=_initialFetchPlaceHolderView;
-- (void).cxx_destruct;
 - (void)removePlaceholders;
 - (void)showFailedPlaceholder;
 - (void)showInitialPlaceholder;

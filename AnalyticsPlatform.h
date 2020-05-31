@@ -34,6 +34,7 @@
     long long _fingerprint_created_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool fingerprint_created_timestampIsSet; // @synthesize fingerprint_created_timestampIsSet=_fingerprint_created_timestampIsSet;
 @property(nonatomic) long long fingerprint_created_timestamp; // @synthesize fingerprint_created_timestamp=_fingerprint_created_timestamp;
 @property(nonatomic) _Bool fingerprintIsSet; // @synthesize fingerprintIsSet=_fingerprintIsSet;
@@ -52,7 +53,6 @@
 @property(copy, nonatomic) NSString *device_id; // @synthesize device_id=_device_id;
 @property(nonatomic) _Bool nameIsSet; // @synthesize nameIsSet=_nameIsSet;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

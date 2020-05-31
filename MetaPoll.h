@@ -25,6 +25,7 @@
     MetaPollResults *_results;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MetaPollResults *results; // @synthesize results=_results;
 @property(readonly, copy, nonatomic) NSArray *options; // @synthesize options=_options;
 @property(readonly, copy, nonatomic) NSDecimalNumber *decisionThreshold; // @synthesize decisionThreshold=_decisionThreshold;
@@ -36,7 +37,6 @@
 @property(readonly, copy, nonatomic) NSDate *endsAt; // @synthesize endsAt=_endsAt;
 @property(readonly, copy, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
 @property(readonly, copy, nonatomic) NSString *pollId; // @synthesize pollId=_pollId;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)updatedPollWithResults:(id)arg1;
 - (id)initWithData:(id)arg1;

@@ -14,9 +14,9 @@
     BaseTextView *_textView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseTextView *textView; // @synthesize textView=_textView;
 @property(copy, nonatomic) NSString *placeHolderText; // @synthesize placeHolderText=_placeHolderText;
-- (void).cxx_destruct;
 - (void)setTransform:(struct CGAffineTransform)arg1;
 - (id)init;
 

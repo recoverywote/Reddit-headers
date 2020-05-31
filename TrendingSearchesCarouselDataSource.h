@@ -13,8 +13,8 @@
     NSDictionary *_blankPromotedTrends;
 }
 
-@property(copy, nonatomic) NSDictionary *blankPromotedTrends; // @synthesize blankPromotedTrends=_blankPromotedTrends;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *blankPromotedTrends; // @synthesize blankPromotedTrends=_blankPromotedTrends;
 - (void)parseData:(id)arg1;
 
 @end

@@ -17,10 +17,10 @@
     unsigned long long _loopCount;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long loopCount; // @synthesize loopCount=_loopCount;
 @property(readonly, nonatomic) NSArray *frameDurations; // @synthesize frameDurations=_frameDurations;
 @property(readonly, nonatomic) NSArray *contentRects; // @synthesize contentRects=_contentRects;
-- (void).cxx_destruct;
 - (struct CGRect)animatedImageContentsRectAtIndex:(unsigned long long)arg1;
 - (double)animatedImageDurationAtIndex:(unsigned long long)arg1;
 - (id)animatedImageFrameAtIndex:(unsigned long long)arg1;

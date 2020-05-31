@@ -25,12 +25,12 @@
 + (id)databasePoolWithPath:(id)arg1 flags:(int)arg2;
 + (id)databasePoolWithURL:(id)arg1;
 + (id)databasePoolWithPath:(id)arg1;
+- (void).cxx_destruct;
 @property(copy) NSString *vfsName; // @synthesize vfsName=_vfsName;
 @property(readonly) int openFlags; // @synthesize openFlags=_openFlags;
 @property unsigned long long maximumNumberOfDatabasesToCreate; // @synthesize maximumNumberOfDatabasesToCreate=_maximumNumberOfDatabasesToCreate;
 @property id delegate; // @synthesize delegate=_delegate;
 @property(copy) NSString *path; // @synthesize path=_path;
-- (void).cxx_destruct;
 - (id)inSavePoint:(CDUnknownBlockType)arg1;
 - (void)inImmediateTransaction:(CDUnknownBlockType)arg1;
 - (void)inExclusiveTransaction:(CDUnknownBlockType)arg1;

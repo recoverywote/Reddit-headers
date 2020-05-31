@@ -12,16 +12,16 @@
 
 @interface _ASGalleryLayoutItem : NSObject <ASLayoutElement>
 {
-    // Error parsing type: {atomic<ASPrimitiveTraitCollection>="__a_"A{ASPrimitiveTraitCollection}}, name: _primitiveTraitCollection
+    // Error parsing type: {atomic<ASPrimitiveTraitCollection>="__a_"{__cxx_atomic_impl<ASPrimitiveTraitCollection, std::__1::__cxx_atomic_base_impl<ASPrimitiveTraitCollection> >="__a_value"A{ASPrimitiveTraitCollection}}}, name: _primitiveTraitCollection
     ASLayoutElementStyle *style;
     ASCollectionElement *_collectionElement;
     struct CGSize _itemSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak ASCollectionElement *collectionElement; // @synthesize collectionElement=_collectionElement;
 @property(readonly, nonatomic) struct CGSize itemSize; // @synthesize itemSize=_itemSize;
 @property(readonly, nonatomic) ASLayoutElementStyle *style; // @synthesize style;
-- (void).cxx_destruct;
 - (id)asciiArtName;
 - (id)asciiArtString;
 - (id)calculateLayoutThatFits:(CDStruct_42a63532)arg1;

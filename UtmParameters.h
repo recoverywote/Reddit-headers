@@ -18,13 +18,13 @@
     NSString *_term;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *term; // @synthesize term=_term;
 @property(copy, nonatomic) NSString *source; // @synthesize source=_source;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *medium; // @synthesize medium=_medium;
 @property(copy, nonatomic) NSString *content; // @synthesize content=_content;
 @property(copy, nonatomic) NSString *campaign; // @synthesize campaign=_campaign;
-- (void).cxx_destruct;
 - (id)initWithUrl:(id)arg1;
 
 @end

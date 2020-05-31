@@ -20,11 +20,11 @@
 }
 
 + (id)currentCachedSubscriptionsWithService:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditsNetworkSource *subscriptionNetworkSource; // @synthesize subscriptionNetworkSource=_subscriptionNetworkSource;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) long long thingType; // @synthesize thingType=_thingType;
 @property(copy, nonatomic) NSString *fetchURLString; // @synthesize fetchURLString=_fetchURLString;
-- (void).cxx_destruct;
 - (id)indexes;
 - (void)didTapFavoriteButton:(id)arg1;
 - (void)saveCurrentSubscriptionsToCache;

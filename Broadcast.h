@@ -21,6 +21,7 @@
     NSString *_postSharingPermalinkIncludingDomain;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *postSharingPermalinkIncludingDomain; // @synthesize postSharingPermalinkIncludingDomain=_postSharingPermalinkIncludingDomain;
 @property(readonly, nonatomic) NSURL *shareURL; // @synthesize shareURL=_shareURL;
 @property(readonly, copy, nonatomic) NSString *postId; // @synthesize postId=_postId;
@@ -30,7 +31,6 @@
 @property(readonly, copy, nonatomic) NSURL *rtmpURL; // @synthesize rtmpURL=_rtmpURL;
 @property(readonly, copy, nonatomic) NSURL *hlsURL; // @synthesize hlsURL=_hlsURL;
 @property(readonly, copy, nonatomic) NSString *videoId; // @synthesize videoId=_videoId;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

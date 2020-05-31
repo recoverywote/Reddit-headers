@@ -23,11 +23,11 @@
 + (struct CGSize)textSizeWithText:(id)arg1 fontSelector:(SEL)arg2 andWidth:(double)arg3;
 + (struct CGSize)calculatedButtonSizeWithContent:(id)arg1 andWidth:(double)arg2;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseButton *button; // @synthesize button=_button;
 @property(retain, nonatomic) CaptureContentButton *content; // @synthesize content=_content;
 @property(nonatomic) __weak CaptureScreen *screen; // @synthesize screen=_screen;
-- (void).cxx_destruct;
 - (void)configureButtonEnabled:(_Bool)arg1;
 - (void)buttonDidTap:(id)arg1;
 - (void)layoutSubviews;

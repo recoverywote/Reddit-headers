@@ -18,12 +18,12 @@
     FeedPostOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) __weak Post *crossPost; // @synthesize crossPost=_crossPost;
 @property(nonatomic) __weak id <FeedPostHlsVideoViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ASDisplayNode *hlsVideoViewContainerNode; // @synthesize hlsVideoViewContainerNode=_hlsVideoViewContainerNode;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)didBecomeFullyVisible;
 - (void)noLongerPastVisibilityThreshold;
 - (void)didPassVisibilityThreshold;

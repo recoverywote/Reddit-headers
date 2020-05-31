@@ -14,9 +14,9 @@
     SubredditCommunityListWidget *_communityListWidget;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SubredditCommunityListWidget *communityListWidget; // @synthesize communityListWidget=_communityListWidget;
 @property(retain, nonatomic) NSMutableSet *subscribedCommunities; // @synthesize subscribedCommunities=_subscribedCommunities;
-- (void).cxx_destruct;
 - (void)unsubscribeFromCommunity:(id)arg1;
 - (void)subscribeToCommunity:(id)arg1;
 - (_Bool)isUserSubscribedToCommunity:(id)arg1;

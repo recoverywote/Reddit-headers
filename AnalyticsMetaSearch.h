@@ -36,6 +36,7 @@
     NSString *_meta_flair_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool meta_flair_nameIsSet; // @synthesize meta_flair_nameIsSet=_meta_flair_nameIsSet;
 @property(copy, nonatomic) NSString *meta_flair_name; // @synthesize meta_flair_name=_meta_flair_name;
 @property(nonatomic) _Bool meta_flair_idIsSet; // @synthesize meta_flair_idIsSet=_meta_flair_idIsSet;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSString *raw_query; // @synthesize raw_query=_raw_query;
 @property(nonatomic) _Bool display_queryIsSet; // @synthesize display_queryIsSet=_display_queryIsSet;
 @property(copy, nonatomic) NSString *display_query; // @synthesize display_query=_display_query;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

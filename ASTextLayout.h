@@ -46,6 +46,7 @@
 + (id)layoutWithContainer:(id)arg1 text:(id)arg2 range:(struct _NSRange)arg3;
 + (id)layoutWithContainer:(id)arg1 text:(id)arg2;
 + (id)layoutWithContainerSize:(struct CGSize)arg1 text:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_c3b9c2ee *lineRowsEdge; // @synthesize lineRowsEdge=_lineRowsEdge;
 @property(nonatomic) unsigned long long *lineRowsIndex; // @synthesize lineRowsIndex=_lineRowsIndex;
 @property(nonatomic) _Bool needDrawBorder; // @synthesize needDrawBorder=_needDrawBorder;
@@ -73,7 +74,6 @@
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(retain, nonatomic) NSAttributedString *text; // @synthesize text=_text;
 @property(retain, nonatomic) ASTextContainer *container; // @synthesize container=_container;
-- (void).cxx_destruct;
 - (void)drawInContext:(struct CGContext *)arg1 size:(struct CGSize)arg2 debug:(id)arg3;
 - (void)drawInContext:(struct CGContext *)arg1 size:(struct CGSize)arg2 point:(struct CGPoint)arg3 view:(id)arg4 layer:(id)arg5 debug:(id)arg6 cancel:(CDUnknownBlockType)arg7;
 - (id)selectionRectsWithOnlyStartAndEndForRange:(id)arg1;

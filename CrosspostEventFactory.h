@@ -20,9 +20,9 @@
 + (id)crosspostClickEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
 + (void)postCrosspostSubmitEventWithSubmittedPost:(id)arg1 originalPost:(id)arg2 subreddit:(id)arg3;
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *crosspostEvents; // @synthesize crosspostEvents=_crosspostEvents;
 @property(retain, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
-- (void).cxx_destruct;
 - (void)removeCrosspostEvent:(id)arg1;
 - (void)addCrosspostEvent:(id)arg1;
 - (void)didPostedCrosspost:(id)arg1;

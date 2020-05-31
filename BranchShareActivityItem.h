@@ -14,9 +14,9 @@
     BranchShareLink *_parent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak BranchShareLink *parent; // @synthesize parent=_parent;
 @property(nonatomic) long long itemType; // @synthesize itemType=_itemType;
-- (void).cxx_destruct;
 - (id)activityViewController:(id)arg1 subjectForActivityType:(id)arg2;
 - (id)subjectForActivityType:(id)arg1;
 - (id)subject;

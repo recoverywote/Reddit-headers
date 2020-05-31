@@ -17,9 +17,9 @@
 }
 
 + (id)accessibilityElementWithContainer:(id)arg1 node:(id)arg2 containerNode:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *containerNode; // @synthesize containerNode=_containerNode;
 @property(retain, nonatomic) ASDisplayNode *node; // @synthesize node=_node;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGRect accessibilityFrame;
 
 @end

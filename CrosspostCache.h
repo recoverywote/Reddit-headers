@@ -14,9 +14,9 @@
     NSArray *_content;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isCacheNeedsUpdate; // @synthesize isCacheNeedsUpdate=_isCacheNeedsUpdate;
 @property(copy, nonatomic) NSArray *content; // @synthesize content=_content;
-- (void).cxx_destruct;
 
 @end
 

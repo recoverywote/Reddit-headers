@@ -16,11 +16,11 @@
     NSString *_mobileNetworkCode;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *mobileNetworkCode; // @synthesize mobileNetworkCode=_mobileNetworkCode;
 @property(copy, nonatomic) NSString *mobileCountryCode; // @synthesize mobileCountryCode=_mobileCountryCode;
 @property(copy, nonatomic) NSString *isoCountryCode; // @synthesize isoCountryCode=_isoCountryCode;
 @property(copy, nonatomic) NSString *carrierName; // @synthesize carrierName=_carrierName;
-- (void).cxx_destruct;
 - (void)loadCarrierInformation;
 - (id)init;
 

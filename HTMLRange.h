@@ -17,11 +17,11 @@
     unsigned long long _endOffset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long endOffset; // @synthesize endOffset=_endOffset;
 @property(readonly, nonatomic) HTMLNode *endContainer; // @synthesize endContainer=_endContainer;
 @property(readonly, nonatomic) unsigned long long startOffset; // @synthesize startOffset=_startOffset;
 @property(readonly, nonatomic) HTMLNode *startContainer; // @synthesize startContainer=_startContainer;
-- (void).cxx_destruct;
 - (id)textContent;
 - (id)description;
 - (void)surroundContents:(id)arg1;

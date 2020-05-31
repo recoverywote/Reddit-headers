@@ -13,8 +13,8 @@
     UIColor *_lineColor;
 }
 
-@property(retain, nonatomic) UIColor *lineColor; // @synthesize lineColor=_lineColor;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIColor *lineColor; // @synthesize lineColor=_lineColor;
 - (void)drawRect:(struct CGRect)arg1;
 - (struct UIEdgeInsets)textEdgeInsets;
 

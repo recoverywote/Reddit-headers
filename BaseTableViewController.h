@@ -16,8 +16,8 @@
     BaseTableView *_tableView;
 }
 
-@property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (id)majorContentView;

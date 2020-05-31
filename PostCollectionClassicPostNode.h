@@ -10,22 +10,25 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class ASTextNode, FeedPostThumbnailNode, NSString, Post;
+@protocol ViewContext;
 
 @interface PostCollectionClassicPostNode : BaseFeedDisplayNode <ObjectObserverProtocol, BaseCollectionViewCellSelected>
 {
     Post *_post;
+    id <ViewContext> _viewContext;
     ASTextNode *_titleTextNode;
     ASTextNode *_timeTextNode;
     ASTextNode *_commentsTextNode;
     FeedPostThumbnailNode *_thumbnailNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostThumbnailNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
 @property(retain, nonatomic) ASTextNode *commentsTextNode; // @synthesize commentsTextNode=_commentsTextNode;
 @property(retain, nonatomic) ASTextNode *timeTextNode; // @synthesize timeTextNode=_timeTextNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createCommentsTextNode;
@@ -33,7 +36,7 @@
 - (void)createTimeTextNode;
 - (void)createTitleTextNode;
 - (void)createNodes;
-- (id)initWithPost:(id)arg1;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

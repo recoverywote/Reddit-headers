@@ -31,6 +31,7 @@
 + (_Bool)supportsSecureCoding;
 + (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
 + (id)serializer;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType queryStringSerialization; // @synthesize queryStringSerialization=_queryStringSerialization;
 @property(nonatomic) unsigned long long queryStringSerializationStyle; // @synthesize queryStringSerializationStyle=_queryStringSerializationStyle;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *requestHeaderModificationQueue; // @synthesize requestHeaderModificationQueue=_requestHeaderModificationQueue;
@@ -44,7 +45,6 @@
 @property(nonatomic) unsigned long long cachePolicy; // @synthesize cachePolicy=_cachePolicy;
 @property(nonatomic) _Bool allowsCellularAccess; // @synthesize allowsCellularAccess=_allowsCellularAccess;
 @property(nonatomic) unsigned long long stringEncoding; // @synthesize stringEncoding=_stringEncoding;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

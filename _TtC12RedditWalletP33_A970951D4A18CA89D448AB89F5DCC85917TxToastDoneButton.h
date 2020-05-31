@@ -8,7 +8,7 @@
 
 @interface _TtC12RedditWalletP33_A970951D4A18CA89D448AB89F5DCC85917TxToastDoneButton : UIButton
 {
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

@@ -14,9 +14,9 @@
     SBDGroupChannelMemberListQuery *_query;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SBDGroupChannelMemberListQuery *query; // @synthesize query=_query;
 @property(retain, nonatomic) SubredditChannel *subredditChannel; // @synthesize subredditChannel=_subredditChannel;
-- (void).cxx_destruct;
 - (_Bool)hasMoreContent;
 - (void)fetchMoreData;
 - (void)fetchData;

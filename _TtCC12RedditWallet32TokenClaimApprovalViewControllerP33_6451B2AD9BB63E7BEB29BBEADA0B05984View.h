@@ -15,7 +15,7 @@
     // Error parsing type: , name: labelContainer
     // Error parsing type: , name: dragContainer
     // Error parsing type: , name: didFirePublisher
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

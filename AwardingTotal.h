@@ -14,9 +14,9 @@
     unsigned long long _total;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long total; // @synthesize total=_total;
 @property(readonly, nonatomic) Award *award; // @synthesize award=_award;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 - (id)initWithData:(id)arg1;

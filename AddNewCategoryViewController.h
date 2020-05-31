@@ -21,6 +21,7 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) SavedPostPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) BaseLabel *remainingCharactersLabel; // @synthesize remainingCharactersLabel=_remainingCharactersLabel;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
 @property(retain, nonatomic) BaseScrollView *wrapperScrollView; // @synthesize wrapperScrollView=_wrapperScrollView;
-- (void).cxx_destruct;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)didInvalidateRemainingCharactersLabelWithText:(id)arg1;

@@ -14,9 +14,9 @@
     NSString *_pk;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithUsername:(id)arg1 pk:(id)arg2;

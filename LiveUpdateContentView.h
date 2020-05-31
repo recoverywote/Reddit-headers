@@ -24,12 +24,12 @@
 + (id)appendBulletSeparatorToMutableAttributedString:(id)arg1;
 + (id)titleStringForUpdate:(id)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) LiveUpdate *update; // @synthesize update=_update;
 @property(retain, nonatomic) LiveWebEmbedView *webEmbedView; // @synthesize webEmbedView=_webEmbedView;
 @property(retain, nonatomic) AttributedLabelRegular *bodyLabel; // @synthesize bodyLabel=_bodyLabel;
 @property(retain, nonatomic) AttributedLabelRegular *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak id <LiveUpdateContentViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)liveUpdateEmbedView:(id)arg1 didTapLinkWithURLString:(id)arg2;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)didTapContentView:(id)arg1;

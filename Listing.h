@@ -26,6 +26,7 @@
 
 + (id)keyPathsForValuesAffectingHasFetched;
 + (id)keyPathsForValuesAffectingHasNextPage;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType parseObjectBlock; // @synthesize parseObjectBlock=_parseObjectBlock;
 @property(copy, nonatomic) NSString *resourceKeyPath; // @synthesize resourceKeyPath=_resourceKeyPath;
 @property(copy, nonatomic) NSDictionary *variables; // @synthesize variables=_variables;
@@ -36,7 +37,6 @@
 @property(nonatomic) _Bool didLastFetchFail; // @synthesize didLastFetchFail=_didLastFetchFail;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(retain, nonatomic) NSArray *objects; // @synthesize objects=_objects;
-- (void).cxx_destruct;
 - (id)debugDescription;
 @property(readonly, nonatomic) _Bool hasFetched;
 @property(readonly, nonatomic) _Bool hasNextPage;

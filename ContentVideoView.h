@@ -35,6 +35,7 @@
 }
 
 + (struct CGSize)getVideoSizeForSize:(struct CGSize)arg1 forPost:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) _Bool shouldBlurPreview; // @synthesize shouldBlurPreview=_shouldBlurPreview;
 @property(nonatomic) _Bool isDisplayed; // @synthesize isDisplayed=_isDisplayed;
@@ -54,7 +55,6 @@
 @property(retain, nonatomic) BaseImageView *previewImageView; // @synthesize previewImageView=_previewImageView;
 @property(copy, nonatomic) NSString *videoURLString; // @synthesize videoURLString=_videoURLString;
 @property(copy, nonatomic) NSString *previewImageURLString; // @synthesize previewImageURLString=_previewImageURLString;
-- (void).cxx_destruct;
 - (void)handleAppDidEnterBackground;
 - (void)handleAppDidEnterForeground;
 - (void)videoAssetLoader:(id)arg1 didFinishDownloading:(id)arg2;

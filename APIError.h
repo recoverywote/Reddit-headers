@@ -20,10 +20,10 @@
 + (_Bool)supportsSecureCoding;
 + (id)apiErrorsFromAccountManagerResponse:(id)arg1;
 + (id)apiErrorsFromR2Response:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *fields; // @synthesize fields=_fields;
 @property(readonly, nonatomic) NSString *localizedMessage; // @synthesize localizedMessage=_localizedMessage;
 @property(readonly, nonatomic) NSString *code; // @synthesize code=_code;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (unsigned long long)hash;

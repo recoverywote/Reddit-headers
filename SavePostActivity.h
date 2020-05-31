@@ -17,9 +17,9 @@
 
 + (long long)activityCategory;
 + (id)activityType;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)performActivity;
 - (_Bool)canPerformWithActivityItems:(id)arg1;
 - (id)activityImage;

@@ -22,13 +22,13 @@
     NSString *_scope;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool scopeIsSet; // @synthesize scopeIsSet=_scopeIsSet;
 @property(copy, nonatomic) NSString *scope; // @synthesize scope=_scope;
 @property(nonatomic) _Bool old_valueIsSet; // @synthesize old_valueIsSet=_old_valueIsSet;
 @property(copy, nonatomic) NSString *old_value; // @synthesize old_value=_old_value;
 @property(nonatomic) _Bool valueIsSet; // @synthesize valueIsSet=_valueIsSet;
 @property(copy, nonatomic) NSString *value; // @synthesize value=_value;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

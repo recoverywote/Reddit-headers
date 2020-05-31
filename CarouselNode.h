@@ -20,6 +20,7 @@
     struct CGSize _itemSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isTransitioning; // @synthesize isTransitioning=_isTransitioning;
 @property(retain, nonatomic) ASImageNode *seeMoreArrowNode; // @synthesize seeMoreArrowNode=_seeMoreArrowNode;
 @property(retain, nonatomic) BaseButtonNode *seeMoreButton; // @synthesize seeMoreButton=_seeMoreButton;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(nonatomic) _Bool isPreviewing; // @synthesize isPreviewing=_isPreviewing;
-- (void).cxx_destruct;
 - (void)didEndDisplaying;
 - (void)didBecomeFullyVisible;
 - (void)willBeginDisplaying;

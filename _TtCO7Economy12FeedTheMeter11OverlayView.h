@@ -16,6 +16,7 @@
     // Error parsing type: , name: forceVisibleTimeIndicator
     // Error parsing type: , name: hideDonationRequest
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: analyticsLogger
 }
 
 - (void).cxx_destruct;

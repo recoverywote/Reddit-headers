@@ -25,6 +25,7 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) PINRemoteLock *lock; // @synthesize lock=_lock;
 @property(nonatomic) long long sosCount; // @synthesize sosCount=_sosCount;
 @property(nonatomic) unsigned long long scannedByte; // @synthesize scannedByte=_scannedByte;
@@ -36,7 +37,6 @@
 @property(nonatomic) long long expectedNumberOfBytes; // @synthesize expectedNumberOfBytes=_expectedNumberOfBytes;
 @property(retain, nonatomic) NSMutableData *mutableData; // @synthesize mutableData=_mutableData;
 @property(retain, nonatomic) NSURLSessionDataTask *dataTask; // @synthesize dataTask=_dataTask;
-- (void).cxx_destruct;
 - (id)l_postProcessImage:(id)arg1 withProgress:(float)arg2;
 - (_Bool)l_hasCompletedFirstScan;
 - (_Bool)l_scanForSOSinData:(id)arg1 startByte:(unsigned long long)arg2 scannedByte:(unsigned long long *)arg3;

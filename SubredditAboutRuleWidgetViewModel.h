@@ -15,10 +15,10 @@
     NSArray *_ruleWidgetAttributedStringRuleDescriptions;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *ruleWidgetAttributedStringRuleDescriptions; // @synthesize ruleWidgetAttributedStringRuleDescriptions=_ruleWidgetAttributedStringRuleDescriptions;
 @property(retain, nonatomic) SubredditRuleWidget *ruleWidget; // @synthesize ruleWidget=_ruleWidget;
 @property(retain, nonatomic) NSMutableSet *expandedRules; // @synthesize expandedRules=_expandedRules;
-- (void).cxx_destruct;
 - (void)collapseAllRules;
 - (void)expandAllRules;
 - (void)collapseRule:(long long)arg1;

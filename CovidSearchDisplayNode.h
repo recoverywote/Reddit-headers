@@ -19,13 +19,13 @@
     id <CovidSearchDisplayNodeDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <CovidSearchDisplayNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ASButtonNode *dismissNode; // @synthesize dismissNode=_dismissNode;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
 @property(retain, nonatomic) ASTextNode *linkTextNode; // @synthesize linkTextNode=_linkTextNode;
 @property(retain, nonatomic) ASTextNode *descriptionTextNode; // @synthesize descriptionTextNode=_descriptionTextNode;
 @property(retain, nonatomic) ASTextNode *headerTextNode; // @synthesize headerTextNode=_headerTextNode;
-- (void).cxx_destruct;
 - (id)linkString;
 - (id)descriptionString;
 - (id)headerString;

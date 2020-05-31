@@ -35,6 +35,7 @@
     long long _indexOfLastPostSeenForTooltip;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasViewedGoldBanner; // @synthesize hasViewedGoldBanner=_hasViewedGoldBanner;
 @property(readonly, nonatomic) _Bool shouldHideCloseButtonInWelcomeBanners; // @synthesize shouldHideCloseButtonInWelcomeBanners=_shouldHideCloseButtonInWelcomeBanners;
 @property(nonatomic) long long indexOfLastPostSeenForTooltip; // @synthesize indexOfLastPostSeenForTooltip=_indexOfLastPostSeenForTooltip;
@@ -42,7 +43,6 @@
 @property(nonatomic) _Bool didLoadSortBarOnce; // @synthesize didLoadSortBarOnce=_didLoadSortBarOnce;
 @property(nonatomic) __weak FeedViewController<FeedViewControllerInterface><FeedPresentable> *textureFeedVC; // @synthesize textureFeedVC=_textureFeedVC;
 @property(nonatomic) __weak FeedViewController *feedVC; // @synthesize feedVC=_feedVC;
-- (void).cxx_destruct;
 - (void)claimablePointsViewControllerDidLaunchWallet:(id)arg1 withOptions:(id)arg2;
 - (void)metaClaimablePointsBannerCellNodeDidTapClose:(id)arg1;
 - (void)metaClaimablePointsBannerCellNodeDidTapContinue:(id)arg1;

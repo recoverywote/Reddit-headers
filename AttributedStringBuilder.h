@@ -14,9 +14,9 @@
     NSMutableAttributedString *_result;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableAttributedString *result; // @synthesize result=_result;
 @property(copy, nonatomic) NSDictionary *defaultAttributes; // @synthesize defaultAttributes=_defaultAttributes;
-- (void).cxx_destruct;
 - (void)appendNonBreakingSpace;
 - (void)appendWordJoiner;
 - (id)attributesWithDefault:(id)arg1;
@@ -37,7 +37,6 @@
 @property(readonly, nonatomic) NSAttributedString *attributedString;
 - (id)initWithDefaultFont:(id)arg1 textColor:(id)arg2;
 - (id)initWithDefaultAttributes:(id)arg1;
-- (void)appendPostEventInfo:(id)arg1 date:(id)arg2 theme:(id)arg3;
 
 @end
 

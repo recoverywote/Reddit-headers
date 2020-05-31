@@ -17,10 +17,10 @@
     AutoCompleteCache *_cache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AutoCompleteCache *cache; // @synthesize cache=_cache;
 @property(copy, nonatomic) NSString *queryId; // @synthesize queryId=_queryId;
 @property(copy, nonatomic) NSString *key; // @synthesize key=_key;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;

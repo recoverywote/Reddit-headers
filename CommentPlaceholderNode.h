@@ -16,13 +16,13 @@
     ASDisplayNode *_footerNode1;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *footerNode1; // @synthesize footerNode1=_footerNode1;
 @property(retain, nonatomic) ASDisplayNode *textNode3; // @synthesize textNode3=_textNode3;
 @property(retain, nonatomic) ASDisplayNode *textNode2; // @synthesize textNode2=_textNode2;
 @property(retain, nonatomic) ASDisplayNode *textNode1; // @synthesize textNode1=_textNode1;
 @property(retain, nonatomic) ASDisplayNode *headerNode2; // @synthesize headerNode2=_headerNode2;
 @property(retain, nonatomic) ASDisplayNode *headerNode1; // @synthesize headerNode1=_headerNode1;
-- (void).cxx_destruct;
 - (id)createRoundedRectNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)init;

@@ -17,11 +17,11 @@
     RichTextNodeOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RichTextNodeOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) RichTextTextNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) ASScrollNode *scrollNode; // @synthesize scrollNode=_scrollNode;
 @property(copy, nonatomic) NSAttributedString *attributedText; // @synthesize attributedText=_attributedText;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didLoad;
 @property(nonatomic) __weak id <RichTextTextNodeDelegate> delegate;

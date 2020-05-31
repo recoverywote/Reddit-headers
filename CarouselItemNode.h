@@ -7,27 +7,29 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, CarouselItem, NSObject;
-@protocol CarouselItemNodeDelegate;
+@protocol CarouselItemNodeDelegate, ViewContext;
 
 @interface CarouselItemNode : BaseFeedDisplayNode
 {
+    id <ViewContext> _viewContext;
     CarouselItem *_carouselItem;
     NSObject<CarouselItemNodeDelegate> *_delegate;
     ASDisplayNode *_uiKitNode;
 }
 
 + (struct CGSize)calculatedCarouselItemSize:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *uiKitNode; // @synthesize uiKitNode=_uiKitNode;
 @property(nonatomic) __weak NSObject<CarouselItemNodeDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) CarouselItem *carouselItem; // @synthesize carouselItem=_carouselItem;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didExitVisibleState;
 - (void)didEnterVisibleState;
 - (void)didLoad;
-- (id)initWithCarouselItem:(id)arg1;
-- (id)initWithViewBlock:(CDUnknownBlockType)arg1 withCarouselItem:(id)arg2 carousel:(id)arg3;
-- (id)init;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2;
+- (id)initWithViewBlock:(CDUnknownBlockType)arg1 viewContext:(id)arg2 withCarouselItem:(id)arg3 carousel:(id)arg4;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

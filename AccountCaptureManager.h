@@ -17,12 +17,12 @@
     SignupCaptureScreen *_signupScreen;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SignupCaptureScreen *signupScreen; // @synthesize signupScreen=_signupScreen;
 @property(retain, nonatomic) PasswordCaptureScreen *passwordScreen; // @synthesize passwordScreen=_passwordScreen;
 @property(retain, nonatomic) UsernameCaptureScreen *usernameScreen; // @synthesize usernameScreen=_usernameScreen;
 @property(retain, nonatomic) EmailCaptureScreen *emailScreen; // @synthesize emailScreen=_emailScreen;
 @property(retain, nonatomic) CaptureContentButtonList *buttonListContent; // @synthesize buttonListContent=_buttonListContent;
-- (void).cxx_destruct;
 - (void)cleanupLoggedOutAccount;
 - (void)signUpWithCompletion:(CDUnknownBlockType)arg1;
 - (void)showUsernameErrorToastWithReason:(id)arg1;

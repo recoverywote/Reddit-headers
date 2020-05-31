@@ -28,6 +28,7 @@
 
 + (id)XMLStringForNode:(id)arg1 withNodeName:(id)arg2;
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableString *text; // @synthesize text=_text;
 @property(retain, nonatomic) NSMutableArray *stack; // @synthesize stack=_stack;
 @property(retain, nonatomic) NSMutableDictionary *root; // @synthesize root=_root;
@@ -39,7 +40,6 @@
 @property(nonatomic) _Bool trimWhiteSpace; // @synthesize trimWhiteSpace=_trimWhiteSpace;
 @property(nonatomic) _Bool stripEmptyNodes; // @synthesize stripEmptyNodes=_stripEmptyNodes;
 @property(nonatomic) _Bool collapseTextNodes; // @synthesize collapseTextNodes=_collapseTextNodes;
-- (void).cxx_destruct;
 - (void)parser:(id)arg1 foundComment:(id)arg2;
 - (void)parser:(id)arg1 foundCDATA:(id)arg2;
 - (void)parser:(id)arg1 foundCharacters:(id)arg2;

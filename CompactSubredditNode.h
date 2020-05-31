@@ -7,28 +7,31 @@
 #import "BaseButtonNode.h"
 
 @class ASImageNode, ASTextNode, Subreddit, SubscribableButtonNode;
+@protocol ViewContext;
 
 @interface CompactSubredditNode : BaseButtonNode
 {
     _Bool _isSeeMore;
     Subreddit *_subreddit;
+    id <ViewContext> _viewContext;
     SubscribableButtonNode *_subredditIconNode;
     ASImageNode *_seeMoreImageNode;
     ASTextNode *_textNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) ASImageNode *seeMoreImageNode; // @synthesize seeMoreImageNode=_seeMoreImageNode;
 @property(retain, nonatomic) SubscribableButtonNode *subredditIconNode; // @synthesize subredditIconNode=_subredditIconNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isSeeMore; // @synthesize isSeeMore=_isSeeMore;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initAsSeeMore;
-- (id)initWithSubreddit:(id)arg1;
+- (id)initAsSeeMoreWithViewContext:(id)arg1;
+- (id)initWithSubreddit:(id)arg1 viewContext:(id)arg2;
 
 @end
 

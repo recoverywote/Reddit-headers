@@ -16,11 +16,11 @@
     LOTKeyframeGroup *_offset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) LOTKeyframeGroup *offset; // @synthesize offset=_offset;
 @property(readonly, nonatomic) LOTKeyframeGroup *end; // @synthesize end=_end;
 @property(readonly, nonatomic) LOTKeyframeGroup *start; // @synthesize start=_start;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

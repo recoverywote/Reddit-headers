@@ -15,10 +15,10 @@
     NSArray *_buttons;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *buttons; // @synthesize buttons=_buttons;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *shortName; // @synthesize shortName=_shortName;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

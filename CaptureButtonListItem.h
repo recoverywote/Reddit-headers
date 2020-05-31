@@ -22,6 +22,7 @@
 
 + (id)keyPathsToObserveChanges;
 + (id)labelWithTitle:(id)arg1 labelId:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(nonatomic) _Bool disabled; // @synthesize disabled=_disabled;
 @property(retain, nonatomic) UIImage *iconImage; // @synthesize iconImage=_iconImage;
@@ -30,7 +31,6 @@
 @property(nonatomic) _Bool selected; // @synthesize selected=_selected;
 @property(retain, nonatomic) NSString *labelId; // @synthesize labelId=_labelId;
 @property(retain, nonatomic) NSString *labelTitle; // @synthesize labelTitle=_labelTitle;
-- (void).cxx_destruct;
 
 @end
 

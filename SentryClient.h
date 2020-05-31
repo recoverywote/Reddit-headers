@@ -41,6 +41,7 @@
 + (id)versionString;
 + (void)setSharedClient:(id)arg1;
 + (id)sharedClient;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *_debugMeta; // @synthesize _debugMeta=__debugMeta;
 @property(retain, nonatomic) NSArray *_snapshotThreads; // @synthesize _snapshotThreads=__snapshotThreads;
 @property(retain, nonatomic) id <SentryRequestManager> requestManager; // @synthesize requestManager=_requestManager;
@@ -63,7 +64,6 @@
 @property(copy, nonatomic) NSString *dist; // @synthesize dist=_dist;
 @property(copy, nonatomic) NSString *releaseName; // @synthesize releaseName=_releaseName;
 @property(copy, nonatomic) NSString *environment; // @synthesize environment=_environment;
-- (void).cxx_destruct;
 - (void)snapshotStacktrace:(CDUnknownBlockType)arg1;
 - (void)reportUserException:(id)arg1 reason:(id)arg2 language:(id)arg3 lineOfCode:(id)arg4 stackTrace:(id)arg5 logAllThreads:(_Bool)arg6 terminateProgram:(_Bool)arg7;
 - (void)crash;

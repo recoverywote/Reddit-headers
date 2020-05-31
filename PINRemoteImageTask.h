@@ -17,10 +17,10 @@
     id <PINRequestRetryStrategy> _retryStrategy;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <PINRequestRetryStrategy> retryStrategy; // @synthesize retryStrategy=_retryStrategy;
 @property(nonatomic) __weak PINRemoteImageManager *manager; // @synthesize manager=_manager;
 @property(readonly, nonatomic) PINRemoteLock *lock; // @synthesize lock=_lock;
-- (void).cxx_destruct;
 - (id)l_callbackBlocks;
 - (id)imageResultWithImage:(id)arg1 alternativeRepresentation:(id)arg2 requestLength:(double)arg3 resultType:(unsigned long long)arg4 UUID:(id)arg5 response:(id)arg6 error:(id)arg7;
 - (void)setPriority:(unsigned long long)arg1;

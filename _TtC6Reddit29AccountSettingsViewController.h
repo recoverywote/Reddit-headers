@@ -11,12 +11,13 @@
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: headerHeight
     // Error parsing type: , name: preferences
-    // Error parsing type: , name: listingStateController
+    // Error parsing type: , name: loadingState
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithStyle:(long long)arg1;
+- (void)didTapFeedSpinnerViewWithSender:(id)arg1;
 - (void)togglePreference:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

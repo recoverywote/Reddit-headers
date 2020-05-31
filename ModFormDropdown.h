@@ -22,12 +22,12 @@
 }
 
 + (id)dropdownWithTitle:(id)arg1 items:(id)arg2 fromViewController:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController<ModFormDropdownDelegate> *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) NSArray *dropdownItems; // @synthesize dropdownItems=_dropdownItems;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) long long selectedItemIndex; // @synthesize selectedItemIndex=_selectedItemIndex;
 @property(nonatomic) _Bool isOptional; // @synthesize isOptional;
-- (void).cxx_destruct;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)dropdownTapped:(id)arg1;
 - (void)selectItemAtIndex:(long long)arg1;

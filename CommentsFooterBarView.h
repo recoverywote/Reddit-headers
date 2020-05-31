@@ -15,9 +15,9 @@
     BaseButton *_button;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *button; // @synthesize button=_button;
 @property(nonatomic) __weak id <CommentsFooterBarViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

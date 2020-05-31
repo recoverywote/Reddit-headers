@@ -17,12 +17,12 @@
     NSString *_threadDescription;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *threadDescription; // @synthesize threadDescription=_threadDescription;
 @property(readonly, nonatomic) NSString *objectDescription; // @synthesize objectDescription=_objectDescription;
 @property(readonly, nonatomic) double timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) NSString *message; // @synthesize message=_message;
 @property(readonly, nonatomic) NSArray *backtrace; // @synthesize backtrace=_backtrace;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithBacktrace:(id)arg1 format:(id)arg2 arguments:(char *)arg3;
 

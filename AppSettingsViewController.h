@@ -31,6 +31,7 @@
     ThemeActionSheetController *_themeActionSheetController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ThemeActionSheetController *themeActionSheetController; // @synthesize themeActionSheetController=_themeActionSheetController;
 @property(retain, nonatomic) NSMutableArray *viewSettingsSectionRows; // @synthesize viewSettingsSectionRows=_viewSettingsSectionRows;
 @property(retain, nonatomic) NSMutableArray *advancedSectionRows; // @synthesize advancedSectionRows=_advancedSectionRows;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) BaseView *footerView; // @synthesize footerView=_footerView;
 @property(readonly, nonatomic) ThemeManager *themeManager; // @synthesize themeManager=_themeManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)didTapCloseButton:(id)arg1;
 - (void)themeDidChange:(id)arg1;
 - (id)textDescriptionOfCurrentAutoPlayMode;

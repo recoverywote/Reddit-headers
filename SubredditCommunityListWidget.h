@@ -14,9 +14,9 @@
     NSArray *_communities;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *communities; // @synthesize communities=_communities;
 @property(copy, nonatomic) NSString *shortName; // @synthesize shortName=_shortName;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

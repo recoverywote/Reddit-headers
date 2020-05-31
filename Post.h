@@ -85,6 +85,7 @@
 }
 
 + (id)keyPathsToObserveChanges;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long suggestedCommentSort; // @synthesize suggestedCommentSort=_suggestedCommentSort;
 @property(retain, nonatomic) NSDictionary *selfPostRichTextMediaMetadata; // @synthesize selfPostRichTextMediaMetadata=_selfPostRichTextMediaMetadata;
 @property(retain, nonatomic) NSDictionary *selfPostRichTextData; // @synthesize selfPostRichTextData=_selfPostRichTextData;
@@ -154,7 +155,6 @@
 @property(retain, nonatomic) NSURL *linkURL; // @synthesize linkURL=_linkURL;
 @property(copy, nonatomic) NSString *postID; // @synthesize postID=_postID;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (void)updateSelfPostRichTextAttributed;
 @property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain;
 @property(readonly, copy, nonatomic) NSString *internalPermalinkIncludingDomain;

@@ -16,9 +16,9 @@
     NSFileHandle *_outputFileHandle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSFileHandle *outputFileHandle; // @synthesize outputFileHandle=_outputFileHandle;
 @property(retain, nonatomic) NSFileHandle *inputFileHandle; // @synthesize inputFileHandle=_inputFileHandle;
-- (void).cxx_destruct;
 - (_Bool)flush:(id *)arg1;
 - (_Bool)write:(const char *)arg1 offset:(unsigned int)arg2 length:(unsigned int)arg3 error:(id *)arg4;
 - (unsigned int)readAvail:(char *)arg1 offset:(unsigned int)arg2 maxLength:(unsigned int)arg3 error:(id *)arg4;

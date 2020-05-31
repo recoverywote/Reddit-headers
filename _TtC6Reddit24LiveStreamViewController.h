@@ -13,6 +13,7 @@
     // Error parsing type: , name: didBeginPlayback
     // Error parsing type: , name: didRequestBeginPlayback
     // Error parsing type: , name: didBecomeActiveController
+    // Error parsing type: , name: consumeTimer
     // Error parsing type: , name: playerLayer
     // Error parsing type: , name: endedLabel
     // Error parsing type: , name: staticView

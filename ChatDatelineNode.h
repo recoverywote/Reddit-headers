@@ -16,11 +16,11 @@
     ASDisplayNode *_rightLine;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *rightLine; // @synthesize rightLine=_rightLine;
 @property(retain, nonatomic) ASDisplayNode *leftLine; // @synthesize leftLine=_leftLine;
 @property(nonatomic) double lineSize; // @synthesize lineSize=_lineSize;
 @property(retain, nonatomic) ASTextNode *textNode; // @synthesize textNode=_textNode;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureWithText:(id)arg1;
 - (id)initWithLineSize:(double)arg1;

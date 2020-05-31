@@ -25,6 +25,7 @@
 + (id)decode:(id)arg1 options:(int)arg2 error:(id *)arg3;
 + (id)encode:(id)arg1 options:(int)arg2 error:(id *)arg3;
 + (id)codecWithEncodeOptions:(int)arg1 decodeOptions:(int)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool ignoreNullsInObjects; // @synthesize ignoreNullsInObjects=_ignoreNullsInObjects;
 @property(nonatomic) _Bool ignoreNullsInArrays; // @synthesize ignoreNullsInArrays=_ignoreNullsInArrays;
 @property(nonatomic) _Bool sorted; // @synthesize sorted=_sorted;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) NSMutableArray *containerStack; // @synthesize containerStack=_containerStack;
 @property(nonatomic) id currentContainer; // @synthesize currentContainer=_currentContainer;
 @property(retain, nonatomic) id topLevelContainer; // @synthesize topLevelContainer=_topLevelContainer;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (id)initWithEncodeOptions:(int)arg1 decodeOptions:(int)arg2;
 

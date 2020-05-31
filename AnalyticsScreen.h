@@ -42,6 +42,7 @@
     NSString *_auto_dark_mode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool auto_dark_modeIsSet; // @synthesize auto_dark_modeIsSet=_auto_dark_modeIsSet;
 @property(copy, nonatomic) NSString *auto_dark_mode; // @synthesize auto_dark_mode=_auto_dark_mode;
 @property(nonatomic) _Bool android_font_sizeIsSet; // @synthesize android_font_sizeIsSet=_android_font_sizeIsSet;
@@ -68,7 +69,6 @@
 @property(nonatomic) int height; // @synthesize height=_height;
 @property(nonatomic) _Bool widthIsSet; // @synthesize widthIsSet=_widthIsSet;
 @property(nonatomic) int width; // @synthesize width=_width;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

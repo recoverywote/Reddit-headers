@@ -6,6 +6,8 @@
 
 #import <Foundation/NSURL.h>
 
+@class NSString;
+
 @interface NSURL (AppsFlyer)
 + (id)redditUrlWithAppsFlyerParameters:(id)arg1;
 + (id)redditAppURLWithPath:(id)arg1;
@@ -14,5 +16,26 @@
 @property(readonly, nonatomic) unsigned long long feedRange;
 @property(readonly, nonatomic) long long deeplinkOrigin;
 - (id)URLBySettingDeeplinkOrigin:(long long)arg1;
+- (_Bool)isFIFEUrl;
+- (id)FIFEURLRequestingCircledCropToDimensions:(struct CGSize)arg1 isProfile:(_Bool)arg2;
+- (id)FIFEURLRequestingCenteredCropToDimensions:(struct CGSize)arg1;
+- (id)FIFEURLRequestingSmartCropToDimensions:(struct CGSize)arg1 stripExistingOptions:(_Bool)arg2;
+- (id)FIFEURLRequestingSmartCropToDimensions:(struct CGSize)arg1;
+- (id)FIFEURLRequestingSmartCropToMaxSize:(double)arg1;
+- (id)FIFEURLRequestingDimensions:(struct CGSize)arg1;
+- (id)FIFEURLRequestingDimensions:(struct CGSize)arg1 stripExistingOptions:(_Bool)arg2;
+- (id)FIFEURLRequestingExactDimensions:(struct CGSize)arg1;
+- (id)FIFEURLRequestingMaxSize:(double)arg1;
+- (id)URLByRemovingFIFEInfo;
+- (id)FIFEArgumentsArray;
+@property(readonly, copy, nonatomic) NSString *FIFEArgumentsString;
+- (struct CGSize)maximumFIFEImageSize;
+- (id)FIFEURLWithArguments:(id)arg1 stripExistingOptions:(_Bool)arg2;
+- (id)FIFELegacyURLWithArgumentsString:(id)arg1;
+- (id)legacyFIFEArgumentsString;
+- (id)URLByAppendingTrailingSlash;
+- (_Bool)isLegacyFIFEURLWithArguments;
+- (_Bool)isLegacyFIFEURL;
+- (unsigned long long)numberOfPathComponentsInLegacyFIFEURL;
 @end
 

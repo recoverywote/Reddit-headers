@@ -15,10 +15,10 @@
     NSString *_projectID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *projectID; // @synthesize projectID=_projectID;
 @property(readonly, nonatomic) NSString *APIKey; // @synthesize APIKey=_APIKey;
 @property(readonly, nonatomic) NSURLSession *URLSession; // @synthesize URLSession=_URLSession;
-- (void).cxx_destruct;
 - (void)setJSONHTTPBody:(id)arg1 forRequest:(id)arg2;
 - (id)SDKVersion;
 - (id)sendURLRequest:(id)arg1;

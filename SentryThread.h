@@ -19,12 +19,12 @@
     NSNumber *_current;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *current; // @synthesize current=_current;
 @property(copy, nonatomic) NSNumber *crashed; // @synthesize crashed=_crashed;
 @property(retain, nonatomic) SentryStacktrace *stacktrace; // @synthesize stacktrace=_stacktrace;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSNumber *threadId; // @synthesize threadId=_threadId;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)initWithThreadId:(id)arg1;
 

@@ -13,8 +13,8 @@
     UIView *_contentObfuscationView;
 }
 
-@property(retain, nonatomic) UIView *contentObfuscationView; // @synthesize contentObfuscationView=_contentObfuscationView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *contentObfuscationView; // @synthesize contentObfuscationView=_contentObfuscationView;
 - (void)removeContentObfuscation;
 - (void)obfuscateContents;
 - (void)updateThemeManager;

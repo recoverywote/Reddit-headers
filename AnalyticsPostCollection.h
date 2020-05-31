@@ -26,6 +26,7 @@
     NSString *_display_layout;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool display_layoutIsSet; // @synthesize display_layoutIsSet=_display_layoutIsSet;
 @property(copy, nonatomic) NSString *display_layout; // @synthesize display_layout=_display_layout;
 @property(nonatomic) _Bool post_idsIsSet; // @synthesize post_idsIsSet=_post_idsIsSet;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

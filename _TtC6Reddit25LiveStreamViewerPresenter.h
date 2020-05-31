@@ -21,7 +21,6 @@
     // Error parsing type: , name: viewSessionId
     // Error parsing type: , name: current
     // Error parsing type: , name: deeplinkId
-    // Error parsing type: , name: isFollowingBroadcaster
     // Error parsing type: , name: oneSecondIntervalTimer
     // Error parsing type: , name: heartbeatTimer
     // Error parsing type: , name: heartbeatDelayTimer

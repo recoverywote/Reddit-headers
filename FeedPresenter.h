@@ -53,6 +53,7 @@
 }
 
 + (id)modQueuePresenterWithAccountContext:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *keyValueObservations; // @synthesize keyValueObservations=_keyValueObservations;
 @property(retain, nonatomic) ListingChangeBuffer *feedUpdateBuffer; // @synthesize feedUpdateBuffer=_feedUpdateBuffer;
 @property(retain, nonatomic) DiscoveryUnitViewModelDataProvider *discoveryUnitsDataProvider; // @synthesize discoveryUnitsDataProvider=_discoveryUnitsDataProvider;
@@ -88,7 +89,6 @@
 @property(nonatomic) unsigned long long displayMode; // @synthesize displayMode=_displayMode;
 @property(copy, nonatomic) NSArray *frozenCurrentObjects; // @synthesize frozenCurrentObjects=_frozenCurrentObjects;
 @property(copy, nonatomic) NSArray *mediaCurrentObjects; // @synthesize mediaCurrentObjects=_mediaCurrentObjects;
-- (void).cxx_destruct;
 - (id)listingTraceName;
 - (id)postMetaViewModelForPost:(id)arg1;
 - (unsigned long long)shouldShowHlsVideoPostInTheater:(id)arg1;

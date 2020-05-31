@@ -34,6 +34,7 @@
 + (id)instanceIDForTests;
 + (id)instanceID;
 + (_Bool)usesFIS;
+- (void).cxx_destruct;
 @property(copy) NSString *firebaseInstallationsID; // @synthesize firebaseInstallationsID=_firebaseInstallationsID;
 @property(retain) FIRInstanceIDCombinedHandler *defaultTokenFetchHandler; // @synthesize defaultTokenFetchHandler=_defaultTokenFetchHandler;
 @property(nonatomic) long long retryCountForDefaultToken; // @synthesize retryCountForDefaultToken=_retryCountForDefaultToken;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) NSData *apnsTokenData; // @synthesize apnsTokenData=_apnsTokenData;
 @property(copy, nonatomic) NSString *firebaseAppID; // @synthesize firebaseAppID=_firebaseAppID;
 @property(copy, nonatomic) NSString *fcmSenderID; // @synthesize fcmSenderID=_fcmSenderID;
-- (void).cxx_destruct;
 - (void)observeFirebaseInstallationIDChanges;
 - (void)installationIDDidChangeNotificationReceived:(id)arg1;
 - (void)updateFirebaseInstallationID;

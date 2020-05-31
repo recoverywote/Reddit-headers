@@ -34,6 +34,7 @@
 + (id)theatreMediaItemFromObject:(id)arg1;
 + (id)theatreMediaItemsFromElements:(id)arg1;
 + (id)theatreMediaItemsFromElements:(id)arg1 withContainerPost:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isHlsVideo; // @synthesize isHlsVideo=_isHlsVideo;
 @property(nonatomic) _Bool isVideo; // @synthesize isVideo=_isVideo;
 @property(nonatomic) _Bool isImage; // @synthesize isImage=_isImage;
@@ -53,7 +54,6 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) Post *originalPost; // @synthesize originalPost=_originalPost;
 @property(copy, nonatomic) NSString *mediaId; // @synthesize mediaId=_mediaId;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescription;
 - (_Bool)shouldBlurWithOptions:(id)arg1;

@@ -19,10 +19,10 @@
     NSArray *_discoveryUnitElements;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *discoveryUnitElements; // @synthesize discoveryUnitElements=_discoveryUnitElements;
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(retain) id <DiscoveryUnitViewModel> subDiscoveryUnitViewModel; // @synthesize subDiscoveryUnitViewModel;
-- (void).cxx_destruct;
 - (_Bool)shouldShowLessForUserWithAccountSettings:(id)arg1;
 - (void)updateShowLess:(_Bool)arg1 withAccountSettings:(id)arg2;
 - (void)updateHidden:(_Bool)arg1 withAccountSettings:(id)arg2;

@@ -23,9 +23,9 @@
 }
 
 + (id)new;
+- (void).cxx_destruct;
 @property(retain) NSOperationQueue *sessionQueue; // @synthesize sessionQueue=_sessionQueue;
 @property(retain) NSDictionary *userInfo; // @synthesize userInfo=_userInfo;
-- (void).cxx_destruct;
 - (void)URLSession:(id)arg1 task:(id)arg2 didReceiveChallenge:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)cancelAllOperations;
 - (void)startOperation:(id)arg1;

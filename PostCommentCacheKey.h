@@ -14,9 +14,9 @@
     NSString *_postId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *postId; // @synthesize postId=_postId;
 @property(readonly, nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithPostId:(id)arg1 forCommentSort:(unsigned long long)arg2;

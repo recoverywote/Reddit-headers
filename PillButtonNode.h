@@ -18,12 +18,12 @@
     struct UIEdgeInsets _edgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *highlightNode; // @synthesize highlightNode=_highlightNode;
 @property(retain, nonatomic) UIFont *font; // @synthesize font=_font;
 @property(retain, nonatomic) PillTextBuilder *pillTextBuilder; // @synthesize pillTextBuilder=_pillTextBuilder;
 @property(nonatomic) struct UIEdgeInsets edgeInsets; // @synthesize edgeInsets=_edgeInsets;
 @property(retain, nonatomic) id <Pillable> pill; // @synthesize pill=_pill;
-- (void).cxx_destruct;
 - (id)description;
 - (void)setHighlighted:(_Bool)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

@@ -54,6 +54,7 @@
 }
 
 + (id)keyPathsForValuesAffectingSubreddit;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CarouselDelegator *carouselDelegator; // @synthesize carouselDelegator=_carouselDelegator;
 @property(nonatomic) long long statusBarStyle; // @synthesize statusBarStyle=_statusBarStyle;
 @property(retain, nonatomic) RecentChatPostBubbleViewController *chatPostBubbleViewController; // @synthesize chatPostBubbleViewController=_chatPostBubbleViewController;
@@ -78,7 +79,6 @@
 @property(retain, nonatomic) ParallaxHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SubredditPageNavigator *navigator; // @synthesize navigator=_navigator;
 @property(retain, nonatomic) SubredditPagePresenter *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (void)modToolsViewControllerDidUpdateCommunityDescription:(id)arg1;
 - (void)refreshHeaderContent;
 - (void)modToolsViewControllerDidUpdateCommunityAvatar:(id)arg1;

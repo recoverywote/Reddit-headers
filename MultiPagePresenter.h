@@ -18,12 +18,12 @@
     id <MultiPagePresentable> _presentable;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <MultiPagePresentable> presentable; // @synthesize presentable=_presentable;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *multiName; // @synthesize multiName=_multiName;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)compressedImage:(id)arg1 maxFileSizeInKB:(int)arg2;
 - (id)saveImageToDisk:(id)arg1 withName:(id)arg2 finalImage:(id *)arg3;
 - (void)uploadIconWithImage:(id)arg1 successHandler:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3 failureHandler:(CDUnknownBlockType)arg4;

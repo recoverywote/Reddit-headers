@@ -25,6 +25,7 @@
     ASTextNode *_descriptionTextNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASTextNode *descriptionTextNode; // @synthesize descriptionTextNode=_descriptionTextNode;
 @property(retain, nonatomic) BaseButtonNode *subscribeButtonNode; // @synthesize subscribeButtonNode=_subscribeButtonNode;
 @property(retain, nonatomic) ASNetworkImageNode *logoIconNode; // @synthesize logoIconNode=_logoIconNode;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) ObservableObject<BaseModel><Subscribable><Styleable> *model; // @synthesize model=_model;
 @property(nonatomic) _Bool hideDescriptionLabel; // @synthesize hideDescriptionLabel=_hideDescriptionLabel;
 @property(nonatomic) __weak NSObject<DetailedSubscribeNodeDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)didTapSubscribe:(id)arg1;
 - (void)didTapSubreddit:(id)arg1;

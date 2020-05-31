@@ -18,10 +18,10 @@
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) CaptureContentImage *content; // @synthesize content=_content;
 @property(nonatomic) __weak CaptureScreen *screen; // @synthesize screen=_screen;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)layoutSubviews;
 - (void)configureWithContent:(id)arg1 screen:(id)arg2;

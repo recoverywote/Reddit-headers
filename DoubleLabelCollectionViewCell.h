@@ -15,10 +15,10 @@
     BaseImageView *_accessoryIcon;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *accessoryIcon; // @synthesize accessoryIcon=_accessoryIcon;
 @property(retain, nonatomic) BaseLabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(retain, nonatomic) BaseLabel *mainLabel; // @synthesize mainLabel=_mainLabel;
-- (void).cxx_destruct;
 - (void)configureWithMainText:(id)arg1 detailText:(id)arg2 accessoryImage:(id)arg3;
 - (void)prepareForReuse;
 - (void)configureConstraints;

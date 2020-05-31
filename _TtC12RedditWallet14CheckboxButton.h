@@ -13,7 +13,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: label
     // Error parsing type: , name: isSelectedSubject
     // Error parsing type: , name: detectedLinksSubject
-    // Error parsing type: , name: disposeBag
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;

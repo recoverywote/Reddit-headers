@@ -26,6 +26,7 @@
     struct UIEdgeInsets _previousInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets previousInsets; // @synthesize previousInsets=_previousInsets;
 @property(nonatomic) _Bool hasResetFloatingHeaderManager; // @synthesize hasResetFloatingHeaderManager=_hasResetFloatingHeaderManager;
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
@@ -35,7 +36,6 @@
 @property(nonatomic) _Bool disableHidingForSingleTab; // @synthesize disableHidingForSingleTab=_disableHidingForSingleTab;
 @property(retain, nonatomic) UIView *segmentWrapper; // @synthesize segmentWrapper=_segmentWrapper;
 @property(retain, nonatomic) PageSegmentedControl *segmentedControl; // @synthesize segmentedControl=_segmentedControl;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIScrollView *currentOnScreenScrollView;
 - (id)currentOnScreenViewController;
 - (void)resetFloatingHeaderManagerForViewController:(id)arg1;

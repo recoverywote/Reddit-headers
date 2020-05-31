@@ -24,6 +24,7 @@
     NSString *_lastValidatedUsername;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPasswordValid; // @synthesize isPasswordValid=_isPasswordValid;
 @property(copy, nonatomic) NSString *lastValidatedUsername; // @synthesize lastValidatedUsername=_lastValidatedUsername;
 @property(nonatomic) _Bool isUsernameValid; // @synthesize isUsernameValid=_isUsernameValid;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) CaptureContentTextEntry *usernameContent; // @synthesize usernameContent=_usernameContent;
 @property(retain, nonatomic) CaptureContentTextEntry *emailContent; // @synthesize emailContent=_emailContent;
 @property(retain, nonatomic) NSNumber *emailPermission; // @synthesize emailPermission=_emailPermission;
-- (void).cxx_destruct;
 - (void)logTapNextAnalyticsEvent;
 - (void)logTapBackAnalyticsEvent;
 - (id)emailPermissionText;

@@ -26,6 +26,7 @@
     UIColor *_color;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIColor *color; // @synthesize color=_color;
 @property(readonly, copy, nonatomic) NSDictionary *collections; // @synthesize collections=_collections;
 @property(readonly, copy, nonatomic) NSArray *media; // @synthesize media=_media;
@@ -40,7 +41,6 @@
 @property(readonly, copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-- (void).cxx_destruct;
 - (id)mediaSourceFittingSize:(struct CGSize)arg1;
 - (id)initWithMetaProduct:(id)arg1;
 - (id)initWithData:(id)arg1;

@@ -19,12 +19,12 @@
     long long _cacheOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long cacheOffset; // @synthesize cacheOffset=_cacheOffset;
 @property(nonatomic) long long filter; // @synthesize filter=_filter;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) long long filterState; // @synthesize filterState=_filterState;
 @property(retain, nonatomic) SBDGroupChannelListQuery *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (void)asyncStore:(id)arg1 didRemoveModelWithKey:(id)arg2 value:(id)arg3;
 - (void)asyncStore:(id)arg1 didUpdateModel:(id)arg2;
 - (id)channelStore;

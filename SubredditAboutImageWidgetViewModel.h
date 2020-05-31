@@ -13,8 +13,8 @@
     SubredditImageWidget *_imageWidget;
 }
 
-@property(retain, nonatomic) SubredditImageWidget *imageWidget; // @synthesize imageWidget=_imageWidget;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SubredditImageWidget *imageWidget; // @synthesize imageWidget=_imageWidget;
 - (long long)numberOfRowItems;
 - (double)heightForRow:(long long)arg1 rowWidth:(double)arg2;
 - (double)footerHeight;

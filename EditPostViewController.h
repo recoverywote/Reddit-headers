@@ -19,13 +19,13 @@
     CDUnknownBlockType _onEditSuccess;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType onEditSuccess; // @synthesize onEditSuccess=_onEditSuccess;
 @property(copy, nonatomic) NSString *originalPostSelfText; // @synthesize originalPostSelfText=_originalPostSelfText;
 @property(retain, nonatomic) BaseButton *postButton; // @synthesize postButton=_postButton;
 @property(retain, nonatomic) EditPostView *editPostView; // @synthesize editPostView=_editPostView;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)updatePostTextWithNewDataAndExit;
 - (void)updatePostButtonWithText:(id)arg1 forState:(unsigned long long)arg2;
 - (void)updateAfterEditPostRequestSucceeded;

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: headerNode
     // Error parsing type: , name: demoNode
+    // Error parsing type: , name: gradientNode
 }
 
 - (void).cxx_destruct;

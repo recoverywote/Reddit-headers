@@ -13,10 +13,10 @@
     unsigned long long _position;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) int type; // @synthesize type=_type;
 @property(nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(retain, nonatomic) id object; // @synthesize object=_object;
-- (void).cxx_destruct;
 - (id)initWithObject:(id)arg1;
 
 @end

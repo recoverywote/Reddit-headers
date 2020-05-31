@@ -10,8 +10,8 @@
 {
 }
 
-+ (void)carouselContainerNodeForCarousel:(id)arg1 withDelegate:(id)arg2 shouldShowGradientBackground:(_Bool)arg3 withCompletion:(CDUnknownBlockType)arg4;
-+ (void)carouselContainerNodeForCarousel:(id)arg1 withDelegate:(id)arg2 withCompletion:(CDUnknownBlockType)arg3;
++ (void)carouselContainerNodeForCarousel:(id)arg1 viewContext:(id)arg2 withDelegate:(id)arg3 shouldShowGradientBackground:(_Bool)arg4 withCompletion:(CDUnknownBlockType)arg5;
++ (void)carouselContainerNodeForCarousel:(id)arg1 viewContext:(id)arg2 withDelegate:(id)arg3 withCompletion:(CDUnknownBlockType)arg4;
 + (id)carouselTitleForSubreddit:(id)arg1;
 + (id)responseSubreddits;
 + (id)questionSubreddits;

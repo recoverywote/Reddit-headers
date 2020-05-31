@@ -16,11 +16,11 @@
     PostCollection *_postCollection;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(retain, nonatomic) NSString *postCollectionId; // @synthesize postCollectionId=_postCollectionId;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (void)fetchPostsWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithRedditService:(id)arg1 postCollectionId:(id)arg2;
 

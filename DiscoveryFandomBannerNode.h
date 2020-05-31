@@ -26,6 +26,7 @@
     id <Pillable> _pillable;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isTransitioning; // @synthesize isTransitioning=_isTransitioning;
 @property(retain, nonatomic) id <Pillable> pillable; // @synthesize pillable=_pillable;
 @property(retain, nonatomic) CarouselItem *carouselItem; // @synthesize carouselItem=_carouselItem;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
 @property(retain, nonatomic) PillButtonNode *pillButtonNode; // @synthesize pillButtonNode=_pillButtonNode;
 @property(nonatomic) __weak id <DiscoveryFandomBannerNodeDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapNode:(id)arg1;
 - (void)didTapOverflowButton:(id)arg1;
 - (void)didTapPillButton:(id)arg1;

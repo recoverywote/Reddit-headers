@@ -14,9 +14,9 @@
     GoldProductInfo *_info;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GoldProductInfo *info; // @synthesize info=_info;
 @property(readonly, nonatomic) SKProduct *product; // @synthesize product=_product;
-- (void).cxx_destruct;
 - (id)initWithSKProduct:(id)arg1 productInfo:(id)arg2;
 
 @end

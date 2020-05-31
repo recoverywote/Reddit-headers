@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, BaseStore, Credentials, ExperimentManager, Loid, NSArray, NSURLSession, RedditServiceBackoffState, SessionTracker;
+@class Account, AccountIdentifiers, BaseStore, Credentials, ExperimentManager, Loid, NSArray, NSURLSession, RedditServiceBackoffState, SessionTracker;
 @protocol OS_dispatch_queue;
 
 @interface RedditService : NSObject
@@ -17,6 +17,7 @@
     Account *_account;
     Credentials *_credentials;
     Loid *_loid;
+    AccountIdentifiers *_accountIdentifiers;
     BaseStore *_userStore;
     BaseStore *_subredditStore;
     BaseStore *_messageStore;
@@ -47,6 +48,7 @@
 + (id)defaultHeaders;
 + (id)infoFromTargetingInputs:(id)arg1;
 + (id)targetingInputsFromInfo:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *responseProcessors; // @synthesize responseProcessors=_responseProcessors;
 @property(readonly, nonatomic) NSArray *requestProcessors; // @synthesize requestProcessors=_requestProcessors;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parseQueue; // @synthesize parseQueue=_parseQueue;
@@ -69,10 +71,10 @@
 @property(readonly, nonatomic) BaseStore *subredditStore; // @synthesize subredditStore=_subredditStore;
 @property(readonly, nonatomic) BaseStore *userStore; // @synthesize userStore=_userStore;
 @property(nonatomic) _Bool isCurrentService; // @synthesize isCurrentService=_isCurrentService;
+@property(readonly, nonatomic) AccountIdentifiers *accountIdentifiers; // @synthesize accountIdentifiers=_accountIdentifiers;
 @property(retain, nonatomic) Loid *loid; // @synthesize loid=_loid;
 @property(retain, nonatomic) Credentials *credentials; // @synthesize credentials=_credentials;
 @property(retain, nonatomic) Account *account; // @synthesize account=_account;
-- (void).cxx_destruct;
 - (void)createAuthenticatedRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
 - (void)startRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
 - (id)graphQLRequestForOperationName:(id)arg1 variables:(id)arg2;
@@ -101,7 +103,7 @@
 @property(readonly, nonatomic) _Bool usePersistedOperations;
 - (void)invalidate;
 - (void)dealloc;
-- (id)initWithAccount:(id)arg1 credentials:(id)arg2 requestProcessors:(id)arg3 responseProcessors:(id)arg4 sessionTracker:(id)arg5 loid:(id)arg6 userDefaults:(id)arg7;
+- (id)initWithAccount:(id)arg1 credentials:(id)arg2 accountIdendifiers:(id)arg3 requestProcessors:(id)arg4 responseProcessors:(id)arg5 sessionTracker:(id)arg6 loid:(id)arg7 userDefaults:(id)arg8;
 - (id)initWithAccount:(id)arg1;
 - (void)deleteDraftPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveDraftPostForSubmittedPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -145,6 +147,8 @@
 - (void)markObjectAsReadWithInboxMessageId:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchNotificationPreferencesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)saveNotificationPreferences:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)unlinkIdentityProvider:(id)arg1 currentPassword:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)linkIdentityProviderWithIdentityToken:(id)arg1 currentPassword:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchLegacyExperiments:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)setAuthorFlairEnabled:(_Bool)arg1 inSubreddit:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setAuthorFlair:(id)arg1 forUser:(id)arg2 inSubreddit:(id)arg3 completion:(CDUnknownBlockType)arg4;
@@ -260,6 +264,7 @@
 - (void)validatePurchaseWithMetadata:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)submitExposureEvents:(id)arg1 targetingInfo:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchExperimentVariantsWithTargetingInfo:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchAwardingTrayInfoForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSortedUsableAwardTotalsForSubreddit:(id)arg1 post:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateAccountCoinsWithAmount:(id)arg1;
 - (id)errorForStatus:(id)arg1;
@@ -275,6 +280,7 @@
 - (id)parseGraphQLPostData:(id)arg1 parseSubreddits:(_Bool)arg2 parseCrosspostSubreddits:(_Bool)arg3;
 - (CDUnknownBlockType)parsePostBlock;
 - (CDUnknownBlockType)parsePostWithSubredditBlock;
+- (id)geoContributableSubredditsListing;
 - (id)globalCommunityTagsListing:(_Bool)arg1;
 - (id)blockedUserIdsListing;
 - (id)subredditsListingForMulti:(id)arg1;
@@ -304,6 +310,8 @@
 - (void)fetchFeaturedLiveEventAndAnnouncementWithCompletion:(CDUnknownBlockType)arg1;
 - (id)liveEventWithGraphQLData:(id)arg1;
 - (id)liveEventWithData:(id)arg1;
+- (void)suggestSubredditGeoPlace:(id)arg1 forSubreddit:(id)arg2 sessionId:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)searchForGeoPlaceWithInput:(id)arg1 sessionId:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateSettingsForSubreddit:(id)arg1 publicDescription:(id)arg2 isNSFW:(_Bool)arg3 subredditType:(long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)updatePrimaryTagForSubreddit:(id)arg1 primaryTag:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchPrimaryTagForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;

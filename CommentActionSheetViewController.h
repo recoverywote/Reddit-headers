@@ -22,6 +22,7 @@
     NSString *_correlationId;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <CommentActionSheetDelegate> commentActionSheetDelegate; // @synthesize commentActionSheetDelegate=_commentActionSheetDelegate;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
-- (void).cxx_destruct;
 - (void)logAnalyticsForRUIActionSheetItemSelection:(id)arg1 comment:(id)arg2;
 - (void)setSendRepliesStatus:(_Bool)arg1 forComment:(id)arg2;
 - (void)performBlockAuthorForComment:(id)arg1;

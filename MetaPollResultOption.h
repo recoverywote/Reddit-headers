@@ -14,9 +14,9 @@
     NSDecimalNumber *_votes;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDecimalNumber *votes; // @synthesize votes=_votes;
 @property(readonly, nonatomic) _Bool isUserSelected; // @synthesize isUserSelected=_isUserSelected;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1;
 
 @end

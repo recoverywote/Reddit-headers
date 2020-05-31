@@ -17,12 +17,12 @@
     NSString *_title;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didRegionMapUpdate; // @synthesize didRegionMapUpdate=_didRegionMapUpdate;
 @property(nonatomic) _Bool didUpdateAccountPreference; // @synthesize didUpdateAccountPreference=_didUpdateAccountPreference;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) GeoRegion *geoRegion; // @synthesize geoRegion=_geoRegion;
 @property(nonatomic) unsigned long long geoMode; // @synthesize geoMode=_geoMode;
-- (void).cxx_destruct;
 - (id)listingTraceName;
 - (unsigned long long)surfaceType;
 - (id)analyticsPageType;

@@ -18,11 +18,11 @@
     NSArray *_moves;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *moves; // @synthesize moves=_moves;
 @property(readonly, nonatomic) NSIndexSet *updates; // @synthesize updates=_updates;
 @property(readonly, nonatomic) NSIndexSet *deletes; // @synthesize deletes=_deletes;
 @property(readonly, nonatomic) NSIndexSet *inserts; // @synthesize inserts=_inserts;
-- (void).cxx_destruct;
 - (id)description;
 - (long long)newIndexForIdentifier:(id)arg1;
 - (long long)oldIndexForIdentifier:(id)arg1;

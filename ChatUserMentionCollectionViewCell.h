@@ -9,21 +9,24 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseLabel, ChatAvatarImageView, Contact, NSString;
+@protocol ViewContext;
 
 @interface ChatUserMentionCollectionViewCell : BaseCollectionViewCell <ObjectObserverProtocol>
 {
+    id <ViewContext> _viewContext;
     Contact *_contact;
     BaseLabel *_headerLabel;
     ChatAvatarImageView *_avatarImageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ChatAvatarImageView *avatarImageView; // @synthesize avatarImageView=_avatarImageView;
 @property(retain, nonatomic) BaseLabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
-- (void).cxx_destruct;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)updateContentViewsForData:(id)arg1;
-- (void)configureWithUserID:(id)arg1 username:(id)arg2;
-- (void)configureWithContact:(id)arg1;
+- (void)configureWithViewContext:(id)arg1 userID:(id)arg2 username:(id)arg3;
+- (void)configureWithViewContext:(id)arg1 contact:(id)arg2;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)dealloc;

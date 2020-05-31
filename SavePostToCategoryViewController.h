@@ -22,6 +22,7 @@
     CDUnknownBlockType _cancel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType cancel; // @synthesize cancel=_cancel;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) SavedCategoryPresenter *savedCategoryPresenter; // @synthesize savedCategoryPresenter=_savedCategoryPresenter;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSArray *categoryNames; // @synthesize categoryNames=_categoryNames;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (void)dismissFromCurrentContext;
 - (void)savePostToCategoryWithName:(id)arg1;
 - (void)didSelectAddNewCategory;

@@ -27,6 +27,7 @@
 }
 
 + (id)buttonNodeWithIconName:(id)arg1 selectedColor:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *topSeparatorNode; // @synthesize topSeparatorNode=_topSeparatorNode;
 @property(retain, nonatomic) BaseButtonNode *flairButtonNode; // @synthesize flairButtonNode=_flairButtonNode;
 @property(retain, nonatomic) BaseButtonNode *overflowButtonNode; // @synthesize overflowButtonNode=_overflowButtonNode;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FeedPostModerateBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)flairButtonTapped:(id)arg1;

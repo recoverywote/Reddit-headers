@@ -18,12 +18,12 @@
     NSTimer *_queryTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *queryTimer; // @synthesize queryTimer=_queryTimer;
 @property(retain, nonatomic) NSString *currentQuery; // @synthesize currentQuery=_currentQuery;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) double queryDelay; // @synthesize queryDelay=_queryDelay;
 @property(nonatomic) unsigned long long minimumQueryLength; // @synthesize minimumQueryLength=_minimumQueryLength;
-- (void).cxx_destruct;
 - (void)executeCurrentQueryWithResults:(CDUnknownBlockType)arg1;
 - (void)query:(id)arg1 results:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic) RedditService *service;

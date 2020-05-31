@@ -22,13 +22,13 @@
     NSArray *_recentSubreddits;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *recentSubreddits; // @synthesize recentSubreddits=_recentSubreddits;
 @property(retain, nonatomic) SearchBarTransition *searchBarTransition; // @synthesize searchBarTransition=_searchBarTransition;
 @property(retain, nonatomic) REDSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) CustomFeedsListViewController *customFeedsViewController; // @synthesize customFeedsViewController=_customFeedsViewController;
 @property(retain, nonatomic) CommunitiesViewController *communitiesController; // @synthesize communitiesController=_communitiesController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (id)analyticsPageType;
 - (void)setFocusToSearchBar;
 - (_Bool)searchBarShouldBeginEditing:(id)arg1;

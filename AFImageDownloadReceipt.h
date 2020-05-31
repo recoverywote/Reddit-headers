@@ -14,9 +14,9 @@
     NSUUID *_receiptID;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUUID *receiptID; // @synthesize receiptID=_receiptID;
 @property(retain, nonatomic) NSURLSessionDataTask *task; // @synthesize task=_task;
-- (void).cxx_destruct;
 - (id)initWithReceiptID:(id)arg1 task:(id)arg2;
 
 @end

@@ -18,12 +18,12 @@
     UIStackView *_mainHorizontalStackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *mainHorizontalStackView; // @synthesize mainHorizontalStackView=_mainHorizontalStackView;
 @property(retain, nonatomic) FlairLabel *flairLabel; // @synthesize flairLabel=_flairLabel;
 @property(retain, nonatomic) BaseImageView *originalSelectionIcon; // @synthesize originalSelectionIcon=_originalSelectionIcon;
 @property(retain, nonatomic) CheckboxButton *radioButton; // @synthesize radioButton=_radioButton;
 @property(retain, nonatomic) NSObject<FlairProtocol> *flair; // @synthesize flair=_flair;
-- (void).cxx_destruct;
 - (void)updateWithData:(id)arg1 isSelected:(_Bool)arg2 isAssigned:(_Bool)arg3;
 - (void)updateAccessibility;
 - (void)prepareForReuse;

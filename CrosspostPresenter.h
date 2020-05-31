@@ -16,10 +16,10 @@
     UIViewController *_presentingViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)displayViewContoller:(id)arg1;
 - (void)showPostViewControllerWithSubreddit:(id)arg1;
 - (void)showCrosspost;

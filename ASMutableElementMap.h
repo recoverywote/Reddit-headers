@@ -8,16 +8,16 @@
 
 #import <AsyncDisplayKit/NSCopying-Protocol.h>
 
-@class NSMutableArray;
+@class NSMutableArray, NSMutableDictionary;
 
 @interface ASMutableElementMap : NSObject <NSCopying>
 {
-    struct NSMutableDictionary *_supplementaryElements;
+    NSMutableDictionary *_supplementaryElements;
     NSMutableArray *_sections;
-    struct NSMutableArray *_sectionsOfItems;
+    NSMutableArray *_sectionsOfItems;
 }
 
-+ (struct NSMutableDictionary *)deepMutableCopyOfElementsDictionary:(struct NSDictionary *)arg1;
++ (id)deepMutableCopyOfElementsDictionary:(id)arg1;
 - (void).cxx_destruct;
 - (void)migrateSupplementaryElementsWithSectionMapping:(id)arg1;
 - (void)insertElement:(id)arg1 atIndexPath:(id)arg2;
@@ -29,7 +29,7 @@
 - (void)insertSection:(id)arg1 atIndex:(long long)arg2;
 - (void)removeAllSections;
 - (id)copyWithZone:(struct _NSZone *)arg1;
-- (id)initWithSections:(id)arg1 items:(struct NSArray *)arg2 supplementaryElements:(struct NSDictionary *)arg3;
+- (id)initWithSections:(id)arg1 items:(id)arg2 supplementaryElements:(id)arg3;
 
 @end
 

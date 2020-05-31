@@ -13,8 +13,8 @@
     BaseImageView *_imageView;
 }
 
-@property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 - (void)configureWithImage:(id)arg1 backgroundColor:(id)arg2 tintColor:(id)arg3 cornerRadius:(double)arg4;
 - (void)prepareForReuse;
 - (void)setupConstraints;

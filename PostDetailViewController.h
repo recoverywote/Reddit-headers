@@ -19,11 +19,12 @@
 #import "PreviewModeDelegate-Protocol.h"
 #import "RequestToNavigateView-Protocol.h"
 #import "RoadblockCoordinatorDelegate-Protocol.h"
+#import "_TtP6Reddit27CommentComposerViewDelegate_-Protocol.h"
 #import "_TtP8RedditUI25RUIRefreshControlDelegate_-Protocol.h"
 
-@class ASCollectionNode, ChatPostViewController, CollectionDiffingAdapter, CommentAdPostDelegator, FeedPostDetailDelegator, NSString, NSURL, NextCommentButtonInteractor, Post, PostDetailDelegator, PostDetailFloatingCommandBarInteractor, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailNavigationItemHandler, PostDetailNavigator, PostDetailPresenter, RoadblockCoordinator, UICollectionView, _TtC6Reddit20SubredditDisplayView;
+@class ASCollectionNode, ChatPostViewController, CollectionDiffingAdapter, CommentAdPostDelegator, FeedPostCommentBarNode, FeedPostDetailDelegator, NSString, NSURL, NextCommentButtonInteractor, Post, PostDetailDelegator, PostDetailFloatingCommandBarInteractor, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailNavigationItemHandler, PostDetailNavigator, PostDetailPresenter, RoadblockCoordinator, UICollectionView, _TtC6Reddit20SubredditDisplayView, _TtC6Reddit29CommentComposerViewController;
 
-@interface PostDetailViewController : BaseViewController <ASCollectionDataSource, ASCollectionDelegate, PostDetailPresenterDelegate, NextCommentButtonInteractorDelegate, PostDetailHeaderViewControllerDelegate, RoadblockCoordinatorDelegate, RequestToNavigateView, ListingPresentable, _TtP8RedditUI25RUIRefreshControlDelegate_, ObjectObserverProtocol, PreviewModeDelegate, CommentComposeViewControllerDelegate, FlairSelectionSourceViewProtocol, DeeplinkProtocol>
+@interface PostDetailViewController : BaseViewController <ASCollectionDataSource, ASCollectionDelegate, PostDetailPresenterDelegate, NextCommentButtonInteractorDelegate, PostDetailHeaderViewControllerDelegate, RoadblockCoordinatorDelegate, RequestToNavigateView, ListingPresentable, _TtP8RedditUI25RUIRefreshControlDelegate_, _TtP6Reddit27CommentComposerViewDelegate_, ObjectObserverProtocol, PreviewModeDelegate, CommentComposeViewControllerDelegate, FlairSelectionSourceViewProtocol, DeeplinkProtocol>
 {
     _Bool _previewModeEnabled;
     _Bool _linkedFromCarousel;
@@ -40,6 +41,8 @@
     PostDetailFooterViewController *_footerViewController;
     PostDetailFloatingCommandBarInteractor *_floatingCommandBarInteractor;
     _TtC6Reddit20SubredditDisplayView *_subredditDisplayView;
+    _TtC6Reddit29CommentComposerViewController *_commentComposerViewController;
+    FeedPostCommentBarNode *_commentBarNode;
     NextCommentButtonInteractor *_nextCommentInteractor;
     RoadblockCoordinator *_roadblockCoordinator;
     ChatPostViewController *_chatPostViewController;
@@ -52,9 +55,12 @@
 + (id)postDetailViewControllerWithAccountContext:(id)arg1 permalink:(id)arg2 options:(id)arg3;
 + (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4;
 + (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 options:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) ChatPostViewController *chatPostViewController; // @synthesize chatPostViewController=_chatPostViewController;
 @property(retain, nonatomic) RoadblockCoordinator *roadblockCoordinator; // @synthesize roadblockCoordinator=_roadblockCoordinator;
 @property(retain, nonatomic) NextCommentButtonInteractor *nextCommentInteractor; // @synthesize nextCommentInteractor=_nextCommentInteractor;
+@property(retain, nonatomic) FeedPostCommentBarNode *commentBarNode; // @synthesize commentBarNode=_commentBarNode;
+@property(retain, nonatomic) _TtC6Reddit29CommentComposerViewController *commentComposerViewController; // @synthesize commentComposerViewController=_commentComposerViewController;
 @property(retain, nonatomic) _TtC6Reddit20SubredditDisplayView *subredditDisplayView; // @synthesize subredditDisplayView=_subredditDisplayView;
 @property(retain, nonatomic) PostDetailFloatingCommandBarInteractor *floatingCommandBarInteractor; // @synthesize floatingCommandBarInteractor=_floatingCommandBarInteractor;
 @property(retain, nonatomic) PostDetailFooterViewController *footerViewController; // @synthesize footerViewController=_footerViewController;
@@ -70,7 +76,8 @@
 @property(nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 @property(retain, nonatomic) PostDetailNavigationItemHandler *navigationItemHandler; // @synthesize navigationItemHandler=_navigationItemHandler;
 @property(readonly, nonatomic) PostDetailPresenter *postDetailPresenter; // @synthesize postDetailPresenter=_postDetailPresenter;
-- (void).cxx_destruct;
+- (void)configureCommentComposer;
+- (_Bool)shouldUseNewCommentsBar;
 - (void)showShareViewForPost:(id)arg1 sender:(id)arg2 origin:(unsigned long long)arg3;
 - (void)showTrendingToaster;
 - (void)fireEventsForPillContainerNode;
@@ -85,7 +92,7 @@
 @property(readonly, nonatomic) Post *post;
 - (id)postSectionNode;
 - (id)commentSectionHeaderNode;
-- (void)highlightCellForIndexPath:(id)arg1;
+- (void)highlightCellForIndexPath:(id)arg1 highlight:(_Bool)arg2 briefly:(_Bool)arg3;
 @property(readonly, nonatomic) UICollectionView *feedCollectionView;
 - (_Bool)hasCommentsForNextCommentButtonInteractor:(id)arg1;
 - (double)nextCommentButtonBottomInsetForInteractor:(id)arg1;
@@ -97,6 +104,13 @@
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)commentComposeViewController:(id)arg1 didFinishWithSuccess:(_Bool)arg2 editedItem:(id)arg3;
 - (void)commentComposeViewController:(id)arg1 didFinishWithSuccess:(_Bool)arg2 newItem:(id)arg3;
+- (void)commentingOnCommentTreeNode:(id)arg1 previousCommentTreeNode:(id)arg2;
+- (_Bool)willPresentCommentComposer;
+- (void)commentComposerAdjustedHeightWithNewHeight:(double)arg1;
+- (void)commmentEditingSuccessfulWithComment:(id)arg1;
+- (void)commmentSubmissionSuccessfulWithComment:(id)arg1 inReplyTo:(id)arg2;
+- (void)didFinishCommentEditingWithSuccess:(_Bool)arg1 editedItem:(id)arg2;
+- (void)didFinishCommentComposeWithSuccess:(_Bool)arg1 newItem:(id)arg2 inReplyToComment:(id)arg3;
 - (void)postDetailPresenterDidTapComment:(id)arg1;
 @property(readonly, nonatomic) _Bool isSingleCommentThread;
 - (void)presentAddCommentModal;
@@ -133,6 +147,8 @@
 - (void)previewModeViewController:(id)arg1 didBeginDragging:(id)arg2;
 - (void)configureChatPostViewController;
 - (void)attemptConfigurationOfChatView;
+- (void)editCommentTreeNode:(id)arg1;
+- (void)replyToCommentTreeNode:(id)arg1;
 - (void)configureFooterView;
 - (void)configureHeaderView;
 - (void)configureCollectionNode;

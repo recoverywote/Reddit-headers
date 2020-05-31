@@ -17,10 +17,10 @@
     Announcement *_featuredAnnouncement;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) Announcement *featuredAnnouncement; // @synthesize featuredAnnouncement=_featuredAnnouncement;
 @property(retain, nonatomic) LiveEvent *featuredLiveEvent; // @synthesize featuredLiveEvent=_featuredLiveEvent;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;

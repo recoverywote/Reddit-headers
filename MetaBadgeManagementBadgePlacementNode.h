@@ -13,8 +13,8 @@
     NSArray *_collectionNodes;
 }
 
-@property(retain, nonatomic) NSArray *collectionNodes; // @synthesize collectionNodes=_collectionNodes;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *collectionNodes; // @synthesize collectionNodes=_collectionNodes;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithViewModel:(id)arg1 contentColor:(id)arg2 actionDelegate:(id)arg3;
 

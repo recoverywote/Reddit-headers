@@ -14,9 +14,9 @@
     BaseLabel *_label;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) UISwitch *accessorySwitch; // @synthesize accessorySwitch=_accessorySwitch;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -39,6 +39,7 @@
 }
 
 + (double)panelWidth;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(retain, nonatomic) KeyValueObservation *accountObservation; // @synthesize accountObservation=_accountObservation;
 @property(retain, nonatomic) NSMutableArray *availableUserActions; // @synthesize availableUserActions=_availableUserActions;
@@ -59,7 +60,6 @@
 @property(retain, nonatomic) _TtC6Reddit24MetaWalletBalanceManager *balanceManager; // @synthesize balanceManager=_balanceManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
-- (void).cxx_destruct;
 - (void)showAnonymousBrowsingTooltipIfNeeded;
 - (id)presentationControllerForPresentedViewController:(id)arg1 presentingViewController:(id)arg2 sourceViewController:(id)arg3;
 - (id)interactionControllerForDismissal:(id)arg1;

@@ -49,6 +49,7 @@
 + (id)getUserPkWithInitialCellModels:(id)arg1 username:(id)arg2;
 + (id)findCellModelWithCellModels:(id)arg1 commentPk:(id)arg2;
 + (id)findCommentNodeWithInitialCellModels:(id)arg1 commentPk:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *keyValueObservations; // @synthesize keyValueObservations=_keyValueObservations;
 @property(retain, nonatomic) NSMutableDictionary *deletedCommentsCache; // @synthesize deletedCommentsCache=_deletedCommentsCache;
 @property(retain, nonatomic) NSObject<_TtP6Reddit30ChatPostNetworkManagerProtocol_> *networkManager; // @synthesize networkManager=_networkManager;
@@ -73,7 +74,6 @@
 @property(retain, nonatomic) LiveStream *liveStream; // @synthesize liveStream=_liveStream;
 @property(nonatomic) __weak id <ChatPostPresenterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (_Bool)shouldShowVotingNodeForComment:(id)arg1;
 @property(readonly, nonatomic) long long collapsedCommentBehavior;
 - (_Bool)isEmptyNodeCurrentlyDisplayed;

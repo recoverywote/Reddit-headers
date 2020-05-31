@@ -13,8 +13,8 @@
     BaseButton *_newsSubtopicButton;
 }
 
-@property(retain, nonatomic) BaseButton *newsSubtopicButton; // @synthesize newsSubtopicButton=_newsSubtopicButton;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseButton *newsSubtopicButton; // @synthesize newsSubtopicButton=_newsSubtopicButton;
 - (void)didTapNewsSubtopicButton:(id)arg1;
 - (void)configureWithTopic:(id)arg1 subTopic:(id)arg2;
 - (void)layoutSubviews;

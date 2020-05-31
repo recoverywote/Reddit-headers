@@ -41,10 +41,10 @@
 + (id)applicationNameAllowedCharacters;
 + (void)configureWithOptions:(id)arg1;
 + (void)configure;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FIRComponentContainer *container; // @synthesize container=_container;
 @property(readonly, nonatomic) _Bool isDefaultApp; // @synthesize isDefaultApp=_isDefaultApp;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)logCoreTelemetryIfEnabled;
 - (void)appDidBecomeActive:(id)arg1;
 - (void)subscribeForAppDidBecomeActiveNotifications;

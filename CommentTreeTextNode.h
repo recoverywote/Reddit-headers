@@ -26,6 +26,7 @@
     _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
 @property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) CommentTreeVisualDepthNode *visualDepthNode; // @synthesize visualDepthNode=_visualDepthNode;
 @property(retain, nonatomic) RichTextDisplayNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
-- (void).cxx_destruct;
 - (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
 - (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)modelAttributedStringsDidUpdate:(id)arg1;

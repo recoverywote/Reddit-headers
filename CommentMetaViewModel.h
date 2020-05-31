@@ -16,11 +16,11 @@
     NSString *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) _TtC6Reddit25MetaSubredditPointBalance *subredditPointBalance; // @synthesize subredditPointBalance=_subredditPointBalance;
 @property(retain, nonatomic) MetaUsernameDecoration *decoration; // @synthesize decoration=_decoration;
 @property(retain, nonatomic) MetaBadgeLoader *badgeLoader; // @synthesize badgeLoader=_badgeLoader;
-- (void).cxx_destruct;
 - (void)updateWithSubredditPointBalance:(id)arg1;
 - (_Bool)updateWithBadges:(id)arg1;
 

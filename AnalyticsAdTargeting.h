@@ -42,6 +42,7 @@
     NSMutableArray *_excluded_custom_audience_ids;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool expand_targetingIsSet; // @synthesize expand_targetingIsSet=_expand_targetingIsSet;
 @property(nonatomic) _Bool expand_targeting; // @synthesize expand_targeting=_expand_targeting;
 @property(nonatomic) _Bool excluded_custom_audience_idsIsSet; // @synthesize excluded_custom_audience_idsIsSet=_excluded_custom_audience_idsIsSet;
@@ -68,7 +69,6 @@
 @property(retain, nonatomic) NSMutableArray *excluded_geolocations; // @synthesize excluded_geolocations=_excluded_geolocations;
 @property(nonatomic) _Bool geolocationsIsSet; // @synthesize geolocationsIsSet=_geolocationsIsSet;
 @property(retain, nonatomic) NSMutableArray *geolocations; // @synthesize geolocations=_geolocations;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

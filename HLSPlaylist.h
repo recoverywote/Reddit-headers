@@ -15,9 +15,9 @@
 }
 
 + (id)uniqueIdentifierFromRedditHLSPlaylistURL:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

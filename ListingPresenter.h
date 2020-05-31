@@ -23,6 +23,7 @@
     NSUUID *_fetchedCorrelationId;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUUID *fetchedCorrelationId; // @synthesize fetchedCorrelationId=_fetchedCorrelationId;
 @property(nonatomic) _Bool didProvideListingContentToListingPresentable; // @synthesize didProvideListingContentToListingPresentable=_didProvideListingContentToListingPresentable;
 @property(readonly, nonatomic) _TtC6Tracer5Trace *activeTrace; // @synthesize activeTrace=_activeTrace;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <ListingPresentable> presentable; // @synthesize presentable=_presentable;
-- (void).cxx_destruct;
 - (void)configureWithListingNetworkSource:(id)arg1;
 - (unsigned long long)removeObjectFromCurrentObjects:(id)arg1;
 - (id)analyticsCorrelationId;

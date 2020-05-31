@@ -11,7 +11,7 @@
 #import "TemplateParserContext-Protocol.h"
 
 @class AttributedLabelRegular, BaseButton, CheckboxButton, FeedPostOptions, NSObject, NSString, NSURL, Post;
-@protocol FeedPostTitleViewDelegate;
+@protocol FeedPostTitleViewDelegate, ViewContext;
 
 @interface FeedPostTitleView : BaseView <AttributedLabelRegularDelegate, ObjectObserverProtocol, TemplateParserContext>
 {
@@ -22,6 +22,7 @@
     _Bool _hideGilding;
     _Bool _hideLocation;
     _Bool _configureForCommentsView;
+    id <ViewContext> _viewContext;
     NSObject<FeedPostTitleViewDelegate> *_delegate;
     Post *_post;
     FeedPostOptions *_options;
@@ -35,6 +36,7 @@
 
 + (double)topInset;
 + (double)calculatedHeightWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *authorUrl; // @synthesize authorUrl=_authorUrl;
 @property(copy, nonatomic) NSURL *subredditUrl; // @synthesize subredditUrl=_subredditUrl;
 @property(nonatomic) _Bool configureForCommentsView; // @synthesize configureForCommentsView=_configureForCommentsView;
@@ -51,7 +53,7 @@
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak NSObject<FeedPostTitleViewDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)valueForTemplateName:(id)arg1;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)didTapOverflowButton:(id)arg1;
@@ -68,6 +70,8 @@
 - (void)dealloc;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)prepareForReuse;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

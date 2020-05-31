@@ -16,8 +16,8 @@
     FeedHistorySelectionController *_feedHistorySelectionController;
 }
 
-@property(retain, nonatomic) FeedHistorySelectionController *feedHistorySelectionController; // @synthesize feedHistorySelectionController=_feedHistorySelectionController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) FeedHistorySelectionController *feedHistorySelectionController; // @synthesize feedHistorySelectionController=_feedHistorySelectionController;
 - (void)feedHistorySelectionController:(id)arg1 didSelectFeedHistoryType:(long long)arg2;
 - (void)headerBarViewDidTapLeftButton:(id)arg1;
 - (void)clearFeed;

@@ -17,9 +17,9 @@
 + (_Bool)supportsSecureCoding;
 + (id)userInfoWithHTTPResponse:(id)arg1 data:(id)arg2;
 + (unsigned long long)errorCodeWithHTTPCode:(long long)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSData *data; // @synthesize data=_data;
 @property(readonly, nonatomic) NSHTTPURLResponse *HTTPResponse; // @synthesize HTTPResponse=_HTTPResponse;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

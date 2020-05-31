@@ -26,6 +26,7 @@
     KeyValueObservation *_saveObserver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) KeyValueObservation *saveObserver; // @synthesize saveObserver=_saveObserver;
 @property(nonatomic) double barHeight; // @synthesize barHeight=_barHeight;
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) BaseView *textContainer; // @synthesize textContainer=_textContainer;
 @property(retain, nonatomic) BaseView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(nonatomic) __weak id <TheatreTopBarViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapSaveButton:(id)arg1;
 - (void)didTapPreviousButton:(id)arg1;
 - (void)didTapNextButton:(id)arg1;

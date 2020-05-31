@@ -13,8 +13,8 @@
     BaseSearchBar *_baseSearchBar;
 }
 
-@property(retain, nonatomic) BaseSearchBar *baseSearchBar; // @synthesize baseSearchBar=_baseSearchBar;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BaseSearchBar *baseSearchBar; // @synthesize baseSearchBar=_baseSearchBar;
 - (long long)preferredStatusBarStyle;
 - (id)searchBar;
 

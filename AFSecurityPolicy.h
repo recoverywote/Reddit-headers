@@ -26,12 +26,12 @@
 + (id)policyWithPinningMode:(unsigned long long)arg1;
 + (id)defaultPolicy;
 + (id)certificatesInBundle:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSSet *pinnedPublicKeys; // @synthesize pinnedPublicKeys=_pinnedPublicKeys;
 @property(nonatomic) _Bool validatesDomainName; // @synthesize validatesDomainName=_validatesDomainName;
 @property(nonatomic) _Bool allowInvalidCertificates; // @synthesize allowInvalidCertificates=_allowInvalidCertificates;
 @property(retain, nonatomic) NSSet *pinnedCertificates; // @synthesize pinnedCertificates=_pinnedCertificates;
 @property(nonatomic) unsigned long long SSLPinningMode; // @synthesize SSLPinningMode=_SSLPinningMode;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

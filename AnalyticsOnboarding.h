@@ -68,6 +68,7 @@
     long long _number_subreddits;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool is_similar_subredditIsSet; // @synthesize is_similar_subredditIsSet=_is_similar_subredditIsSet;
 @property(nonatomic) _Bool is_similar_subreddit; // @synthesize is_similar_subreddit=_is_similar_subreddit;
 @property(nonatomic) _Bool number_subredditsIsSet; // @synthesize number_subredditsIsSet=_number_subredditsIsSet;
@@ -120,7 +121,6 @@
 @property(copy, nonatomic) NSString *action_source; // @synthesize action_source=_action_source;
 @property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
 @property(copy, nonatomic) NSString *id; // @synthesize id=_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

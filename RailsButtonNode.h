@@ -16,10 +16,10 @@
     BaseButtonNode *_buttonNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButtonNode *buttonNode; // @synthesize buttonNode=_buttonNode;
 @property(nonatomic) __weak id <RailsButtonNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) RailsButtonModel *railsButtonModel; // @synthesize railsButtonModel=_railsButtonModel;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;

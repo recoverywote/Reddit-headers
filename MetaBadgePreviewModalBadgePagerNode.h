@@ -20,12 +20,12 @@
     ASDisplayNode *_pageControlNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *pageControlNode; // @synthesize pageControlNode=_pageControlNode;
 @property(retain, nonatomic) ASPagerNode *pagerNode; // @synthesize pagerNode=_pagerNode;
 @property(nonatomic) unsigned long long selectedIndex; // @synthesize selectedIndex=_selectedIndex;
 @property(retain, nonatomic) NSString *selectedBadgePK; // @synthesize selectedBadgePK=_selectedBadgePK;
 @property(retain, nonatomic) NSArray *badges; // @synthesize badges=_badges;
-- (void).cxx_destruct;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)layoutDidFinish;
 - (void)scrollViewDidScroll:(id)arg1;

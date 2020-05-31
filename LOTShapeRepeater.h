@@ -21,6 +21,7 @@
     LOTKeyframeGroup *_endOpacity;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) LOTKeyframeGroup *endOpacity; // @synthesize endOpacity=_endOpacity;
 @property(readonly, nonatomic) LOTKeyframeGroup *startOpacity; // @synthesize startOpacity=_startOpacity;
 @property(readonly, nonatomic) LOTKeyframeGroup *rotation; // @synthesize rotation=_rotation;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) LOTKeyframeGroup *offset; // @synthesize offset=_offset;
 @property(readonly, nonatomic) LOTKeyframeGroup *copies; // @synthesize copies=_copies;
 @property(readonly, nonatomic) NSString *keyname; // @synthesize keyname=_keyname;
-- (void).cxx_destruct;
 - (void)_mapFromJSON:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 

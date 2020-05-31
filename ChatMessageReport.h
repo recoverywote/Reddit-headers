@@ -16,9 +16,9 @@
     NSDictionary *_report;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *report; // @synthesize report=_report;
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *actionedByUsername;
 @property(readonly, nonatomic) _Bool isAlreadyActionedIgnored;
 @property(readonly, nonatomic) _Bool isAlreadyActionedDeleted;

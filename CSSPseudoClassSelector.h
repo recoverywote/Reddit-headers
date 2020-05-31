@@ -14,8 +14,8 @@
     CSSSelector *_selector;
 }
 
-@property(readonly, nonatomic) NSString *className; // @synthesize className=_className;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *className; // @synthesize className=_className;
 - (id)description;
 - (id)debugDescription;
 - (_Bool)acceptElement:(id)arg1;

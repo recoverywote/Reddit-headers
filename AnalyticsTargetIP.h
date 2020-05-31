@@ -18,9 +18,9 @@
     NSString *_address;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool addressIsSet; // @synthesize addressIsSet=_addressIsSet;
 @property(copy, nonatomic) NSString *address; // @synthesize address=_address;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

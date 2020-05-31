@@ -16,9 +16,9 @@
 }
 
 + (_Bool)shouldAllowSavedPostFoldersForAccount:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 - (void)saveWithCategoryName:(id)arg1 presentingViewController:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)saveWithCategoryName:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)unsaveWithCompletion:(CDUnknownBlockType)arg1;

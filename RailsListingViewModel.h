@@ -21,13 +21,13 @@
     NSArray *_objectsInUnit;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *objectsInUnit; // @synthesize objectsInUnit=_objectsInUnit;
 @property(nonatomic) long long searchResultIndex; // @synthesize searchResultIndex=_searchResultIndex;
 @property(nonatomic) long long indexInUnit; // @synthesize indexInUnit=_indexInUnit;
 @property(nonatomic) unsigned long long displayMode; // @synthesize displayMode=_displayMode;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(copy, nonatomic) NSObject<NSCopying> *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 - (id)initWithIdentifier:(id)arg1 post:(id)arg2;

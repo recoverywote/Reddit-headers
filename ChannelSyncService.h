@@ -18,12 +18,12 @@
     RedditService *_service;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(nonatomic) _Bool shouldStop; // @synthesize shouldStop=_shouldStop;
 @property(retain, nonatomic) Channel *channel; // @synthesize channel=_channel;
 @property(nonatomic) __weak id <ChannelSyncServiceDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)fetchChanges;
 - (void)stopFetchingChanges;
 - (void)startFetchingChanges;

@@ -13,8 +13,8 @@
     UIActivityIndicatorView *_activityIndicatorView;
 }
 
-@property(readonly, nonatomic) __weak UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 - (void)dealloc;
 - (void)af_stopAnimating;
 - (void)af_startAnimating;

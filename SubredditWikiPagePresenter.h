@@ -24,6 +24,7 @@
     SubredditWikiIndex *_wikiIndex;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFetchingWikiPage; // @synthesize isFetchingWikiPage=_isFetchingWikiPage;
 @property(nonatomic) _Bool isFetchingStyling; // @synthesize isFetchingStyling=_isFetchingStyling;
 @property(nonatomic) _Bool isFetchingSubreddit; // @synthesize isFetchingSubreddit=_isFetchingSubreddit;
@@ -35,7 +36,6 @@
 @property(nonatomic) __weak id <SubredditWikiPagePresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) SubredditWikiPage *wikiPage; // @synthesize wikiPage=_wikiPage;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSAttributedString *footerTextString;
 @property(readonly, copy, nonatomic) NSAttributedString *contentAttributedString;
 - (id)formattedIndexPagesAttributedString;

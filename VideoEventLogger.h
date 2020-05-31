@@ -25,6 +25,7 @@
 }
 
 + (id)shared;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *videoWatchedAccumulated; // @synthesize videoWatchedAccumulated=_videoWatchedAccumulated;
 @property(retain, nonatomic) NSMutableDictionary *videoWatched; // @synthesize videoWatched=_videoWatched;
 @property(retain, nonatomic) NSMutableDictionary *videoFullyViewableStart; // @synthesize videoFullyViewableStart=_videoFullyViewableStart;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) NSMutableDictionary *firedEvents; // @synthesize firedEvents=_firedEvents;
 @property(retain, nonatomic) NSMutableDictionary *correlationIds; // @synthesize correlationIds=_correlationIds;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
-- (void).cxx_destruct;
 - (void)videoPlayedWithPost:(id)arg1 elapsed:(double)arg2 duration:(double)arg3 analyticsEvent:(id)arg4;
 - (void)videoScrubbedWithPost:(id)arg1;
 - (void)videoPlayedExpandedWithPost:(id)arg1 analyticsEvent:(id)arg2;

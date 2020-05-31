@@ -15,9 +15,9 @@
 }
 
 + (id)linkWithUniversalObject:(id)arg1 properties:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BranchLinkProperties *linkProperties; // @synthesize linkProperties=_linkProperties;
 @property(retain, nonatomic) BranchUniversalObject *universalObject; // @synthesize universalObject=_universalObject;
-- (void).cxx_destruct;
 
 @end
 

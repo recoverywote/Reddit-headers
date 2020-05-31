@@ -16,8 +16,8 @@
     NSString *_path;
 }
 
-@property(readonly, nonatomic) NSString *path; // @synthesize path=_path;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *path; // @synthesize path=_path;
 - (id)loadMemoryMappedData;
 @property(readonly, nonatomic) __weak NSData *memoryMappedData; // @synthesize memoryMappedData=_memoryMappedData;
 @property(readonly, nonatomic) unsigned int frameCount; // @synthesize frameCount=_frameCount;

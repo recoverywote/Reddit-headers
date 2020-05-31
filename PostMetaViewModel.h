@@ -21,6 +21,7 @@
     NSString *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(retain, nonatomic) MetaBadgeLoader *badgeLoader; // @synthesize badgeLoader=_badgeLoader;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) _TtC6Reddit25MetaSubredditPointBalance *subredditPointBalance; // @synthesize subredditPointBalance=_subredditPointBalance;
 @property(retain, nonatomic) _TtC6Reddit17MetaPollViewModel *pollViewModel; // @synthesize pollViewModel=_pollViewModel;
 @property(retain, nonatomic) MetaUsernameDecoration *decoration; // @synthesize decoration=_decoration;
-- (void).cxx_destruct;
 - (id)pollViewModelWithPoll:(id)arg1 communityInfo:(id)arg2;
 - (void)updateWithSubredditPointBalance:(id)arg1;
 - (_Bool)updateWithPoll:(id)arg1 communityInfo:(id)arg2;

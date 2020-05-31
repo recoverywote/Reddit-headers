@@ -17,12 +17,12 @@
     NSDate *_mutedAt;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDate *mutedAt; // @synthesize mutedAt=_mutedAt;
 @property(readonly, copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
 @property(readonly, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *userId; // @synthesize userId=_userId;
-- (void).cxx_destruct;
 - (id)initWithUsername:(id)arg1 userId:(id)arg2 iconURL:(id)arg3 reason:(id)arg4 mutedAt:(id)arg5;
 - (id)initWithData:(id)arg1;
 

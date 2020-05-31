@@ -14,9 +14,9 @@
     BaseImageView *_imageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;

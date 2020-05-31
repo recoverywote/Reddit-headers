@@ -18,11 +18,11 @@
     NSArray *_indexableObjectProviders;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *indexableObjectProviders; // @synthesize indexableObjectProviders=_indexableObjectProviders;
 @property(retain, nonatomic) NSMutableSet *fetchedObjects; // @synthesize fetchedObjects=_fetchedObjects;
 @property(retain, nonatomic) NSArray *fetchMoreDependencies; // @synthesize fetchMoreDependencies=_fetchMoreDependencies;
 @property(retain, nonatomic) NSArray *dependencies; // @synthesize dependencies=_dependencies;
-- (void).cxx_destruct;
 - (void)objectProviderDidUpdate:(id)arg1;
 - (id)computedObjects;
 - (void)updateObjectProviders:(id)arg1;

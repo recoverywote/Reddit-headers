@@ -17,11 +17,11 @@
     BaseButton *_forwardButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BaseButton *forwardButton; // @synthesize forwardButton=_forwardButton;
 @property(retain, nonatomic) BaseButton *backButton; // @synthesize backButton=_backButton;
 @property(retain, nonatomic) BaseLabel *siteTitleLabel; // @synthesize siteTitleLabel=_siteTitleLabel;
 @property(nonatomic) __weak id <WebNavigationControlsViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setSiteTitle:(id)arg1;
 - (void)setCanGoForward:(_Bool)arg1;
 - (void)setCanGoBack:(_Bool)arg1;

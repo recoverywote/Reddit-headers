@@ -17,8 +17,8 @@
 }
 
 + (id)sharedTracker;
-@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void)processResponse:(id)arg1;
 - (void)processRequest:(id)arg1;
 @property(readonly, nonatomic) _Bool isValid;

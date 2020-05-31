@@ -30,6 +30,7 @@
     NSString *_imposter_id;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool note_ignoreIsSet; // @synthesize note_ignoreIsSet=_note_ignoreIsSet;
 @property(nonatomic) _Bool note_ignore; // @synthesize note_ignore=_note_ignore;
 @property(nonatomic) _Bool imposter_idIsSet; // @synthesize imposter_idIsSet=_imposter_idIsSet;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *note_text; // @synthesize note_text=_note_text;
 @property(nonatomic) _Bool game_idIsSet; // @synthesize game_idIsSet=_game_idIsSet;
 @property(copy, nonatomic) NSString *game_id; // @synthesize game_id=_game_id;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

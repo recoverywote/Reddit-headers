@@ -17,12 +17,12 @@
     ASDisplayNode *_gradientNode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *gradientNode; // @synthesize gradientNode=_gradientNode;
 @property(retain, nonatomic) TrendingSearch *trendingSearch; // @synthesize trendingSearch=_trendingSearch;
 @property(retain, nonatomic) ASNetworkImageNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
 @property(retain, nonatomic) ASTextNode *queryTextNode; // @synthesize queryTextNode=_queryTextNode;
 @property(retain, nonatomic) ASTextNode *promotedLabelNode; // @synthesize promotedLabelNode=_promotedLabelNode;
-- (void).cxx_destruct;
 - (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
@@ -36,7 +36,7 @@
 - (void)configureThumbnailNode;
 - (void)configureNodes;
 - (id)createGradientNodeWithShadeColor:(id)arg1;
-- (id)initWithCarouselItem:(id)arg1;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2;
 @property(readonly, nonatomic) struct CGSize thumbnailSize;
 @property(readonly, nonatomic) Post *trendingPost;
 

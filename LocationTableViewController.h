@@ -25,6 +25,7 @@
     EmptyDogeView *_emptyView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) EmptyDogeView *emptyView; // @synthesize emptyView=_emptyView;
 @property(copy, nonatomic) NSArray *searchResult; // @synthesize searchResult=_searchResult;
 @property(retain, nonatomic) NSString *searchText; // @synthesize searchText=_searchText;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) GeoRegion *selectedRegion; // @synthesize selectedRegion=_selectedRegion;
 @property(nonatomic) __weak id <LocationTableViewControllerDelegate> locationTableDelegate; // @synthesize locationTableDelegate=_locationTableDelegate;
-- (void).cxx_destruct;
 - (void)updateEmptyFrameFromScrollView;
 - (void)showEmptyView:(_Bool)arg1;
 - (void)keyboardSized:(id)arg1;

@@ -18,10 +18,10 @@
     RUIActionSheetViewController *_actionSheetViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak RUIActionSheetViewController *actionSheetViewController; // @synthesize actionSheetViewController=_actionSheetViewController;
 @property(nonatomic) long long selectedType; // @synthesize selectedType=_selectedType;
 @property(nonatomic) __weak id <FeedHistorySelectionControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)RUIActionSheetItemForHistoryType:(long long)arg1 identifier:(id)arg2;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)presentFromViewController:(id)arg1 fromView:(id)arg2;

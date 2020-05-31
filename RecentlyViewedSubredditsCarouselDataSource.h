@@ -21,11 +21,11 @@
 }
 
 + (id)listingCarouselItemsFromSubreddits:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *carouselItems; // @synthesize carouselItems=_carouselItems;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(readonly, nonatomic) __weak id <TemplateParserContext> templateContext; // @synthesize templateContext=_templateContext;
-- (void).cxx_destruct;
 - (_Bool)hasMoreContent;
 - (void)filterCarouselItems;
 - (void)fetchCarouselItemsWithCompletion:(CDUnknownBlockType)arg1;

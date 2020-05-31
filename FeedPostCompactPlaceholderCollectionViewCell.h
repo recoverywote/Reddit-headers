@@ -14,8 +14,8 @@
 }
 
 + (struct CGSize)preferredSize;
-@property(retain, nonatomic) FeedPostCompactPlaceholderView *feedPostPlaceholderView; // @synthesize feedPostPlaceholderView=_feedPostPlaceholderView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) FeedPostCompactPlaceholderView *feedPostPlaceholderView; // @synthesize feedPostPlaceholderView=_feedPostPlaceholderView;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

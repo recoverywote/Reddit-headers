@@ -36,6 +36,7 @@
     long long _relative_position;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool relative_positionIsSet; // @synthesize relative_positionIsSet=_relative_positionIsSet;
 @property(nonatomic) long long relative_position; // @synthesize relative_position=_relative_position;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSString *pane_name; // @synthesize pane_name=_pane_name;
 @property(nonatomic) _Bool page_typeIsSet; // @synthesize page_typeIsSet=_page_typeIsSet;
 @property(copy, nonatomic) NSString *page_type; // @synthesize page_type=_page_type;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;

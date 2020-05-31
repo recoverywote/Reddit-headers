@@ -21,6 +21,8 @@
     struct ASTextKitAttributes _attributes;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double currentScaleFactor; // @synthesize currentScaleFactor=_currentScaleFactor;
 @property(readonly, nonatomic) struct CGSize constrainedSize; // @synthesize constrainedSize=_constrainedSize;
 @property(readonly, nonatomic) ASTextKitFontSizeAdjuster *fontSizeAdjuster; // @synthesize fontSizeAdjuster=_fontSizeAdjuster;
@@ -28,8 +30,6 @@
 @property(readonly, nonatomic) ASTextKitShadower *shadower; // @synthesize shadower=_shadower;
 @property(readonly, nonatomic) ASTextKitContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) struct ASTextKitAttributes attributes; // @synthesize attributes=_attributes;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) vector_b5e32e34 visibleRanges;
 - (_Bool)isTruncated;
 - (unsigned long long)lineCount;
