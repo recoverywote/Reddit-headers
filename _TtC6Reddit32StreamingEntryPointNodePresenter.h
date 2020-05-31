@@ -17,7 +17,6 @@
     // Error parsing type: , name: heartbeatTimer
     // Error parsing type: , name: heartbeatDelayTimer
     // Error parsing type: , name: streamUpdateTimer
-    // Error parsing type: , name: lastStopTime
     // Error parsing type: , name: isActive
     // Error parsing type: , name: copyVariant
 }

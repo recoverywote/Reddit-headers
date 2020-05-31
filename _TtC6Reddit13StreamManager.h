@@ -24,7 +24,6 @@
     // Error parsing type: , name: streamingConfig
     // Error parsing type: , name: isConfigValid
     // Error parsing type: , name: availableSubredditInfoItems
-    // Error parsing type: , name: originSubredditInfo
     // Error parsing type: , name: currentSubredditInfo
     // Error parsing type: , name: deeplinkSubredditName
 }

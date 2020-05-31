@@ -10,6 +10,7 @@
 
 @interface _TtC6Reddit23StreamingEntryPointNode (Reddit1) <ASVideoNodeDelegate>
 - (void)didTapVideoNode:(id)arg1;
+- (void)videoDidPlayToEnd:(id)arg1;
 - (void)videoNode:(id)arg1 willChangePlayerState:(long long)arg2 toState:(long long)arg3;
 @end
 
