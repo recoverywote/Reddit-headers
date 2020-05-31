@@ -16,17 +16,17 @@
     NSString *_pk;
     NSString *_title;
     NSString *_descriptionText;
-    NSString *_resourcesHTML;
     NSDate *_createdAt;
     NSURL *_websocketURL;
+    NSString *_resourcesHTML;
     unsigned long long _viewerCount;
 }
 
 @property(nonatomic) unsigned long long viewerCount; // @synthesize viewerCount=_viewerCount;
+@property(copy, nonatomic) NSString *resourcesHTML; // @synthesize resourcesHTML=_resourcesHTML;
 @property(nonatomic) _Bool isNSFW; // @synthesize isNSFW=_isNSFW;
 @property(copy, nonatomic) NSURL *websocketURL; // @synthesize websocketURL=_websocketURL;
 @property(copy, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
-@property(copy, nonatomic) NSString *resourcesHTML; // @synthesize resourcesHTML=_resourcesHTML;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;

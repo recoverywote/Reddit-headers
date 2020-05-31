@@ -18,7 +18,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: imageProvider
     // Error parsing type: , name: handler
-    // Error parsing type: , name: timer
     // Error parsing type: , name: isComplete
     // Error parsing type: , name: $__lazy_storage_$_contentView
     // Error parsing type: , name: disposeBag

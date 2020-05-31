@@ -7,12 +7,11 @@
 #import <RedditUI/BaseView.h>
 
 #import "CaptureCellContentViewProtocol-Protocol.h"
-#import "ObjectObserverProtocol-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
 @class BaseLabel, BaseTextField, CaptureContentTextEntry, CaptureScreen, NSString, TextFieldAccessoryButton;
 
-@interface CaptureTextEntryView : BaseView <UITextFieldDelegate, ObjectObserverProtocol, CaptureCellContentViewProtocol>
+@interface CaptureTextEntryView : BaseView <UITextFieldDelegate, CaptureCellContentViewProtocol>
 {
     CaptureScreen *_screen;
     CaptureContentTextEntry *_content;
@@ -34,7 +33,6 @@
 - (void)textFieldDidChange:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)textFieldDidBeginEditing:(id)arg1;
-- (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)didTapRightViewIcon:(id)arg1;
 - (void)prepareForReuse;
 - (void)becomeFirstResponderIfNeeded;
@@ -42,7 +40,8 @@
 - (void)configureTextFieldRightView;
 - (struct UIEdgeInsets)normalTextInsets;
 - (void)configureWithContent:(id)arg1 screen:(id)arg2;
-- (void)dealloc;
+- (void)removeContentObservers;
+- (void)addContentObservers;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

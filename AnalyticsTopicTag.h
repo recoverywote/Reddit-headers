@@ -17,11 +17,15 @@
     _Bool _idIsSet;
     _Bool _contentIsSet;
     _Bool _typeIsSet;
+    _Bool _is_primary;
+    _Bool _is_primaryIsSet;
     NSString *_id;
     NSString *_content;
     NSString *_type;
 }
 
+@property(nonatomic) _Bool is_primaryIsSet; // @synthesize is_primaryIsSet=_is_primaryIsSet;
+@property(nonatomic) _Bool is_primary; // @synthesize is_primary=_is_primary;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 @property(nonatomic) _Bool contentIsSet; // @synthesize contentIsSet=_contentIsSet;
@@ -33,6 +37,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetIs_primary;
 - (void)unsetType;
 - (void)unsetContent;
 - (void)unsetId;
@@ -41,7 +46,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 content:(id)arg2 type:(id)arg3;
+- (id)initWithId:(id)arg1 content:(id)arg2 type:(id)arg3 is_primary:(_Bool)arg4;
 - (id)init;
 
 // Remaining properties

@@ -11,8 +11,8 @@
 @protocol AwardDetailsNavigatable <NSObject>
 - (void)showReportConfirmationDialogForAward:(Award *)arg1 completion:(void (^)(void))arg2;
 - (void)showAwardInfoForAward:(Award *)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(Subreddit *)arg3;
-- (void)showSelectAwardScreenForComment:(Comment *)arg1 parentPost:(Post *)arg2 service:(RedditService *)arg3 correlationId:(NSString *)arg4;
-- (void)showSelectAwardScreenForPost:(Post *)arg1 service:(RedditService *)arg2 correlationId:(NSString *)arg3;
+- (void)showSelectAwardScreenForComment:(Comment *)arg1 parentPost:(Post *)arg2 service:(RedditService *)arg3 correlationId:(NSString *)arg4 mode:(long long)arg5;
+- (void)showSelectAwardScreenForPost:(Post *)arg1 service:(RedditService *)arg2 correlationId:(NSString *)arg3 mode:(long long)arg4;
 - (void)showWebPageWithURL:(NSURL *)arg1;
 - (void)close;
 @end

@@ -23,8 +23,6 @@
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabParentDelegate; // @synthesize pagedTabParentDelegate=_pagedTabParentDelegate;
 - (void).cxx_destruct;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

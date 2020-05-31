@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSString;
+
 @interface _TtC6Reddit29CommunityCreateFlowController : NSObject
 {
     // Error parsing type: , name: draftCommunity
@@ -21,6 +23,7 @@
 - (id)rootViewController;
 - (void)showCreateViewController;
 - (id)init:(id)arg1 service:(id)arg2 analytics:(id)arg3;
+@property(nonatomic, copy) NSString *communityName;
 
 @end
 

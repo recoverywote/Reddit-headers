@@ -12,7 +12,7 @@
     // Error parsing type: , name: service
     // Error parsing type: , name: $__lazy_storage_$_cryptoFlowController
     // Error parsing type: , name: purchaseCoordinator
-    // Error parsing type: , name: subredditName
+    // Error parsing type: , name: subredditReference
     // Error parsing type: , name: correlationID
 }
 

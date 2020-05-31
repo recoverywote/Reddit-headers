@@ -15,9 +15,13 @@
 @interface AnalyticsReport : NSObject <TBase, NSCoding, NSCopying>
 {
     _Bool _reason_codeIsSet;
+    _Bool _idIsSet;
     NSString *_reason_code;
+    NSString *_id;
 }
 
+@property(nonatomic) _Bool idIsSet; // @synthesize idIsSet=_idIsSet;
+@property(copy, nonatomic) NSString *id; // @synthesize id=_id;
 @property(nonatomic) _Bool reason_codeIsSet; // @synthesize reason_codeIsSet=_reason_codeIsSet;
 @property(copy, nonatomic) NSString *reason_code; // @synthesize reason_code=_reason_code;
 - (void).cxx_destruct;
@@ -25,13 +29,14 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetId;
 - (void)unsetReason_code;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithReason_code:(id)arg1;
+- (id)initWithReason_code:(id)arg1 id:(id)arg2;
 - (id)init;
 
 // Remaining properties

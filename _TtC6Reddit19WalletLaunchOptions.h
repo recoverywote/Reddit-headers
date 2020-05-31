@@ -8,11 +8,12 @@
 
 @interface _TtC6Reddit19WalletLaunchOptions : NSObject
 {
-    // Error parsing type: , name: claim
+    // Error parsing type: , name: postLaunchAction
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)initWithSubredditIdClaim:(id)arg1;
 
 @end
 

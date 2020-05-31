@@ -71,6 +71,7 @@
 - (CDStruct_90e057aa)collectionNode:(id)arg1 sizeRangeForHeaderInSection:(long long)arg2;
 - (CDStruct_90e057aa)collectionNode:(id)arg1 constrainedSizeForItemAtIndexPath:(id)arg2;
 - (void)updateFollowButton;
+- (void)followPost;
 - (void)createUnfollowButton;
 - (void)createFollowButton;
 - (void)addCollectionView;

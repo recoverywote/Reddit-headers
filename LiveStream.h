@@ -38,7 +38,6 @@
     NSURL *_postLiveCommentsWebsocketURL;
     NSURL *_thumbnailURL;
     NSURL *_shareURL;
-    long long _finishedBy;
     double _remainingTime;
     LiveStreamMeter *_meter;
     NSDate *_fetchedAt;
@@ -70,7 +69,6 @@
 @property(readonly, nonatomic) LiveStreamMeter *meter; // @synthesize meter=_meter;
 @property(readonly, nonatomic) _Bool isVODAccessible; // @synthesize isVODAccessible=_isVODAccessible;
 @property(readonly, nonatomic) double remainingTime; // @synthesize remainingTime=_remainingTime;
-@property(readonly, nonatomic) long long finishedBy; // @synthesize finishedBy=_finishedBy;
 @property(readonly, nonatomic) NSURL *shareURL; // @synthesize shareURL=_shareURL;
 @property(readonly, nonatomic) NSURL *thumbnailURL; // @synthesize thumbnailURL=_thumbnailURL;
 @property(readonly, nonatomic) NSURL *postLiveCommentsWebsocketURL; // @synthesize postLiveCommentsWebsocketURL=_postLiveCommentsWebsocketURL;

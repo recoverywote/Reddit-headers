@@ -7,19 +7,19 @@
 #import "BaseViewController.h"
 
 #import "MetaBadgeManagementViewControllerDelegate-Protocol.h"
-#import "MetaSubredditMembershipActionDelegate-Protocol.h"
 #import "PagedTabControllerProtocol-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 #import "_TtP6Reddit33MetaLandingViewControllerDelegate_-Protocol.h"
+#import "_TtP6Reddit37MetaSubredditMembershipActionDelegate_-Protocol.h"
 
-@class MetaCommunityInfo, MetaSubredditMembershipContentNode, NSString, RedditService, Subreddit, UIScrollView;
+@class MetaCommunityInfo, NSString, RedditService, Subreddit, UIScrollView, _TtC6Reddit34MetaSubredditMembershipContentNode;
 @protocol PagedTabControllerParentCallback;
 
-@interface MetaSubredditMembershipViewController : BaseViewController <UIScrollViewDelegate, MetaSubredditMembershipActionDelegate, _TtP6Reddit33MetaLandingViewControllerDelegate_, MetaBadgeManagementViewControllerDelegate, PagedTabControllerProtocol>
+@interface MetaSubredditMembershipViewController : BaseViewController <UIScrollViewDelegate, _TtP6Reddit37MetaSubredditMembershipActionDelegate_, _TtP6Reddit33MetaLandingViewControllerDelegate_, MetaBadgeManagementViewControllerDelegate, PagedTabControllerProtocol>
 {
     id <PagedTabControllerParentCallback> _pagedTabControllerParent;
     RedditService *_redditService;
-    MetaSubredditMembershipContentNode *_contentNode;
+    _TtC6Reddit34MetaSubredditMembershipContentNode *_contentNode;
     NSString *_userPK;
     NSString *_correlationID;
     Subreddit *_subreddit;
@@ -30,19 +30,18 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(retain, nonatomic) NSString *correlationID; // @synthesize correlationID=_correlationID;
 @property(retain, nonatomic) NSString *userPK; // @synthesize userPK=_userPK;
-@property(retain, nonatomic) MetaSubredditMembershipContentNode *contentNode; // @synthesize contentNode=_contentNode;
+@property(retain, nonatomic) _TtC6Reddit34MetaSubredditMembershipContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(nonatomic) __weak RedditService *redditService; // @synthesize redditService=_redditService;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
 - (void).cxx_destruct;
 - (id)pageItemId;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (void)scrollDidStopScrolling:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
 - (void)landingViewControllerDidPurchaseMembership:(id)arg1;
 - (void)metaBadgeManagementViewControllerDidChangeSelectedBadges:(id)arg1;
+- (void)performOpenMembershipStatusWithSender:(id)arg1;
 - (void)performOpenAboutMembershipWithSender:(id)arg1;
 - (void)performEditMetaBadgesWithSender:(id)arg1;
 - (void)sendAnalytics;

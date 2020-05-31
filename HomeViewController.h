@@ -13,10 +13,11 @@
 #import "UIScrollViewDelegate-Protocol.h"
 
 @class FloatingHeaderManager, MainScreenTabProvider, NSArray, NSString, NSURL, REDSearchBar, RecentChatPostBubbleViewController, RedditService;
-@protocol MainScreenTab;
+@protocol AccountContext, MainScreenTab;
 
 @interface HomeViewController : PagedTabViewController <RUIActionSheetViewControllerDelegate, REDSearchBarDelegate, RUIThemeUpdateCallbackProtocol, UIScrollViewDelegate, MainScreenTabProviderDelegate>
 {
+    id <AccountContext> _accountContext;
     RedditService *_service;
     NSArray *_tabs;
     NSArray *_feedViewControllers;
@@ -39,6 +40,7 @@
 @property(copy, nonatomic) NSArray *feedViewControllers; // @synthesize feedViewControllers=_feedViewControllers;
 @property(copy, nonatomic) NSArray *tabs; // @synthesize tabs=_tabs;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void).cxx_destruct;
 - (id)analyticsPageType;
 - (void)mainScreenTabProviderDidChangeTabs:(id)arg1;
@@ -75,7 +77,7 @@
 - (void)viewDidLoad;
 - (void)themeDidChange:(id)arg1;
 - (void)setUpTabBarItem;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

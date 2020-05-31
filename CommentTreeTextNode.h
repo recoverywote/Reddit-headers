@@ -8,11 +8,12 @@
 
 #import "RichTextDisplayNodeDelegate-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
+#import "_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_-Protocol.h"
 
-@class CommentTreeNode, CommentTreeNodeOptions, CommentTreeVisualDepthNode, NSString, RichTextDisplayNode, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class CommentTreeNode, CommentTreeNodeOptions, CommentTreeVisualDepthNode, NSString, RichTextDisplayNode, UILongPressGestureRecognizer, UITapGestureRecognizer, _TtC6Reddit29CommunityCreateFlowController, _TtC6Reddit36SubredditMentionUpsellViewController;
 @protocol CommentTreeTextNodeDelegate;
 
-@interface CommentTreeTextNode : BaseFeedDisplayNode <RichTextDisplayNodeDelegate, UIGestureRecognizerDelegate>
+@interface CommentTreeTextNode : BaseFeedDisplayNode <RichTextDisplayNodeDelegate, UIGestureRecognizerDelegate, _TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_>
 {
     CommentTreeNode *_commentNode;
     RichTextDisplayNode *_textNode;
@@ -21,8 +22,12 @@
     UITapGestureRecognizer *_doubleTapRecognizer;
     UILongPressGestureRecognizer *_longPressRecognizer;
     CommentTreeNodeOptions *_commentOptions;
+    _TtC6Reddit36SubredditMentionUpsellViewController *_subredditMentionUpsellViewController;
+    _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
+@property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
+@property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
 @property(retain, nonatomic) UITapGestureRecognizer *doubleTapRecognizer; // @synthesize doubleTapRecognizer=_doubleTapRecognizer;
@@ -31,6 +36,8 @@
 @property(retain, nonatomic) RichTextDisplayNode *textNode; // @synthesize textNode=_textNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 - (void).cxx_destruct;
+- (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
+- (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)modelAttributedStringsDidUpdate:(id)arg1;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
@@ -40,7 +47,7 @@
 - (void)didDoubleTapComment:(id)arg1;
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
-- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3;
+- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didLoad;
 - (void)configureTextNode;

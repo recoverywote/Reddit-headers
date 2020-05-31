@@ -69,8 +69,6 @@
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)pageItemId;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (id)initWithUsername:(id)arg1;
 - (void)dealloc;
 

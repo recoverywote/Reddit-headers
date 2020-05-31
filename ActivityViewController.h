@@ -44,8 +44,6 @@
 - (void)userWasBlocked:(id)arg1;
 - (id)pageItemId;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (unsigned long long)activityFilterTypeForStringID:(id)arg1;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)headerBarViewDidTapRightButton:(id)arg1;

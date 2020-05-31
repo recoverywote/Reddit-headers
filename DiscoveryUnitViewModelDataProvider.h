@@ -54,11 +54,11 @@
 - (id)generateDiscoveryUnitViewModelDistributor;
 - (id)spacedDiscoveryUnitViewModels:(id)arg1;
 - (id)createDiscoveryUnitViewModelIfNeededForDiscoveryUnit:(id)arg1;
-- (void)fetchDiscoveryUnitViewModelsWithDiscoveryUnitViewModelIndices:(id)arg1 currentObjects:(id)arg2 fromIndex:(long long)arg3 trace:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchDiscoveryUnitViewModelsWithDiscoveryUnitViewModelIndices:(id)arg1 currentObjects:(id)arg2 fromIndex:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (id)applyAwayFromAdsRuleForObjects:(id)arg1 range:(struct _NSRange)arg2;
 - (id)distributedObjects:(id)arg1 currentCount:(long long)arg2;
-- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 trace:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)reset;
 - (void)invalidate;
 - (id)initWithService:(id)arg1 dataProviderDelegate:(id)arg2;

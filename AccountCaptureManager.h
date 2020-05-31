@@ -23,7 +23,7 @@
 @property(retain, nonatomic) EmailCaptureScreen *emailScreen; // @synthesize emailScreen=_emailScreen;
 @property(retain, nonatomic) CaptureContentButtonList *buttonListContent; // @synthesize buttonListContent=_buttonListContent;
 - (void).cxx_destruct;
-- (void)cleanupAnonymousAccount;
+- (void)cleanupLoggedOutAccount;
 - (void)signUpWithCompletion:(CDUnknownBlockType)arg1;
 - (void)showUsernameErrorToastWithReason:(id)arg1;
 - (void)willMoveToScreen:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3;

@@ -8,7 +8,7 @@
 
 #import "MutableTooltipModel-Protocol.h"
 
-@class NSString, UIView;
+@class NSString, UIColor, UIView;
 
 @interface TooltipModel : NSObject <MutableTooltipModel>
 {
@@ -24,10 +24,12 @@
     double _textVInset;
     double _textHInset;
     double _delay;
+    UIColor *_textColor;
     CDUnknownBlockType _completion;
 }
 
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
+@property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(nonatomic) double delay; // @synthesize delay=_delay;
 @property(nonatomic) double textHInset; // @synthesize textHInset=_textHInset;
 @property(nonatomic) double textVInset; // @synthesize textVInset=_textVInset;

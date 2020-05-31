@@ -24,7 +24,7 @@
 @property(nonatomic) _Bool hasFetched; // @synthesize hasFetched;
 - (void).cxx_destruct;
 - (_Bool)hasNextPage;
-- (void)fetchNextPageWithCorrelationId:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchNextPage:(CDUnknownBlockType)arg1;
 - (id)clone;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithService:(id)arg1 url:(id)arg2 parameters:(id)arg3 parseObjectBlock:(CDUnknownBlockType)arg4;

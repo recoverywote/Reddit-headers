@@ -12,8 +12,6 @@
     // Error parsing type: , name: repository
     // Error parsing type: , name: performClaimSink
     // Error parsing type: , name: performOngoingClaimSink
-    // Error parsing type: , name: shouldReloadSubject
-    // Error parsing type: , name: timer
     // Error parsing type: , name: disposeBag
 }
 

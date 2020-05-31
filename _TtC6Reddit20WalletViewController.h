@@ -8,10 +8,10 @@
 
 @interface _TtC6Reddit20WalletViewController : BaseViewController
 {
+    // Error parsing type: , name: redditService
     // Error parsing type: , name: walletInstance
-    // Error parsing type: , name: claim
+    // Error parsing type: , name: launchOptions
     // Error parsing type: , name: containerController
-    // Error parsing type: , name: $__lazy_storage_$_launchOptions
     // Error parsing type: , name: $__lazy_storage_$_walletRetrievalFlow
 }
 

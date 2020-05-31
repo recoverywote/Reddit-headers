@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: service
     // Error parsing type: , name: broadcast
-    // Error parsing type: , name: endReason
     // Error parsing type: , name: streamingConfig
     // Error parsing type: , name: liveStream
     // Error parsing type: , name: subredditInfo

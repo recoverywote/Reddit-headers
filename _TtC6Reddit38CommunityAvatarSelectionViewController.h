@@ -25,9 +25,11 @@
     // Error parsing type: , name: listingStateController
     // Error parsing type: , name: delegate
     // Error parsing type: , name: avatarPicker
+    // Error parsing type: , name: $__lazy_storage_$_saveController
     // Error parsing type: , name: tableView
     // Error parsing type: , name: continueControl
     // Error parsing type: , name: navigationSeparatorBar
+    // Error parsing type: , name: $__lazy_storage_$_saveControl
 }
 
 - (void).cxx_destruct;

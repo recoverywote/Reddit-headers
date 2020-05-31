@@ -16,6 +16,7 @@
     NSArray *_formatting;
 }
 
++ (id)validatedURLFor:(id)arg1;
 @property(copy, nonatomic) NSArray *formatting; // @synthesize formatting=_formatting;
 @property(copy, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(copy, nonatomic) NSString *alternativeText; // @synthesize alternativeText=_alternativeText;

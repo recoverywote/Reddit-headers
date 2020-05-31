@@ -27,6 +27,7 @@
 - (void)logClickLearnMore;
 - (void)logClickProductEvent:(id)arg1;
 - (void)logScreenViewEventWithReferralFromInFeedUnit:(_Bool)arg1;
+- (void)logLowCoinBalanceClosedWindowEventWithGoldProduct:(id)arg1;
 - (void)logCoinSaleEntryFromSource:(id)arg1;
 - (void)logLowCoinBalanceTrigger;
 - (id)initWithAccount:(id)arg1 correlationId:(id)arg2 analyticsManager:(id)arg3;

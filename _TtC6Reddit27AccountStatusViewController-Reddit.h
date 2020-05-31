@@ -13,7 +13,7 @@
 - (void)didSelectAddAccount;
 - (void)didSelectLogoutFromAccount:(id)arg1;
 - (void)didSelectSwitchToAccount:(id)arg1;
-- (void)didSelectAnonymous;
+- (void)didSelectLoggedOut;
 - (void)didSelectAnonymousBrowsing;
 @end
 

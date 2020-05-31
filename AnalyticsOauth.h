@@ -10,18 +10,22 @@
 #import <AnalyticsFramework/NSCopying-Protocol.h>
 #import <AnalyticsFramework/TBase-Protocol.h>
 
-@class NSString;
+@class NSMutableArray, NSString;
 
 @interface AnalyticsOauth : NSObject <TBase, NSCoding, NSCopying>
 {
     _Bool _client_app_typeIsSet;
     _Bool _client_nameIsSet;
     _Bool _client_idIsSet;
+    _Bool _scopesIsSet;
     NSString *_client_app_type;
     NSString *_client_name;
     NSString *_client_id;
+    NSMutableArray *_scopes;
 }
 
+@property(nonatomic) _Bool scopesIsSet; // @synthesize scopesIsSet=_scopesIsSet;
+@property(retain, nonatomic) NSMutableArray *scopes; // @synthesize scopes=_scopes;
 @property(nonatomic) _Bool client_idIsSet; // @synthesize client_idIsSet=_client_idIsSet;
 @property(copy, nonatomic) NSString *client_id; // @synthesize client_id=_client_id;
 @property(nonatomic) _Bool client_nameIsSet; // @synthesize client_nameIsSet=_client_nameIsSet;
@@ -33,6 +37,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetScopes;
 - (void)unsetClient_id;
 - (void)unsetClient_name;
 - (void)unsetClient_app_type;
@@ -41,7 +46,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithClient_app_type:(id)arg1 client_name:(id)arg2 client_id:(id)arg3;
+- (id)initWithClient_app_type:(id)arg1 client_name:(id)arg2 client_id:(id)arg3 scopes:(id)arg4;
 - (id)init;
 
 // Remaining properties

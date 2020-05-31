@@ -27,10 +27,12 @@
     // Error parsing type: , name: secondBulletView
     // Error parsing type: , name: secondBulletDescription
     // Error parsing type: , name: acceptButton
+    // Error parsing type: , name: completionBlock
 }
 
 - (void).cxx_destruct;
 - (void)viewDidLoad;
+- (id)initWithCompletionBlock:(CDUnknownBlockType)arg1;
 - (id)init;
 
 @end

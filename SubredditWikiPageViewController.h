@@ -11,10 +11,11 @@
 #import "RichTextDisplayNodeDelegate-Protocol.h"
 #import "SubredditWikiPagePresentable-Protocol.h"
 #import "UITextViewDelegate-Protocol.h"
+#import "_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_-Protocol.h"
 
-@class BaseLabel, BaseScrollView, BaseTextView, BaseView, EmptyDogeView, IntrinsicSizeNodeWrapper, ListingStateController, NSLayoutConstraint, NSString, RichTextDisplayNode, SubredditWikiPagePresenter, UIStackView;
+@class BaseLabel, BaseScrollView, BaseTextView, BaseView, EmptyDogeView, IntrinsicSizeNodeWrapper, ListingStateController, NSLayoutConstraint, NSString, RichTextDisplayNode, SubredditWikiPagePresenter, UIStackView, _TtC6Reddit29CommunityCreateFlowController, _TtC6Reddit36SubredditMentionUpsellViewController;
 
-@interface SubredditWikiPageViewController : BaseViewController <RichTextDisplayNodeDelegate, RUIThemeUpdateCallbackProtocol, SubredditWikiPagePresentable, UITextViewDelegate, ListingStateControllerDelegate>
+@interface SubredditWikiPageViewController : BaseViewController <RichTextDisplayNodeDelegate, RUIThemeUpdateCallbackProtocol, SubredditWikiPagePresentable, UITextViewDelegate, ListingStateControllerDelegate, _TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_>
 {
     SubredditWikiPagePresenter *_presenter;
     BaseScrollView *_scrollView;
@@ -31,8 +32,12 @@
     ListingStateController *_listingStateController;
     NSLayoutConstraint *_scrollViewLeadingConstraint;
     NSLayoutConstraint *_scrollViewTrailingConstraint;
+    _TtC6Reddit36SubredditMentionUpsellViewController *_subredditMentionUpsellViewController;
+    _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
+@property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
+@property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(retain, nonatomic) NSLayoutConstraint *scrollViewTrailingConstraint; // @synthesize scrollViewTrailingConstraint=_scrollViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *scrollViewLeadingConstraint; // @synthesize scrollViewLeadingConstraint=_scrollViewLeadingConstraint;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
@@ -53,10 +58,12 @@
 - (id)analyticsScreenViewName;
 - (id)analyticsPageType;
 - (id)screenViewAnalyticsEvent;
+- (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
+- (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)themeDidChange:(id)arg1;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3;
+- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;

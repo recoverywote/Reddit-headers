@@ -45,6 +45,7 @@
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> pagedTabControllerParent; // @synthesize pagedTabControllerParent=_pagedTabControllerParent;
 - (void).cxx_destruct;
+- (void)presentAnonymousBrowsingExitDialog;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
@@ -77,8 +78,6 @@
 - (void)configureWithSubreddit:(id)arg1;
 - (id)pageItemId;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (void)scrollDidStopScrolling:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;

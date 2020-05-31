@@ -12,6 +12,7 @@
 + (id)themeIdentifier;
 - (id)messageActiveLinkAttributes;
 - (id)messageLinkAttributes;
-@property(readonly, nonatomic) UIColor *goldHighlightColor;
+- (id)backgroundColorFrom:(id)arg1;
+@property(nonatomic, readonly) UIColor *goldHighlightColor;
 @end
 

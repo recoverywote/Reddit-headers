@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSString, UIColor;
 
 @protocol MutableTooltipModel <NSObject>
 @property(copy, nonatomic) CDUnknownBlockType completion;
+@property(retain, nonatomic) UIColor *textColor;
 @property(nonatomic) double delay;
 @property(nonatomic) double textHInset;
 @property(nonatomic) double textVInset;

@@ -29,8 +29,6 @@
 - (id)screenViewAnalyticsEvent;
 - (id)pageItemId;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (void)scrollDidStopScrolling:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;

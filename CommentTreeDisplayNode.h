@@ -15,6 +15,7 @@
 {
     CommentTreeNode *_commentNode;
     CommentTreeContentNode *_commentTreeContentNode;
+    _TtC6Reddit27AwardedCommentHighlightNode *_awardHighlightNode;
     ASDisplayNode *_commentSwipeNode;
     ASDisplayNode *_highlightNode;
     ASDisplayNode *_overlayNode;
@@ -23,10 +24,8 @@
     CommentTreeNodeOptions *_commentOptions;
     PannableCellManager *_pannableCellManager;
     NSTimer *_consumeTimer;
-    _TtC6Reddit27AwardedCommentHighlightNode *_awardHighlightNode;
 }
 
-@property(retain, nonatomic) _TtC6Reddit27AwardedCommentHighlightNode *awardHighlightNode; // @synthesize awardHighlightNode=_awardHighlightNode;
 @property(retain, nonatomic) NSTimer *consumeTimer; // @synthesize consumeTimer=_consumeTimer;
 @property(retain, nonatomic) PannableCellManager *pannableCellManager; // @synthesize pannableCellManager=_pannableCellManager;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
@@ -35,6 +34,7 @@
 @property(retain, nonatomic) ASDisplayNode *overlayNode; // @synthesize overlayNode=_overlayNode;
 @property(retain, nonatomic) ASDisplayNode *highlightNode; // @synthesize highlightNode=_highlightNode;
 @property(retain, nonatomic) ASDisplayNode *commentSwipeNode; // @synthesize commentSwipeNode=_commentSwipeNode;
+@property(retain, nonatomic) _TtC6Reddit27AwardedCommentHighlightNode *awardHighlightNode; // @synthesize awardHighlightNode=_awardHighlightNode;
 @property(retain, nonatomic) CommentTreeContentNode *commentTreeContentNode; // @synthesize commentTreeContentNode=_commentTreeContentNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 - (void).cxx_destruct;

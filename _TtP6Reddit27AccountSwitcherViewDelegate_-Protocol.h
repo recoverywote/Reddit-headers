@@ -12,6 +12,6 @@
 - (void)didSelectLogoutFromAccount:(Account *)arg1;
 - (void)didSelectSwitchToAccount:(Account *)arg1;
 - (void)didSelectAnonymousBrowsing;
-- (void)didSelectAnonymous;
+- (void)didSelectLoggedOut;
 @end
 

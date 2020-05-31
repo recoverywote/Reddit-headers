@@ -49,6 +49,7 @@
     NSString *_linkTitle;
     NSArray *_awardingTotals;
     unsigned long long _totalAwardsReceived;
+    NSArray *_treatmentTags;
     Award *_associatedAward;
     NSString *_internalPermalinkIncludingDomain;
     NSString *_sharingPermalinkIncludingDomain;
@@ -62,6 +63,7 @@
 @property(copy, nonatomic) NSString *sharingPermalinkIncludingDomain; // @synthesize sharingPermalinkIncludingDomain=_sharingPermalinkIncludingDomain;
 @property(copy, nonatomic) NSString *internalPermalinkIncludingDomain; // @synthesize internalPermalinkIncludingDomain=_internalPermalinkIncludingDomain;
 @property(retain, nonatomic) Award *associatedAward; // @synthesize associatedAward=_associatedAward;
+@property(retain, nonatomic) NSArray *treatmentTags; // @synthesize treatmentTags=_treatmentTags;
 @property(nonatomic) unsigned long long totalAwardsReceived; // @synthesize totalAwardsReceived=_totalAwardsReceived;
 @property(copy, nonatomic) NSArray *awardingTotals; // @synthesize awardingTotals=_awardingTotals;
 @property(nonatomic) _Bool canAward; // @synthesize canAward=_canAward;

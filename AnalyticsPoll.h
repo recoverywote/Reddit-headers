@@ -16,14 +16,26 @@
 {
     _Bool _options_lengthIsSet;
     _Bool _optionsIsSet;
-    _Bool _user_voteIsSet;
+    _Bool _user_vote_textIsSet;
+    _Bool _vote_affects_score;
+    _Bool _vote_affects_scoreIsSet;
+    _Bool _vote_affects_score_reasonIsSet;
+    _Bool _options_vote_totalsIsSet;
     int _options_length;
-    int _user_vote;
     NSMutableArray *_options;
+    NSString *_user_vote_text;
+    NSString *_vote_affects_score_reason;
+    NSMutableArray *_options_vote_totals;
 }
 
-@property(nonatomic) _Bool user_voteIsSet; // @synthesize user_voteIsSet=_user_voteIsSet;
-@property(nonatomic) int user_vote; // @synthesize user_vote=_user_vote;
+@property(nonatomic) _Bool options_vote_totalsIsSet; // @synthesize options_vote_totalsIsSet=_options_vote_totalsIsSet;
+@property(retain, nonatomic) NSMutableArray *options_vote_totals; // @synthesize options_vote_totals=_options_vote_totals;
+@property(nonatomic) _Bool vote_affects_score_reasonIsSet; // @synthesize vote_affects_score_reasonIsSet=_vote_affects_score_reasonIsSet;
+@property(copy, nonatomic) NSString *vote_affects_score_reason; // @synthesize vote_affects_score_reason=_vote_affects_score_reason;
+@property(nonatomic) _Bool vote_affects_scoreIsSet; // @synthesize vote_affects_scoreIsSet=_vote_affects_scoreIsSet;
+@property(nonatomic) _Bool vote_affects_score; // @synthesize vote_affects_score=_vote_affects_score;
+@property(nonatomic) _Bool user_vote_textIsSet; // @synthesize user_vote_textIsSet=_user_vote_textIsSet;
+@property(copy, nonatomic) NSString *user_vote_text; // @synthesize user_vote_text=_user_vote_text;
 @property(nonatomic) _Bool optionsIsSet; // @synthesize optionsIsSet=_optionsIsSet;
 @property(retain, nonatomic) NSMutableArray *options; // @synthesize options=_options;
 @property(nonatomic) _Bool options_lengthIsSet; // @synthesize options_lengthIsSet=_options_lengthIsSet;
@@ -33,7 +45,10 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
-- (void)unsetUser_vote;
+- (void)unsetOptions_vote_totals;
+- (void)unsetVote_affects_score_reason;
+- (void)unsetVote_affects_score;
+- (void)unsetUser_vote_text;
 - (void)unsetOptions;
 - (void)unsetOptions_length;
 - (id)copyWithZone:(struct _NSZone *)arg1;
@@ -41,7 +56,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithOptions_length:(int)arg1 options:(id)arg2 user_vote:(int)arg3;
+- (id)initWithOptions_length:(int)arg1 options:(id)arg2 user_vote_text:(id)arg3 vote_affects_score:(_Bool)arg4 vote_affects_score_reason:(id)arg5 options_vote_totals:(id)arg6;
 - (id)init;
 
 // Remaining properties

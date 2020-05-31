@@ -15,7 +15,7 @@
     // Error parsing type: , name: notifiesOnFirstKnownInfo
     // Error parsing type: , name: notifiesOnIncreases
     // Error parsing type: , name: notifiesOnMilestones
-    // Error parsing type: , name: notifiesOnCriticalTimeLeft
+    // Error parsing type: , name: allowsPersistentCountdown
     // Error parsing type: , name: notice
     // Error parsing type: , name: estimatedTimeLeftClaim
     // Error parsing type: , name: theme

@@ -43,8 +43,6 @@
 - (void)loggedOutViewDidTapLogin:(id)arg1;
 - (void)configureLoggedOutView;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (void)didTapOverflowOfCellContentView:(id)arg1;
 - (void)messagesRepliesViewController:(id)arg1 didAddNewMessage:(id)arg2;
 - (void)messagesRepliesViewController:(id)arg1 didMarkMessageAsRead:(id)arg2;

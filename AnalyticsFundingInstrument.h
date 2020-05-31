@@ -44,6 +44,15 @@
     _Bool _legacy_transaction_idIsSet;
     _Bool _active;
     _Bool _activeIsSet;
+    _Bool _is_effective;
+    _Bool _is_effectiveIsSet;
+    _Bool _levelIsSet;
+    _Bool _netsuite_customer_internal_idIsSet;
+    _Bool _max_billing_threshold_microsIsSet;
+    _Bool _estimated_spending_microsIsSet;
+    _Bool _writeoff_microsIsSet;
+    _Bool _adzerk_lifetime_microsIsSet;
+    _Bool _rollup_timestampIsSet;
     long long _id;
     long long _created_timestamp;
     long long _last_modified_timestamp;
@@ -68,8 +77,31 @@
     NSString *_payment_id;
     NSString *_original_payment_id;
     NSString *_legacy_transaction_id;
+    NSString *_level;
+    NSString *_netsuite_customer_internal_id;
+    long long _max_billing_threshold_micros;
+    long long _estimated_spending_micros;
+    long long _writeoff_micros;
+    long long _adzerk_lifetime_micros;
+    long long _rollup_timestamp;
 }
 
+@property(nonatomic) _Bool rollup_timestampIsSet; // @synthesize rollup_timestampIsSet=_rollup_timestampIsSet;
+@property(nonatomic) long long rollup_timestamp; // @synthesize rollup_timestamp=_rollup_timestamp;
+@property(nonatomic) _Bool adzerk_lifetime_microsIsSet; // @synthesize adzerk_lifetime_microsIsSet=_adzerk_lifetime_microsIsSet;
+@property(nonatomic) long long adzerk_lifetime_micros; // @synthesize adzerk_lifetime_micros=_adzerk_lifetime_micros;
+@property(nonatomic) _Bool writeoff_microsIsSet; // @synthesize writeoff_microsIsSet=_writeoff_microsIsSet;
+@property(nonatomic) long long writeoff_micros; // @synthesize writeoff_micros=_writeoff_micros;
+@property(nonatomic) _Bool estimated_spending_microsIsSet; // @synthesize estimated_spending_microsIsSet=_estimated_spending_microsIsSet;
+@property(nonatomic) long long estimated_spending_micros; // @synthesize estimated_spending_micros=_estimated_spending_micros;
+@property(nonatomic) _Bool max_billing_threshold_microsIsSet; // @synthesize max_billing_threshold_microsIsSet=_max_billing_threshold_microsIsSet;
+@property(nonatomic) long long max_billing_threshold_micros; // @synthesize max_billing_threshold_micros=_max_billing_threshold_micros;
+@property(nonatomic) _Bool netsuite_customer_internal_idIsSet; // @synthesize netsuite_customer_internal_idIsSet=_netsuite_customer_internal_idIsSet;
+@property(copy, nonatomic) NSString *netsuite_customer_internal_id; // @synthesize netsuite_customer_internal_id=_netsuite_customer_internal_id;
+@property(nonatomic) _Bool levelIsSet; // @synthesize levelIsSet=_levelIsSet;
+@property(copy, nonatomic) NSString *level; // @synthesize level=_level;
+@property(nonatomic) _Bool is_effectiveIsSet; // @synthesize is_effectiveIsSet=_is_effectiveIsSet;
+@property(nonatomic) _Bool is_effective; // @synthesize is_effective=_is_effective;
 @property(nonatomic) _Bool activeIsSet; // @synthesize activeIsSet=_activeIsSet;
 @property(nonatomic) _Bool active; // @synthesize active=_active;
 @property(nonatomic) _Bool legacy_transaction_idIsSet; // @synthesize legacy_transaction_idIsSet=_legacy_transaction_idIsSet;
@@ -129,6 +161,14 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetRollup_timestamp;
+- (void)unsetAdzerk_lifetime_micros;
+- (void)unsetWriteoff_micros;
+- (void)unsetEstimated_spending_micros;
+- (void)unsetMax_billing_threshold_micros;
+- (void)unsetNetsuite_customer_internal_id;
+- (void)unsetLevel;
+- (void)unsetIs_effective;
 - (void)unsetActive;
 - (void)unsetLegacy_transaction_id;
 - (void)unsetOriginal_payment_id;
@@ -161,7 +201,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(long long)arg1 created_timestamp:(long long)arg2 last_modified_timestamp:(long long)arg3 user_id:(id)arg4 type:(id)arg5 start_timestamp:(long long)arg6 end_timestamp:(long long)arg7 name:(id)arg8 line_item_id:(id)arg9 authorize_payment_profile_id:(id)arg10 authorize_profile_id:(id)arg11 servable:(_Bool)arg12 admin_id:(id)arg13 credit_line_micros:(long long)arg14 balance_micros:(long long)arg15 billing_threshold_micros:(long long)arg16 total_spending_micros:(long long)arg17 total_payment_micros:(long long)arg18 spent_freebies_micros:(long long)arg19 available_freebies_micros:(long long)arg20 overdelivery_micros:(long long)arg21 total_refund_micros:(long long)arg22 overwrite:(_Bool)arg23 payment_id:(id)arg24 original_payment_id:(id)arg25 legacy_transaction_id:(id)arg26 active:(_Bool)arg27;
+- (id)initWithId:(long long)arg1 created_timestamp:(long long)arg2 last_modified_timestamp:(long long)arg3 user_id:(id)arg4 type:(id)arg5 start_timestamp:(long long)arg6 end_timestamp:(long long)arg7 name:(id)arg8 line_item_id:(id)arg9 authorize_payment_profile_id:(id)arg10 authorize_profile_id:(id)arg11 servable:(_Bool)arg12 admin_id:(id)arg13 credit_line_micros:(long long)arg14 balance_micros:(long long)arg15 billing_threshold_micros:(long long)arg16 total_spending_micros:(long long)arg17 total_payment_micros:(long long)arg18 spent_freebies_micros:(long long)arg19 available_freebies_micros:(long long)arg20 overdelivery_micros:(long long)arg21 total_refund_micros:(long long)arg22 overwrite:(_Bool)arg23 payment_id:(id)arg24 original_payment_id:(id)arg25 legacy_transaction_id:(id)arg26 active:(_Bool)arg27 is_effective:(_Bool)arg28 level:(id)arg29 netsuite_customer_internal_id:(id)arg30 max_billing_threshold_micros:(long long)arg31 estimated_spending_micros:(long long)arg32 writeoff_micros:(long long)arg33 adzerk_lifetime_micros:(long long)arg34 rollup_timestamp:(long long)arg35;
 - (id)init;
 
 // Remaining properties

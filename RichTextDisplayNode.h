@@ -34,7 +34,7 @@
 - (void)resetNodesWithNewMediaNodes:(id)arg1 newDisplayNodes:(id)arg2;
 - (void)attributedLabelDidTapMediaView:(id)arg1 didTapRichTextMedia:(id)arg2;
 - (void)richTextTextNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextTextNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3;
+- (void)richTextTextNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureDisplayNodes;
 - (void)updateWithEnhancedAttributedString:(id)arg1;

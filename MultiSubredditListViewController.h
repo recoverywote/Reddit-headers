@@ -50,8 +50,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (void)multiCommunityListHeaderViewDidTapJoinAllButton:(id)arg1;
 - (void)multiCommunityListHeaderViewDidTapDoneButton:(id)arg1;
 - (void)multiCommunityListHeaderViewDidTapEditButton:(id)arg1;

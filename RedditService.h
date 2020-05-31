@@ -310,9 +310,9 @@
 - (void)fetchSubredditWikiPage:(id)arg1 subredditName:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)subredditRecommendationsForSubredditNames:(id)arg1 excludingSubredditNames:(id)arg2 count:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)subredditTypeaheadSearchWithQuery:(id)arg1 includeNSFW:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)fetchUsableAwardsForSubredditWithName:(id)arg1 includePremium:(_Bool)arg2 includeSubreddit:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)fetchUsableAwardsForSubredditWithName:(id)arg1 includePremium:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)fetchUsableAwardsForSubreddit:(id)arg1 includePremium:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)fetchUsableAwardsForSubredditWithName:(id)arg1 includePremium:(_Bool)arg2 includeSuperChatAwards:(_Bool)arg3 includeSubreddit:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchUsableAwardsForSubredditWithName:(id)arg1 includePremium:(_Bool)arg2 includeSuperChatAwards:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)fetchUsableAwardsForSubreddit:(id)arg1 includePremium:(_Bool)arg2 includeSuperChatAwards:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)sendMessageToModeratorsOfSubreddit:(id)arg1 withSubject:(id)arg2 text:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)setNotificationLevel:(long long)arg1 forSubreddit:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setBannerImageAtURL:(id)arg1 forSubreddit:(id)arg2 completion:(CDUnknownBlockType)arg3;

@@ -18,11 +18,13 @@
     _Bool _shouldHighlightBackground;
     _Bool _shouldShowOverlay;
     _Bool _shouldShowNewUI;
+    _Bool _shouldHighlightBasedOnAwards;
     CommentTreeNodeHeaderOptions *_headerOptions;
     CommentTreeNodeCommandOptions *_commandOptions;
 }
 
 + (id)defaultCommentTreeNodeOptions;
+@property(nonatomic) _Bool shouldHighlightBasedOnAwards; // @synthesize shouldHighlightBasedOnAwards=_shouldHighlightBasedOnAwards;
 @property(nonatomic) _Bool shouldShowNewUI; // @synthesize shouldShowNewUI=_shouldShowNewUI;
 @property(nonatomic) _Bool shouldShowOverlay; // @synthesize shouldShowOverlay=_shouldShowOverlay;
 @property(nonatomic) _Bool shouldHighlightBackground; // @synthesize shouldHighlightBackground=_shouldHighlightBackground;

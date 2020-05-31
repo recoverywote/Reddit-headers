@@ -11,18 +11,19 @@
 #import "UITabBarControllerDelegate-Protocol.h"
 
 @class BaseButton, BaseViewController, ChatHomePagedTabViewController, CommunityTabViewController, HomeViewController, InboxViewController, NSArray, NSString, RedditService, UINavigationController, _TtC6Reddit22CoinSaleEntryContainer, _TtC6Reddit22ForcePasswordResetView, _TtC6Reddit29CommunityCreateFlowController;
-@protocol MainTabBarControllerDelegate;
+@protocol AccountContext, MainTabBarControllerDelegate;
 
 @interface MainTabBarController : UITabBarController <UITabBarControllerDelegate, RUIThemeUpdateCallbackProtocol, PostViewControllerDelegate>
 {
     id <MainTabBarControllerDelegate> _mainTabDelegate;
+    UINavigationController *_currentViewController;
     HomeViewController *_homeViewController;
     CommunityTabViewController *_communityViewController;
     InboxViewController *_inboxViewController;
     ChatHomePagedTabViewController *_chatHomeController;
     BaseViewController *_postButtonPlaceholderViewController;
     NSArray *_controllers;
-    UINavigationController *_currentViewController;
+    id <AccountContext> _accountContext;
     RedditService *_service;
     BaseButton *_postButton;
     _TtC6Reddit22ForcePasswordResetView *_forcePasswordResetView;
@@ -35,15 +36,17 @@
 @property(retain, nonatomic) _TtC6Reddit22ForcePasswordResetView *forcePasswordResetView; // @synthesize forcePasswordResetView=_forcePasswordResetView;
 @property(retain, nonatomic) BaseButton *postButton; // @synthesize postButton=_postButton;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;
-@property(retain, nonatomic) UINavigationController *currentViewController; // @synthesize currentViewController=_currentViewController;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) NSArray *controllers; // @synthesize controllers=_controllers;
 @property(retain, nonatomic) BaseViewController *postButtonPlaceholderViewController; // @synthesize postButtonPlaceholderViewController=_postButtonPlaceholderViewController;
 @property(retain, nonatomic) ChatHomePagedTabViewController *chatHomeController; // @synthesize chatHomeController=_chatHomeController;
 @property(retain, nonatomic) InboxViewController *inboxViewController; // @synthesize inboxViewController=_inboxViewController;
 @property(retain, nonatomic) CommunityTabViewController *communityViewController; // @synthesize communityViewController=_communityViewController;
 @property(retain, nonatomic) HomeViewController *homeViewController; // @synthesize homeViewController=_homeViewController;
+@property(retain, nonatomic) UINavigationController *currentViewController; // @synthesize currentViewController=_currentViewController;
 @property(nonatomic) __weak id <MainTabBarControllerDelegate> mainTabDelegate; // @synthesize mainTabDelegate=_mainTabDelegate;
 - (void).cxx_destruct;
+- (void)presentAnonymousBrowsingExitDialog;
 - (void)showCommunityCreationViewController;
 - (id)viewControllerAtTab:(unsigned long long)arg1;
 - (id)tabBarItemViewForTabType:(unsigned long long)arg1;
@@ -91,7 +94,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)setSelectedIndex:(unsigned long long)arg1;
-- (id)initWithService:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

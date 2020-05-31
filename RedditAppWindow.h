@@ -6,10 +6,17 @@
 
 #import <UIKit/UIWindow.h>
 
+@class UIView;
+
 @interface RedditAppWindow : UIWindow
 {
+    UIView *_contentObfuscationView;
 }
 
+@property(retain, nonatomic) UIView *contentObfuscationView; // @synthesize contentObfuscationView=_contentObfuscationView;
+- (void).cxx_destruct;
+- (void)removeContentObfuscation;
+- (void)obfuscateContents;
 - (void)updateThemeManager;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)makeKeyWindow;

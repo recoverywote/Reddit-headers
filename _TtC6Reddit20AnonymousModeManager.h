@@ -9,6 +9,7 @@
 @interface _TtC6Reddit20AnonymousModeManager : NSObject
 {
     // Error parsing type: , name: accountManager
+    // Error parsing type: , name: cachedAccount
     // Error parsing type: , name: themeToggleClosure
     // Error parsing type: , name: welcomePopupShowingClosure
 }
@@ -19,7 +20,7 @@
 - (void)enterAnonymousBrowsingMode;
 - (void)rootViewControllerDidReload:(id)arg1;
 - (id)initWithAccountManager:(id)arg1;
-@property(nonatomic, readonly) _Bool isInAnonymousBrowsingMode;
+@property(nonatomic) _Bool isInAnonymousBrowsingMode;
 
 @end
 

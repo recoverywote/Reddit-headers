@@ -21,6 +21,7 @@
 - (void)presentLoggedOutViewControllerForDownvoting;
 - (void)presentLoggedOutViewControllerForUpvoting;
 - (void)presentLoggedOutViewControllerForCommenting;
+- (void)presentExitAnonymousBrowsingPopupForSource:(unsigned long long)arg1;
 - (id)initWithViewController:(id)arg1 service:(id)arg2;
 
 @end

@@ -21,7 +21,7 @@
 @property(copy, nonatomic) NSDictionary *blankPromotedPostObjects; // @synthesize blankPromotedPostObjects=_blankPromotedPostObjects;
 - (void).cxx_destruct;
 - (void)invalidate;
-- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 trace:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (id)removeClosePromotedPostsFromFeedObjects:(id)arg1 minPosition:(long long)arg2;
 - (id)removeBlankPromotedPostsFromFeedObjects:(id)arg1 minPosition:(long long)arg2;

@@ -6,28 +6,34 @@
 
 #import "BaseCollectionViewCellNode.h"
 
+#import "FocusVerticalsDiscoveryFeedbackNodeDelegate-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class ASButtonNode, ASTextNode, FeedPostOptions, FocusVerticalsDiscoveryUnitViewModel, NSMutableArray, NSString;
+@class ASButtonNode, ASTextNode, FeedPostOptions, FocusVerticalsDiscoveryFeedbackNode, FocusVerticalsDiscoveryUnitViewModel, NSMutableArray, NSString;
 @protocol FocusVerticalsDiscoveryNodeDelegate;
 
-@interface FocusVerticalsDiscoveryNode : BaseCollectionViewCellNode <UIGestureRecognizerDelegate>
+@interface FocusVerticalsDiscoveryNode : BaseCollectionViewCellNode <UIGestureRecognizerDelegate, FocusVerticalsDiscoveryFeedbackNodeDelegate>
 {
+    _Bool _didTapHide;
     FocusVerticalsDiscoveryUnitViewModel *_viewModel;
     FeedPostOptions *_options;
     id <FocusVerticalsDiscoveryNodeDelegate> _delegate;
     NSMutableArray *_displayElements;
     ASButtonNode *_closeNode;
+    FocusVerticalsDiscoveryFeedbackNode *_feedbackNode;
     ASTextNode *_topPostLabelNode;
 }
 
+@property(nonatomic) _Bool didTapHide; // @synthesize didTapHide=_didTapHide;
 @property(retain, nonatomic) ASTextNode *topPostLabelNode; // @synthesize topPostLabelNode=_topPostLabelNode;
+@property(retain, nonatomic) FocusVerticalsDiscoveryFeedbackNode *feedbackNode; // @synthesize feedbackNode=_feedbackNode;
 @property(retain, nonatomic) ASButtonNode *closeNode; // @synthesize closeNode=_closeNode;
 @property(copy, nonatomic) NSMutableArray *displayElements; // @synthesize displayElements=_displayElements;
 @property(readonly, nonatomic) __weak id <FocusVerticalsDiscoveryNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(readonly, nonatomic) FocusVerticalsDiscoveryUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+- (void)focusVerticalsDiscoveryFeedbackNode:(id)arg1 didSelectFeedback:(long long)arg2;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didTapClose:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
@@ -39,6 +45,7 @@
 - (void)createContentNodes;
 - (void)addNodesForPosts:(id)arg1 subreddit:(id)arg2;
 - (void)addCommunityWithPosts;
+- (void)createFeedbackNode;
 - (void)createCloseNode;
 - (void)createHeaderNode;
 - (void)createNodes;

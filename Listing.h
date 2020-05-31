@@ -38,14 +38,9 @@
 @property(retain, nonatomic) NSArray *objects; // @synthesize objects=_objects;
 - (void).cxx_destruct;
 - (id)debugDescription;
-- (void)notifyParseEndWithCorrelationId:(id)arg1;
-- (void)notifyParseStartWithCorrelationId:(id)arg1;
-- (void)notifyFetchEndWithCorrelationId:(id)arg1 elapsedTime:(double)arg2;
-- (void)notifyFetchStartWithCorrelationId:(id)arg1 request:(id)arg2;
 @property(readonly, nonatomic) _Bool hasFetched;
 @property(readonly, nonatomic) _Bool hasNextPage;
 - (id)parsePageInfo:(id)arg1;
-- (void)fetchNextPageWithCorrelationId:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchNextPage:(CDUnknownBlockType)arg1;
 - (id)clone;
 - (id)copyWithZone:(struct _NSZone *)arg1;

@@ -10,20 +10,27 @@
 #import "PostModerateActionSheetDelegate-Protocol.h"
 #import "_TtP6Reddit23TrendingToasterDelegate_-Protocol.h"
 #import "_TtP6Reddit28PostDetailCellNodeV2Delegate_-Protocol.h"
+#import "_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_-Protocol.h"
 
-@class FeedNavigator, NSString, PostDetailPresenter, PostDetailViewController;
+@class FeedNavigator, NSString, PostDetailPresenter, PostDetailViewController, _TtC6Reddit29CommunityCreateFlowController, _TtC6Reddit36SubredditMentionUpsellViewController;
 
-@interface FeedPostDetailDelegator : NSObject <PostModerateActionSheetDelegate, _TtP6Reddit23TrendingToasterDelegate_, _TtP6Reddit28PostDetailCellNodeV2Delegate_, PostDetailCellNodeDelegate>
+@interface FeedPostDetailDelegator : NSObject <PostModerateActionSheetDelegate, _TtP6Reddit23TrendingToasterDelegate_, _TtP6Reddit28PostDetailCellNodeV2Delegate_, _TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_, PostDetailCellNodeDelegate>
 {
     FeedNavigator *_navigator;
     PostDetailViewController *_viewController;
     PostDetailPresenter *_presenter;
+    _TtC6Reddit36SubredditMentionUpsellViewController *_subredditMentionUpsellViewController;
+    _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
+@property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
+@property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak PostDetailViewController *viewController; // @synthesize viewController=_viewController;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
 - (void).cxx_destruct;
+- (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
+- (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
 - (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
@@ -81,7 +88,7 @@
 - (void)feedPostHlsVideoViewDidTap:(id)arg1;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3;
+- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
 - (void)postModerateActionSheetViewControllerDidTapEditFlair:(id)arg1;
 - (void)postModerateActionSheetViewControllerDidTapViewReports:(id)arg1;
 - (void)feedPostModerateBarNode:(id)arg1 didTapFlairForPost:(id)arg2;

@@ -10,7 +10,7 @@
 #import "PagedTabControllerProtocol-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
 
-@class NSString, NSURL, UIImage, UILayoutGuide, UIScrollView, UIView;
+@class NSString, NSURL, UILayoutGuide, UIScrollView, UIView;
 
 @interface BaseViewController : UIViewController <UINavigationControllerDelegate, AnalyticsViewProtocol, PagedTabControllerProtocol>
 {
@@ -21,8 +21,6 @@
     NSString *_analyticsReason;
     NSString *_analyticsCorrelationKey;
     NSString *_analyticsSource;
-    UIImage *_pageItemImage;
-    UIImage *_pageItemSelectedImage;
     NSString *_pageItemText;
     NSString *_pageItemId;
     BaseViewController *_parentContentViewController;
@@ -34,8 +32,6 @@
 @property(nonatomic) _Bool isViewCurrentlyDisplayed; // @synthesize isViewCurrentlyDisplayed=_isViewCurrentlyDisplayed;
 @property(copy, nonatomic) NSString *pageItemId; // @synthesize pageItemId=_pageItemId;
 @property(copy, nonatomic) NSString *pageItemText; // @synthesize pageItemText=_pageItemText;
-@property(retain, nonatomic) UIImage *pageItemSelectedImage; // @synthesize pageItemSelectedImage=_pageItemSelectedImage;
-@property(retain, nonatomic) UIImage *pageItemImage; // @synthesize pageItemImage=_pageItemImage;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;
 @property(copy, nonatomic) NSString *analyticsCorrelationKey; // @synthesize analyticsCorrelationKey=_analyticsCorrelationKey;
 @property(copy, nonatomic) NSString *analyticsReason; // @synthesize analyticsReason=_analyticsReason;

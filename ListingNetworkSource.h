@@ -54,15 +54,9 @@
 @property __weak NSObject<ListingNetworkSourceDelegate> *delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parsingQueue; // @synthesize parsingQueue=_parsingQueue;
 - (void).cxx_destruct;
-- (void)notifyDidFetchDataForDataProvider:(id)arg1 correlationId:(id)arg2 parentId:(id)arg3;
 - (void)notifyWillFetchDataForDataProvider:(id)arg1 correlationId:(id)arg2 parentId:(id)arg3;
 - (void)notifyDataProviderParentDidFetchDataWithParentId:(id)arg1;
-- (void)notifyDidParseDataWithCorrelationId:(id)arg1;
-- (void)notifyWillParseDataWithCorrelationId:(id)arg1;
-- (void)notifyDidFetchDataWithCorrelationId:(id)arg1 requestId:(id)arg2;
-- (void)notifyWillFetchDataWithCorrelationId:(id)arg1 requestId:(id)arg2;
-- (void)notifyWillBeginRequest:(id)arg1 correlationId:(id)arg2;
-@property(readonly, nonatomic) _Bool shouldPostNotifications;
+- (_Bool)shouldPostNotifications;
 - (id)tags;
 - (void)fetchDataWithParameters:(id)arg1 correlationId:(id)arg2 successBlock:(CDUnknownBlockType)arg3 failureBlock:(CDUnknownBlockType)arg4;
 - (void)processObjects:(id)arg1 currentCount:(long long)arg2 withCompletion:(CDUnknownBlockType)arg3;

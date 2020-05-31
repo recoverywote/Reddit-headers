@@ -20,14 +20,30 @@
     _Bool _target_typeIsSet;
     _Bool _statusIsSet;
     _Bool _status_reasonIsSet;
+    _Bool _post_nsfw;
+    _Bool _post_nsfwIsSet;
+    _Bool _removed_by_moderator;
+    _Bool _removed_by_moderatorIsSet;
+    _Bool _content_typeIsSet;
+    _Bool _target_created_timestampIsSet;
     NSString *_id;
     NSString *_reported_url;
     NSString *_target_id;
     NSString *_target_type;
     NSString *_status;
     NSString *_status_reason;
+    NSString *_content_type;
+    long long _target_created_timestamp;
 }
 
+@property(nonatomic) _Bool target_created_timestampIsSet; // @synthesize target_created_timestampIsSet=_target_created_timestampIsSet;
+@property(nonatomic) long long target_created_timestamp; // @synthesize target_created_timestamp=_target_created_timestamp;
+@property(nonatomic) _Bool content_typeIsSet; // @synthesize content_typeIsSet=_content_typeIsSet;
+@property(copy, nonatomic) NSString *content_type; // @synthesize content_type=_content_type;
+@property(nonatomic) _Bool removed_by_moderatorIsSet; // @synthesize removed_by_moderatorIsSet=_removed_by_moderatorIsSet;
+@property(nonatomic) _Bool removed_by_moderator; // @synthesize removed_by_moderator=_removed_by_moderator;
+@property(nonatomic) _Bool post_nsfwIsSet; // @synthesize post_nsfwIsSet=_post_nsfwIsSet;
+@property(nonatomic) _Bool post_nsfw; // @synthesize post_nsfw=_post_nsfw;
 @property(nonatomic) _Bool status_reasonIsSet; // @synthesize status_reasonIsSet=_status_reasonIsSet;
 @property(copy, nonatomic) NSString *status_reason; // @synthesize status_reason=_status_reason;
 @property(nonatomic) _Bool statusIsSet; // @synthesize statusIsSet=_statusIsSet;
@@ -45,6 +61,10 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetTarget_created_timestamp;
+- (void)unsetContent_type;
+- (void)unsetRemoved_by_moderator;
+- (void)unsetPost_nsfw;
 - (void)unsetStatus_reason;
 - (void)unsetStatus;
 - (void)unsetTarget_type;
@@ -56,7 +76,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 reported_url:(id)arg2 target_id:(id)arg3 target_type:(id)arg4 status:(id)arg5 status_reason:(id)arg6;
+- (id)initWithId:(id)arg1 reported_url:(id)arg2 target_id:(id)arg3 target_type:(id)arg4 status:(id)arg5 status_reason:(id)arg6 post_nsfw:(_Bool)arg7 removed_by_moderator:(_Bool)arg8 content_type:(id)arg9 target_created_timestamp:(long long)arg10;
 - (id)init;
 
 // Remaining properties

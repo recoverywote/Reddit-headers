@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: highlight
     // Error parsing type: , name: highlightColor
-    // Error parsing type: , name: isBubbling
 }
 
 - (void).cxx_destruct;

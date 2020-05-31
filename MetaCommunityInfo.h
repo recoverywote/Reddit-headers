@@ -6,23 +6,28 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class NSArray, NSDate, NSString;
 
 @interface MetaCommunityInfo : NSObject
 {
     _Bool _isSpecialMembershipSupported;
-    _Bool _isSpecialMembershipActive;
+    _Bool _isSpecialMembershipRenewing;
     _Bool _showsSpecialMembershipBanner;
     _Bool _showsSubredditLockedPoints;
+    NSArray *_activeMemberships;
     NSString *_subredditPointsName;
+    NSDate *_specialMembershipEndsAt;
 }
 
+@property(readonly, copy, nonatomic) NSDate *specialMembershipEndsAt; // @synthesize specialMembershipEndsAt=_specialMembershipEndsAt;
 @property(readonly, copy, nonatomic) NSString *subredditPointsName; // @synthesize subredditPointsName=_subredditPointsName;
 @property(readonly, nonatomic) _Bool showsSubredditLockedPoints; // @synthesize showsSubredditLockedPoints=_showsSubredditLockedPoints;
 @property(readonly, nonatomic) _Bool showsSpecialMembershipBanner; // @synthesize showsSpecialMembershipBanner=_showsSpecialMembershipBanner;
-@property(readonly, nonatomic) _Bool isSpecialMembershipActive; // @synthesize isSpecialMembershipActive=_isSpecialMembershipActive;
+@property(readonly, nonatomic) _Bool isSpecialMembershipRenewing; // @synthesize isSpecialMembershipRenewing=_isSpecialMembershipRenewing;
 @property(readonly, nonatomic) _Bool isSpecialMembershipSupported; // @synthesize isSpecialMembershipSupported=_isSpecialMembershipSupported;
+@property(readonly, nonatomic) NSArray *activeMemberships; // @synthesize activeMemberships=_activeMemberships;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isSpecialMembershipActive;
 - (id)initWithData:(id)arg1;
 
 @end

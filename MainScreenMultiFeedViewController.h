@@ -20,8 +20,6 @@
 @property(retain, nonatomic) EmptyCustomFeedView *emptyCustomFeedView; // @synthesize emptyCustomFeedView=_emptyCustomFeedView;
 @property(retain, nonatomic) Multi *multi; // @synthesize multi=_multi;
 - (void).cxx_destruct;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (id)majorContentScrollView;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 @property(readonly, nonatomic) NSString *analyticsScreenViewName;

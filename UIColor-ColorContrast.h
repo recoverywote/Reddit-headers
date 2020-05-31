@@ -7,14 +7,6 @@
 #import <UIKit/UIColor.h>
 
 @interface UIColor (ColorContrast)
-+ (id)avatarBackgroundColorForBase10ID:(long long)arg1;
-+ (id)avatarBackgroundColors;
-+ (id)liveStreamChatAwardBorder;
-+ (id)liveStreamChatAwardBackground;
-+ (id)liveStreamBlue;
-+ (id)liveStreamRed;
-+ (id)liveStreamLoadingVideoBackground;
-+ (id)liveStreamSemiBlackBackground;
 - (id)colorContrastedWith:(id)arg1;
 - (double)perceivedLuminosity;
 @end

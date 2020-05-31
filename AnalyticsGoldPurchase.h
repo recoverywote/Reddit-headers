@@ -56,6 +56,12 @@
     _Bool _coin_package_idIsSet;
     _Bool _is_temporary_award;
     _Bool _is_temporary_awardIsSet;
+    _Bool _is_sale_enabled;
+    _Bool _is_sale_enabledIsSet;
+    _Bool _coin_bonus_percentageIsSet;
+    _Bool _coin_sale_percentageIsSet;
+    _Bool _offer_contextIsSet;
+    _Bool _offer_typeIsSet;
     int _number_months;
     int _gift_message_length;
     int _number_creddits;
@@ -82,8 +88,22 @@
     long long _start_timestamp;
     long long _end_timestamp;
     NSString *_coin_package_id;
+    double _coin_bonus_percentage;
+    double _coin_sale_percentage;
+    NSString *_offer_context;
+    NSString *_offer_type;
 }
 
+@property(nonatomic) _Bool offer_typeIsSet; // @synthesize offer_typeIsSet=_offer_typeIsSet;
+@property(copy, nonatomic) NSString *offer_type; // @synthesize offer_type=_offer_type;
+@property(nonatomic) _Bool offer_contextIsSet; // @synthesize offer_contextIsSet=_offer_contextIsSet;
+@property(copy, nonatomic) NSString *offer_context; // @synthesize offer_context=_offer_context;
+@property(nonatomic) _Bool coin_sale_percentageIsSet; // @synthesize coin_sale_percentageIsSet=_coin_sale_percentageIsSet;
+@property(nonatomic) double coin_sale_percentage; // @synthesize coin_sale_percentage=_coin_sale_percentage;
+@property(nonatomic) _Bool coin_bonus_percentageIsSet; // @synthesize coin_bonus_percentageIsSet=_coin_bonus_percentageIsSet;
+@property(nonatomic) double coin_bonus_percentage; // @synthesize coin_bonus_percentage=_coin_bonus_percentage;
+@property(nonatomic) _Bool is_sale_enabledIsSet; // @synthesize is_sale_enabledIsSet=_is_sale_enabledIsSet;
+@property(nonatomic) _Bool is_sale_enabled; // @synthesize is_sale_enabled=_is_sale_enabled;
 @property(nonatomic) _Bool is_temporary_awardIsSet; // @synthesize is_temporary_awardIsSet=_is_temporary_awardIsSet;
 @property(nonatomic) _Bool is_temporary_award; // @synthesize is_temporary_award=_is_temporary_award;
 @property(nonatomic) _Bool coin_package_idIsSet; // @synthesize coin_package_idIsSet=_coin_package_idIsSet;
@@ -157,6 +177,11 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetOffer_type;
+- (void)unsetOffer_context;
+- (void)unsetCoin_sale_percentage;
+- (void)unsetCoin_bonus_percentage;
+- (void)unsetIs_sale_enabled;
 - (void)unsetIs_temporary_award;
 - (void)unsetCoin_package_id;
 - (void)unsetPaid_coins_revenue_pennies;
@@ -196,7 +221,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithType:(id)arg1 number_months:(int)arg2 one_time_type:(id)arg3 gift_user_id:(id)arg4 gift_anonymous:(_Bool)arg5 gift_message:(_Bool)arg6 gift_message_length:(int)arg7 number_creddits:(int)arg8 subscription_type:(id)arg9 gilded_content:(_Bool)arg10 source:(id)arg11 number_coins:(int)arg12 number_coins_monthly:(int)arg13 number_coins_bonus:(int)arg14 transaction_id:(id)arg15 content_type:(id)arg16 default_option:(id)arg17 default_anonymous:(_Bool)arg18 purchased_coins:(_Bool)arg19 proxy_for_user_id:(id)arg20 award_id:(id)arg21 award_name:(id)arg22 is_mod_award:(_Bool)arg23 available_award_ids:(id)arg24 number_coins_to_recipient:(int)arg25 number_coins_to_community:(int)arg26 start_timestamp:(long long)arg27 end_timestamp:(long long)arg28 gift_public:(_Bool)arg29 number_free_coins:(int)arg30 number_paid_coins:(int)arg31 paid_coins_revenue_pennies:(int)arg32 coin_package_id:(id)arg33 is_temporary_award:(_Bool)arg34;
+- (id)initWithType:(id)arg1 number_months:(int)arg2 one_time_type:(id)arg3 gift_user_id:(id)arg4 gift_anonymous:(_Bool)arg5 gift_message:(_Bool)arg6 gift_message_length:(int)arg7 number_creddits:(int)arg8 subscription_type:(id)arg9 gilded_content:(_Bool)arg10 source:(id)arg11 number_coins:(int)arg12 number_coins_monthly:(int)arg13 number_coins_bonus:(int)arg14 transaction_id:(id)arg15 content_type:(id)arg16 default_option:(id)arg17 default_anonymous:(_Bool)arg18 purchased_coins:(_Bool)arg19 proxy_for_user_id:(id)arg20 award_id:(id)arg21 award_name:(id)arg22 is_mod_award:(_Bool)arg23 available_award_ids:(id)arg24 number_coins_to_recipient:(int)arg25 number_coins_to_community:(int)arg26 start_timestamp:(long long)arg27 end_timestamp:(long long)arg28 gift_public:(_Bool)arg29 number_free_coins:(int)arg30 number_paid_coins:(int)arg31 paid_coins_revenue_pennies:(int)arg32 coin_package_id:(id)arg33 is_temporary_award:(_Bool)arg34 is_sale_enabled:(_Bool)arg35 coin_bonus_percentage:(double)arg36 coin_sale_percentage:(double)arg37 offer_context:(id)arg38 offer_type:(id)arg39;
 - (id)init;
 
 // Remaining properties

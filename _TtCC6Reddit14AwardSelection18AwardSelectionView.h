@@ -10,9 +10,13 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: model
-    // Error parsing type: , name: didSelectAward
+    // Error parsing type: , name: isAnonymous
+    // Error parsing type: , name: allowsAnonymous
+    // Error parsing type: , name: sendAward
     // Error parsing type: , name: getCoins
     // Error parsing type: , name: selectedAward
+    // Error parsing type: , name: message
+    // Error parsing type: , name: keyboardFrame
     // Error parsing type: , name: selectedAwardView
     // Error parsing type: , name: unselectButtonContainer
     // Error parsing type: , name: unselectButton
@@ -23,11 +27,18 @@
     // Error parsing type: , name: coinsBar
     // Error parsing type: , name: loadingIndicatorContainer
     // Error parsing type: , name: loadingIndicator
+    // Error parsing type: , name: keyboardPlaceholderView
+    // Error parsing type: , name: keyboardPlaceholderViewHeightConstraint
+    // Error parsing type: , name: sendAwardButton
+    // Error parsing type: , name: sendAwardConstrainsForActiveKeyboard
+    // Error parsing type: , name: sendAwardConstrainsForInactiveKeyboard
     // Error parsing type: , name: notificationTokens
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)layoutSubviews;
+- (void)sendAwardButtonTap;
 - (void)discardOverlay;
 - (void)unselect;
 - (id)initWithCoder:(id)arg1;

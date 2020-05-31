@@ -16,6 +16,7 @@
 {
     _Bool _isModerator;
     _Bool _isSingleCommentThread;
+    _Bool _commentAdPostFetched;
     _Bool _isSorting;
     _Bool _didShowTrendingToaster;
     Post *_post;
@@ -30,7 +31,7 @@
     FeedPostOptions *_feedPostOptions;
     CommentMetaViewModelProvider *_commentMetaViewModelProvider;
     PostMetaViewModelProvider *_postMetaViewModelProvider;
-    AdPost *_commentBlankAdPost;
+    AdPost *_commentAdPost;
     NSArray *_originalComments;
     SocketSession *_socketSession;
     CollectionDataSource *_collectionDataSource;
@@ -41,7 +42,8 @@
 @property(nonatomic) _Bool isSorting; // @synthesize isSorting=_isSorting;
 @property(retain, nonatomic) SocketSession *socketSession; // @synthesize socketSession=_socketSession;
 @property(retain, nonatomic) NSArray *originalComments; // @synthesize originalComments=_originalComments;
-@property(retain, nonatomic) AdPost *commentBlankAdPost; // @synthesize commentBlankAdPost=_commentBlankAdPost;
+@property(retain, nonatomic) AdPost *commentAdPost; // @synthesize commentAdPost=_commentAdPost;
+@property(nonatomic) _Bool commentAdPostFetched; // @synthesize commentAdPostFetched=_commentAdPostFetched;
 @property(retain, nonatomic) PostMetaViewModelProvider *postMetaViewModelProvider; // @synthesize postMetaViewModelProvider=_postMetaViewModelProvider;
 @property(retain, nonatomic) CommentMetaViewModelProvider *commentMetaViewModelProvider; // @synthesize commentMetaViewModelProvider=_commentMetaViewModelProvider;
 @property(retain, nonatomic) FeedPostOptions *feedPostOptions; // @synthesize feedPostOptions=_feedPostOptions;
@@ -103,7 +105,6 @@
 - (_Bool)shouldOverlayCommentNode:(id)arg1;
 - (_Bool)shouldHighlightCommentNode:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldLockComments;
-- (void)checkExperimentsValues;
 - (void)configureMetaProvidersIfNeeded;
 - (void)configureLiveCommentSessionIfNeeded;
 - (void)performCommentsSort:(unsigned long long)arg1;
@@ -129,6 +130,7 @@
 @property(readonly, nonatomic) CommentNetworkSource *commentNetworkSource;
 @property(readonly, nonatomic) long long commentSection;
 @property(readonly, nonatomic) long long commentHeaderSection;
+@property(readonly, nonatomic) long long commentAdPostSection;
 @property(readonly, nonatomic) long long postSection;
 @property(readonly, nonatomic) Account *currentAccount;
 

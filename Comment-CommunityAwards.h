@@ -13,9 +13,10 @@
 + (id)activeLinkAttributesUsingTheme:(id)arg1;
 + (id)linkAttributesUsingTheme:(id)arg1;
 - (_Bool)isLastGivenAward:(id)arg1;
+- (_Bool)highlightForHighAwardWithSpecialHighlightingEnabled:(_Bool)arg1;
+- (_Bool)shouldHighlightForHighAward;
 @property(readonly, nonatomic) UIColor *awardHighlightColor;
 @property(readonly, nonatomic) unsigned long long awardHighlight;
-@property(readonly, nonatomic) _Bool shouldHighlightForHighAward;
 @property(readonly, nonatomic) _Bool hasBeenAwardedByCurrentAccount;
 @property(readonly, nonatomic) NSArray *orderedAwardingTotalsWithFirstModAwardRemoved;
 @property(readonly, nonatomic) AwardingTotal *firstModeratorAwardingTotal;
@@ -27,6 +28,6 @@
 - (id)userIconsForData:(id)arg1 usingTheme:(id)arg2;
 - (id)textAttachmentWithImageNamed:(id)arg1 usingTheme:(id)arg2;
 - (id)headerTitleColorWithUserProvidedColor:(id)arg1 usingTheme:(id)arg2;
-- (id)commentHeaderString:(_Bool)arg1 usingTheme:(id)arg2 shouldShowAuthorFlair:(_Bool)arg3 shouldBoldAuthorName:(_Bool)arg4 usernameDecoration:(id)arg5 richTextLoader:(id)arg6 imagesLoaded:(CDUnknownBlockType)arg7;
+- (id)commentHeaderString:(_Bool)arg1 usingTheme:(id)arg2 shouldShowAuthorFlair:(_Bool)arg3 shouldBoldAuthorName:(_Bool)arg4 shouldShowCrowdControlLabel:(_Bool)arg5 usernameDecoration:(id)arg6 richTextLoader:(id)arg7 imagesLoaded:(CDUnknownBlockType)arg8;
 @end
 

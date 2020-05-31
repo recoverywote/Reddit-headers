@@ -27,7 +27,7 @@
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *subredditId; // @synthesize subredditId=_subredditId;
 - (void).cxx_destruct;
-- (id)initWithGraphQLData:(id)arg1;
+- (id)initWithGraphQLData:(id)arg1 subredditName:(id)arg2;
 
 @end
 

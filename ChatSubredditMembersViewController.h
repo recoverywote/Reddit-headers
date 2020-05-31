@@ -42,7 +42,7 @@
 - (void)listingNetworkSourceDidFail:(id)arg1;
 - (void)listingNetworkSourceDidFetchMoreData:(id)arg1;
 - (void)listingNetworkSourceDidFetchData:(id)arg1 correlationID:(id)arg2;
-- (void)listingNetworkSourceWillFetchData;
+- (void)listingNetworkSourceDidStartFetching:(id)arg1;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;
 - (void)viewDidLoad;

@@ -12,7 +12,7 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class AccountManager, CaptureViewController, FeedSpinnerView, IntroViewController, MainTabBarController, NSDictionary, NSString, UIView, UserDrawerViewController;
-@protocol RootViewControllerDelegate;
+@protocol AccountContext, RootViewControllerDelegate;
 
 @interface RootViewController : BaseViewController <IntroViewControllerDelegate, MainTabBarControllerDelegate, CaptureViewControllerDelegate, UIGestureRecognizerDelegate>
 {
@@ -21,6 +21,7 @@
     id <RootViewControllerDelegate> _delegate;
     MainTabBarController *_tabController;
     AccountManager *_accountManager;
+    id <AccountContext> _accountContext;
     UserDrawerViewController *_userDrawerViewController;
     IntroViewController *_introController;
     CaptureViewController *_captureViewController;
@@ -30,6 +31,7 @@
 }
 
 + (void)reloadAllControllers;
++ (id)currentAccountContext;
 @property(retain, nonatomic) UIView *blockInputView; // @synthesize blockInputView=_blockInputView;
 @property(nonatomic) _Bool didInstallNewMainTabController; // @synthesize didInstallNewMainTabController=_didInstallNewMainTabController;
 @property(nonatomic) double timeFirstInitialized; // @synthesize timeFirstInitialized=_timeFirstInitialized;
@@ -38,6 +40,7 @@
 @property(retain, nonatomic) CaptureViewController *captureViewController; // @synthesize captureViewController=_captureViewController;
 @property(retain, nonatomic) IntroViewController *introController; // @synthesize introController=_introController;
 @property(retain, nonatomic) UserDrawerViewController *userDrawerViewController; // @synthesize userDrawerViewController=_userDrawerViewController;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 @property(retain, nonatomic) MainTabBarController *tabController; // @synthesize tabController=_tabController;
 @property(nonatomic) __weak id <RootViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
@@ -70,6 +73,7 @@
 - (void)handleConfigUpdatedWithError:(id)arg1;
 - (void)reloadAllControllers;
 - (void)applicationUserDidTakeScreenshot:(id)arg1;
+- (void)leaveAnonymousBrowsingMode:(id)arg1;
 - (void)openUserAccountDrawer:(id)arg1;
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)viewDidAppear:(_Bool)arg1;

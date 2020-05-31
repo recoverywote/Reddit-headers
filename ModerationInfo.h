@@ -10,6 +10,7 @@
 
 @interface ModerationInfo : NSObject
 {
+    _Bool _isAutoCollapsedFromCrowdControl;
     long long _verdict;
     NSString *_verdictBy;
     NSString *_verdictReason;
@@ -24,6 +25,7 @@
 + (id)keyPathsForValuesAffectingIsModApprovedBy;
 + (id)keyPathsForValuesAffectingIsModApproved;
 @property(readonly, nonatomic) NSString *modRemovalReason; // @synthesize modRemovalReason=_modRemovalReason;
+@property(readonly, nonatomic) _Bool isAutoCollapsedFromCrowdControl; // @synthesize isAutoCollapsedFromCrowdControl=_isAutoCollapsedFromCrowdControl;
 @property(retain, nonatomic) NSArray *modReports; // @synthesize modReports=_modReports;
 @property(retain, nonatomic) NSArray *userReports; // @synthesize userReports=_userReports;
 @property(retain, nonatomic) NSString *verdictReason; // @synthesize verdictReason=_verdictReason;

@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)presentTrayInto:(id)arg1 subredditName:(id)arg2 postPK:(id)arg3 redditService:(id)arg4 theme:(id)arg5 getCoins:(CDUnknownBlockType)arg6 completion:(CDUnknownBlockType)arg7;
++ (void)presentTrayInto:(id)arg1 subredditName:(id)arg2 postPK:(id)arg3 allowsAnonymous:(_Bool)arg4 redditService:(id)arg5 theme:(id)arg6 getCoins:(CDUnknownBlockType)arg7 completion:(CDUnknownBlockType)arg8;
 - (id)init;
 
 @end

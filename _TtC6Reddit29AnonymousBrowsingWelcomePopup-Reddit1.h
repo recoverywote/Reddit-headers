@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit29AnonymousBrowsingWelcomePopup.h"
 
-#import "PopupViewControllerProtocol-Protocol.h"
-
-@interface _TtC6Reddit29AnonymousBrowsingWelcomePopup (Reddit1) <PopupViewControllerProtocol>
+@interface _TtC6Reddit29AnonymousBrowsingWelcomePopup (Reddit1)
 - (_Bool)shouldBlurBackground;
 - (_Bool)shouldDismissWhenDimmerTapped;
 - (double)preferredPopupHeightForWidth:(double)arg1;

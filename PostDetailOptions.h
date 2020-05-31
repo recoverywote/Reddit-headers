@@ -16,14 +16,12 @@
     _Bool _shouldScrollToComments;
     _Bool _shouldUsePostCollectionLayout;
     _Bool _shouldShowTrendingToaster;
-    _Bool _shouldPinActionBarToBottom;
     FeedPostOptions *_feedPostOptions;
     NSString *_initialPostId;
     id <VideoContext> _videoContext;
 }
 
 + (id)defaultPostDetailOptions;
-@property(nonatomic) _Bool shouldPinActionBarToBottom; // @synthesize shouldPinActionBarToBottom=_shouldPinActionBarToBottom;
 @property(retain, nonatomic) id <VideoContext> videoContext; // @synthesize videoContext=_videoContext;
 @property(nonatomic) _Bool shouldShowTrendingToaster; // @synthesize shouldShowTrendingToaster=_shouldShowTrendingToaster;
 @property(nonatomic) _Bool shouldUsePostCollectionLayout; // @synthesize shouldUsePostCollectionLayout=_shouldUsePostCollectionLayout;

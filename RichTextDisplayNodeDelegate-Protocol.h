@@ -11,6 +11,6 @@
 @protocol RichTextDisplayNodeDelegate <NSObject>
 - (void)richTextDisplayNode:(RichTextDisplayNode *)arg1 didTapMedia:(RichTextMediaBaseElement *)arg2 withMediaLabels:(NSArray *)arg3;
 - (void)richTextDisplayNode:(RichTextDisplayNode *)arg1 didTapSpoiler:(RichTextSpoilerTextElement *)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextDisplayNode:(RichTextDisplayNode *)arg1 didTapURL:(NSURL *)arg2 atPoint:(struct CGPoint)arg3;
+- (void)richTextDisplayNode:(RichTextDisplayNode *)arg1 didTapURL:(NSURL *)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
 @end
 

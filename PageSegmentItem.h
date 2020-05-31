@@ -12,8 +12,6 @@
 @interface PageSegmentItem : BaseControl
 {
     _Bool _disabled;
-    UIImage *_image;
-    UIImage *_selectedImage;
     NSString *_text;
     long long _badgeValue;
     long long _badgeStyle;
@@ -24,9 +22,13 @@
     BaseLabel *_label;
     BaseLabel *_numericBadgeLabel;
     BaseView *_nonNumericBadgeView;
+    UIImage *_image;
+    UIImage *_selectedImage;
 }
 
 + (double)preferredHeight;
+@property(retain, nonatomic) UIImage *selectedImage; // @synthesize selectedImage=_selectedImage;
+@property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(retain, nonatomic) BaseView *nonNumericBadgeView; // @synthesize nonNumericBadgeView=_nonNumericBadgeView;
 @property(retain, nonatomic) BaseLabel *numericBadgeLabel; // @synthesize numericBadgeLabel=_numericBadgeLabel;
 @property(retain, nonatomic) BaseLabel *label; // @synthesize label=_label;
@@ -38,8 +40,6 @@
 @property(nonatomic) long long badgeStyle; // @synthesize badgeStyle=_badgeStyle;
 @property(nonatomic) long long badgeValue; // @synthesize badgeValue=_badgeValue;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-@property(retain, nonatomic) UIImage *selectedImage; // @synthesize selectedImage=_selectedImage;
-@property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIFont *font;
 - (struct CGRect)rectForContentInView;
@@ -51,7 +51,6 @@
 - (_Bool)isEqual:(id)arg1;
 - (void)updateBadge;
 - (id)init;
-- (id)initWithPagedTabController:(id)arg1;
 
 @end
 

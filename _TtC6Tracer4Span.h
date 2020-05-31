@@ -15,6 +15,7 @@
     // Error parsing type: , name: trace
     // Error parsing type: , name: parentSpanId
     // Error parsing type: , name: startDate
+    // Error parsing type: , name: nameIncludingParentPrefix
     // Error parsing type: , name: state
     // Error parsing type: , name: tags
 }
@@ -24,12 +25,12 @@
 - (void)finishAt:(id)arg1;
 - (void)updateTag:(id)arg1 value:(id)arg2;
 @property(nonatomic, readonly) double duration;
-@property(nonatomic, readonly) NSString *qualifiedName;
 @property(nonatomic, readonly) long long traceId;
 @property(nonatomic, readonly) _Bool isFinished;
 @property(nonatomic, readonly) NSDate *finishDate;
 @property(nonatomic, readonly) NSString *name;
 @property(nonatomic, copy) NSDictionary *tags;
+@property(nonatomic, readonly) NSString *nameIncludingParentPrefix;
 @property(nonatomic, readonly) NSDate *startDate;
 @property(nonatomic, readonly) _TtC6Tracer5Trace *trace; // @synthesize trace;
 @property(nonatomic, readonly) long long spanId; // @synthesize spanId;

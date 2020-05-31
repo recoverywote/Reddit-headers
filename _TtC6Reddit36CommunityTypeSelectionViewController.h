@@ -20,6 +20,8 @@
     // Error parsing type: , name: tableView
     // Error parsing type: , name: continueControl
     // Error parsing type: , name: navigationSeperatorBar
+    // Error parsing type: , name: $__lazy_storage_$_saveController
+    // Error parsing type: , name: $__lazy_storage_$_saveControl
 }
 
 - (void).cxx_destruct;

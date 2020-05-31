@@ -40,8 +40,6 @@
 - (void)multiPageViewControllerMultiDeleted:(id)arg1;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (void)didTapFavoriteButton:(id)arg1;
 - (void)didTapCreateCustomFeedButton:(id)arg1;
 - (void)closeButtonTap:(id)arg1;

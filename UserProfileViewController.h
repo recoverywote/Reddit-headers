@@ -53,6 +53,7 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 - (void).cxx_destruct;
+- (void)presentAnonymousBrowsingExitDialog;
 - (void)showNewCustomFeedTooltip;
 - (void)showCustomFeed:(id)arg1;
 - (void)userBlockedSuccessfully;

@@ -21,7 +21,7 @@
 #import "RoadblockCoordinatorDelegate-Protocol.h"
 #import "_TtP8RedditUI25RUIRefreshControlDelegate_-Protocol.h"
 
-@class ASCollectionNode, ChatPostViewController, CollectionDiffingAdapter, FeedPostDetailDelegator, NSString, NSURL, NextCommentButtonInteractor, Post, PostDetailDelegator, PostDetailFloatingCommandBarInteractor, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailNavigationItemHandler, PostDetailNavigator, PostDetailPresenter, RoadblockCoordinator, UICollectionView, _TtC6Reddit20SubredditDisplayView;
+@class ASCollectionNode, ChatPostViewController, CollectionDiffingAdapter, CommentAdPostDelegator, FeedPostDetailDelegator, NSString, NSURL, NextCommentButtonInteractor, Post, PostDetailDelegator, PostDetailFloatingCommandBarInteractor, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailNavigationItemHandler, PostDetailNavigator, PostDetailPresenter, RoadblockCoordinator, UICollectionView, _TtC6Reddit20SubredditDisplayView;
 
 @interface PostDetailViewController : BaseViewController <ASCollectionDataSource, ASCollectionDelegate, PostDetailPresenterDelegate, NextCommentButtonInteractorDelegate, PostDetailHeaderViewControllerDelegate, RoadblockCoordinatorDelegate, RequestToNavigateView, ListingPresentable, _TtP8RedditUI25RUIRefreshControlDelegate_, ObjectObserverProtocol, PreviewModeDelegate, CommentComposeViewControllerDelegate, FlairSelectionSourceViewProtocol, DeeplinkProtocol>
 {
@@ -34,6 +34,7 @@
     PostDetailDelegator *_delegator;
     FeedPostDetailDelegator *_postDelegator;
     PostDetailNavigator *_navigator;
+    CommentAdPostDelegator *_commentAdPostDelegator;
     ASCollectionNode *_feedCollectionNode;
     PostDetailHeaderViewController *_headerViewController;
     PostDetailFooterViewController *_footerViewController;
@@ -59,6 +60,7 @@
 @property(retain, nonatomic) PostDetailFooterViewController *footerViewController; // @synthesize footerViewController=_footerViewController;
 @property(retain, nonatomic) PostDetailHeaderViewController *headerViewController; // @synthesize headerViewController=_headerViewController;
 @property(retain, nonatomic) ASCollectionNode *feedCollectionNode; // @synthesize feedCollectionNode=_feedCollectionNode;
+@property(retain, nonatomic) CommentAdPostDelegator *commentAdPostDelegator; // @synthesize commentAdPostDelegator=_commentAdPostDelegator;
 @property(retain, nonatomic) PostDetailNavigator *navigator; // @synthesize navigator=_navigator;
 @property(retain, nonatomic) FeedPostDetailDelegator *postDelegator; // @synthesize postDelegator=_postDelegator;
 @property(retain, nonatomic) PostDetailDelegator *delegator; // @synthesize delegator=_delegator;

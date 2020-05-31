@@ -19,7 +19,6 @@
 @property(retain, nonatomic) SBDGroupChannelMemberListQuery *query; // @synthesize query=_query;
 @property(retain, nonatomic) SubredditChannel *subredditChannel; // @synthesize subredditChannel=_subredditChannel;
 - (void).cxx_destruct;
-- (void)notifyWillFetchData;
 - (_Bool)hasMoreContent;
 - (void)fetchMoreData;
 - (void)fetchData;

@@ -15,6 +15,7 @@
     NSString *_type;
     NSString *_descriptionText;
     NSDate *_endsAt;
+    NSDate *_publishAt;
     NSString *_placement;
     NSString *_price;
     NSString *_currency;
@@ -35,6 +36,7 @@
 @property(readonly, copy, nonatomic) NSString *currency; // @synthesize currency=_currency;
 @property(readonly, copy, nonatomic) NSString *price; // @synthesize price=_price;
 @property(readonly, copy, nonatomic) NSString *placement; // @synthesize placement=_placement;
+@property(readonly, copy, nonatomic) NSDate *publishAt; // @synthesize publishAt=_publishAt;
 @property(readonly, copy, nonatomic) NSDate *endsAt; // @synthesize endsAt=_endsAt;
 @property(readonly, copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, copy, nonatomic) NSString *type; // @synthesize type=_type;

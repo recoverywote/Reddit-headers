@@ -12,7 +12,8 @@
     // Error parsing type: , name: queue
     // Error parsing type: , name: storage
     // Error parsing type: , name: insertionsSubject
-    // Error parsing type: , name: removalSubject
+    // Error parsing type: , name: completedSubject
+    // Error parsing type: , name: failureSubject
     // Error parsing type: , name: $__lazy_storage_$_restoreStorageOnce
 }
 

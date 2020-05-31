@@ -15,6 +15,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: backupOption
     // Error parsing type: , name: handler
     // Error parsing type: , name: $__lazy_storage_$_contentView
+    // Error parsing type: , name: $__lazy_storage_$_animator
     // Error parsing type: , name: disposeBag
 }
 

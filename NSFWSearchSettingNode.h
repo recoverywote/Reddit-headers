@@ -11,7 +11,7 @@
 
 @interface NSFWSearchSettingNode : ASDisplayNode
 {
-    _Bool _isAnonymous;
+    _Bool _isNotLoggedIn;
     ASTextNode *_headerTextNode;
     ASTextNode *_descriptionTextNode;
     ASTextNode *_linkTextNode;
@@ -20,7 +20,7 @@
     id <NSFWSearchSettingNodeDelegate> _delegate;
 }
 
-@property(nonatomic) _Bool isAnonymous; // @synthesize isAnonymous=_isAnonymous;
+@property(nonatomic) _Bool isNotLoggedIn; // @synthesize isNotLoggedIn=_isNotLoggedIn;
 @property(nonatomic) __weak id <NSFWSearchSettingNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ASButtonNode *dismissNode; // @synthesize dismissNode=_dismissNode;
 @property(retain, nonatomic) ASImageNode *imageNode; // @synthesize imageNode=_imageNode;
@@ -36,7 +36,7 @@
 - (void)didTapCloseButton:(id)arg1;
 - (void)configureNodes;
 - (void)createNodes;
-- (id)initWithIsAnonymous:(_Bool)arg1 withDelegate:(id)arg2;
+- (id)initWithIsNotLoggedIn:(_Bool)arg1 withDelegate:(id)arg2;
 
 @end
 

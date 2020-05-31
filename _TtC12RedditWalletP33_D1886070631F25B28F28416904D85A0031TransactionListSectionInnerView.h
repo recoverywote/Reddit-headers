@@ -11,6 +11,7 @@
     // Error parsing type: , name: stackView
     // Error parsing type: , name: cardView
     // Error parsing type: , name: performTransactionSink
+    // Error parsing type: , name: performOngoingTransactionSink
     // Error parsing type: , name: disposeBag
 }
 

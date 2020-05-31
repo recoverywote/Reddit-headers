@@ -24,6 +24,8 @@
 - (void)updatePropertiesForStreamingConfig:(id)arg1;
 @property(nonatomic) long long streamingConfigViewerInitialHeartbeatDelaySeconds;
 @property(nonatomic) double streamingConfigViewerHeartbeatInterval;
+- (_Bool)shouldHideNewTagWithIdentifier:(id)arg1;
+- (void)hideNewTagWithIdentifier:(id)arg1;
 @property(copy, nonatomic) NSDictionary *mainTabConfiguration;
 @property(nonatomic) long long sessionCountForNotificationPermissionPrompt;
 @property(nonatomic) long long notificationPermissionPromptShownCount;

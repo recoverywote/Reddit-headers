@@ -10,16 +10,30 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: isActive
-    // Error parsing type: , name: isAnonymous
+    // Error parsing type: , name: _isAnonymous
     // Error parsing type: , name: didChangeIsAnonymous
-    // Error parsing type: , name: message
-    // Error parsing type: , name: messageLimit
+    // Error parsing type: , name: allowsAnonymous
+    // Error parsing type: , name: _message
+    // Error parsing type: , name: award
     // Error parsing type: , name: didChangeMessage
-    // Error parsing type: , name: placeholderText
+    // Error parsing type: , name: ctaButtonLayoutGuide
+    // Error parsing type: , name: anonymousToggleImageView
+    // Error parsing type: , name: anonymousToggleLabel
+    // Error parsing type: , name: textView
+    // Error parsing type: , name: textViewHeightConstraint
+    // Error parsing type: , name: placeholderLabel
+    // Error parsing type: , name: messageLimitLabel
+    // Error parsing type: , name: activeStateConstrains
+    // Error parsing type: , name: inactiveStateConstrains
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)textViewDidChange:(id)arg1;
+- (void)textViewDidEndEditing:(id)arg1;
+- (void)textViewDidBeginEditing:(id)arg1;
+- (void)deactivate;
+- (void)toggleIsAnonymous;
 - (id)initWithCoder:(id)arg1;
 - (id)init;
 

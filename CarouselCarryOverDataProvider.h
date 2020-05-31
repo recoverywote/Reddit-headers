@@ -24,7 +24,7 @@
 @property(nonatomic) _Bool insertSeparator; // @synthesize insertSeparator=_insertSeparator;
 - (void).cxx_destruct;
 - (void)invalidate;
-- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 trace:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (_Bool)shouldAddSeparatorForObject:(id)arg1 previousObject:(id)arg2;
 - (void)dedupRepeatedObjectsInCarousel:(id)arg1;
 - (id)insertedSeparators:(id)arg1;

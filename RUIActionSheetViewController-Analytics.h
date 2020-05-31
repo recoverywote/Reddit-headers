@@ -13,7 +13,7 @@
 - (void)logV2ControlTapWithClickName:(id)arg1 post:(id)arg2 commentTreeNode:(id)arg3 correlationId:(id)arg4;
 @property(readonly, nonatomic) NSString *presentingAnalyticsPageType;
 @property(readonly, nonatomic) NSString *presentingAnalyticsScreenName;
-- (void)startGildingFlowForComment:(id)arg1 parentPost:(id)arg2 correlationId:(id)arg3;
-- (void)startGildingFlowForPost:(id)arg1 correlationId:(id)arg2;
+- (void)startGildingFlowForComment:(id)arg1 parentPost:(id)arg2 correlationId:(id)arg3 mode:(long long)arg4;
+- (void)startGildingFlowForPost:(id)arg1 correlationId:(id)arg2 mode:(long long)arg3;
 @end
 

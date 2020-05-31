@@ -89,6 +89,7 @@
 - (id)inputAccessoryView;
 - (_Bool)canBecomeFirstResponder;
 @property(readonly, nonatomic) _Bool isComposingMessage;
+- (void)didTapInputViewForAnonymousBrowsingUser:(id)arg1;
 - (void)didTapInputViewForAnonUser:(id)arg1;
 - (void)updateInputAccessoryForAwarding;
 - (void)configureInputAccessory;

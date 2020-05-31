@@ -11,7 +11,6 @@
 @interface ExperimentManager (Reddit)
 - (void)exposeShouldShowAllInboxNotificationsWhenUnauthorized;
 @property(readonly, nonatomic) _Bool shouldShowAllInboxNotificationsWhenUnauthorized;
-- (_Bool)shouldPinActionBarToBottom;
 @property(readonly, nonatomic) _Bool isPollCreationEnabled;
 - (void)exposeAnonymousBrowsingMode;
 @property(nonatomic) _Bool isInAnonymousBrowsing;
@@ -45,6 +44,8 @@
 @property(readonly, nonatomic) long long shareCardsVariant;
 - (long long)shareMessageActionVariant;
 - (void)exposeShareMessageAction;
+- (void)exposePostDetailAds;
+@property(readonly, nonatomic) _Bool isPostDetailAdsEnabled;
 @property(readonly, nonatomic) _Bool isChatPostViewLastMessageEventEnabled;
 - (void)exposePostingDifficulty;
 @property(readonly, nonatomic) long long postingDifficultyVariant;

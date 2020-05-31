@@ -15,7 +15,7 @@
 
 @interface FeedPresenter : ListingPresenter <DiscoveryUnitViewModelDataProviderDelegate, TemplateParserContext, ListingAnalyticsProtocol>
 {
-    _Bool _shouldFilterNsfwForAnonymousUsers;
+    _Bool _shouldFilterNsfwForNonLoggedInAccounts;
     _Bool _shouldSupportGallery;
     _Bool _isInModMode;
     _Bool _isInModQueue;
@@ -84,7 +84,7 @@
 @property(nonatomic) _Bool isInModMode; // @synthesize isInModMode=_isInModMode;
 @property(nonatomic) _Bool shouldSupportGallery; // @synthesize shouldSupportGallery=_shouldSupportGallery;
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
-@property(nonatomic) _Bool shouldFilterNsfwForAnonymousUsers; // @synthesize shouldFilterNsfwForAnonymousUsers=_shouldFilterNsfwForAnonymousUsers;
+@property(nonatomic) _Bool shouldFilterNsfwForNonLoggedInAccounts; // @synthesize shouldFilterNsfwForNonLoggedInAccounts=_shouldFilterNsfwForNonLoggedInAccounts;
 @property(nonatomic) unsigned long long displayMode; // @synthesize displayMode=_displayMode;
 @property(copy, nonatomic) NSArray *frozenCurrentObjects; // @synthesize frozenCurrentObjects=_frozenCurrentObjects;
 @property(copy, nonatomic) NSArray *mediaCurrentObjects; // @synthesize mediaCurrentObjects=_mediaCurrentObjects;

@@ -52,7 +52,6 @@
 - (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
-@property(readonly, nonatomic) NSArray *sortedSubredditNames;
 - (void)configureWithData:(id)arg1;
 - (void)configureWithGraphQLData:(id)arg1;
 - (id)initWithPk:(id)arg1;

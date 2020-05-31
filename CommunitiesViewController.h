@@ -47,8 +47,6 @@
 - (void).cxx_destruct;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (id)pageItemText;
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (void)scrollViewIndexBarDidEndScrolling:(id)arg1;

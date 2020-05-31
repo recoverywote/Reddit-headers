@@ -29,6 +29,7 @@
     _Bool _number_coinsIsSet;
     _Bool _public_descriptionIsSet;
     _Bool _post_difficulty_ratingIsSet;
+    _Bool _topic_tag_primary_idIsSet;
     int _number_coins;
     NSString *_id;
     NSString *_name;
@@ -40,8 +41,11 @@
     NSMutableArray *_topic_tag_types;
     NSString *_public_description;
     NSString *_post_difficulty_rating;
+    NSString *_topic_tag_primary_id;
 }
 
+@property(nonatomic) _Bool topic_tag_primary_idIsSet; // @synthesize topic_tag_primary_idIsSet=_topic_tag_primary_idIsSet;
+@property(copy, nonatomic) NSString *topic_tag_primary_id; // @synthesize topic_tag_primary_id=_topic_tag_primary_id;
 @property(nonatomic) _Bool post_difficulty_ratingIsSet; // @synthesize post_difficulty_ratingIsSet=_post_difficulty_ratingIsSet;
 @property(copy, nonatomic) NSString *post_difficulty_rating; // @synthesize post_difficulty_rating=_post_difficulty_rating;
 @property(nonatomic) _Bool public_descriptionIsSet; // @synthesize public_descriptionIsSet=_public_descriptionIsSet;
@@ -73,6 +77,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetTopic_tag_primary_id;
 - (void)unsetPost_difficulty_rating;
 - (void)unsetPublic_description;
 - (void)unsetNumber_coins;
@@ -91,7 +96,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 name:(id)arg2 category_name:(id)arg3 whitelist_status:(id)arg4 access_type:(id)arg5 quarantined:(_Bool)arg6 nsfw:(_Bool)arg7 topic_tag_ids:(id)arg8 topic_tag_contents:(id)arg9 topic_tag_types:(id)arg10 number_coins:(int)arg11 public_description:(id)arg12 post_difficulty_rating:(id)arg13;
+- (id)initWithId:(id)arg1 name:(id)arg2 category_name:(id)arg3 whitelist_status:(id)arg4 access_type:(id)arg5 quarantined:(_Bool)arg6 nsfw:(_Bool)arg7 topic_tag_ids:(id)arg8 topic_tag_contents:(id)arg9 topic_tag_types:(id)arg10 number_coins:(int)arg11 public_description:(id)arg12 post_difficulty_rating:(id)arg13 topic_tag_primary_id:(id)arg14;
 - (id)init;
 
 // Remaining properties

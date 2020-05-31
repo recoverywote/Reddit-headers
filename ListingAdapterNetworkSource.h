@@ -17,11 +17,6 @@
 @property(readonly, nonatomic) _Bool removeDuplicates; // @synthesize removeDuplicates=_removeDuplicates;
 @property(retain, nonatomic) Listing *listing; // @synthesize listing=_listing;
 - (void).cxx_destruct;
-- (void)listingDidParse:(id)arg1;
-- (void)listingWillParse:(id)arg1;
-- (void)listingDidFetch:(id)arg1;
-- (void)listingWillFetch:(id)arg1;
-- (_Bool)shouldPostNotifications;
 - (id)debugDescription;
 - (id)dynamicParameters;
 - (id)defaultParameters;

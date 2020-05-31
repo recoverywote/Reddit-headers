@@ -52,11 +52,11 @@
 - (id)accountForPk:(id)arg1;
 - (void)removeAccount:(id)arg1 deletingAccountData:(_Bool)arg2;
 - (void)addService:(id)arg1;
-- (void)switchToAnonymousAccount;
+- (void)switchToLoggedOutAccount;
 @property(retain, nonatomic) Account *currentAccount;
-@property(readonly, nonatomic) Account *anonymousAccount;
-@property(readonly, nonatomic) RedditService *anonymousService;
-@property(readonly, nonatomic) NSArray *nonAnonymousAccounts;
+@property(readonly, nonatomic) Account *loggedOutAccount;
+@property(readonly, nonatomic) RedditService *loggedOutService;
+@property(readonly, nonatomic) NSArray *loggedInAccounts;
 @property(readonly, nonatomic) NSArray *accounts;
 - (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2 sessionTracker:(id)arg3 services:(id)arg4 currentService:(id)arg5;
 - (id)initWithAccountCachePath:(id)arg1 userDefaults:(id)arg2 sessionTracker:(id)arg3;

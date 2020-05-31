@@ -20,6 +20,8 @@
     _Bool _versionIsSet;
     _Bool _typeIsSet;
     _Bool _created_timestampIsSet;
+    _Bool _anonymous_browsing_mode;
+    _Bool _anonymous_browsing_modeIsSet;
     NSString *_id;
     NSString *_referrer_url;
     NSString *_referrer_domain;
@@ -28,6 +30,8 @@
     long long _created_timestamp;
 }
 
+@property(nonatomic) _Bool anonymous_browsing_modeIsSet; // @synthesize anonymous_browsing_modeIsSet=_anonymous_browsing_modeIsSet;
+@property(nonatomic) _Bool anonymous_browsing_mode; // @synthesize anonymous_browsing_mode=_anonymous_browsing_mode;
 @property(nonatomic) _Bool created_timestampIsSet; // @synthesize created_timestampIsSet=_created_timestampIsSet;
 @property(nonatomic) long long created_timestamp; // @synthesize created_timestamp=_created_timestamp;
 @property(nonatomic) _Bool typeIsSet; // @synthesize typeIsSet=_typeIsSet;
@@ -45,6 +49,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetAnonymous_browsing_mode;
 - (void)unsetCreated_timestamp;
 - (void)unsetType;
 - (void)unsetVersion;
@@ -56,7 +61,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 referrer_url:(id)arg2 referrer_domain:(id)arg3 version:(id)arg4 type:(id)arg5 created_timestamp:(long long)arg6;
+- (id)initWithId:(id)arg1 referrer_url:(id)arg2 referrer_domain:(id)arg3 version:(id)arg4 type:(id)arg5 created_timestamp:(long long)arg6 anonymous_browsing_mode:(_Bool)arg7;
 - (id)init;
 
 // Remaining properties

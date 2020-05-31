@@ -9,7 +9,6 @@
 @interface _TtCO6Reddit12FeedTheMeter19DonationRequestView : _TtC6Reddit15BaseOverlayView
 {
     // Error parsing type: , name: action
-    // Error parsing type: , name: isRefreshedUI
     // Error parsing type: , name: theme
 }
 

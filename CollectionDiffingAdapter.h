@@ -6,28 +6,31 @@
 
 #import <objc/NSObject.h>
 
-@class ASCollectionNode, NSArray, SerialAsyncQueue;
+@class ASCollectionNode, NSArray;
+@protocol OS_dispatch_queue, OS_dispatch_semaphore;
 
 @interface CollectionDiffingAdapter : NSObject
 {
     _Bool _didReadInitialItems;
     ASCollectionNode *_collectionNode;
     NSArray *_items;
-    SerialAsyncQueue *_serialQueue;
+    NSObject<OS_dispatch_queue> *_diffingQueue;
+    NSObject<OS_dispatch_semaphore> *_reloadSemaphore;
 }
 
 @property(nonatomic) _Bool didReadInitialItems; // @synthesize didReadInitialItems=_didReadInitialItems;
-@property(retain, nonatomic) SerialAsyncQueue *serialQueue; // @synthesize serialQueue=_serialQueue;
+@property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *reloadSemaphore; // @synthesize reloadSemaphore=_reloadSemaphore;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *diffingQueue; // @synthesize diffingQueue=_diffingQueue;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) __weak ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 - (void).cxx_destruct;
 - (id)deepCopySections:(id)arg1;
-- (id)diffChangesWithNewItems:(id)arg1 oldItems:(id)arg2;
 - (id)indexPathForDiffableItem:(id)arg1;
 - (id)itemForIndexPath:(id)arg1;
 - (void)reloadData;
 - (void)setSections:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)initWithTimeoutSeconds:(double)arg1;
+- (void)setItems:(id)arg1 section:(unsigned long long)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)setItems:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)init;
 
 @end

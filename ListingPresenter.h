@@ -8,7 +8,7 @@
 
 #import "ListingNetworkSourceDelegate-Protocol.h"
 
-@class ListingNetworkSource, NSArray, NSString, NSUUID, RedditService, _TtC6Tracer4Span, _TtC6Tracer5Trace;
+@class ListingNetworkSource, NSArray, NSString, NSUUID, RedditService, _TtC6Tracer5Trace;
 @protocol ListingPresentable;
 
 @interface ListingPresenter : NSObject <ListingNetworkSourceDelegate>
@@ -20,14 +20,12 @@
     NSArray *_currentObjects;
     unsigned long long _numPagesFetched;
     _TtC6Tracer5Trace *_activeTrace;
-    _TtC6Tracer4Span *_primaryListingFetchSpan;
     NSUUID *_fetchedCorrelationId;
 }
 
 @property(retain, nonatomic) NSUUID *fetchedCorrelationId; // @synthesize fetchedCorrelationId=_fetchedCorrelationId;
 @property(nonatomic) _Bool didProvideListingContentToListingPresentable; // @synthesize didProvideListingContentToListingPresentable=_didProvideListingContentToListingPresentable;
-@property(retain, nonatomic) _TtC6Tracer4Span *primaryListingFetchSpan; // @synthesize primaryListingFetchSpan=_primaryListingFetchSpan;
-@property(retain, nonatomic) _TtC6Tracer5Trace *activeTrace; // @synthesize activeTrace=_activeTrace;
+@property(readonly, nonatomic) _TtC6Tracer5Trace *activeTrace; // @synthesize activeTrace=_activeTrace;
 @property(nonatomic) unsigned long long numPagesFetched; // @synthesize numPagesFetched=_numPagesFetched;
 @property(copy, nonatomic) NSArray *currentObjects; // @synthesize currentObjects=_currentObjects;
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSource; // @synthesize listingNetworkSource=_listingNetworkSource;

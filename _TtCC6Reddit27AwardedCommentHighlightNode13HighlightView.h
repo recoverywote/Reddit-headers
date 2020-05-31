@@ -9,6 +9,7 @@
 @interface _TtCC6Reddit27AwardedCommentHighlightNode13HighlightView : _TtC6Reddit16ShadowBorderView
 {
     // Error parsing type: , name: bubblingTimer
+    // Error parsing type: , name: isBubbling
     // Error parsing type: , name: bubbleImage
     // Error parsing type: , name: bubbleCell
     // Error parsing type: , name: bubbleLayer

@@ -31,6 +31,7 @@
 - (void)updateProductsUsingSKProducts:(id)arg1 productsInfo:(id)arg2;
 - (void)processResponseData:(id)arg1;
 - (void)findRecommendProductForAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchDealsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetch;
 - (id)initWithService:(id)arg1;
 

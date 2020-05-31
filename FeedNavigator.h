@@ -47,6 +47,7 @@
 - (void)navigateToPrivacyInfoWithDelegate:(id)arg1;
 - (void)navigateToWebURL:(id)arg1;
 - (void)navigateToLiveEvent:(id)arg1;
+- (void)presentExitAnonymousBrowsingPopupFromSource:(unsigned long long)arg1;
 - (void)navigateToLoggedOutScreenFromSource:(unsigned long long)arg1;
 - (void)navigateToPaginatedPostDetailViewControllerFromPost:(id)arg1 withBestComment:(id)arg2 withPostDetailOptions:(id)arg3 withListingNetworkSource:(id)arg4;
 - (void)navigateToPaginatedDetailsForPost:(id)arg1 previewModeDataSource:(id)arg2;

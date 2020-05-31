@@ -28,8 +28,6 @@
 - (void).cxx_destruct;
 - (void)handleInvitationAcceptance:(_Bool)arg1;
 - (id)pageItemText;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (void)form:(id)arg1 completed:(_Bool)arg2 context:(id)arg3;
 - (void)removeModeratorUser:(id)arg1 isCurrentUser:(_Bool)arg2;
 - (void)tryRemoveUser:(id)arg1;

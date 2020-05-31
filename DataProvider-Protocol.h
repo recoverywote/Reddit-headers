@@ -7,11 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray;
-@protocol DataProviderTrace;
 
 @protocol DataProvider <NSObject>
 - (void)invalidate;
-- (void)fetchFromCurrentObjects:(NSArray *)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 trace:(id <DataProviderTrace>)arg4 completion:(void (^)(id, NSError *))arg5;
+- (void)fetchFromCurrentObjects:(NSArray *)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(void (^)(id, NSError *))arg4;
 - (NSArray *)processObjects:(NSArray *)arg1 currentCount:(long long)arg2;
 @end
 

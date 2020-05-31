@@ -12,6 +12,7 @@
 {
     _Bool _shouldShowSubredditName;
     _Bool _shouldShowModIcons;
+    _Bool _shouldShowCrowdControlLabel;
     _Bool _shouldShowAuthorFlair;
     _Bool _shouldShowLockButton;
     _Bool _shouldIgnoreLeveling;
@@ -25,6 +26,7 @@
 @property(nonatomic) _Bool shouldIgnoreLeveling; // @synthesize shouldIgnoreLeveling=_shouldIgnoreLeveling;
 @property(nonatomic) _Bool shouldShowLockButton; // @synthesize shouldShowLockButton=_shouldShowLockButton;
 @property(nonatomic) _Bool shouldShowAuthorFlair; // @synthesize shouldShowAuthorFlair=_shouldShowAuthorFlair;
+@property(nonatomic) _Bool shouldShowCrowdControlLabel; // @synthesize shouldShowCrowdControlLabel=_shouldShowCrowdControlLabel;
 @property(nonatomic) _Bool shouldShowModIcons; // @synthesize shouldShowModIcons=_shouldShowModIcons;
 @property(nonatomic) _Bool shouldShowSubredditName; // @synthesize shouldShowSubredditName=_shouldShowSubredditName;
 - (void).cxx_destruct;

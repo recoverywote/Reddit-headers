@@ -10,6 +10,6 @@
 
 @protocol RichTextTextNodeDelegate <NSObject>
 - (void)richTextTextNode:(RichTextTextNode *)arg1 didTapSpoiler:(RichTextSpoilerTextElement *)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextTextNode:(RichTextTextNode *)arg1 didTapURL:(NSURL *)arg2 atPoint:(struct CGPoint)arg3;
+- (void)richTextTextNode:(RichTextTextNode *)arg1 didTapURL:(NSURL *)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
 @end
 

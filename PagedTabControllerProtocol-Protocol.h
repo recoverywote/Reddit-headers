@@ -6,13 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class FloatingHeaderManager, NSString, UIImage, UIScrollView;
+@class FloatingHeaderManager, NSString, UIScrollView;
 
 @protocol PagedTabControllerProtocol <NSObject>
 - (NSString *)pageItemId;
 - (NSString *)pageItemText;
-- (UIImage *)pageItemSelectedImage;
-- (UIImage *)pageItemImage;
 
 @optional
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;

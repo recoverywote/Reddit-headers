@@ -18,8 +18,6 @@
 - (id)analyticsScreenViewName;
 - (void)presentModQueueViewController;
 - (void)modButtonTapped:(id)arg1;
-- (id)pageItemSelectedImage;
-- (id)pageItemImage;
 - (id)majorContentScrollView;
 - (id)pageItemText;
 - (void)viewDidLoad;

@@ -22,7 +22,7 @@
 @property(copy, nonatomic) NSString *key; // @synthesize key=_key;
 - (void).cxx_destruct;
 - (void)invalidate;
-- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 trace:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)processObjects:(id)arg1 currentCount:(long long)arg2;
 - (id)initWithCache:(id)arg1 key:(id)arg2 queryId:(id)arg3;
 

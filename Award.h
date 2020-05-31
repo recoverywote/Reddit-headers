@@ -18,14 +18,18 @@
     NSArray *_awardIcons;
     NSNumber *_coinPrice;
     NSNumber *_daysOfPremium;
+    NSNumber *_stickyDuration;
     NSString *_awardDescription;
     NSDate *_endDate;
+    NSArray *_tags;
 }
 
 + (id)awardIconsResolutionsGraphQLKeys;
 + (id)awardIconsResolutions;
+@property(readonly, nonatomic) NSArray *tags; // @synthesize tags=_tags;
 @property(readonly, nonatomic) NSDate *endDate; // @synthesize endDate=_endDate;
 @property(readonly, nonatomic) NSString *awardDescription; // @synthesize awardDescription=_awardDescription;
+@property(readonly, nonatomic) NSNumber *stickyDuration; // @synthesize stickyDuration=_stickyDuration;
 @property(readonly, nonatomic) NSNumber *daysOfPremium; // @synthesize daysOfPremium=_daysOfPremium;
 @property(readonly, nonatomic) NSNumber *coinPrice; // @synthesize coinPrice=_coinPrice;
 @property(readonly, nonatomic) NSArray *awardIcons; // @synthesize awardIcons=_awardIcons;
@@ -39,7 +43,7 @@
 - (id)mediaSourceForAwardIconSize:(long long)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 - (id)initWithData:(id)arg1;
-- (id)initWithIdentifier:(id)arg1 name:(id)arg2 awardIcons:(id)arg3 awardType:(long long)arg4 awardSubType:(long long)arg5 isNewAward:(_Bool)arg6 coinPrice:(id)arg7 daysOfPremium:(id)arg8 awardDescription:(id)arg9 endDate:(id)arg10;
+- (id)initWithIdentifier:(id)arg1 name:(id)arg2 awardIcons:(id)arg3 awardType:(long long)arg4 awardSubType:(long long)arg5 isNewAward:(_Bool)arg6 coinPrice:(id)arg7 daysOfPremium:(id)arg8 stickyDuration:(id)arg9 awardDescription:(id)arg10 endDate:(id)arg11 tags:(id)arg12;
 
 @end
 

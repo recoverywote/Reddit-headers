@@ -22,6 +22,8 @@
     // Error parsing type: , name: countLabel
     // Error parsing type: , name: placeHolderLabel
     // Error parsing type: , name: navigationSeparatorBar
+    // Error parsing type: , name: $__lazy_storage_$_saveController
+    // Error parsing type: , name: $__lazy_storage_$_saveControl
     // Error parsing type: , name: isObservingForScrollViewContentSize
     // Error parsing type: , name: scrollViewBottomConstraint
     // Error parsing type: , name: scrollViewContentSizePropertyName

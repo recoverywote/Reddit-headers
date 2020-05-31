@@ -23,12 +23,14 @@
     CommentTreeLoadMoreView *_loadMoreView;
     CommentTreeHeaderNode *_headerNode;
     CommentTreeAwardsNode *_awardsNode;
+    ASDisplayNode *_roundedHighlightNode;
     ASDisplayNode *_loadMoreNode;
     ASDisplayNode *_commandNode;
 }
 
 @property(retain, nonatomic) ASDisplayNode *commandNode; // @synthesize commandNode=_commandNode;
 @property(retain, nonatomic) ASDisplayNode *loadMoreNode; // @synthesize loadMoreNode=_loadMoreNode;
+@property(retain, nonatomic) ASDisplayNode *roundedHighlightNode; // @synthesize roundedHighlightNode=_roundedHighlightNode;
 @property(retain, nonatomic) CommentTreeAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) CommentTreeHeaderNode *headerNode; // @synthesize headerNode=_headerNode;
 @property(retain, nonatomic) CommentTreeLoadMoreView *loadMoreView; // @synthesize loadMoreView=_loadMoreView;
@@ -39,14 +41,15 @@
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 @property(retain, nonatomic) CommentTreeTextNode *textNode; // @synthesize textNode=_textNode;
 - (void).cxx_destruct;
-- (void)setupBackgroundColorForNode:(id)arg1;
-- (void)setupBackgroundColors;
+- (void)setColorToHighlightView:(id)arg1;
+- (void)updateAwardsHighlight;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)createLoadMoreNode;
 - (void)createCommandNode;
 - (void)createTextNode;
 - (void)createAwardsNodeIfNecessary;
 - (void)createHeaderNode;
+- (void)createHighlightNode;
 - (void)configureNodes;
 - (id)initWithCommentNode:(id)arg1 commentMetaViewModel:(id)arg2 styling:(id)arg3 delegate:(id)arg4 commentOptions:(id)arg5;
 

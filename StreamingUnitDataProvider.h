@@ -37,7 +37,7 @@
 - (void)fetchSubredditConfig;
 - (void)fetchPopularConfig;
 - (void)fetchHomeConfig;
-- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 trace:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)fetchFromCurrentObjects:(id)arg1 fetchingMore:(_Bool)arg2 pageSize:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)configureEarlyReturnable:(CDUnknownBlockType)arg1;
 - (void)listingDidFetch;
 - (void)registerParentDidFetchObserver;

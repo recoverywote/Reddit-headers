@@ -22,6 +22,7 @@
 - (void)navigateToSubreddit:(id)arg1;
 - (void)navigateToActionSheetWithItems:(id)arg1 fromSender:(id)arg2 delegate:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)navigateToLoggedOutPageFromSource:(unsigned long long)arg1;
+- (void)presentExitAnonymousBrowsingPopupFromSource:(unsigned long long)arg1;
 - (void)navigateToFlairPickerForSubreddit:(id)arg1 fromVC:(id)arg2;
 - (void)navigateToCommunityInfo:(id)arg1;
 - (void)navigateToSendMessageToSubredditModerator:(id)arg1;

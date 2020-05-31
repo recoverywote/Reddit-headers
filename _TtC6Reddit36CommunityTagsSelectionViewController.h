@@ -15,6 +15,7 @@
     // Error parsing type: , name: communityControllerMode
     // Error parsing type: , name: communityTagsHelper
     // Error parsing type: , name: community
+    // Error parsing type: , name: currentCommunityTag
     // Error parsing type: , name: selectedTag
     // Error parsing type: , name: tags
     // Error parsing type: , name: listing
@@ -25,6 +26,8 @@
     // Error parsing type: , name: tableView
     // Error parsing type: , name: continueControl
     // Error parsing type: , name: navigationSeparatorBar
+    // Error parsing type: , name: $__lazy_storage_$_saveController
+    // Error parsing type: , name: $__lazy_storage_$_saveControl
 }
 
 - (void).cxx_destruct;

@@ -6,17 +6,17 @@
 
 #import <RedditUI/BaseButton.h>
 
-#import "ObjectObserverProtocol-Protocol.h"
-
-@class CaptureButtonListItem, NSString;
+@class CaptureButtonListItem, KeyValueObservation;
 @protocol CaptureButtonListButtonDelegate;
 
-@interface CaptureButtonListButton : BaseButton <ObjectObserverProtocol>
+@interface CaptureButtonListButton : BaseButton
 {
     CaptureButtonListItem *_buttonData;
     id <CaptureButtonListButtonDelegate> _delegate;
+    KeyValueObservation *_selectionObservation;
 }
 
+@property(retain, nonatomic) KeyValueObservation *selectionObservation; // @synthesize selectionObservation=_selectionObservation;
 @property(nonatomic) __weak id <CaptureButtonListButtonDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) CaptureButtonListItem *buttonData; // @synthesize buttonData=_buttonData;
 - (void).cxx_destruct;
@@ -24,20 +24,12 @@
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
 - (void)didTap:(id)arg1;
-- (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)setSelected:(_Bool)arg1;
 - (void)layoutSubviews;
 - (void)configureLabelText;
 - (void)sizeToFit;
-- (void)dealloc;
 - (id)initWithFrame:(struct CGRect)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 
