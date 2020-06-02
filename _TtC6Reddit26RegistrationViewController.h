@@ -15,6 +15,7 @@
     // Error parsing type: , name: confirmationInputAccessoryView
     // Error parsing type: , name: confirmationButton
     // Error parsing type: , name: accountManager
+    // Error parsing type: , name: accountContext
 }
 
 - (void).cxx_destruct;
@@ -28,9 +29,10 @@
 - (void)emailFieldTextChangedWithSender:(id)arg1;
 - (void)passwordFieldTextChangedWithSender:(id)arg1;
 - (void)usernameFieldTextChangedWithSender:(id)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountManager:(id)arg1 rui:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 

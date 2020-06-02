@@ -63,7 +63,7 @@
 - (void)themeDidChange:(id)arg1;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
+- (void)richTextDisplayNode:(id)arg1 richTextTextNode:(id)arg2 didTapURL:(id)arg3 atPoint:(struct CGPoint)arg4 atRange:(struct _NSRange)arg5;
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;

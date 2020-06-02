@@ -13,7 +13,11 @@
     // Error parsing type: , name: commentNode
     // Error parsing type: , name: delegate
     // Error parsing type: , name: isReadMoreEnabled
+    // Error parsing type: , name: subredditMentionsHandler
     // Error parsing type: , name: readMoreButtonNode
+    // Error parsing type: , name: viewContext
+    // Error parsing type: , name: gradientBackgroundColor
+    // Error parsing type: , name: originalGradientBackgroundColor
     // Error parsing type: , name: gradientNode
     // Error parsing type: , name: $__lazy_storage_$_textNode
 }
@@ -21,7 +25,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
-- (id)initWithCommentNode:(id)arg1 isReadMoreEnabled:(_Bool)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 commentNode:(id)arg2 isReadMoreEnabled:(_Bool)arg3 subredditMentionsHandler:(id)arg4 delegate:(id)arg5;
 @property(nonatomic, retain) CommentTreeNode *commentNode; // @synthesize commentNode;
 
 @end

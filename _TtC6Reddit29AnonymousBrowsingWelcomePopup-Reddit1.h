@@ -7,6 +7,7 @@
 #import "_TtC6Reddit29AnonymousBrowsingWelcomePopup.h"
 
 @interface _TtC6Reddit29AnonymousBrowsingWelcomePopup (Reddit1)
+- (_Bool)isInAnonymousBrowsing;
 - (_Bool)shouldBlurBackground;
 - (_Bool)shouldDismissWhenDimmerTapped;
 - (double)preferredPopupHeightForWidth:(double)arg1;

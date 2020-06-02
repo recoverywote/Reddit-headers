@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)saveImageToPhotos:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
++ (void)saveImageToPhotosWithAccountContext:(id)arg1 image:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import "TemplateParserContext-Protocol.h"
 
-@class Account, ChatNetworkManager, DiscoveryUnitFetcher, MetaCommunityInfo, NSArray, NSString, RedditService, Subreddit;
+@class Account, ChatNetworkManager, DiscoveryUnitFetcher, MetaCommunityInfo, NSArray, NSString, RedditService, Subreddit, SubredditPowerupsInfo;
 @protocol AccountContext, SubredditPagePresentable;
 
 @interface SubredditPagePresenter : NSObject <TemplateParserContext>
@@ -22,6 +22,7 @@
     NSArray *_channels;
     unsigned long long _modPermissions;
     MetaCommunityInfo *_metaCommunityInfo;
+    SubredditPowerupsInfo *_powerupsInfo;
     unsigned long long _feedSort;
     unsigned long long _feedRange;
     DiscoveryUnitFetcher *_discoveryUnitFetcher;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) DiscoveryUnitFetcher *discoveryUnitFetcher; // @synthesize discoveryUnitFetcher=_discoveryUnitFetcher;
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
 @property(nonatomic) unsigned long long feedSort; // @synthesize feedSort=_feedSort;
+@property(retain, nonatomic) SubredditPowerupsInfo *powerupsInfo; // @synthesize powerupsInfo=_powerupsInfo;
 @property(retain, nonatomic) MetaCommunityInfo *metaCommunityInfo; // @synthesize metaCommunityInfo=_metaCommunityInfo;
 @property(nonatomic) _Bool isFetchingSubreddit; // @synthesize isFetchingSubreddit=_isFetchingSubreddit;
 @property(nonatomic) _Bool isModPermissionsFetched; // @synthesize isModPermissionsFetched=_isModPermissionsFetched;

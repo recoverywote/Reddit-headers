@@ -53,7 +53,7 @@
 - (void)createNodes;
 - (void)configureTopPostLabelNode;
 - (void)configureNodes;
-- (_Bool)isInactiveCommunityExperimentEnabled;
+- (_Bool)isFeedbackEnabled;
 - (id)initWithFocusVerticalsDiscoveryUnitViewModel:(id)arg1 viewContext:(id)arg2 options:(id)arg3 delegate:(id)arg4;
 
 // Remaining properties

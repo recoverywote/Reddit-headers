@@ -14,6 +14,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)initWithGid:(id)arg1;
 
 @end
 

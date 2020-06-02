@@ -15,7 +15,6 @@
 @interface ChatInputAccessoryView : UIInputView <UITextViewDelegate, _TtP6Reddit43ChatInputAccessoryParentCommentViewDelegate_>
 {
     _Bool _enableAwards;
-    _Bool _shouldUseNewAwardButton;
     CDUnknownBlockType _sendButtonAction;
     CDUnknownBlockType _closeButtonAction;
     CDUnknownBlockType _inputAccessoryHeightChange;
@@ -42,7 +41,6 @@
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool shouldUseNewAwardButton; // @synthesize shouldUseNewAwardButton=_shouldUseNewAwardButton;
 @property(retain, nonatomic) NSLayoutConstraint *awardButtonTrailingConstraint; // @synthesize awardButtonTrailingConstraint=_awardButtonTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *awardButtonMaxWidthConstraint; // @synthesize awardButtonMaxWidthConstraint=_awardButtonMaxWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *awardButtonMinWidthConstraint; // @synthesize awardButtonMinWidthConstraint=_awardButtonMinWidthConstraint;
@@ -96,7 +94,7 @@
 - (void)configureColors;
 - (void)sharedInit;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2 inputViewStyle:(long long)arg3 accessoryStyle:(unsigned long long)arg4 withNewAwardButton:(_Bool)arg5;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2 inputViewStyle:(long long)arg3 accessoryStyle:(unsigned long long)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

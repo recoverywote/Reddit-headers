@@ -23,7 +23,7 @@
 - (double)commentHeaderViewWidth;
 - (double)commentViewIndentPaddingEachLevel;
 - (double)commentViewWidth;
-- (double)feedPostDetailViewCommentsBarViewHeight;
+- (double)theatreModeCommentBarViewHeight;
 - (double)feedPostCommentsBarViewHeight;
 - (struct CGSize)feedPostHlsVideoViewSize;
 - (struct CGSize)feedPostVideoViewSize;

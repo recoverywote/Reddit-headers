@@ -6,10 +6,7 @@
 
 #import "_TtC6Reddit21CommunityAvatarPicker.h"
 
-#import "UIImagePickerControllerDelegate-Protocol.h"
-#import "UINavigationControllerDelegate-Protocol.h"
-
-@interface _TtC6Reddit21CommunityAvatarPicker (Reddit) <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface _TtC6Reddit21CommunityAvatarPicker (Reddit)
 - (void)imagePickerControllerDidCancel:(id)arg1;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
 @end

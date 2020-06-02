@@ -17,6 +17,7 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (id)placeHolderImage;
 - (id)pillAttributedStringForAttributes:(id)arg1 pillTextBuilder:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
+- (id)subredditWithSubredditStore:(id)arg1;
 - (id)prefix;
 - (id)initWithSubreddit:(id)arg1;
 

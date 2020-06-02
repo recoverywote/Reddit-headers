@@ -7,12 +7,14 @@
 #import <RedditUI/BaseView.h>
 
 @class BaseImageView, FeedPostHlsVideoView;
+@protocol ViewContext;
 
 @interface CommentsHeaderView : BaseView
 {
     _Bool _hasLoadedOnce;
     _Bool _isPanning;
     FeedPostHlsVideoView *_feedPostHlsVideoView;
+    id <ViewContext> _viewContext;
     BaseImageView *_headerImageView;
     BaseImageView *_topGradientView;
     BaseView *_headerOverlayView;
@@ -25,6 +27,7 @@
 @property(retain, nonatomic) BaseView *headerOverlayView; // @synthesize headerOverlayView=_headerOverlayView;
 @property(retain, nonatomic) BaseImageView *topGradientView; // @synthesize topGradientView=_topGradientView;
 @property(retain, nonatomic) BaseImageView *headerImageView; // @synthesize headerImageView=_headerImageView;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) FeedPostHlsVideoView *feedPostHlsVideoView; // @synthesize feedPostHlsVideoView=_feedPostHlsVideoView;
 @property(nonatomic) _Bool hasLoadedOnce; // @synthesize hasLoadedOnce=_hasLoadedOnce;
 - (double)topPadding;
@@ -32,8 +35,8 @@
 - (void)updateWithPercentDisplayed:(double)arg1;
 - (void)useBackgroundColorFromPost:(id)arg1 forView:(id)arg2;
 - (void)refreshStylingWithPost:(id)arg1;
-- (void)configureWithPost:(id)arg1 withFeedPostOptions:(id)arg2;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)configureWithPost:(id)arg1 feedPostOptions:(id)arg2;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

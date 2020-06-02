@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, AccountManager, AnalyticsManager, ExperimentManager, RUI, RedditService, VisibilityTracker, _TtC6Reddit20AnonymousModeManager;
+@class Account, AccountManager, AdEventsManager, AnalyticsManager, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService;
 @protocol ViewContext;
 
 @interface _TtC6Reddit20RedditAccountContext : NSObject
@@ -16,16 +16,22 @@
     // Error parsing type: , name: rui
     // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: visibilityTracker
+    // Error parsing type: , name: identityProviderService
     // Error parsing type: , name: anonymousModeManager
 }
 
 - (void).cxx_destruct;
 - (id)init;
+@property(nonatomic, readonly) AdEventsManager *adEventsManager;
+@property(nonatomic, readonly) SubredditManager *subredditManager;
+@property(nonatomic, readonly) GivenAwardsManager *givenAwardsManager;
+@property(nonatomic, readonly) LegacyExperimentManager *legacyExperimentManager;
 @property(nonatomic, readonly) ExperimentManager *experimentManager;
 @property(nonatomic, readonly) Account *account;
 @property(nonatomic, readonly) id <ViewContext> viewContext;
-- (id)initWithAccountManager:(id)arg1 anonymousModeManager:(id)arg2 redditService:(id)arg3 rui:(id)arg4 analyticsManager:(id)arg5 visibilityTracker:(id)arg6;
+- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 analyticsManager:(id)arg4 visibilityTracker:(id)arg5 identityProviderService:(id)arg6 anonymousModeManager:(id)arg7;
 @property(nonatomic, readonly) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager;
+@property(nonatomic, readonly) _TtC6Reddit23IdentityProviderService *identityProviderService; // @synthesize identityProviderService;
 @property(nonatomic, readonly) VisibilityTracker *visibilityTracker; // @synthesize visibilityTracker;
 @property(nonatomic, readonly) AnalyticsManager *analyticsManager; // @synthesize analyticsManager;
 @property(nonatomic, readonly) RUI *rui; // @synthesize rui;

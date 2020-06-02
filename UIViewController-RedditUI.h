@@ -9,7 +9,10 @@
 @interface UIViewController (RedditUI)
 - (void)fullyRemoveFromParent;
 - (void)rui_fullyAddChildViewController:(id)arg1;
+- (unsigned long long)redditSupportedInterfaceOrientations;
+- (long long)redditPreferredStatusBarStyleFor:(id)arg1;
 - (void)popViewControllerWithAnimation;
+- (id)presentBottomSheetWith:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)installNavigationBarBackdropView:(id)arg1;
 @end
 

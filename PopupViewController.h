@@ -9,11 +9,13 @@
 #import "PopupViewControllerProtocol-Protocol.h"
 
 @class BaseButton, BaseLabel, BaseView, NSArray, NSString, UIStackView;
+@protocol AccountContext;
 
 @interface PopupViewController : BaseViewController <PopupViewControllerProtocol>
 {
     _Bool _disableDismissingByTappingOutsideContent;
     _Bool _shouldBlurBackground;
+    id <AccountContext> _accountContext;
     BaseView *_contentView;
     long long _bottomButtonsAxis;
     BaseButton *_closeButton;
@@ -35,11 +37,13 @@
 @property(nonatomic) _Bool shouldBlurBackground; // @synthesize shouldBlurBackground=_shouldBlurBackground;
 @property(nonatomic) _Bool disableDismissingByTappingOutsideContent; // @synthesize disableDismissingByTappingOutsideContent=_disableDismissingByTappingOutsideContent;
 @property(readonly, nonatomic) BaseView *contentView; // @synthesize contentView=_contentView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (_Bool)isInAnonymousBrowsing;
 - (_Bool)shouldDismissWhenDimmerTapped;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
-- (id)initWithContentView:(id)arg1 bottomButtons:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 contentView:(id)arg2 bottomButtons:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

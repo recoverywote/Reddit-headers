@@ -8,11 +8,12 @@
 
 #import "REDSearchBarDelegate-Protocol.h"
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
+#import "_TtP6Reddit35CommunityTabViewControllerInterface_-Protocol.h"
 
-@class CommunitiesViewController, CustomFeedsListViewController, NSArray, NSString, REDSearchBar, RedditService, SearchBarTransition;
+@class CommunitiesViewController, CustomFeedsListViewController, NSArray, NSString, NSURL, REDSearchBar, RedditService, SearchBarTransition;
 @protocol AccountContext;
 
-@interface CommunityTabViewController : PagedTabViewController <REDSearchBarDelegate, UIViewControllerTransitioningDelegate>
+@interface CommunityTabViewController : PagedTabViewController <REDSearchBarDelegate, UIViewControllerTransitioningDelegate, _TtP6Reddit35CommunityTabViewControllerInterface_>
 {
     id <AccountContext> _accountContext;
     CommunitiesViewController *_communitiesController;
@@ -29,7 +30,7 @@
 @property(retain, nonatomic) CustomFeedsListViewController *customFeedsViewController; // @synthesize customFeedsViewController=_customFeedsViewController;
 @property(retain, nonatomic) CommunitiesViewController *communitiesController; // @synthesize communitiesController=_communitiesController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-- (id)analyticsPageType;
+@property(readonly, nonatomic) NSString *analyticsPageType;
 - (void)setFocusToSearchBar;
 - (_Bool)searchBarShouldBeginEditing:(id)arg1;
 - (id)majorContentView;
@@ -39,9 +40,14 @@
 - (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
+@property(copy, nonatomic) NSString *analyticsReason;
+@property(copy, nonatomic) NSURL *analyticsReferringURL;
+@property(readonly, nonatomic) NSString *analyticsScreenViewName;
+@property(copy, nonatomic) NSString *analyticsSource;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) _Bool screenViewLoggingEnabled;
 @property(readonly) Class superclass;
 
 @end

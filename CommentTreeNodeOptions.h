@@ -17,7 +17,6 @@
     _Bool _shouldIgnoreLeveling;
     _Bool _shouldHighlightBackground;
     _Bool _shouldShowOverlay;
-    _Bool _shouldShowNewUI;
     _Bool _shouldHighlightBasedOnAwards;
     _Bool _shouldShowHighlightedAwardAnimation;
     CommentTreeNodeHeaderOptions *_headerOptions;
@@ -28,7 +27,6 @@
 - (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowHighlightedAwardAnimation; // @synthesize shouldShowHighlightedAwardAnimation=_shouldShowHighlightedAwardAnimation;
 @property(nonatomic) _Bool shouldHighlightBasedOnAwards; // @synthesize shouldHighlightBasedOnAwards=_shouldHighlightBasedOnAwards;
-@property(nonatomic) _Bool shouldShowNewUI; // @synthesize shouldShowNewUI=_shouldShowNewUI;
 @property(nonatomic) _Bool shouldShowOverlay; // @synthesize shouldShowOverlay=_shouldShowOverlay;
 @property(nonatomic) _Bool shouldHighlightBackground; // @synthesize shouldHighlightBackground=_shouldHighlightBackground;
 @property(nonatomic) _Bool shouldIgnoreLeveling; // @synthesize shouldIgnoreLeveling=_shouldIgnoreLeveling;

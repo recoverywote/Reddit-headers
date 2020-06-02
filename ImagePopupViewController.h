@@ -9,7 +9,7 @@
 #import "AttributedLabelRegularDelegate-Protocol.h"
 
 @class AttributedLabelRegular, BaseButton, ImagePopupContentView, NSString;
-@protocol AccountContext, ImagePopupViewControllerActiveDelegate, ImagePopupViewControllerDelegate;
+@protocol ImagePopupViewControllerActiveDelegate, ImagePopupViewControllerDelegate;
 
 @interface ImagePopupViewController : PopupViewController <AttributedLabelRegularDelegate>
 {
@@ -19,22 +19,20 @@
     BaseButton *_confirmButton;
     BaseButton *_cancelButton;
     BaseButton *_activeButton;
-    id <AccountContext> _accountContext;
 }
 
 + (id)awardDetailsInfoDialogMetadataViewForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
-+ (id)inAppPurchasePopupWithImage:(id)arg1 title:(id)arg2 message:(id)arg3 confirmText:(id)arg4 cancelText:(id)arg5 actionHandler:(CDUnknownBlockType)arg6;
-+ (id)cancelPremiumOfferDialogWithActionHandler:(CDUnknownBlockType)arg1;
-+ (id)awardDetailsInfoDialogForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
-+ (id)gildingFailureAfterPurchaseDialogWithActionHandler:(CDUnknownBlockType)arg1;
-+ (id)inAppPurchaseValidationErrorDialogForPackageType:(long long)arg1 actionHandler:(CDUnknownBlockType)arg2;
-+ (id)inAppPurchaseValidationErrorDialogForGildingTarget:(unsigned long long)arg1 actionHandler:(CDUnknownBlockType)arg2;
-+ (id)inAppPurchaseTransactionDeferredDialogForTarget:(unsigned long long)arg1 actionHandler:(CDUnknownBlockType)arg2;
-+ (id)inAppPurchaseTransactionInFlightDialogForProductDescription:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
-+ (id)inAppPurchaseTransactionInFlightDialogForProduct:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
++ (id)inAppPurchasePopupWithAccountContext:(id)arg1 image:(id)arg2 title:(id)arg3 message:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6 actionHandler:(CDUnknownBlockType)arg7;
++ (id)cancelPremiumOfferDialogWithAccountContext:(id)arg1 offer:(id)arg2 actionHandler:(CDUnknownBlockType)arg3;
++ (id)awardDetailsInfoDialogWithAccountContext:(id)arg1 award:(id)arg2 gildingTarget:(unsigned long long)arg3 subreddit:(id)arg4;
++ (id)gildingFailureAfterPurchaseDialogWithAccountContext:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
++ (id)inAppPurchaseValidationErrorDialogWithAccountContext:(id)arg1 packageType:(long long)arg2 actionHandler:(CDUnknownBlockType)arg3;
++ (id)inAppPurchaseValidationErrorDialogWithAccountContext:(id)arg1 gildingTarget:(unsigned long long)arg2 actionHandler:(CDUnknownBlockType)arg3;
++ (id)inAppPurchaseTransactionDeferredDialogWithAccountContext:(id)arg1 target:(unsigned long long)arg2 actionHandler:(CDUnknownBlockType)arg3;
++ (id)inAppPurchaseTransactionInFlightDialogWithAccountContext:(id)arg1 productDescription:(id)arg2 actionHandler:(CDUnknownBlockType)arg3;
++ (id)inAppPurchaseTransactionInFlightDialogWithAccountContext:(id)arg1 product:(id)arg2 actionHandler:(CDUnknownBlockType)arg3;
 + (id)roadblockForRoadblockViewModel:(id)arg1;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) BaseButton *activeButton; // @synthesize activeButton=_activeButton;
 @property(retain, nonatomic) BaseButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) BaseButton *confirmButton; // @synthesize confirmButton=_confirmButton;
@@ -48,13 +46,13 @@
 - (void)didTapCancelButton:(id)arg1;
 - (void)didTapConfirmButton:(id)arg1;
 - (void)didTapCloseButton:(id)arg1;
-- (id)initWithTitle:(id)arg1 animatedImageURL:(id)arg2 placeholderImage:(id)arg3 attributedBody:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6 metadataView:(id)arg7;
-- (id)initWithTitle:(id)arg1 image:(id)arg2 body:(id)arg3 confirmText:(id)arg4 activeText:(id)arg5 bottomStackViewAxis:(long long)arg6 accountContext:(id)arg7;
-- (id)initWithTitle:(id)arg1 imageURL:(id)arg2 placeholderImage:(id)arg3 attributedBody:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6 metadataView:(id)arg7;
-- (id)initWithTitle:(id)arg1 image:(id)arg2 attributedBody:(id)arg3 confirmText:(id)arg4 cancelText:(id)arg5;
-- (id)initWithTitle:(id)arg1 image:(id)arg2 body:(id)arg3 confirmText:(id)arg4 cancelText:(id)arg5;
-- (id)initWithImagePopupView:(id)arg1 confirmText:(id)arg2 activeText:(id)arg3;
-- (id)initWithImagePopupView:(id)arg1 confirmText:(id)arg2 cancelText:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 animatedImageURL:(id)arg3 placeholderImage:(id)arg4 attributedBody:(id)arg5 confirmText:(id)arg6 cancelText:(id)arg7 metadataView:(id)arg8;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 image:(id)arg3 body:(id)arg4 confirmText:(id)arg5 activeText:(id)arg6 bottomStackViewAxis:(long long)arg7;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 imageURL:(id)arg3 placeholderImage:(id)arg4 attributedBody:(id)arg5 confirmText:(id)arg6 cancelText:(id)arg7 metadataView:(id)arg8;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 image:(id)arg3 attributedBody:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 image:(id)arg3 body:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6;
+- (id)initWithAccountContext:(id)arg1 imagePopupView:(id)arg2 confirmText:(id)arg3 activeText:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 imagePopupView:(id)arg2 confirmText:(id)arg3 cancelText:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

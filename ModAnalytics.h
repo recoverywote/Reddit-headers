@@ -21,6 +21,7 @@
 + (void)modModeLockComment:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
 + (void)modModeSpamComment:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
 + (void)modModeRemoveComment:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
++ (void)modModeUncollapseComment:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
 + (void)modModeApproveComment:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
 + (void)modModeUndistinguishPost:(id)arg1 subreddit:(id)arg2;
 + (void)modModeDistinguishPost:(id)arg1 subreddit:(id)arg2;

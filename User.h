@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <RedditCore/ObservableObject.h>
+#import <objc/NSObject.h>
 
 #import <RedditCore/BaseModel-Protocol.h>
 #import <RedditCore/NSSecureCoding-Protocol.h>
 
 @class NSDate, NSString, Subreddit;
 
-@interface User : ObservableObject <BaseModel, NSSecureCoding>
+@interface User : NSObject <BaseModel, NSSecureCoding>
 {
     _Bool _hasPremium;
     _Bool _isVerified;
@@ -24,6 +24,8 @@
     NSDate *_createdAt;
     long long _commentKarma;
     long long _linkKarma;
+    long long _awarderKarma;
+    long long _awardeeKarma;
     Subreddit *_subreddit;
     long long _totalKarma;
 }
@@ -40,6 +42,8 @@
 @property(nonatomic) _Bool isSubscribed; // @synthesize isSubscribed=_isSubscribed;
 @property(nonatomic) _Bool isVerified; // @synthesize isVerified=_isVerified;
 @property(nonatomic) _Bool hasPremium; // @synthesize hasPremium=_hasPremium;
+@property(nonatomic) long long awardeeKarma; // @synthesize awardeeKarma=_awardeeKarma;
+@property(nonatomic) long long awarderKarma; // @synthesize awarderKarma=_awarderKarma;
 @property(nonatomic) long long linkKarma; // @synthesize linkKarma=_linkKarma;
 @property(nonatomic) long long commentKarma; // @synthesize commentKarma=_commentKarma;
 @property(retain, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
@@ -54,6 +58,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (void)configureWithUserData:(id)arg1;
+- (void)configureWithGraphQLData:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithPk:(id)arg1;
 

@@ -8,45 +8,48 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ASDisplayNode, ASTextNode, AwardingTotal, Comment, NSArray, NSDictionary, NSString, _TtC6Reddit17AwardingTotalNode;
+@class ASDisplayNode, ASTextNode, AwardingTotal, Comment, NSArray, NSDictionary, NSString, _TtC7Economy17AwardingTotalNode;
+@protocol ViewContext;
 
 @interface CommentAwardsNode : BaseFeedDisplayNode <ObjectObserverProtocol>
 {
     _Bool _shouldAnimateLastGivenAward;
+    id <ViewContext> _viewContext;
     Comment *_comment;
     AwardingTotal *_firstModeratorAwardingTotal;
     NSArray *_otherAwardingTotals;
-    _TtC6Reddit17AwardingTotalNode *_firstModAwardNode;
+    _TtC7Economy17AwardingTotalNode *_firstModAwardNode;
     NSArray *_otherAwardNodes;
     NSDictionary *_otherAwardNodeByAwardId;
     ASTextNode *_totalCountNode;
     ASDisplayNode *_awardsBackgroundNode;
 }
 
-+ (double)estimatedHeightForComment:(id)arg1;
++ (double)estimatedHeightForComment:(id)arg1 viewContext:(id)arg2;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool shouldAnimateLastGivenAward; // @synthesize shouldAnimateLastGivenAward=_shouldAnimateLastGivenAward;
 @property(retain, nonatomic) ASDisplayNode *awardsBackgroundNode; // @synthesize awardsBackgroundNode=_awardsBackgroundNode;
 @property(retain, nonatomic) ASTextNode *totalCountNode; // @synthesize totalCountNode=_totalCountNode;
 @property(retain, nonatomic) NSDictionary *otherAwardNodeByAwardId; // @synthesize otherAwardNodeByAwardId=_otherAwardNodeByAwardId;
 @property(retain, nonatomic) NSArray *otherAwardNodes; // @synthesize otherAwardNodes=_otherAwardNodes;
-@property(retain, nonatomic) _TtC6Reddit17AwardingTotalNode *firstModAwardNode; // @synthesize firstModAwardNode=_firstModAwardNode;
+@property(retain, nonatomic) _TtC7Economy17AwardingTotalNode *firstModAwardNode; // @synthesize firstModAwardNode=_firstModAwardNode;
 @property(retain, nonatomic) NSArray *otherAwardingTotals; // @synthesize otherAwardingTotals=_otherAwardingTotals;
 @property(retain, nonatomic) AwardingTotal *firstModeratorAwardingTotal; // @synthesize firstModeratorAwardingTotal=_firstModeratorAwardingTotal;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)layoutDidFinish;
 - (void)didExitHierarchy;
 - (void)didEnterHierarchy;
-@property(readonly, nonatomic) _TtC6Reddit17AwardingTotalNode *awardingTotalNodeForLastGivenAward;
+@property(readonly, nonatomic) _TtC7Economy17AwardingTotalNode *awardingTotalNodeForLastGivenAward;
 - (void)processAwardingCompleteNotification:(id)arg1;
 - (void)configureTotalCountTextNode;
 - (void)configureOtherAwardsNode;
 - (void)configureFirstModAwardNode;
 - (void)configureNodes;
 - (void)dealloc;
-- (id)initWithComment:(id)arg1;
+- (id)initWithComment:(id)arg1 viewContext:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

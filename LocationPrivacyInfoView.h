@@ -9,11 +9,12 @@
 #import "AttributedLabelRegularDelegate-Protocol.h"
 
 @class AttributedLabelRegular, BaseButton, BaseImageView, BaseLabel, NSObject, NSString;
-@protocol LocationPrivacyInfoViewDelegate;
+@protocol LocationPrivacyInfoViewDelegate, ViewContext;
 
 @interface LocationPrivacyInfoView : BaseView <AttributedLabelRegularDelegate>
 {
     NSObject<LocationPrivacyInfoViewDelegate> *_delegate;
+    id <ViewContext> _viewContext;
     BaseLabel *_titleLabel;
     BaseImageView *_iconView;
     AttributedLabelRegular *_descriptionLabel;
@@ -25,11 +26,12 @@
 @property(retain, nonatomic) AttributedLabelRegular *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak NSObject<LocationPrivacyInfoViewDelegate> *delegate; // @synthesize delegate=_delegate;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)locationRequested;
 - (id)privacyDescriptionText;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 - (id)privacyURL;
 
 // Remaining properties

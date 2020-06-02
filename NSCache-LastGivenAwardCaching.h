@@ -6,7 +6,7 @@
 
 #import <Foundation/NSCache.h>
 
-#import "LastGivenAwardCaching-Protocol.h"
+#import <Economy/LastGivenAwardCaching-Protocol.h>
 
 @class NSString;
 

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "InAppPurchaseReceiptLoading-Protocol.h"
+#import <Economy/InAppPurchaseReceiptLoading-Protocol.h>
 
 @class NSString;
 

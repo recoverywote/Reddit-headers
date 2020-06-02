@@ -6,7 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
+@protocol AccountContext;
+
 @protocol RootViewControllerDelegate <NSObject>
+- (void)configureWithAccountContext:(id <AccountContext>)arg1;
 - (void)rootViewControllerDidInstallNewMainTabBar;
 - (void)showPushNotificationPromptIfNeededWithCompletion:(void (^)(void))arg1;
 - (void)refreshConfig;

@@ -22,11 +22,12 @@
 #import "_TtP6Reddit27CommentComposerViewDelegate_-Protocol.h"
 #import "_TtP8RedditUI25RUIRefreshControlDelegate_-Protocol.h"
 
-@class ASCollectionNode, ChatPostViewController, CollectionDiffingAdapter, CommentAdPostDelegator, FeedPostCommentBarNode, FeedPostDetailDelegator, NSString, NSURL, NextCommentButtonInteractor, Post, PostDetailDelegator, PostDetailFloatingCommandBarInteractor, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailNavigationItemHandler, PostDetailNavigator, PostDetailPresenter, RoadblockCoordinator, UICollectionView, _TtC6Reddit20SubredditDisplayView, _TtC6Reddit29CommentComposerViewController;
+@class ASCollectionNode, ChatPostViewController, CollectionDiffingAdapter, CommentAdPostDelegator, FeedPostCommentBarNode, FeedPostDetailDelegator, NSString, NSURL, NextCommentButtonInteractor, Post, PostDetailDelegator, PostDetailFloatingCommandBarInteractor, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailNavigationItemHandler, PostDetailNavigator, PostDetailPresenter, RoadblockCoordinator, UICollectionView, _TtC6Reddit20SubredditDisplayView, _TtC6Reddit27EditUsernameFlowCoordinator, _TtC6Reddit29CommentComposerViewController;
 
 @interface PostDetailViewController : BaseViewController <ASCollectionDataSource, ASCollectionDelegate, PostDetailPresenterDelegate, NextCommentButtonInteractorDelegate, PostDetailHeaderViewControllerDelegate, RoadblockCoordinatorDelegate, RequestToNavigateView, ListingPresentable, _TtP8RedditUI25RUIRefreshControlDelegate_, _TtP6Reddit27CommentComposerViewDelegate_, ObjectObserverProtocol, PreviewModeDelegate, CommentComposeViewControllerDelegate, FlairSelectionSourceViewProtocol, DeeplinkProtocol>
 {
     _Bool _previewModeEnabled;
+    _Bool _isAutoCollapsedFromCrowdControl;
     _Bool _linkedFromCarousel;
     PostDetailPresenter *_postDetailPresenter;
     PostDetailNavigationItemHandler *_navigationItemHandler;
@@ -46,6 +47,7 @@
     NextCommentButtonInteractor *_nextCommentInteractor;
     RoadblockCoordinator *_roadblockCoordinator;
     ChatPostViewController *_chatPostViewController;
+    _TtC6Reddit27EditUsernameFlowCoordinator *_editUsernameFlowCoordinator;
 }
 
 + (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 postCollection:(id)arg3 modifiedOptions:(id)arg4;
@@ -56,6 +58,7 @@
 + (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 comment:(id)arg3 options:(id)arg4;
 + (id)postDetailViewControllerWithAccountContext:(id)arg1 post:(id)arg2 options:(id)arg3;
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit27EditUsernameFlowCoordinator *editUsernameFlowCoordinator; // @synthesize editUsernameFlowCoordinator=_editUsernameFlowCoordinator;
 @property(retain, nonatomic) ChatPostViewController *chatPostViewController; // @synthesize chatPostViewController=_chatPostViewController;
 @property(retain, nonatomic) RoadblockCoordinator *roadblockCoordinator; // @synthesize roadblockCoordinator=_roadblockCoordinator;
 @property(retain, nonatomic) NextCommentButtonInteractor *nextCommentInteractor; // @synthesize nextCommentInteractor=_nextCommentInteractor;
@@ -72,6 +75,7 @@
 @property(retain, nonatomic) PostDetailDelegator *delegator; // @synthesize delegator=_delegator;
 @property(retain, nonatomic) CollectionDiffingAdapter *diffingAdapter; // @synthesize diffingAdapter=_diffingAdapter;
 @property(nonatomic) _Bool linkedFromCarousel; // @synthesize linkedFromCarousel=_linkedFromCarousel;
+@property(nonatomic) _Bool isAutoCollapsedFromCrowdControl; // @synthesize isAutoCollapsedFromCrowdControl=_isAutoCollapsedFromCrowdControl;
 @property(nonatomic) _Bool previewModeEnabled; // @synthesize previewModeEnabled=_previewModeEnabled;
 @property(nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 @property(retain, nonatomic) PostDetailNavigationItemHandler *navigationItemHandler; // @synthesize navigationItemHandler=_navigationItemHandler;
@@ -104,6 +108,7 @@
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)commentComposeViewController:(id)arg1 didFinishWithSuccess:(_Bool)arg2 editedItem:(id)arg3;
 - (void)commentComposeViewController:(id)arg1 didFinishWithSuccess:(_Bool)arg2 newItem:(id)arg3;
+- (void)presentPowerupsMarketingSheetWithPreselectedBenefit:(long long)arg1;
 - (void)commentingOnCommentTreeNode:(id)arg1 previousCommentTreeNode:(id)arg2;
 - (_Bool)willPresentCommentComposer;
 - (void)commentComposerAdjustedHeightWithNewHeight:(double)arg1;
@@ -113,7 +118,8 @@
 - (void)didFinishCommentComposeWithSuccess:(_Bool)arg1 newItem:(id)arg2 inReplyToComment:(id)arg3;
 - (void)postDetailPresenterDidTapComment:(id)arg1;
 @property(readonly, nonatomic) _Bool isSingleCommentThread;
-- (void)presentAddCommentModal;
+- (void)showCommentComposeViewController:(long long)arg1;
+- (void)presentAddCommentModal:(long long)arg1;
 - (void)collectionNode:(id)arg1 willDisplayItemWithNode:(id)arg2;
 - (void)collectionNode:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (CDStruct_90e057aa)collectionNode:(id)arg1 constrainedSizeForItemAtIndexPath:(id)arg2;
@@ -148,6 +154,7 @@
 - (void)configureChatPostViewController;
 - (void)attemptConfigurationOfChatView;
 - (void)editCommentTreeNode:(id)arg1;
+- (void)showReplyComposerWithCommentTreeNode:(id)arg1;
 - (void)replyToCommentTreeNode:(id)arg1;
 - (void)configureFooterView;
 - (void)configureHeaderView;

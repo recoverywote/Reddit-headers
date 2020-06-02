@@ -47,6 +47,7 @@
 - (_Bool)canShowNotificationPermissionPromptWithStyle:(unsigned long long)arg1;
 - (void)showNotificationPermissionPromptIfNeededFromViewController:(id)arg1 promptStyle:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)showNotificationPermissionPromptIfNeededWithStyle:(unsigned long long)arg1;
+- (void)resizeGroupsForIncomingNotificationInfo:(id)arg1;
 - (void)pushNotificationsStatus:(CDUnknownBlockType)arg1;
 - (void)application:(id)arg1 didFinishLaunchingWithOptions:(id)arg2;
 - (void)didReceiveRemoteNotification:(id)arg1 fetchCompletionHandler:(CDUnknownBlockType)arg2;

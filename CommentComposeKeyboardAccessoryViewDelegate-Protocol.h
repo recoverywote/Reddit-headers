@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class CommentComposeKeyboardAccessoryView;
+@class CommentComposeKeyboardAccessoryView, SubredditPowerupsInfo;
 
 @protocol CommentComposeKeyboardAccessoryViewDelegate <NSObject>
+- (void)commentComposeKeyboardAccessoryViewDidSelectPowerupsGIFs:(CommentComposeKeyboardAccessoryView *)arg1 powerupsInfo:(SubredditPowerupsInfo *)arg2;
+- (void)commentComposeKeyboardAccessoryViewDidSelectPowerupsEmotes:(CommentComposeKeyboardAccessoryView *)arg1 powerupsInfo:(SubredditPowerupsInfo *)arg2;
 - (void)commentComposeKeyboardAccessoryViewDidSelectGIFs:(CommentComposeKeyboardAccessoryView *)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectEmotes:(CommentComposeKeyboardAccessoryView *)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectCamera:(CommentComposeKeyboardAccessoryView *)arg1;

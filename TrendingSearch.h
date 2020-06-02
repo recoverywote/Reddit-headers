@@ -6,12 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "BaseModel-Protocol.h"
 #import "IGListDiffable-Protocol.h"
 
 @class NSArray, NSString;
 
-@interface TrendingSearch : NSObject <BaseModel, IGListDiffable>
+@interface TrendingSearch : NSObject <IGListDiffable>
 {
     _Bool _isWhiteListed;
     _Bool _isPromoted;
@@ -31,15 +30,8 @@
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
 @property(readonly, nonatomic) NSString *identifier;
-@property(readonly, copy, nonatomic) NSString *pk;
 - (id)initWithQuery:(id)arg1 displayText:(id)arg2 trendingPosts:(id)arg3 isWhiteListed:(_Bool)arg4 subredditAppearances:(long long)arg5;
 - (id)initWithQuery:(id)arg1 displayText:(id)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

@@ -8,11 +8,12 @@
 
 @interface _TtC6Reddit31AnnouncementCarouselDismissCell : BaseCollectionViewCell
 {
-    // Error parsing type: , name: kButtonSize
+    // Error parsing type: , name: onHideTapped
     // Error parsing type: , name: dismissButton
 }
 
 - (void).cxx_destruct;
+- (void)didTapDismissButton;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -53,6 +53,7 @@
 @property(nonatomic) _Bool previewModeEnabled; // @synthesize previewModeEnabled=_previewModeEnabled;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
+- (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)showNewCustomFeedTooltip;
 - (void)showCustomFeed:(id)arg1;

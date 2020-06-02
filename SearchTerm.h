@@ -6,25 +6,16 @@
 
 #import <objc/NSObject.h>
 
-#import "BaseModel-Protocol.h"
-
 @class NSString;
 
-@interface SearchTerm : NSObject <BaseModel>
+@interface SearchTerm : NSObject
 {
     NSString *_text;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-@property(readonly, copy, nonatomic) NSString *pk;
 - (id)initWithText:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

@@ -13,12 +13,12 @@
     NSArray *_actions;
 }
 
-+ (id)blockUserPopupWithSource:(id)arg1 confirmAction:(CDUnknownBlockType)arg2;
++ (id)blockUserPopupWithAccountContext:(id)arg1 source:(id)arg2 confirmAction:(CDUnknownBlockType)arg3;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *actions; // @synthesize actions=_actions;
 - (void)dismissAction;
-- (id)initWithTitle:(id)arg1 message:(id)arg2 bottomButtons:(id)arg3;
-- (id)initWithTitle:(id)arg1 message:(id)arg2 actions:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 message:(id)arg3 bottomButtons:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 message:(id)arg3 actions:(id)arg4;
 
 @end
 

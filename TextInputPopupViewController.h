@@ -43,7 +43,7 @@
 - (void)configureContentView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTitle:(id)arg1 confirmationButtonTitle:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 confirmationButtonTitle:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

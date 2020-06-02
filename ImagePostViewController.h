@@ -8,15 +8,15 @@
 
 #import "AttributedLabelRegularDelegate-Protocol.h"
 #import "BaseTextViewDelegate-Protocol.h"
-#import "EditMemeViewControllerDelegate-Protocol.h"
 #import "ImagePostViewControllerDelegate-Protocol.h"
 #import "PlayerViewDelegate-Protocol.h"
 #import "UIImagePickerControllerDelegate-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
+#import "_TtP6Reddit36MediaSelectionViewControllerDelegate_-Protocol.h"
 
-@class AVURLAsset, BaseButton, BaseLabel, BaseScrollView, BaseTextView, BaseView, BottomLabelButton, EditMemeViewController, HlsPlayerView, NSDictionary, NSFileManager, NSString, NSURL, NSUUID, UIImage, UIImagePickerController, UIImageView, UITapGestureRecognizer, UIView, _TtC6Reddit15RedditVideoNode, _TtC6Reddit25PostKeyboardAccessoryView;
+@class AVURLAsset, BaseButton, BaseLabel, BaseScrollView, BaseTextView, BaseView, BottomLabelButton, HlsPlayerView, NSDictionary, NSFileManager, NSString, NSURL, NSUUID, PowerupsMarketingBadgeView, UIImage, UIImagePickerController, UIImageView, UITapGestureRecognizer, UIView, _TtC6Reddit15RedditVideoNode, _TtC6Reddit25PostKeyboardAccessoryView;
 
-@interface ImagePostViewController : PostViewController <BaseTextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AttributedLabelRegularDelegate, ImagePostViewControllerDelegate, PlayerViewDelegate, EditMemeViewControllerDelegate>
+@interface ImagePostViewController : PostViewController <BaseTextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AttributedLabelRegularDelegate, ImagePostViewControllerDelegate, PlayerViewDelegate, _TtP6Reddit36MediaSelectionViewControllerDelegate_>
 {
     _Bool _wasTrimmed;
     _Bool _isGif;
@@ -40,6 +40,7 @@
     BaseLabel *_titleErrorView;
     BaseLabel *_flairErrorView;
     UIView *_titleErrorSeparator;
+    PowerupsMarketingBadgeView *_powerupsMarketingBadgeView;
     NSUUID *_videoUUID;
     NSDictionary *_mediaInfo;
     UITapGestureRecognizer *_tapGesture;
@@ -50,13 +51,11 @@
     UIImagePickerController *_picker;
     _TtC6Reddit25PostKeyboardAccessoryView *_postKeyboardAccessoryView;
     unsigned long long _mediaType;
-    EditMemeViewController *_editMemeViewController;
     NSFileManager *_fileManager;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
-@property(retain, nonatomic) EditMemeViewController *editMemeViewController; // @synthesize editMemeViewController=_editMemeViewController;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
 @property(retain, nonatomic) _TtC6Reddit25PostKeyboardAccessoryView *postKeyboardAccessoryView; // @synthesize postKeyboardAccessoryView=_postKeyboardAccessoryView;
 @property(retain, nonatomic) UIImagePickerController *picker; // @synthesize picker=_picker;
@@ -69,6 +68,7 @@
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) NSDictionary *mediaInfo; // @synthesize mediaInfo=_mediaInfo;
 @property(retain, nonatomic) NSUUID *videoUUID; // @synthesize videoUUID=_videoUUID;
+@property(retain, nonatomic) PowerupsMarketingBadgeView *powerupsMarketingBadgeView; // @synthesize powerupsMarketingBadgeView=_powerupsMarketingBadgeView;
 @property(retain, nonatomic) UIView *titleErrorSeparator; // @synthesize titleErrorSeparator=_titleErrorSeparator;
 @property(retain, nonatomic) BaseLabel *flairErrorView; // @synthesize flairErrorView=_flairErrorView;
 @property(retain, nonatomic) BaseLabel *titleErrorView; // @synthesize titleErrorView=_titleErrorView;
@@ -89,7 +89,7 @@
 @property(retain, nonatomic) NSURL *videoURL; // @synthesize videoURL=_videoURL;
 @property(retain, nonatomic) UIImage *currentImage; // @synthesize currentImage=_currentImage;
 @property(retain, nonatomic) BaseTextView *titleView; // @synthesize titleView=_titleView;
-- (void)editMemeViewController:(id)arg1 didCreateMemeImage:(id)arg2;
+- (void)mediaSelectionViewController:(id)arg1 didSelect:(id)arg2;
 - (_Bool)shouldForceAutoplay;
 - (_Bool)shouldDisableAutoplay;
 - (void)playerViewDidEndPlaying:(id)arg1;
@@ -111,6 +111,7 @@
 - (void)showEditVideoViewControllerWithVideoURL:(id)arg1;
 - (void)copyOriginalVideo:(id)arg1 compressedVideo:(id)arg2;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
+- (void)navigateToPowerupsMarketingPageForSubreddit:(id)arg1 powerupsInfo:(id)arg2;
 - (void)toggleLoadingPickerBackground:(_Bool)arg1;
 - (void)video:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (void)didTapPostButton:(id)arg1;
@@ -127,11 +128,10 @@
 - (void)testAndShowUnallowedPostTypeWarning;
 - (void)configureWithSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)layoutWrapperScrollViewContents;
-- (void)updateDisplayedImage:(id)arg1;
 - (void)configureWithPostToEdit:(id)arg1;
 - (void)configureVideoForEditPost:(id)arg1;
 - (void)configureForPickedMovie:(id)arg1 fromSource:(long long)arg2;
-- (void)configureForPickedImage:(id)arg1 fromSource:(long long)arg2;
+- (void)configureForPickedImage:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidLoad;

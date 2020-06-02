@@ -78,6 +78,7 @@
 @property(copy, nonatomic) CDUnknownBlockType onDismiss; // @synthesize onDismiss=_onDismiss;
 @property(nonatomic) __weak PostDetailViewController *postDetailViewController; // @synthesize postDetailViewController=_postDetailViewController;
 @property(retain, nonatomic) ChatPostPresenter *presenter; // @synthesize presenter=_presenter;
+- (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (unsigned long long)currentPresentationStyle;
 - (void)cellTappedWithBucket:(id)arg1;

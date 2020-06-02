@@ -6,11 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@class Post, _TtC11RedditVideo21RedditVideoPlayerView, _TtC6Reddit22CallToActionIdentifier;
+@class Post, SubredditPowerupsInfo, _TtC11RedditVideo21RedditVideoPlayerView, _TtC6Reddit22CallToActionIdentifier;
 
 @protocol FeedPostRedditVideoViewDelegate <NSObject>
 - (void)didTapCallToActionFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2 callToAction:(_TtC6Reddit22CallToActionIdentifier *)arg3;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2;
 - (void)didTapViewFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2;
+
+@optional
+- (void)didTapPowerupsMarketingBadgeFor:(Post *)arg1 powerupsInfo:(SubredditPowerupsInfo *)arg2 preselectedBenefit:(long long)arg3;
 @end
 

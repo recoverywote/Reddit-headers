@@ -56,6 +56,7 @@
 @property(nonatomic) unsigned long long lightThemeSetting;
 - (void)setIsAutoDarkModeEnabled:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic) _Bool isAutoDarkModeEnabled;
+- (void)contentSizeCategoryDidChangeNotification:(id)arg1;
 - (void)updateFontSizeDelta:(long long)arg1;
 - (void)updateCurrentTheme:(id)arg1 onVisibleObserversDidUpdate:(CDUnknownBlockType)arg2;
 - (void)traitCollectionDidChange:(id)arg1;

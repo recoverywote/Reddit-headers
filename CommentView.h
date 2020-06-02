@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class Comment, CommentCommandView, CommentHeaderView, CommentTextView, NSString, StructuredStyle;
-@protocol CommentViewDelegate;
+@protocol CommentViewDelegate, ViewContext;
 
 @interface CommentView : BaseView <ObjectObserverProtocol>
 {
@@ -19,17 +19,19 @@
     CommentHeaderView *_headerView;
     CommentCommandView *_commandView;
     Comment *_comment;
+    id <ViewContext> _viewContext;
     StructuredStyle *_subredditStyling;
     CommentTextView *_textView;
     id <CommentViewDelegate> _delegate;
 }
 
-+ (struct CGSize)calculatedSizeWithData:(id)arg1;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 viewContext:(id)arg2;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool isUserAModerator; // @synthesize isUserAModerator=_isUserAModerator;
 @property(nonatomic) __weak id <CommentViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) CommentTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) StructuredStyle *subredditStyling; // @synthesize subredditStyling=_subredditStyling;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
 @property(nonatomic) _Bool isInModMode; // @synthesize isInModMode=_isInModMode;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
@@ -42,9 +44,9 @@
 - (void)configureCommandView;
 - (void)configureSubviews;
 - (void)configureWithDataForBanModal:(id)arg1;
-- (void)configureWithData:(id)arg1 andStyling:(id)arg2 andDelegate:(id)arg3 isUserAModerator:(_Bool)arg4;
+- (void)configureWithData:(id)arg1 styling:(id)arg2 delegate:(id)arg3 isUserAModerator:(_Bool)arg4;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

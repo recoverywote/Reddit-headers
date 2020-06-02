@@ -8,15 +8,16 @@
 
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
+#import "_TtP6Reddit12UserCardView_-Protocol.h"
 
 @class BaseButton, BaseImageView, BaseLabel, BaseTableView, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, UIActivityIndicatorView;
-@protocol UserCardModalDelegate, ViewContext;
+@protocol ViewContext, _TtP6Reddit20UserCardViewDelegate_;
 
-@interface UserCardModal : BaseView <UITableViewDelegate, UITableViewDataSource>
+@interface UserCardModal : BaseView <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit12UserCardView_>
 {
-    _Bool _userIsBanned;
-    _Bool _userIsMuted;
-    id <UserCardModalDelegate> _delegate;
+    _Bool _isUserBanned;
+    _Bool _isUserMuted;
+    id <_TtP6Reddit20UserCardViewDelegate_> _delegate;
     id <ViewContext> _viewContext;
     BaseView *_modalView;
     BaseImageView *_profilePicture;
@@ -36,8 +37,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *actionTableHeightConstraint; // @synthesize actionTableHeightConstraint=_actionTableHeightConstraint;
 @property(retain, nonatomic) UIActivityIndicatorView *actionsActivityIndicator; // @synthesize actionsActivityIndicator=_actionsActivityIndicator;
 @property(retain, nonatomic) UIActivityIndicatorView *userActivityIndicator; // @synthesize userActivityIndicator=_userActivityIndicator;
-@property(nonatomic) _Bool userIsMuted; // @synthesize userIsMuted=_userIsMuted;
-@property(nonatomic) _Bool userIsBanned; // @synthesize userIsBanned=_userIsBanned;
 @property(retain, nonatomic) NSDictionary *allActions; // @synthesize allActions=_allActions;
 @property(retain, nonatomic) NSMutableArray *actions; // @synthesize actions=_actions;
 @property(retain, nonatomic) BaseTableView *actionsTableView; // @synthesize actionsTableView=_actionsTableView;
@@ -47,16 +46,17 @@
 @property(retain, nonatomic) BaseLabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) BaseImageView *profilePicture; // @synthesize profilePicture=_profilePicture;
 @property(retain, nonatomic) BaseView *modalView; // @synthesize modalView=_modalView;
-@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
-@property(nonatomic) __weak id <UserCardModalDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) _Bool isUserMuted; // @synthesize isUserMuted=_isUserMuted;
+@property(nonatomic) _Bool isUserBanned; // @synthesize isUserBanned=_isUserBanned;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
+@property(nonatomic) __weak id <_TtP6Reddit20UserCardViewDelegate_> delegate; // @synthesize delegate=_delegate;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)layoutSubviews;
 - (void)updateActionTableConstraint;
 - (void)updateActionsTableViewScrollStatus;
-- (_Bool)isUserMe:(id)arg1;
-- (void)loadingActionStates:(_Bool)arg1;
+- (void)loadingActionStatesWithIsLoading:(_Bool)arg1;
 - (void)userLoadComplete;
 - (void)closeUserModal;
 - (void)startChat;
@@ -65,14 +65,15 @@
 - (void)muteUser;
 - (void)blockUser;
 - (void)banUser;
+- (_Bool)isUserMe:(id)arg1;
 - (id)actionWithName:(id)arg1;
 - (void)showAction:(id)arg1 show:(_Bool)arg2;
 - (void)showChatActions;
 - (void)showChangeFlairAction:(_Bool)arg1;
 - (void)showBlockUserAction;
 - (void)showViewProfileAction;
-- (void)showMuteActionForState:(_Bool)arg1;
-- (void)showBanActionForState:(_Bool)arg1;
+- (void)showMuteActionForStateWithUserIsMuted:(_Bool)arg1;
+- (void)showBanActionForStateWithUserIsBanned:(_Bool)arg1;
 - (void)configureWithUser:(id)arg1 subreddit:(id)arg2;
 - (void)configureUserAge:(id)arg1;
 - (void)configureUserName:(id)arg1;

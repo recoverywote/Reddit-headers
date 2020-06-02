@@ -72,7 +72,8 @@
 - (void)trendingToasterDidTapCancel:(id)arg1;
 - (void)trendingToasterDidTapClose:(id)arg1;
 - (void)postDetailHeaderNodeDidTap:(id)arg1;
-- (void)feedPostDetailAwardsNodeDidTap:(id)arg1 awardIdentifier:(id)arg2;
+- (void)feedPostDetailAwardsNodeDidTapAddAward;
+- (void)feedPostDetailAwardsNodeDidTapAward:(id)arg1;
 - (void)handleDidTapUrl:(id)arg1 forPost:(id)arg2;
 - (void)presentPostModerateActionSheetForPost:(id)arg1 sender:(id)arg2;
 - (void)showViewReportsForPost:(id)arg1 fromNode:(id)arg2;
@@ -88,7 +89,7 @@
 - (void)feedPostHlsVideoViewDidTap:(id)arg1;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
-- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
+- (void)richTextDisplayNode:(id)arg1 richTextTextNode:(id)arg2 didTapURL:(id)arg3 atPoint:(struct CGPoint)arg4 atRange:(struct _NSRange)arg5;
 - (void)postModerateActionSheetViewControllerDidTapEditFlair:(id)arg1;
 - (void)postModerateActionSheetViewControllerDidTapViewReports:(id)arg1;
 - (void)feedPostModerateBarNode:(id)arg1 didTapFlairForPost:(id)arg2;

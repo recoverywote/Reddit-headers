@@ -13,7 +13,7 @@
 #import "UITextViewDelegate-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, SelectableTextView, UIColor, UIFont, UILongPressGestureRecognizer;
-@protocol AttributedLabelDelegate;
+@protocol AttributedLabelDelegate, ViewContext;
 
 @interface AttributedLabel : BaseView <AttributedLabelRegularDelegate, AttributedLabelTableViewDelegate, AttributedLabelMediaDelegate, UITextViewDelegate, AttributedLabelActiveLinkProtocol>
 {
@@ -30,16 +30,18 @@
     NSDictionary *_linkAttributes;
     NSDictionary *_activeLinkAttributes;
     NSString *_selectedTextRepresentation;
+    id <ViewContext> _viewContext;
     UILongPressGestureRecognizer *_longPressRecognizer;
     SelectableTextView *_selectableView;
 }
 
 + (struct CGSize)calculatedSizeForAttributedText:(id)arg1 maxWidth:(double)arg2 includingHorizontalPadding:(_Bool)arg3 shouldParseRichText:(_Bool)arg4;
-+ (id)messageTextLabel;
++ (id)messageTextLabelWithViewContext:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldParseRichText; // @synthesize shouldParseRichText=_shouldParseRichText;
 @property(retain, nonatomic) SelectableTextView *selectableView; // @synthesize selectableView=_selectableView;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) NSString *selectedTextRepresentation; // @synthesize selectedTextRepresentation=_selectedTextRepresentation;
 @property(nonatomic) _Bool hasHorizontalPadding; // @synthesize hasHorizontalPadding=_hasHorizontalPadding;
 @property(nonatomic) _Bool selectable; // @synthesize selectable=_selectable;
@@ -67,7 +69,7 @@
 - (void)parseMarkdownForAttributedText:(id)arg1;
 - (void)parseRichTextForAttributedText:(id)arg1;
 - (void)configureWithText:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 shouldParseRichText:(_Bool)arg2;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2 shouldParseRichText:(_Bool)arg3;
 - (void)setLinkAttributesUsingTheme:(id)arg1;
 
 // Remaining properties

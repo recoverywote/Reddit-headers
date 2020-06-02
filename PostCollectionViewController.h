@@ -57,6 +57,7 @@
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
 - (void)scrollToPost:(id)arg1;
+- (void)navigateToChatPost:(id)arg1;
 - (void)postCollectionGalleryPostNode:(id)arg1 didTapImage:(id)arg2;
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;

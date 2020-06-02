@@ -10,8 +10,8 @@
 {
 }
 
-+ (void)requestMicrophoneAuthorization:(CDUnknownBlockType)arg1;
-+ (void)requestAuthorization:(CDUnknownBlockType)arg1;
++ (void)requestMicrophoneAuthorizationWithAccountContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)requestAuthorizationWithAccountContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (double)preferredPopupHeight;
 
 @end

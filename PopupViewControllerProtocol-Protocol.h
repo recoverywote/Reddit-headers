@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol PopupViewControllerProtocol <NSObject>
+- (_Bool)isInAnonymousBrowsing;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 
 @optional

@@ -10,11 +10,13 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
 @class BaseButton, BaseImageView, NSLayoutConstraint, NSString, NSURL;
+@protocol AccountContext;
 
 @interface LoggedOutViewController : BaseViewController <RUIThemeUpdateCallbackProtocol, CaptureViewControllerDelegate>
 {
     CDUnknownBlockType _didTapSignUpButton;
     CDUnknownBlockType _didTapLoginButton;
+    id <AccountContext> _accountContext;
     BaseButton *_dismissButton;
     NSString *_titleText;
     unsigned long long _source;
@@ -32,6 +34,7 @@
 @property(nonatomic) unsigned long long source; // @synthesize source=_source;
 @property(copy, nonatomic) NSString *titleText; // @synthesize titleText=_titleText;
 @property(retain, nonatomic) BaseButton *dismissButton; // @synthesize dismissButton=_dismissButton;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) CDUnknownBlockType didTapLoginButton; // @synthesize didTapLoginButton=_didTapLoginButton;
 @property(copy, nonatomic) CDUnknownBlockType didTapSignUpButton; // @synthesize didTapSignUpButton=_didTapSignUpButton;
 - (void)captureViewControllerDidTapLogin:(id)arg1;
@@ -47,9 +50,8 @@
 - (void)viewDidLoad;
 - (void)viewDidAppear:(_Bool)arg1;
 - (id)titleWithSource:(unsigned long long)arg1;
-- (id)initWithSource:(unsigned long long)arg1 deferredURL:(id)arg2;
-- (id)initWithSource:(unsigned long long)arg1;
-- (id)init;
+- (id)initWithAccountContext:(id)arg1 source:(unsigned long long)arg2 deferredURL:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 source:(unsigned long long)arg2;
 - (void)dealloc;
 
 // Remaining properties

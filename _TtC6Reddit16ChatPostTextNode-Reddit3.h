@@ -6,7 +6,10 @@
 
 #import "_TtC6Reddit16ChatPostTextNode.h"
 
-@interface _TtC6Reddit16ChatPostTextNode (Reddit3)
-- (struct CGColor *)nearestBackgroundColorWithLayer:(id)arg1;
+#import "_TtP6Reddit28HighlightableContentProtocol_-Protocol.h"
+
+@interface _TtC6Reddit16ChatPostTextNode (Reddit3) <_TtP6Reddit28HighlightableContentProtocol_>
+- (void)unhighlightContent;
+- (void)highlightContentWithColor:(id)arg1;
 @end
 

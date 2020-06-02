@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol _TtP6Reddit18RoadblockableModel_;
+@protocol AccountContext, _TtP6Reddit18RoadblockableModel_;
 
 @interface _TtC6Reddit18RoadblockViewModel : NSObject
 {
@@ -27,6 +27,7 @@
 @property(nonatomic, readonly) NSString *titleText;
 @property(nonatomic, readonly) NSString *headerImageName;
 @property(nonatomic, readonly) long long roadblockType;
+@property(nonatomic, readonly) id <AccountContext> accountContext; // @synthesize accountContext;
 @property(nonatomic, readonly) id <_TtP6Reddit18RoadblockableModel_> roadblockedModel; // @synthesize roadblockedModel;
 
 @end

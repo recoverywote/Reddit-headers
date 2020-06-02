@@ -8,13 +8,14 @@
 
 @interface _TtC6Reddit24AnnouncementCarouselItem : BaseCollectionViewCell
 {
-    // Error parsing type: , name: kIconImageSize
+    // Error parsing type: , name: descriptionTrailingConstraintNoIcon
+    // Error parsing type: , name: descriptionTrailingConstraintWithIcon
     // Error parsing type: , name: $__lazy_storage_$_iconImageView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_descriptionLabel
-    // Error parsing type: , name: $__lazy_storage_$_ctaButton
 }
 
++ (struct CGSize)calculatedSizeWithData:(id)arg1 maxWidth:(double)arg2;
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -9,8 +9,8 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet24WalletFeedViewController : UIViewController
 {
-    // Error parsing type: , name: address
     // Error parsing type: , name: wallet
+    // Error parsing type: , name: viewModel
     // Error parsing type: , name: actions
     // Error parsing type: , name: launchOptions
     // Error parsing type: , name: walletFlow
@@ -23,7 +23,6 @@ __attribute__((visibility("hidden")))
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;

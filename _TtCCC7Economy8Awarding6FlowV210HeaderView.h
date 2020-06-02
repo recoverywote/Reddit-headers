@@ -9,7 +9,8 @@
 __attribute__((visibility("hidden")))
 @interface _TtCCC7Economy8Awarding6FlowV210HeaderView : _TtCCC7Economy8Awarding6FlowV28BaseView
 {
-    // Error parsing type: , name: closeButton
+    // Error parsing type: , name: closeButtonImage
+    // Error parsing type: , name: closeButtonTappableArea
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: getCoinsView
 }

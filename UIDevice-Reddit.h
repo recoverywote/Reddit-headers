@@ -12,6 +12,5 @@
 - (void)updateClientClockSkewWithResponse:(id)arg1;
 @property(readonly, nonatomic) double clientClockSkew;
 @property(readonly, nonatomic) NSString *hardwareModelString;
-@property(readonly, nonatomic) NSString *clientVendorId;
 @end
 

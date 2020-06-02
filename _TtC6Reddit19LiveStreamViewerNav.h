@@ -10,9 +10,9 @@
 {
     // Error parsing type: , name: chatBoxZeroWidthAnchor
     // Error parsing type: , name: chatBoxLeadingAnchor
+    // Error parsing type: , name: awardButton
     // Error parsing type: , name: chatButton
     // Error parsing type: , name: chatTextBox
-    // Error parsing type: , name: awardButton
     // Error parsing type: , name: shareButton
     // Error parsing type: , name: overflowButton
 }

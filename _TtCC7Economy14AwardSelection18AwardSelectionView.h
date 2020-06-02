@@ -6,10 +6,8 @@
 
 #import <UIKit/UIView.h>
 
-#import <Economy/UIGestureRecognizerDelegate-Protocol.h>
-
 __attribute__((visibility("hidden")))
-@interface _TtCC7Economy14AwardSelection18AwardSelectionView : UIView <UIGestureRecognizerDelegate>
+@interface _TtCC7Economy14AwardSelection18AwardSelectionView : UIView
 {
     // Error parsing type: , name: options
     // Error parsing type: , name: state

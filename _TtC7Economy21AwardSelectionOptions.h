@@ -6,11 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class NSString, NSURL;
 
 @interface _TtC7Economy21AwardSelectionOptions : NSObject
 {
     // Error parsing type: , name: preselectedAwardId
+    // Error parsing type: , name: preselectedAwardImageURL
     // Error parsing type: , name: shouldAllowEditOptions
     // Error parsing type: , name: shouldAllowAnonymousGilding
     // Error parsing type: , name: shouldShowChatBox
@@ -36,6 +37,7 @@
 @property(nonatomic, readonly) _Bool shouldShowChatBox; // @synthesize shouldShowChatBox;
 @property(nonatomic, readonly) _Bool shouldAllowAnonymousGilding; // @synthesize shouldAllowAnonymousGilding;
 @property(nonatomic, readonly) _Bool shouldAllowEditOptions; // @synthesize shouldAllowEditOptions;
+@property(nonatomic, readonly) NSURL *preselectedAwardImageURL;
 @property(nonatomic, readonly) NSString *preselectedAwardId;
 
 @end

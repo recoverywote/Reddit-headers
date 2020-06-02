@@ -10,14 +10,15 @@
 
 @interface GoldProduct : NSObject
 {
-    SKProduct *_product;
-    GoldProductInfo *_info;
+    // Error parsing type: , name: product
+    // Error parsing type: , name: info
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) GoldProductInfo *info; // @synthesize info=_info;
-@property(readonly, nonatomic) SKProduct *product; // @synthesize product=_product;
+- (id)init;
 - (id)initWithSKProduct:(id)arg1 productInfo:(id)arg2;
+@property(nonatomic, readonly) GoldProductInfo *info; // @synthesize info;
+@property(nonatomic, readonly) SKProduct *product; // @synthesize product;
 
 @end
 

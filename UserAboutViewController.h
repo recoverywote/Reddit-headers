@@ -38,6 +38,7 @@
 @property(retain, nonatomic) FloatingHeaderManager *floatingHeaderManager; // @synthesize floatingHeaderManager=_floatingHeaderManager;
 @property(nonatomic) __weak id <PagedTabControllerParentCallback> userProfileDelegate; // @synthesize userProfileDelegate=_userProfileDelegate;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
+- (void)presentLoginViewController;
 - (void)trackInitiatingChatEvent;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;

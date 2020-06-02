@@ -17,6 +17,7 @@
 
 @interface GoldCoinMarketingPageViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, GoldProductTableViewCellDelegate, GoldCoinMarketingPageHeaderCellDelegate, InAppPurchaseManagerDelegate>
 {
+    _Bool _isEconDailyStorefrontClaimEnabled;
     UIImageView *_backgroundImageView;
     BaseTableView *_tableView;
     NSLayoutConstraint *_backgroundImageWidthConstraint;
@@ -34,6 +35,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) GoldProduct *targetedOfferDeal; // @synthesize targetedOfferDeal=_targetedOfferDeal;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *dealPopupController; // @synthesize dealPopupController=_dealPopupController;
+@property(readonly, nonatomic) _Bool isEconDailyStorefrontClaimEnabled; // @synthesize isEconDailyStorefrontClaimEnabled=_isEconDailyStorefrontClaimEnabled;
 @property(readonly, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *sourcePage; // @synthesize sourcePage=_sourcePage;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
@@ -44,8 +46,9 @@
 @property(retain, nonatomic) NSLayoutConstraint *backgroundImageWidthConstraint; // @synthesize backgroundImageWidthConstraint=_backgroundImageWidthConstraint;
 @property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) UIImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
+- (void)presentFreeAward;
 - (void)hidePurchasingModalIfPresented;
-- (struct UIEdgeInsets)contentInsetForRowAtIndexPath:(id)arg1;
+- (struct UIEdgeInsets)contentInsetForRowAtIndexPath:(id)arg1 increaseTopPaddingForTheFirstCell:(_Bool)arg2;
 - (void)showValidationFailureDialog;
 - (void)hideLoadingIndicator;
 - (void)showLoadingIndicator;
@@ -54,6 +57,7 @@
 - (void)showDealPopup;
 - (void)checkForDeals;
 - (void)updateProductItems;
+- (void)presentLoginViewController;
 - (void)handleFetchFailure;
 - (void)handleFetchSuccess;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;

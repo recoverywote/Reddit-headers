@@ -20,6 +20,7 @@
     double _timeIntervalEnteredVisibilityThreshold;
     double _timeIntervalEnteredVisibilityState;
     double _timeIntervalVisibilityStateDuration;
+    struct Visibility _visibility;
 }
 
 + (id)identifierForTarget:(id)arg1 action:(SEL)arg2;
@@ -29,6 +30,7 @@
 @property(nonatomic) double timeIntervalEnteredVisibilityThreshold; // @synthesize timeIntervalEnteredVisibilityThreshold=_timeIntervalEnteredVisibilityThreshold;
 @property(retain, nonatomic) NSDate *timeEnteredVisibilityState; // @synthesize timeEnteredVisibilityState=_timeEnteredVisibilityState;
 @property(nonatomic) _Bool enteredState; // @synthesize enteredState=_enteredState;
+@property(nonatomic) struct Visibility visibility; // @synthesize visibility=_visibility;
 @property(nonatomic) unsigned long long eventToFireAt; // @synthesize eventToFireAt=_eventToFireAt;
 @property(nonatomic) double minimumDuration; // @synthesize minimumDuration=_minimumDuration;
 @property(nonatomic) double visibleThreshold; // @synthesize visibleThreshold=_visibleThreshold;

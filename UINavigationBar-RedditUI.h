@@ -7,6 +7,8 @@
 #import <UIKit/UINavigationBar.h>
 
 @interface UINavigationBar (RedditUI)
++ (id)redditTitleTextAttributesUsing:(id)arg1;
+- (void)configureForRedditUsing:(id)arg1;
 - (void)styleUsing:(id)arg1;
 - (void)makeBackgroundTransparent;
 @end

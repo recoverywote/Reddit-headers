@@ -6,12 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class FeedPostAwardsNode, Post;
+@class Award, Post, _TtC6Reddit18FeedPostAwardsNode;
 
 @protocol FeedPostAwardsNodeDelegate <NSObject>
-- (void)feedPostAwardsNode:(FeedPostAwardsNode *)arg1 didTapAwardsForPost:(Post *)arg2;
+- (void)feedPostAwardsNode:(_TtC6Reddit18FeedPostAwardsNode *)arg1 didTapAwardsForPost:(Post *)arg2 award:(Award *)arg3;
 
 @optional
-- (void)feedPostAwardsNodeNeedsLayoutUpdate:(FeedPostAwardsNode *)arg1;
+- (void)feedPostAwardsNodeNeedsLayoutUpdate:(_TtC6Reddit18FeedPostAwardsNode *)arg1;
+- (void)feedPostAwardsNode:(_TtC6Reddit18FeedPostAwardsNode *)arg1 didTapAddAwardForPost:(Post *)arg2;
 @end
 

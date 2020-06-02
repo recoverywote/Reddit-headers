@@ -9,6 +9,7 @@
 @interface _TtCO7Economy12FeedTheMeter11OverlayView : _TtC7Economy15BaseOverlayView
 {
     // Error parsing type: , name: timeIndicator
+    // Error parsing type: , name: isAnalyticsLoggingEnabled
     // Error parsing type: , name: bubblingCoinsView
     // Error parsing type: , name: donationRequestView
     // Error parsing type: , name: model

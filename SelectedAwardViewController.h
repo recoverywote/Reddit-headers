@@ -8,14 +8,14 @@
 
 #import "UITextViewDelegate-Protocol.h"
 
-@class BaseButton, BaseImageView, BaseLabel, BaseTextView, BaseView, CharacterLimitTextView, NSLayoutConstraint, NSString, UIStackView, _TtC6Reddit25AnimatableRemoteImageView;
+@class BaseButton, BaseImageView, BaseLabel, BaseTextView, BaseView, CharacterLimitTextView, NSLayoutConstraint, NSString, UIStackView, _TtC7Economy25AnimatableRemoteImageView;
 @protocol SelectedAwardViewControllerDelegate;
 
 @interface SelectedAwardViewController : BaseViewController <UITextViewDelegate>
 {
     id <SelectedAwardViewControllerDelegate> _delegate;
     BaseView *_topLine;
-    _TtC6Reddit25AnimatableRemoteImageView *_iconImageView;
+    _TtC7Economy25AnimatableRemoteImageView *_iconImageView;
     BaseLabel *_nameLabel;
     BaseLabel *_priceLabel;
     BaseTextView *_descriptionTextView;
@@ -59,7 +59,7 @@
 @property(retain, nonatomic) BaseTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
 @property(retain, nonatomic) BaseLabel *priceLabel; // @synthesize priceLabel=_priceLabel;
 @property(retain, nonatomic) BaseLabel *nameLabel; // @synthesize nameLabel=_nameLabel;
-@property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
+@property(retain, nonatomic) _TtC7Economy25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) BaseView *topLine; // @synthesize topLine=_topLine;
 @property(readonly, nonatomic) __weak id <SelectedAwardViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)sizeChatBox;

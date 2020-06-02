@@ -8,8 +8,8 @@
 
 @interface _TtC6Reddit21CommunityAvatarPicker : NSObject
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: controller
-    // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: selectedImage
     // Error parsing type: , name: delegate
     // Error parsing type: , name: sourceType

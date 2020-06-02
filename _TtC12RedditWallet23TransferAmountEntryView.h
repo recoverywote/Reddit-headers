@@ -25,6 +25,7 @@ __attribute__((visibility("hidden")))
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)didTapSelf:(id)arg1;
 - (void)textFieldDidChange:(id)arg1;
+- (void)textFieldDidBeginEditing:(id)arg1;
 @property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (void)layoutSubviews;
 

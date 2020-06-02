@@ -9,7 +9,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class BaseButton, Comment, HighlightableButton, NSString, StructuredStyle, UIButton, UILabel;
-@protocol CommentCommandViewDelegate;
+@protocol CommentCommandViewDelegate, ViewContext;
 
 @interface CommentCommandView : VerticalLineView <ObjectObserverProtocol>
 {
@@ -19,6 +19,7 @@
     _Bool _isUserAModerator;
     BaseButton *_moreOptionButton;
     Comment *_comment;
+    id <ViewContext> _viewContext;
     BaseButton *_overflowButton;
     BaseButton *_awardButton;
     BaseButton *_replyButton;
@@ -53,6 +54,7 @@
 @property(retain, nonatomic) BaseButton *replyButton; // @synthesize replyButton=_replyButton;
 @property(retain, nonatomic) BaseButton *awardButton; // @synthesize awardButton=_awardButton;
 @property(retain, nonatomic) BaseButton *overflowButton; // @synthesize overflowButton=_overflowButton;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
 @property(nonatomic) _Bool isInModMode; // @synthesize isInModMode=_isInModMode;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
@@ -80,8 +82,8 @@
 - (void)layoutSubviews;
 - (void)layoutSubviewsForModMode:(struct CGSize)arg1;
 - (void)configureViews;
-- (void)configureWithData:(id)arg1 andStyling:(id)arg2 andDelegate:(id)arg3 isUserAModerator:(_Bool)arg4;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)configureWithData:(id)arg1 styling:(id)arg2 delegate:(id)arg3 isUserAModerator:(_Bool)arg4;
+- (id)initWithViewContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

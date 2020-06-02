@@ -7,12 +7,13 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASDisplayNode, CommentsHeaderView, FeedPostOptions, Post;
-@protocol PostDetailHeaderNodeDelegate;
+@protocol PostDetailHeaderNodeDelegate, ViewContext;
 
 @interface PostDetailHeaderNode : BaseFeedDisplayNode
 {
     id <PostDetailHeaderNodeDelegate> _delegate;
     Post *_post;
+    id <ViewContext> _viewContext;
     FeedPostOptions *_options;
     ASDisplayNode *_contentNode;
 }
@@ -20,13 +21,14 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <PostDetailHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didTapCommentHeaderNode:(id)arg1;
 - (void)createCommentHeaderView;
 @property(readonly, nonatomic) CommentsHeaderView *commentsHeaderView;
-- (id)initWithPost:(id)arg1 feedPostOptions:(id)arg2;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 feedPostOptions:(id)arg3;
 
 @end
 

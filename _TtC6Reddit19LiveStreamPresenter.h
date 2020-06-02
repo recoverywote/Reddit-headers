@@ -6,14 +6,19 @@
 
 #import "_TtC6Reddit23StreamingVideoPresenter.h"
 
+@class LiveStream;
+
 @interface _TtC6Reddit19LiveStreamPresenter : _TtC6Reddit23StreamingVideoPresenter
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: streamManager
     // Error parsing type: , name: stream
     // Error parsing type: , name: viewSessionId
+    // Error parsing type: , name: playbackTracker
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, retain) LiveStream *stream; // @synthesize stream;
 
 @end
 

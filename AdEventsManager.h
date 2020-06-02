@@ -39,7 +39,9 @@
     NSMutableDictionary *_vendorViewableTimerG;
     NSMutableDictionary *_vendorViewableTimerH;
     NSMutableDictionary *_videoStart;
+    NSMutableOrderedSet *_videoViewable;
     NSMutableDictionary *_videoViewableStart;
+    NSMutableOrderedSet *_videoFullyViewable;
     NSMutableDictionary *_videoFullyViewableStart;
     NSMutableDictionary *_videoWatched;
     NSMutableDictionary *_videoWatchedAccumulated;
@@ -49,8 +51,6 @@
     NSMutableDictionary *_videoGroupMViewableStart;
     NSMutableDictionary *_videoGroupMViewableWatched;
     NSMutableDictionary *_videoGroupMViewableWatchedAccumulated;
-    NSMutableOrderedSet *_videoMRCViewable;
-    NSMutableDictionary *_videoMRCViewableStart;
     NSURLSession *_session;
     NSURLSession *_backgroundSession;
 }
@@ -59,8 +59,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSURLSession *backgroundSession; // @synthesize backgroundSession=_backgroundSession;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
-@property(retain, nonatomic) NSMutableDictionary *videoMRCViewableStart; // @synthesize videoMRCViewableStart=_videoMRCViewableStart;
-@property(retain, nonatomic) NSMutableOrderedSet *videoMRCViewable; // @synthesize videoMRCViewable=_videoMRCViewable;
 @property(retain, nonatomic) NSMutableDictionary *videoGroupMViewableWatchedAccumulated; // @synthesize videoGroupMViewableWatchedAccumulated=_videoGroupMViewableWatchedAccumulated;
 @property(retain, nonatomic) NSMutableDictionary *videoGroupMViewableWatched; // @synthesize videoGroupMViewableWatched=_videoGroupMViewableWatched;
 @property(retain, nonatomic) NSMutableDictionary *videoGroupMViewableStart; // @synthesize videoGroupMViewableStart=_videoGroupMViewableStart;
@@ -70,7 +68,9 @@
 @property(retain, nonatomic) NSMutableDictionary *videoWatchedAccumulated; // @synthesize videoWatchedAccumulated=_videoWatchedAccumulated;
 @property(retain, nonatomic) NSMutableDictionary *videoWatched; // @synthesize videoWatched=_videoWatched;
 @property(retain, nonatomic) NSMutableDictionary *videoFullyViewableStart; // @synthesize videoFullyViewableStart=_videoFullyViewableStart;
+@property(retain, nonatomic) NSMutableOrderedSet *videoFullyViewable; // @synthesize videoFullyViewable=_videoFullyViewable;
 @property(retain, nonatomic) NSMutableDictionary *videoViewableStart; // @synthesize videoViewableStart=_videoViewableStart;
+@property(retain, nonatomic) NSMutableOrderedSet *videoViewable; // @synthesize videoViewable=_videoViewable;
 @property(retain, nonatomic) NSMutableDictionary *videoStart; // @synthesize videoStart=_videoStart;
 @property(retain, nonatomic) NSMutableDictionary *vendorViewableTimerH; // @synthesize vendorViewableTimerH=_vendorViewableTimerH;
 @property(retain, nonatomic) NSMutableDictionary *vendorViewableTimerG; // @synthesize vendorViewableTimerG=_vendorViewableTimerG;
@@ -111,7 +111,7 @@
 - (void)postDownvote:(id)arg1;
 - (void)postUpvote:(id)arg1;
 - (void)postClick:(id)arg1;
-- (void)postVideoViewabilityChange:(id)arg1 viewable:(_Bool)arg2;
+- (void)postVideoVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
 - (void)postViewabilityChange:(id)arg1 viewable:(_Bool)arg2 fullyViewable:(_Bool)arg3 vendorViewable:(_Bool)arg4 vendorFullyViewable:(_Bool)arg5 viewRect:(struct CGRect)arg6 visibleRect:(struct CGRect)arg7;
 - (void)postViewabilityChange:(id)arg1 viewable:(_Bool)arg2 fullyViewable:(_Bool)arg3;
 - (void)postViewabilityChange:(id)arg1 visibilityContext:(id)arg2;

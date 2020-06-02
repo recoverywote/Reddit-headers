@@ -110,6 +110,7 @@
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 @property(readonly, nonatomic) RedditService *service;
 - (id)initWithAccountContext:(id)arg1;

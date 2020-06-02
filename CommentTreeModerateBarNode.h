@@ -16,6 +16,7 @@
     CommentTreeNode *_commentTreeNode;
     id <CommentTreeModerateBarNodeDelegate> _delegate;
     BaseButtonNode *_approveButtonNode;
+    BaseButtonNode *_uncollapseButtonNode;
     BaseButtonNode *_deleteButtonNode;
     BaseButtonNode *_deleteAsSpamButtonNode;
     BaseButtonNode *_distinguishButtonNode;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) BaseButtonNode *distinguishButtonNode; // @synthesize distinguishButtonNode=_distinguishButtonNode;
 @property(retain, nonatomic) BaseButtonNode *deleteAsSpamButtonNode; // @synthesize deleteAsSpamButtonNode=_deleteAsSpamButtonNode;
 @property(retain, nonatomic) BaseButtonNode *deleteButtonNode; // @synthesize deleteButtonNode=_deleteButtonNode;
+@property(retain, nonatomic) BaseButtonNode *uncollapseButtonNode; // @synthesize uncollapseButtonNode=_uncollapseButtonNode;
 @property(retain, nonatomic) BaseButtonNode *approveButtonNode; // @synthesize approveButtonNode=_approveButtonNode;
 @property(nonatomic) __weak id <CommentTreeModerateBarNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
@@ -40,6 +42,7 @@
 - (void)lockButtonNodeTapped:(id)arg1;
 - (void)spamButtonNodeTapped:(id)arg1;
 - (void)deleteButtonNodeTapped:(id)arg1;
+- (void)uncollapseButtonNodeTapped:(id)arg1;
 - (void)approveButtonNodeTapped:(id)arg1;
 - (void)distinguishButtonNodeTapped:(id)arg1;
 - (void)configureNodes;

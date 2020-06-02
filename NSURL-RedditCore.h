@@ -50,6 +50,7 @@
 @property(readonly, nonatomic) _Bool red_isLiveStreamingURL;
 @property(readonly, nonatomic) _Bool red_isRedditVideoURL;
 @property(readonly, nonatomic) _Bool red_isRedditPremiumURL;
+@property(readonly, nonatomic) _Bool red_isRedditLabelSubredditURL;
 @property(readonly, nonatomic) _Bool red_isRedditCoinsURL;
 @property(readonly, nonatomic) _Bool red_isAppStoreURL;
 @property(readonly, nonatomic) _Bool red_isYouTubeURL;

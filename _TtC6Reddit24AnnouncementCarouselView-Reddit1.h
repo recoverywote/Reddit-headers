@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit24AnnouncementCarouselView.h"
 
-#import "PagingCollectionViewLayoutDelegate-Protocol.h"
-
-@interface _TtC6Reddit24AnnouncementCarouselView (Reddit1) <PagingCollectionViewLayoutDelegate>
-- (void)collectionView:(id)arg1 didPaginateToIndexPath:(id)arg2;
+@interface _TtC6Reddit24AnnouncementCarouselView (Reddit1)
+- (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @end
 

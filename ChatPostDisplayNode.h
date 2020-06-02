@@ -6,9 +6,11 @@
 
 #import "BaseFeedDisplayNode.h"
 
+#import "_TtP6Reddit28HighlightableContentProtocol_-Protocol.h"
+
 @class ChatPostContentNode, CommentTreeNode, _TtC6Reddit27ChatPostBlockedMessagesNode;
 
-@interface ChatPostDisplayNode : BaseFeedDisplayNode
+@interface ChatPostDisplayNode : BaseFeedDisplayNode <_TtP6Reddit28HighlightableContentProtocol_>
 {
     CommentTreeNode *_commentNode;
     ChatPostContentNode *_contentNode;
@@ -19,9 +21,11 @@
 @property(retain, nonatomic) _TtC6Reddit27ChatPostBlockedMessagesNode *blockedMessagesNode; // @synthesize blockedMessagesNode=_blockedMessagesNode;
 @property(retain, nonatomic) ChatPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
+- (void)unhighlightContent;
+- (void)highlightContentWithColor:(id)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (id)initWithBlockedMessagesBucket:(id)arg1 delegate:(id)arg2;
-- (id)initWithViewContext:(id)arg1 commentNode:(id)arg2 options:(id)arg3 delegate:(id)arg4 isReplyFeatureEnabled:(_Bool)arg5 shouldShowVotingNodeBlock:(CDUnknownBlockType)arg6 shouldShowDownvote:(_Bool)arg7;
+- (id)initWithViewContext:(id)arg1 subredditMentionsHandler:(id)arg2 commentNode:(id)arg3 options:(id)arg4 delegate:(id)arg5 isReplyFeatureEnabled:(_Bool)arg6 shouldShowVotingNodeBlock:(CDUnknownBlockType)arg7 shouldShowDownvote:(_Bool)arg8;
 
 @end
 

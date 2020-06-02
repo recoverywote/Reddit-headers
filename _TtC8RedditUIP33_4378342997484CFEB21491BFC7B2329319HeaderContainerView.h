@@ -8,15 +8,16 @@
 
 @interface _TtC8RedditUIP33_4378342997484CFEB21491BFC7B2329319HeaderContainerView : UIView
 {
-    // Error parsing type: , name: onSizeChange
+    // Error parsing type: , name: onFrameDidChange
     // Error parsing type: , name: headerView
-    // Error parsing type: , name: homeOrigin
+    // Error parsing type: , name: topConstraint
 }
 
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)layoutSubviews;
+@property(nonatomic) struct CGPoint center;
+@property(nonatomic) struct CGRect bounds;
 
 @end
 

@@ -37,6 +37,7 @@
     _Bool _loginbot;
     _Bool _loginbotIsSet;
     _Bool _robots_meta_tagIsSet;
+    _Bool _google_client_idIsSet;
     NSString *_user_agent;
     NSString *_domain;
     NSString *_base_url;
@@ -52,9 +53,12 @@
     NSString *_parameters;
     NSString *_canonical_url;
     NSString *_robots_meta_tag;
+    NSString *_google_client_id;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool google_client_idIsSet; // @synthesize google_client_idIsSet=_google_client_idIsSet;
+@property(copy, nonatomic) NSString *google_client_id; // @synthesize google_client_id=_google_client_id;
 @property(nonatomic) _Bool robots_meta_tagIsSet; // @synthesize robots_meta_tagIsSet=_robots_meta_tagIsSet;
 @property(copy, nonatomic) NSString *robots_meta_tag; // @synthesize robots_meta_tag=_robots_meta_tag;
 @property(nonatomic) _Bool loginbotIsSet; // @synthesize loginbotIsSet=_loginbotIsSet;
@@ -97,6 +101,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetGoogle_client_id;
 - (void)unsetRobots_meta_tag;
 - (void)unsetLoginbot;
 - (void)unsetCanonical_url;
@@ -121,7 +126,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithUser_agent:(id)arg1 domain:(id)arg2 base_url:(id)arg3 client_ip:(id)arg4 known_bot:(id)arg5 header_signature:(id)arg6 cookies_present:(_Bool)arg7 accept_encoding:(_Bool)arg8 accept_language:(_Bool)arg9 reddaid:(id)arg10 google_aaid:(id)arg11 amazon_aid:(id)arg12 apple_ios_aid:(id)arg13 isp_organization:(id)arg14 accept_language_header:(id)arg15 parameters:(id)arg16 canonical_url:(id)arg17 loginbot:(_Bool)arg18 robots_meta_tag:(id)arg19;
+- (id)initWithUser_agent:(id)arg1 domain:(id)arg2 base_url:(id)arg3 client_ip:(id)arg4 known_bot:(id)arg5 header_signature:(id)arg6 cookies_present:(_Bool)arg7 accept_encoding:(_Bool)arg8 accept_language:(_Bool)arg9 reddaid:(id)arg10 google_aaid:(id)arg11 amazon_aid:(id)arg12 apple_ios_aid:(id)arg13 isp_organization:(id)arg14 accept_language_header:(id)arg15 parameters:(id)arg16 canonical_url:(id)arg17 loginbot:(_Bool)arg18 robots_meta_tag:(id)arg19 google_client_id:(id)arg20;
 - (id)init;
 
 // Remaining properties

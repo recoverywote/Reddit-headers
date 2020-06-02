@@ -15,6 +15,5 @@
 - (void)addBearerAuthorizationHeaderWithToken:(id)arg1;
 - (void)addBasicAuthorizationHeaderWithClientId:(id)arg1;
 - (void)addRedditUserIdHeader:(id)arg1;
-- (void)addClientVendorIdHeader;
 @end
 

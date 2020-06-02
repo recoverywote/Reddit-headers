@@ -14,12 +14,13 @@
 #import "UINavigationControllerDelegate-Protocol.h"
 
 @class BaseCollectionView, NSString, PHFetchResult, RUIActionSheetViewController, UIImage;
-@protocol PhotoPickerViewControllerDelegate;
+@protocol AccountContext, PhotoPickerViewControllerDelegate;
 
 @interface PhotoPickerViewController : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UINavigationControllerDelegate, UIImagePickerControllerDelegate, RUIActionSheetViewControllerDelegate, CurrentActionSheetProtocol>
 {
     _Bool _shouldUseOverlayBackgroundColor;
     id <PhotoPickerViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     PHFetchResult *_photos;
     BaseCollectionView *_collectionView;
     UIImage *_selectedImage;
@@ -36,6 +37,7 @@
 @property(retain, nonatomic) UIImage *selectedImage; // @synthesize selectedImage=_selectedImage;
 @property(retain, nonatomic) BaseCollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) PHFetchResult *photos; // @synthesize photos=_photos;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <PhotoPickerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) __weak RUIActionSheetViewController *actionSheetViewController;
 - (void)loadImageForAsset:(id)arg1;
@@ -60,7 +62,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithDelegate:(id)arg1 confirmationDialogButtonText:(id)arg2 boundingRect:(struct CGRect)arg3 shouldUseOverlayBackgroundColor:(_Bool)arg4;
+- (id)initWithAccountContext:(id)arg1 delegate:(id)arg2 confirmationDialogButtonText:(id)arg3 boundingRect:(struct CGRect)arg4 shouldUseOverlayBackgroundColor:(_Bool)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

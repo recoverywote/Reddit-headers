@@ -14,6 +14,7 @@
 - (void)commentTreeModerateBarNodeDidTapLock:(CommentTreeModerateBarNode *)arg1;
 - (void)commentTreeModerateBarNodeDidTapRemoveAsSpam:(CommentTreeModerateBarNode *)arg1;
 - (void)commentTreeModerateBarNodeDidTapRemove:(CommentTreeModerateBarNode *)arg1;
+- (void)commentTreeModerateBarNodeDidTapUncollapse:(CommentTreeModerateBarNode *)arg1;
 - (void)commentTreeModerateBarNodeDidTapApprove:(CommentTreeModerateBarNode *)arg1;
 @end
 

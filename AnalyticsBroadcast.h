@@ -20,15 +20,23 @@
     _Bool _time_remaining_msIsSet;
     _Bool _time_added_msIsSet;
     _Bool _stream_stateIsSet;
+    _Bool _heartbeat_length_msIsSet;
+    _Bool _concurrent_user_countIsSet;
     long long _unique_watchers;
     long long _max_concurrent_watchers;
     long long _duration_ms;
     long long _time_remaining_ms;
     long long _time_added_ms;
     NSString *_stream_state;
+    long long _heartbeat_length_ms;
+    long long _concurrent_user_count;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool concurrent_user_countIsSet; // @synthesize concurrent_user_countIsSet=_concurrent_user_countIsSet;
+@property(nonatomic) long long concurrent_user_count; // @synthesize concurrent_user_count=_concurrent_user_count;
+@property(nonatomic) _Bool heartbeat_length_msIsSet; // @synthesize heartbeat_length_msIsSet=_heartbeat_length_msIsSet;
+@property(nonatomic) long long heartbeat_length_ms; // @synthesize heartbeat_length_ms=_heartbeat_length_ms;
 @property(nonatomic) _Bool stream_stateIsSet; // @synthesize stream_stateIsSet=_stream_stateIsSet;
 @property(copy, nonatomic) NSString *stream_state; // @synthesize stream_state=_stream_state;
 @property(nonatomic) _Bool time_added_msIsSet; // @synthesize time_added_msIsSet=_time_added_msIsSet;
@@ -45,6 +53,8 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetConcurrent_user_count;
+- (void)unsetHeartbeat_length_ms;
 - (void)unsetStream_state;
 - (void)unsetTime_added_ms;
 - (void)unsetTime_remaining_ms;
@@ -56,7 +66,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithUnique_watchers:(long long)arg1 max_concurrent_watchers:(long long)arg2 duration_ms:(long long)arg3 time_remaining_ms:(long long)arg4 time_added_ms:(long long)arg5 stream_state:(id)arg6;
+- (id)initWithUnique_watchers:(long long)arg1 max_concurrent_watchers:(long long)arg2 duration_ms:(long long)arg3 time_remaining_ms:(long long)arg4 time_added_ms:(long long)arg5 stream_state:(id)arg6 heartbeat_length_ms:(long long)arg7 concurrent_user_count:(long long)arg8;
 - (id)init;
 
 // Remaining properties

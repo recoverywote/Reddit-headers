@@ -6,16 +6,16 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSString, UITextField, UIView;
+@class NSString, UITextField, UIView, _TtCOE6RedditO8RedditUI13RUIComponents4Auth26LoadableConfirmationButton;
 
 @interface _TtC6Reddit29ConfirmPasswordViewController : UIViewController
 {
     // Error parsing type: , name: scrollView
     // Error parsing type: , name: confirmPasswordView
-    // Error parsing type: , name: confirmationButton
     // Error parsing type: , name: confirmationInputAccessoryView
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: onDidConfirmPassword
+    // Error parsing type: , name: confirmationButton
 }
 
 - (void).cxx_destruct;
@@ -31,6 +31,7 @@
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 @property(nonatomic, readonly) NSString *passwordText;
 @property(nonatomic, readonly) UITextField *passwordField;
+@property(nonatomic, readonly) _TtCOE6RedditO8RedditUI13RUIComponents4Auth26LoadableConfirmationButton *confirmationButton; // @synthesize confirmationButton;
 
 @end
 

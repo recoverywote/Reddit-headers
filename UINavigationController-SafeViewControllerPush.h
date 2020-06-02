@@ -8,6 +8,7 @@
 
 @interface UINavigationController (SafeViewControllerPush)
 - (void)safePushViewController:(id)arg1 animated:(_Bool)arg2;
+- (id)popViewControllersOfClasses:(id)arg1;
 - (void)popToRootAndPush:(id)arg1;
 - (void)popAndPush:(id)arg1;
 @end

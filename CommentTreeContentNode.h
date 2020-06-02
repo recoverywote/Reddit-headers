@@ -9,12 +9,13 @@
 #import "ASTextNodeDelegate-Protocol.h"
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ASDisplayNode, CommentMetaViewModel, CommentTreeAwardsNode, CommentTreeHeaderNode, CommentTreeLoadMoreView, CommentTreeNode, CommentTreeNodeOptions, CommentTreeTextNode, NSString, StructuredStyle, _TtC6Reddit26AwardBubblingHighlightNode;
-@protocol CommentTreeContentNodeDelegate;
+@class ASDisplayNode, CommentMetaViewModel, CommentTreeAwardsNode, CommentTreeHeaderNode, CommentTreeLoadMoreView, CommentTreeNode, CommentTreeNodeOptions, CommentTreeTextNode, NSString, StructuredStyle, SubredditMentionsHandler, _TtC6Reddit26AwardBubblingHighlightNode;
+@protocol AccountContext, CommentTreeContentNodeDelegate;
 
 @interface CommentTreeContentNode : BaseFeedDisplayNode <ASTextNodeDelegate, ObjectObserverProtocol>
 {
     CommentTreeTextNode *_textNode;
+    id <AccountContext> _accountContext;
     CommentTreeNode *_commentNode;
     CommentMetaViewModel *_commentMetaViewModel;
     StructuredStyle *_subredditStyling;
@@ -28,9 +29,11 @@
     ASDisplayNode *_commandNode;
     _TtC6Reddit26AwardBubblingHighlightNode *_awardHighlightNode;
     unsigned long long _awardHighlight;
+    SubredditMentionsHandler *_subredditMentionsHandler;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SubredditMentionsHandler *subredditMentionsHandler; // @synthesize subredditMentionsHandler=_subredditMentionsHandler;
 @property(nonatomic) unsigned long long awardHighlight; // @synthesize awardHighlight=_awardHighlight;
 @property(retain, nonatomic) _TtC6Reddit26AwardBubblingHighlightNode *awardHighlightNode; // @synthesize awardHighlightNode=_awardHighlightNode;
 @property(retain, nonatomic) ASDisplayNode *commandNode; // @synthesize commandNode=_commandNode;
@@ -44,6 +47,7 @@
 @property(retain, nonatomic) StructuredStyle *subredditStyling; // @synthesize subredditStyling=_subredditStyling;
 @property(retain, nonatomic) CommentMetaViewModel *commentMetaViewModel; // @synthesize commentMetaViewModel=_commentMetaViewModel;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) CommentTreeTextNode *textNode; // @synthesize textNode=_textNode;
 - (void)setColorToHighlightView:(id)arg1;
 - (void)updateAwardsHighlight;
@@ -58,7 +62,7 @@
 - (void)createHighlightNode;
 - (void)configureNodes;
 - (void)configureAwardHighlightNode;
-- (id)initWithCommentNode:(id)arg1 commentMetaViewModel:(id)arg2 styling:(id)arg3 delegate:(id)arg4 commentOptions:(id)arg5;
+- (id)initWithAccountContext:(id)arg1 commentNode:(id)arg2 commentMetaViewModel:(id)arg3 subredditMentionsHandler:(id)arg4 styling:(id)arg5 delegate:(id)arg6 commentOptions:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

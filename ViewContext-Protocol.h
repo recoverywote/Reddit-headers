@@ -6,13 +6,17 @@
 
 #import "NSObject-Protocol.h"
 
-@class Account, AnalyticsManager, ExperimentManager, RUI, VisibilityTracker;
+@class Account, AdEventsManager, AnalyticsManager, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, SubredditManager, VisibilityTracker;
 
 @protocol ViewContext <NSObject>
+@property(nonatomic, readonly) AdEventsManager *adEventsManager;
 @property(nonatomic, readonly) VisibilityTracker *visibilityTracker;
 @property(nonatomic, readonly) AnalyticsManager *analyticsManager;
 @property(nonatomic, readonly) Account *account;
+@property(nonatomic, readonly) LegacyExperimentManager *legacyExperimentManager;
 @property(nonatomic, readonly) ExperimentManager *experimentManager;
 @property(nonatomic, readonly) RUI *rui;
+@property(nonatomic, readonly) GivenAwardsManager *givenAwardsManager;
+@property(nonatomic, readonly) SubredditManager *subredditManager;
 @end
 

@@ -13,6 +13,7 @@
 #import "UITextViewDelegate-Protocol.h"
 
 @class BaseAttachmentTextView, BaseView, Comment, CommentComposeImageManager, CommentHeaderView, CommentTextView, NSString, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
+@protocol PowerupsCommentCreationDelegate, ViewContext;
 
 @interface CommentReplyView : BaseScrollView <CommentTextViewDelegate, BaseTextViewDelegate, UITextViewDelegate, LinkViewControllerDelegate, CommentComposeKeyboardAccessoryViewDelegate>
 {
@@ -22,6 +23,8 @@
     CommentComposeImageManager *_imageManager;
     _TtC6Reddit23MetaEmoteComposeManager *_emoteComposeManager;
     _TtC6Reddit23MetaGIPHYComposeManager *_giphyComposeManager;
+    id <PowerupsCommentCreationDelegate> _powerupsDelegate;
+    id <ViewContext> _viewContext;
     CommentHeaderView *_commentHeaderView;
     BaseView *_seperatorLineView;
 }
@@ -29,6 +32,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *seperatorLineView; // @synthesize seperatorLineView=_seperatorLineView;
 @property(retain, nonatomic) CommentHeaderView *commentHeaderView; // @synthesize commentHeaderView=_commentHeaderView;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
+@property(nonatomic) __weak id <PowerupsCommentCreationDelegate> powerupsDelegate; // @synthesize powerupsDelegate=_powerupsDelegate;
 @property(retain, nonatomic) _TtC6Reddit23MetaGIPHYComposeManager *giphyComposeManager; // @synthesize giphyComposeManager=_giphyComposeManager;
 @property(retain, nonatomic) _TtC6Reddit23MetaEmoteComposeManager *emoteComposeManager; // @synthesize emoteComposeManager=_emoteComposeManager;
 @property(retain, nonatomic) CommentComposeImageManager *imageManager; // @synthesize imageManager=_imageManager;
@@ -50,6 +55,8 @@
 - (void)commentTextViewDidWantToCollapse:(id)arg1;
 - (void)commentTextView:(id)arg1 didTapLinkURL:(id)arg2;
 - (void)didTapCloseLinkPopUp;
+- (void)commentComposeKeyboardAccessoryViewDidSelectPowerupsGIFs:(id)arg1 powerupsInfo:(id)arg2;
+- (void)commentComposeKeyboardAccessoryViewDidSelectPowerupsEmotes:(id)arg1 powerupsInfo:(id)arg2;
 - (void)commentComposeKeyboardAccessoryViewDidSelectGIFs:(id)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectEmotes:(id)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectPhotos:(id)arg1;
@@ -57,8 +64,9 @@
 - (void)commentComposeKeyboardAccessoryViewDidSelectLink:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)layoutSubviews;
-- (void)configureWithComment:(id)arg1 andStyling:(id)arg2;
-- (id)init;
+- (void)setPowerupsInfo:(id)arg1;
+- (void)configureWithComment:(id)arg1 styling:(id)arg2;
+- (id)initWithViewContext:(id)arg1 imageManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

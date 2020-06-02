@@ -16,6 +16,7 @@
     // Error parsing type: , name: containerView
     // Error parsing type: , name: blurView
     // Error parsing type: , name: bottomControlStack
+    // Error parsing type: , name: powerupsMarketingView
     // Error parsing type: , name: delegate
     // Error parsing type: , name: areControlsHidden
     // Error parsing type: , name: onDidTapFullscreenControl

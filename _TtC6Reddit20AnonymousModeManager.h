@@ -6,20 +6,28 @@
 
 #import <objc/NSObject.h>
 
+@protocol AccountContext;
+
 @interface _TtC6Reddit20AnonymousModeManager : NSObject
 {
+    // Error parsing type: , name: kDefaultTimeoutIntervalSec
+    // Error parsing type: , name: accountContext
+    // Error parsing type: , name: timeoutIntervalSec
     // Error parsing type: , name: $__lazy_storage_$_anonymousModeInfo
     // Error parsing type: , name: accountManager
     // Error parsing type: , name: themeToggleClosure
     // Error parsing type: , name: welcomePopupShowingClosure
+    // Error parsing type: , name: backgroundedAt
 }
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)leaveAnonymousBrowsingMode;
+- (void)leaveAnonymousBrowsingModeWithCompletion:(CDUnknownBlockType)arg1;
 - (void)enterAnonymousBrowsingMode;
 - (id)initWithAccountManager:(id)arg1;
+@property(nonatomic) double timeoutIntervalSec; // @synthesize timeoutIntervalSec;
 @property(nonatomic) _Bool isInAnonymousBrowsingMode;
+@property(nonatomic) __weak id <AccountContext> accountContext; // @synthesize accountContext;
 
 @end
 

@@ -9,20 +9,19 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet21WalletFeedContentView : UIView
 {
+    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: refreshControl
     // Error parsing type: , name: notchView
     // Error parsing type: , name: navigationView
     // Error parsing type: , name: navigationHeaderView
     // Error parsing type: , name: contentScrollView
-    // Error parsing type: , name: balanceView
-    // Error parsing type: , name: staticCardView
-    // Error parsing type: , name: newPointsView
-    // Error parsing type: , name: usePointsView
-    // Error parsing type: , name: transactionListView
+    // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
+- (void)handleRefreshControl:(id)arg1;
 
 @end
 

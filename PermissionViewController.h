@@ -9,27 +9,32 @@
 #import "PopupViewControllerProtocol-Protocol.h"
 
 @class BaseButton, BaseLabel, NSString;
+@protocol AccountContext;
 
 @interface PermissionViewController : BaseViewController <PopupViewControllerProtocol>
 {
+    id <AccountContext> _accountContext;
     BaseLabel *_textLabel;
     BaseButton *_allowButton;
     BaseButton *_denyButton;
     CDUnknownBlockType _completionHandler;
 }
 
-+ (void)presentPermissionViewControllerWithTitle:(id)arg1 message:(id)arg2 allowButtonTitle:(id)arg3 denyButtonTitle:(id)arg4 completion:(CDUnknownBlockType)arg5;
++ (void)presentPermissionViewControllerWithAccountContext:(id)arg1 title:(id)arg2 message:(id)arg3 allowButtonTitle:(id)arg4 denyButtonTitle:(id)arg5 completion:(CDUnknownBlockType)arg6;
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(retain, nonatomic) BaseButton *denyButton; // @synthesize denyButton=_denyButton;
 @property(retain, nonatomic) BaseButton *allowButton; // @synthesize allowButton=_allowButton;
 @property(retain, nonatomic) BaseLabel *textLabel; // @synthesize textLabel=_textLabel;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)viewWillLayoutSubviews;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
+- (_Bool)isInAnonymousBrowsing;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 - (void)didTouchDenyButton:(id)arg1;
 - (void)didTouchAllowButton:(id)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

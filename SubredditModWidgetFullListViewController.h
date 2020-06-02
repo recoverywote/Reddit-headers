@@ -27,6 +27,7 @@
 @property(copy, nonatomic) NSString *currentSearchString; // @synthesize currentSearchString=_currentSearchString;
 @property(copy, nonatomic) NSArray *searchResults; // @synthesize searchResults=_searchResults;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
+- (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;

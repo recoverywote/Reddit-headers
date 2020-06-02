@@ -12,7 +12,6 @@
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: accountContext
-    // Error parsing type: , name: analyticsManager
     // Error parsing type: , name: draftCommunity
     // Error parsing type: , name: avatarPicker
     // Error parsing type: , name: headerlabel

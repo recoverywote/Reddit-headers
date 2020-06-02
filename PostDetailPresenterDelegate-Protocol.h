@@ -10,8 +10,9 @@
 @protocol PostDetailPresenterDelegate
 - (void)reloadListData;
 - (void)postDetailPresenterDidTapComment:(PostDetailPresenter *)arg1;
+- (void)presentPowerupsMarketingSheetWithPreselectedBenefit:(long long)arg1;
 - (void)showTrendingToaster;
-- (void)presentAddCommentModal;
+- (void)presentAddCommentModal:(long long)arg1;
 - (void)presentErrorToastMessage:(NSString *)arg1;
 - (void)reloadListDataWithFixedContentOffset;
 - (void)displayListingContent:(PostDetailPresenter *)arg1 correlationID:(NSUUID *)arg2 scrollToHeaderForSection:(unsigned long long)arg3;

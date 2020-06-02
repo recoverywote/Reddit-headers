@@ -10,15 +10,15 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 #import "UITabBarControllerDelegate-Protocol.h"
 
-@class BaseButton, BaseViewController, ChatHomePagedTabViewController, CommunityTabViewController, HomeViewController, InboxViewController, NSArray, NSString, RedditService, UINavigationController, _TtC6Reddit22CoinSaleEntryContainer, _TtC6Reddit22ForcePasswordResetView, _TtC6Reddit29CommunityCreateFlowController;
-@protocol AccountContext, MainTabBarControllerDelegate;
+@class BaseButton, BaseViewController, ChatHomePagedTabViewController, HomeViewController, InboxViewController, NSArray, NSString, RedditService, UINavigationController, UIViewController, _TtC6Reddit22ForcePasswordResetView, _TtC6Reddit29CommunityCreateFlowController, _TtC7Economy22CoinSaleEntryContainer;
+@protocol AccountContext, MainTabBarControllerDelegate, _TtP6Reddit35CommunityTabViewControllerInterface_;
 
 @interface MainTabBarController : UITabBarController <UITabBarControllerDelegate, RUIThemeUpdateCallbackProtocol, PostViewControllerDelegate>
 {
     id <MainTabBarControllerDelegate> _mainTabDelegate;
     UINavigationController *_currentViewController;
     HomeViewController *_homeViewController;
-    CommunityTabViewController *_communityViewController;
+    UIViewController<_TtP6Reddit35CommunityTabViewControllerInterface_> *_communityViewController;
     InboxViewController *_inboxViewController;
     ChatHomePagedTabViewController *_chatHomeController;
     BaseViewController *_postButtonPlaceholderViewController;
@@ -28,11 +28,11 @@
     BaseButton *_postButton;
     _TtC6Reddit22ForcePasswordResetView *_forcePasswordResetView;
     _TtC6Reddit29CommunityCreateFlowController *_flowController;
-    _TtC6Reddit22CoinSaleEntryContainer *_coinSaleContainer;
+    _TtC7Economy22CoinSaleEntryContainer *_coinSaleContainer;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) _TtC6Reddit22CoinSaleEntryContainer *coinSaleContainer; // @synthesize coinSaleContainer=_coinSaleContainer;
+@property(retain, nonatomic) _TtC7Economy22CoinSaleEntryContainer *coinSaleContainer; // @synthesize coinSaleContainer=_coinSaleContainer;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) _TtC6Reddit22ForcePasswordResetView *forcePasswordResetView; // @synthesize forcePasswordResetView=_forcePasswordResetView;
 @property(retain, nonatomic) BaseButton *postButton; // @synthesize postButton=_postButton;
@@ -42,10 +42,11 @@
 @property(retain, nonatomic) BaseViewController *postButtonPlaceholderViewController; // @synthesize postButtonPlaceholderViewController=_postButtonPlaceholderViewController;
 @property(retain, nonatomic) ChatHomePagedTabViewController *chatHomeController; // @synthesize chatHomeController=_chatHomeController;
 @property(retain, nonatomic) InboxViewController *inboxViewController; // @synthesize inboxViewController=_inboxViewController;
-@property(retain, nonatomic) CommunityTabViewController *communityViewController; // @synthesize communityViewController=_communityViewController;
+@property(retain, nonatomic) UIViewController<_TtP6Reddit35CommunityTabViewControllerInterface_> *communityViewController; // @synthesize communityViewController=_communityViewController;
 @property(retain, nonatomic) HomeViewController *homeViewController; // @synthesize homeViewController=_homeViewController;
 @property(retain, nonatomic) UINavigationController *currentViewController; // @synthesize currentViewController=_currentViewController;
 @property(nonatomic) __weak id <MainTabBarControllerDelegate> mainTabDelegate; // @synthesize mainTabDelegate=_mainTabDelegate;
+- (void)presentLoginViewController;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)showCommunityCreationViewController;
 - (id)viewControllerAtTab:(unsigned long long)arg1;

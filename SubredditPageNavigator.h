@@ -20,6 +20,7 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)presentViewController:(id)arg1;
 - (void)pushViewController:(id)arg1;
+- (void)navigateToPowerupsMarketingPageForSubreddit:(id)arg1 powerupsInfo:(id)arg2 preselectedBenefit:(long long)arg3;
 - (void)navigateToCustomFeed:(id)arg1;
 - (void)navigateToCustomFeedListWithSelectionHandler:(CDUnknownBlockType)arg1;
 - (void)navigateToSubreddit:(id)arg1;

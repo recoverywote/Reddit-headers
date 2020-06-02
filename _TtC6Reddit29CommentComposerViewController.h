@@ -6,7 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSLayoutYAxisAnchor;
+@class BaseTextView, NSLayoutYAxisAnchor;
 @protocol _TtP6Reddit27CommentComposerViewDelegate_;
 
 @interface _TtC6Reddit29CommentComposerViewController : UIViewController
@@ -47,6 +47,7 @@
 @property(nonatomic, readonly) double composerHeight;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithService:(id)arg1 presenter:(id)arg2;
+@property(nonatomic, retain) BaseTextView *commentTextView;
 @property(nonatomic) __weak id <_TtP6Reddit27CommentComposerViewDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic, retain) NSLayoutYAxisAnchor *bottomViewYAnchor; // @synthesize bottomViewYAnchor;
 

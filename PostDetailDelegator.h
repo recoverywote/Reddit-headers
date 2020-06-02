@@ -71,6 +71,7 @@
 - (void)commentTreeModerateBarNodeDidTapLock:(id)arg1;
 - (void)commentTreeModerateBarNodeDidTapRemoveAsSpam:(id)arg1;
 - (void)commentTreeModerateBarNodeDidTapRemove:(id)arg1;
+- (void)commentTreeModerateBarNodeDidTapUncollapse:(id)arg1;
 - (void)commentTreeModerateBarNodeDidTapApprove:(id)arg1;
 - (void)commentTreeModerateBarNodeDidTapDistinguish:(id)arg1;
 - (void)commentTreeCommandBarNodeDidTapModerate:(id)arg1;

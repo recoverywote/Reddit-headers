@@ -28,6 +28,7 @@
 @property(readonly, nonatomic) __weak BaseViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <RoadblockCoordinatorDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)presentLoginViewControllerWithSource:(unsigned long long)arg1 deferredURL:(id)arg2;
 - (void)handleConfirmedNSFWRoadblockableModel:(id)arg1;
 - (void)fetchQuarantinedSubredditByName:(id)arg1;
 - (void)didConfirmRoadblockableModel:(id)arg1 roadblockType:(long long)arg2 popupController:(id)arg3;

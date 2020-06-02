@@ -6,27 +6,31 @@
 
 #import "BaseViewController.h"
 
-@class RedditService, UIStackView;
+@class RedditService, UIStackView, _TtC6Reddit32RedditPremiumSettingsCoordinator;
 @protocol AccountContext;
 
 @interface RedditPremiumPreferencesViewController : BaseViewController
 {
-    _Bool _cancelOfferShown;
     id <AccountContext> _accountContext;
     UIStackView *_contentStackView;
+    _TtC6Reddit32RedditPremiumSettingsCoordinator *_settingsCoordinator;
+    UIStackView *_offerStackView;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIStackView *offerStackView; // @synthesize offerStackView=_offerStackView;
+@property(retain, nonatomic) _TtC6Reddit32RedditPremiumSettingsCoordinator *settingsCoordinator; // @synthesize settingsCoordinator=_settingsCoordinator;
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
-@property(nonatomic) _Bool cancelOfferShown; // @synthesize cancelOfferShown=_cancelOfferShown;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (id)lineSeparatorView;
+- (id)offerStackViewWith:(id)arg1;
 - (id)spacerWithHeight:(double)arg1;
 - (id)buttonWithTitle:(id)arg1 action:(SEL)arg2;
 - (id)labelWithText:(id)arg1;
 - (id)labelWithTitle:(id)arg1;
 - (void)manageWebSubscriptionDidTap:(id)arg1;
 - (void)manageInAppSubscriptionDidTap:(id)arg1;
+- (void)hidePremiumAcceptance:(_Bool)arg1;
 - (_Bool)shouldShowCancellationOffer;
 - (void)showCancellationOffer;
 - (void)setupViewsForNonSubscriber;

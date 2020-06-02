@@ -6,11 +6,10 @@
 
 #import <objc/NSObject.h>
 
-@class NSAttributedString, RedditService, SubredditMentionsDataFetcher;
+@class RedditService, SubredditMentionsDataFetcher;
 
 @interface SubredditMentionsHandler : NSObject
 {
-    NSAttributedString *_attributedString;
     RedditService *_service;
     SubredditMentionsDataFetcher *_dataFetcher;
 }
@@ -18,10 +17,9 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SubredditMentionsDataFetcher *dataFetcher; // @synthesize dataFetcher=_dataFetcher;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
-@property(copy, nonatomic) NSAttributedString *attributedString; // @synthesize attributedString=_attributedString;
 - (id)enhancedAttributedStringForAttributes:(id)arg1 enhancedAttributes:(id)arg2;
-- (void)enhanceSubredditMentionsWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithService:(id)arg1 attributedString:(id)arg2;
+- (void)subredditMentionsForAttributedString:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)initWithService:(id)arg1;
 
 @end
 

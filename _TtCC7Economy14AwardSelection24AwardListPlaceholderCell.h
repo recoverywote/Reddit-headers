@@ -10,6 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtCC7Economy14AwardSelection24AwardListPlaceholderCell : UICollectionViewCell
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: isV2
     // Error parsing type: , name: shapeLayer
 }
 

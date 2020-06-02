@@ -18,6 +18,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak PostDetailViewController *vc; // @synthesize vc=_vc;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (void)navigateToPowerupsMarketingPageForSubreddit:(id)arg1 powerupsInfo:(id)arg2 preselectedBenefit:(long long)arg3;
 - (void)navigateToAwardDetailsForComment:(id)arg1 parentPost:(id)arg2 correlationId:(id)arg3;
 - (void)presentLoggedOutViewControllerForDownvoting;
 - (void)presentLoggedOutViewControllerForUpvoting;

@@ -9,12 +9,14 @@
 #import "ObjectObserverProtocol-Protocol.h"
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
-@class BaseImageView, BaseLabel, NSString, UITapGestureRecognizer, User;
+@class BaseImageView, BaseLabel, BaseStore, NSString, UITapGestureRecognizer, User;
+@protocol BaseStoreObservation;
 
 @interface UserKarmaAndAgeView : BaseView <RUIThemeUpdateCallbackProtocol, ObjectObserverProtocol>
 {
     _Bool _isCompact;
     User *_user;
+    BaseStore *_store;
     BaseImageView *_karmaLogoView;
     BaseImageView *_ageLogoView;
     BaseLabel *_karmaLabel;
@@ -36,10 +38,11 @@
     BaseView *_rightCurtain;
     UITapGestureRecognizer *_tapGesture;
     long long _offsetIndex;
+    id <BaseStoreObservation> _userModelObservation;
 }
 
-+ (double)defaultHeight;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <BaseStoreObservation> userModelObservation; // @synthesize userModelObservation=_userModelObservation;
 @property(nonatomic) long long offsetIndex; // @synthesize offsetIndex=_offsetIndex;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) BaseView *rightCurtain; // @synthesize rightCurtain=_rightCurtain;
@@ -61,19 +64,20 @@
 @property(retain, nonatomic) BaseLabel *karmaLabel; // @synthesize karmaLabel=_karmaLabel;
 @property(retain, nonatomic) BaseImageView *ageLogoView; // @synthesize ageLogoView=_ageLogoView;
 @property(retain, nonatomic) BaseImageView *karmaLogoView; // @synthesize karmaLogoView=_karmaLogoView;
+@property(retain, nonatomic) BaseStore *store; // @synthesize store=_store;
 @property(retain, nonatomic) User *user; // @synthesize user=_user;
 @property(nonatomic) _Bool isCompact; // @synthesize isCompact=_isCompact;
 - (void)setXOffset:(double)arg1;
 - (double)xOffset;
 - (double)startOffset;
 - (double)itemWidth;
-- (void)updateContentViewsForData:(id)arg1;
 - (void)themeDidChange:(id)arg1;
 - (void)didTap:(id)arg1;
 - (void)layoutSubviews;
-- (void)configureWithUser:(id)arg1;
+- (struct CGSize)intrinsicContentSize;
+- (void)updateWithUser:(id)arg1;
+- (void)configureWithUser:(id)arg1 store:(id)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)dealloc;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

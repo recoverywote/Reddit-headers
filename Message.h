@@ -9,14 +9,13 @@
 #import <RedditCore/BaseModel-Protocol.h>
 #import <RedditCore/ReportableModel-Protocol.h>
 
-@class NSArray, NSAttributedString, NSDate, NSDictionary, NSString;
+@class NSArray, NSDate, NSDictionary, NSString;
 
 @interface Message : ObservableObject <BaseModel, ReportableModel>
 {
     _Bool _isLoadingMoreNode;
     _Bool _isSelfMessage;
     _Bool _isUnread;
-    _Bool _isLocallyRead;
     _Bool _isCollapsed;
     NSString *_pk;
     NSString *_author;
@@ -26,21 +25,18 @@
     NSString *_subreddit;
     NSDate *_createdAt;
     long long _distinguishedAs;
-    NSAttributedString *_bodyAttributed;
+    NSArray *_replies;
     unsigned long long _visualLevel;
     NSArray *_visualReplies;
-    NSArray *_replies;
     NSDictionary *_debugData;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *debugData; // @synthesize debugData=_debugData;
-@property(copy, nonatomic) NSArray *replies; // @synthesize replies=_replies;
 @property(copy, nonatomic) NSArray *visualReplies; // @synthesize visualReplies=_visualReplies;
 @property(nonatomic) unsigned long long visualLevel; // @synthesize visualLevel=_visualLevel;
 @property(nonatomic) _Bool isCollapsed; // @synthesize isCollapsed=_isCollapsed;
-@property(copy, nonatomic) NSAttributedString *bodyAttributed; // @synthesize bodyAttributed=_bodyAttributed;
-@property(nonatomic) _Bool isLocallyRead; // @synthesize isLocallyRead=_isLocallyRead;
+@property(copy, nonatomic) NSArray *replies; // @synthesize replies=_replies;
 @property(nonatomic) _Bool isUnread; // @synthesize isUnread=_isUnread;
 @property(nonatomic) long long distinguishedAs; // @synthesize distinguishedAs=_distinguishedAs;
 @property(nonatomic) _Bool isSelfMessage; // @synthesize isSelfMessage=_isSelfMessage;
@@ -59,6 +55,7 @@
 @property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain;
 - (id)urlPath;
 @property(readonly, copy) NSString *debugDescription;
+- (void)updateModelWithReplies:(id)arg1;
 - (void)configureWithData:(id)arg1;
 - (id)initWithPk:(id)arg1;
 

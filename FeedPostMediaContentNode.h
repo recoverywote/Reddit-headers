@@ -24,16 +24,16 @@
 @property(retain, nonatomic) ASDisplayNode *mediaNode; // @synthesize mediaNode=_mediaNode;
 @property(nonatomic) __weak id <FeedPostMediaContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-- (id)createLegacyHLSVideoNodeForPost:(id)arg1 withOptions:(id)arg2 delegate:(id)arg3 parentPost:(id)arg4;
-- (id)createLegacyVideoNodeForPost:(id)arg1 withOptions:(id)arg2 delegate:(id)arg3 parentPost:(id)arg4;
+- (id)createLegacyHLSVideoNodeForPost:(id)arg1 options:(id)arg2 viewContext:(id)arg3 delegate:(id)arg4 parentPost:(id)arg5;
+- (id)createLegacyVideoNodeWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 delegate:(id)arg4 parentPost:(id)arg5;
 - (struct CGSize)mediaSizeForTargetWidth:(double)arg1;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)noLongerPastVisibilityThreshold;
 - (void)didPassVisibilityThreshold;
 - (void)didBecomeFullyVisible;
 @property(readonly, nonatomic) FeedPostHlsVideoView *hlsVideoView;
-- (id)initWithPost:(id)arg1 options:(id)arg2 delegate:(id)arg3 parentPost:(id)arg4;
-- (id)initWithPost:(id)arg1 options:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 delegate:(id)arg4 parentPost:(id)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 delegate:(id)arg4;
 @property(readonly, nonatomic) FeedPostImageNode *imageNode;
 
 // Remaining properties

@@ -16,7 +16,6 @@
 + (id)errorWithFIRInstanceIDErrorCode:(unsigned long long)arg1;
 + (id)apm_errorWithCode:(long long)arg1 description:(id)arg2 monitorContext:(id)arg3;
 + (id)apm_errorWithCode:(long long)arg1 description:(id)arg2;
-@property(readonly, nonatomic) _Bool red_shouldMarkTransactionAsCompleted;
 - (id)errorByAddingEntriesToUserInfo:(id)arg1;
 @property(readonly, nonatomic) _Bool isForbiddenError;
 @property(readonly, nonatomic) unsigned long long instanceIDErrorCode;

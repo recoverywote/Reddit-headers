@@ -15,8 +15,7 @@
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: iconView
     // Error parsing type: , name: closeButton
-    // Error parsing type: , name: community
-    // Error parsing type: , name: viewType
+    // Error parsing type: , name: geoTaggable
 }
 
 - (void).cxx_destruct;

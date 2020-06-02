@@ -13,16 +13,8 @@
 @class NSArray, NSString, NSURL;
 
 @interface SubredditCategory (IGListDiffable) <IGListDiffable, Pillable, RailsSearchContextCandidate>
-+ (id)betaFandomCategoriesWithExistingCategories:(id)arg1;
-+ (id)attemptedResolvedCategory:(id)arg1;
-+ (id)nbaCategory;
-+ (id)nflCategory;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
-@property(nonatomic) _Bool isFollowing;
-@property(readonly, nonatomic) _Bool isFandom;
-@property(readonly, nonatomic) _Bool isNBA;
-@property(readonly, nonatomic) _Bool isNFL;
 @property(readonly, nonatomic) NSURL *bannerImageURL;
 @property(readonly, nonatomic) NSString *descriptionString;
 @property(readonly, nonatomic) NSString *titleString;

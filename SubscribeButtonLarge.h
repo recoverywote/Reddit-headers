@@ -7,12 +7,13 @@
 #import <RedditUI/BaseButton.h>
 
 @class NSString, UIColor;
-@protocol Subscribable><Styleable;
+@protocol Subscribable><Styleable, ViewContext;
 
 @interface SubscribeButtonLarge : BaseButton
 {
     _Bool _shouldApplyStyling;
     UIColor *_colorBarBackgroundColorOverride;
+    id <ViewContext> _viewContext;
     id <Subscribable><Styleable> _model;
     NSString *_subscribeString;
     NSString *_subscribedString;
@@ -23,13 +24,14 @@
 @property(copy, nonatomic) NSString *subscribeString; // @synthesize subscribeString=_subscribeString;
 @property(nonatomic) _Bool shouldApplyStyling; // @synthesize shouldApplyStyling=_shouldApplyStyling;
 @property(retain, nonatomic) id <Subscribable><Styleable> model; // @synthesize model=_model;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) UIColor *colorBarBackgroundColorOverride; // @synthesize colorBarBackgroundColorOverride=_colorBarBackgroundColorOverride;
 - (_Bool)isColorEqualToWhite:(id)arg1;
 - (id)followButtonColorWithAdjustedBrightness:(_Bool)arg1;
 - (void)configureButtonForSubscribedState:(_Bool)arg1;
 - (void)configureWithSubscriptionStatus:(_Bool)arg1 subscribeString:(id)arg2 subscribedString:(id)arg3 shouldApplyStyling:(_Bool)arg4;
 - (void)configureWithModel:(id)arg1 shouldApplyStyling:(_Bool)arg2;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

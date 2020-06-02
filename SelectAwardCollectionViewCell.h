@@ -6,12 +6,12 @@
 
 #import <RedditUI/BaseCollectionViewCell.h>
 
-@class NewAwardBadgeView, UILabel, UIStackView, _TtC6Reddit16PremiumIndicator, _TtC6Reddit25AnimatableRemoteImageView;
+@class NewAwardBadgeView, UILabel, UIStackView, _TtC6Reddit16PremiumIndicator, _TtC7Economy25AnimatableRemoteImageView;
 
 @interface SelectAwardCollectionViewCell : BaseCollectionViewCell
 {
     UIStackView *_contentStackView;
-    _TtC6Reddit25AnimatableRemoteImageView *_iconImageView;
+    _TtC7Economy25AnimatableRemoteImageView *_iconImageView;
     UILabel *_nameLabel;
     UILabel *_priceLabel;
     UILabel *_timeLeftLabel;
@@ -26,7 +26,7 @@
 @property(retain, nonatomic) UILabel *timeLeftLabel; // @synthesize timeLeftLabel=_timeLeftLabel;
 @property(retain, nonatomic) UILabel *priceLabel; // @synthesize priceLabel=_priceLabel;
 @property(retain, nonatomic) UILabel *nameLabel; // @synthesize nameLabel=_nameLabel;
-@property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
+@property(retain, nonatomic) _TtC7Economy25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
 - (void)setSelected:(_Bool)arg1;
 - (void)prepareForReuse;

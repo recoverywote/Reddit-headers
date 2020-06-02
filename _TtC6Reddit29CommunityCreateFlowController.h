@@ -14,7 +14,6 @@
     // Error parsing type: , name: draftCommunity
     // Error parsing type: , name: tags
     // Error parsing type: , name: viewController
-    // Error parsing type: , name: analytics
     // Error parsing type: , name: communityName
 }
 
@@ -22,7 +21,7 @@
 - (id)init;
 - (id)rootViewController;
 - (void)showCreateViewController;
-- (id)init:(id)arg1 accountContext:(id)arg2 analytics:(id)arg3;
+- (id)init:(id)arg1 accountContext:(id)arg2;
 @property(nonatomic, copy) NSString *communityName;
 
 @end

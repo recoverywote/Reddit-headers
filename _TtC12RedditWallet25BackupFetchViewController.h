@@ -9,6 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet25BackupFetchViewController : UIViewController
 {
+    // Error parsing type: , name: balanceRepository
     // Error parsing type: , name: redditService
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: handler

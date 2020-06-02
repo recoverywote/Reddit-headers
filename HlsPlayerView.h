@@ -8,8 +8,8 @@
 
 #import "StreamPlayerViewDelegate-Protocol.h"
 
-@class AVPlayer, AVPlayerItem, AVPlayerLayer, AnalyticsActionInfo, AudioInstance, BaseButton, BaseImageView, BaseView, GradientView, NSDate, NSNumber, NSString, NSTimer, NSURL, PlayerButtonsOverlayView, PlayerProgressView, Post, StreamPlayerView;
-@protocol PlayerViewDelegate, TheatrePlayerDelegate;
+@class AVPlayer, AVPlayerItem, AVPlayerLayer, AnalyticsActionInfo, AudioInstance, BaseButton, BaseImageView, BaseView, GradientView, NSDate, NSNumber, NSString, NSTimer, NSURL, PlayerButtonsOverlayView, PlayerProgressView, Post, PowerupsMarketingBadgeView, StreamPlayerView;
+@protocol PlayerViewDelegate, TheatrePlayerDelegate, ViewContext;
 
 @interface HlsPlayerView : LoaderContentView <StreamPlayerViewDelegate>
 {
@@ -45,6 +45,7 @@
     long long _timeToFirstFrame;
     NSDate *_loadStartTime;
     long long _retryAttempt;
+    id <ViewContext> _viewContext;
     GradientView *_gradientView;
     BaseImageView *_collapseImageView;
     BaseImageView *_expandImageView;
@@ -53,6 +54,7 @@
     BaseView *_detachedPreviewView;
     PlayerProgressView *_progressView;
     BaseButton *_timeIndicatorButton;
+    PowerupsMarketingBadgeView *_powerupsMarketingBadgeView;
     StreamPlayerView *_streamPlayerView;
     AudioInstance *_audioInstance;
     AVPlayerItem *_localPlayerItem;
@@ -94,6 +96,7 @@
 @property(retain, nonatomic) AVPlayerItem *localPlayerItem; // @synthesize localPlayerItem=_localPlayerItem;
 @property(retain, nonatomic) AudioInstance *audioInstance; // @synthesize audioInstance=_audioInstance;
 @property(retain, nonatomic) StreamPlayerView *streamPlayerView; // @synthesize streamPlayerView=_streamPlayerView;
+@property(retain, nonatomic) PowerupsMarketingBadgeView *powerupsMarketingBadgeView; // @synthesize powerupsMarketingBadgeView=_powerupsMarketingBadgeView;
 @property(retain, nonatomic) BaseButton *timeIndicatorButton; // @synthesize timeIndicatorButton=_timeIndicatorButton;
 @property(retain, nonatomic) PlayerProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) BaseView *detachedPreviewView; // @synthesize detachedPreviewView=_detachedPreviewView;
@@ -102,6 +105,7 @@
 @property(retain, nonatomic) BaseImageView *expandImageView; // @synthesize expandImageView=_expandImageView;
 @property(retain, nonatomic) BaseImageView *collapseImageView; // @synthesize collapseImageView=_collapseImageView;
 @property(retain, nonatomic) GradientView *gradientView; // @synthesize gradientView=_gradientView;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) long long retryAttempt; // @synthesize retryAttempt=_retryAttempt;
 @property(retain, nonatomic) NSDate *loadStartTime; // @synthesize loadStartTime=_loadStartTime;
 @property(nonatomic) long long timeToFirstFrame; // @synthesize timeToFirstFrame=_timeToFirstFrame;
@@ -127,6 +131,7 @@
 @property(nonatomic) __weak id <TheatrePlayerDelegate> theatrePlayerDelegate; // @synthesize theatrePlayerDelegate=_theatrePlayerDelegate;
 @property(nonatomic) __weak id <PlayerViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)defaultAnalyticsEvent;
+- (void)removePowerupsMarketingBadgeViewIfNeeded;
 - (_Bool)parentIsCarouselView;
 - (_Bool)needsToBeConfigured;
 - (void)streamPlayerRequestMute:(id)arg1;
@@ -207,6 +212,7 @@
 - (void)didBecomeFullyVisible;
 - (void)configureWithVideoID:(id)arg1 videoURL:(id)arg2 thumbnailURL:(id)arg3 previewImageURL:(id)arg4 contentSize:(struct CGSize)arg5 isGif:(_Bool)arg6 shareSheetPost:(id)arg7;
 - (void)configureWithTheatreMediaItem:(id)arg1;
+- (void)configureWithPost:(id)arg1 videoId:(id)arg2 onlyShowPreviewImage:(_Bool)arg3 powerupsInfo:(id)arg4;
 - (void)configureWithPost:(id)arg1 videoId:(id)arg2 onlyShowPreviewImage:(_Bool)arg3;
 - (void)configureWithPost:(id)arg1;
 - (void)checkReparentStreamPost;
@@ -220,7 +226,7 @@
 - (void)disablePlayPauseView:(_Bool)arg1;
 - (void)loadAndPlay;
 - (void)reachabilityDidChange:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 - (void)dealloc;
 - (CDStruct_1b6d18a9)playerEventsElapsedTime;
 - (double)eventElapsedTimeValue;

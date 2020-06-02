@@ -34,6 +34,7 @@
 @property(nonatomic) __weak id <PageSegmentedControlDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)pageSegmentItemDidChangeBadge:(id)arg1;
 - (struct CGRect)indicatorBarFrameForPageSegmentItem:(id)arg1;
+- (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
 - (void)updateSelectionHighlightToIndex:(long long)arg1 fromIndex:(long long)arg2 progress:(double)arg3;
 - (void)centerSelection;

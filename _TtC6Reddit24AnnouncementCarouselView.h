@@ -4,19 +4,23 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIView.h>
+#import <RedditUI/BaseView.h>
 
-@interface _TtC6Reddit24AnnouncementCarouselView : UIView
+@interface _TtC6Reddit24AnnouncementCarouselView : BaseView
 {
-    // Error parsing type: , name: kDismissCellWidth
     // Error parsing type: , name: announcements
+    // Error parsing type: , name: announcementsViewModel
+    // Error parsing type: , name: onHideTapped
+    // Error parsing type: , name: onActionTapped
     // Error parsing type: , name: $__lazy_storage_$_carouselPagingLayout
     // Error parsing type: , name: $__lazy_storage_$_carouselCollectionView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_pageControl
 }
 
++ (struct CGSize)calculatedSizeWithData:(id)arg1 maxWidth:(double)arg2;
 - (void).cxx_destruct;
+- (void)themeDidChange:(id)arg1;
 - (void)layoutSubviews;
 - (void)dealloc;
 - (id)initWithCoder:(id)arg1;

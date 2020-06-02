@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, AccountIdentifiers, BaseStore, Credentials, ExperimentManager, Loid, NSArray, NSURLSession, RedditServiceBackoffState, SessionTracker;
+@class Account, AccountIdentifiers, BaseStore, ExperimentManager, LegacyCredentials, Loid, NSArray, NSHTTPCookie, NSURLSession, RedditServiceBackoffState, SessionTracker;
 @protocol OS_dispatch_queue;
 
 @interface RedditService : NSObject
@@ -15,7 +15,6 @@
     _Bool _isRefreshingToken;
     _Bool _isUnableToRefreshToken;
     Account *_account;
-    Credentials *_credentials;
     Loid *_loid;
     AccountIdentifiers *_accountIdentifiers;
     BaseStore *_userStore;
@@ -33,6 +32,7 @@
     NSObject<OS_dispatch_queue> *_pendingRequestQueue;
     RedditServiceBackoffState *_backoffState;
     NSURLSession *_session;
+    LegacyCredentials *_credentials;
     SessionTracker *_sessionTracker;
     NSObject<OS_dispatch_queue> *_parseQueue;
     NSArray *_requestProcessors;
@@ -53,6 +53,7 @@
 @property(readonly, nonatomic) NSArray *requestProcessors; // @synthesize requestProcessors=_requestProcessors;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *parseQueue; // @synthesize parseQueue=_parseQueue;
 @property(readonly, nonatomic) SessionTracker *sessionTracker; // @synthesize sessionTracker=_sessionTracker;
+@property(retain, nonatomic) LegacyCredentials *credentials; // @synthesize credentials=_credentials;
 @property(readonly, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) RedditServiceBackoffState *backoffState; // @synthesize backoffState=_backoffState;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *pendingRequestQueue; // @synthesize pendingRequestQueue=_pendingRequestQueue;
@@ -73,7 +74,6 @@
 @property(nonatomic) _Bool isCurrentService; // @synthesize isCurrentService=_isCurrentService;
 @property(readonly, nonatomic) AccountIdentifiers *accountIdentifiers; // @synthesize accountIdentifiers=_accountIdentifiers;
 @property(retain, nonatomic) Loid *loid; // @synthesize loid=_loid;
-@property(retain, nonatomic) Credentials *credentials; // @synthesize credentials=_credentials;
 @property(retain, nonatomic) Account *account; // @synthesize account=_account;
 - (void)createAuthenticatedRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
 - (void)startRequest:(id)arg1 successHandler:(CDUnknownBlockType)arg2 failureHandler:(CDUnknownBlockType)arg3;
@@ -96,13 +96,14 @@
 - (void)notifyTaskWillStartWithRequest:(id)arg1;
 - (void)processResponse:(id)arg1;
 - (void)processRequest:(id)arg1;
-- (void)withCredentials:(CDUnknownBlockType)arg1;
+- (void)authorizeRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)refreshTokenForFailedRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)createAuthenticatedRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic) _Bool usePersistedOperations;
 - (void)invalidate;
 - (void)dealloc;
+@property(readonly, nonatomic) NSHTTPCookie *modMailCookie;
 - (id)initWithAccount:(id)arg1 credentials:(id)arg2 accountIdendifiers:(id)arg3 requestProcessors:(id)arg4 responseProcessors:(id)arg5 sessionTracker:(id)arg6 loid:(id)arg7 userDefaults:(id)arg8;
 - (id)initWithAccount:(id)arg1;
 - (void)deleteDraftPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -152,7 +153,7 @@
 - (void)fetchLegacyExperiments:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)setAuthorFlairEnabled:(_Bool)arg1 inSubreddit:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setAuthorFlair:(id)arg1 forUser:(id)arg2 inSubreddit:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)registerPushNotificationToken:(id)arg1 forAccountsWithAuthTokens:(id)arg2 deviceId:(id)arg3 authorizationStatus:(long long)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)registerPushNotificationToken:(id)arg1 forAccountsWithAuthTokens:(id)arg2 authorizationStatus:(long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)registerPushNotificationToken:(id)arg1 authorizationStatus:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)requestUsernameForEmail:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)sendVerificationEmailWithCompletion:(CDUnknownBlockType)arg1;
@@ -163,8 +164,12 @@
 - (void)isUsernameAvailable:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveAccountPreferences:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchAccountPreferencesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)updateUsername:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchAccountWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchCommentsAdForPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)validatePremiumCancelSubscriptionAcceptanceWithId:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchPremiumSubscriptionInfoWithCompletion:(CDUnknownBlockType)arg1;
+- (void)fetchPremiumCancellationOfferWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchActiveCoinSaleInfoWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchRecommendedCoinPackageInfoForAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchGoldProductsInfoWithCompletion:(CDUnknownBlockType)arg1;
@@ -187,11 +192,13 @@
 - (void)lockComment:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchAwardingTotalsForComment:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateRemovedComment:(id)arg1 asSpam:(_Bool)arg2 moderatorName:(id)arg3;
+- (void)updateUncollapsedComment:(id)arg1 moderatorName:(id)arg2;
 - (void)updateApprovedComment:(id)arg1 moderatorName:(id)arg2;
 - (void)removeComments:(id)arg1 asSpam:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)removeComment:(id)arg1 asSpam:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)approveComments:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)approveComment:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)showComment:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)undistinguishComment:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)distinguishCommentAsAdmin:(id)arg1 sticky:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)distinguishCommentAsModerator:(id)arg1 sticky:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
@@ -307,11 +314,14 @@
 - (id)adhocMultiPostFeedWithSubredditIds:(id)arg1 sort:(unsigned long long)arg2 range:(unsigned long long)arg3;
 - (id)homePostFeedWithSort:(unsigned long long)arg1 range:(unsigned long long)arg2;
 - (void)fetchLiveEventWithID:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchFeaturedLiveEventAndAnnouncementsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchFeaturedLiveEventAndAnnouncementWithCompletion:(CDUnknownBlockType)arg1;
 - (id)liveEventWithGraphQLData:(id)arg1;
 - (id)liveEventWithData:(id)arg1;
 - (void)suggestSubredditGeoPlace:(id)arg1 forSubreddit:(id)arg2 sessionId:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)searchForGeoPlaceWithInput:(id)arg1 sessionId:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)fetchPowerupsInfoForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchSupportersForSubreddit:(id)arg1 supporterType:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateSettingsForSubreddit:(id)arg1 publicDescription:(id)arg2 isNSFW:(_Bool)arg3 subredditType:(long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)updatePrimaryTagForSubreddit:(id)arg1 primaryTag:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchPrimaryTagForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -364,6 +374,8 @@
 - (void)followUser:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchTrophiesForUser:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchUserWithUsername:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchGQLUserWithUsername:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)userWithGQLData:(id)arg1;
 - (id)userWithData:(id)arg1;
 - (void)removePostsAndComments:(id)arg1 asSpam:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)approvePostsAndComments:(id)arg1 completion:(CDUnknownBlockType)arg2;

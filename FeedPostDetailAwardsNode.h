@@ -8,7 +8,7 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class NSDictionary, NSString, Post;
+@class NSDictionary, NSString, Post, _TtC6Reddit18AddAwardButtonNode;
 @protocol FeedPostDetailAwardsNodeDelegate;
 
 @interface FeedPostDetailAwardsNode : BaseFeedDisplayNode <ObjectObserverProtocol>
@@ -18,14 +18,17 @@
     id <FeedPostDetailAwardsNodeDelegate> _delegate;
     Post *_post;
     NSDictionary *_awardsNodes;
+    _TtC6Reddit18AddAwardButtonNode *_addAwardNode;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit18AddAwardButtonNode *addAwardNode; // @synthesize addAwardNode=_addAwardNode;
 @property(readonly, nonatomic) _Bool awardsPlaqueEnabled; // @synthesize awardsPlaqueEnabled=_awardsPlaqueEnabled;
 @property(nonatomic) _Bool shouldAttemptToAnimateLastGivenAward; // @synthesize shouldAttemptToAnimateLastGivenAward=_shouldAttemptToAnimateLastGivenAward;
 @property(retain, nonatomic) NSDictionary *awardsNodes; // @synthesize awardsNodes=_awardsNodes;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostDetailAwardsNodeDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)didTapAddAward:(id)arg1;
 - (void)didTapAward:(id)arg1;
 - (void)awardsNodeDidTap:(id)arg1;
 - (void)configureNodes;

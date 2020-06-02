@@ -12,7 +12,6 @@
 #import "FloatingHeaderCallbackProtocol-Protocol.h"
 #import "PagedTabControllerParentCallback-Protocol.h"
 #import "ParallaxHeaderViewCallback-Protocol.h"
-#import "PillContainerNodeDelegate-Protocol.h"
 #import "REDSearchBarDelegate-Protocol.h"
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 #import "RoadblockCoordinatorDelegate-Protocol.h"
@@ -25,7 +24,7 @@
 @class BaseBarButtonItem, CarouselDelegator, ChatSubredditChannelListViewController, FeedSpinnerView, FloatingHeaderManager, ListingViewController, MetaSubredditMembershipViewController, NSLayoutConstraint, NSString, NSURL, NotificationActionSheetPresenter, ParallaxHeaderView, PreviewAnimationController, REDSearchBar, REDSearchInputView, RecentChatPostBubbleViewController, RedditService, RoadblockCoordinator, SortBarView, Subreddit, SubredditAboutViewController, SubredditMenuViewController, SubredditPageNavigator, SubredditPagePresenter, _TtC6Reddit29MetaLeaderboardViewController;
 @protocol SubredditFeedViewControllerInterface;
 
-@interface SubredditPageViewController : PagedTabViewController <RUIActionSheetViewControllerDelegate, PagedTabControllerParentCallback, ParallaxHeaderViewCallback, PillContainerNodeDelegate, SubredditPagePresentable, FloatingHeaderCallbackProtocol, UIViewControllerTransitioningDelegate, FeedScrollEventObserver, UIGestureRecognizerDelegate, REDSearchBarDelegate, RoadblockCoordinatorDelegate, CarouselDelegatorDelegate, _TtP6Reddit30ModToolsViewControllerDelegate_, SubredditContextProvider, FlairSelectionSourceViewProtocol>
+@interface SubredditPageViewController : PagedTabViewController <RUIActionSheetViewControllerDelegate, PagedTabControllerParentCallback, ParallaxHeaderViewCallback, SubredditPagePresentable, FloatingHeaderCallbackProtocol, UIViewControllerTransitioningDelegate, FeedScrollEventObserver, UIGestureRecognizerDelegate, REDSearchBarDelegate, RoadblockCoordinatorDelegate, CarouselDelegatorDelegate, _TtP6Reddit30ModToolsViewControllerDelegate_, SubredditContextProvider, FlairSelectionSourceViewProtocol>
 {
     _Bool _previewModeEnabled;
     SubredditPagePresenter *_presenter;
@@ -100,12 +99,12 @@
 - (void)handleStyleLoadFailureWithError:(id)arg1;
 - (void)handleSubredditLoadFailureWithError:(id)arg1;
 - (void)updateModPermissionsToSubredditFeedController;
+- (void)updatePowerupsForSubredditFeed;
 - (void)performAdditionalUpdateAfterExtraContentFetched;
 - (void)performInitialUpdateWithSubreddit:(id)arg1;
 - (void)updateWithCarousel:(id)arg1 discoveryUnit:(id)arg2;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
-- (void)pillContainerNode:(id)arg1 didViewPill:(id)arg2 pillNode:(id)arg3;
-- (void)pillContainerNode:(id)arg1 didSelectPill:(id)arg2;
+- (void)parallaxHeaderViewDidTapPowerupsLevelView:(id)arg1;
 - (void)parallaxHeaderViewDidUpdateBackground:(id)arg1;
 - (void)parallaxHeaderViewDidChangeHeight:(id)arg1 heightDelta:(double)arg2;
 - (void)handleNotificationAlert;

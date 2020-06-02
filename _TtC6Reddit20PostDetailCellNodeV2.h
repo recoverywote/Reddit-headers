@@ -28,7 +28,7 @@
 - (id)init;
 - (id)initWithViewControllerBlock:(CDUnknownBlockType)arg1 didLoadBlock:(CDUnknownBlockType)arg2;
 - (id)initWithVisibilityTracker:(id)arg1 visibilityOptions:(id)arg2;
-- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 subredditMentionshandler:(id)arg4 options:(id)arg5 delegate:(id)arg6;
 @property(nonatomic, retain) _TtC6Reddit18FeedPostHeaderNode *headerNode; // @synthesize headerNode;
 @property(nonatomic, retain) _TtC6Reddit24FeedPostModActionBarNode *modBarNode; // @synthesize modBarNode;
 @property(nonatomic, retain) _TtC6Reddit21FeedPostActionBarNode *actionBarNode; // @synthesize actionBarNode;

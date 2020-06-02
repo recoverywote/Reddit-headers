@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit30CommunityContentSaveController : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: viewController
     // Error parsing type: , name: popViewController
     // Error parsing type: , name: isSaveInProgress

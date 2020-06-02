@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "VisibilitySignaler-Protocol.h"
+#import <RedditUI/VisibilitySignaler-Protocol.h>
 
 @class NSString;
 @protocol VisibilitySignalReceiver;

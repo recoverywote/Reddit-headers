@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-#import "InAppPurchaseReceiptValidatorDelegate-Protocol.h"
-#import "SKPaymentTransactionObserver-Protocol.h"
+#import <Economy/InAppPurchaseReceiptValidatorDelegate-Protocol.h>
+#import <Economy/SKPaymentTransactionObserver-Protocol.h>
 
 @class InAppPurchaseAccountProvider, InAppPurchaseManagerConfig, InAppPurchaseReceiptValidator, InAppPurchaseTransactionPersister, NSOperationQueue, NSString, SKPaymentQueue, SKProduct;
 @protocol InAppPurchaseManagerDelegate, InAppPurchaseReceiptLoading;

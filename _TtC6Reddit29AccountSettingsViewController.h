@@ -11,6 +11,7 @@
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: headerHeight
     // Error parsing type: , name: preferences
+    // Error parsing type: , name: identityProviderCoordinator
     // Error parsing type: , name: loadingState
 }
 

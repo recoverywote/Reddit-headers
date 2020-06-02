@@ -7,11 +7,12 @@
 #import <AsyncDisplayKit/ASDisplayNode.h>
 
 @class FeedPostIngestedVideoView, FeedPostOptions, Post;
-@protocol FeedPostHlsVideoViewDelegate;
+@protocol FeedPostHlsVideoViewDelegate, ViewContext;
 
 @interface FeedPostIngestedVideoNode : ASDisplayNode
 {
     Post *_post;
+    id <ViewContext> _viewContext;
     ASDisplayNode *_ingestedVideoViewContainerNode;
     id <FeedPostHlsVideoViewDelegate> _delegate;
     Post *_crossPost;
@@ -23,6 +24,7 @@
 @property(nonatomic) __weak Post *crossPost; // @synthesize crossPost=_crossPost;
 @property(nonatomic) __weak id <FeedPostHlsVideoViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) ASDisplayNode *ingestedVideoViewContainerNode; // @synthesize ingestedVideoViewContainerNode=_ingestedVideoViewContainerNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 - (void)didBecomeFullyVisible;
 - (void)didPassVisibilityThreshold;
@@ -31,8 +33,8 @@
 - (void)didEnterVisibleState;
 - (void)didExitPreloadState;
 @property(readonly, nonatomic) FeedPostIngestedVideoView *hlsVideoView;
-- (id)initWithPost:(id)arg1 withFeedPostOptions:(id)arg2 delegate:(id)arg3 crossPost:(id)arg4;
-- (id)initWithPost:(id)arg1 withFeedPostOptions:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 feedPostOptions:(id)arg3 delegate:(id)arg4 crossPost:(id)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 feedPostOptions:(id)arg3 delegate:(id)arg4;
 
 @end
 

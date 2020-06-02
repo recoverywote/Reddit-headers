@@ -17,6 +17,8 @@
 + (void)removeDistinguishComment:(id)arg1 service:(id)arg2 completion:(CDUnknownBlockType)arg3;
 + (void)removeDistinguishComment:(id)arg1 service:(id)arg2;
 + (void)distinguishComment:(id)arg1 service:(id)arg2 forDistinguishType:(long long)arg3 sticky:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
++ (void)expandAutoCollapsedComment:(id)arg1 withRedditService:(id)arg2 completion:(CDUnknownBlockType)arg3;
++ (void)expandAutoCollapsedComment:(id)arg1 withService:(id)arg2;
 + (void)approveComment:(id)arg1 service:(id)arg2 completion:(CDUnknownBlockType)arg3;
 + (void)approveComment:(id)arg1 service:(id)arg2;
 

@@ -11,6 +11,7 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: shouldHidePrice
+    // Error parsing type: , name: isLockedForPremiumAwards
     // Error parsing type: , name: isV2
     // Error parsing type: , name: theme
     // Error parsing type: , name: stackView
@@ -19,7 +20,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: coinPriceLabel
     // Error parsing type: , name: timesUsedLabel
     // Error parsing type: , name: timesUsedContainer
-    // Error parsing type: , name: attributeImageView
+    // Error parsing type: , name: accessoryImageView
 }
 
 - (void).cxx_destruct;

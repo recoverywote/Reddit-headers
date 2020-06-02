@@ -6,13 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@class HlsPlayerView;
+@class HlsPlayerView, Post, SubredditPowerupsInfo;
 
 @protocol PlayerViewDelegate <NSObject>
 - (void)playerViewDidEndPlaying:(HlsPlayerView *)arg1;
 - (void)playerViewDidBeginPlaying:(HlsPlayerView *)arg1;
 
 @optional
+- (void)didTapPowerupsMarketingBadgeFor:(Post *)arg1 powerupsInfo:(SubredditPowerupsInfo *)arg2 preselectedBenefit:(long long)arg3;
 - (void)contentVideoView:(HlsPlayerView *)arg1 didTapCallToAction:(unsigned long long)arg2;
 - (void)playerViewWillHideControls;
 - (void)playerViewWillShowControls;

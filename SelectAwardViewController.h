@@ -71,7 +71,6 @@
 - (void)configureSelectedAwardController;
 - (void)configureCollectionView;
 - (void)configureNavigationItem;
-- (void)showCoinsMarketingController;
 - (void)configureCoinSaleBanner;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewDidLoad;

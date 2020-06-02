@@ -68,7 +68,6 @@
 - (void)themeDidChange:(id)arg1;
 - (void)prepareAppearance;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1;
 - (void)prepareForReuse;
 - (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 - (id)initWithViewContext:(id)arg1;

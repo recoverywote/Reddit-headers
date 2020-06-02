@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SKProductsRequestDelegate-Protocol.h"
+#import <Economy/SKProductsRequestDelegate-Protocol.h>
 
 @class NSString;
 

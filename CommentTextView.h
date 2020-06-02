@@ -11,26 +11,28 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class AttributedLabel, Comment, NSString, StructuredStyle, UILongPressGestureRecognizer, UITapGestureRecognizer;
-@protocol CommentTextViewDelegate;
+@protocol CommentTextViewDelegate, ViewContext;
 
 @interface CommentTextView : VerticalLineView <AttributedLabelDelegate, UIGestureRecognizerDelegate, ObjectObserverProtocol>
 {
     Comment *_comment;
     id <CommentTextViewDelegate> _delegate;
+    id <ViewContext> _viewContext;
     AttributedLabel *_textViewLabel;
     StructuredStyle *_subredditStyling;
     UITapGestureRecognizer *_doubleTapRecognizer;
     UILongPressGestureRecognizer *_longPressRecognizer;
 }
 
-+ (struct CGSize)calculatedSizeOfTextViewWithData:(id)arg1 useRawMarkdown:(_Bool)arg2;
-+ (struct CGSize)calculatedSizeWithData:(id)arg1 useRawMarkdown:(_Bool)arg2;
-+ (struct CGSize)calculatedSizeWithData:(id)arg1;
++ (struct CGSize)calculatedSizeOfTextViewWithData:(id)arg1 viewContext:(id)arg2 useRawMarkdown:(_Bool)arg3;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 viewContext:(id)arg2 useRawMarkdown:(_Bool)arg3;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 viewContext:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
 @property(retain, nonatomic) UITapGestureRecognizer *doubleTapRecognizer; // @synthesize doubleTapRecognizer=_doubleTapRecognizer;
 @property(retain, nonatomic) StructuredStyle *subredditStyling; // @synthesize subredditStyling=_subredditStyling;
 @property(retain, nonatomic) AttributedLabel *textViewLabel; // @synthesize textViewLabel=_textViewLabel;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CommentTextViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 - (void)attributedLabelDidChangeSelection:(id)arg1;
@@ -42,8 +44,8 @@
 - (void)updateTextViewLabelLinkAttributes;
 - (void)updateLastVerticalLineColorForVoteState;
 - (void)updateContentViewsForData:(id)arg1;
-- (void)configureWithData:(id)arg1 andStyling:(id)arg2 andDelegate:(id)arg3;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)configureWithData:(id)arg1 styling:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

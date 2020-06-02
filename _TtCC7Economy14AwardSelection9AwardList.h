@@ -6,13 +6,11 @@
 
 #import <UIKit/UIView.h>
 
-#import <Economy/UICollectionViewDataSource-Protocol.h>
-#import <Economy/UICollectionViewDelegate-Protocol.h>
-
 __attribute__((visibility("hidden")))
-@interface _TtCC7Economy14AwardSelection9AwardList : UIView <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface _TtCC7Economy14AwardSelection9AwardList : UIView
 {
     // Error parsing type: , name: shouldHidePrice
+    // Error parsing type: , name: isLockedForPremiumAwards
     // Error parsing type: , name: eventLogger
     // Error parsing type: , name: isV2
     // Error parsing type: , name: _selectedAwardViewModel
@@ -22,10 +20,13 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: theme
     // Error parsing type: , name: knownCellFrames
     // Error parsing type: , name: collectionView
+    // Error parsing type: , name: canDeselectAwardOnHiding
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;

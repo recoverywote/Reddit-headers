@@ -9,12 +9,13 @@
 #import "PlayerViewDelegate-Protocol.h"
 
 @class BaseLabel, ContentImageView, ContentVideoView, HlsPlayerView, NSString, RichTextAnimatedImageElement, RichTextImageElement, RichTextMediaBaseElement, RichTextVideoElement, _TtC6Reddit15RedditVideoNode;
-@protocol AttributedLabelMediaDelegate;
+@protocol AttributedLabelMediaDelegate, ViewContext;
 
 @interface AttributedLabelMediaView : BaseView <PlayerViewDelegate>
 {
     HlsPlayerView *_videoView;
     id <AttributedLabelMediaDelegate> _delegate;
+    id <ViewContext> _viewContext;
     RichTextImageElement *_imageElement;
     RichTextAnimatedImageElement *_animatedImageElement;
     RichTextVideoElement *_videoElement;
@@ -37,6 +38,7 @@
 @property(retain, nonatomic) RichTextVideoElement *videoElement; // @synthesize videoElement=_videoElement;
 @property(retain, nonatomic) RichTextAnimatedImageElement *animatedImageElement; // @synthesize animatedImageElement=_animatedImageElement;
 @property(retain, nonatomic) RichTextImageElement *imageElement; // @synthesize imageElement=_imageElement;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <AttributedLabelMediaDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) HlsPlayerView *videoView; // @synthesize videoView=_videoView;
 - (_Bool)shouldDisableAutoplay;
@@ -49,11 +51,11 @@
 - (void)removeFromSuperview;
 - (void)didTapMediaView:(id)arg1;
 - (void)addSupplementalViewsForElement:(id)arg1;
-- (id)initWithVideoElement:(id)arg1;
+- (id)initWithViewContext:(id)arg1 videoElement:(id)arg2;
 - (void)addTapRecognizerToMediaView:(id)arg1;
-- (id)initWithAnimatedImageElement:(id)arg1;
-- (id)initWithImageElement:(id)arg1;
-- (id)initWithElement:(id)arg1;
+- (id)initWithViewContext:(id)arg1 animatedImageElement:(id)arg2;
+- (id)initWithViewContext:(id)arg1 imageElement:(id)arg2;
+- (id)initWithViewContext:(id)arg1 element:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

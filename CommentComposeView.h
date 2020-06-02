@@ -14,13 +14,15 @@
 #import "UITextViewDelegate-Protocol.h"
 
 @class BaseAttachmentTextView, BaseLabel, BaseView, CommentComposeImageManager, NSString, Post, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
+@protocol PowerupsCommentCreationDelegate;
 
 @interface CommentComposeView : BaseScrollView <BaseTextViewDelegate, UITextViewDelegate, LinkViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CommentComposeKeyboardAccessoryViewDelegate>
 {
     BaseAttachmentTextView *_replyTextView;
-    CommentComposeImageManager *_imageManager;
     _TtC6Reddit23MetaEmoteComposeManager *_emoteComposeManager;
     _TtC6Reddit23MetaGIPHYComposeManager *_giphyComposeManager;
+    id <PowerupsCommentCreationDelegate> _powerupsDelegate;
+    CommentComposeImageManager *_imageManager;
     Post *_post;
     BaseLabel *_titleLabel;
     BaseView *_titleDivider;
@@ -30,9 +32,10 @@
 @property(retain, nonatomic) BaseView *titleDivider; // @synthesize titleDivider=_titleDivider;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) CommentComposeImageManager *imageManager; // @synthesize imageManager=_imageManager;
+@property(nonatomic) __weak id <PowerupsCommentCreationDelegate> powerupsDelegate; // @synthesize powerupsDelegate=_powerupsDelegate;
 @property(retain, nonatomic) _TtC6Reddit23MetaGIPHYComposeManager *giphyComposeManager; // @synthesize giphyComposeManager=_giphyComposeManager;
 @property(retain, nonatomic) _TtC6Reddit23MetaEmoteComposeManager *emoteComposeManager; // @synthesize emoteComposeManager=_emoteComposeManager;
-@property(retain, nonatomic) CommentComposeImageManager *imageManager; // @synthesize imageManager=_imageManager;
 @property(retain, nonatomic) BaseAttachmentTextView *replyTextView; // @synthesize replyTextView=_replyTextView;
 - (void)linkViewControllerDidTapInsert:(id)arg1;
 - (void)textViewDidEndEditing:(id)arg1;
@@ -46,15 +49,19 @@
 - (_Bool)textViewShouldChangeSize:(id)arg1;
 - (void)textView:(id)arg1 didChangeToNewSize:(struct CGSize)arg2;
 - (void)didTapCloseLinkPopUp;
+- (void)commentComposeKeyboardAccessoryViewDidSelectPowerupsGIFs:(id)arg1 powerupsInfo:(id)arg2;
+- (void)commentComposeKeyboardAccessoryViewDidSelectPowerupsEmotes:(id)arg1 powerupsInfo:(id)arg2;
 - (void)commentComposeKeyboardAccessoryViewDidSelectGIFs:(id)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectEmotes:(id)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectPhotos:(id)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectCamera:(id)arg1;
 - (void)commentComposeKeyboardAccessoryViewDidSelectLink:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
+- (void)showPowerupsTooltipWith:(id)arg1 anchorView:(id)arg2 tooltipManager:(id)arg3;
+- (void)setPowerupsInfo:(id)arg1 keyboardType:(long long)arg2 tooltipManager:(id)arg3;
 - (void)configureWithPost:(id)arg1;
 - (void)layoutSubviews;
-- (id)init;
+- (id)initWithImageManager:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

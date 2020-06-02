@@ -14,18 +14,15 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: token
     // Error parsing type: , name: amount
     // Error parsing type: , name: descriptionString
-    // Error parsing type: , name: repository
+    // Error parsing type: , name: transactionRepository
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: imageProvider
-    // Error parsing type: , name: handler
-    // Error parsing type: , name: isComplete
     // Error parsing type: , name: $__lazy_storage_$_contentView
     // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;

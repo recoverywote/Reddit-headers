@@ -11,7 +11,7 @@
 #import "ObjectObserverProtocol-Protocol.h"
 #import "VisibilityTrackable-Protocol.h"
 
-@class ASDisplayNode, Carousel, CarouselContainerNode, FeedPostAwardsNode, FeedPostCommentBarNode, FeedPostContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostMetaViewModel, UIImage;
+@class ASDisplayNode, Carousel, CarouselContainerNode, FeedPostCommentBarNode, FeedPostContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostMetaViewModel, UIImage, _TtC6Reddit18FeedPostAwardsNode;
 @protocol CarouselContainerNodeDelegate, FeedPostCellNodeDelegate><PillContainerNodeDelegate, ViewContext;
 
 @interface FeedPostCellNode : BaseCollectionViewCellNode <VisibilityTrackable, ObjectObserverProtocol, ChainedCarouselDisplaying, FeedPostCollectionViewItem>
@@ -23,7 +23,7 @@
     id <CarouselContainerNodeDelegate> _carouselContainerNodeDelegate;
     id <ViewContext> _viewContext;
     FeedPostEventBarNode *_eventBarNode;
-    FeedPostAwardsNode *_awardsNode;
+    _TtC6Reddit18FeedPostAwardsNode *_awardsNode;
     FeedPostContentNode *_contentNode;
     FeedPostCommentBarNode *_commentBarNode;
     FeedPostModerateBarNode *_modBarNode;
@@ -43,7 +43,7 @@
 @property(retain, nonatomic) FeedPostModerateBarNode *modBarNode; // @synthesize modBarNode=_modBarNode;
 @property(retain, nonatomic) FeedPostCommentBarNode *commentBarNode; // @synthesize commentBarNode=_commentBarNode;
 @property(retain, nonatomic) FeedPostContentNode *contentNode; // @synthesize contentNode=_contentNode;
-@property(retain, nonatomic) FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
+@property(retain, nonatomic) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) FeedPostEventBarNode *eventBarNode; // @synthesize eventBarNode=_eventBarNode;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CarouselContainerNodeDelegate> carouselContainerNodeDelegate; // @synthesize carouselContainerNodeDelegate=_carouselContainerNodeDelegate;
@@ -64,6 +64,7 @@
 - (void)didExitFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didChangeMediaVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
 - (void)layoutDidFinish;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

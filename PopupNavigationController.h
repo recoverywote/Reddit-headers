@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "BaseNavigationViewController.h"
+#import <RedditUI/BaseNavigationViewController.h>
 
 #import "PopupViewControllerProtocol-Protocol.h"
 
@@ -16,6 +16,7 @@
 }
 
 @property(readonly, nonatomic) double preferredPopupHeight; // @synthesize preferredPopupHeight=_preferredPopupHeight;
+- (_Bool)isInAnonymousBrowsing;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 
 // Remaining properties

@@ -13,12 +13,12 @@
     NSString *_correlationId;
 }
 
-+ (id)profileSettingsSaveEventWithDisplayName:(id)arg1 contentVisibility:(_Bool)arg2 communitiesVisible:(_Bool)arg3;
-+ (id)profileSettingsCoverUploadEventWithURLPath:(id)arg1;
-+ (id)profileSettingsAvatarUploadEventWithURLPath:(id)arg1;
-+ (id)profileSettingsEventWithAction:(id)arg1 noun:(id)arg2;
-+ (id)profileSettingsViewEventWithNoun:(id)arg1;
-+ (id)profileSettingsClickEventWithNoun:(id)arg1;
++ (id)profileSettingsSaveEventWithDisplayName:(id)arg1 account:(id)arg2 contentVisibility:(_Bool)arg3 communitiesVisible:(_Bool)arg4;
++ (id)profileSettingsCoverUploadEventWithAccount:(id)arg1;
++ (id)profileSettingsAvatarUploadEventWithAccount:(id)arg1;
++ (id)profileSettingsEventWithAction:(id)arg1 noun:(id)arg2 account:(id)arg3;
++ (id)profileSettingsViewEventWithNoun:(id)arg1 account:(id)arg2;
++ (id)profileSettingsClickEventWithNoun:(id)arg1 account:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 

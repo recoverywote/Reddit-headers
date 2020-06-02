@@ -10,12 +10,13 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class AttributedLabel, NSString, Post;
-@protocol FeedPostSelfTextViewDelegate;
+@protocol FeedPostSelfTextViewDelegate, ViewContext;
 
 @interface FeedPostSelfTextView : BaseView <AttributedLabelDelegate, ObjectObserverProtocol>
 {
     _Bool _shouldApplyStyling;
     Post *_post;
+    id <ViewContext> _viewContext;
     id <FeedPostSelfTextViewDelegate> _delegate;
     AttributedLabel *_textViewLabel;
 }
@@ -32,6 +33,7 @@
 @property(nonatomic) _Bool shouldApplyStyling; // @synthesize shouldApplyStyling=_shouldApplyStyling;
 @property(retain, nonatomic) AttributedLabel *textViewLabel; // @synthesize textViewLabel=_textViewLabel;
 @property(nonatomic) __weak id <FeedPostSelfTextViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void)theatreViewDidClose;
 - (void)postAttributedStringChanged:(id)arg1;
@@ -42,7 +44,7 @@
 - (void)updateTextViewLabelLinkAttributes;
 - (void)prepareForReuse;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

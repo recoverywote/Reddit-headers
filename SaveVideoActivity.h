@@ -12,7 +12,7 @@
 
 + (long long)activityCategory;
 + (id)activityType;
-- (void)prepareWithActivityItems:(id)arg1;
+- (void)prepareWithAccountContext:(id)arg1 activityItems:(id)arg2;
 - (void)downloadVideo:(id)arg1;
 - (void)videoSaved:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (_Bool)canPerformWithActivityItems:(id)arg1;

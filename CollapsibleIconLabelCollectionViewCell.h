@@ -7,10 +7,12 @@
 #import <RedditUI/BaseCollectionViewCell.h>
 
 @class AttributedLabel, BaseImageView, BaseLabel, NSLayoutConstraint;
+@protocol ViewContext;
 
 @interface CollapsibleIconLabelCollectionViewCell : BaseCollectionViewCell
 {
     _Bool _isExpanded;
+    id <ViewContext> _viewContext;
     BaseLabel *_titleLabel;
     AttributedLabel *_descriptionAttributedLabel;
     BaseImageView *_accessoryIconImageView;
@@ -27,9 +29,11 @@
 @property(retain, nonatomic) BaseImageView *accessoryIconImageView; // @synthesize accessoryIconImageView=_accessoryIconImageView;
 @property(retain, nonatomic) AttributedLabel *descriptionAttributedLabel; // @synthesize descriptionAttributedLabel=_descriptionAttributedLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)prepareForReuse;
 - (void)configureDescriptionLabelCollapsed:(_Bool)arg1 accessoryIconHidden:(_Bool)arg2;
 - (void)setupConstraints;
+- (void)configureWithViewContext:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

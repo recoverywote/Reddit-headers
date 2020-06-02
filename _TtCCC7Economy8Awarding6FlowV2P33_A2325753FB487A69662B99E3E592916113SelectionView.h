@@ -6,10 +6,13 @@
 
 #import <Economy/_TtCCC7Economy8Awarding6FlowV28BaseView.h>
 
-@interface _TtCCC7Economy8Awarding6FlowV2P33_A2325753FB487A69662B99E3E592916113SelectionView : _TtCCC7Economy8Awarding6FlowV28BaseView
+#import <Economy/UIGestureRecognizerDelegate-Protocol.h>
+
+@interface _TtCCC7Economy8Awarding6FlowV2P33_A2325753FB487A69662B99E3E592916113SelectionView : _TtCCC7Economy8Awarding6FlowV28BaseView <UIGestureRecognizerDelegate>
 {
     // Error parsing type: , name: handleView
     // Error parsing type: , name: headerView
+    // Error parsing type: , name: saleView
     // Error parsing type: , name: miniPillBar
     // Error parsing type: , name: awardList
     // Error parsing type: , name: awardInfoView
@@ -18,6 +21,7 @@
 }
 
 - (void).cxx_destruct;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (void)extendWithPanGesture:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 

@@ -18,6 +18,7 @@
 @interface CommunitiesViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, CommunityViewDataSourceDelegate, ScrollViewIndexBarDelegate, PagedTabControllerProtocol>
 {
     _Bool _hasPerformedInitialFetch;
+    _Bool _isCommunityTabRefactorEnabled;
     BaseTableView *_tableView;
     _TtC6Reddit36CommunitiesTableViewDelegateMediator *_tableViewDelegateMediator;
     ScrollViewIndexBar *_indexBar;
@@ -35,6 +36,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+@property(nonatomic) _Bool isCommunityTabRefactorEnabled; // @synthesize isCommunityTabRefactorEnabled=_isCommunityTabRefactorEnabled;
 @property(nonatomic) _Bool hasPerformedInitialFetch; // @synthesize hasPerformedInitialFetch=_hasPerformedInitialFetch;
 @property(copy, nonatomic) NSArray *dataSources; // @synthesize dataSources=_dataSources;
 @property(retain, nonatomic) CommunityRecentlyViewedDataSource *recentlyViewedDataSource; // @synthesize recentlyViewedDataSource=_recentlyViewedDataSource;
@@ -71,7 +73,6 @@
 - (void)configureDataSources;
 - (id)majorContentView;
 - (struct UIEdgeInsets)preferredContentInset;
-- (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

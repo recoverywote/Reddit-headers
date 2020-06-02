@@ -10,9 +10,8 @@
 {
     // Error parsing type: , name: controlHeight
     // Error parsing type: , name: controlBorder
-    // Error parsing type: , name: community
+    // Error parsing type: , name: geoTaggable
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: viewType
     // Error parsing type: , name: actionControl
     // Error parsing type: , name: confirmControl
     // Error parsing type: , name: cancelControl

@@ -11,7 +11,7 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class AttributedLabelRegular, CheckboxButton, Comment, CommentAwardsView, NSString, RichTextLoader, UILongPressGestureRecognizer, UITapGestureRecognizer;
-@protocol CommentHeaderViewDelegate;
+@protocol CommentHeaderViewDelegate, ViewContext;
 
 @interface CommentHeaderView : VerticalLineView <UIGestureRecognizerDelegate, AttributedLabelRegularDelegate, ObjectObserverProtocol>
 {
@@ -20,6 +20,7 @@
     id <CommentHeaderViewDelegate> _delegate;
     Comment *_comment;
     CheckboxButton *_bulkActionCheckbox;
+    id <ViewContext> _viewContext;
     AttributedLabelRegular *_commentUserAndTimeLabel;
     AttributedLabelRegular *_iconsLabel;
     UILongPressGestureRecognizer *_longPressRecognizer;
@@ -28,7 +29,7 @@
     CommentAwardsView *_awardsSummaryView;
 }
 
-+ (struct CGSize)calculatedSizeWithData:(id)arg1;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 viewContext:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) CommentAwardsView *awardsSummaryView; // @synthesize awardsSummaryView=_awardsSummaryView;
 @property(retain, nonatomic) RichTextLoader *richTextLoader; // @synthesize richTextLoader=_richTextLoader;
@@ -36,6 +37,7 @@
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
 @property(retain, nonatomic) AttributedLabelRegular *iconsLabel; // @synthesize iconsLabel=_iconsLabel;
 @property(retain, nonatomic) AttributedLabelRegular *commentUserAndTimeLabel; // @synthesize commentUserAndTimeLabel=_commentUserAndTimeLabel;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool showSubredditName; // @synthesize showSubredditName=_showSubredditName;
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
 @property(retain, nonatomic) CheckboxButton *bulkActionCheckbox; // @synthesize bulkActionCheckbox=_bulkActionCheckbox;
@@ -53,7 +55,7 @@
 - (void)updateLastVerticalLineColorForVoteState;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)setShouldHighlightBackground:(_Bool)arg1;
-- (void)configureWithData:(id)arg1 andDelegate:(id)arg2;
+- (void)configureWithData:(id)arg1 viewContext:(id)arg2 delegate:(id)arg3;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)dealloc;
 

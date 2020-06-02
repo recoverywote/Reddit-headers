@@ -9,12 +9,11 @@
 #import "FeedPostCollectionViewItem-Protocol.h"
 #import "PostDetailContentDisplaying-Protocol.h"
 
-@class FeedPostCommentBarNode, FeedPostDetailAwardsNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostDetailContentNode, PostDetailHeaderNode, PostMetaViewModel, UIImage;
+@class FeedPostCommentBarNode, FeedPostDetailAwardsNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, PostDetailContentNode, PostDetailHeaderNode, PostMetaViewModel, SubredditMentionsHandler, UIImage;
 @protocol PostDetailCellNodeDelegate, ViewContext;
 
 @interface FeedPostDetailCellNode : BaseCollectionViewCellNode <FeedPostCollectionViewItem, PostDetailContentDisplaying>
 {
-    _Bool _isAwardsPlaqueEnabled;
     PostDetailContentNode *_contentNode;
     id <PostDetailCellNodeDelegate> _delegate;
     Post *_post;
@@ -27,10 +26,11 @@
     FeedPostOptions *_options;
     PostMetaViewModel *_postMetaViewModel;
     PostDetailHeaderNode *_postDetailHeaderNode;
+    SubredditMentionsHandler *_subredditMentionsHandler;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool isAwardsPlaqueEnabled; // @synthesize isAwardsPlaqueEnabled=_isAwardsPlaqueEnabled;
+@property(readonly, nonatomic) SubredditMentionsHandler *subredditMentionsHandler; // @synthesize subredditMentionsHandler=_subredditMentionsHandler;
 @property(retain, nonatomic) PostDetailHeaderNode *postDetailHeaderNode; // @synthesize postDetailHeaderNode=_postDetailHeaderNode;
 @property(retain, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -53,6 +53,7 @@
 - (void)didExitFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didChangeMediaVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
 - (struct UIEdgeInsets)contentNodeInsets;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
@@ -61,7 +62,7 @@
 - (void)createNodes;
 - (void)addKeyValueObservations;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 viewContext:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6 isAwardsPlaqueEnabled:(_Bool)arg7;
+- (id)initWithPost:(id)arg1 viewContext:(id)arg2 postMetaViewModel:(id)arg3 subredditMentionsHandler:(id)arg4 options:(id)arg5 delegate:(id)arg6 visibilityTracker:(id)arg7;
 @property(readonly, nonatomic) double visibleThreshold;
 
 // Remaining properties

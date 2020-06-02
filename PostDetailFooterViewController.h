@@ -44,6 +44,8 @@
 @property(retain, nonatomic) ASDisplayNode *actionBarNode; // @synthesize actionBarNode=_actionBarNode;
 - (void)createReplyFooterBarView;
 - (void)createSafeAreaFooterView;
+- (void)commentsFooterBarViewDidTapGIFButton:(id)arg1;
+- (void)commentsFooterBarViewDidTapEmoteButton:(id)arg1;
 - (void)commentsFooterBarViewDidTapButton:(id)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)updateFooterView;

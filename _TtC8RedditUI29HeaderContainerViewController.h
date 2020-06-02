@@ -20,7 +20,6 @@
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)showHeaderWithAnimated:(_Bool)arg1;
-- (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithChild:(id)arg1 headerView:(id)arg2;

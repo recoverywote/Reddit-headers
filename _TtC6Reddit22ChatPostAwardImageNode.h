@@ -16,12 +16,12 @@
 }
 
 - (void).cxx_destruct;
+- (id)init;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)didEnterVisibleState;
 - (void)didExitVisibleState;
 - (void)didLoad;
 - (id)initWithURL:(id)arg1 type:(long long)arg2;
-- (id)init;
 
 @end
 

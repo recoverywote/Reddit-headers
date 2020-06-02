@@ -8,23 +8,21 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class NSString, Post, Subreddit;
+@class NSString, Post, Subreddit, SubredditPowerupsInfo;
 
 @interface FlairContainerNode : PillContainerNode <ObjectObserverProtocol>
 {
-    _Bool _includeCategories;
     Subreddit *_subreddit;
     Post *_post;
+    SubredditPowerupsInfo *_powerupsInfo;
 }
 
 + (_Bool)shouldPresentPillForPost:(id)arg1;
 - (void).cxx_destruct;
-@property(nonatomic) _Bool includeCategories; // @synthesize includeCategories=_includeCategories;
+@property(retain, nonatomic) SubredditPowerupsInfo *powerupsInfo; // @synthesize powerupsInfo=_powerupsInfo;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-- (void)updateContentViewsForData:(id)arg1;
-- (void)configureWithSubreddit:(id)arg1 includeCategories:(_Bool)arg2;
-- (void)configureWithPost:(id)arg1 includeCategories:(_Bool)arg2;
+- (void)configureWithPost:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

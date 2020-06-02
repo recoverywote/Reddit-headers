@@ -10,9 +10,11 @@
 #import "LinkViewControllerDelegate-Protocol.h"
 
 @class BaseLabel, BaseTextView, BaseView, NSString, Post;
+@protocol AccountContext;
 
 @interface EditPostView : BaseScrollView <LinkViewControllerDelegate, BaseTextViewDelegate>
 {
+    id <AccountContext> _accountContext;
     Post *_post;
     BaseLabel *_titleLabel;
     BaseView *_titleDivider;
@@ -24,6 +26,7 @@
 @property(retain, nonatomic) BaseView *titleDivider; // @synthesize titleDivider=_titleDivider;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (_Bool)textViewShouldChangeSize:(id)arg1;
 - (void)textView:(id)arg1 didChangeToNewSize:(struct CGSize)arg2;
 - (void)linkViewControllerDidTapInsert:(id)arg1;
@@ -33,7 +36,7 @@
 - (void)layoutSubviews;
 - (_Bool)resignFirstResponder;
 - (_Bool)becomeFirstResponder;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,11 +9,12 @@
 #import "PannableCellManagerDelegate-Protocol.h"
 
 @class ASDisplayNode, CommentSwipeView, CommentTreeContentNode, CommentTreeNode, CommentTreeNodeOptions, NSIndexPath, NSString, NSTimer, PannableCellManager;
-@protocol CommentTreeDisplayNodeDelegate;
+@protocol AccountContext, CommentTreeDisplayNodeDelegate;
 
 @interface CommentTreeDisplayNode : BaseFeedDisplayNode <PannableCellManagerDelegate>
 {
     CommentTreeNode *_commentNode;
+    id <AccountContext> _accountContext;
     CommentTreeContentNode *_commentTreeContentNode;
     ASDisplayNode *_commentSwipeNode;
     ASDisplayNode *_highlightNode;
@@ -35,6 +36,7 @@
 @property(retain, nonatomic) ASDisplayNode *highlightNode; // @synthesize highlightNode=_highlightNode;
 @property(retain, nonatomic) ASDisplayNode *commentSwipeNode; // @synthesize commentSwipeNode=_commentSwipeNode;
 @property(retain, nonatomic) CommentTreeContentNode *commentTreeContentNode; // @synthesize commentTreeContentNode=_commentTreeContentNode;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 - (void)dealloc;
 - (void)consumeTimerDidFire:(id)arg1;
@@ -50,7 +52,7 @@
 - (void)addKeyValueObservations;
 - (void)didLoad;
 - (void)setupPannableCellManager;
-- (id)initWithCommentNode:(id)arg1 commentMetaViewModel:(id)arg2 styling:(id)arg3 delegate:(id)arg4 commentOptions:(id)arg5 atIndexPath:(id)arg6;
+- (id)initWithAccountContext:(id)arg1 commentNode:(id)arg2 commentMetaViewModel:(id)arg3 subredditMentionsHandler:(id)arg4 styling:(id)arg5 delegate:(id)arg6 commentOptions:(id)arg7 atIndexPath:(id)arg8;
 @property(readonly, nonatomic) CommentSwipeView *commentSwipeView;
 
 // Remaining properties

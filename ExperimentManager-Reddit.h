@@ -9,6 +9,9 @@
 @class NSString;
 
 @interface ExperimentManager (Reddit)
+@property(readonly, nonatomic) _Bool isMediaSelectionFlowEnabledForImagePosts;
+@property(readonly, nonatomic) _Bool isMediaGalleriesEnabled;
+@property(readonly, nonatomic) _Bool shouldSetCommentDepthOnRequest;
 - (void)exposeShouldShowAllInboxNotificationsWhenUnauthorized;
 @property(readonly, nonatomic) _Bool shouldShowAllInboxNotificationsWhenUnauthorized;
 - (void)exposeAnonymousBrowsingMode;
@@ -20,6 +23,8 @@
 @property(readonly, nonatomic) long long redditSharesVariant;
 @property(readonly, nonatomic) _Bool isNewCommentComposerEnabled;
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
+@property(readonly, nonatomic) _Bool isSubredditIdOnCommunityPostConsumeEnabled;
+@property(readonly, nonatomic) _Bool isRPANSubredditIdToSREnabled;
 @property(readonly, nonatomic) _Bool isMuxEnabled;
 @property(readonly, nonatomic) _Bool isRPANAbrBroadcastEnabled;
 @property(readonly, nonatomic) long long rpanEntryPointUIVariant;
@@ -74,8 +79,8 @@
 - (void)exposeDisableTheatreMode;
 @property(readonly, nonatomic) _Bool shouldDisableTheatreMode;
 - (id)disableTheatreModeExperimentName;
-@property(readonly, nonatomic) _Bool isLapsedUserTargetedOfferEnabled;
-@property(readonly, nonatomic) _Bool isNewUserTargetedOfferEnabled;
+@property(readonly, nonatomic) _Bool isCommunityTabRefactorEnabled;
+@property(readonly, nonatomic) _Bool isLocationRecommendationsToggleEnabled;
 @property(readonly, nonatomic) _Bool isEditUsernameEnabled;
 @property(readonly, nonatomic) _Bool isSingleSignOnEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletInterfaceEnabled;
@@ -87,6 +92,7 @@
 @property(readonly, nonatomic) _Bool isHideBestOfCommunitiesEnabled;
 @property(readonly, nonatomic) _Bool isErrorReportingEnabled;
 @property(readonly, nonatomic) _Bool isClientTracingEnabled;
+- (_Bool)shouldDisplayChatViewForPost:(id)arg1;
 @property(readonly, nonatomic) _Bool isSerialAsyncQueueDispatchTimeForeverEnabled;
 @property(readonly, nonatomic) _Bool isDownToChatEnabled;
 - (void)exposeChatPostCreationExperimentForSubreddit:(id)arg1;
@@ -95,8 +101,6 @@
 @property(readonly, nonatomic) _Bool isInChatPostHoldout;
 @property(readonly, nonatomic) long long chatPostVariant;
 @property(readonly, nonatomic) long long chatHovercardVariant;
-@property(readonly, nonatomic) _Bool isMemeGeneratorEnabled;
-- (_Bool)isExperimentEnabled:(id)arg1;
 - (_Bool)wasAppInstalledAfterDateString:(id)arg1;
 - (id)dividerFormatter;
 - (void)setupEmployeeOverridesAndTestingBlacklist;

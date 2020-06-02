@@ -39,7 +39,7 @@
 - (void)closeButtonDidTap:(id)arg1;
 - (void)actionButtonDidTap:(id)arg1;
 - (void)viewDidLoad;
-- (id)initWithProduct:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 product:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

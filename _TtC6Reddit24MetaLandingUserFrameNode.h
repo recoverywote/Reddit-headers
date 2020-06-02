@@ -11,7 +11,7 @@
     // Error parsing type: , name: crownImageNode
     // Error parsing type: , name: userImageNode
     // Error parsing type: , name: subredditImageNode
-    // Error parsing type: , name: preferredSize
+    // Error parsing type: , name: frameSize
 }
 
 - (void).cxx_destruct;

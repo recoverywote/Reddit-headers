@@ -21,8 +21,8 @@
     NSString *_headerImageName;
 }
 
-+ (id)viewControllerForPremiumMembershipPurchase;
-+ (id)viewControllerForCoinPurchase;
++ (id)forPremiumMembershipPurchaseWithAccountContext:(id)arg1;
++ (id)forCoinPurchaseWithAccountContext:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *headerImageName; // @synthesize headerImageName=_headerImageName;
 @property(copy, nonatomic) NSString *loadingMessage; // @synthesize loadingMessage=_loadingMessage;
@@ -34,7 +34,7 @@
 - (void)requestToNavigateAwayWithCompletion:(CDUnknownBlockType)arg1;
 - (void)setupViews;
 - (void)viewDidLoad;
-- (id)initWithTitle:(id)arg1 message:(id)arg2 headerImageName:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 title:(id)arg2 message:(id)arg3 headerImageName:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

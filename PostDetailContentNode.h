@@ -6,13 +6,14 @@
 
 #import "BaseFeedDisplayNode.h"
 
-@class ASDisplayNode, FeedPostCallToActionNode, FeedPostOptions, FeedPostTextWithThumbnailNode, FeedPostThumbnailNode, FlairContainerNode, Post, PostMetaViewModel, RichTextDisplayNode, UIImage;
+@class ASDisplayNode, FeedPostCallToActionNode, FeedPostOptions, FeedPostTextWithThumbnailNode, FeedPostThumbnailNode, FlairContainerNode, Post, PostMetaViewModel, RichTextDisplayNode, SubredditMentionsHandler, UIImage, UIView;
 @protocol PostDetailContentNodeDelegate, ViewContext;
 
 @interface PostDetailContentNode : BaseFeedDisplayNode
 {
     FlairContainerNode *_flairContainerNode;
     Post *_post;
+    id <ViewContext> _viewContext;
     FeedPostTextWithThumbnailNode *_textNode;
     ASDisplayNode *_contentNode;
     RichTextDisplayNode *_selfTextNode;
@@ -21,11 +22,11 @@
     FeedPostOptions *_options;
     PostMetaViewModel *_postMetaViewModel;
     id <PostDetailContentNodeDelegate> _delegate;
-    id <ViewContext> _viewContext;
+    SubredditMentionsHandler *_subredditMentionshandler;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
+@property(readonly, nonatomic) SubredditMentionsHandler *subredditMentionshandler; // @synthesize subredditMentionshandler=_subredditMentionshandler;
 @property(nonatomic) __weak id <PostDetailContentNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) PostMetaViewModel *postMetaViewModel; // @synthesize postMetaViewModel=_postMetaViewModel;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -34,12 +35,14 @@
 @property(retain, nonatomic) RichTextDisplayNode *selfTextNode; // @synthesize selfTextNode=_selfTextNode;
 @property(retain, nonatomic) ASDisplayNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(retain, nonatomic) FeedPostTextWithThumbnailNode *textNode; // @synthesize textNode=_textNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) FlairContainerNode *flairContainerNode; // @synthesize flairContainerNode=_flairContainerNode;
 - (void)noLongerPastVisibilityThreshold;
 - (void)didPassVisibilityThreshold;
 - (void)didBecomeFullyVisible;
 - (_Bool)shouldShowPostPoll;
+@property(readonly, nonatomic) UIView *mediaView;
 - (id)pillContainer;
 @property(readonly, nonatomic) UIImage *previewImage;
 - (struct UIEdgeInsets)contentNodeInsets;
@@ -54,7 +57,7 @@
 - (void)configureSelfTextNode;
 - (void)createSelfTextNode;
 - (void)createNodes;
-- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 subredditMentionshandler:(id)arg4 options:(id)arg5 delegate:(id)arg6;
 
 @end
 

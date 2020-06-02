@@ -23,8 +23,8 @@
 - (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
-- (void)setupVisibilityTrackingWithVisibilityTracker:(id)arg1 visibilityCallback:(CDUnknownBlockType)arg2;
-- (void)setupWithAnnouncement:(id)arg1 onHideTapped:(CDUnknownBlockType)arg2 onActionTapped:(CDUnknownBlockType)arg3;
+- (void)setupVisibilityTrackingWith:(id)arg1;
+- (void)setupWithAnnouncementsViewModel:(id)arg1 onHideTapped:(CDUnknownBlockType)arg2 onActionTapped:(CDUnknownBlockType)arg3;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

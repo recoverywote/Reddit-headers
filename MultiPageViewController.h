@@ -45,6 +45,7 @@
 @property(retain, nonatomic) MultiFeedViewController *multiFeedViewController; // @synthesize multiFeedViewController=_multiFeedViewController;
 @property(retain, nonatomic) MultiPagePresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak id <MultiPageViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)presentLoginViewControllerWithSource:(unsigned long long)arg1 deferredURL:(id)arg2;
 - (_Bool)screenViewLoggingEnabled;
 - (id)analyticsScreenViewName;
 - (id)analyticsPageType;

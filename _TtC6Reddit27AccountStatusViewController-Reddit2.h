@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit27AccountStatusViewController.h"
 
-#import "UIViewControllerTransitioningDelegate-Protocol.h"
-
-@interface _TtC6Reddit27AccountStatusViewController (Reddit2) <UIViewControllerTransitioningDelegate>
+@interface _TtC6Reddit27AccountStatusViewController (Reddit2)
 - (id)animationControllerForDismissedController:(id)arg1;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
 @end

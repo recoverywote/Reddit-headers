@@ -7,6 +7,7 @@
 #import <RedditCore/ExperimentManager.h>
 
 @interface ExperimentManager (RedditUI)
+@property(readonly, nonatomic) _Bool shouldUseSystemFontScaling;
 @property(readonly, nonatomic) _Bool shouldRoundButtons;
 @end
 

@@ -40,6 +40,7 @@
 @property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) _Bool shouldHideNotificationWhenUnauthorized;
+@property(readonly, nonatomic) _Bool includesEmbeddedComment;
 - (id)initWithData:(id)arg1;
 
 @end

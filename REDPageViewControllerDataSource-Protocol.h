@@ -9,6 +9,6 @@
 @class NSArray;
 
 @protocol REDPageViewControllerDataSource <NSObject>
-@property(readonly, nonatomic) NSArray *controllers;
+@property(nonatomic, readonly) NSArray *controllers;
 @end
 

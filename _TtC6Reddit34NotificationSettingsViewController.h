@@ -13,6 +13,8 @@
     // Error parsing type: , name: firstLoadSpinner
     // Error parsing type: , name: notificationsDisabledView
     // Error parsing type: , name: headerHeight
+    // Error parsing type: , name: kBroadcastFollowerKey
+    // Error parsing type: , name: kBroadcastRecommendationKey
 }
 
 - (void).cxx_destruct;

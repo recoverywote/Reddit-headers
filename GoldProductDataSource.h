@@ -7,6 +7,7 @@
 #import <objc/NSObject.h>
 
 @class CoinSale, NSArray, RedditService, SKProductsRequest;
+@protocol CoinSaleProvider;
 
 @interface GoldProductDataSource : NSObject
 {
@@ -15,13 +16,15 @@
     NSArray *_deals;
     CoinSale *_coinSale;
     RedditService *_service;
+    id <CoinSaleProvider> _coinSaleProvider;
     SKProductsRequest *_productsRequest;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SKProductsRequest *productsRequest; // @synthesize productsRequest=_productsRequest;
-@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
+@property(readonly, nonatomic) id <CoinSaleProvider> coinSaleProvider; // @synthesize coinSaleProvider=_coinSaleProvider;
+@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(retain, nonatomic) CoinSale *coinSale; // @synthesize coinSale=_coinSale;
 @property(retain, nonatomic) NSArray *deals; // @synthesize deals=_deals;
 @property(retain, nonatomic) NSArray *products; // @synthesize products=_products;
@@ -32,8 +35,11 @@
 - (void)processResponseData:(id)arg1;
 - (void)findRecommendProductForAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchDealsWithCompletion:(CDUnknownBlockType)arg1;
+- (void)validateSubscriptionCancellationOffer:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (void)fetchSubscriptionInfo:(CDUnknownBlockType)arg1;
+- (void)fetchPremiumCancelOffer:(CDUnknownBlockType)arg1;
 - (void)fetch;
-- (id)initWithService:(id)arg1;
+- (id)initWithService:(id)arg1 coinSaleProvider:(id)arg2;
 
 @end
 

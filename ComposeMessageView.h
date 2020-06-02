@@ -11,12 +11,14 @@
 #import "UITextViewDelegate-Protocol.h"
 
 @class BaseTextView, LabeledTextField, NSString, UIView;
+@protocol AccountContext;
 
 @interface ComposeMessageView : BaseScrollView <LinkViewControllerDelegate, UITextViewDelegate, BaseTextViewDelegate>
 {
     LabeledTextField *_usernameTextField;
     BaseTextView *_subjectTextView;
     BaseTextView *_messageTextView;
+    id <AccountContext> _accountContext;
     UIView *_usernameDivider;
     UIView *_subjectDivider;
 }
@@ -24,6 +26,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *subjectDivider; // @synthesize subjectDivider=_subjectDivider;
 @property(retain, nonatomic) UIView *usernameDivider; // @synthesize usernameDivider=_usernameDivider;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) BaseTextView *messageTextView; // @synthesize messageTextView=_messageTextView;
 @property(retain, nonatomic) BaseTextView *subjectTextView; // @synthesize subjectTextView=_subjectTextView;
 @property(retain, nonatomic) LabeledTextField *usernameTextField; // @synthesize usernameTextField=_usernameTextField;
@@ -40,7 +43,7 @@
 - (void)didTapNextButton:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)layoutSubviews;
-- (id)init;
+- (id)initWithAccountContext:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

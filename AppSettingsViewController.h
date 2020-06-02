@@ -41,6 +41,7 @@
 @property(retain, nonatomic) BaseView *footerView; // @synthesize footerView=_footerView;
 @property(readonly, nonatomic) ThemeManager *themeManager; // @synthesize themeManager=_themeManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (void)presentLoginViewController;
 - (void)didTapCloseButton:(id)arg1;
 - (void)themeDidChange:(id)arg1;
 - (id)textDescriptionOfCurrentAutoPlayMode;
@@ -73,7 +74,6 @@
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
-- (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)traitCollectionDidChange:(id)arg1;

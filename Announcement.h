@@ -17,9 +17,15 @@
     long long _iconType;
     long long _maxDismissCount;
     NSString *_callToAction;
+    NSURL *_iconURL;
+    NSString *_experimentName;
+    long long _maxImpressionsCount;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) long long maxImpressionsCount; // @synthesize maxImpressionsCount=_maxImpressionsCount;
+@property(readonly, nonatomic) NSString *experimentName; // @synthesize experimentName=_experimentName;
+@property(readonly, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
 @property(readonly, copy, nonatomic) NSString *callToAction; // @synthesize callToAction=_callToAction;
 @property(readonly, nonatomic) long long maxDismissCount; // @synthesize maxDismissCount=_maxDismissCount;
 @property(readonly, nonatomic) long long iconType; // @synthesize iconType=_iconType;

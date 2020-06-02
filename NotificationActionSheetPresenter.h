@@ -9,9 +9,11 @@
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 
 @class NSString, Subreddit, UIViewController;
+@protocol AccountContext;
 
 @interface NotificationActionSheetPresenter : NSObject <RUIActionSheetViewControllerDelegate>
 {
+    id <AccountContext> _accountContext;
     UIViewController *_controller;
     Subreddit *_subreddit;
     CDUnknownBlockType _completionHandler;
@@ -21,9 +23,11 @@
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak UIViewController *controller; // @synthesize controller=_controller;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (void)presentLoginViewController;
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 - (void)present;
-- (id)initWithController:(id)arg1 subreddit:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (id)initWithAccountContext:(id)arg1 controller:(id)arg2 subreddit:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

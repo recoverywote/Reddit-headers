@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit26PendingPostsViewController.h"
 
-#import "PostViewControllerDelegate-Protocol.h"
-
-@interface _TtC6Reddit26PendingPostsViewController (Reddit3) <PostViewControllerDelegate>
+@interface _TtC6Reddit26PendingPostsViewController (Reddit3)
 - (void)postViewController:(id)arg1 didSubmitPostWithURL:(id)arg2;
 - (void)postViewController:(id)arg1 didFinishWithPost:(id)arg2;
 @end

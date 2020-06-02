@@ -60,6 +60,7 @@
 @property(retain, nonatomic) _TtC6Reddit24MetaWalletBalanceManager *balanceManager; // @synthesize balanceManager=_balanceManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
+- (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
 - (void)showAnonymousBrowsingTooltipIfNeeded;
 - (id)presentationControllerForPresentedViewController:(id)arg1 presentingViewController:(id)arg2 sourceViewController:(id)arg3;
 - (id)interactionControllerForDismissal:(id)arg1;

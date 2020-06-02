@@ -10,13 +10,16 @@
 #import "UINavigationControllerDelegate-Protocol.h"
 
 @class NSString, UIViewController;
+@protocol AccountContext;
 
 @interface CommentComposeImageManager : NSObject <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     UIViewController *_viewControllerForPresentation;
+    id <AccountContext> _accountContext;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak UIViewController *viewControllerForPresentation; // @synthesize viewControllerForPresentation=_viewControllerForPresentation;
 - (void)imagePickerControllerDidCancel:(id)arg1;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
@@ -24,6 +27,7 @@
 - (void)showPermissionModalWithCompletion:(CDUnknownBlockType)arg1;
 - (void)showCamera;
 - (void)showPhotoPicker;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -27,6 +27,7 @@
     _Bool _start_time_msIsSet;
     _Bool _volumeIsSet;
     _Bool _chat_stateIsSet;
+    _Bool _player_typeIsSet;
     NSString *_id;
     long long _scrubbing_start_ms;
     long long _scrubbing_end_ms;
@@ -38,9 +39,12 @@
     long long _start_time_ms;
     long long _volume;
     NSString *_chat_state;
+    NSString *_player_type;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool player_typeIsSet; // @synthesize player_typeIsSet=_player_typeIsSet;
+@property(copy, nonatomic) NSString *player_type; // @synthesize player_type=_player_type;
 @property(nonatomic) _Bool chat_stateIsSet; // @synthesize chat_stateIsSet=_chat_stateIsSet;
 @property(copy, nonatomic) NSString *chat_state; // @synthesize chat_state=_chat_state;
 @property(nonatomic) _Bool volumeIsSet; // @synthesize volumeIsSet=_volumeIsSet;
@@ -69,6 +73,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetPlayer_type;
 - (void)unsetChat_state;
 - (void)unsetVolume;
 - (void)unsetStart_time_ms;
@@ -86,7 +91,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 scrubbing_start_ms:(long long)arg2 scrubbing_end_ms:(long long)arg3 session_duration_ms:(long long)arg4 watch_duration_ms:(long long)arg5 heartbeat_duration_ms:(long long)arg6 is_live:(_Bool)arg7 playhead_offset_ms:(long long)arg8 timestamp_ms:(long long)arg9 start_time_ms:(long long)arg10 volume:(long long)arg11 chat_state:(id)arg12;
+- (id)initWithId:(id)arg1 scrubbing_start_ms:(long long)arg2 scrubbing_end_ms:(long long)arg3 session_duration_ms:(long long)arg4 watch_duration_ms:(long long)arg5 heartbeat_duration_ms:(long long)arg6 is_live:(_Bool)arg7 playhead_offset_ms:(long long)arg8 timestamp_ms:(long long)arg9 start_time_ms:(long long)arg10 volume:(long long)arg11 chat_state:(id)arg12 player_type:(id)arg13;
 - (id)init;
 
 // Remaining properties

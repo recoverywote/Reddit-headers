@@ -6,7 +6,7 @@
 
 #import <RedditCore/RedditService.h>
 
-@class BadgeCountManager, ChatMessageStore, ChatNetworkManager, ChatSubredditMessageStore, ContactByChannelStore, ContactStore, ContentDiskCacheManager, CrosspostManager, DatabaseManager, DirectChannelStore, FocusVerticalManager, GivenAwardsManager, GoldProductDataSource, InitialHomeFeedController, LegacyExperimentManager, LocationFilterManager, LoggedOutHiddenPostManager, MetaManager, NSSet, NewsPersonalizationManager, PostCommentCache, PostHistoryManager, PostSubmissionManager, PreferenceSyncManager, RecentChatPostManager, SubredditChannelStore, SubredditListManager, SubredditManager, SubscribedSubredditsManager, UploadRequestManager, _TtC6Reddit13SurveyManager;
+@class AdEventsManager, BadgeCountManager, ChatMessageStore, ChatNetworkManager, ChatSubredditMessageStore, ContactByChannelStore, ContactStore, ContentDiskCacheManager, CrosspostManager, DatabaseManager, DirectChannelStore, FocusVerticalManager, InitialHomeFeedController, LegacyExperimentManager, LocationFilterManager, LoggedOutHiddenPostManager, MetaManager, NSSet, NewsPersonalizationManager, PostCommentCache, PostHistoryManager, PostSubmissionManager, PreferenceSyncManager, RecentChatPostManager, SubredditChannelStore, SubredditListManager, SubredditManager, SubscribedSubredditsManager, UploadRequestManager, _TtC6Reddit13SurveyManager;
 
 @interface RedditService (RichTextComment)
 - (void)editComment:(id)arg1 withText:(id)arg2 isRichText:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
@@ -36,9 +36,9 @@
 @property(readonly, nonatomic) ChatMessageStore *chatMessageStore;
 - (void)createChatStores;
 @property(readonly, nonatomic) DatabaseManager *dbManager;
+@property(readonly, nonatomic) AdEventsManager *adEventsManager;
 @property(readonly, nonatomic) FocusVerticalManager *focusVerticalManager;
 @property(readonly, nonatomic) SubredditManager *subredditManager;
-@property(readonly, nonatomic) GivenAwardsManager *givenAwardsManager;
 @property(readonly, nonatomic) NewsPersonalizationManager *newsPersonalizationManager;
 @property(readonly, nonatomic) CrosspostManager *crosspostManager;
 @property(readonly, nonatomic) ContentDiskCacheManager *contentDiskCacheManager;
@@ -48,7 +48,6 @@
 @property(readonly, nonatomic) ChatNetworkManager *chatNetworkManager;
 @property(readonly, nonatomic) LegacyExperimentManager *legacyExperimentManager;
 @property(readonly, nonatomic) LoggedOutHiddenPostManager *loggedOutHiddenPostManager;
-@property(readonly, nonatomic) GoldProductDataSource *goldProductDataSource;
 @property(readonly, nonatomic) InitialHomeFeedController *initialHomeFeedController;
 @property(readonly, nonatomic) BadgeCountManager *badgeManager;
 @property(readonly, nonatomic) LocationFilterManager *locationFilterManager;

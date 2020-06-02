@@ -12,7 +12,6 @@
     _Bool _skipReceiptValidation;
 }
 
-+ (id)defaultConfig;
 @property(readonly, nonatomic) _Bool skipReceiptValidation; // @synthesize skipReceiptValidation=_skipReceiptValidation;
 @property(readonly, nonatomic) _Bool forceDeferredPurchaseAttempt; // @synthesize forceDeferredPurchaseAttempt=_forceDeferredPurchaseAttempt;
 - (id)initWithForceDeferredPurchaseAttempt:(_Bool)arg1 skipReceiptValidation:(_Bool)arg2;

@@ -6,7 +6,7 @@
 
 #import "LinkKeyboardAccessoryView.h"
 
-@class BaseButton, UIStackView, _TtC6Reddit25MetaEmoteActivationButton;
+@class BaseButton, PowerupsButton, SubredditPowerupsInfo, UIStackView, _TtC6Reddit25MetaEmoteActivationButton;
 @protocol CommentComposeKeyboardAccessoryViewDelegate;
 
 @interface CommentComposeKeyboardAccessoryView : LinkKeyboardAccessoryView
@@ -16,22 +16,31 @@
     _Bool _isEmoteComposeKeyboardVisible;
     id <CommentComposeKeyboardAccessoryViewDelegate> _delegate;
     _TtC6Reddit25MetaEmoteActivationButton *_emoteActivationButton;
+    SubredditPowerupsInfo *_powerupsInfo;
     BaseButton *_photosButton;
     BaseButton *_cameraButton;
     BaseButton *_gifButton;
+    PowerupsButton *_powerupsEmoteButton;
+    PowerupsButton *_powerupsGIFButton;
     UIStackView *_rightStackView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *rightStackView; // @synthesize rightStackView=_rightStackView;
+@property(retain, nonatomic) PowerupsButton *powerupsGIFButton; // @synthesize powerupsGIFButton=_powerupsGIFButton;
+@property(retain, nonatomic) PowerupsButton *powerupsEmoteButton; // @synthesize powerupsEmoteButton=_powerupsEmoteButton;
 @property(retain, nonatomic) BaseButton *gifButton; // @synthesize gifButton=_gifButton;
 @property(retain, nonatomic) BaseButton *cameraButton; // @synthesize cameraButton=_cameraButton;
 @property(retain, nonatomic) BaseButton *photosButton; // @synthesize photosButton=_photosButton;
 @property(nonatomic) _Bool isEmoteComposeKeyboardVisible; // @synthesize isEmoteComposeKeyboardVisible=_isEmoteComposeKeyboardVisible;
 @property(nonatomic) _Bool isGIFComposeEnabled; // @synthesize isGIFComposeEnabled=_isGIFComposeEnabled;
 @property(nonatomic) _Bool isEmoteComposeEnabled; // @synthesize isEmoteComposeEnabled=_isEmoteComposeEnabled;
+@property(retain, nonatomic) SubredditPowerupsInfo *powerupsInfo; // @synthesize powerupsInfo=_powerupsInfo;
 @property(retain, nonatomic) _TtC6Reddit25MetaEmoteActivationButton *emoteActivationButton; // @synthesize emoteActivationButton=_emoteActivationButton;
 @property(nonatomic) __weak id <CommentComposeKeyboardAccessoryViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)updateButtonsVisibilityForPowerups;
+- (void)powerupsGIFButtonTouched:(id)arg1;
+- (void)powerupsEmoteButtonTouched:(id)arg1;
 - (void)gifButtonTouched:(id)arg1;
 - (void)emoteButtonTouched:(id)arg1;
 - (void)cameraButtonTouched:(id)arg1;

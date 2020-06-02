@@ -24,7 +24,6 @@
 - (void)resetStatusBar;
 - (void)hideStatusBar;
 - (void)updateStatusBarAppearanceWithAnimation;
-- (id)popViewControllersOfClasses:(id)arg1;
 - (void)presentViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setViewControllers:(id)arg1 animated:(_Bool)arg2;
 - (id)popViewControllerAnimated:(_Bool)arg1;
@@ -37,6 +36,7 @@
 - (id)childViewControllerForStatusBarStyle;
 - (id)childViewControllerForStatusBarHidden;
 - (_Bool)prefersStatusBarHidden;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)videoDidRotate:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithRootViewController:(id)arg1;

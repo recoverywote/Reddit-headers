@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC6Reddit24StarEffectsContainerView.h"
+#import "_$s7Economy24StarEffectsContainerViewCN.h"
 
-@interface _TtCC6Reddit18AwardAnnouncerView9AwardView : _TtC6Reddit24StarEffectsContainerView
+@interface _TtCC6Reddit18AwardAnnouncerView9AwardView : _$s7Economy24StarEffectsContainerViewCN
 {
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: awardImageView

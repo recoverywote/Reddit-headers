@@ -11,9 +11,7 @@
 @protocol BaseModel <NSObject>
 + (id)new;
 @property(readonly, copy, nonatomic) NSString *pk;
-- (id)init;
-
-@optional
 - (id)initWithPk:(NSString *)arg1;
+- (id)init;
 @end
 

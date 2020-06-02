@@ -9,7 +9,6 @@
 __attribute__((visibility("hidden")))
 @interface _TtCO7Economy12FeedTheMeter13TimeIndicator : UIView
 {
-    // Error parsing type: , name: analyticsLogger
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: timeLeftInfos
     // Error parsing type: , name: forceVisible

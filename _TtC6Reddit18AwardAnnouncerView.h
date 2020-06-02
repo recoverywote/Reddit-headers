@@ -9,15 +9,21 @@
 @interface _TtC6Reddit18AwardAnnouncerView : UIView
 {
     // Error parsing type: , name: captionView
+    // Error parsing type: , name: starburstView
+    // Error parsing type: , name: sparklesView
     // Error parsing type: , name: awardView
     // Error parsing type: , name: pendingState
     // Error parsing type: , name: state
+    // Error parsing type: , name: mode
     // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)announceWithAwardIconURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithCoder:(id)arg1;
+- (void)configureConstraintsOnSuperview:(id)arg1;
+- (id)initWithViewContext:(id)arg1 mode:(long long)arg2;
 
 @end
 

@@ -10,13 +10,14 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class ContentIngestedVideoView, ContentVideoView, FeedPostOptions, NSString, Post, UITapGestureRecognizer, UIVisualEffectView;
-@protocol FeedPostVideoViewDelegate;
+@protocol FeedPostVideoViewDelegate, ViewContext;
 
 @interface FeedPostVideoView : BaseView <UIGestureRecognizerDelegate, PlayerViewDelegate>
 {
     id <FeedPostVideoViewDelegate> _delegate;
     Post *_post;
     Post *_crosspost;
+    id <ViewContext> _viewContext;
     UITapGestureRecognizer *_tapGesture;
     UIVisualEffectView *_blurEffectView;
     FeedPostOptions *_options;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) UIVisualEffectView *blurEffectView; // @synthesize blurEffectView=_blurEffectView;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) Post *crosspost; // @synthesize crosspost=_crosspost;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostVideoViewDelegate> delegate; // @synthesize delegate=_delegate;
@@ -55,7 +57,7 @@
 - (void)configureWithData:(id)arg1 withFeedPostOptions:(id)arg2 andDelegate:(id)arg3;
 - (void)configureWithTheatreMediaItem:(id)arg1 withFeedPostOptions:(id)arg2 initialImage:(id)arg3 andDelegate:(id)arg4;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

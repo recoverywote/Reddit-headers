@@ -7,6 +7,8 @@
 #import "_TtC6Reddit20AnonymousModeManager.h"
 
 @interface _TtC6Reddit20AnonymousModeManager (Reddit)
+- (void)handleAppWillEnterForeground:(id)arg1;
+- (void)handleAppDidEnterBackground:(id)arg1;
 - (void)rootViewControllerDidReload:(id)arg1;
 @end
 

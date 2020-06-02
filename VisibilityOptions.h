@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "NSCopying-Protocol.h"
+#import <RedditUI/NSCopying-Protocol.h>
 
 @interface VisibilityOptions : NSObject <NSCopying>
 {

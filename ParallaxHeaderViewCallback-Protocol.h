@@ -16,6 +16,7 @@
 - (void)parallaxHeaderViewDidBecomeVisible:(ParallaxHeaderView *)arg1;
 
 @optional
+- (void)parallaxHeaderViewDidTapPowerupsLevelView:(ParallaxHeaderView *)arg1;
 - (void)parallaxHeaderViewDidTapModerateButton:(ParallaxHeaderView *)arg1;
 - (void)parallaxHeaderViewDidTapStartChat:(ParallaxHeaderView *)arg1;
 - (void)parallaxHeaderViewDidUpdateBackground:(ParallaxHeaderView *)arg1;

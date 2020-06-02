@@ -7,11 +7,12 @@
 #import "BaseCollectionViewCellNode.h"
 
 @class ASTextNode, FeedPostMediaContentNode, FeedPostOptions, Post;
-@protocol FeedPostGalleryCellNodeDelegate;
+@protocol FeedPostGalleryCellNodeDelegate, ViewContext;
 
 @interface FeedPostGalleryCellNode : BaseCollectionViewCellNode
 {
     Post *_post;
+    id <ViewContext> _viewContext;
     FeedPostOptions *_options;
     FeedPostMediaContentNode *_mediaNode;
     ASTextNode *_labelNode;
@@ -25,6 +26,7 @@
 @property(retain, nonatomic) ASTextNode *labelNode; // @synthesize labelNode=_labelNode;
 @property(retain, nonatomic) FeedPostMediaContentNode *mediaNode; // @synthesize mediaNode=_mediaNode;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
@@ -36,8 +38,8 @@
 - (void)configureNodes;
 - (void)createSubredditLabel;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 options:(id)arg2 internalInsets:(struct UIEdgeInsets)arg3 delegate:(id)arg4 visibilityTracker:(id)arg5;
-- (id)initWithPost:(id)arg1 options:(id)arg2 delegate:(id)arg3 visibilityTracker:(id)arg4;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 internalInsets:(struct UIEdgeInsets)arg4 delegate:(id)arg5 visibilityTracker:(id)arg6;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 delegate:(id)arg4 visibilityTracker:(id)arg5;
 
 @end
 

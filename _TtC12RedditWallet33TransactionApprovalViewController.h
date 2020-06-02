@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet33TransactionApprovalViewController : UIViewController
 {
     // Error parsing type: , name: model
-    // Error parsing type: , name: repository
+    // Error parsing type: , name: balanceRepository
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: imageProvider
     // Error parsing type: , name: handler

@@ -17,6 +17,7 @@
 @property(nonatomic, readonly) NSURL *giveAwardDescriptionImageURL;
 @property(nonatomic, readonly) NSURL *giveAwardImageURL;
 @property(nonatomic, readonly) NSURL *awardDetailsImageURL;
-- (long long)RPANUIConfigurationTypeWithNewUIEnabled:(_Bool)arg1;
+@property(nonatomic, readonly) NSURL *awardToastImageURL;
+@property(nonatomic, readonly) long long UIConfigurationType;
 @end
 

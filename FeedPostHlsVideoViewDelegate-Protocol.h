@@ -6,12 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class FeedPostHlsVideoView;
+@class FeedPostHlsVideoView, Post, SubredditPowerupsInfo;
 
 @protocol FeedPostHlsVideoViewDelegate <NSObject>
 - (void)feedPostHlsVideoView:(FeedPostHlsVideoView *)arg1 didTapCallToAction:(unsigned long long)arg2;
 
 @optional
+- (void)didTapPowerupsMarketingBadgeFor:(Post *)arg1 powerupsInfo:(SubredditPowerupsInfo *)arg2 preselectedBenefit:(long long)arg3;
 - (void)playerViewWillHideControls;
 - (void)playerViewWillShowControls;
 - (_Bool)parentIsCarouselView;

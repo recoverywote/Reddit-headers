@@ -9,7 +9,7 @@
 @interface _TtC12RedditWalletP33_42D56E778E3502669A46983D546CA97E25NewPointsSectionInnerView : UIView
 {
     // Error parsing type: , name: stackView
-    // Error parsing type: , name: repository
+    // Error parsing type: , name: viewModel
     // Error parsing type: , name: performClaimSink
     // Error parsing type: , name: cancellables
 }

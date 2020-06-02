@@ -12,11 +12,12 @@
 #import "UITextViewDelegate-Protocol.h"
 #import "_TtP6Reddit31MetaEmoteComposeManagerDelegate_-Protocol.h"
 #import "_TtP6Reddit31MetaGIPHYComposeManagerDelegate_-Protocol.h"
+#import "_TtP6Reddit31PowerupsCommentCreationDelegate_-Protocol.h"
 
 @class Comment, CommentComposeView, Message, NSString, Post, _TtC6Reddit21MetaRichTextConverter, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
 @protocol AccountContext, CommentComposeViewControllerDelegate;
 
-@interface CommentComposeViewController : BaseViewController <UITextViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate, RequestToNavigateView, _TtP6Reddit31MetaEmoteComposeManagerDelegate_, _TtP6Reddit31MetaGIPHYComposeManagerDelegate_>
+@interface CommentComposeViewController : BaseViewController <UITextViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate, RequestToNavigateView, _TtP6Reddit31MetaEmoteComposeManagerDelegate_, _TtP6Reddit31MetaGIPHYComposeManagerDelegate_, _TtP6Reddit31PowerupsCommentCreationDelegate_>
 {
     _Bool _isEditingExistingComment;
     _Bool _isComposingCommentNotMessage;
@@ -54,6 +55,7 @@
 - (id)clickEventForComment:(id)arg1 noun:(id)arg2;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
+- (void)didTapPowerupsButtonWithPowerupsInfo:(id)arg1 preselectedBenefit:(long long)arg2;
 - (void)giphyComposeManager:(id)arg1 didUpdateGIPHYUnlockStatus:(_Bool)arg2;
 - (void)metaEmoteComposeManager:(id)arg1 didInputEmote:(id)arg2;
 - (void)metaEmoteComposeManager:(id)arg1 didUpdateRemoteEmoteCount:(long long)arg2;
@@ -68,6 +70,7 @@
 - (id)majorContentView;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
+- (void)setPowerupsInfo:(id)arg1 keyboardType:(long long)arg2;
 - (id)initWithAccountContext:(id)arg1 message:(id)arg2 delegate:(id)arg3;
 - (id)initWithAccountContext:(id)arg1 editingComment:(id)arg2 post:(id)arg3 delegate:(id)arg4;
 - (id)initWithAccountContext:(id)arg1 post:(id)arg2 delegate:(id)arg3;

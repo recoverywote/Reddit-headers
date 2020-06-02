@@ -51,6 +51,7 @@
 - (void)createTimer;
 - (void)exposeExperimentWithName:(id)arg1;
 - (void)fetchExperimentVariantsWithCompletion:(CDUnknownBlockType)arg1;
+- (id)variantVersionForExperimentName:(id)arg1;
 - (id)variantNameForExperimentName:(id)arg1;
 @property(readonly, nonatomic) _Bool hasFetched;
 - (void)dealloc;

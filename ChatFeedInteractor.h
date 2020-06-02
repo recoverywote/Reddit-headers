@@ -45,7 +45,7 @@
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)postFeedCell:(id)arg1 didConsumePost:(id)arg2 withVisibilityContext:(id)arg3;
 - (void)postFeedCell:(id)arg1 didViewPost:(id)arg2 withVisibilityContext:(id)arg3;
-- (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2;
+- (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2 award:(id)arg3;
 - (void)pillContainerNode:(id)arg1 didViewPill:(id)arg2 pillNode:(id)arg3;
 - (void)pillContainerNode:(id)arg1 didSelectPill:(id)arg2;
 - (void)feedPostCallToActionNodeDidTapLink:(id)arg1;

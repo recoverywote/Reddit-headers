@@ -61,6 +61,7 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) _Bool disableSwipeToGoBackGesture; // @synthesize disableSwipeToGoBackGesture=_disableSwipeToGoBackGesture;
+- (void)presentLoginViewController;
 - (void)goldPremiumPurchaseSuccessViewController:(id)arg1 didTapLinkUrl:(id)arg2;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;
@@ -85,6 +86,7 @@
 - (void)updateSubscriptionInfoLabel;
 - (void)updateBenefitsInfo;
 - (void)updateActionButton;
+- (_Bool)isSubscribed;
 - (void)updatePremiumProduct;
 - (double)estimatedCollectionViewHeight;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;

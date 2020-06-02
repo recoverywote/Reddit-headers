@@ -6,6 +6,8 @@
 
 #import <UIKit/UIViewController.h>
 
+@class _TtC6Reddit19LiveStreamPresenter;
+
 @interface _TtC6Reddit24LiveStreamViewController : UIViewController
 {
     // Error parsing type: , name: delegate
@@ -40,6 +42,7 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)appDidEnterForeground;
+- (void)appDidEnterBackground;
 @property(nonatomic, readonly) unsigned long long supportedInterfaceOrientations;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
@@ -49,6 +52,7 @@
 - (void)viewDidLoad;
 - (void)dealloc;
 - (id)initWithCoder:(id)arg1;
+@property(nonatomic, readonly) _TtC6Reddit19LiveStreamPresenter *presenter; // @synthesize presenter;
 
 @end
 

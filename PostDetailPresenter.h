@@ -59,6 +59,7 @@
 @property(retain, nonatomic) PostCollection *postCollection; // @synthesize postCollection=_postCollection;
 @property(readonly, nonatomic) PostDetailOptions *postDetailOptions; // @synthesize postDetailOptions=_postDetailOptions;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
+- (void)fetchPowerupsInfoForSubreddit:(id)arg1;
 - (void)excludeSubredditFromTrendingToaster:(id)arg1;
 - (void)turnOffTrendingNotificationForSubreddit:(id)arg1;
 - (void)showTrendingToasterIfNeeded;
@@ -104,6 +105,7 @@
 - (_Bool)shouldOverlayCommentNode:(id)arg1;
 - (_Bool)shouldHighlightCommentNode:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldLockComments;
+- (_Bool)shouldFetchCommentAdPost;
 - (void)configureMetaProvidersIfNeeded;
 - (void)configureLiveCommentSessionIfNeeded;
 - (void)performCommentsSort:(unsigned long long)arg1;

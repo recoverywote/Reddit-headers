@@ -8,7 +8,7 @@
 
 #import "NSCopying-Protocol.h"
 
-@class FeedPostEventBarOptions, FeedPostTextOptions, FeedPostTitleOptions, FeedPostWebLinkOptions, PostDetailOptions, VisibilityOptions, _TtC6Reddit20FeedPostVideoOptions;
+@class FeedPostEventBarOptions, FeedPostTextOptions, FeedPostTitleOptions, FeedPostWebLinkOptions, PostDetailOptions, SubredditPowerupsInfo, VisibilityOptions, _TtC6Reddit20FeedPostVideoOptions;
 @protocol VideoContext;
 
 @interface FeedPostOptions : NSObject <NSCopying>
@@ -29,6 +29,7 @@
     _Bool _shouldOverrideSubredditThumbnailSetting;
     _Bool _shouldShowVoteAnimation;
     _Bool _mayShowBigSubscribeButton;
+    _Bool _shouldShowAwardsPlaque;
     _Bool _shouldShowHighResSelfPostImage;
     _Bool _isChatPostExperimentEnabled;
     _Bool _isInChatPostHoldout;
@@ -44,12 +45,14 @@
     VisibilityOptions *_visibilityOptions;
     unsigned long long _feedDisplayMode;
     id <VideoContext> _videoContext;
+    SubredditPowerupsInfo *_powerupsInfo;
     struct CGSize _maxMediaSize;
 }
 
 + (id)defaultChatPostOptionsWithViewContext:(id)arg1;
 + (id)defaultFeedPostOptionsWithViewContext:(id)arg1;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SubredditPowerupsInfo *powerupsInfo; // @synthesize powerupsInfo=_powerupsInfo;
 @property(retain, nonatomic) id <VideoContext> videoContext; // @synthesize videoContext=_videoContext;
 @property(nonatomic) _Bool isRedditVideoV2Enabled; // @synthesize isRedditVideoV2Enabled=_isRedditVideoV2Enabled;
 @property(nonatomic) _Bool shouldShowCommentCountInMetadataRow; // @synthesize shouldShowCommentCountInMetadataRow=_shouldShowCommentCountInMetadataRow;
@@ -57,6 +60,7 @@
 @property(nonatomic) _Bool isInChatPostHoldout; // @synthesize isInChatPostHoldout=_isInChatPostHoldout;
 @property(nonatomic) _Bool isChatPostExperimentEnabled; // @synthesize isChatPostExperimentEnabled=_isChatPostExperimentEnabled;
 @property(nonatomic) _Bool shouldShowHighResSelfPostImage; // @synthesize shouldShowHighResSelfPostImage=_shouldShowHighResSelfPostImage;
+@property(nonatomic) _Bool shouldShowAwardsPlaque; // @synthesize shouldShowAwardsPlaque=_shouldShowAwardsPlaque;
 @property(nonatomic) _Bool mayShowBigSubscribeButton; // @synthesize mayShowBigSubscribeButton=_mayShowBigSubscribeButton;
 @property(nonatomic) _Bool shouldShowVoteAnimation; // @synthesize shouldShowVoteAnimation=_shouldShowVoteAnimation;
 @property(nonatomic) _Bool shouldOverrideSubredditThumbnailSetting; // @synthesize shouldOverrideSubredditThumbnailSetting=_shouldOverrideSubredditThumbnailSetting;

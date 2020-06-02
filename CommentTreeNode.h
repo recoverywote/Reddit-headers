@@ -16,6 +16,7 @@
     _Bool _isTopLevelComment;
     _Bool _isCollapsed;
     _Bool _isDeleted;
+    _Bool _wasToggledByUser;
     CommentTreeNode *_parent;
     Comment *_comment;
     long long _depth;
@@ -24,6 +25,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool wasToggledByUser; // @synthesize wasToggledByUser=_wasToggledByUser;
 @property(nonatomic) _Bool isDeleted; // @synthesize isDeleted=_isDeleted;
 @property(nonatomic) _Bool isCollapsed; // @synthesize isCollapsed=_isCollapsed;
 @property(nonatomic) _Bool isTopLevelComment; // @synthesize isTopLevelComment=_isTopLevelComment;

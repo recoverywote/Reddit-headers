@@ -10,9 +10,9 @@
 {
 }
 
-+ (void)requestAuthorizationForPosting:(CDUnknownBlockType)arg1;
-+ (void)requestAuthorization:(CDUnknownBlockType)arg1;
-+ (void)requestAuthorizationWithTitle:(id)arg1 message:(id)arg2 completion:(CDUnknownBlockType)arg3;
++ (void)requestAuthorizationForPostingWithAccountContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)requestAuthorizationWithAccountContext:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)requestAuthorizationWithAccountContext:(id)arg1 title:(id)arg2 message:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (double)preferredPopupHeight;
 
 @end

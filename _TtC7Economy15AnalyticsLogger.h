@@ -8,8 +8,9 @@
 
 @interface _TtC7Economy15AnalyticsLogger : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: loggerAdapter
     // Error parsing type: , name: accountId
+    // Error parsing type: , name: economyLogger
+    // Error parsing type: , name: redditService
 }
 
 @end

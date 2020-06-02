@@ -8,8 +8,8 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class BaseButton, BaseLabel, BaseTextView, BaseViewController, BorderedImageView, CarouselNodeController, FlairContainerNode, IntrinsicSizeNodeWrapper, MultiViewControl, NSArray, NSLayoutConstraint, NSString, ObservableObject, ParallelHeaderTextWrapperView, SubredditBannerBackgroundImageView, SubscribeButtonLarge, TextureBackgroundView, UIColor, UIImageView, UILabel, UIStackView, UIView, _TtC6Reddit15StartChatButton, _TtC6Reddit9ModButton;
-@protocol ParallaxHeaderViewCallback, Subscribable><Styleable, ViewContext;
+@class BaseButton, BaseLabel, BaseTextView, BaseViewController, BorderedImageView, CarouselNodeController, IntrinsicSizeNodeWrapper, MultiViewControl, NSArray, NSLayoutConstraint, NSObject, NSString, ParallelHeaderTextWrapperView, SubredditBannerBackgroundImageView, SubscribeButtonLarge, TextureBackgroundView, UIColor, UIImageView, UILabel, UIStackView, UIView, _TtC6Reddit15StartChatButton, _TtC6Reddit21PowerupsLevelPillView, _TtC6Reddit9ModButton;
+@protocol BaseModel><Subscribable><Styleable, BaseStoreObservation, ParallaxHeaderViewCallback, ViewContext;
 
 @interface ParallaxHeaderView : BaseView <ObjectObserverProtocol>
 {
@@ -23,9 +23,8 @@
     _TtC6Reddit9ModButton *_moderatorButton;
     BaseButton *_notificationButton;
     double _fullHeight;
-    ObservableObject<Subscribable><Styleable> *_model;
+    NSObject<BaseModel><Subscribable><Styleable> *_model;
     UIView *_navbarTitleLabelContainer;
-    FlairContainerNode *_flairContainerNode;
     id <ParallaxHeaderViewCallback> _delegate;
     UIColor *_colorBarBackgroundColorOverride;
     id <ViewContext> _viewContext;
@@ -46,11 +45,9 @@
     BaseButton *_editButton;
     ParallelHeaderTextWrapperView *_textWrapperView;
     UIView *_bottomLine;
-    IntrinsicSizeNodeWrapper *_flairCollectionWrapper;
     UIStackView *_exploreTagContainer;
     MultiViewControl *_exploreButton;
-    BaseView *_exploreCategorySeparator;
-    NSLayoutConstraint *_exploreHeightAnchor;
+    _TtC6Reddit21PowerupsLevelPillView *_powerupsLevelView;
     UIView *_parentView;
     IntrinsicSizeNodeWrapper *_intrinsicCarouselView;
     CarouselNodeController *_carouselNodeController;
@@ -58,10 +55,12 @@
     NSArray *_wrapperSideConstraints;
     NSLayoutConstraint *_notificationButtonWidthConstraint;
     BaseViewController *_subscribableViewController;
+    id <BaseStoreObservation> _userModelObservation;
     struct CGSize _previousSize;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <BaseStoreObservation> userModelObservation; // @synthesize userModelObservation=_userModelObservation;
 @property(nonatomic) __weak BaseViewController *subscribableViewController; // @synthesize subscribableViewController=_subscribableViewController;
 @property(retain, nonatomic) NSLayoutConstraint *notificationButtonWidthConstraint; // @synthesize notificationButtonWidthConstraint=_notificationButtonWidthConstraint;
 @property(retain, nonatomic) NSArray *wrapperSideConstraints; // @synthesize wrapperSideConstraints=_wrapperSideConstraints;
@@ -70,11 +69,9 @@
 @property(retain, nonatomic) IntrinsicSizeNodeWrapper *intrinsicCarouselView; // @synthesize intrinsicCarouselView=_intrinsicCarouselView;
 @property(nonatomic) struct CGSize previousSize; // @synthesize previousSize=_previousSize;
 @property(nonatomic) __weak UIView *parentView; // @synthesize parentView=_parentView;
-@property(retain, nonatomic) NSLayoutConstraint *exploreHeightAnchor; // @synthesize exploreHeightAnchor=_exploreHeightAnchor;
-@property(retain, nonatomic) BaseView *exploreCategorySeparator; // @synthesize exploreCategorySeparator=_exploreCategorySeparator;
+@property(retain, nonatomic) _TtC6Reddit21PowerupsLevelPillView *powerupsLevelView; // @synthesize powerupsLevelView=_powerupsLevelView;
 @property(retain, nonatomic) MultiViewControl *exploreButton; // @synthesize exploreButton=_exploreButton;
 @property(retain, nonatomic) UIStackView *exploreTagContainer; // @synthesize exploreTagContainer=_exploreTagContainer;
-@property(retain, nonatomic) IntrinsicSizeNodeWrapper *flairCollectionWrapper; // @synthesize flairCollectionWrapper=_flairCollectionWrapper;
 @property(retain, nonatomic) UIView *bottomLine; // @synthesize bottomLine=_bottomLine;
 @property(retain, nonatomic) ParallelHeaderTextWrapperView *textWrapperView; // @synthesize textWrapperView=_textWrapperView;
 @property(retain, nonatomic) BaseButton *editButton; // @synthesize editButton=_editButton;
@@ -100,9 +97,8 @@
 @property(nonatomic) _Bool shouldShowModToolsButton; // @synthesize shouldShowModToolsButton=_shouldShowModToolsButton;
 @property(retain, nonatomic) UIColor *colorBarBackgroundColorOverride; // @synthesize colorBarBackgroundColorOverride=_colorBarBackgroundColorOverride;
 @property(nonatomic) __weak id <ParallaxHeaderViewCallback> delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) FlairContainerNode *flairContainerNode; // @synthesize flairContainerNode=_flairContainerNode;
 @property(retain, nonatomic) UIView *navbarTitleLabelContainer; // @synthesize navbarTitleLabelContainer=_navbarTitleLabelContainer;
-@property(retain, nonatomic) ObservableObject<Subscribable><Styleable> *model; // @synthesize model=_model;
+@property(retain, nonatomic) NSObject<BaseModel><Subscribable><Styleable> *model; // @synthesize model=_model;
 @property(nonatomic) _Bool isFullyVisible; // @synthesize isFullyVisible=_isFullyVisible;
 @property(readonly, nonatomic) double fullHeight; // @synthesize fullHeight=_fullHeight;
 @property(retain, nonatomic) BaseButton *notificationButton; // @synthesize notificationButton=_notificationButton;
@@ -112,18 +108,19 @@
 @property(readonly, nonatomic) double notificationButtonSize;
 - (double)subredditLogoSize;
 - (double)preferredColorBarHeight;
+- (void)didTapPowerupsLevelView;
 - (void)didTapNotificationButton;
 - (void)didTapEdit;
 - (void)didTapStartChat;
 - (void)didTapModerate;
 - (void)didTapFollow;
 - (void)didTapTitle:(id)arg1;
+- (void)updateContentViewsForModel:(id)arg1;
 - (void)updateContentViewsForData:(id)arg1;
 - (void)layoutSubviews;
 - (void)updateViewWithTransformY:(double)arg1;
 - (void)updateHeaderLabels;
 - (void)updateNotificationButton;
-- (void)updateExploreSeparator;
 - (void)updateModerateButton;
 - (void)updateFollowButton;
 - (id)iconBackgroundColor;
@@ -137,7 +134,11 @@
 - (void)updateBannerImage;
 - (void)updateLogoImage;
 @property(readonly, nonatomic) UIColor *headerPrimaryColor;
+- (void)setupViewsAfterSubscribingToUpdatesForModel:(id)arg1 powerupsInfo:(id)arg2;
+- (void)configureWithModel:(id)arg1 powerupsInfo:(id)arg2 subscribableViewController:(id)arg3;
 - (void)configureWithModel:(id)arg1 subscribableViewController:(id)arg2;
+- (void)configureWithUser:(id)arg1 store:(id)arg2 subscribableViewController:(id)arg3;
+- (void)removeExistingObservations;
 - (void)setupConstraints;
 - (void)setupNotificationButton;
 - (void)setupStartChatButton;
@@ -146,13 +147,13 @@
 - (void)setupEditButton;
 - (void)setupTextWrapperView;
 - (void)setupDetailLabel;
-- (void)setupPillCollectionView;
 - (void)setupExploreContainer;
 - (_Bool)shouldShowCarousel;
 - (void)updateExploreButton;
 - (void)toggleExploreButton:(_Bool)arg1;
 - (void)didTapExplore:(id)arg1;
 - (void)configureWithCarousel:(id)arg1 carouselNodeDelegate:(id)arg2;
+- (void)setupPowerupsLevelView;
 - (void)setupExploreButton;
 - (void)setupDisplayNameLabel;
 - (void)setupMainLabel;

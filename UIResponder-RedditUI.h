@@ -7,6 +7,6 @@
 #import <UIKit/UIResponder.h>
 
 @interface UIResponder (RedditUI)
-- (id)firstAncestorWhere:(CDUnknownBlockType)arg1;
+- (id)nextResponderWhere:(CDUnknownBlockType)arg1;
 @end
 

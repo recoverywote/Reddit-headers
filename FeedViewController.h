@@ -65,6 +65,7 @@
 @property(retain, nonatomic) FeedViewControllerDelegator *feedVCDelegator; // @synthesize feedVCDelegator=_feedVCDelegator;
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
+- (void)didTapPowerupsMarketingBadgeFor:(id)arg1 powerupsInfo:(id)arg2 preselectedBenefit:(long long)arg3;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
 - (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
@@ -101,7 +102,8 @@
 - (void)navigateToDetailsForPost:(id)arg1;
 - (void)navigateToTheatreFromPost:(id)arg1 withTheatrePresentationModel:(id)arg2;
 - (void)didTapLinkForPost:(id)arg1 linkURL:(id)arg2;
-- (void)didTapAwardsForPost:(id)arg1;
+- (void)didTapAddAwardForPost:(id)arg1;
+- (void)didTapAwardsForPost:(id)arg1 award:(id)arg2;
 - (void)didTapEventLinkURLForPost:(id)arg1;
 - (void)didTapFollowEventForPost:(id)arg1;
 - (void)didTapModerateFlairForPost:(id)arg1;
@@ -122,7 +124,8 @@
 - (void)didTapSubscribeButtonForPost:(id)arg1 templateContext:(id)arg2;
 - (void)didTapTitleForPost:(id)arg1 linkURL:(id)arg2 context:(unsigned long long)arg3;
 - (void)didTapBackgroundForPost:(id)arg1;
-- (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2;
+- (void)feedPostAwardsNode:(id)arg1 didTapAddAwardForPost:(id)arg2;
+- (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2 award:(id)arg3;
 - (void)feedPostEventBarNode:(id)arg1 didTapLinkURL:(id)arg2;
 - (void)feedPostEventBarNodeDidTapFollowEvent:(id)arg1;
 - (void)feedPostModerateBarNode:(id)arg1 didTapFlairForPost:(id)arg2;

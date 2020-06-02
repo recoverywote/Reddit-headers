@@ -6,11 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class NSString, NSURL;
 
 @interface AwardingConfig : NSObject
 {
     // Error parsing type: , name: preselectedAwardId
+    // Error parsing type: , name: preselectedAwardImageURL
     // Error parsing type: , name: shouldShowChatBox
     // Error parsing type: , name: shouldCloseAwardSelectionBeforeCompletion
 }
@@ -19,9 +20,10 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)copyWithZone:(void *)arg1;
-- (id)initWithPreselectedAwardId:(id)arg1 shouldShowChatBox:(_Bool)arg2 shouldCloseAwardSelectionBeforeCompletion:(_Bool)arg3;
+- (id)initWithPreselectedAward:(id)arg1 shouldShowChatBox:(_Bool)arg2 shouldCloseAwardSelectionBeforeCompletion:(_Bool)arg3;
 @property(nonatomic, readonly) _Bool shouldCloseAwardSelectionBeforeCompletion; // @synthesize shouldCloseAwardSelectionBeforeCompletion;
 @property(nonatomic, readonly) _Bool shouldShowChatBox; // @synthesize shouldShowChatBox;
+@property(nonatomic, readonly) NSURL *preselectedAwardImageURL;
 @property(nonatomic, readonly) NSString *preselectedAwardId;
 
 @end

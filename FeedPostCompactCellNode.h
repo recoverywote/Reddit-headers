@@ -10,7 +10,7 @@
 #import "FeedPostCollectionViewItem-Protocol.h"
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ASDisplayNode, BaseFeedDisplayNode, Carousel, CarouselContainerNode, FeedPostAwardsNode, FeedPostCommentBarNode, FeedPostCompactContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, UIImage;
+@class ASDisplayNode, BaseFeedDisplayNode, Carousel, CarouselContainerNode, FeedPostCommentBarNode, FeedPostCompactContentNode, FeedPostEventBarNode, FeedPostModerateBarNode, FeedPostOptions, FeedPostTitleNode, NSString, Post, UIImage, _TtC6Reddit18FeedPostAwardsNode;
 @protocol CarouselContainerNodeDelegate, FeedPostCellNodeDelegate><PillContainerNodeDelegate, ViewContext;
 
 @interface FeedPostCompactCellNode : BaseCollectionViewCellNode <ObjectObserverProtocol, ChainedCarouselDisplaying, FeedPostCollectionViewItem>
@@ -22,7 +22,7 @@
     id <FeedPostCellNodeDelegate><PillContainerNodeDelegate> _delegate;
     id <CarouselContainerNodeDelegate> _carouselContainerNodeDelegate;
     FeedPostOptions *_options;
-    FeedPostAwardsNode *_awardsNode;
+    _TtC6Reddit18FeedPostAwardsNode *_awardsNode;
     FeedPostCompactContentNode *_contentNode;
     FeedPostCommentBarNode *_commentsBarNode;
     FeedPostModerateBarNode *_modBarNode;
@@ -40,7 +40,7 @@
 @property(retain, nonatomic) FeedPostModerateBarNode *modBarNode; // @synthesize modBarNode=_modBarNode;
 @property(retain, nonatomic) FeedPostCommentBarNode *commentsBarNode; // @synthesize commentsBarNode=_commentsBarNode;
 @property(retain, nonatomic) FeedPostCompactContentNode *contentNode; // @synthesize contentNode=_contentNode;
-@property(retain, nonatomic) FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
+@property(retain, nonatomic) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
 @property(nonatomic) __weak id <CarouselContainerNodeDelegate> carouselContainerNodeDelegate; // @synthesize carouselContainerNodeDelegate=_carouselContainerNodeDelegate;
 @property(nonatomic) __weak id <FeedPostCellNodeDelegate><PillContainerNodeDelegate> delegate; // @synthesize delegate=_delegate;

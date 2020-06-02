@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIButton.h>
+#import <RedditUI/BaseButton.h>
 
-@interface _TtCZFOE6RedditO8RedditUI13RUIComponents4Auth16defaultSSOButtonFT3ruiCSo3RUI6heightV12CoreGraphics7CGFloat_CSo8UIButtonL_21LeftAlignedIconButton : UIButton
+@interface _TtCZFOE6RedditO8RedditUI13RUIComponents4Auth16defaultSSOButtonFT3ruiCSo3RUI6heightV12CoreGraphics7CGFloat_CSo8UIButtonL_21LeftAlignedIconButton : BaseButton
 {
 }
 

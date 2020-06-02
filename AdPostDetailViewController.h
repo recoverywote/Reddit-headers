@@ -55,6 +55,7 @@
 - (long long)preferredStatusBarStyle;
 - (void)configureNavigationBarAppearance;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (void)didChangeMediaVisibilityWithContext:(id)arg1;
 - (void)viewVisibilityDidChange:(id)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;

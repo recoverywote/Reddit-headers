@@ -9,25 +9,29 @@
 #import "PopupViewControllerProtocol-Protocol.h"
 
 @class LinkView, NSString;
-@protocol LinkViewControllerDelegate;
+@protocol AccountContext, LinkViewControllerDelegate;
 
 @interface LinkViewController : BaseViewController <PopupViewControllerProtocol>
 {
     double _preferredPopupHeight;
     id <LinkViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     LinkView *_linkView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) LinkView *linkView; // @synthesize linkView=_linkView;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <LinkViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) double preferredPopupHeight; // @synthesize preferredPopupHeight=_preferredPopupHeight;
 - (_Bool)isValidURL:(id)arg1;
 - (void)didTapInsertLink:(id)arg1;
+- (_Bool)isInAnonymousBrowsing;
 - (double)preferredPopupHeightForWidth:(double)arg1;
 - (void)viewWillLayoutSubviews;
 - (void)configureViewAppearance;
 - (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

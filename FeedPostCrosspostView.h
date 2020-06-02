@@ -10,7 +10,7 @@
 #import "FeedPostAwardsNodeDelegate-Protocol.h"
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
-@class BaseLabel, BaseTextView, FeedPostAwardsNode, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostThumbnailView, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView;
+@class BaseLabel, BaseTextView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostThumbnailView, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView, _TtC6Reddit18FeedPostAwardsNode;
 @protocol FeedPostCrosspostViewDelegate, FeedPostImageViewDelegate><FeedPostVideoViewDelegate><FeedPostHlsVideoViewDelegate><FeedPostYouTubeEmbeddedViewDelegate><FeedPostAwardsNodeDelegate, ViewContext;
 
 @interface FeedPostCrosspostView : BaseView <RUIThemeUpdateCallbackProtocol, ContentImageViewDelegate, FeedPostAwardsNodeDelegate>
@@ -21,7 +21,7 @@
     FeedPostOptions *_options;
     BaseTextView *_headerTextView;
     IntrinsicSizeNodeWrapper *_awardsWrapper;
-    FeedPostAwardsNode *_awardsNode;
+    _TtC6Reddit18FeedPostAwardsNode *_awardsNode;
     UITextView *_textView;
     FeedPostThumbnailView *_thumbnailImageView;
     FeedPostImageView *_imageView;
@@ -46,7 +46,7 @@
 @property(retain, nonatomic) FeedPostImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) FeedPostThumbnailView *thumbnailImageView; // @synthesize thumbnailImageView=_thumbnailImageView;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
-@property(retain, nonatomic) FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
+@property(retain, nonatomic) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) IntrinsicSizeNodeWrapper *awardsWrapper; // @synthesize awardsWrapper=_awardsWrapper;
 @property(retain, nonatomic) BaseTextView *headerTextView; // @synthesize headerTextView=_headerTextView;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;
@@ -54,7 +54,7 @@
 @property(retain, nonatomic) Post *parentPost; // @synthesize parentPost=_parentPost;
 @property(nonatomic) __weak id <FeedPostCrosspostViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)feedPostAwardsNodeNeedsLayoutUpdate:(id)arg1;
-- (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2;
+- (void)feedPostAwardsNode:(id)arg1 didTapAwardsForPost:(id)arg2 award:(id)arg3;
 - (void)contentImageViewDidTapImage:(id)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)setBounds:(struct CGRect)arg1;

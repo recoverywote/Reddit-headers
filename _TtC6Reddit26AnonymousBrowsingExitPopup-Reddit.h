@@ -9,6 +9,7 @@
 #import "PopupViewControllerProtocol-Protocol.h"
 
 @interface _TtC6Reddit26AnonymousBrowsingExitPopup (Reddit) <PopupViewControllerProtocol>
+- (_Bool)isInAnonymousBrowsing;
 - (_Bool)shouldBlurBackground;
 - (_Bool)shouldDismissWhenDimmerTapped;
 - (double)preferredPopupHeightForWidth:(double)arg1;

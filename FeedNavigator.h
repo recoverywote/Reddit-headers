@@ -21,6 +21,7 @@
 @property(retain, nonatomic) RailsNavigator *railsNavigator; // @synthesize railsNavigator=_railsNavigator;
 @property(copy, nonatomic) CDUnknownBlockType willNavigateToPostBlock; // @synthesize willNavigateToPostBlock=_willNavigateToPostBlock;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (void)navigateToPowerupsMarketingPageForSubreddit:(id)arg1 powerupsInfo:(id)arg2 preselectedBenefit:(long long)arg3;
 - (void)navigateToWalletWithLaunchOptions:(id)arg1;
 - (void)navigateToPostCollection:(id)arg1 withPost:(id)arg2;
 - (void)navigateToPostCollectionWithId:(id)arg1 withPost:(id)arg2;
@@ -28,7 +29,7 @@
 - (void)presentStreamingViewController:(id)arg1;
 - (void)navigateToStreaming:(id)arg1 livestream:(id)arg2;
 - (void)navigateToStreamingForPost:(id)arg1;
-- (void)navigateToAwardSelectionForPost:(id)arg1 selectAwardWithIdentifier:(id)arg2;
+- (void)navigateToAwardSelectionForPost:(id)arg1 selectAward:(id)arg2 correlationId:(id)arg3;
 - (void)navigateToAwardDetailsForComment:(id)arg1 parentPost:(id)arg2 correlationId:(id)arg3;
 - (void)navigateToAwardDetailsForPost:(id)arg1 correlationId:(id)arg2;
 - (void)logDidVisitOutboundUrl:(id)arg1 ofPost:(id)arg2 outboundSourceElement:(unsigned long long)arg3;

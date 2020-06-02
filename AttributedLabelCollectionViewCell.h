@@ -26,6 +26,9 @@
 @property(retain, nonatomic) NSLayoutConstraint *labelLeadingConstraint; // @synthesize labelLeadingConstraint=_labelLeadingConstraint;
 @property(retain, nonatomic) AttributedLabel *textViewAttributedLabel; // @synthesize textViewAttributedLabel=_textViewAttributedLabel;
 @property(nonatomic) struct UIEdgeInsets labelInsets; // @synthesize labelInsets=_labelInsets;
+- (id)textViewAttributedLabelWithViewContext:(id)arg1;
+- (void)configureWithViewContext:(id)arg1 text:(id)arg2 labelDelegate:(id)arg3;
+- (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

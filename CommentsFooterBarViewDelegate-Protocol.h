@@ -9,6 +9,8 @@
 @class CommentsFooterBarView;
 
 @protocol CommentsFooterBarViewDelegate <NSObject>
+- (void)commentsFooterBarViewDidTapGIFButton:(CommentsFooterBarView *)arg1;
+- (void)commentsFooterBarViewDidTapEmoteButton:(CommentsFooterBarView *)arg1;
 - (void)commentsFooterBarViewDidTapButton:(CommentsFooterBarView *)arg1;
 @end
 

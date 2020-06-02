@@ -37,6 +37,7 @@
 - (void)addContentOffsetObserver:(id)arg1;
 - (void)prepareLayout;
 @property(readonly, nonatomic) NSIndexPath *currentPage;
+- (void)scrollToPage:(id)arg1;
 - (void)dealloc;
 
 @end

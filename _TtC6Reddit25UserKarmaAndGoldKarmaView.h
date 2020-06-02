@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+@property(nonatomic, readonly) BaseView *bottomLine; // @synthesize bottomLine;
 - (void)configureWith:(id)arg1;
 
 @end

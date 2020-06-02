@@ -9,7 +9,7 @@
 #import "FeedPostContentDisplaying-Protocol.h"
 #import "FeedPostContentVisibilityChangeObserving-Protocol.h"
 
-@class ASDisplayNode, FeedPostCallToActionNode, FeedPostOptions, FeedPostTextWithThumbnailNode, NSString, Post, PostMetaViewModel, UIImage;
+@class ASDisplayNode, FeedPostCallToActionNode, FeedPostOptions, FeedPostTextWithThumbnailNode, NSString, Post, PostMetaViewModel, UIImage, UIView;
 @protocol FeedPostContentNodeDelegate, ViewContext;
 
 @interface FeedPostContentNode : BaseFeedDisplayNode <FeedPostContentDisplaying, FeedPostContentVisibilityChangeObserving>
@@ -39,6 +39,7 @@
 - (void)didPassVisibilityThreshold;
 - (void)didBecomeFullyVisible;
 - (_Bool)shouldShowPostPoll;
+@property(readonly, nonatomic) UIView *mediaView;
 @property(readonly, nonatomic) UIImage *previewImage;
 - (struct UIEdgeInsets)contentNodeInsets;
 - (void)createCallToActionNodeIfNecessaryWithStyle:(unsigned long long)arg1;
@@ -48,6 +49,7 @@
 - (void)createNodesForWebsitePost;
 - (void)createTextNodeWithStyle:(unsigned long long)arg1;
 - (void)createNodes;
+@property(readonly, nonatomic) _Bool hasNonTextContent;
 @property(readonly, nonatomic) _Bool hasTextContent; // @synthesize hasTextContent=_hasTextContent;
 - (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 

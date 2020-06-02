@@ -6,19 +6,17 @@
 
 #import <UIKit/UICollectionViewCell.h>
 
-@class UIColor;
-
 @interface _TtC6Reddit12PostMenuCell : UICollectionViewCell
 {
     // Error parsing type: , name: $__lazy_storage_$_iconImageView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
+    // Error parsing type: , name: $__lazy_storage_$_lockImageView
     // Error parsing type: , name: enabled
+    // Error parsing type: , name: locked
 }
 
 - (void).cxx_destruct;
-- (void)setupWithImage:(id)arg1 text:(id)arg2;
-@property(nonatomic, retain) UIColor *textColor;
-@property(nonatomic) _Bool enabled; // @synthesize enabled;
+@property(nonatomic) _Bool locked; // @synthesize locked;
 - (void)prepareForReuse;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

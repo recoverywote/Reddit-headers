@@ -11,7 +11,12 @@
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: iconView
+    // Error parsing type: , name: goBackButtonHeight
+    // Error parsing type: , name: goBackButton
     // Error parsing type: , name: lineSeparator
+    // Error parsing type: , name: isTaggingFinished
+    // Error parsing type: , name: goBackButtonHeightConstraint
+    // Error parsing type: , name: lineSeparatorHeightConstraint
 }
 
 - (void).cxx_destruct;

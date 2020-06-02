@@ -9,12 +9,13 @@
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class CommentAwardsNode, CommentTreeNode, CommentTreeNodeOptions, CommentTreeVisualDepthNode, NSString;
-@protocol CommentTreeAwardsNodeDelegate;
+@protocol CommentTreeAwardsNodeDelegate, ViewContext;
 
 @interface CommentTreeAwardsNode : BaseFeedDisplayNode <ObjectObserverProtocol>
 {
     CommentTreeNode *_commentNode;
     id <CommentTreeAwardsNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     CommentTreeNodeOptions *_commentOptions;
     CommentTreeVisualDepthNode *_visualDepthNode;
     CommentAwardsNode *_awardsNode;
@@ -24,6 +25,7 @@
 @property(retain, nonatomic) CommentAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) CommentTreeVisualDepthNode *visualDepthNode; // @synthesize visualDepthNode=_visualDepthNode;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CommentTreeAwardsNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
@@ -31,7 +33,7 @@
 - (void)awardsBackgroundNodeDidTap:(id)arg1;
 - (void)createNodes;
 - (void)didLoad;
-- (id)initWithCommentTreeNode:(id)arg1 commentOptions:(id)arg2;
+- (id)initWithCommentTreeNode:(id)arg1 viewContext:(id)arg2 commentOptions:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

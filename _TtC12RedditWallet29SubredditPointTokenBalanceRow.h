@@ -9,8 +9,8 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet29SubredditPointTokenBalanceRow : UIView
 {
-    // Error parsing type: , name: balance
     // Error parsing type: , name: imageProvider
+    // Error parsing type: , name: loaderIndicator
     // Error parsing type: , name: subredditIconView
     // Error parsing type: , name: subredditIconBackground
     // Error parsing type: , name: subredditNameLabel

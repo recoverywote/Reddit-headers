@@ -6,27 +6,25 @@
 
 #import <RedditCore/Comment.h>
 
-@class AwardingTotal, NSArray;
-
 @interface Comment (CommunityAwards)
 + (id)highlightColorForType:(unsigned long long)arg1;
 + (id)defaultAttributesUsingTheme:(id)arg1;
 + (id)activeLinkAttributesUsingTheme:(id)arg1;
 + (id)linkAttributesUsingTheme:(id)arg1;
-- (_Bool)isLastGivenAward:(id)arg1;
+- (_Bool)isLastGivenAward:(id)arg1 forGivenAwardsManager:(id)arg2;
 @property(readonly, nonatomic) _Bool shouldHighlightForHighAward;
 @property(readonly, nonatomic) unsigned long long awardHighlight;
-@property(readonly, nonatomic) _Bool hasBeenAwardedByCurrentAccount;
-@property(readonly, nonatomic) NSArray *orderedAwardingTotalsWithFirstModAwardRemoved;
-@property(readonly, nonatomic) AwardingTotal *firstModeratorAwardingTotal;
-@property(readonly, nonatomic) NSArray *orderedAwardingTotals;
+- (_Bool)hasBeenAwardedByCurrentAccountWithGivenAwardsManager:(id)arg1;
+- (id)orderedAwardingTotalsWithFirstModAwardRemovedWithGivenAwardsManager:(id)arg1;
+- (id)firstModeratorAwardingTotalWithGivenAwardsManager:(id)arg1;
+- (id)orderedAwardingTotalsWithGivenAwardsManager:(id)arg1;
 - (id)commentListMetadataUsingTheme:(id)arg1 shouldShowSubredditName:(_Bool)arg2;
 - (id)commentModIconsStringUsingTheme:(id)arg1 shouldShowLockButton:(_Bool)arg2;
 - (id)commentBodyStringForLinks:(id)arg1 withActiveLink:(id)arg2 usingTheme:(id)arg3;
 - (id)cakeIconAttachmentUsingTheme:(id)arg1;
-- (id)userIconsForData:(id)arg1 usingTheme:(id)arg2;
+- (id)userIconsForData:(id)arg1 usingTheme:(id)arg2 account:(id)arg3;
 - (id)textAttachmentWithImageNamed:(id)arg1 usingTheme:(id)arg2;
-- (id)headerTitleColorWithUserProvidedColor:(id)arg1 usingTheme:(id)arg2;
-- (id)commentHeaderString:(_Bool)arg1 usingTheme:(id)arg2 shouldShowAuthorFlair:(_Bool)arg3 shouldBoldAuthorName:(_Bool)arg4 shouldShowCrowdControlLabel:(_Bool)arg5 metaSubredditPointBalance:(id)arg6 usernameDecoration:(id)arg7 richTextLoader:(id)arg8 imagesLoaded:(CDUnknownBlockType)arg9;
+- (id)headerTitleColorWithUserProvidedColor:(id)arg1 usingTheme:(id)arg2 account:(id)arg3;
+- (id)commentHeaderString:(_Bool)arg1 account:(id)arg2 usingTheme:(id)arg3 shouldShowAuthorFlair:(_Bool)arg4 shouldBoldAuthorName:(_Bool)arg5 shouldShowCrowdControlLabel:(_Bool)arg6 metaSubredditPointBalance:(id)arg7 usernameDecoration:(id)arg8 richTextLoader:(id)arg9 imagesLoaded:(CDUnknownBlockType)arg10;
 @end
 

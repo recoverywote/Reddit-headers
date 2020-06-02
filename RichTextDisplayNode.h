@@ -10,13 +10,14 @@
 #import "RichTextTextNodeDelegate-Protocol.h"
 
 @class NSArray, NSAttributedString, NSMapTable, NSString, RichTextNodeOptions, SubredditMentionsHandler;
-@protocol RichTextDisplayNodeDelegate;
+@protocol RichTextDisplayNodeDelegate, ViewContext;
 
 @interface RichTextDisplayNode : ASDisplayNode <AttributedLabelMediaDelegate, RichTextTextNodeDelegate>
 {
     NSAttributedString *_attributedText;
     unsigned long long _justifyContent;
     id <RichTextDisplayNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     NSArray *_displayNodes;
     NSMapTable *_mediaNodes;
     SubredditMentionsHandler *_subredditMentionsHandler;
@@ -25,9 +26,10 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) RichTextNodeOptions *richTextNodeOptions; // @synthesize richTextNodeOptions=_richTextNodeOptions;
-@property(retain, nonatomic) SubredditMentionsHandler *subredditMentionsHandler; // @synthesize subredditMentionsHandler=_subredditMentionsHandler;
+@property(readonly, nonatomic) SubredditMentionsHandler *subredditMentionsHandler; // @synthesize subredditMentionsHandler=_subredditMentionsHandler;
 @property(retain, nonatomic) NSMapTable *mediaNodes; // @synthesize mediaNodes=_mediaNodes;
 @property(copy, nonatomic) NSArray *displayNodes; // @synthesize displayNodes=_displayNodes;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <RichTextDisplayNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long justifyContent; // @synthesize justifyContent=_justifyContent;
 @property(copy, nonatomic) NSAttributedString *attributedText; // @synthesize attributedText=_attributedText;
@@ -38,7 +40,7 @@
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureDisplayNodes;
 - (void)updateWithEnhancedAttributedString:(id)arg1;
-- (id)initWithOptions:(id)arg1;
+- (id)initWithViewContext:(id)arg1 options:(id)arg2 subredditMentionsHandler:(id)arg3;
 @property(readonly, nonatomic) _Bool isLinkSelected;
 
 // Remaining properties

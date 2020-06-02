@@ -11,6 +11,7 @@
 
 @interface EditFlairPresenter : NSObject
 {
+    id <AccountContext> _accountContext;
     long long _editType;
     long long _flairType;
     Subreddit *_subreddit;
@@ -23,7 +24,6 @@
     NSDictionary *_emojisDictionary;
     Post *_post;
     unsigned long long _modPermissions;
-    id <AccountContext> _accountContext;
     NSArray *_allSubredditEmojis;
     NSArray *_allRedditEmojis;
     NSArray *_allEmojis;
@@ -35,7 +35,6 @@
 @property(copy, nonatomic) NSArray *allEmojis; // @synthesize allEmojis=_allEmojis;
 @property(copy, nonatomic) NSArray *allRedditEmojis; // @synthesize allRedditEmojis=_allRedditEmojis;
 @property(copy, nonatomic) NSArray *allSubredditEmojis; // @synthesize allSubredditEmojis=_allSubredditEmojis;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) NSDictionary *emojisDictionary; // @synthesize emojisDictionary=_emojisDictionary;
@@ -48,6 +47,7 @@
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) long long flairType; // @synthesize flairType=_flairType;
 @property(nonatomic) long long editType; // @synthesize editType=_editType;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) _Bool hasModifiedTemplateProperties;
 @property(readonly, nonatomic) _Bool isUpdatingPostFlairTemplate;
 - (_Bool)isValidBasedOnContentTypeAndEmojiRestrictions;

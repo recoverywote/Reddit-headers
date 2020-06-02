@@ -6,11 +6,9 @@
 
 #import <RedditCore/ObservableObject.h>
 
-#import <RedditCore/BaseModel-Protocol.h>
-
 @class NSString, NSURL;
 
-@interface CommunityTag : ObservableObject <BaseModel>
+@interface CommunityTag : ObservableObject
 {
     _Bool _isRecommended;
     NSString *_pk;
@@ -24,16 +22,12 @@
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
-@property(readonly, copy) NSString *debugDescription;
+- (id)debugDescription;
 @property(readonly, nonatomic) NSURL *iconURL;
-@property(readonly) unsigned long long hash;
+- (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithGraphQLData:(id)arg1;
 - (id)initWithPk:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *description;
-@property(readonly) Class superclass;
 
 @end
 

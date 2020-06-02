@@ -16,9 +16,9 @@
 
 + (id)crosspostEventWithAction:(id)arg1 noun:(id)arg2 post:(id)arg3 user:(id)arg4;
 + (id)crosspostEventWithAction:(id)arg1 noun:(id)arg2 post:(id)arg3 subreddit:(id)arg4;
-+ (id)crosspostViewEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
-+ (id)crosspostClickEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3;
-+ (void)postCrosspostSubmitEventWithSubmittedPost:(id)arg1 originalPost:(id)arg2 subreddit:(id)arg3;
++ (id)crosspostViewEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3 account:(id)arg4;
++ (id)crosspostClickEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3 account:(id)arg4;
++ (void)postCrosspostSubmitEventWithSubmittedPost:(id)arg1 account:(id)arg2 originalPost:(id)arg3 subreddit:(id)arg4;
 + (id)sharedManager;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *crosspostEvents; // @synthesize crosspostEvents=_crosspostEvents;

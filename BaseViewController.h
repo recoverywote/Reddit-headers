@@ -51,7 +51,6 @@
 - (_Bool)attemptScrollMainContentViewToTop;
 - (void)configureViewAppearance;
 - (_Bool)prefersNavigationBarHidden;
-- (struct UIEdgeInsets)basePreferredContentInset;
 @property(readonly, nonatomic) struct UIEdgeInsets preferredContentInset;
 - (struct UIEdgeInsets)preferredContentInsetWithHorizontalPadding;
 - (struct UIEdgeInsets)preferredContentInsetWithHorizontalPaddingForSize:(struct CGSize)arg1;
@@ -60,8 +59,6 @@
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)calculateAnalyticsReason;
 - (void)didMoveToParentViewController:(id)arg1;
-- (void)viewDidDisappearOffScreen;
-- (void)viewDidAppearOnScreen;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidDisappear:(_Bool)arg1;

@@ -7,15 +7,18 @@
 #import "FeedViewControllerDelegator.h"
 
 #import "DownToChatBannerNodeDelegate-Protocol.h"
+#import "_TtP6Reddit26PowerupsBannerNodeDelegate_-Protocol.h"
 #import "_TtP6Reddit36MetaMembershipBannerCellNodeDelegate_-Protocol.h"
 
 @class NSString, TextureSubredditFeedViewController;
 
-@interface SubredditFeedViewControllerDelegator : FeedViewControllerDelegator <_TtP6Reddit36MetaMembershipBannerCellNodeDelegate_, DownToChatBannerNodeDelegate>
+@interface SubredditFeedViewControllerDelegator : FeedViewControllerDelegator <_TtP6Reddit36MetaMembershipBannerCellNodeDelegate_, DownToChatBannerNodeDelegate, _TtP6Reddit26PowerupsBannerNodeDelegate_>
 {
 }
 
 - (void)removeModelObject:(id)arg1;
+- (void)powerupsBannerNodeDidTapCallToActionWithNode:(id)arg1;
+- (void)powerupsBannerNodeDidTapDismissWithNode:(id)arg1;
 - (void)downToChatBannerNodeDidTapDismiss:(id)arg1;
 - (void)downToChatBannerNodeDidTapCallToAction:(id)arg1;
 - (void)metaMembershipBannerCellNodeDidTapClose:(id)arg1;

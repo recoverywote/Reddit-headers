@@ -10,11 +10,12 @@
 #import "UITextViewDelegate-Protocol.h"
 #import "_TtP6Reddit31MetaEmoteComposeManagerDelegate_-Protocol.h"
 #import "_TtP6Reddit31MetaGIPHYComposeManagerDelegate_-Protocol.h"
+#import "_TtP6Reddit31PowerupsCommentCreationDelegate_-Protocol.h"
 
 @class CommentReplyView, CommentTreeNode, NSString, Post, _TtC6Reddit21MetaRichTextConverter, _TtC6Reddit23MetaEmoteComposeManager, _TtC6Reddit23MetaGIPHYComposeManager;
 @protocol AccountContext, CommentReplyViewControllerDelegate;
 
-@interface CommentReplyViewController : BaseViewController <UITextViewDelegate, UITextFieldDelegate, _TtP6Reddit31MetaEmoteComposeManagerDelegate_, _TtP6Reddit31MetaGIPHYComposeManagerDelegate_>
+@interface CommentReplyViewController : BaseViewController <UITextViewDelegate, UITextFieldDelegate, _TtP6Reddit31MetaEmoteComposeManagerDelegate_, _TtP6Reddit31MetaGIPHYComposeManagerDelegate_, _TtP6Reddit31PowerupsCommentCreationDelegate_>
 {
     _Bool _isFromSingleCommentThread;
     CommentTreeNode *_commentTreeNode;
@@ -40,6 +41,7 @@
 - (id)clickEventForComment:(id)arg1 noun:(id)arg2;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
+- (void)didTapPowerupsButtonWithPowerupsInfo:(id)arg1 preselectedBenefit:(long long)arg2;
 - (void)giphyComposeManager:(id)arg1 didUpdateGIPHYUnlockStatus:(_Bool)arg2;
 - (void)metaEmoteComposeManager:(id)arg1 didInputEmote:(id)arg2;
 - (void)metaEmoteComposeManager:(id)arg1 didUpdateRemoteEmoteCount:(long long)arg2;
@@ -51,6 +53,7 @@
 - (void)toggleSendButton:(id)arg1 asEnabled:(_Bool)arg2;
 - (id)majorContentView;
 - (void)viewDidLoad;
+- (void)setPowerupsInfo:(id)arg1;
 - (id)initWithAccountContext:(id)arg1 commentTreeNode:(id)arg2 post:(id)arg3 delegate:(id)arg4;
 
 // Remaining properties

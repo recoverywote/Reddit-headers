@@ -8,7 +8,7 @@
 
 @interface _TtC12RedditWallet17TxToastController : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: walletRepository
+    // Error parsing type: , name: transactionRepository
     // Error parsing type: , name: walletProvider
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: imageProvider

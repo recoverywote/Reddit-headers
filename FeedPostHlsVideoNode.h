@@ -32,8 +32,8 @@
 - (void)didEnterVisibleState;
 - (void)didExitPreloadState;
 @property(readonly, nonatomic) FeedPostHlsVideoView *hlsVideoView;
-- (id)initWithPost:(id)arg1 withFeedPostOptions:(id)arg2 delegate:(id)arg3 parentPost:(id)arg4;
-- (id)initWithPost:(id)arg1 withFeedPostOptions:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 feedPostOptions:(id)arg3 delegate:(id)arg4 parentPost:(id)arg5;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 feedPostOptions:(id)arg3 delegate:(id)arg4;
 
 @end
 

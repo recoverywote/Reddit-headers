@@ -60,7 +60,6 @@
 @property(readonly, copy, nonatomic) NSString *headerTitle;
 @property(readonly, nonatomic) _Bool isPopularSubreddit;
 @property(readonly, copy, nonatomic) NSString *subscriptionPk;
-- (_Bool)isUserSubreddit;
 - (_Bool)canPostInSubreddit:(id)arg1;
 @property(readonly, nonatomic) unsigned long long commentResponseType;
 

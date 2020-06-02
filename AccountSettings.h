@@ -15,6 +15,8 @@
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
+- (_Bool)shouldHideTaggableWithPk:(id)arg1;
+- (void)setShouldHide:(_Bool)arg1 forTaggableWithPk:(id)arg2;
 @property(copy, nonatomic) NSDictionary *shareActivityHistory;
 @property(retain, nonatomic) NSSet *tappedShareActivityTypes;
 @property(copy, nonatomic) NSArray *dismissedTokenClaims;
@@ -46,10 +48,9 @@
 @property(copy, nonatomic) NSArray *acceptedQuarantinedSubreddits;
 @property(nonatomic) _Bool shouldDefaultToNonAnonymousAwarding;
 @property(copy, nonatomic) NSDictionary *GOTPollJSONData;
+@property(copy, nonatomic) NSDictionary *announcementImpressionCounts;
 @property(copy, nonatomic) NSDictionary *announcementDismissCounts;
 @property(copy, nonatomic) NSOrderedSet *loggedOutHiddenPostIds;
-@property(copy, nonatomic) NSString *pendingInAppPurchaseCorrelationId;
-@property(copy, nonatomic) NSDictionary *savedInAppPurchaseTransactions;
 @property(nonatomic) _Bool hasClosedForYouFeedBanner;
 - (void)setIsFollowingSubredditCategory:(id)arg1 isFollowing:(_Bool)arg2;
 - (_Bool)isFollowingSubredditCategory:(id)arg1;

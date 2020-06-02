@@ -15,17 +15,18 @@
     // Error parsing type: , name: confirmationButton
     // Error parsing type: , name: confirmationInputAccessoryView
     // Error parsing type: , name: accountManager
-    // Error parsing type: , name: googleIdentityProviderService
+    // Error parsing type: , name: accountContext
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)navigateToForgotPasswordViewController;
 - (void)login:(id)arg1;
 - (void)passwordFieldTextChangedWithSender:(id)arg1;
 - (void)usernameFieldTextChangedWithSender:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountManager:(id)arg1 rui:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 @property(nonatomic, readonly) NSString *passwordText;

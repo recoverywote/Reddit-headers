@@ -13,6 +13,7 @@
     // Error parsing type: , name: scrollView
     // Error parsing type: , name: twoFactorView
     // Error parsing type: , name: accountManager
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: username
     // Error parsing type: , name: password
     // Error parsing type: , name: twoFactorEntryType
@@ -28,7 +29,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountManager:(id)arg1 rui:(id)arg2 username:(id)arg3 password:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 username:(id)arg2 password:(id)arg3;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 

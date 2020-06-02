@@ -14,6 +14,7 @@
 @interface UIViewController (Utils) <ImagePopupViewControllerDelegate, ImagePopupViewControllerActiveDelegate>
 + (id)onScreenPostIDFromChatPostViewController;
 + (id)onScreenChannelURL;
++ (id)onScreenLiveStreamPostId;
 + (void)printAllScrollViewsInView:(id)arg1;
 + (void)printAllScrollViews;
 + (id)webViewControllerForUrl:(id)arg1 accountContext:(id)arg2;

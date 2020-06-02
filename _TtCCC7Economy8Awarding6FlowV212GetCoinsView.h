@@ -9,6 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtCCC7Economy8Awarding6FlowV212GetCoinsView : _TtCCC7Economy8Awarding6FlowV28BaseView
 {
+    // Error parsing type: , name: coinImageView
     // Error parsing type: , name: coinBalanceLabel
     // Error parsing type: , name: separator
     // Error parsing type: , name: addImageView

@@ -7,10 +7,11 @@
 #import <AsyncDisplayKit/ASScrollNode.h>
 
 @class ASDisplayNode, MetaBadgeManagementCommentSectionNode, MetaBadgeManagementLoaderNode, MetaSectionNode, NSArray, UIColor;
-@protocol MetaBadgeManagementActionDelegate;
+@protocol MetaBadgeManagementActionDelegate, ViewContext;
 
 @interface MetaBadgeManagementDisplayNode : ASScrollNode
 {
+    id <ViewContext> _viewContext;
     MetaSectionNode *_headerNode;
     MetaBadgeManagementCommentSectionNode *_commentSectionNode;
     MetaBadgeManagementLoaderNode *_loaderNode;
@@ -28,11 +29,12 @@
 @property(retain, nonatomic) MetaBadgeManagementLoaderNode *loaderNode; // @synthesize loaderNode=_loaderNode;
 @property(retain, nonatomic) MetaBadgeManagementCommentSectionNode *commentSectionNode; // @synthesize commentSectionNode=_commentSectionNode;
 @property(retain, nonatomic) MetaSectionNode *headerNode; // @synthesize headerNode=_headerNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)updateWithViewModel:(id)arg1 placement:(id)arg2;
 - (void)updateSelectedTab:(id)arg1 usernameDecoration:(id)arg2;
 - (void)didLoad;
-- (id)initWithContentColor:(id)arg1 tabs:(id)arg2 selectedTab:(id)arg3 actionDelegate:(id)arg4;
+- (id)initWithViewContext:(id)arg1 contentColor:(id)arg2 tabs:(id)arg3 selectedTab:(id)arg4 actionDelegate:(id)arg5;
 
 @end
 

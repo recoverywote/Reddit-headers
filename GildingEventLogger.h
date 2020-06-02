@@ -33,12 +33,16 @@
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
 - (id)gildingContentString;
 - (id)goldPurchaseForAward:(id)arg1 product:(id)arg2;
+- (void)logViewPremiumCancelOffer;
+- (void)logDeclinePremiumCancelOffer;
+- (void)logAcceptPremiumCancelOffer;
 - (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
 - (void)logViewPurchaseSuccessEventWithAward:(id)arg1 product:(id)arg2 transactionId:(id)arg3;
 - (void)logViewPurchaseProcessingEventWithAward:(id)arg1 product:(id)arg2;
 - (void)logConfirmPurchaseEventWithAward:(id)arg1 product:(id)arg2;
 - (void)logClosePurchaseConfirmationEventWithAward:(id)arg1 product:(id)arg2;
 - (void)logViewPurchaseConfirmationEventWithAward:(id)arg1 product:(id)arg2;
+- (void)logViewKarmaSuccessEventWith:(id)arg1 andAccount:(id)arg2 forTarget:(id)arg3;
 - (void)logViewAwardSuccessEventWithAward:(id)arg1 isAnonymous:(_Bool)arg2;
 - (void)logCloseGiveAwardModalEvent;
 - (void)logClickNextButtonEvent;

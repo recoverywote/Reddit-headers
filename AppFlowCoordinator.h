@@ -9,11 +9,13 @@
 #import "RootViewControllerDelegate-Protocol.h"
 
 @class Account, MainTabBarController, NSString, NSURL, RedditService, RootViewController;
+@protocol AccountContext;
 
 @interface AppFlowCoordinator : NSObject <RootViewControllerDelegate>
 {
     _Bool _didScheduleBranchURL;
     _Bool _isBranchMatchGuaranteed;
+    id <AccountContext> _accountContext;
     RootViewController *_rootViewController;
     MainTabBarController *_mainTabController;
     NSURL *_scheduledURL;
@@ -30,14 +32,16 @@
 @property(copy, nonatomic) NSURL *scheduledURL; // @synthesize scheduledURL=_scheduledURL;
 @property(retain, nonatomic) MainTabBarController *mainTabController; // @synthesize mainTabController=_mainTabController;
 @property(readonly, nonatomic) RootViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)navigateToLoginCaptureView;
 - (void)handleEmailVerificationURL:(id)arg1;
-- (void)refreshConfig;
 - (void)didChangeUser:(id)arg1;
 - (void)applicationDidBecomeActive:(id)arg1;
+- (void)configureWithAccountContext:(id)arg1;
 - (unsigned long long)pushNotificationPromptStyle;
 - (void)showPushNotificationPromptIfNeededWithCompletion:(CDUnknownBlockType)arg1;
 - (void)rootViewControllerDidInstallNewMainTabBar;
+- (void)refreshConfig;
 - (void)handlePushNotificationTappedNotification:(id)arg1;
 - (id)extractDeeplinkURLFromPushNotification:(id)arg1;
 - (void)cacheURLFromAppLaunchOptions:(id)arg1;

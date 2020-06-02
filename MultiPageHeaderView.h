@@ -7,11 +7,12 @@
 #import <RedditUI/BaseView.h>
 
 @class BaseButton, BaseImageView, BaseLabel, Multi, ParallelHeaderTextWrapperView;
-@protocol MultiPageHeaderViewDelegate;
+@protocol MultiPageHeaderViewDelegate, ViewContext;
 
 @interface MultiPageHeaderView : BaseView
 {
     id <MultiPageHeaderViewDelegate> _delegate;
+    id <ViewContext> _viewContext;
     BaseImageView *_iconImageView;
     BaseLabel *_titleLabel;
     BaseLabel *_communityCountLabel;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) BaseLabel *communityCountLabel; // @synthesize communityCountLabel=_communityCountLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) BaseImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <MultiPageHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)actionButtonPress:(id)arg1;
 - (void)configureDescriptionLabelForMulti:(id)arg1;
@@ -42,7 +44,7 @@
 - (void)layoutSubviews;
 - (void)configureView;
 - (void)configureWithMulti:(id)arg1;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

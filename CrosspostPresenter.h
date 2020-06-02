@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Post, UIViewController;
+@class Post, UIViewController, _TtC6Reddit27EditUsernameFlowCoordinator;
 @protocol AccountContext;
 
 @interface CrosspostPresenter : NSObject
@@ -14,9 +14,11 @@
     id <AccountContext> _accountContext;
     Post *_post;
     UIViewController *_presentingViewController;
+    _TtC6Reddit27EditUsernameFlowCoordinator *_editUsernameFlowCoordinator;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit27EditUsernameFlowCoordinator *editUsernameFlowCoordinator; // @synthesize editUsernameFlowCoordinator=_editUsernameFlowCoordinator;
 @property(retain, nonatomic) UIViewController *presentingViewController; // @synthesize presentingViewController=_presentingViewController;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;

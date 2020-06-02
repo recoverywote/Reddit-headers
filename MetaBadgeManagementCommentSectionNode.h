@@ -22,7 +22,7 @@
 @property(retain, nonatomic) ASImageNode *downvoteImageNode; // @synthesize downvoteImageNode=_downvoteImageNode;
 @property(retain, nonatomic) ASImageNode *upvoteImageNode; // @synthesize upvoteImageNode=_upvoteImageNode;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-- (id)initWithContentColor:(id)arg1 tabs:(id)arg2 selectedTab:(id)arg3 usernameDecoration:(id)arg4 actionDelegate:(id)arg5;
+- (id)initWithViewContext:(id)arg1 contentColor:(id)arg2 tabs:(id)arg3 selectedTab:(id)arg4 usernameDecoration:(id)arg5 actionDelegate:(id)arg6;
 
 @end
 

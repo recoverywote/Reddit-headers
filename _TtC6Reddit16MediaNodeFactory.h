@@ -10,12 +10,12 @@
 {
 }
 
-+ (id)createMediaNodeForPostCreationWithUrl:(id)arg1 size:(struct CGSize)arg2 previewURL:(id)arg3 analyticsViewProtocol:(id)arg4;
-+ (id)createMediaNodeOnCarouselWithPost:(id)arg1 options:(id)arg2 size:(struct CGSize)arg3;
-+ (id)createMediaNodeForRichTextVideoElementWithVideoElement:(id)arg1 size:(struct CGSize)arg2;
-+ (id)createMediaNodeOnTheatreWithTheatreMediaItem:(id)arg1 options:(id)arg2 size:(struct CGSize)arg3 delegate:(id)arg4;
-+ (id)createMediaNodeForPostDetailAdWithPost:(id)arg1 options:(id)arg2 size:(struct CGSize)arg3 delegate:(id)arg4;
-+ (id)createMediaNodeOnFeedWithPost:(id)arg1 options:(id)arg2 size:(struct CGSize)arg3 delegate:(id)arg4;
++ (id)createMediaNodeForPostCreationWithViewContext:(id)arg1 url:(id)arg2 size:(struct CGSize)arg3 previewURL:(id)arg4 analyticsViewProtocol:(id)arg5;
++ (id)createMediaNodeOnCarouselWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 size:(struct CGSize)arg4;
++ (id)createMediaNodeForRichTextVideoElementWithViewContext:(id)arg1 videoElement:(id)arg2 size:(struct CGSize)arg3;
++ (id)createMediaNodeOnTheatreWithViewContext:(id)arg1 theatreMediaItem:(id)arg2 options:(id)arg3 size:(struct CGSize)arg4 delegate:(id)arg5;
++ (id)createMediaNodeForPostDetailAdWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 size:(struct CGSize)arg4 delegate:(id)arg5;
++ (id)createMediaNodeOnFeedWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 size:(struct CGSize)arg4 delegate:(id)arg5;
 - (id)init;
 
 @end

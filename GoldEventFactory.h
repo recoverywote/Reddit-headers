@@ -12,7 +12,8 @@
 
 + (id)viewAppreciationTooltipEventWithAccount:(id)arg1 post:(id)arg2;
 + (id)awardsInCommentClickEventWithAccount:(id)arg1 comment:(id)arg2 parentPost:(id)arg3 correlationId:(id)arg4;
-+ (id)awardsInPostClickEventWithAccount:(id)arg1 post:(id)arg2 correlationId:(id)arg3;
++ (id)addAwardInPostClickEventWithAccount:(id)arg1 post:(id)arg2 correlationId:(id)arg3;
++ (id)awardsInPostClickEventWithAccount:(id)arg1 post:(id)arg2 award:(id)arg3 correlationId:(id)arg4;
 + (id)awardCommentButtonClickEventWithAccount:(id)arg1 comment:(id)arg2 parentPost:(id)arg3 correlationId:(id)arg4;
 + (id)awardPostButtonClickEventWithAccount:(id)arg1 post:(id)arg2 correlationId:(id)arg3;
 + (id)userDrawerPremiumClickEventWithAccount:(id)arg1 correlationId:(id)arg2;

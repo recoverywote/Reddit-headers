@@ -11,12 +11,13 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class BaseButton, BaseTableView, BaseView, NSArray, NSString;
-@protocol ReportViewControllerDataSource;
+@protocol AccountContext, ReportViewControllerDataSource;
 
 @interface ReportViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, PopupViewControllerProtocol>
 {
     _Bool _disableReportToasts;
     CDUnknownBlockType _completion;
+    id <AccountContext> _accountContext;
     id <ReportViewControllerDataSource> _dataSource;
     NSArray *_items;
     long long _selectedIndex;
@@ -32,6 +33,7 @@
 @property(nonatomic) long long selectedIndex; // @synthesize selectedIndex=_selectedIndex;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(retain, nonatomic) id <ReportViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool disableReportToasts; // @synthesize disableReportToasts=_disableReportToasts;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 - (void)didTapCloseButton:(id)arg1;
@@ -46,8 +48,9 @@
 - (void)configureTableView;
 @property(readonly, nonatomic) struct CGRect footerRect;
 - (void)viewDidLoad;
+- (_Bool)isInAnonymousBrowsing;
 - (double)preferredPopupHeightForWidth:(double)arg1;
-- (id)initWithDataSource:(id)arg1;
+- (id)initWithAccountContext:(id)arg1 dataSource:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

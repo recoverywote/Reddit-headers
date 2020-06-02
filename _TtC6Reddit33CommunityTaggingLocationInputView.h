@@ -8,16 +8,21 @@
 
 @interface _TtC6Reddit33CommunityTaggingLocationInputView : UIView
 {
-    // Error parsing type: , name: community
+    // Error parsing type: , name: delegate
+    // Error parsing type: , name: geoTaggable
     // Error parsing type: , name: communityLocationTaggingCommunityView
     // Error parsing type: , name: textField
     // Error parsing type: , name: leftView
+    // Error parsing type: , name: rightView
     // Error parsing type: , name: lineSeparator
+    // Error parsing type: , name: notificationToken
 }
 
 - (void).cxx_destruct;
+- (void)didTapClearButton;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)dealloc;
 
 @end
 

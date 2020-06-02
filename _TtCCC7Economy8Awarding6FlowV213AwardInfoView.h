@@ -10,10 +10,12 @@ __attribute__((visibility("hidden")))
 @interface _TtCCC7Economy8Awarding6FlowV213AwardInfoView : _TtCCC7Economy8Awarding6FlowV28BaseView
 {
     // Error parsing type: , name: imageView
+    // Error parsing type: , name: accessoryImageView
     // Error parsing type: , name: nameLabel
     // Error parsing type: , name: coinPriceLabel
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: optionsBriefView
+    // Error parsing type: , name: subredditCoinBalanceLabel
     // Error parsing type: , name: sendButton
     // Error parsing type: , name: activityIndicator
 }

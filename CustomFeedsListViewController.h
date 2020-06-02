@@ -12,11 +12,12 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class BaseTableView, EmptyDogeView, Listing, ListingStateController, NSArray, NSString, RedditService, UIScrollView;
+@class BaseTableView, EmptyDogeView, Listing, ListingStateController, NSArray, NSString, RedditService, UIScrollView, _TtC6Reddit27EditUsernameFlowCoordinator;
 @protocol AccountContext;
 
 @interface CustomFeedsListViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, MultiPageViewControllerDelegate, ListingStateControllerDelegate, PagedTabControllerProtocol>
 {
+    _Bool _isCommunityTabRefactorEnabled;
     unsigned long long _viewMode;
     CDUnknownBlockType _onSelection;
     id <AccountContext> _accountContext;
@@ -25,9 +26,12 @@
     ListingStateController *_listingStateController;
     NSArray *_customFeeds;
     Listing *_listing;
+    _TtC6Reddit27EditUsernameFlowCoordinator *_editUsernameFlowCoordinator;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isCommunityTabRefactorEnabled; // @synthesize isCommunityTabRefactorEnabled=_isCommunityTabRefactorEnabled;
+@property(retain, nonatomic) _TtC6Reddit27EditUsernameFlowCoordinator *editUsernameFlowCoordinator; // @synthesize editUsernameFlowCoordinator=_editUsernameFlowCoordinator;
 @property(retain, nonatomic) Listing *listing; // @synthesize listing=_listing;
 @property(retain, nonatomic) NSArray *customFeeds; // @synthesize customFeeds=_customFeeds;
 @property(retain, nonatomic) ListingStateController *listingStateController; // @synthesize listingStateController=_listingStateController;
@@ -42,6 +46,7 @@
 @property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)pageItemText;
 - (void)didTapFavoriteButton:(id)arg1;
+- (void)createCustomFeed;
 - (void)didTapCreateCustomFeedButton:(id)arg1;
 - (void)closeButtonTap:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
@@ -51,10 +56,10 @@
 - (void)tableView:(id)arg1 didHighlightRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-- (struct UIEdgeInsets)preferredContentInset;
 - (void)newCustomFeedNotification:(id)arg1;
 - (void)createdCustomFeed:(id)arg1;
 - (void)showCustomFeedCreatedToast:(id)arg1;
+- (struct UIEdgeInsets)preferredContentInset;
 - (void)navigateToCustomFeed:(id)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)setupNavigationBar;

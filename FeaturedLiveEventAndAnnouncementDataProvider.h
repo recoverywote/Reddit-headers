@@ -8,16 +8,20 @@
 
 #import "DataProvider-Protocol.h"
 
-@class Announcement, LiveEvent, NSString, RedditService;
+@class Announcement, LiveEvent, NSString, RedditService, _TtC6Reddit22AnnouncementsViewModel;
 
 @interface FeaturedLiveEventAndAnnouncementDataProvider : NSObject <DataProvider>
 {
+    _Bool _isAnnouncementV2Enabled;
     RedditService *_service;
     LiveEvent *_featuredLiveEvent;
     Announcement *_featuredAnnouncement;
+    _TtC6Reddit22AnnouncementsViewModel *_announcementsViewModel;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isAnnouncementV2Enabled; // @synthesize isAnnouncementV2Enabled=_isAnnouncementV2Enabled;
+@property(retain, nonatomic) _TtC6Reddit22AnnouncementsViewModel *announcementsViewModel; // @synthesize announcementsViewModel=_announcementsViewModel;
 @property(retain, nonatomic) Announcement *featuredAnnouncement; // @synthesize featuredAnnouncement=_featuredAnnouncement;
 @property(retain, nonatomic) LiveEvent *featuredLiveEvent; // @synthesize featuredLiveEvent=_featuredLiveEvent;
 @property(readonly, nonatomic) RedditService *service; // @synthesize service=_service;

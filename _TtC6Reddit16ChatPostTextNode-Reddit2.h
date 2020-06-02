@@ -9,6 +9,6 @@
 @interface _TtC6Reddit16ChatPostTextNode (Reddit2)
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
-- (void)richTextDisplayNode:(id)arg1 didTapURL:(id)arg2 atPoint:(struct CGPoint)arg3 atRange:(struct _NSRange)arg4;
+- (void)richTextDisplayNode:(id)arg1 richTextTextNode:(id)arg2 didTapURL:(id)arg3 atPoint:(struct CGPoint)arg4 atRange:(struct _NSRange)arg5;
 @end
 

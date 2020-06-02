@@ -6,7 +6,7 @@
 
 #import "FeedPresenter.h"
 
-@class DownToChatDataProvider, PostMetaViewModelProvider, Subreddit, _TtC6Reddit28MetaMembershipBannerProvider, _TtC6Reddit34MetaClaimablePointsListingProvider;
+@class DownToChatDataProvider, PostMetaViewModelProvider, PowerupsBannerProvider, Subreddit, _TtC6Reddit28MetaMembershipBannerProvider, _TtC6Reddit34MetaClaimablePointsListingProvider;
 
 @interface SubredditFeedPresenter : FeedPresenter
 {
@@ -14,17 +14,20 @@
     PostMetaViewModelProvider *_postMetaViewModelProvider;
     _TtC6Reddit28MetaMembershipBannerProvider *_metaMembershipBannerProvider;
     DownToChatDataProvider *_downToChatBannerProvider;
+    PowerupsBannerProvider *_powerupsBannerProvider;
     _TtC6Reddit34MetaClaimablePointsListingProvider *_claimablePointsListingProvider;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit34MetaClaimablePointsListingProvider *claimablePointsListingProvider; // @synthesize claimablePointsListingProvider=_claimablePointsListingProvider;
+@property(retain, nonatomic) PowerupsBannerProvider *powerupsBannerProvider; // @synthesize powerupsBannerProvider=_powerupsBannerProvider;
 @property(retain, nonatomic) DownToChatDataProvider *downToChatBannerProvider; // @synthesize downToChatBannerProvider=_downToChatBannerProvider;
 @property(retain, nonatomic) _TtC6Reddit28MetaMembershipBannerProvider *metaMembershipBannerProvider; // @synthesize metaMembershipBannerProvider=_metaMembershipBannerProvider;
 @property(retain, nonatomic) PostMetaViewModelProvider *postMetaViewModelProvider; // @synthesize postMetaViewModelProvider=_postMetaViewModelProvider;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 - (id)listingTraceName;
 - (id)postMetaViewModelForPost:(id)arg1;
+- (_Bool)shouldAttachPowerupsDataProvider;
 - (_Bool)shouldAttachDownToChatDataProvider;
 - (id)createListingNetworkSourceWithURLString:(id)arg1 parameters:(id)arg2;
 - (void)listingNetworkSourceDidParseNewData:(id)arg1;

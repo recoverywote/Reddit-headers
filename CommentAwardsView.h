@@ -14,13 +14,13 @@
     CommentAwardsNode *_node;
 }
 
-+ (struct CGSize)calculatedSizeWithData:(id)arg1;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 viewContext:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) CommentAwardsNode *node; // @synthesize node=_node;
 @property(retain, nonatomic) Comment *comment; // @synthesize comment=_comment;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
-- (void)configureWithComment:(id)arg1;
+- (void)configureWithComment:(id)arg1 viewContext:(id)arg2;
 
 @end
 

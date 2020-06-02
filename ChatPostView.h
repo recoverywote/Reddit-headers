@@ -8,7 +8,7 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ContentImageView, FeedPostAwardsNode, FeedPostCommentsBarView, FeedPostCrosspostView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostTitleViewExpanded, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView;
+@class ContentImageView, FeedPostCommentsBarView, FeedPostCrosspostView, FeedPostHlsVideoView, FeedPostImageView, FeedPostOptions, FeedPostTitleViewExpanded, FeedPostVideoView, FeedPostYouTubeEmbeddedView, IntrinsicSizeNodeWrapper, NSString, Post, UITextView, _TtC6Reddit18FeedPostAwardsNode;
 @protocol ViewContext;
 
 @interface ChatPostView : BaseView <ObjectObserverProtocol>
@@ -20,7 +20,7 @@
     Post *_post;
     FeedPostTitleViewExpanded *_titleView;
     IntrinsicSizeNodeWrapper *_awardsNodeWrapper;
-    FeedPostAwardsNode *_awardsNode;
+    _TtC6Reddit18FeedPostAwardsNode *_awardsNode;
     UITextView *_textView;
     ContentImageView *_thumbnailImageView;
     FeedPostCommentsBarView *_commentsBarView;
@@ -48,7 +48,7 @@
 @property(retain, nonatomic) FeedPostCommentsBarView *commentsBarView; // @synthesize commentsBarView=_commentsBarView;
 @property(retain, nonatomic) ContentImageView *thumbnailImageView; // @synthesize thumbnailImageView=_thumbnailImageView;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
-@property(retain, nonatomic) FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
+@property(retain, nonatomic) _TtC6Reddit18FeedPostAwardsNode *awardsNode; // @synthesize awardsNode=_awardsNode;
 @property(retain, nonatomic) IntrinsicSizeNodeWrapper *awardsNodeWrapper; // @synthesize awardsNodeWrapper=_awardsNodeWrapper;
 @property(retain, nonatomic) FeedPostTitleViewExpanded *titleView; // @synthesize titleView=_titleView;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;

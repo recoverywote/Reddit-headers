@@ -39,6 +39,7 @@
 - (void)createNodesForRegularPost;
 - (void)createNodes;
 @property(readonly, nonatomic) _Bool hasTextThumbnail;
+@property(readonly, nonatomic) _Bool hasNonTextContent;
 @property(readonly, nonatomic) _Bool hasTextContent; // @synthesize hasTextContent=_hasTextContent;
 - (id)initWithViewContext:(id)arg1 post:(id)arg2 postMetaViewModel:(id)arg3 options:(id)arg4 delegate:(id)arg5;
 

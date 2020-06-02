@@ -8,6 +8,5 @@
 
 @interface _TtC6Reddit16ChatPostTextNode (Reddit1)
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-- (void)layout;
 @end
 

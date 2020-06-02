@@ -11,6 +11,7 @@
 
 @interface DetailedTrendingSearchNode : BaseFeedDisplayNode
 {
+    id <ViewContext> _viewContext;
     ASTextNode *_promotedLabelNode;
     ASTextNode *_queryTextNode;
     ASImageNode *_iconImageNode;
@@ -19,11 +20,9 @@
     ASNetworkImageNode *_subredditButtonNode;
     ASTextNode *_subredditDescriptionNode;
     TrendingSearch *_trendingSearch;
-    id <ViewContext> _viewContext;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) TrendingSearch *trendingSearch; // @synthesize trendingSearch=_trendingSearch;
 @property(retain, nonatomic) ASTextNode *subredditDescriptionNode; // @synthesize subredditDescriptionNode=_subredditDescriptionNode;
 @property(retain, nonatomic) ASNetworkImageNode *subredditButtonNode; // @synthesize subredditButtonNode=_subredditButtonNode;
@@ -32,6 +31,7 @@
 @property(retain, nonatomic) ASImageNode *iconImageNode; // @synthesize iconImageNode=_iconImageNode;
 @property(retain, nonatomic) ASTextNode *queryTextNode; // @synthesize queryTextNode=_queryTextNode;
 @property(retain, nonatomic) ASTextNode *promotedLabelNode; // @synthesize promotedLabelNode=_promotedLabelNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
 - (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;

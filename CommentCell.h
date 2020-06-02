@@ -10,7 +10,7 @@
 #import "PannableCellManagerDelegate-Protocol.h"
 
 @class Comment, CommentSwipeView, CommentView, NSString, PannableCellManager;
-@protocol CommentCellDelegate;
+@protocol CommentCellDelegate, ViewContext;
 
 @interface CommentCell : BaseCollectionViewCell <PannableCellManagerDelegate, ObjectObserverProtocol>
 {
@@ -20,14 +20,16 @@
     CommentView *_commentView;
     Comment *_comment;
     id <CommentCellDelegate> _delegate;
+    id <ViewContext> _viewContext;
     CommentSwipeView *_swipeView;
     PannableCellManager *_pannableCellManager;
 }
 
-+ (struct CGSize)calculatedSizeWithData:(id)arg1;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 viewContext:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) PannableCellManager *pannableCellManager; // @synthesize pannableCellManager=_pannableCellManager;
 @property(retain, nonatomic) CommentSwipeView *swipeView; // @synthesize swipeView=_swipeView;
+@property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) _Bool isPanningEnabled; // @synthesize isPanningEnabled=_isPanningEnabled;
 @property(nonatomic) __weak id <CommentCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isInModQueue; // @synthesize isInModQueue=_isInModQueue;
@@ -39,7 +41,7 @@
 - (unsigned long long)panCellStateForStateNum:(unsigned long long)arg1;
 - (void)pannableCellManager:(id)arg1 didPanToIndex:(unsigned long long)arg2;
 - (void)pannableCellManager:(id)arg1 changedToIndex:(unsigned long long)arg2;
-- (void)configureWithData:(id)arg1 andStyling:(id)arg2 andDelegate:(id)arg3 shouldHighlightBackground:(_Bool)arg4 isInModMode:(_Bool)arg5 isInModQueue:(_Bool)arg6 isUserAModerator:(_Bool)arg7;
+- (void)configureWithData:(id)arg1 viewContext:(id)arg2 styling:(id)arg3 delegate:(id)arg4 shouldHighlightBackground:(_Bool)arg5 isInModMode:(_Bool)arg6 isInModQueue:(_Bool)arg7 isUserAModerator:(_Bool)arg8;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

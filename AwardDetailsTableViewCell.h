@@ -6,7 +6,7 @@
 
 #import <RedditUI/BaseTableViewCell.h>
 
-@class BaseButton, BaseLabel, NSLayoutConstraint, UIStackView, _TtC6Reddit25AnimatableRemoteImageView;
+@class BaseButton, BaseLabel, NSLayoutConstraint, UIStackView, _TtC7Economy25AnimatableRemoteImageView;
 @protocol AwardDetailsTabelViewCellDelegate;
 
 @interface AwardDetailsTableViewCell : BaseTableViewCell
@@ -16,7 +16,7 @@
     BaseLabel *_titleLabel;
     BaseLabel *_descriptionLabel;
     BaseButton *_overflowButton;
-    _TtC6Reddit25AnimatableRemoteImageView *_iconImageView;
+    _TtC7Economy25AnimatableRemoteImageView *_iconImageView;
     UIStackView *_rightContentStackView;
     NSLayoutConstraint *_countLabelWidthConstraint;
 }
@@ -24,7 +24,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *countLabelWidthConstraint; // @synthesize countLabelWidthConstraint=_countLabelWidthConstraint;
 @property(retain, nonatomic) UIStackView *rightContentStackView; // @synthesize rightContentStackView=_rightContentStackView;
-@property(retain, nonatomic) _TtC6Reddit25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
+@property(retain, nonatomic) _TtC7Economy25AnimatableRemoteImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) BaseButton *overflowButton; // @synthesize overflowButton=_overflowButton;
 @property(retain, nonatomic) BaseLabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) BaseLabel *titleLabel; // @synthesize titleLabel=_titleLabel;

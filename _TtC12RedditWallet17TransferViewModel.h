@@ -13,7 +13,7 @@
     // Error parsing type: , name: recipientSubject
     // Error parsing type: , name: selectedBalanceSubject
     // Error parsing type: , name: transferSubject
-    // Error parsing type: , name: repository
+    // Error parsing type: , name: balanceRepository
     // Error parsing type: , name: redditService
     // Error parsing type: , name: mode
     // Error parsing type: , name: currentTransferCancellable

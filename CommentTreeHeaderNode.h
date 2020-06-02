@@ -11,13 +11,14 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class ASTextNode, CommentMetaViewModel, CommentTreeNode, CommentTreeNodeHeaderOptions, CommentTreeVisualDepthNode, NSString, RichTextLoader, UILongPressGestureRecognizer, UITapGestureRecognizer, _TtC6Reddit34FeedPostMetaUsernameDecorationNode;
-@protocol CommentTreeHeaderNodeDelegate;
+@protocol CommentTreeHeaderNodeDelegate, ViewContext;
 
 @interface CommentTreeHeaderNode : BaseFeedDisplayNode <ASTextNodeDelegate, UIGestureRecognizerDelegate, ObjectObserverProtocol>
 {
     ASTextNode *_titleTextNode;
     CommentTreeNode *_commentTreeNode;
     id <CommentTreeHeaderNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     CommentTreeVisualDepthNode *_visualDepthNode;
     CommentMetaViewModel *_commentMetaViewModel;
     ASTextNode *_iconsTextNode;
@@ -39,6 +40,7 @@
 @property(retain, nonatomic) ASTextNode *iconsTextNode; // @synthesize iconsTextNode=_iconsTextNode;
 @property(retain, nonatomic) CommentMetaViewModel *commentMetaViewModel; // @synthesize commentMetaViewModel=_commentMetaViewModel;
 @property(retain, nonatomic) CommentTreeVisualDepthNode *visualDepthNode; // @synthesize visualDepthNode=_visualDepthNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CommentTreeHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
@@ -54,7 +56,7 @@
 - (void)configureNodes;
 - (void)createNodes;
 - (void)dealloc;
-- (id)initWithCommentTreeNode:(id)arg1 commentMetaViewModel:(id)arg2 options:(id)arg3;
+- (id)initWithCommentTreeNode:(id)arg1 viewContext:(id)arg2 commentMetaViewModel:(id)arg3 options:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

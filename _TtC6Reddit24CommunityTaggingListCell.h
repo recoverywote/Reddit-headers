@@ -8,8 +8,7 @@
 
 @interface _TtC6Reddit24CommunityTaggingListCell : UITableViewCell
 {
-    // Error parsing type: , name: community
-    // Error parsing type: , name: viewType
+    // Error parsing type: , name: geoTaggable
     // Error parsing type: , name: communityLocationTaggingCommunityView
     // Error parsing type: , name: communityLocationTaggingActionView
     // Error parsing type: , name: lineSeparator

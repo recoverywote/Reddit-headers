@@ -26,13 +26,11 @@
     ListingNetworkSource *_listingNetworkSourceOverride;
     RailsAnalyticsContext *_analyticsContext;
     NSArray *_queryContexts;
-    CDUnknownBlockType _railsQueryResolver;
 }
 
 + (id)universalEndpointSourceFromOrigin:(unsigned long long)arg1;
 + (id)combinedQueryFromContexts:(id)arg1 query:(id)arg2;
 - (void).cxx_destruct;
-@property(copy, nonatomic) CDUnknownBlockType railsQueryResolver; // @synthesize railsQueryResolver=_railsQueryResolver;
 @property(copy, nonatomic) NSArray *queryContexts; // @synthesize queryContexts=_queryContexts;
 @property(retain, nonatomic) RailsAnalyticsContext *analyticsContext; // @synthesize analyticsContext=_analyticsContext;
 @property(retain, nonatomic) ListingNetworkSource *listingNetworkSourceOverride; // @synthesize listingNetworkSourceOverride=_listingNetworkSourceOverride;

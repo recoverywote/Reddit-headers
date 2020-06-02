@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit30BottomSheetLoginViewController : UIViewController
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: accountManager
     // Error parsing type: , name: scrollView
     // Error parsing type: , name: bottomSheetLoginView
@@ -17,7 +18,7 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountManager:(id)arg1 rui:(id)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

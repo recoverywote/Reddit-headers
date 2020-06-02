@@ -13,7 +13,7 @@
 #import "RequestToNavigateView-Protocol.h"
 #import "UIAdaptivePresentationControllerDelegate-Protocol.h"
 
-@class BaseButton, BaseLabel, BaseScrollView, FeedSpinnerView, FlairLabel, KeyboardFloatingViewInteractor, LocationManager, NSArray, NSString, NSURL, PostFlair, RedditService, SubmittedPost, Subreddit, SubredditBarView, UIView, _TtC6Reddit24ChatDiscussionToggleView, _TtC6Reddit30SubredditPostingDifficultyView;
+@class BaseButton, BaseLabel, BaseScrollView, FeedSpinnerView, FlairLabel, KeyboardFloatingViewInteractor, LocationManager, NSArray, NSString, NSURL, PostFlair, PowerupsMarketingBadgeView, RedditService, SubmittedPost, Subreddit, SubredditBarView, UIView, _TtC6Reddit24ChatDiscussionToggleView, _TtC6Reddit30SubredditPostingDifficultyView;
 @protocol AccountContext, PostViewControllerDelegate;
 
 @interface PostViewController : BaseViewController <RecentSubredditsViewControllerDelegate, FlairViewDelegate, RequestToNavigateView, FlairSelectionSourceViewProtocol, KeyboardInteractorDelegate, UIAdaptivePresentationControllerDelegate>
@@ -104,6 +104,7 @@
 @property(readonly, nonatomic) RedditService *service;
 - (id)initWithAccountContext:(id)arg1;
 @property(retain, nonatomic) UIView *postErrorSeparator; // @dynamic postErrorSeparator;
+@property(retain, nonatomic) PowerupsMarketingBadgeView *powerupsMarketingBadgeView; // @dynamic powerupsMarketingBadgeView;
 @property(retain, nonatomic) UIView *titleErrorSeparator; // @dynamic titleErrorSeparator;
 @property(retain, nonatomic) BaseLabel *postErrorView; // @dynamic postErrorView;
 @property(retain, nonatomic) BaseLabel *flairErrorView; // @dynamic flairErrorView;

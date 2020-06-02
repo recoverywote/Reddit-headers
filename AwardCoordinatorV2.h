@@ -78,10 +78,11 @@
 - (void)selectAwardViewControllerDidTapInfoButton:(id)arg1;
 - (void)presentGetCoinsInViewController:(id)arg1;
 - (void)dismissAwardSelection;
+- (void)presentLoginViewController;
 - (void)sendAward;
 - (void)sendAwardWithOptions:(id)arg1 award:(id)arg2 isAnonymous:(_Bool)arg3 message:(id)arg4 hostViewController:(id)arg5;
 - (void)restorePreviousLastGivenAwardIdentifier;
-- (void)handleGildingCompletionWithError:(id)arg1;
+- (void)handleGildingCompletionWithKarmaScore:(id)arg1 AndError:(id)arg2;
 - (void)optimisticallyUpdateGivenAwardsCache;
 - (void)submitAward;
 - (void)startCoinPurchaseFlow;

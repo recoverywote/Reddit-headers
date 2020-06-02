@@ -10,11 +10,12 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class FeedPostOptions, HlsPlayerView, NSString, Post, UITapGestureRecognizer, UIVisualEffectView;
-@protocol FeedPostHlsVideoViewDelegate;
+@protocol FeedPostHlsVideoViewDelegate, ViewContext;
 
 @interface FeedPostHlsVideoView : BaseView <UIGestureRecognizerDelegate, PlayerViewDelegate>
 {
     HlsPlayerView *_hlsVideoView;
+    id <ViewContext> _viewContext;
     id <FeedPostHlsVideoViewDelegate> _delegate;
     Post *_crossPost;
     Post *_post;
@@ -31,7 +32,9 @@
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) Post *crossPost; // @synthesize crossPost=_crossPost;
 @property(nonatomic) __weak id <FeedPostHlsVideoViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) HlsPlayerView *hlsVideoView; // @synthesize hlsVideoView=_hlsVideoView;
+- (void)didTapPowerupsMarketingBadgeFor:(id)arg1 powerupsInfo:(id)arg2 preselectedBenefit:(long long)arg3;
 - (void)playerViewWillHideControls;
 - (void)playerViewWillShowControls;
 - (_Bool)parentIsCarouselView;
@@ -46,9 +49,6 @@
 - (void)contentVideoRequestsPlayer:(id)arg1;
 - (void)contentVideoDidTapTimeButton:(id)arg1;
 - (void)contentVideoDidTapExpand:(id)arg1;
-- (void)didChangeViewableStateWithVisibilityContext:(id)arg1;
-- (void)stopTrackingAdViewability;
-- (void)startTrackingAdViewability;
 - (void)didTapVideo;
 - (void)didBecomeFullyVisible;
 - (void)didPassVisibilityThreshold;
@@ -62,7 +62,7 @@
 - (void)noLongerPastVisibilityThreshold;
 - (void)didEndDisplaying;
 - (void)prepareForReuse;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 
 // Remaining properties
