@@ -7,12 +7,14 @@
 #import "SortBarView.h"
 
 @class BaseView;
+@protocol ViewContext;
 
 @interface CommentsSortBarView : SortBarView
 {
     _Bool _hasParentComment;
     unsigned long long _commentSort;
     unsigned long long _configuration;
+    id <ViewContext> _viewContext;
     BaseView *_liveIndicatorView;
 }
 
@@ -20,13 +22,14 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) BaseView *liveIndicatorView; // @synthesize liveIndicatorView=_liveIndicatorView;
 @property(nonatomic) _Bool hasParentComment; // @synthesize hasParentComment=_hasParentComment;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) unsigned long long configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) unsigned long long commentSort; // @synthesize commentSort=_commentSort;
 - (void)toggleLiveIndicatorView:(_Bool)arg1;
 - (void)layoutSubviews;
 - (void)setLeftButtonTitle:(id)arg1 withImage:(id)arg2;
 - (void)configureWithConfigurationType:(unsigned long long)arg1 hasParentComment:(_Bool)arg2 isPartialCommentTree:(_Bool)arg3 shoudLockComments:(_Bool)arg4;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

@@ -14,7 +14,7 @@
     BaseLabel *_viewCountLabel;
 }
 
-+ (double)topPaddingForPostType:(unsigned long long)arg1;
++ (double)topPaddingForPostDisplayType:(unsigned long long)arg1;
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) BaseLabel *viewCountLabel; // @synthesize viewCountLabel=_viewCountLabel;

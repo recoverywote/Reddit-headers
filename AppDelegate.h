@@ -60,7 +60,7 @@
 - (void)applicationDidBecomeActive:(id)arg1;
 - (void)application:(id)arg1 performActionForShortcutItem:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)application:(id)arg1 didFinishLaunchingWithOptions:(id)arg2;
-- (void)setupRootViewController;
+- (void)setupRootViewControllerWithLaunchOptions:(id)arg1;
 - (unsigned long long)application:(id)arg1 supportedInterfaceOrientationsForWindow:(id)arg2;
 - (double)toastController:(id)arg1 keyboardPaddingForConfiguration:(id)arg2;
 - (struct UIEdgeInsets)toastController:(id)arg1 layoutMarginsForToastConfiguration:(id)arg2;

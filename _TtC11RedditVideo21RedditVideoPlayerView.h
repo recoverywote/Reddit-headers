@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class _TtC11RedditVideo15RedditVideoView;
+@class _TtC11RedditVideo15RedditVideoView, _TtC11RedditVideo16PlayerController;
 
 @interface _TtC11RedditVideo21RedditVideoPlayerView : UIView
 {
@@ -28,6 +28,7 @@
 - (void)refreshVideoOverlay;
 - (id)initWithCoder:(id)arg1;
 @property(nonatomic, copy) CDUnknownBlockType onDidTapView;
+@property(nonatomic, readonly) _TtC11RedditVideo16PlayerController *playerController;
 @property(nonatomic, readonly) _TtC11RedditVideo15RedditVideoView *redditVideoView; // @synthesize redditVideoView;
 
 @end

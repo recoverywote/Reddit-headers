@@ -89,6 +89,7 @@
 @property(nonatomic) unsigned long long displayMode; // @synthesize displayMode=_displayMode;
 @property(copy, nonatomic) NSArray *frozenCurrentObjects; // @synthesize frozenCurrentObjects=_frozenCurrentObjects;
 @property(copy, nonatomic) NSArray *mediaCurrentObjects; // @synthesize mediaCurrentObjects=_mediaCurrentObjects;
+@property(readonly, nonatomic) _Bool isInitialFeedForAccount;
 - (id)listingTraceName;
 - (id)postMetaViewModelForPost:(id)arg1;
 - (unsigned long long)shouldShowHlsVideoPostInTheater:(id)arg1;

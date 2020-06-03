@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class UIImage, _TtC6Reddit28MediaSelectionViewController;
+@class NSArray, _TtC6Reddit28MediaSelectionViewController;
 
 @protocol _TtP6Reddit36MediaSelectionViewControllerDelegate_
-- (void)mediaSelectionViewController:(_TtC6Reddit28MediaSelectionViewController *)arg1 didSelect:(UIImage *)arg2;
+- (void)mediaSelectionViewController:(_TtC6Reddit28MediaSelectionViewController *)arg1 didSelect:(NSArray *)arg2;
 @end
 

@@ -40,8 +40,9 @@
 @property(nonatomic) __weak id <ChatFeedInteractorDelegate><PostActionSheetDelegate><AnalyticsViewProtocol> delegateVC; // @synthesize delegateVC=_delegateVC;
 @property(copy, nonatomic) NSArray *objects; // @synthesize objects=_objects;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
+- (void)didTapTimeIndicatorFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
-- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
+- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 videoIsLive:(_Bool)arg3;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)postFeedCell:(id)arg1 didConsumePost:(id)arg2 withVisibilityContext:(id)arg3;
 - (void)postFeedCell:(id)arg1 didViewPost:(id)arg2 withVisibilityContext:(id)arg3;
@@ -58,6 +59,7 @@
 - (void)feedPostModerateBarNode:(id)arg1 didApprovePost:(id)arg2;
 - (void)navigateToUrl:(id)arg1 forPost:(id)arg2;
 - (void)showSubscribedToastWithSubscribable:(id)arg1 success:(_Bool)arg2;
+- (void)navigateToStreamingForPost:(id)arg1;
 - (void)navigateToDetailsForPost:(id)arg1;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 - (void)textNode:(id)arg1 tappedLinkAttribute:(id)arg2 value:(id)arg3 atPoint:(struct CGPoint)arg4 textRange:(struct _NSRange)arg5;

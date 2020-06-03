@@ -15,7 +15,7 @@
 + (id)localizedStringForFeedSort:(unsigned long long)arg1 andFeedRange:(unsigned long long)arg2;
 + (id)localizedStringForFeedRange:(unsigned long long)arg1;
 + (id)localizedStringForFeedSort:(unsigned long long)arg1;
-+ (id)localizedStringForCommentSort:(unsigned long long)arg1;
++ (id)localizedStringForCommentSort:(unsigned long long)arg1 account:(id)arg2;
 + (id)localizedStringForThumbnailMode:(unsigned long long)arg1;
 + (id)localizedStringForFeedMode:(unsigned long long)arg1;
 

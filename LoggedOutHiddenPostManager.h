@@ -6,10 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class AccountSettings, UnfairLock;
+@class AccountSettings, RedditService, UnfairLock;
 
 @interface LoggedOutHiddenPostManager : NSObject
 {
+    RedditService *_service;
     AccountSettings *_accountSettings;
     UnfairLock *_lock;
 }
@@ -17,6 +18,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UnfairLock *lock; // @synthesize lock=_lock;
 @property(retain, nonatomic) AccountSettings *accountSettings; // @synthesize accountSettings=_accountSettings;
+@property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
+- (void)hidePost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)didLoadPost:(id)arg1;
 - (void)clearHiddenPosts;
 - (_Bool)isPostHidden:(id)arg1;

@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool removeDuplicates; // @synthesize removeDuplicates=_removeDuplicates;
 @property(retain, nonatomic) Listing *listing; // @synthesize listing=_listing;
+- (id)tags;
 - (id)debugDescription;
 - (id)dynamicParameters;
 - (id)defaultParameters;

@@ -10,7 +10,7 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 #import "UITabBarControllerDelegate-Protocol.h"
 
-@class BaseButton, BaseViewController, ChatHomePagedTabViewController, HomeViewController, InboxViewController, NSArray, NSString, RedditService, UINavigationController, UIViewController, _TtC6Reddit22ForcePasswordResetView, _TtC6Reddit29CommunityCreateFlowController, _TtC7Economy22CoinSaleEntryContainer;
+@class BaseButton, BaseViewController, ChatHomePagedTabViewController, HomeViewController, InboxViewController, NSArray, NSString, RedditService, UINavigationController, UIViewController, _TtC6Reddit22ForcePasswordResetView, _TtC6Reddit27EditUsernameFlowCoordinator, _TtC6Reddit29CommunityCreateFlowController, _TtC7Economy22CoinSaleEntryContainer;
 @protocol AccountContext, MainTabBarControllerDelegate, _TtP6Reddit35CommunityTabViewControllerInterface_;
 
 @interface MainTabBarController : UITabBarController <UITabBarControllerDelegate, RUIThemeUpdateCallbackProtocol, PostViewControllerDelegate>
@@ -29,9 +29,11 @@
     _TtC6Reddit22ForcePasswordResetView *_forcePasswordResetView;
     _TtC6Reddit29CommunityCreateFlowController *_flowController;
     _TtC7Economy22CoinSaleEntryContainer *_coinSaleContainer;
+    _TtC6Reddit27EditUsernameFlowCoordinator *_editUsernameFlowCoordinator;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit27EditUsernameFlowCoordinator *editUsernameFlowCoordinator; // @synthesize editUsernameFlowCoordinator=_editUsernameFlowCoordinator;
 @property(retain, nonatomic) _TtC7Economy22CoinSaleEntryContainer *coinSaleContainer; // @synthesize coinSaleContainer=_coinSaleContainer;
 @property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) _TtC6Reddit22ForcePasswordResetView *forcePasswordResetView; // @synthesize forcePasswordResetView=_forcePasswordResetView;
@@ -75,6 +77,7 @@
 - (void)accountDataUpdated;
 - (void)themeDidChange:(id)arg1;
 - (_Bool)tabBarController:(id)arg1 shouldSelectViewController:(id)arg2;
+- (void)handleDidReselectViewController:(id)arg1;
 - (void)tabBarController:(id)arg1 didSelectViewController:(id)arg2;
 - (void)presentPostMenuIfPossible;
 - (void)selectChatTabDirectPage;

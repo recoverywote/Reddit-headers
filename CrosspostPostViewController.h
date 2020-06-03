@@ -25,7 +25,7 @@
 - (id)postView;
 - (void)viewDidLoad;
 @property(readonly, nonatomic) Post *originalPost;
-- (void)testAndShowUnallowedPostTypeWarning;
+- (void)testAndShowUnallowedPostDisplayTypeWarning;
 - (void)configureWithSubreddit:(id)arg1 withCrosspostablePostId:(id)arg2 withFeedPostOptions:(id)arg3 withDelegate:(id)arg4;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)dealloc;

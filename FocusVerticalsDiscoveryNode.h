@@ -22,11 +22,13 @@
     ASButtonNode *_closeNode;
     FocusVerticalsDiscoveryFeedbackNode *_feedbackNode;
     ASTextNode *_topPostLabelNode;
+    long long _previousFeedback;
     id <ViewContext> _viewContext;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
+@property(nonatomic) long long previousFeedback; // @synthesize previousFeedback=_previousFeedback;
 @property(nonatomic) _Bool didTapHide; // @synthesize didTapHide=_didTapHide;
 @property(retain, nonatomic) ASTextNode *topPostLabelNode; // @synthesize topPostLabelNode=_topPostLabelNode;
 @property(retain, nonatomic) FocusVerticalsDiscoveryFeedbackNode *feedbackNode; // @synthesize feedbackNode=_feedbackNode;

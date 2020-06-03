@@ -22,9 +22,9 @@
     NSObject<OS_dispatch_queue> *_exposureQueue;
 }
 
-+ (id)targetingInfoFilePathForAccount:(id)arg1;
-+ (id)exposureEventsFilePathForAccount:(id)arg1;
-+ (id)experimentsFilePathForAccount:(id)arg1;
++ (id)targetingInfoFilePathForDataDirectory:(id)arg1;
++ (id)exposureEventsFilePathForDataDirectory:(id)arg1;
++ (id)experimentsFilePathForDataDirectory:(id)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *exposureQueue; // @synthesize exposureQueue=_exposureQueue;
 @property(retain, nonatomic) NSMutableArray *exposureEvents; // @synthesize exposureEvents=_exposureEvents;

@@ -57,7 +57,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (id)debugDescription;
 - (_Bool)shouldBlurWithOptions:(id)arg1;
-@property(readonly, nonatomic) unsigned long long postType;
+@property(readonly, nonatomic) unsigned long long postDisplayType;
 - (id)initWithSubredditImageWidget:(id)arg1;
 - (id)initWithRichTextMedia:(id)arg1;
 - (id)initWithPost:(id)arg1;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, AccountIdentifiers, BaseStore, ExperimentManager, LegacyCredentials, Loid, NSArray, NSHTTPCookie, NSURLSession, RedditServiceBackoffState, SessionTracker;
+@class Account, AccountIdentifiers, BaseStore, ExperimentManager, LegacyCredentials, Loid, NSArray, NSHTTPCookie, NSURL, NSURLSession, RedditServiceBackoffState, SessionTracker;
 @protocol OS_dispatch_queue;
 
 @interface RedditService : NSObject
@@ -17,6 +17,7 @@
     Account *_account;
     Loid *_loid;
     AccountIdentifiers *_accountIdentifiers;
+    NSURL *_dataDirectory;
     BaseStore *_userStore;
     BaseStore *_subredditStore;
     BaseStore *_messageStore;
@@ -71,6 +72,7 @@
 @property(readonly, nonatomic) BaseStore *messageStore; // @synthesize messageStore=_messageStore;
 @property(readonly, nonatomic) BaseStore *subredditStore; // @synthesize subredditStore=_subredditStore;
 @property(readonly, nonatomic) BaseStore *userStore; // @synthesize userStore=_userStore;
+@property(readonly, nonatomic) NSURL *dataDirectory; // @synthesize dataDirectory=_dataDirectory;
 @property(nonatomic) _Bool isCurrentService; // @synthesize isCurrentService=_isCurrentService;
 @property(readonly, nonatomic) AccountIdentifiers *accountIdentifiers; // @synthesize accountIdentifiers=_accountIdentifiers;
 @property(retain, nonatomic) Loid *loid; // @synthesize loid=_loid;
@@ -104,7 +106,7 @@
 - (void)invalidate;
 - (void)dealloc;
 @property(readonly, nonatomic) NSHTTPCookie *modMailCookie;
-- (id)initWithAccount:(id)arg1 credentials:(id)arg2 accountIdendifiers:(id)arg3 requestProcessors:(id)arg4 responseProcessors:(id)arg5 sessionTracker:(id)arg6 loid:(id)arg7 userDefaults:(id)arg8;
+- (id)initWithAccount:(id)arg1 dataDirectory:(id)arg2 credentials:(id)arg3 accountIdendifiers:(id)arg4 requestProcessors:(id)arg5 responseProcessors:(id)arg6 sessionTracker:(id)arg7 loid:(id)arg8 userDefaults:(id)arg9;
 - (id)initWithAccount:(id)arg1;
 - (void)deleteDraftPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveDraftPostForSubmittedPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -129,7 +131,7 @@
 - (void)upvoteLiveStream:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)sendHeartbeatForLiveStream:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)sendHeartbeatForLiveStreamPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)fetchLiveStreamWithStreamId:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchLiveStreamWithPostId:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchStreamsWithRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchTopLiveStreamsForPopularFeedWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchTopLiveStreamsForHomeFeedWithCompletion:(CDUnknownBlockType)arg1;
@@ -271,7 +273,6 @@
 - (void)validatePurchaseWithMetadata:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)submitExposureEvents:(id)arg1 targetingInfo:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchExperimentVariantsWithTargetingInfo:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)fetchAwardingTrayInfoForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSortedUsableAwardTotalsForSubreddit:(id)arg1 post:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateAccountCoinsWithAmount:(id)arg1;
 - (id)errorForStatus:(id)arg1;
@@ -320,6 +321,7 @@
 - (id)liveEventWithData:(id)arg1;
 - (void)suggestSubredditGeoPlace:(id)arg1 forSubreddit:(id)arg2 sessionId:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)searchForGeoPlaceWithInput:(id)arg1 sessionId:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)updateSubredditRecommendationPreferences:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchPowerupsInfoForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSupportersForSubreddit:(id)arg1 supporterType:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateSettingsForSubreddit:(id)arg1 publicDescription:(id)arg2 isNSFW:(_Bool)arg3 subredditType:(long long)arg4 completion:(CDUnknownBlockType)arg5;

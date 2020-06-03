@@ -52,7 +52,7 @@
 - (id)imageItem;
 - (id)onlyLinkItem;
 - (id)onlyImageItem;
-- (unsigned long long)calculatedPostType;
+- (unsigned long long)calculatedPostDisplayType;
 - (id)computedActivityItemsForOrigin:(unsigned long long)arg1;
 - (id)initWithSender:(id)arg1 analyticsPageType:(id)arg2;
 

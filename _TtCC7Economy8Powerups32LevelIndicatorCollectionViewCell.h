@@ -10,7 +10,7 @@ __attribute__((visibility("hidden")))
 @interface _TtCC7Economy8Powerups32LevelIndicatorCollectionViewCell : UICollectionViewCell
 {
     // Error parsing type: , name: titleView
-    // Error parsing type: , name: isCurrent
+    // Error parsing type: , name: isUnlocked
 }
 
 - (void).cxx_destruct;

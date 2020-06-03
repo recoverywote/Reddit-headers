@@ -125,7 +125,7 @@
 - (void)removeVideo;
 - (void)removeImage;
 - (_Bool)resignFirstResponder;
-- (void)testAndShowUnallowedPostTypeWarning;
+- (void)testAndShowUnallowedPostDisplayTypeWarning;
 - (void)configureWithSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)layoutWrapperScrollViewContents;
 - (void)configureWithPostToEdit:(id)arg1;

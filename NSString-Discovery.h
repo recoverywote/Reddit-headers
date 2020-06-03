@@ -8,7 +8,6 @@
 
 @interface NSString (Discovery)
 + (id)timeStringFromSeconds:(unsigned long long)arg1;
-+ (id)tagValueForKey:(id)arg1 fromTreatmentTags:(id)arg2;
 + (id)secureRandomString:(unsigned long long)arg1;
 + (id)negativeStringWithNumber:(id)arg1;
 + (id)shortenedStringWithNumber:(double)arg1 unitSuffix:(id)arg2;

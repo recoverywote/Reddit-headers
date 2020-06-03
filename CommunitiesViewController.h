@@ -11,11 +11,12 @@
 #import "ScrollViewIndexBarDelegate-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
+#import "_TtP8RedditUI22MajorContentScrollable_-Protocol.h"
 
 @class AccountSubscriptionDataSource, BaseTableView, CommunityDefaultSubscriptionViewDataSource, CommunityFollowingViewDataSource, CommunityModeratingViewDataSource, CommunityPopularViewDataSource, CommunityRecentlyViewedDataSource, FavoriteSubredditViewDataSource, NSArray, NSString, RedditService, ScrollViewIndexBar, SubscribedSubredditViewDataSource, UIScrollView, _TtC6Reddit36CommunitiesTableViewDelegateMediator;
 @protocol AccountContext;
 
-@interface CommunitiesViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, CommunityViewDataSourceDelegate, ScrollViewIndexBarDelegate, PagedTabControllerProtocol>
+@interface CommunitiesViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, CommunityViewDataSourceDelegate, ScrollViewIndexBarDelegate, PagedTabControllerProtocol, _TtP8RedditUI22MajorContentScrollable_>
 {
     _Bool _hasPerformedInitialFetch;
     _Bool _isCommunityTabRefactorEnabled;
@@ -60,7 +61,6 @@
 - (id)indexesForDataSources;
 - (void)communityViewDataSourceDidUpdate:(id)arg1;
 - (void)didPullToRefresh:(id)arg1;
-- (_Bool)attemptScrollMainContentViewToTop;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;

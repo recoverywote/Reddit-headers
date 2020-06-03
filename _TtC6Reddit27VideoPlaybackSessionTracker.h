@@ -8,8 +8,10 @@
 
 @interface _TtC6Reddit27VideoPlaybackSessionTracker : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: presenter
+    // Error parsing type: , name: playbackPresenter
+    // Error parsing type: , name: avPlayer
     // Error parsing type: , name: playbackHeartbeatTimer
+    // Error parsing type: , name: currentTimeTimer
     // Error parsing type: , name: playbackID
     // Error parsing type: , name: startTime
     // Error parsing type: , name: elapsedTime

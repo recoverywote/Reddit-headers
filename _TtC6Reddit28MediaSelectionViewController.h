@@ -6,20 +6,26 @@
 
 #import "BaseViewController.h"
 
-#import "PHPhotoLibraryChangeObserver-Protocol.h"
 #import "UIImagePickerControllerDelegate-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
 
 @protocol _TtP6Reddit36MediaSelectionViewControllerDelegate_;
 
-@interface _TtC6Reddit28MediaSelectionViewController : BaseViewController <PHPhotoLibraryChangeObserver, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface _TtC6Reddit28MediaSelectionViewController : BaseViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: accountContext
-    // Error parsing type: , name: imageManager
-    // Error parsing type: , name: photoLibrary
-    // Error parsing type: , name: subreddit
-    // Error parsing type: , name: $__lazy_storage_$_fetchResult
+    // Error parsing type: , name: allowMultipleSelection
+    // Error parsing type: , name: assetManager
+    // Error parsing type: , name: assetCollection
+    // Error parsing type: , name: assets
+    // Error parsing type: , name: collectionViewImageContentMode
+    // Error parsing type: , name: collectionViewImageManager
+    // Error parsing type: , name: collectionViewImageRequestOptions
+    // Error parsing type: , name: selectedAssetIdentifiers
+    // Error parsing type: , name: selectionImageContentMode
+    // Error parsing type: , name: selectionImageManager
+    // Error parsing type: , name: selectionImageRequestOptions
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: cancelBarButtonItem
     // Error parsing type: , name: nextBarButtonItem
@@ -36,10 +42,8 @@
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
-- (void)photoLibraryDidChange:(id)arg1;
-- (void)dealloc;
 - (void)viewDidLoad;
-- (id)initWithAccountContext:(id)arg1 subreddit:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 allowMultipleSelection:(_Bool)arg2;
 @property(nonatomic) __weak id <_TtP6Reddit36MediaSelectionViewControllerDelegate_> delegate; // @synthesize delegate;
 
 @end

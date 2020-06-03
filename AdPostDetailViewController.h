@@ -46,9 +46,10 @@
 - (void)didTapOverflow:(id)arg1;
 - (void)productViewControllerDidFinish:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
+- (void)didTapTimeIndicatorFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
-- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
+- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 videoIsLive:(_Bool)arg3;
 - (void)feedPostHlsVideoViewDidTap:(id)arg1;
 - (void)feedPostHlsVideoView:(id)arg1 didTapCallToAction:(unsigned long long)arg2;
 - (void)configureHlsVideoViewAppearance;

@@ -10,7 +10,7 @@
 
 @interface NSFileManager (DirectoryAdditions)
 @property(readonly, nonatomic) NSURL *applicationBaseURL;
-@property(readonly, nonatomic) NSString *userCacheRootDirectoryPath;
+@property(readonly, nonatomic) NSURL *accountsDirectory;
 @property(readonly, nonatomic) NSString *userDataFolder;
 - (id)createDirectoryIfNeeded:(id)arg1;
 @end

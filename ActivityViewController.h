@@ -16,10 +16,11 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
+#import "_TtP8RedditUI29RedditTabBarControllerHandler_-Protocol.h"
 
 @class BaseCollectionView, InboxActivityPresenter, LoggedOutView, NSString, NSURL, RedditService, UIScrollView;
 
-@interface ActivityViewController : ListingViewController <UICollectionViewDelegate, UICollectionViewDataSource, InboxActivityPresentable, UICollectionViewDelegateFlowLayout, ReportActionSheetDelegate, HeaderBarViewDelegate, RUIActionSheetViewControllerDelegate, LoggedOutViewDelegate, PagedTabControllerProtocol, ComposableInboxViewController>
+@interface ActivityViewController : ListingViewController <UICollectionViewDelegate, UICollectionViewDataSource, InboxActivityPresentable, UICollectionViewDelegateFlowLayout, ReportActionSheetDelegate, HeaderBarViewDelegate, RUIActionSheetViewControllerDelegate, LoggedOutViewDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_, PagedTabControllerProtocol, ComposableInboxViewController>
 {
     BaseCollectionView *_collectionView;
     LoggedOutView *_loggedOutView;
@@ -32,7 +33,7 @@
 - (void)logAnalyticsEventWithAction:(id)arg1 notification:(id)arg2;
 @property(readonly, nonatomic) NSString *analyticsPageType;
 @property(readonly, nonatomic) NSString *analyticsScreenViewName;
-- (_Bool)attemptScrollMainContentViewToTop;
+- (_Bool)shouldTabBarController:(id)arg1 handleReselectionOf:(id)arg2;
 - (void)userDidPullToRefresh;
 - (void)reloadForCompositeInboxViewController:(id)arg1;
 - (void)loggedOutViewDidTapSignup;

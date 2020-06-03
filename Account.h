@@ -4,11 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <RedditCore/User.h>
+#import <objc/NSObject.h>
 
-@class AccountPreferences, NSArray, NSDate, NSString;
+#import <RedditCore/BaseModel-Protocol.h>
+#import <RedditCore/NSSecureCoding-Protocol.h>
 
-@interface Account : User
+@class AccountPreferences, NSArray, NSDate, NSString, Subreddit, User;
+
+@interface Account : NSObject <BaseModel, NSSecureCoding>
 {
     _Bool _canAccessEmail;
     _Bool _hasVerifiedEmail;
@@ -32,9 +35,14 @@
     NSDate *_suspensionExpiration;
     AccountPreferences *_preferences;
     NSArray *_linkedIdentities;
+    User *_user;
+    NSString *_pk;
 }
 
++ (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
+@property(readonly, nonatomic) User *user; // @synthesize user=_user;
 @property(retain, nonatomic) NSArray *linkedIdentities; // @synthesize linkedIdentities=_linkedIdentities;
 @property(nonatomic) _Bool isEmailPermissionRequired; // @synthesize isEmailPermissionRequired=_isEmailPermissionRequired;
 @property(nonatomic) _Bool isChatUserReportingEnabled; // @synthesize isChatUserReportingEnabled=_isChatUserReportingEnabled;
@@ -57,16 +65,35 @@
 @property(nonatomic) _Bool hasVerifiedEmail; // @synthesize hasVerifiedEmail=_hasVerifiedEmail;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic) _Bool canAccessEmail; // @synthesize canAccessEmail=_canAccessEmail;
-- (id)debugDescription;
+@property(readonly, copy) NSString *debugDescription;
 @property(readonly, nonatomic) _Bool isLoggedIn;
 @property(readonly, nonatomic) _Bool isNotLoggedIn;
 @property(readonly, nonatomic) _Bool isSuspendedNow;
-@property(readonly, copy, nonatomic) NSString *accountCacheDirectoryPath;
 @property(readonly, nonatomic) _Bool over18;
-- (void)configureWithUserData:(id)arg1;
+- (void)configureWithData:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithPk:(id)arg1;
+@property(readonly, nonatomic) NSString *profileDescriptionText;
+@property(readonly, nonatomic) _Bool isEmployeeUser;
+@property(readonly, nonatomic) Subreddit *subreddit;
+@property(readonly, nonatomic) _Bool isVisibleActiveInCommunity;
+@property(readonly, nonatomic) _Bool isSubscribed;
+@property(readonly, nonatomic) _Bool isVerified;
+@property(readonly, nonatomic) _Bool hasPremium;
+@property(readonly, nonatomic) long long totalKarma;
+@property(readonly, nonatomic) long long linkKarma;
+@property(readonly, nonatomic) long long commentKarma;
+@property(readonly, nonatomic) NSDate *createdAt;
+@property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain;
+@property(readonly, copy, nonatomic) NSString *displayNamePrefixed;
+@property(readonly, copy, nonatomic) NSString *username;
+@property(readonly, copy, nonatomic) NSString *fullID;
+
+// Remaining properties
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

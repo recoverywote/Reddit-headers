@@ -23,6 +23,7 @@
     // Error parsing type: , name: fullscreenControl
     // Error parsing type: , name: playerProgress
     // Error parsing type: , name: isMuted
+    // Error parsing type: , name: duration
     // Error parsing type: , name: isAudioAvailable
     // Error parsing type: , name: shouldShowMuteButton
     // Error parsing type: , name: callToAction

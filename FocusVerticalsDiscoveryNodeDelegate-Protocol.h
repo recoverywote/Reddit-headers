@@ -11,6 +11,9 @@
 @class FocusVerticalsDiscoveryNode, VisibilityContext;
 
 @protocol FocusVerticalsDiscoveryNodeDelegate <FocusVerticalsHeaderNodeDelegate, FocusVerticalsPostNodeDelegate, FocusVerticalsSubredditNodeDelegate>
+- (void)focusVerticalsDiscoveryNode:(FocusVerticalsDiscoveryNode *)arg1 didUndoFeedback:(long long)arg2;
+- (void)focusVerticalsDiscoveryNode:(FocusVerticalsDiscoveryNode *)arg1 didSelectFeedback:(long long)arg2;
+- (void)focusVerticalsDiscoveryNodeDidTapCloseAndShowFeedbackNode:(FocusVerticalsDiscoveryNode *)arg1;
 - (void)focusVerticalsDiscoveryNodeDidView:(FocusVerticalsDiscoveryNode *)arg1 visibilityContext:(VisibilityContext *)arg2;
 - (void)focusVerticalsDiscoveryNodeDidTapClose:(FocusVerticalsDiscoveryNode *)arg1;
 @end

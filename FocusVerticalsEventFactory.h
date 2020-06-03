@@ -13,6 +13,8 @@
 + (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 post:(id)arg4 subreddit:(id)arg5 position:(long long)arg6 discoveryUnit:(id)arg7 visibilityContext:(id)arg8;
 + (id)viewEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3 position:(long long)arg4 discoveryUnit:(id)arg5 visibilityContext:(id)arg6;
 + (id)clickEventWithNoun:(id)arg1 post:(id)arg2 subreddit:(id)arg3 position:(long long)arg4 discoveryUnit:(id)arg5;
++ (id)focusVerticalsTapHideAndShowFeedbackEvent:(id)arg1 topic:(id)arg2;
++ (id)focusVerticalsFeedbackEvent:(id)arg1 topic:(id)arg2 feedback:(long long)arg3;
 + (id)focusVerticalsViewPostEvent:(id)arg1 position:(long long)arg2 visibilityContext:(id)arg3 discoveryUnit:(id)arg4;
 + (id)focusVerticalsViewSubredditEvent:(id)arg1 position:(long long)arg2 visibilityContext:(id)arg3 discoveryUnit:(id)arg4;
 + (id)focusVerticalsTapShowLessEventWithPosition:(long long)arg1 subreddit:(id)arg2 discoveryUnit:(id)arg3;

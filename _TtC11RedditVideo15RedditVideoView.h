@@ -19,6 +19,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)seekToLatestIfNeeded;
 - (void)reparentWithOtherVideoView:(id)arg1;
 - (void)didExitPlayableVisibility;
 - (void)didEnterPlayableVisibility;

@@ -17,7 +17,6 @@
     _Bool _isVerified;
     _Bool _isSubscribed;
     _Bool _isVisibleActiveInCommunity;
-    _Bool _isCurrentUserAccount;
     _Bool _isEmployeeUser;
     NSString *_pk;
     NSString *_username;
@@ -37,7 +36,6 @@
 @property(nonatomic) long long totalKarma; // @synthesize totalKarma=_totalKarma;
 @property(nonatomic) _Bool isEmployeeUser; // @synthesize isEmployeeUser=_isEmployeeUser;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
-@property(nonatomic) _Bool isCurrentUserAccount; // @synthesize isCurrentUserAccount=_isCurrentUserAccount;
 @property(nonatomic) _Bool isVisibleActiveInCommunity; // @synthesize isVisibleActiveInCommunity=_isVisibleActiveInCommunity;
 @property(nonatomic) _Bool isSubscribed; // @synthesize isSubscribed=_isSubscribed;
 @property(nonatomic) _Bool isVerified; // @synthesize isVerified=_isVerified;

@@ -15,8 +15,8 @@
 + (id)defaultUpvoteImageWithTintColor:(id)arg1;
 + (id)defaultTintedDownvoteImage;
 + (id)defaultTintedUpvoteImage;
-+ (id)linkTypeIconImageForPostType:(unsigned long long)arg1;
-+ (id)postTypeIconForPostType:(unsigned long long)arg1;
++ (id)linkDisplayTypeIconForPostDisplayType:(unsigned long long)arg1;
++ (id)postDisplayTypeIconForPostDisplayType:(unsigned long long)arg1;
 + (id)imageForFeedDisplayMode:(unsigned long long)arg1;
 + (id)avatarDefaultImageForBase10ID:(long long)arg1;
 + (id)addWatermarkToImage:(id)arg1 withSubredditName:(id)arg2 withUsername:(id)arg3 withLogo:(id)arg4;

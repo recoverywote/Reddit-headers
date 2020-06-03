@@ -13,12 +13,14 @@
     _Bool _audioSessionActive;
     _Bool _thirdPartyAudioIsPlaying;
     _Bool _thirdPartyAudioWasSilenced;
+    _Bool _isRedditVideoV2Enabled;
     long long _numberOfAudioSessionsActive;
     NSTimer *_audioDeactivationTimer;
 }
 
 + (id)sharedInstance;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isRedditVideoV2Enabled; // @synthesize isRedditVideoV2Enabled=_isRedditVideoV2Enabled;
 @property(nonatomic) _Bool thirdPartyAudioWasSilenced; // @synthesize thirdPartyAudioWasSilenced=_thirdPartyAudioWasSilenced;
 @property(nonatomic) _Bool thirdPartyAudioIsPlaying; // @synthesize thirdPartyAudioIsPlaying=_thirdPartyAudioIsPlaying;
 @property(retain, nonatomic) NSTimer *audioDeactivationTimer; // @synthesize audioDeactivationTimer=_audioDeactivationTimer;
@@ -29,9 +31,9 @@
 - (void)tryDeactivateAudioSession;
 - (void)handleAppDidEnterBackground;
 - (void)handleAppDidEnterForeground;
+- (void)experimentsDidFetch:(id)arg1;
 - (id)init;
 - (void)dealloc;
-@property(readonly, nonatomic) _Bool isRedditVideoV2Enabled;
 
 @end
 

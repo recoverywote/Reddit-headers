@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class CommentTreeTextNode, NSURL;
+@class CommentTreeTextNode, NSAttributedString, NSURL;
 
 @protocol CommentTreeTextNodeDelegate <NSObject>
 - (void)commentTreeTextNodeDidLongPressText:(CommentTreeTextNode *)arg1;
 - (void)commentTreeTextNodeDidDoubleTapText:(CommentTreeTextNode *)arg1;
-- (void)commentTreeTextNode:(CommentTreeTextNode *)arg1 didTapURL:(NSURL *)arg2;
+- (void)commentTreeTextNode:(CommentTreeTextNode *)arg1 didTapURL:(NSURL *)arg2 attributedText:(NSAttributedString *)arg3 atPoint:(struct CGPoint)arg4 atRange:(struct _NSRange)arg5;
 @end
 

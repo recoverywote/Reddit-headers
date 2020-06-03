@@ -12,7 +12,7 @@
 @interface _TtC6Reddit36SubredditMentionUpsellViewController : BaseViewController
 {
     // Error parsing type: , name: subredditMention
-    // Error parsing type: , name: analyticsManager
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: copySet
     // Error parsing type: , name: delegate
     // Error parsing type: , name: headerView
@@ -34,7 +34,7 @@
 - (void)viewDidLoad;
 - (void)configureViewAppearance;
 - (void)loadView;
-- (id)initWithSubredditMention:(id)arg1 analyticsManager:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 subredditMention:(id)arg2;
 @property(nonatomic, retain) id <_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic, readonly) SubredditMention *subredditMention; // @synthesize subredditMention;
 

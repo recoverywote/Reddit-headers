@@ -18,6 +18,7 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: displayedAwardViewModels
     // Error parsing type: , name: awardViewModels
     // Error parsing type: , name: theme
+    // Error parsing type: , name: isLayoutAnimationsEnabled
     // Error parsing type: , name: knownCellFrames
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: canDeselectAwardOnHiding
@@ -31,6 +32,7 @@ __attribute__((visibility("hidden")))
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 
 @end

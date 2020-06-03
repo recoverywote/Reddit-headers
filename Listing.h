@@ -41,6 +41,7 @@
 @property(readonly, nonatomic) _Bool hasFetched;
 @property(readonly, nonatomic) _Bool hasNextPage;
 - (id)parsePageInfo:(id)arg1;
+- (id)tags;
 - (void)fetchNextPage:(CDUnknownBlockType)arg1;
 - (id)clone;
 - (id)copyWithZone:(struct _NSZone *)arg1;

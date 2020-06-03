@@ -18,6 +18,8 @@
     // Error parsing type: , name: playerController
     // Error parsing type: , name: analyticsViewProtocol
     // Error parsing type: , name: source
+    // Error parsing type: , name: rpanHeartbeatTimer
+    // Error parsing type: , name: rpanHeartbeatDelayTimer
 }
 
 @end

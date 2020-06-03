@@ -60,6 +60,7 @@
 - (void)notifyDataProviderParentDidFetchDataWithParentId:(id)arg1;
 - (_Bool)shouldPostNotifications;
 - (id)tags;
+- (void)fetchAllDataProvidersForCorrelationId:(id)arg1 dispatchGroup:(id)arg2;
 - (void)fetchDataWithParameters:(id)arg1 correlationId:(id)arg2 successBlock:(CDUnknownBlockType)arg3 failureBlock:(CDUnknownBlockType)arg4;
 - (void)processObjects:(id)arg1 currentCount:(long long)arg2 withCompletion:(CDUnknownBlockType)arg3;
 - (unsigned long long)insertObject:(id)arg1 atIndex:(unsigned long long)arg2;

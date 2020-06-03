@@ -9,17 +9,11 @@
 @interface _TtC6RedditP33_8B80A23E8BECBF8AE5AE08C646EA78AB20BottomSheetLoginView : UIView
 {
     // Error parsing type: , name: titleView
-    // Error parsing type: , name: loginButton
-    // Error parsing type: , name: stackView
-    // Error parsing type: , name: delegate
+    // Error parsing type: , name: singleSignOnCompactView
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)didTapLoginButtonWithSender:(id)arg1;
-- (void)didTapEmailButtonWithSender:(id)arg1;
-- (void)didTapAppleButtonWithSender:(id)arg1;
-- (void)didTapGoogleButtonWithSender:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 
 @end

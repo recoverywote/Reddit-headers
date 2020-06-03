@@ -32,8 +32,9 @@
 - (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
 - (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
+- (void)didTapTimeIndicatorFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
-- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
+- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 videoIsLive:(_Bool)arg3;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)didTapModerateOverflowForPost:(id)arg1 sourceView:(id)arg2;
 - (void)didTapFlairForPost:(id)arg1;

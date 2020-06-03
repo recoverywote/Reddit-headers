@@ -8,10 +8,11 @@
 
 #import "ListingPresentable-Protocol.h"
 #import "RUIScrollViewProgressObserver-Protocol.h"
+#import "_TtP8RedditUI22MajorContentScrollable_-Protocol.h"
 
-@class EmptyDogeView, FeedSpinnerView, ListingPresenter, NSString, NSURL, RefreshControl;
+@class EmptyDogeView, FeedSpinnerView, ListingPresenter, NSString, NSURL, RefreshControl, UIScrollView;
 
-@interface ListingViewController : BaseViewController <RUIScrollViewProgressObserver, ListingPresentable>
+@interface ListingViewController : BaseViewController <RUIScrollViewProgressObserver, ListingPresentable, _TtP8RedditUI22MajorContentScrollable_>
 {
     _Bool _hasStartedObservingScrollViewNearBottom;
     _Bool _allowObservingScrollViewContentOffset;
@@ -32,7 +33,6 @@
 - (void)beginRenderingSpan;
 - (_Bool)shouldTraceDisplayingListingContent;
 - (void)didTapFirstLoadSpinner;
-- (_Bool)attemptScrollMainContentViewToTop;
 - (void)scrollView:(id)arg1 didObservePropertyChange:(id)arg2;
 - (void)updateContentViewsWhenLoadingMoreFinishes;
 - (void)updateContentViewsWhenReloadFinishes;
@@ -44,7 +44,7 @@
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (void)didPullToRefresh:(id)arg1;
 - (void)updateContentScrollViewInsets;
-- (id)majorContentScrollView;
+@property(readonly, nonatomic) UIScrollView *majorContentScrollView;
 - (id)majorContentView;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;

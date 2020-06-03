@@ -23,6 +23,7 @@
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(nonatomic) _Bool hasFetched; // @synthesize hasFetched;
+- (id)tags;
 - (_Bool)hasNextPage;
 - (void)fetchNextPage:(CDUnknownBlockType)arg1;
 - (id)clone;

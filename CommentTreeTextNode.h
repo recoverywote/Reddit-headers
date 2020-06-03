@@ -8,12 +8,11 @@
 
 #import "RichTextDisplayNodeDelegate-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
-#import "_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_-Protocol.h"
 
-@class CommentTreeNode, CommentTreeNodeOptions, CommentTreeVisualDepthNode, NSString, RichTextDisplayNode, SubredditMentionsHandler, UILongPressGestureRecognizer, UITapGestureRecognizer, _TtC6Reddit29CommunityCreateFlowController, _TtC6Reddit36SubredditMentionUpsellViewController;
+@class CommentTreeNode, CommentTreeNodeOptions, CommentTreeVisualDepthNode, NSString, RichTextDisplayNode, SubredditMentionsHandler, UILongPressGestureRecognizer, UITapGestureRecognizer;
 @protocol AccountContext, CommentTreeTextNodeDelegate;
 
-@interface CommentTreeTextNode : BaseFeedDisplayNode <RichTextDisplayNodeDelegate, UIGestureRecognizerDelegate, _TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_>
+@interface CommentTreeTextNode : BaseFeedDisplayNode <RichTextDisplayNodeDelegate, UIGestureRecognizerDelegate>
 {
     CommentTreeNode *_commentNode;
     id <AccountContext> _accountContext;
@@ -23,15 +22,11 @@
     UITapGestureRecognizer *_doubleTapRecognizer;
     UILongPressGestureRecognizer *_longPressRecognizer;
     CommentTreeNodeOptions *_commentOptions;
-    _TtC6Reddit36SubredditMentionUpsellViewController *_subredditMentionUpsellViewController;
-    _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
     SubredditMentionsHandler *_subredditMentionsHandler;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SubredditMentionsHandler *subredditMentionsHandler; // @synthesize subredditMentionsHandler=_subredditMentionsHandler;
-@property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
-@property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(retain, nonatomic) CommentTreeNodeOptions *commentOptions; // @synthesize commentOptions=_commentOptions;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressRecognizer; // @synthesize longPressRecognizer=_longPressRecognizer;
 @property(retain, nonatomic) UITapGestureRecognizer *doubleTapRecognizer; // @synthesize doubleTapRecognizer=_doubleTapRecognizer;
@@ -40,8 +35,6 @@
 @property(retain, nonatomic) RichTextDisplayNode *textNode; // @synthesize textNode=_textNode;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) CommentTreeNode *commentNode; // @synthesize commentNode=_commentNode;
-- (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
-- (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)modelAttributedStringsDidUpdate:(id)arg1;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;

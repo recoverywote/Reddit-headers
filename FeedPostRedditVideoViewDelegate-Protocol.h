@@ -9,9 +9,10 @@
 @class Post, SubredditPowerupsInfo, _TtC11RedditVideo21RedditVideoPlayerView, _TtC6Reddit22CallToActionIdentifier;
 
 @protocol FeedPostRedditVideoViewDelegate <NSObject>
+- (void)didTapTimeIndicatorFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2 callToAction:(_TtC6Reddit22CallToActionIdentifier *)arg3;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2;
-- (void)didTapViewFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2;
+- (void)didTapViewFromRedditVideoPlayerView:(_TtC11RedditVideo21RedditVideoPlayerView *)arg1 post:(Post *)arg2 videoIsLive:(_Bool)arg3;
 
 @optional
 - (void)didTapPowerupsMarketingBadgeFor:(Post *)arg1 powerupsInfo:(SubredditPowerupsInfo *)arg2 preselectedBenefit:(long long)arg3;

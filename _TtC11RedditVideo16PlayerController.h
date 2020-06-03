@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class AVPlayer, AVPlayerItem, NSString, _TtC11RedditVideo20PlayerLayerContainer;
 
 @interface _TtC11RedditVideo16PlayerController : NSObject
 {
@@ -35,7 +35,25 @@
 - (void)willDeactivateAudioSession;
 - (void)willActivateAudioSession;
 - (void)applicationDidBecomeActiveWithNotification:(id)arg1;
+- (id)thumbnailImageAt:(CDStruct_198678f7)arg1;
+- (void)invalidate;
+- (void)seekTo:(CDStruct_198678f7)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)pause;
+- (void)play;
+- (void)didExitPlayableVisibility;
+- (void)didEnterPlayableVisibility;
+- (void)preload;
 - (void)dealloc;
+@property(nonatomic) _Bool isSeeking;
+@property(nonatomic, copy) NSString *videoGravity;
+@property(nonatomic) _Bool isMuted;
+@property(nonatomic, readonly) _Bool shouldPrepareToPlay;
+@property(nonatomic, readonly) _Bool shouldPreload;
+@property(nonatomic) _Bool shouldAutoplay; // @synthesize shouldAutoplay;
+@property(nonatomic) _Bool shouldAutorepeat; // @synthesize shouldAutorepeat;
+@property(nonatomic, readonly) _TtC11RedditVideo20PlayerLayerContainer *playerLayerContainer; // @synthesize playerLayerContainer;
+@property(nonatomic, retain) AVPlayerItem *currentItem; // @synthesize currentItem;
+@property(nonatomic, retain) AVPlayer *player; // @synthesize player;
 
 @end
 

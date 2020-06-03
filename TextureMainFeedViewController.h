@@ -28,7 +28,7 @@
 - (_Bool)shouldShowEmptyWelcomeView;
 - (void)removeEmptyWelcomeView;
 - (void)displayEmptyWelcomeView;
-- (_Bool)attemptScrollMainContentViewToTop;
+- (_Bool)shouldTabBarController:(id)arg1 handleReselectionOf:(id)arg2;
 - (_Bool)didViewEmptyFeedTutorial;
 - (void)leaveAnonymousBrowsingTapped;
 - (void)handleDisplayForLoggedOutAccount;

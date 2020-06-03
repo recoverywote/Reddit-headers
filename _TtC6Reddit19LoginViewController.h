@@ -20,6 +20,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)presentRegistrationViewController;
 - (void)navigateToForgotPasswordViewController;
 - (void)login:(id)arg1;
 - (void)passwordFieldTextChangedWithSender:(id)arg1;

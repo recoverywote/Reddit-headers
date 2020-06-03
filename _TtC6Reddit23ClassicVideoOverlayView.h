@@ -11,6 +11,7 @@
     // Error parsing type: , name: playerButtonsOverlayView
     // Error parsing type: , name: progressView
     // Error parsing type: , name: progressContainerView
+    // Error parsing type: , name: timeIndicatorButton
     // Error parsing type: , name: muteButton
     // Error parsing type: , name: fullscreenButton
     // Error parsing type: , name: containerView
@@ -20,12 +21,15 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: areControlsHidden
     // Error parsing type: , name: onDidTapFullscreenControl
+    // Error parsing type: , name: onDidTapTimeIndicatorButton
     // Error parsing type: , name: playbackOverlayState
     // Error parsing type: , name: fullscreenControl
     // Error parsing type: , name: playerProgress
+    // Error parsing type: , name: duration
     // Error parsing type: , name: isMuted
     // Error parsing type: , name: isAudioAvailable
     // Error parsing type: , name: shouldShowMuteButton
+    // Error parsing type: , name: shouldShowTimeIndicatorButton
     // Error parsing type: , name: callToAction
     // Error parsing type: , name: shouldBlur
 }
@@ -33,6 +37,7 @@
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)didTapBlurView;
+- (void)didTapTimeIndicatorButtonWithSender:(id)arg1;
 - (void)didTapFullscreenButton;
 - (void)didTapMuteButton;
 - (void)autohideControls;

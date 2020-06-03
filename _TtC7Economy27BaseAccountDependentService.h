@@ -8,8 +8,8 @@
 
 @interface _TtC7Economy27BaseAccountDependentService : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: redditService
     // Error parsing type: , name: accountId
+    // Error parsing type: , name: redditServiceProvider
     // Error parsing type: , name: internalQueue
     // Error parsing type: , name: accountUpdatesSubscription
 }

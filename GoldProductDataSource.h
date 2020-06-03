@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class CoinSale, NSArray, RedditService, SKProductsRequest;
+@class CoinSale, NSArray, SKProductsRequest;
 @protocol CoinSaleProvider;
 
 @interface GoldProductDataSource : NSObject
@@ -15,7 +15,7 @@
     NSArray *_products;
     NSArray *_deals;
     CoinSale *_coinSale;
-    RedditService *_service;
+    CDUnknownBlockType _serviceProvider;
     id <CoinSaleProvider> _coinSaleProvider;
     SKProductsRequest *_productsRequest;
 }
@@ -24,7 +24,7 @@
 @property(retain, nonatomic) SKProductsRequest *productsRequest; // @synthesize productsRequest=_productsRequest;
 @property(nonatomic) _Bool isFetching; // @synthesize isFetching=_isFetching;
 @property(readonly, nonatomic) id <CoinSaleProvider> coinSaleProvider; // @synthesize coinSaleProvider=_coinSaleProvider;
-@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
+@property(readonly, nonatomic) CDUnknownBlockType serviceProvider; // @synthesize serviceProvider=_serviceProvider;
 @property(retain, nonatomic) CoinSale *coinSale; // @synthesize coinSale=_coinSale;
 @property(retain, nonatomic) NSArray *deals; // @synthesize deals=_deals;
 @property(retain, nonatomic) NSArray *products; // @synthesize products=_products;
@@ -39,7 +39,8 @@
 - (void)fetchSubscriptionInfo:(CDUnknownBlockType)arg1;
 - (void)fetchPremiumCancelOffer:(CDUnknownBlockType)arg1;
 - (void)fetch;
-- (id)initWithService:(id)arg1 coinSaleProvider:(id)arg2;
+- (id)service;
+- (id)initWithServiceProvider:(CDUnknownBlockType)arg1 coinSaleProvider:(id)arg2;
 
 @end
 

@@ -25,6 +25,8 @@
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
 @property(readonly, nonatomic) _Bool isSubredditIdOnCommunityPostConsumeEnabled;
 @property(readonly, nonatomic) _Bool isRPANSubredditIdToSREnabled;
+@property(readonly, nonatomic) long long rpanChatV2FullscreenGestureVariant;
+@property(readonly, nonatomic) _Bool isRPANChatV2Enabled;
 @property(readonly, nonatomic) _Bool isMuxEnabled;
 @property(readonly, nonatomic) _Bool isRPANAbrBroadcastEnabled;
 @property(readonly, nonatomic) long long rpanEntryPointUIVariant;
@@ -82,6 +84,7 @@
 @property(readonly, nonatomic) _Bool isCommunityTabRefactorEnabled;
 @property(readonly, nonatomic) _Bool isLocationRecommendationsToggleEnabled;
 @property(readonly, nonatomic) _Bool isEditUsernameEnabled;
+@property(readonly, nonatomic) _Bool isSingleSignOnSplashExposedEnabled;
 @property(readonly, nonatomic) _Bool isSingleSignOnEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletInterfaceEnabled;
 @property(readonly, nonatomic) _Bool isCryptoWalletEnabled;

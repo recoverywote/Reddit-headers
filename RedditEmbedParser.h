@@ -10,9 +10,9 @@
 {
 }
 
-+ (id)embedObjectsFromData:(id)arg1;
-+ (id)postObjectFromData:(id)arg1;
-+ (id)embedObjectFromData:(id)arg1;
++ (id)embedObjectsFromData:(id)arg1 service:(id)arg2;
++ (id)postObjectFromData:(id)arg1 service:(id)arg2;
++ (id)embedObjectFromData:(id)arg1 service:(id)arg2;
 
 @end
 

@@ -10,9 +10,11 @@
 {
     // Error parsing type: , name: stackView
     // Error parsing type: , name: titleView
+    // Error parsing type: , name: disclaimerView
     // Error parsing type: , name: splitView
     // Error parsing type: , name: usernamePasswordView
     // Error parsing type: , name: authenticationProviderView
+    // Error parsing type: , name: shouldEnableSingleSignOn
 }
 
 - (void).cxx_destruct;

@@ -11,11 +11,12 @@
 #import "PagedTabControllerProtocol-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
+#import "_TtP8RedditUI22MajorContentScrollable_-Protocol.h"
 
 @class BaseTableView, EmptyDogeView, Listing, ListingStateController, NSArray, NSString, RedditService, UIScrollView, _TtC6Reddit27EditUsernameFlowCoordinator;
 @protocol AccountContext;
 
-@interface CustomFeedsListViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, MultiPageViewControllerDelegate, ListingStateControllerDelegate, PagedTabControllerProtocol>
+@interface CustomFeedsListViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, MultiPageViewControllerDelegate, ListingStateControllerDelegate, PagedTabControllerProtocol, _TtP8RedditUI22MajorContentScrollable_>
 {
     _Bool _isCommunityTabRefactorEnabled;
     unsigned long long _viewMode;

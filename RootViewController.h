@@ -28,6 +28,7 @@
     CaptureViewController *_captureViewController;
     FeedSpinnerView *_firstLoadSpinner;
     double _timeFirstInitialized;
+    NSDictionary *_launchOptions;
     UIView *_blockInputView;
 }
 
@@ -35,6 +36,7 @@
 + (id)currentAccountContext;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *blockInputView; // @synthesize blockInputView=_blockInputView;
+@property(readonly, nonatomic) NSDictionary *launchOptions; // @synthesize launchOptions=_launchOptions;
 @property(nonatomic) _Bool didInstallNewMainTabController; // @synthesize didInstallNewMainTabController=_didInstallNewMainTabController;
 @property(nonatomic) double timeFirstInitialized; // @synthesize timeFirstInitialized=_timeFirstInitialized;
 @property(nonatomic) _Bool hasLoadedAtLeastOneChildViewController; // @synthesize hasLoadedAtLeastOneChildViewController=_hasLoadedAtLeastOneChildViewController;
@@ -80,7 +82,7 @@
 - (unsigned long long)supportedInterfaceOrientations;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAccountManager:(id)arg1 anonymousModeManager:(id)arg2;
+- (id)initWithAccountManager:(id)arg1 launchOptions:(id)arg2 anonymousModeManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

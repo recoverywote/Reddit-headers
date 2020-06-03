@@ -48,7 +48,6 @@
 @property(readonly, nonatomic) NSString *analyticsScreenViewName;
 @property(readonly, nonatomic) _Bool screenViewLoggingEnabled;
 - (_Bool)shouldAutorotate;
-- (_Bool)attemptScrollMainContentViewToTop;
 - (void)configureViewAppearance;
 - (_Bool)prefersNavigationBarHidden;
 @property(readonly, nonatomic) struct UIEdgeInsets preferredContentInset;

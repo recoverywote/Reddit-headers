@@ -11,6 +11,7 @@
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: parentViewController
     // Error parsing type: , name: navigationController
+    // Error parsing type: , name: analyticsFlowSource
     // Error parsing type: , name: flowCompletion
     // Error parsing type: , name: currentState
     // Error parsing type: , name: newName
@@ -21,7 +22,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (void)startFlow;
-- (id)initWithAccountContext:(id)arg1 parent:(id)arg2 navigation:(id)arg3 flowCompletion:(CDUnknownBlockType)arg4;
+- (id)initWithAccountContext:(id)arg1 parent:(id)arg2 navigation:(id)arg3 analyticsFlowSource:(id)arg4 flowCompletion:(CDUnknownBlockType)arg5;
 
 @end
 

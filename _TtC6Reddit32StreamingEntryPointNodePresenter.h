@@ -13,6 +13,9 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: uiVariant
     // Error parsing type: , name: viewSessionId
+    // Error parsing type: , name: playbackTracker
+    // Error parsing type: , name: isLive
+    // Error parsing type: , name: didBeginPlayback
     // Error parsing type: , name: topStreamsUpdateTimer
     // Error parsing type: , name: heartbeatTimer
     // Error parsing type: , name: heartbeatDelayTimer

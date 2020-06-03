@@ -51,7 +51,6 @@
 - (void)setActiveController:(id)arg1 direction:(long long)arg2 animated:(_Bool)arg3;
 - (void)configureWithControllers:(id)arg1;
 - (void)configureWithControllers:(id)arg1 activeControllerIndex:(unsigned long long)arg2;
-- (_Bool)attemptScrollMainContentViewToTop;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
 - (struct UIEdgeInsets)additionalSafeAreaInsetsForChildrenOfPagedTabController;
 - (struct UIEdgeInsets)preferredContentInset;

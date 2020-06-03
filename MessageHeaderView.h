@@ -8,7 +8,7 @@
 
 #import "AttributedLabelRegularDelegate-Protocol.h"
 
-@class AttributedLabelRegular, Message, NSString, UIView;
+@class AttributedLabelRegular, MessageViewState, NSString, UIView;
 @protocol MessageHeaderViewDelegate;
 
 @interface MessageHeaderView : VerticalLineView <AttributedLabelRegularDelegate>
@@ -16,18 +16,18 @@
     id <MessageHeaderViewDelegate> _delegate;
     UIView *_messageArrow;
     AttributedLabelRegular *_commentUserAndTimeLabel;
-    Message *_message;
+    MessageViewState *_viewState;
 }
 
 + (struct CGSize)calculatedSizeWithData:(id)arg1;
 - (void).cxx_destruct;
-@property(retain, nonatomic) Message *message; // @synthesize message=_message;
+@property(retain, nonatomic) MessageViewState *viewState; // @synthesize viewState=_viewState;
 @property(retain, nonatomic) AttributedLabelRegular *commentUserAndTimeLabel; // @synthesize commentUserAndTimeLabel=_commentUserAndTimeLabel;
 @property(retain, nonatomic) UIView *messageArrow; // @synthesize messageArrow=_messageArrow;
 @property(nonatomic) __weak id <MessageHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)attributedLabelRegular:(id)arg1 didSelectLinkWithURL:(id)arg2;
 - (void)layoutSubviews;
-- (void)configureWithData:(id)arg1 andDelegate:(id)arg2;
+- (void)configureWithViewState:(id)arg1 delegate:(id)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

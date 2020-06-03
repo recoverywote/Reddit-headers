@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Message;
+@class Message, NSArray;
 
 @interface MessageViewState : NSObject
 {
@@ -16,9 +16,13 @@
     _Bool _isLocallyRead;
     unsigned long long _type;
     Message *_message;
+    unsigned long long _visualLevel;
+    NSArray *_visualReplies;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *visualReplies; // @synthesize visualReplies=_visualReplies;
+@property(nonatomic) unsigned long long visualLevel; // @synthesize visualLevel=_visualLevel;
 @property(nonatomic) _Bool isLocallyRead; // @synthesize isLocallyRead=_isLocallyRead;
 @property(nonatomic) _Bool isTopLevel; // @synthesize isTopLevel=_isTopLevel;
 @property(nonatomic) _Bool isLastChildNode; // @synthesize isLastChildNode=_isLastChildNode;

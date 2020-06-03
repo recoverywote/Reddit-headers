@@ -23,6 +23,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)didExpandToFullSheet;
 - (void)onExpandToFullSheet;
 - (void)willExpandToFullSheet;

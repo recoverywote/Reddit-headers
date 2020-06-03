@@ -14,6 +14,7 @@
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: post
+    // Error parsing type: , name: accountPk
     // Error parsing type: , name: awardsPlaqueEnabled
     // Error parsing type: , name: shouldAnimateLastGivenAward
     // Error parsing type: , name: awardsNodes
@@ -21,7 +22,7 @@
     // Error parsing type: , name: addAwardNode
 }
 
-+ (struct CGSize)calculatedSizeWithData:(id)arg1 maxWidth:(double)arg2;
++ (struct CGSize)calculatedSizeWithData:(id)arg1 accountPk:(id)arg2 maxWidth:(double)arg3;
 - (void).cxx_destruct;
 - (id)init;
 - (void)processAwardingCompleteNotificationWithNotification:(id)arg1;
@@ -33,7 +34,7 @@
 - (void)didExitHierarchy;
 - (void)didEnterHierarchy;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 awardsPlaqueEnabled:(_Bool)arg2;
+- (id)initWithPost:(id)arg1 accountPk:(id)arg2 awardsPlaqueEnabled:(_Bool)arg3;
 @property(nonatomic) __weak id <FeedPostAwardsNodeDelegate> delegate; // @synthesize delegate;
 
 @end

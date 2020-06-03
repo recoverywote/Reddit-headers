@@ -7,7 +7,7 @@
 #import <Instabug/Instabug.h>
 
 @interface Instabug (RedditExtensions)
-+ (void)setupInstabug:(id)arg1;
-+ (_Bool)shouldEnableInstabug;
++ (void)setupInstabugWithAccount:(id)arg1 launchOptions:(id)arg2;
++ (_Bool)shouldEnableInstabugWithAccount:(id)arg1;
 @end
 

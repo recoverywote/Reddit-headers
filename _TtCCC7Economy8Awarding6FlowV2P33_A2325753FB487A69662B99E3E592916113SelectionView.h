@@ -18,11 +18,12 @@
     // Error parsing type: , name: awardInfoView
     // Error parsing type: , name: awardListTopSeparatorView
     // Error parsing type: , name: awardListBottomSeparatorView
+    // Error parsing type: , name: swipeInfo
 }
 
 - (void).cxx_destruct;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
-- (void)extendWithPanGesture:(id)arg1;
+- (void)panWithGesture:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 
 @end

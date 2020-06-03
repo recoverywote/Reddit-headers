@@ -14,7 +14,6 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: isLockedForPremiumAwards
     // Error parsing type: , name: isV2
     // Error parsing type: , name: theme
-    // Error parsing type: , name: stackView
     // Error parsing type: , name: imageView
     // Error parsing type: , name: nameLabel
     // Error parsing type: , name: coinPriceLabel

@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class Account, AccountManager, AnalyticsManager, ExperimentManager, RedditService, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService;
+@class Account, AccountManager, AnalyticsManager, ExperimentManager, RedditService, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit25StreamingHeartbeatService;
 @protocol ViewContext;
 
 @protocol AccountContext <NSObject>
+@property(nonatomic, readonly) _TtC6Reddit25StreamingHeartbeatService *streamingHeartbeatService;
 @property(nonatomic, readonly) ExperimentManager *experimentManager;
 @property(nonatomic, readonly) _TtC6Reddit20AnonymousModeManager *anonymousModeManager;
 @property(nonatomic, readonly) AnalyticsManager *analyticsManager;

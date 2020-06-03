@@ -58,7 +58,7 @@
 - (id)populateSubmittedPost;
 - (void)didTapCloseLink;
 - (void)didTapLinkButton;
-- (void)testAndShowUnallowedPostTypeWarning;
+- (void)testAndShowUnallowedPostDisplayTypeWarning;
 - (void)configureWithSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)layoutTextFieldsInScroller;

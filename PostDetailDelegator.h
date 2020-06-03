@@ -14,20 +14,27 @@
 #import "HeaderBarViewDelegate-Protocol.h"
 #import "RUIActionSheetViewControllerDelegate-Protocol.h"
 #import "SubredditDisplayViewDelegate-Protocol.h"
+#import "_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_-Protocol.h"
 
-@class NSString, PostDetailNavigator, PostDetailPresenter, PostDetailViewController;
+@class NSString, PostDetailNavigator, PostDetailPresenter, PostDetailViewController, _TtC6Reddit29CommunityCreateFlowController, _TtC6Reddit36SubredditMentionUpsellViewController;
 
-@interface PostDetailDelegator : NSObject <CommentTreeDisplayNodeDelegate, CommentActionSheetDelegate, CommentReplyViewControllerDelegate, CommentDistinguishActionSheetDelegate, CommentModerateActionSheetDelegate, RUIActionSheetViewControllerDelegate, HeaderBarViewDelegate, SubredditDisplayViewDelegate>
+@interface PostDetailDelegator : NSObject <_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_, CommentTreeDisplayNodeDelegate, CommentActionSheetDelegate, CommentReplyViewControllerDelegate, CommentDistinguishActionSheetDelegate, CommentModerateActionSheetDelegate, RUIActionSheetViewControllerDelegate, HeaderBarViewDelegate, SubredditDisplayViewDelegate>
 {
     PostDetailViewController *_viewController;
     PostDetailPresenter *_presenter;
     PostDetailNavigator *_navigator;
+    _TtC6Reddit36SubredditMentionUpsellViewController *_subredditMentionUpsellViewController;
+    _TtC6Reddit29CommunityCreateFlowController *_createFlowController;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit29CommunityCreateFlowController *createFlowController; // @synthesize createFlowController=_createFlowController;
+@property(retain, nonatomic) _TtC6Reddit36SubredditMentionUpsellViewController *subredditMentionUpsellViewController; // @synthesize subredditMentionUpsellViewController=_subredditMentionUpsellViewController;
 @property(nonatomic) __weak PostDetailNavigator *navigator; // @synthesize navigator=_navigator;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak PostDetailViewController *viewController; // @synthesize viewController=_viewController;
+- (void)subredditMentionUpsellController:(id)arg1 shouldCreateSubreddit:(_Bool)arg2;
+- (_Bool)openSubredditMentionsUpsell:(id)arg1;
 - (void)subredditDisplayViewDidTap:(id)arg1;
 - (void)showNotificationsVotingPrompt;
 - (void)trackDidTapConfirmationDeleteComment:(id)arg1;
@@ -51,7 +58,7 @@
 - (void)commentTreeHeaderNodeDidTap:(id)arg1;
 - (void)commentTreeTextNodeDidLongPressText:(id)arg1;
 - (void)commentTreeTextNodeDidDoubleTapText:(id)arg1;
-- (void)commentTreeTextNode:(id)arg1 didTapURL:(id)arg2;
+- (void)commentTreeTextNode:(id)arg1 didTapURL:(id)arg2 attributedText:(id)arg3 atPoint:(struct CGPoint)arg4 atRange:(struct _NSRange)arg5;
 - (void)commentTreeDisplayNode:(id)arg1 didPanToState:(unsigned long long)arg2;
 - (void)presentPostModerateActionSheetForComment:(id)arg1 fromView:(id)arg2;
 - (void)showOverflowActionSheetFromView:(id)arg1 withCommentTreeNode:(id)arg2;

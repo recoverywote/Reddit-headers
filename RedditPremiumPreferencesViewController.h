@@ -6,7 +6,7 @@
 
 #import "BaseViewController.h"
 
-@class RedditService, UIStackView, _TtC6Reddit32RedditPremiumSettingsCoordinator;
+@class RedditService, UILabel, UIStackView, _TtC6Reddit32RedditPremiumSettingsCoordinator;
 @protocol AccountContext;
 
 @interface RedditPremiumPreferencesViewController : BaseViewController
@@ -15,9 +15,11 @@
     UIStackView *_contentStackView;
     _TtC6Reddit32RedditPremiumSettingsCoordinator *_settingsCoordinator;
     UIStackView *_offerStackView;
+    UILabel *_offerLabel;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UILabel *offerLabel; // @synthesize offerLabel=_offerLabel;
 @property(retain, nonatomic) UIStackView *offerStackView; // @synthesize offerStackView=_offerStackView;
 @property(retain, nonatomic) _TtC6Reddit32RedditPremiumSettingsCoordinator *settingsCoordinator; // @synthesize settingsCoordinator=_settingsCoordinator;
 @property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
@@ -34,6 +36,7 @@
 - (_Bool)shouldShowCancellationOffer;
 - (void)showCancellationOffer;
 - (void)setupViewsForNonSubscriber;
+- (id)bonusOfferString;
 - (void)setupViewsForSubscriber;
 - (void)viewDidLoad;
 @property(readonly, nonatomic) RedditService *service;

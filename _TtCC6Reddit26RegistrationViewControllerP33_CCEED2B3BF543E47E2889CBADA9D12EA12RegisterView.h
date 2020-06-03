@@ -11,13 +11,17 @@
     // Error parsing type: , name: stackView
     // Error parsing type: , name: titleView
     // Error parsing type: , name: splitView
+    // Error parsing type: , name: disclaimerView
     // Error parsing type: , name: usernamePasswordEmailView
     // Error parsing type: , name: authenticationProviderView
+    // Error parsing type: , name: emailPermissionsButton
+    // Error parsing type: , name: shouldShowEmailPermissions
     // Error parsing type: , name: shouldEnableSingleSignOn
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)didToggleEmailPermissions;
 - (id)initWithCoder:(id)arg1;
 
 @end

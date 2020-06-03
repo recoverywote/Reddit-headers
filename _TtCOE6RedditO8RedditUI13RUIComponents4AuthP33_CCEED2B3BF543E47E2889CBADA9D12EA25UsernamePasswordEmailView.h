@@ -13,14 +13,10 @@
     // Error parsing type: , name: emailField
     // Error parsing type: , name: usernameField
     // Error parsing type: , name: passwordField
-    // Error parsing type: , name: emailPermissionsButton
-    // Error parsing type: , name: disclaimerView
-    // Error parsing type: , name: shouldShowEmailPermissions
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)didToggleEmailPermissions;
 - (void)didToggleSecureEntry;
 - (id)initWithCoder:(id)arg1;
 

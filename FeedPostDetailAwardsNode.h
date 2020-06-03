@@ -17,6 +17,7 @@
     _Bool _awardsPlaqueEnabled;
     id <FeedPostDetailAwardsNodeDelegate> _delegate;
     Post *_post;
+    NSString *_accountPk;
     NSDictionary *_awardsNodes;
     _TtC6Reddit18AddAwardButtonNode *_addAwardNode;
 }
@@ -26,6 +27,7 @@
 @property(readonly, nonatomic) _Bool awardsPlaqueEnabled; // @synthesize awardsPlaqueEnabled=_awardsPlaqueEnabled;
 @property(nonatomic) _Bool shouldAttemptToAnimateLastGivenAward; // @synthesize shouldAttemptToAnimateLastGivenAward=_shouldAttemptToAnimateLastGivenAward;
 @property(retain, nonatomic) NSDictionary *awardsNodes; // @synthesize awardsNodes=_awardsNodes;
+@property(readonly, nonatomic) NSString *accountPk; // @synthesize accountPk=_accountPk;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <FeedPostDetailAwardsNodeDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)didTapAddAward:(id)arg1;
@@ -39,7 +41,7 @@
 - (void)didExitHierarchy;
 - (void)didEnterHierarchy;
 - (void)didLoad;
-- (id)initWithPost:(id)arg1 withAwardsPlaqueEnabled:(_Bool)arg2;
+- (id)initWithPost:(id)arg1 accountPk:(id)arg2 withAwardsPlaqueEnabled:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

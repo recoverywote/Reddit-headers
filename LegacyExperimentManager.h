@@ -48,7 +48,7 @@
     NSString *_experimentFilePath;
 }
 
-+ (id)experimentFilePathForAccount:(id)arg1;
++ (id)experimentFilePathForService:(id)arg1;
 + (id)experimentNames;
 + (id)experimentManagerForService:(id)arg1;
 + (void)initialize;

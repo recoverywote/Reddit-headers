@@ -20,11 +20,12 @@
 #import "RefreshControllerDelegate-Protocol.h"
 #import "SuspendedBannerContentViewDelegate-Protocol.h"
 #import "TheatreViewControllerDelegate-Protocol.h"
+#import "_TtP8RedditUI29RedditTabBarControllerHandler_-Protocol.h"
 
-@class ASBatchContext, ASCollectionNode, CarouselDelegator, FeedModeSelectionController, FeedNavigator, FeedPresenter, FeedSortOptionController, FeedViewControllerDelegator, FeedViewFlowLayout, FloatingHeaderManager, NSString, NSURL, PreviewAnimationController, RailsEntryPointDelegator, RefreshPillController, UICollectionView, UIScrollView;
+@class ASBatchContext, ASCollectionNode, CarouselDelegator, FeedModeSelectionController, FeedNavigator, FeedPresenter, FeedSortOptionController, FeedViewControllerDelegator, FeedViewFlowLayout, FloatingHeaderManager, NSString, NSURL, PreviewAnimationController, RailsEntryPointDelegator, RefreshPillController, UICollectionView, UIScrollView, _TtC6Tracer16ObjCTraceContext;
 @protocol FeedScrollEventObserver;
 
-@interface FeedViewController : ListingViewController <CarouselDelegatorDelegate, LiveBannerContentViewDelegate, SuspendedBannerContentViewDelegate, TheatreViewControllerDelegate, ObjectObserverProtocol, PreviewModeDelegate, RefreshControllerDelegate, FeedViewControllerInterface, FeedPresentable, FeedPostCellNodeDelegate, FeedPostGalleryCellNodeDelegate, HeaderBarViewDelegate, PostActionSheetDelegate, FeedPostCollectionCellNodeDelegate>
+@interface FeedViewController : ListingViewController <CarouselDelegatorDelegate, LiveBannerContentViewDelegate, SuspendedBannerContentViewDelegate, TheatreViewControllerDelegate, ObjectObserverProtocol, PreviewModeDelegate, RefreshControllerDelegate, FeedViewControllerInterface, FeedPresentable, FeedPostCellNodeDelegate, FeedPostGalleryCellNodeDelegate, HeaderBarViewDelegate, PostActionSheetDelegate, FeedPostCollectionCellNodeDelegate, _TtP8RedditUI29RedditTabBarControllerHandler_>
 {
     _Bool _previewModeEnabled;
     _Bool _didLoadSortBarOnce;
@@ -44,9 +45,11 @@
     FeedModeSelectionController *_feedModeSelectionController;
     RefreshPillController *_refreshPillController;
     double _maxHlsVideoHeight;
+    _TtC6Tracer16ObjCTraceContext *_timeToInteractiveTraceContext;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Tracer16ObjCTraceContext *timeToInteractiveTraceContext; // @synthesize timeToInteractiveTraceContext=_timeToInteractiveTraceContext;
 @property(nonatomic) _Bool didLoadSortBarOnce; // @synthesize didLoadSortBarOnce=_didLoadSortBarOnce;
 @property(nonatomic) double maxHlsVideoHeight; // @synthesize maxHlsVideoHeight=_maxHlsVideoHeight;
 @property(retain, nonatomic) RefreshPillController *refreshPillController; // @synthesize refreshPillController=_refreshPillController;
@@ -66,8 +69,9 @@
 @property(retain, nonatomic) FeedNavigator *navigator; // @synthesize navigator=_navigator;
 - (void)didTapPostVideoEmbedNode:(id)arg1 post:(id)arg2;
 - (void)didTapPowerupsMarketingBadgeFor:(id)arg1 powerupsInfo:(id)arg2 preselectedBenefit:(long long)arg3;
+- (void)didTapTimeIndicatorFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)didTapCallToActionFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 callToAction:(id)arg3;
-- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
+- (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 videoIsLive:(_Bool)arg3;
 - (void)didTapFullscreenViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2;
 - (void)postCollectionCarouselPostNodeDidView:(id)arg1;
 - (void)postCollectionCarouselPostNodeDidTap:(id)arg1;
@@ -194,7 +198,9 @@
 - (void)postModerateActionSheetViewControllerDidTapViewReports:(id)arg1;
 - (void)feedSortOptionControllerDidCancel:(id)arg1;
 - (void)feedSortOptionController:(id)arg1 didFinishSelectingFeedSort:(unsigned long long)arg2 feedRange:(unsigned long long)arg3;
+- (void)endTimeToInteractivityTrace;
 - (void)listingDidFailFetching:(id)arg1 error:(id)arg2;
+- (void)displayListingContent:(id)arg1 correlationID:(id)arg2;
 - (void)listingDidStartFetching:(id)arg1;
 - (void)notifyPossibleCellsAboutViewDisappearing;
 - (void)updateContentViewsWhenLoadingMoreFinishes;
@@ -213,6 +219,7 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (_Bool)shouldTabBarController:(id)arg1 handleReselectionOf:(id)arg2;
 @property(readonly, nonatomic) FeedPresenter *feedPresenter;
 - (id)initWithPresenter:(id)arg1 delegator:(id)arg2 navigator:(id)arg3;
 - (void)didResizeCarousel:(id)arg1;

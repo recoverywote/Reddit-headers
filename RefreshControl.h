@@ -31,8 +31,8 @@
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) struct UIEdgeInsets originalScrollViewContentInsets; // @synthesize originalScrollViewContentInsets=_originalScrollViewContentInsets;
 @property(nonatomic) _Bool isSpinning; // @synthesize isSpinning=_isSpinning;
-- (void)impactLightOccured;
 - (struct CGSize)intrinsicContentSize;
+- (void)triggerPullToRefresh;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)hideSpinner:(CDUnknownBlockType)arg1;
 - (void)resetStates;

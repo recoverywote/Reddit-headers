@@ -4,13 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <Economy/_TtC7Economy27BaseAccountDependentService.h>
 
-@interface _TtC7Economy15AnalyticsLogger : _TtCs12_SwiftObject
+@interface _TtC7Economy15AnalyticsLogger : _TtC7Economy27BaseAccountDependentService
 {
-    // Error parsing type: , name: accountId
-    // Error parsing type: , name: economyLogger
-    // Error parsing type: , name: redditService
+    // Error parsing type: , name: economyLoggerProvider
 }
 
 @end

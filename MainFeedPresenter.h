@@ -6,17 +6,12 @@
 
 #import "FeedPresenter.h"
 
-@class _TtC6Tracer5Trace;
 @protocol MainFeedPresentable;
 
 @interface MainFeedPresenter : FeedPresenter
 {
-    _TtC6Tracer5Trace *_workaroundForApplicationLaunchTrace;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) _TtC6Tracer5Trace *workaroundForApplicationLaunchTrace; // @synthesize workaroundForApplicationLaunchTrace=_workaroundForApplicationLaunchTrace;
-- (id)preferredTrace;
 - (id)listingTraceName;
 - (unsigned long long)surfaceType;
 - (id)analyticsPageType;

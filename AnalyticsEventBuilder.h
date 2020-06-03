@@ -51,7 +51,7 @@
 + (id)displayLayoutForPostCollectionDisplayType:(long long)arg1;
 + (id)eventStateForPostEventInfo:(id)arg1;
 + (id)postEventInfoWithPostEventInfo:(id)arg1;
-+ (id)postTypeForPost:(id)arg1;
++ (id)postDisplayTypeForPost:(id)arg1;
 + (id)postWithSubmittedCrossPost:(id)arg1 originalPost:(id)arg2;
 + (id)postWithPost:(id)arg1;
 + (id)actionInfoWithPageType:(id)arg1 position:(id)arg2;

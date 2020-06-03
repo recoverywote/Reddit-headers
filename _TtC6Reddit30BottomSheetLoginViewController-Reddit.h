@@ -10,5 +10,6 @@
 - (void)didTapBackButtonWithSender:(id)arg1;
 - (void)presentLogin;
 - (void)presentRegistration;
+- (void)didTapLoginWithSender:(id)arg1;
 @end
 

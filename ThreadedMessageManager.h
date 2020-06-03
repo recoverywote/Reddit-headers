@@ -26,7 +26,7 @@
 - (id)optimizeTree:(id)arg1 atLevel:(unsigned long long)arg2;
 - (id)convertObjectTreeToFlatObjectArray:(id)arg1 atLevel:(unsigned long long)arg2;
 - (id)convertObjectTreeToFlatObjectArray:(id)arg1;
-- (void)collapseObject:(id)arg1 asCollapsed:(_Bool)arg2;
+- (void)collapseObject:(id)arg1 isCollapsed:(_Bool)arg2;
 - (id)generateOldStyleVisualNodes:(id)arg1;
 - (void)calculateObjectVisuals;
 

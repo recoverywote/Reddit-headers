@@ -13,10 +13,8 @@
 
 @interface Message : ObservableObject <BaseModel, ReportableModel>
 {
-    _Bool _isLoadingMoreNode;
     _Bool _isSelfMessage;
     _Bool _isUnread;
-    _Bool _isCollapsed;
     NSString *_pk;
     NSString *_author;
     NSString *_destination;
@@ -26,16 +24,11 @@
     NSDate *_createdAt;
     long long _distinguishedAs;
     NSArray *_replies;
-    unsigned long long _visualLevel;
-    NSArray *_visualReplies;
     NSDictionary *_debugData;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *debugData; // @synthesize debugData=_debugData;
-@property(copy, nonatomic) NSArray *visualReplies; // @synthesize visualReplies=_visualReplies;
-@property(nonatomic) unsigned long long visualLevel; // @synthesize visualLevel=_visualLevel;
-@property(nonatomic) _Bool isCollapsed; // @synthesize isCollapsed=_isCollapsed;
 @property(copy, nonatomic) NSArray *replies; // @synthesize replies=_replies;
 @property(nonatomic) _Bool isUnread; // @synthesize isUnread=_isUnread;
 @property(nonatomic) long long distinguishedAs; // @synthesize distinguishedAs=_distinguishedAs;
@@ -46,7 +39,6 @@
 @property(copy, nonatomic) NSString *body; // @synthesize body=_body;
 @property(copy, nonatomic) NSString *destination; // @synthesize destination=_destination;
 @property(copy, nonatomic) NSString *author; // @synthesize author=_author;
-@property(nonatomic) _Bool isLoadingMoreNode; // @synthesize isLoadingMoreNode=_isLoadingMoreNode;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

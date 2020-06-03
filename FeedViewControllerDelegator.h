@@ -103,6 +103,9 @@
 - (id)streamingEntryPointFeedPageType;
 - (void)streamingEntryPoint:(id)arg1 didTapEnterStreamingWith:(id)arg2 livestream:(id)arg3;
 - (id)discoveryUnitForViewModel:(id)arg1;
+- (void)focusVerticalsDiscoveryNodeDidTapCloseAndShowFeedbackNode:(id)arg1;
+- (void)focusVerticalsDiscoveryNode:(id)arg1 didUndoFeedback:(long long)arg2;
+- (void)focusVerticalsDiscoveryNode:(id)arg1 didSelectFeedback:(long long)arg2;
 - (void)focusVerticalsSubredditNodeDidView:(id)arg1 visibilityContext:(id)arg2;
 - (void)focusVerticalsSubredditNodeDidTapBody:(id)arg1;
 - (void)focusVerticalsSubredditNodedidTapJoin:(id)arg1;

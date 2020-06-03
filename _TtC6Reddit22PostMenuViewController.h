@@ -20,7 +20,6 @@
     // Error parsing type: , name: themeGuidance
     // Error parsing type: , name: videoPlayerManager
     // Error parsing type: , name: powerupsInfo
-    // Error parsing type: , name: editUsernameFlowCoordinator
     // Error parsing type: , name: closeButton
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: dimmerView

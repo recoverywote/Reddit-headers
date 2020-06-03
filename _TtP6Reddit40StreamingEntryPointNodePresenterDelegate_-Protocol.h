@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class LiveStream;
+@class AVPlayer, LiveStream;
 
 @protocol _TtP6Reddit40StreamingEntryPointNodePresenterDelegate_ <NSObject>
+- (AVPlayer *)entryNodePlayer;
 - (void)didUpdateCurrentStream:(LiveStream *)arg1;
 - (void)playWithOldStream:(LiveStream *)arg1 newStream:(LiveStream *)arg2;
 - (void)didUpdateWatcherCount:(long long)arg1;
