@@ -14,10 +14,10 @@
 @interface AwardDetailsPresenter : NSObject <ObjectObserverProtocol>
 {
     _Bool _isLoading;
+    id <AccountContext> _accountContext;
     NSArray *_awardDetailsCellViewModels;
     id <AwardDetailsNavigatable> _navigator;
     id <AwardDetailsPresentable> _presentable;
-    id <AccountContext> _accountContext;
     Post *_post;
     Comment *_comment;
     NSString *_correlationId;
@@ -36,10 +36,10 @@
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
-@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) __weak id <AwardDetailsPresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) id <AwardDetailsNavigatable> navigator; // @synthesize navigator=_navigator;
 @property(copy, nonatomic) NSArray *awardDetailsCellViewModels; // @synthesize awardDetailsCellViewModels=_awardDetailsCellViewModels;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)processAwardingCompleteNotification:(id)arg1;
 - (void)reportAward:(id)arg1;

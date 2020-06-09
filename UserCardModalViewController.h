@@ -12,7 +12,7 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 #import "_TtP6Reddit20UserCardViewDelegate_-Protocol.h"
 
-@class Account, BaseView, NSLayoutConstraint, NSString, NSURL, RedditService, Subreddit, UIPercentDrivenInteractiveTransition, UIViewController, User;
+@class BaseView, NSLayoutConstraint, NSString, NSURL, Subreddit, UIPercentDrivenInteractiveTransition, UIViewController, User;
 @protocol AccountContext, _TtP6Reddit12UserCardView_;
 
 @interface UserCardModalViewController : BaseViewController <UINavigationControllerDelegate, _TtP6Reddit20UserCardViewDelegate_, ModFormViewControllerDelegate, FlairSelectionSourceViewProtocol, UIViewControllerTransitioningDelegate>
@@ -26,20 +26,19 @@
     Subreddit *_subreddit;
     NSString *_modContext;
     NSString *_fromVCPageType;
-    Account *_currentAccount;
     unsigned long long _modPermissions;
     NSLayoutConstraint *_modalViewLeadingConstraint;
     NSLayoutConstraint *_modalViewTrailingConstraint;
     UIPercentDrivenInteractiveTransition *_interactiveTransition;
 }
 
++ (id)currentUserModalNavigationControllerWithAccount:(id)arg1 fromVC:(id)arg2;
 + (id)userCardModalNavigationControllerWithAccountContext:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
 @property(retain, nonatomic) NSLayoutConstraint *modalViewTrailingConstraint; // @synthesize modalViewTrailingConstraint=_modalViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *modalViewLeadingConstraint; // @synthesize modalViewLeadingConstraint=_modalViewLeadingConstraint;
 @property(nonatomic) unsigned long long modPermissions; // @synthesize modPermissions=_modPermissions;
-@property(retain, nonatomic) Account *currentAccount; // @synthesize currentAccount=_currentAccount;
 @property(retain, nonatomic) NSString *fromVCPageType; // @synthesize fromVCPageType=_fromVCPageType;
 @property(retain, nonatomic) NSString *modContext; // @synthesize modContext=_modContext;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
@@ -64,6 +63,7 @@
 - (id)animationControllerForDismissedController:(id)arg1;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
 - (_Bool)isUserMe:(id)arg1;
+- (void)userCardViewDidRequestInvite:(id)arg1;
 - (void)userCardViewDidRequestStartChat:(id)arg1;
 - (void)userCardViewDidRequestViewProfile:(id)arg1;
 - (void)userCardViewDidRequestChangeFlair:(id)arg1;
@@ -86,7 +86,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (_Bool)prefersNavigationBarHidden;
 - (void)viewDidLoad;
-@property(readonly, nonatomic) RedditService *service;
+- (id)service;
 - (id)initWithAccountContext:(id)arg1 targetUsername:(id)arg2 subreddit:(id)arg3 thingPk:(id)arg4 fromVC:(id)arg5 fromVCPageType:(id)arg6;
 
 // Remaining properties

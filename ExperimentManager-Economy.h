@@ -18,9 +18,10 @@
 @property(nonatomic, readonly) _Bool isEconRPANAwardTrayV2Enabled;
 - (void)exposeEconAwardsPlaqueExperiement;
 @property(nonatomic, readonly) _Bool isEconAwardsPlaqueEnabled;
-@property(nonatomic, readonly) _Bool isEconDailyStorefrontClaimEnabled;
+@property(nonatomic, readonly) _Bool isEconStorefrontClaimEnabled;
 @property(nonatomic, readonly) _Bool isEconFeedAwardsV2SheetEnabled;
 @property(nonatomic, readonly) _Bool isEconRPANAwardsV2SheetEnabled;
+@property(nonatomic, readonly) _Bool isEconAnimationsControlEnabled;
 @property(nonatomic, readonly) _Bool isEconCommentHighlightingAnimationEnabled;
 @property(nonatomic, readonly) _Bool isAwardLeaderBoardsEnabled;
 @property(nonatomic, readonly) _Bool isEconGiveAwardAnimationEnabled;

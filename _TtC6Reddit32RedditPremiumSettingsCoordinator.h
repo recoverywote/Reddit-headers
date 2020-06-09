@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "ImagePopupViewControllerDelegate-Protocol.h"
+
 @class PremiumCancelOffer, PremiumSubscriptionInfo;
 
-@interface _TtC6Reddit32RedditPremiumSettingsCoordinator : NSObject
+@interface _TtC6Reddit32RedditPremiumSettingsCoordinator : NSObject <ImagePopupViewControllerDelegate>
 {
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: dataSource
@@ -16,17 +18,23 @@
     // Error parsing type: , name: subscriber
     // Error parsing type: , name: offerScreen
     // Error parsing type: , name: subscriptionUpdated
-    // Error parsing type: , name: goldEventLogger
+    // Error parsing type: , name: correlationId
+    // Error parsing type: , name: viewedOffer
+    // Error parsing type: , name: $__lazy_storage_$_eventLogger
     // Error parsing type: , name: cancelOffer
     // Error parsing type: , name: subscriptionInfo
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)imagePopupViewControllerDidCancel:(id)arg1;
+- (void)imagePopupViewController:(id)arg1 didSelectLinkWithURL:(id)arg2;
+- (void)imagePopupViewControllerDidConfirm:(id)arg1;
+- (void)imagePopupViewControllerDidClose:(id)arg1;
 - (id)getOfferScreen;
 - (_Bool)showOfferAccepted;
 - (_Bool)showManageScreen;
-- (id)initWithAccountContext:(id)arg1 dataSource:(id)arg2 subscriber:(_Bool)arg3 goldEventLogger:(id)arg4 testing:(_Bool)arg5 subscriptionUpdated:(CDUnknownBlockType)arg6;
+- (id)initWithAccountContext:(id)arg1 testing:(_Bool)arg2 subscriptionUpdated:(CDUnknownBlockType)arg3;
 @property(nonatomic, retain) PremiumSubscriptionInfo *subscriptionInfo; // @synthesize subscriptionInfo;
 @property(nonatomic, retain) PremiumCancelOffer *cancelOffer; // @synthesize cancelOffer;
 

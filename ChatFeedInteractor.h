@@ -86,6 +86,7 @@
 - (void)feedPostCommentBarNodeDidTapDownvote:(id)arg1;
 - (void)feedPostCommentBarNodeDidTapUpvote:(id)arg1;
 - (void)trackChatAnalyticsEventWithAction:(id)arg1 noun:(id)arg2 message:(id)arg3;
+- (void)pollContentNodeDidTapVoteWithPost:(id)arg1 optionId:(id)arg2;
 - (void)chatConnectionStatusViewControllerDidTapActionButton:(id)arg1;
 - (void)channelSyncService:(id)arg1 didDeleteMessagesWithIds:(id)arg2;
 - (void)channelHistorySourceDidFail:(id)arg1;

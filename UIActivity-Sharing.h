@@ -11,7 +11,7 @@
 @interface UIActivity (Sharing)
 + (_Bool)isNeedPhotoPerimissionsForActivityType:(id)arg1;
 + (_Bool)shouldShareImageForActivityType:(id)arg1;
-+ (id)redditActivityForActivityType:(id)arg1;
++ (id)redditActivityWithViewContext:(id)arg1 activityType:(id)arg2;
 + (id)inlineShareActivities;
 @property(readonly, nonatomic) UIImage *redditActivityImage;
 @end

@@ -8,6 +8,9 @@
 
 @interface NSString (RedditFoundation)
 + (id)stringByRepeatingString:(id)arg1 times:(long long)arg2 joinedBy:(id)arg3;
++ (id)negativeStringWithNumber:(id)arg1;
++ (id)shortenedStringWithNumber:(double)arg1 unitSuffix:(id)arg2;
++ (id)friendlyStringWithNumber:(long long)arg1;
 - (_Bool)containsOnlyCharactersInSet:(id)arg1;
 - (_Bool)containsAnyCharactersInSet:(id)arg1;
 @property(nonatomic, readonly) long long base36ValueAsBase10;

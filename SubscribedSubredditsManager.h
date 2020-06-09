@@ -6,15 +6,17 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString;
+@class NSArray, NSString, RedditService;
 
 @interface SubscribedSubredditsManager : NSObject
 {
     NSArray *_subreddits;
     NSString *_cachePath;
+    RedditService *_service;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSArray *subreddits; // @synthesize subreddits=_subreddits;
 - (void)removeSubreddit:(id)arg1;
@@ -29,7 +31,7 @@
 - (void)loadSubredditsFromDiskWithSuccessBlock:(CDUnknownBlockType)arg1 failureBlock:(CDUnknownBlockType)arg2;
 - (id)getSubredditsSortedByName:(id)arg1;
 @property(readonly, copy, nonatomic) NSArray *sortedSubreddits;
-- (id)initWithCacheFolderPath:(id)arg1;
+- (id)initWithService:(id)arg1 cacheFolderPath:(id)arg2;
 
 @end
 

@@ -24,6 +24,8 @@
 - (void)didLoad;
 - (void)updateBackground;
 - (void)checkForSelectedState;
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (void)dealloc;
 - (id)initWithAwardingTotal:(id)arg1 options:(id)arg2;
 @property(nonatomic, readonly) _Bool showsHighlight;
 @property(nonatomic, readonly) AwardingTotal *awardingTotal; // @synthesize awardingTotal;

@@ -9,6 +9,7 @@
 @class CarouselItem, CarouselItemPostView, NSURL, Subreddit;
 
 @protocol CarouselItemPostViewDelegate <NSObject>
+- (void)willBeginDisplayingCarouselItemPostView:(CarouselItemPostView *)arg1;
 - (void)carouselItemPostView:(CarouselItemPostView *)arg1 didTapVideoCallToAction:(unsigned long long)arg2;
 - (void)carouselItemPostView:(CarouselItemPostView *)arg1 didTapSubscribe:(Subreddit *)arg2;
 - (void)carouselItemPostView:(CarouselItemPostView *)arg1 didTapSubreddit:(Subreddit *)arg2;

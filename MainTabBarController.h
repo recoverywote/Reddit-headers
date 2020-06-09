@@ -9,11 +9,12 @@
 #import "PostViewControllerDelegate-Protocol.h"
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 #import "UITabBarControllerDelegate-Protocol.h"
+#import "_TtP6Reddit30ForcePasswordResetViewDelegate_-Protocol.h"
 
 @class BaseButton, BaseViewController, ChatHomePagedTabViewController, HomeViewController, InboxViewController, NSArray, NSString, RedditService, UINavigationController, UIViewController, _TtC6Reddit22ForcePasswordResetView, _TtC6Reddit27EditUsernameFlowCoordinator, _TtC6Reddit29CommunityCreateFlowController, _TtC7Economy22CoinSaleEntryContainer;
 @protocol AccountContext, MainTabBarControllerDelegate, _TtP6Reddit35CommunityTabViewControllerInterface_;
 
-@interface MainTabBarController : UITabBarController <UITabBarControllerDelegate, RUIThemeUpdateCallbackProtocol, PostViewControllerDelegate>
+@interface MainTabBarController : UITabBarController <UITabBarControllerDelegate, RUIThemeUpdateCallbackProtocol, _TtP6Reddit30ForcePasswordResetViewDelegate_, PostViewControllerDelegate>
 {
     id <MainTabBarControllerDelegate> _mainTabDelegate;
     UINavigationController *_currentViewController;
@@ -69,6 +70,7 @@
 - (void)presentPostMenuViewController;
 - (void)updatePostButton;
 - (void)didTapPostButton:(id)arg1;
+- (void)forcePasswordResetViewDidTapInfoButton;
 - (void)addForcePasswordResetView;
 - (id)currentSubredditContext;
 - (void)cancelSubredditContextChangeObservation;

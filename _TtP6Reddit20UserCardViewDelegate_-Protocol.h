@@ -9,6 +9,7 @@
 @protocol _TtP6Reddit20UserCardViewDelegate_
 - (void)userCardViewDidRequestStartChat:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestViewProfile:(id <_TtP6Reddit12UserCardView_>)arg1;
+- (void)userCardViewDidRequestInvite:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestChangeFlair:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestUnmute:(id <_TtP6Reddit12UserCardView_>)arg1;
 - (void)userCardViewDidRequestMute:(id <_TtP6Reddit12UserCardView_>)arg1;

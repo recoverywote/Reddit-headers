@@ -10,6 +10,7 @@
 - (void)didTapDownvoteWithComment:(Comment *)arg1;
 - (void)didTapUpvoteWithComment:(Comment *)arg1;
 - (void)didTapBlockWithComment:(Comment *)arg1;
+- (void)didTapBanWithCommentTreeNode:(CommentTreeNode *)arg1;
 - (void)didTapReplyWithCommentTreeNode:(CommentTreeNode *)arg1;
 - (void)didTapApproveWithCommentTreeNode:(CommentTreeNode *)arg1;
 - (void)didTapSpamWithCommentTreeNode:(CommentTreeNode *)arg1;

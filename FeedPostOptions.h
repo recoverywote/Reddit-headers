@@ -33,7 +33,6 @@
     _Bool _shouldShowHighResSelfPostImage;
     _Bool _isChatPostExperimentEnabled;
     _Bool _isInChatPostHoldout;
-    _Bool _isPostUIRefreshEnabled;
     _Bool _shouldShowCommentCountInMetadataRow;
     _Bool _isRedditVideoV2Enabled;
     FeedPostTitleOptions *_titleOptions;
@@ -56,7 +55,6 @@
 @property(retain, nonatomic) id <VideoContext> videoContext; // @synthesize videoContext=_videoContext;
 @property(nonatomic) _Bool isRedditVideoV2Enabled; // @synthesize isRedditVideoV2Enabled=_isRedditVideoV2Enabled;
 @property(nonatomic) _Bool shouldShowCommentCountInMetadataRow; // @synthesize shouldShowCommentCountInMetadataRow=_shouldShowCommentCountInMetadataRow;
-@property(readonly, nonatomic) _Bool isPostUIRefreshEnabled; // @synthesize isPostUIRefreshEnabled=_isPostUIRefreshEnabled;
 @property(nonatomic) _Bool isInChatPostHoldout; // @synthesize isInChatPostHoldout=_isInChatPostHoldout;
 @property(nonatomic) _Bool isChatPostExperimentEnabled; // @synthesize isChatPostExperimentEnabled=_isChatPostExperimentEnabled;
 @property(nonatomic) _Bool shouldShowHighResSelfPostImage; // @synthesize shouldShowHighResSelfPostImage=_shouldShowHighResSelfPostImage;

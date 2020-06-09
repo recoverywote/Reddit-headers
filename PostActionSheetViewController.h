@@ -29,6 +29,7 @@
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 - (void)logAnalyticsForRUIActionSheetItemSelection:(id)arg1 post:(id)arg2;
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
+- (void)showAwardDetails;
 - (void)setSendRepliesStatus:(_Bool)arg1 forPost:(id)arg2;
 - (void)showChatSharing;
 - (void)showCrosspost;

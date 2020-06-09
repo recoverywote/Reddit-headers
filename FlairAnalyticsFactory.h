@@ -11,6 +11,10 @@
 }
 
 + (id)nounForFlairContentType:(unsigned long long)arg1;
++ (id)postFlairSelfAssignSettingClickEventForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 pageType:(id)arg3 modPermissions:(unsigned long long)arg4;
++ (id)postFlairSettingClickEventForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 pageType:(id)arg3 modPermissions:(unsigned long long)arg4;
++ (id)userFlairSelfAssignSettingClickEventForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 pageType:(id)arg3 modPermissions:(unsigned long long)arg4;
++ (id)userFlairSettingClickEventForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 pageType:(id)arg3 modPermissions:(unsigned long long)arg4;
 + (id)saveUserFlairTemplateMaxEmojiCountChangeEventForSubreddit:(id)arg1 maxEmojiCount:(long long)arg2 modPermissions:(unsigned long long)arg3;
 + (id)saveUserFlairTemplateContentTypeChangeEventForSubreddit:(id)arg1 contentType:(unsigned long long)arg2 modPermissions:(unsigned long long)arg3;
 + (id)savePostFlairTemplateMaxEmojiCountChangeEventForSubreddit:(id)arg1 maxEmojiCount:(long long)arg2 modPermissions:(unsigned long long)arg3;
@@ -19,7 +23,6 @@
 + (id)deleteUserFlairTemplateClickEventForSubreddit:(id)arg1 modPermissions:(unsigned long long)arg2;
 + (id)saveUserFlairTemplateClickEventForSubreddit:(id)arg1 modPermissions:(unsigned long long)arg2;
 + (id)createUserFlairTemplateClickEventForSubreddit:(id)arg1 modPermissions:(unsigned long long)arg2;
-+ (id)userFlairManagementClickEventForSubreddit:(id)arg1 modPermissions:(unsigned long long)arg2;
 + (id)savePostFlairTemplateEditClickEventForSubreddit:(id)arg1 postFlair:(id)arg2 modPermissions:(unsigned long long)arg3;
 + (id)deletePostFlairTemplateClickEventForSubreddit:(id)arg1 postFlair:(id)arg2 modPermissions:(unsigned long long)arg3;
 + (id)savePostFlairTemplateClickEventForSubreddit:(id)arg1 postFlair:(id)arg2 modPermissions:(unsigned long long)arg3;

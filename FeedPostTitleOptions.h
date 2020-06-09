@@ -20,6 +20,7 @@
     _Bool _shouldFilterSubscribeButtonInteraction;
     _Bool _shouldShowSubredditIcon;
     _Bool _shouldOnlyShowSubscriberCount;
+    _Bool _shouldShowLockedIcon;
     _Bool _shouldShowOverflowButton;
     _Bool _shouldShowUserName;
     _Bool _shouldShowSubredditName;
@@ -36,6 +37,7 @@
 @property(nonatomic) _Bool shouldShowUserName; // @synthesize shouldShowUserName=_shouldShowUserName;
 @property(retain, nonatomic) NSNumber *shouldUseCompactStyle; // @synthesize shouldUseCompactStyle=_shouldUseCompactStyle;
 @property(nonatomic) _Bool shouldShowOverflowButton; // @synthesize shouldShowOverflowButton=_shouldShowOverflowButton;
+@property(nonatomic) _Bool shouldShowLockedIcon; // @synthesize shouldShowLockedIcon=_shouldShowLockedIcon;
 @property(nonatomic) _Bool shouldOnlyShowSubscriberCount; // @synthesize shouldOnlyShowSubscriberCount=_shouldOnlyShowSubscriberCount;
 @property(nonatomic) _Bool shouldShowSubredditIcon; // @synthesize shouldShowSubredditIcon=_shouldShowSubredditIcon;
 @property(nonatomic) _Bool shouldFilterSubscribeButtonInteraction; // @synthesize shouldFilterSubscribeButtonInteraction=_shouldFilterSubscribeButtonInteraction;

@@ -6,7 +6,7 @@
 
 #import "FeedPresenter.h"
 
-@class KeyValueObservation, MediaPostDataProvider, NSArray, NSDictionary, NSString, RailsContext, RailsListingProvider;
+@class ElementalDiscoveryUnitViewModel, KeyValueObservation, MediaPostDataProvider, NSArray, NSDictionary, NSString, RailsContext, RailsListingProvider;
 @protocol RailsPresentable;
 
 @interface RailsPresenter : FeedPresenter
@@ -41,8 +41,17 @@
 - (id)listingTraceName;
 - (void)reconfigureListingNetworkSource;
 - (id)analyticsCorrelationId;
+- (id)positionForPost:(id)arg1;
+- (void)logClickAnalyticsForPost:(id)arg1 postForPositionCalculation:(id)arg2;
+- (void)logClickAnalyticsForPost:(id)arg1;
 - (void)logViewAnalyticsForIndexPaths:(id)arg1;
 - (void)logViewAnalyticsForCategory:(id)arg1 indexPath:(id)arg2 railsContext:(id)arg3;
+- (void)logClickAnalyticsForPost:(id)arg1 position:(id)arg2;
+- (void)logClickAnalyticsForPost:(id)arg1 postForPositionCalculation:(id)arg2 discoveryUnit:(id)arg3 itemsPks:(id)arg4;
+- (void)logClickAnalyticsForPost:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
+- (void)logViewAnalyticsForPost:(id)arg1 position:(id)arg2;
+- (void)logViewAnalyticsForPost:(id)arg1;
+- (void)logViewAnalyticsForPost:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
 - (void)logViewAnalyticsForIndexPath:(id)arg1;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
@@ -66,11 +75,13 @@
 - (id)initWithRailsContext:(id)arg1 accountContext:(id)arg2 listingProvider:(id)arg3;
 @property(readonly, nonatomic) _Bool hasFlairContext;
 @property(readonly, nonatomic) _Bool hasSubredditContext;
+- (long long)countOfItemsAboveThan:(id)arg1;
+@property(readonly, nonatomic) ElementalDiscoveryUnitViewModel *elementalDiscoveryUnitViewModel;
 - (_Bool)shouldShowHlsVideoPostInTheater:(id)arg1;
 - (id)theaterInitialObjectsForPost:(id)arg1;
 - (id)theaterNetworkSourceForPost:(id)arg1;
 - (id)viewModelForObject:(id)arg1;
-- (id)currentPosts;
+@property(readonly, nonatomic) NSArray *currentPosts;
 
 // Remaining properties
 @property(nonatomic) __weak id <RailsPresentable> presentable; // @dynamic presentable;

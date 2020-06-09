@@ -10,8 +10,9 @@
 #import "FeedPostTextWithThumbnailNodeDelegate-Protocol.h"
 #import "FeedPostWebLinkNodeDelegate-Protocol.h"
 #import "PillContainerNodeDelegate-Protocol.h"
+#import "PollContentNodeDelegate-Protocol.h"
 #import "RichTextDisplayNodeDelegate-Protocol.h"
 
-@protocol PostDetailContentNodeDelegate <FeedPostMediaContentNodeDelegate, FeedPostCrossPostNodeDelegate, FeedPostTextWithThumbnailNodeDelegate, FeedPostWebLinkNodeDelegate, FeedPostCallToActionNodeDelegate, PillContainerNodeDelegate, RichTextDisplayNodeDelegate>
+@protocol PostDetailContentNodeDelegate <FeedPostMediaContentNodeDelegate, FeedPostCrossPostNodeDelegate, FeedPostTextWithThumbnailNodeDelegate, FeedPostWebLinkNodeDelegate, FeedPostCallToActionNodeDelegate, PillContainerNodeDelegate, RichTextDisplayNodeDelegate, PollContentNodeDelegate>
 @end
 

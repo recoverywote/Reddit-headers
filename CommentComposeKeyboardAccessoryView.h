@@ -6,7 +6,7 @@
 
 #import "LinkKeyboardAccessoryView.h"
 
-@class BaseButton, PowerupsButton, SubredditPowerupsInfo, UIStackView, _TtC6Reddit25MetaEmoteActivationButton;
+@class BaseButton, PowerupsButton, SubredditPowerupsInfo, UIStackView, UIView, _TtC6Reddit25MetaEmoteActivationButton;
 @protocol CommentComposeKeyboardAccessoryViewDelegate;
 
 @interface CommentComposeKeyboardAccessoryView : LinkKeyboardAccessoryView
@@ -47,6 +47,7 @@
 - (void)photosButtonTouched:(id)arg1;
 - (void)linkButtonTouched:(id)arg1;
 - (void)layoutSubviews;
+@property(readonly, nonatomic) UIView *tooltipAchorView;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

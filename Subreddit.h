@@ -21,10 +21,7 @@
     _Bool _isEnrolledInNewModmail;
     _Bool _isChatPostCreationAllowed;
     _Bool _isChatPostFeatureEnabled;
-    _Bool _allowImages;
-    _Bool _allowVideos;
     _Bool _allowGifs;
-    _Bool _allowPolls;
     _Bool _isDefaultProfileIcon;
     _Bool _isDefaultBanner;
     _Bool _userCanCrosspost;
@@ -35,6 +32,8 @@
     _Bool _isAuthorFlairEditable;
     _Bool _isAuthorFlairHidden;
     _Bool _isEmojisEnabled;
+    _Bool _isDiscoveryAllowed;
+    _Bool _isTopListingAllowed;
     NSString *_pk;
     NSString *_iconImageURLString;
     NSString *_bannerImageURLString;
@@ -57,7 +56,7 @@
     long long _activeCount;
     long long _notificationLevel;
     NSArray *_categories;
-    NSString *_submissionType;
+    unsigned long long _allowedPostTypes;
     unsigned long long _feedMode;
     unsigned long long _feedSort;
     unsigned long long _feedRange;
@@ -68,12 +67,16 @@
     AuthorFlair *_authorFlair;
     NSString *_displayNamePrefixed;
     NSString *_sharingPermalinkIncludingDomain;
+    NSString *_language;
 }
 
 + (_Bool)isReservedSubredditName:(id)arg1;
 + (id)keyPathsToObserveChanges;
 + (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *language; // @synthesize language=_language;
+@property(nonatomic) _Bool isTopListingAllowed; // @synthesize isTopListingAllowed=_isTopListingAllowed;
+@property(nonatomic) _Bool isDiscoveryAllowed; // @synthesize isDiscoveryAllowed=_isDiscoveryAllowed;
 @property(copy, nonatomic) NSString *sharingPermalinkIncludingDomain; // @synthesize sharingPermalinkIncludingDomain=_sharingPermalinkIncludingDomain;
 @property(copy, nonatomic) NSString *displayNamePrefixed; // @synthesize displayNamePrefixed=_displayNamePrefixed;
 @property(nonatomic) _Bool isEmojisEnabled; // @synthesize isEmojisEnabled=_isEmojisEnabled;
@@ -94,11 +97,8 @@
 @property(nonatomic) unsigned long long feedRange; // @synthesize feedRange=_feedRange;
 @property(nonatomic) unsigned long long feedSort; // @synthesize feedSort=_feedSort;
 @property(nonatomic) unsigned long long feedMode; // @synthesize feedMode=_feedMode;
-@property(copy, nonatomic) NSString *submissionType; // @synthesize submissionType=_submissionType;
-@property(nonatomic) _Bool allowPolls; // @synthesize allowPolls=_allowPolls;
+@property(nonatomic) unsigned long long allowedPostTypes; // @synthesize allowedPostTypes=_allowedPostTypes;
 @property(nonatomic) _Bool allowGifs; // @synthesize allowGifs=_allowGifs;
-@property(nonatomic) _Bool allowVideos; // @synthesize allowVideos=_allowVideos;
-@property(nonatomic) _Bool allowImages; // @synthesize allowImages=_allowImages;
 @property(copy, nonatomic) NSArray *categories; // @synthesize categories=_categories;
 @property(nonatomic) long long notificationLevel; // @synthesize notificationLevel=_notificationLevel;
 @property(nonatomic) _Bool isChatPostFeatureEnabled; // @synthesize isChatPostFeatureEnabled=_isChatPostFeatureEnabled;
@@ -129,6 +129,9 @@
 @property(copy, nonatomic) NSString *bannerImageURLString; // @synthesize bannerImageURLString=_bannerImageURLString;
 @property(copy, nonatomic) NSString *iconImageURLString; // @synthesize iconImageURLString=_iconImageURLString;
 @property(readonly, copy, nonatomic) NSString *pk; // @synthesize pk=_pk;
+@property(readonly, nonatomic) _Bool allowPolls;
+@property(readonly, nonatomic) _Bool allowVideos;
+@property(readonly, nonatomic) _Bool allowImages;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

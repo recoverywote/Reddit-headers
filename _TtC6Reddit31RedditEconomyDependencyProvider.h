@@ -8,22 +8,21 @@
 
 #import "_TtP7Economy25EconomyDependencyProvider_-Protocol.h"
 
-@class AccountManager, AppSettings;
+@class AccountManager;
+@protocol _TtP7Economy12EconSettings_;
 
 @interface _TtC6Reddit31RedditEconomyDependencyProvider : NSObject <_TtP7Economy25EconomyDependencyProvider_>
 {
     // Error parsing type: , name: accountManager
-    // Error parsing type: , name: appSettings
+    // Error parsing type: , name: econSettings
 }
 
 - (void).cxx_destruct;
 - (id)init;
-@property(nonatomic, readonly) _Bool inAppPurchaseSkipReceiptValidation;
-@property(nonatomic, readonly) _Bool inAppPurchaseForceDeferredTransaction;
 - (_Bool)isInAnonymousBrowsingWithRedditService:(id)arg1;
 - (id)economyAnalyticsLoggerWithRedditService:(id)arg1;
 - (id)initWithAccountManager:(id)arg1 appSettings:(id)arg2;
-@property(nonatomic, readonly) AppSettings *appSettings; // @synthesize appSettings;
+@property(nonatomic, readonly) id <_TtP7Economy12EconSettings_> econSettings; // @synthesize econSettings;
 @property(nonatomic, readonly) AccountManager *accountManager; // @synthesize accountManager;
 
 @end

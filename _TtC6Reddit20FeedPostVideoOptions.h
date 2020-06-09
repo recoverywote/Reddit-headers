@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "NSCopying-Protocol.h"
-
-@interface _TtC6Reddit20FeedPostVideoOptions : NSObject <NSCopying>
+@interface _TtC6Reddit20FeedPostVideoOptions : NSObject
 {
     // Error parsing type: , name: suggestedTapAction
 }

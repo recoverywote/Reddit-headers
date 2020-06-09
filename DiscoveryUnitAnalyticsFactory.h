@@ -23,11 +23,11 @@
 + (void)attachPost:(id)arg1 toEvent:(id)arg2 appendNoun:(_Bool)arg3;
 + (void)attachSubreddit:(id)arg1 toEvent:(id)arg2 appendNoun:(_Bool)arg3;
 + (void)attachItem:(id)arg1 toEvent:(id)arg2;
-+ (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 listingAnalytics:(id)arg4;
-+ (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 discoveryUnit:(id)arg4 indexOrNil:(id)arg5 listingAnalytics:(id)arg6;
-+ (id)baseEventForAction:(id)arg1 withItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
-+ (id)baseClickEventForItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)baseClickEventWithNoun:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
++ (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 listingAnalytics:(id)arg4 sourceSubreddit:(id)arg5;
++ (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3 discoveryUnit:(id)arg4 indexOrNil:(id)arg5 listingAnalytics:(id)arg6 sourceSubreddit:(id)arg7;
++ (id)baseEventForAction:(id)arg1 withItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4 sourceSubreddit:(id)arg5;
++ (id)baseClickEventForItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
++ (id)baseClickEventWithNoun:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
 + (id)discoveryUnitForFlairWidget;
 + (id)fetchCarouselItemsEventWithSuccess:(_Bool)arg1 error:(id)arg2 discoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
 + (id)viewEventForSubredditTopPostFlair:(id)arg1 subreddit:(id)arg2 atIndex:(id)arg3 listingAnalytics:(id)arg4;
@@ -37,24 +37,24 @@
 + (id)clickEventActionBarAllowLocationForDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2;
 + (id)clickEventForHeaderSubredditSubscribeOrUnsubscribe:(_Bool)arg1 subreddit:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
 + (id)clickEventForHeaderSubreddit:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)clickEventForOverflowHideDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2;
-+ (id)clickEventForOverflowShowLessDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2;
-+ (id)clickEventForOverflowDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2;
++ (id)clickEventForOverflowHideDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2 sourceSubreddit:(id)arg3;
++ (id)clickEventForOverflowShowLessDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2 sourceSubreddit:(id)arg3;
++ (id)clickEventForOverflowDiscoveryUnit:(id)arg1 listingAnalytics:(id)arg2 sourceSubreddit:(id)arg3;
 + (void)attachFirstItem:(id)arg1 event:(id)arg2;
 + (id)clickEventForTitlePostFlair:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)clickEventForTitleSubreddit:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
++ (id)clickEventForTitleSubreddit:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
 + (id)clickEventForTitleMetaFlair:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
 + (id)clickEventForSubredditTopPostFlair:(id)arg1 subreddit:(id)arg2 atIndex:(id)arg3 listingAnalytics:(id)arg4;
-+ (id)clickEventForMetaDataDomainUrlOnItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)clickEventForMetaDataUserName:(id)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
-+ (id)clickEventForMetaDataSubreddit:(id)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
-+ (id)clickEventForItemHide:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)clickEventForActionButtonName:(id)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
-+ (id)clickEventForSubscribeOrUnsubscribe:(_Bool)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4;
++ (id)clickEventForMetaDataDomainUrlOnItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
++ (id)clickEventForMetaDataUserName:(id)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4 sourceSubreddit:(id)arg5;
++ (id)clickEventForMetaDataSubreddit:(id)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4 sourceSubreddit:(id)arg5;
++ (id)clickEventForItemHide:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
++ (id)clickEventForActionButtonName:(id)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4 sourceSubreddit:(id)arg5;
++ (id)clickEventForSubscribeOrUnsubscribe:(_Bool)arg1 onItem:(id)arg2 inDiscoveryUnit:(id)arg3 listingAnalytics:(id)arg4 sourceSubreddit:(id)arg5;
 + (id)clickEventPostRow:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)clickEventForItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)viewEventForItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3;
-+ (id)viewEventForDiscoveryUnit:(id)arg1 indexOrNil:(id)arg2 listingAnalytics:(id)arg3;
++ (id)clickEventForItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
++ (id)viewEventForItem:(id)arg1 inDiscoveryUnit:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
++ (id)viewEventForDiscoveryUnit:(id)arg1 indexOrNil:(id)arg2 listingAnalytics:(id)arg3 sourceSubreddit:(id)arg4;
 
 @end
 

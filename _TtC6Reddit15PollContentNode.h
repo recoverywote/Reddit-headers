@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit15PollContentNode : ASDisplayNode
 {
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: contentNode
     // Error parsing type: , name: observation
 }
@@ -15,8 +16,8 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
-- (id)initWithPost:(id)arg1;
-- (id)initWithPostViewModel:(id)arg1;
+- (id)initWithViewContext:(id)arg1 post:(id)arg2 delegate:(id)arg3;
+- (id)initWithViewContext:(id)arg1 postViewModel:(id)arg2;
 
 @end
 

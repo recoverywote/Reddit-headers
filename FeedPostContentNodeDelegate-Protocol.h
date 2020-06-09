@@ -11,7 +11,8 @@
 #import "FeedPostTextWithThumbnailNodeDelegate-Protocol.h"
 #import "FeedPostWebLinkNodeDelegate-Protocol.h"
 #import "PillContainerNodeDelegate-Protocol.h"
+#import "PollContentNodeDelegate-Protocol.h"
 
-@protocol FeedPostContentNodeDelegate <FeedPostMediaContentNodeDelegate, FeedPostCrossPostNodeDelegate, FeedPostTextWithThumbnailNodeDelegate, FeedPostWebLinkNodeDelegate, FeedPostCallToActionNodeDelegate, PillContainerNodeDelegate, FeedPostEventBarNodeDelegate>
+@protocol FeedPostContentNodeDelegate <FeedPostMediaContentNodeDelegate, FeedPostCrossPostNodeDelegate, FeedPostTextWithThumbnailNodeDelegate, FeedPostWebLinkNodeDelegate, FeedPostCallToActionNodeDelegate, PillContainerNodeDelegate, FeedPostEventBarNodeDelegate, PollContentNodeDelegate>
 @end
 

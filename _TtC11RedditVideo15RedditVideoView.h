@@ -14,11 +14,16 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: placeholderView
     // Error parsing type: , name: snapshotView
+    // Error parsing type: , name: onWillResignOutput
+    // Error parsing type: , name: onDidClaimOutput
+    // Error parsing type: , name: onStateDidChange
+    // Error parsing type: , name: savedAudioState
     // Error parsing type: , name: playerController
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)restoreAudioState;
 - (void)seekToLatestIfNeeded;
 - (void)reparentWithOtherVideoView:(id)arg1;
 - (void)didExitPlayableVisibility;
@@ -32,6 +37,8 @@
 @property(nonatomic) _Bool shouldAutoplay;
 @property(nonatomic) _Bool isMuted;
 @property(nonatomic, retain) _TtC11RedditVideo16PlayerController *playerController; // @synthesize playerController;
+@property(nonatomic, copy) CDUnknownBlockType onDidClaimOutput;
+@property(nonatomic, copy) CDUnknownBlockType onWillResignOutput;
 @property(nonatomic, readonly) _TtC11RedditVideo15PlayerLayerView *playerLayerView; // @synthesize playerLayerView;
 
 @end

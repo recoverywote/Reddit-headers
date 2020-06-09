@@ -6,23 +6,15 @@
 
 #import "PostViewController.h"
 
-#import "BaseTextViewDelegate-Protocol.h"
 #import "LinkViewControllerDelegate-Protocol.h"
 
-@class APIError, BaseLabel, BaseScrollView, BaseTextView, NSString, UIView, _TtC6Reddit25PostKeyboardAccessoryView, _TtC6Reddit29PollPostOptionsViewController;
+@class APIError, BaseTextView, NSString, UIView, _TtC6Reddit29PollPostOptionsViewController;
 
-@interface PollPostViewController : PostViewController <BaseTextViewDelegate, LinkViewControllerDelegate>
+@interface PollPostViewController : PostViewController <LinkViewControllerDelegate>
 {
-    BaseScrollView *_wrapperScrollView;
-    BaseTextView *_titleView;
     BaseTextView *_postView;
     UIView *_separatorView;
     _TtC6Reddit29PollPostOptionsViewController *_postPollOptionsViewController;
-    _TtC6Reddit25PostKeyboardAccessoryView *_postKeyboardAccessoryView;
-    BaseLabel *_mainErrorView;
-    BaseLabel *_titleErrorView;
-    BaseLabel *_flairErrorView;
-    BaseLabel *_postErrorView;
     APIError *_formatValidationError;
     NSString *_postViewPlaceholder;
     NSString *_titleViewPlaceholder;
@@ -32,28 +24,15 @@
 @property(readonly, nonatomic) NSString *titleViewPlaceholder; // @synthesize titleViewPlaceholder=_titleViewPlaceholder;
 @property(readonly, nonatomic) NSString *postViewPlaceholder; // @synthesize postViewPlaceholder=_postViewPlaceholder;
 @property(retain, nonatomic) APIError *formatValidationError; // @synthesize formatValidationError=_formatValidationError;
-@property(retain, nonatomic) BaseLabel *postErrorView; // @synthesize postErrorView=_postErrorView;
-@property(retain, nonatomic) BaseLabel *flairErrorView; // @synthesize flairErrorView=_flairErrorView;
-@property(retain, nonatomic) BaseLabel *titleErrorView; // @synthesize titleErrorView=_titleErrorView;
-@property(retain, nonatomic) BaseLabel *mainErrorView; // @synthesize mainErrorView=_mainErrorView;
-@property(retain, nonatomic) _TtC6Reddit25PostKeyboardAccessoryView *postKeyboardAccessoryView; // @synthesize postKeyboardAccessoryView=_postKeyboardAccessoryView;
 @property(retain, nonatomic) _TtC6Reddit29PollPostOptionsViewController *postPollOptionsViewController; // @synthesize postPollOptionsViewController=_postPollOptionsViewController;
 @property(retain, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
 @property(retain, nonatomic) BaseTextView *postView; // @synthesize postView=_postView;
-@property(retain, nonatomic) BaseTextView *titleView; // @synthesize titleView=_titleView;
-@property(retain, nonatomic) BaseScrollView *wrapperScrollView; // @synthesize wrapperScrollView=_wrapperScrollView;
 - (id)analyticsPostComposerType;
 - (id)analyticsScreenViewName;
 - (void)linkViewControllerDidTapInsert:(id)arg1;
-- (_Bool)textViewShouldChangeSize:(id)arg1;
 - (void)textView:(id)arg1 didChangeToNewSize:(struct CGSize)arg2;
 - (_Bool)baseTextView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;
 - (_Bool)textViewShouldBeginEditing:(id)arg1;
-- (_Bool)resignFirstResponder;
-- (_Bool)becomeFirstResponder;
-- (void)textViewDidBeginEditing:(id)arg1;
-- (void)textViewDidChange:(id)arg1;
-- (void)moveCaretIfPossibleInScrollView:(id)arg1;
 - (void)didTapPostButton:(id)arg1;
 - (id)populateSubmittedPost;
 - (void)didTapCloseLink;
@@ -63,9 +42,11 @@
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)layoutTextFieldsInScroller;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
-- (id)inputAccessoryView;
 - (void)viewDidLoad;
 - (void)configureWithPostToEdit:(id)arg1;
+- (id)powerupsMarketingBadgeView;
+- (id)postErrorSeparator;
+- (id)titleErrorSeparator;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

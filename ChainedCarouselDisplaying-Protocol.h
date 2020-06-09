@@ -9,6 +9,6 @@
 @class Carousel;
 
 @protocol ChainedCarouselDisplaying <NSObject>
-@property(nonatomic, retain) Carousel *chainedCarousel;
+@property(retain, nonatomic) Carousel *chainedCarousel;
 @end
 

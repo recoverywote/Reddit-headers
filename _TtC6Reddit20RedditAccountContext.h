@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class Account, AccountManager, AdEventsManager, AnalyticsManager, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit25StreamingHeartbeatService;
+@class Account, AccountManager, AdEventsManager, AnalyticsManager, AppSettings, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, RedditService, SubredditManager, VisibilityTracker, _TtC6Reddit20AnonymousModeManager, _TtC6Reddit23IdentityProviderService, _TtC6Reddit24RedditMuxAnalyticsLogger, _TtC6Reddit25StreamingHeartbeatService;
 @protocol ViewContext;
 
 @interface _TtC6Reddit20RedditAccountContext : NSObject
@@ -19,6 +19,8 @@
     // Error parsing type: , name: identityProviderService
     // Error parsing type: , name: streamingHeartbeatService
     // Error parsing type: , name: anonymousModeManager
+    // Error parsing type: , name: redditMuxAnalyticsLogger
+    // Error parsing type: , name: appSettings
 }
 
 - (void).cxx_destruct;
@@ -30,7 +32,9 @@
 @property(nonatomic, readonly) ExperimentManager *experimentManager;
 @property(nonatomic, readonly) Account *account;
 @property(nonatomic, readonly) id <ViewContext> viewContext;
-- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 analyticsManager:(id)arg4 visibilityTracker:(id)arg5 identityProviderService:(id)arg6 streamingHeartbeatService:(id)arg7 anonymousModeManager:(id)arg8;
+- (id)initWithAccountManager:(id)arg1 redditService:(id)arg2 rui:(id)arg3 analyticsManager:(id)arg4 visibilityTracker:(id)arg5 identityProviderService:(id)arg6 streamingHeartbeatService:(id)arg7 anonymousModeManager:(id)arg8 redditMuxAnalyticsLogger:(id)arg9 appSettings:(id)arg10;
+@property(nonatomic, readonly) AppSettings *appSettings; // @synthesize appSettings;
+@property(nonatomic, readonly) _TtC6Reddit24RedditMuxAnalyticsLogger *redditMuxAnalyticsLogger; // @synthesize redditMuxAnalyticsLogger;
 @property(nonatomic, readonly) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager;
 @property(nonatomic, readonly) _TtC6Reddit25StreamingHeartbeatService *streamingHeartbeatService; // @synthesize streamingHeartbeatService;
 @property(nonatomic, readonly) _TtC6Reddit23IdentityProviderService *identityProviderService; // @synthesize identityProviderService;

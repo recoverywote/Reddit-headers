@@ -7,11 +7,12 @@
 #import <RedditUI/BaseView.h>
 
 @class BaseButton, PowerupsButton;
-@protocol CommentsFooterBarViewDelegate;
+@protocol CommentsFooterBarViewDelegate, ViewContext;
 
 @interface CommentsFooterBarView : BaseView
 {
     id <CommentsFooterBarViewDelegate> _delegate;
+    id <ViewContext> _viewContext;
     BaseButton *_button;
     PowerupsButton *_emoteButton;
     PowerupsButton *_gifButton;
@@ -23,6 +24,7 @@
 @property(retain, nonatomic) PowerupsButton *gifButton; // @synthesize gifButton=_gifButton;
 @property(retain, nonatomic) PowerupsButton *emoteButton; // @synthesize emoteButton=_emoteButton;
 @property(retain, nonatomic) BaseButton *button; // @synthesize button=_button;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <CommentsFooterBarViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)didTapGIFButton:(id)arg1;
 - (void)didTapEmoteButton:(id)arg1;
@@ -30,7 +32,7 @@
 - (void)layoutSubviews;
 - (void)showPowerupsTooltipWith:(id)arg1 tooltipManager:(id)arg2;
 - (void)configureWithPowerupsInfo:(id)arg1 tooltipManager:(id)arg2;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

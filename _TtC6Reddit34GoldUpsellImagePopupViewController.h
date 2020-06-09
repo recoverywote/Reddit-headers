@@ -6,9 +6,7 @@
 
 #import "BaseViewController.h"
 
-#import "ImagePopupViewControllerDelegate-Protocol.h"
-
-@interface _TtC6Reddit34GoldUpsellImagePopupViewController : BaseViewController <ImagePopupViewControllerDelegate>
+@interface _TtC6Reddit34GoldUpsellImagePopupViewController : BaseViewController
 {
     // Error parsing type: , name: fromViewController
     // Error parsing type: , name: accountContext

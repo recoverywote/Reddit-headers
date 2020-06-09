@@ -15,10 +15,8 @@
 + (void)showPopular;
 + (void)showSearch;
 + (void)performActionForShortcutItem:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-+ (void)updateDynamicShortcuts;
++ (void)updateDynamicShortcutsWithAccount:(id)arg1;
 + (_Bool)deviceSupportsQuickLaunchShortcuts;
-+ (void)accountDidChange:(id)arg1;
-+ (void)initialize;
 
 @end
 

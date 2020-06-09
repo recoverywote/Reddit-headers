@@ -26,6 +26,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)didDismissSheet;
 - (void)didExpandToFullSheet;
 - (void)onExpandToFullSheet;
 - (void)willExpandToFullSheet;

@@ -7,9 +7,11 @@
 #import <UIKit/UIActivity.h>
 
 @class Post, UIImage;
+@protocol AccountContext;
 
 @interface SaveImageActivity : UIActivity
 {
+    id <AccountContext> _accountContext;
     UIImage *_image;
     Post *_post;
 }
@@ -19,9 +21,11 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)image:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (void)processAndSaveImage:(id)arg1;
-- (void)performActivityWithAccountContext:(id)arg1;
+- (void)performActivity;
+- (id)initWithAccountContext:(id)arg1;
 - (void)prepareWithActivityItems:(id)arg1;
 - (_Bool)canPerformWithActivityItems:(id)arg1;
 - (id)activityImage;

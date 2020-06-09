@@ -47,6 +47,7 @@
 - (void)didTapNameLabel;
 - (void)didTapBlock;
 - (void)didTapClose;
+- (void)didTapInvite;
 - (void)didTapFlair;
 - (void)didTapMute;
 - (void)didTapBan;

@@ -9,23 +9,16 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet31TransactionStatusViewController : UIViewController
 {
-    // Error parsing type: , name: txHash
-    // Error parsing type: , name: wallet
-    // Error parsing type: , name: token
-    // Error parsing type: , name: amount
-    // Error parsing type: , name: descriptionString
-    // Error parsing type: , name: transactionRepository
-    // Error parsing type: , name: themeProvider
-    // Error parsing type: , name: imageProvider
-    // Error parsing type: , name: $__lazy_storage_$_contentView
+    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: contentView
     // Error parsing type: , name: cancellables
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (id)initWithCoder:(id)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithCoder:(id)arg1;
 
 @end
 

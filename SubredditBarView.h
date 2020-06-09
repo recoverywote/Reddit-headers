@@ -6,50 +6,43 @@
 
 #import <RedditUI/BaseControl.h>
 
-@class BaseButton, LocationControl, NSString, RoundedImageView, UIColor, UIImageView, UILabel, UIView;
-@protocol ViewContext;
+@class BaseButton, RoundedImageView, UIColor, UIImageView, UILabel, UIStackView, UIView;
+@protocol SubredditBarViewDelegate, ViewContext;
 
 @interface SubredditBarView : BaseControl
 {
-    LocationControl *_locationControl;
+    id <SubredditBarViewDelegate> _delegate;
     RoundedImageView *_iconImageView;
     id <ViewContext> _viewContext;
-    id _dropDownTarget;
-    id _rulesTarget;
-    SEL _dropDownSelector;
-    SEL _rulesSelector;
+    UIStackView *_rootStackView;
+    UIStackView *_titleStackView;
     UILabel *_nameLabel;
     UIImageView *_arrowImageView;
     BaseButton *_rulesButton;
     UIView *_bottomLine;
-    NSString *_subredditName;
     UIColor *_highlightImageColor;
 }
 
++ (id)emptySubredditString;
++ (id)generateAttributedStringForNameLabel:(id)arg1 rui:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *highlightImageColor; // @synthesize highlightImageColor=_highlightImageColor;
-@property(copy, nonatomic) NSString *subredditName; // @synthesize subredditName=_subredditName;
 @property(retain, nonatomic) UIView *bottomLine; // @synthesize bottomLine=_bottomLine;
 @property(retain, nonatomic) BaseButton *rulesButton; // @synthesize rulesButton=_rulesButton;
 @property(retain, nonatomic) UIImageView *arrowImageView; // @synthesize arrowImageView=_arrowImageView;
 @property(retain, nonatomic) UILabel *nameLabel; // @synthesize nameLabel=_nameLabel;
-@property(nonatomic) SEL rulesSelector; // @synthesize rulesSelector=_rulesSelector;
-@property(nonatomic) SEL dropDownSelector; // @synthesize dropDownSelector=_dropDownSelector;
-@property(nonatomic) __weak id rulesTarget; // @synthesize rulesTarget=_rulesTarget;
-@property(nonatomic) __weak id dropDownTarget; // @synthesize dropDownTarget=_dropDownTarget;
+@property(retain, nonatomic) UIStackView *titleStackView; // @synthesize titleStackView=_titleStackView;
+@property(retain, nonatomic) UIStackView *rootStackView; // @synthesize rootStackView=_rootStackView;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) RoundedImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
-@property(retain, nonatomic) LocationControl *locationControl; // @synthesize locationControl=_locationControl;
+@property(nonatomic) __weak id <SubredditBarViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
+- (void)setupViews;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)didTapRulesButton;
-- (void)didTapDropDown;
-- (void)setTarget:(id)arg1 selector:(SEL)arg2 forControlEvent:(unsigned long long)arg3;
-- (void)layoutSubviews;
 - (void)updateWithSubreddit:(id)arg1;
-- (struct CGSize)calculatedSize;
 - (id)initWithViewContext:(id)arg1;
 
 @end

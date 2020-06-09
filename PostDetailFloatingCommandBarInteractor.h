@@ -9,7 +9,7 @@
 #import "RUIScrollViewProgressObserver-Protocol.h"
 
 @class ASCollectionNode, ASDisplayNode, FloatingUpdateView, NSLayoutConstraint, NSString, Post, PostDetailFooterViewController, PostDetailHeaderViewController, PostDetailPresenter, PostDetailViewController, UICollectionView, UIView;
-@protocol FeedPostCommentBarNodeDelegate><FeedPostActionBarNodeDelegate;
+@protocol FeedPostCommentBarNodeDelegate;
 
 @interface PostDetailFloatingCommandBarInteractor : NSObject <RUIScrollViewProgressObserver>
 {
@@ -20,7 +20,7 @@
     PostDetailPresenter *_presenter;
     PostDetailHeaderViewController *_headerViewController;
     PostDetailFooterViewController *_footerViewController;
-    id <FeedPostCommentBarNodeDelegate><FeedPostActionBarNodeDelegate> _delegator;
+    id <FeedPostCommentBarNodeDelegate> _delegator;
     unsigned long long _newCommentsCount;
     NSLayoutConstraint *_headerTopConstraint;
     NSLayoutConstraint *_footerBottomConstraint;
@@ -37,7 +37,7 @@
 @property(retain, nonatomic) NSLayoutConstraint *headerTopConstraint; // @synthesize headerTopConstraint=_headerTopConstraint;
 @property(nonatomic) _Bool hasAddedObservers; // @synthesize hasAddedObservers=_hasAddedObservers;
 @property(nonatomic) unsigned long long newCommentsCount; // @synthesize newCommentsCount=_newCommentsCount;
-@property(nonatomic) __weak id <FeedPostCommentBarNodeDelegate><FeedPostActionBarNodeDelegate> delegator; // @synthesize delegator=_delegator;
+@property(nonatomic) __weak id <FeedPostCommentBarNodeDelegate> delegator; // @synthesize delegator=_delegator;
 @property(nonatomic) __weak PostDetailFooterViewController *footerViewController; // @synthesize footerViewController=_footerViewController;
 @property(nonatomic) __weak PostDetailHeaderViewController *headerViewController; // @synthesize headerViewController=_headerViewController;
 @property(nonatomic) __weak PostDetailPresenter *presenter; // @synthesize presenter=_presenter;

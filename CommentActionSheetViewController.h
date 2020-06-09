@@ -31,6 +31,7 @@
 @property(readonly, nonatomic) CommentTreeNode *commentTreeNode; // @synthesize commentTreeNode=_commentTreeNode;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 - (void)logAnalyticsForRUIActionSheetItemSelection:(id)arg1 comment:(id)arg2;
+- (void)showAwardDetails;
 - (void)setSendRepliesStatus:(_Bool)arg1 forComment:(id)arg2;
 - (void)performBlockAuthorForComment:(id)arg1;
 - (void)removeDistinguishComment:(id)arg1;

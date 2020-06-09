@@ -20,7 +20,7 @@
     // Error parsing type: , name: lastFetched
     // Error parsing type: , name: removeZombiesTimer
     // Error parsing type: , name: fetchConfigTimer
-    // Error parsing type: , name: service
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: streamingConfig
     // Error parsing type: , name: isConfigValid
     // Error parsing type: , name: availableSubredditInfoItems
@@ -33,9 +33,9 @@
 - (void)appDidEnterForeground;
 - (void)appWillEnterBackground;
 - (void)dealloc;
-- (id)initWithService:(id)arg1 source:(long long)arg2 deeplinkSubredditName:(id)arg3 streamingConfig:(id)arg4;
-- (id)initWithService:(id)arg1 source:(long long)arg2 streamingConfig:(id)arg3;
-- (id)initWithService:(id)arg1 deeplinkSubredditName:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 source:(long long)arg2 deeplinkSubredditName:(id)arg3 streamingConfig:(id)arg4;
+- (id)initWithAccountContext:(id)arg1 source:(long long)arg2 streamingConfig:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 deeplinkSubredditName:(id)arg2;
 @property(nonatomic, retain) StreamingConfig *streamingConfig; // @synthesize streamingConfig;
 @property(nonatomic, readonly) LiveStream *topActive;
 @property(nonatomic, readonly) LiveStream *topUnwatched;

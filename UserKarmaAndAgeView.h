@@ -10,11 +10,12 @@
 #import "RUIThemeUpdateCallbackProtocol-Protocol.h"
 
 @class BaseImageView, BaseLabel, BaseStore, NSString, UITapGestureRecognizer, User;
-@protocol BaseStoreObservation;
+@protocol BaseStoreObservation, ProfileDrawerStatsDelegate;
 
 @interface UserKarmaAndAgeView : BaseView <RUIThemeUpdateCallbackProtocol, ObjectObserverProtocol>
 {
     _Bool _isCompact;
+    _Bool _showingAge;
     User *_user;
     BaseStore *_store;
     BaseImageView *_karmaLogoView;
@@ -36,6 +37,7 @@
     BaseLabel *_redditorSinceLabel;
     BaseView *_leftCurtain;
     BaseView *_rightCurtain;
+    id <ProfileDrawerStatsDelegate> _delegate;
     UITapGestureRecognizer *_tapGesture;
     long long _offsetIndex;
     id <BaseStoreObservation> _userModelObservation;
@@ -45,6 +47,8 @@
 @property(retain, nonatomic) id <BaseStoreObservation> userModelObservation; // @synthesize userModelObservation=_userModelObservation;
 @property(nonatomic) long long offsetIndex; // @synthesize offsetIndex=_offsetIndex;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
+@property(nonatomic) _Bool showingAge; // @synthesize showingAge=_showingAge;
+@property(retain, nonatomic) id <ProfileDrawerStatsDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) BaseView *rightCurtain; // @synthesize rightCurtain=_rightCurtain;
 @property(retain, nonatomic) BaseView *leftCurtain; // @synthesize leftCurtain=_leftCurtain;
 @property(retain, nonatomic) BaseLabel *redditorSinceLabel; // @synthesize redditorSinceLabel=_redditorSinceLabel;
@@ -76,7 +80,7 @@
 - (void)layoutSubviews;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateWithUser:(id)arg1;
-- (void)configureWithUser:(id)arg1 store:(id)arg2;
+- (void)configureWithUser:(id)arg1 store:(id)arg2 andDelegate:(id)arg3;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

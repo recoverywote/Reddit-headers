@@ -9,9 +9,6 @@
 @interface NSString (Discovery)
 + (id)timeStringFromSeconds:(unsigned long long)arg1;
 + (id)secureRandomString:(unsigned long long)arg1;
-+ (id)negativeStringWithNumber:(id)arg1;
-+ (id)shortenedStringWithNumber:(double)arg1 unitSuffix:(id)arg2;
-+ (id)friendlyStringWithNumber:(long long)arg1;
 - (id)stringBySplitingWithQuotesBySeparators:(id)arg1;
 - (id)stringByRemovingWordWithRange:(struct _NSRange)arg1;
 - (struct _NSRange)rangeOfSentenceBySpaces:(id)arg1;

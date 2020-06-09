@@ -7,11 +7,12 @@
 #import "LoaderContentView.h"
 
 #import "StreamPlayerViewDelegate-Protocol.h"
+#import "_TtP6Reddit33LiveStreamAnalyticsBridgeProtocol_-Protocol.h"
 
-@class AVPlayer, AVPlayerItem, AVPlayerLayer, AnalyticsActionInfo, AudioInstance, BaseButton, BaseImageView, BaseView, GradientView, NSDate, NSNumber, NSString, NSTimer, NSURL, PlayerButtonsOverlayView, PlayerProgressView, Post, PowerupsMarketingBadgeView, StreamPlayerView;
+@class AVPlayer, AVPlayerItem, AVPlayerLayer, AnalyticsActionInfo, AudioInstance, BaseButton, BaseImageView, BaseView, GradientView, NSDate, NSNumber, NSString, NSTimer, NSURL, PlayerButtonsOverlayView, PlayerProgressView, Post, PowerupsMarketingBadgeView, StreamPlayerView, _TtC6Reddit25LiveStreamAnalyticsBridge;
 @protocol PlayerViewDelegate, TheatrePlayerDelegate, ViewContext;
 
-@interface HlsPlayerView : LoaderContentView <StreamPlayerViewDelegate>
+@interface HlsPlayerView : LoaderContentView <_TtP6Reddit33LiveStreamAnalyticsBridgeProtocol_, StreamPlayerViewDelegate>
 {
     _Bool _shouldOverrideAndDisableAutoplay;
     _Bool _isGIFContent;
@@ -64,6 +65,7 @@
     NSTimer *_fileDoesNotExistRetryTimer;
     NSTimer *_RPANHeartbeatTimer;
     NSTimer *_RPANHeartbeatDelayTimer;
+    _TtC6Reddit25LiveStreamAnalyticsBridge *_RPANAnalytics;
     NSString *_videoPostID;
     NSURL *_videoFileDiskURL;
     AnalyticsActionInfo *_actionInfo;
@@ -76,6 +78,7 @@
 @property(retain, nonatomic) AnalyticsActionInfo *actionInfo; // @synthesize actionInfo=_actionInfo;
 @property(retain, nonatomic) NSURL *videoFileDiskURL; // @synthesize videoFileDiskURL=_videoFileDiskURL;
 @property(copy, nonatomic) NSString *videoPostID; // @synthesize videoPostID=_videoPostID;
+@property(retain, nonatomic) _TtC6Reddit25LiveStreamAnalyticsBridge *RPANAnalytics; // @synthesize RPANAnalytics=_RPANAnalytics;
 @property(retain, nonatomic) NSTimer *RPANHeartbeatDelayTimer; // @synthesize RPANHeartbeatDelayTimer=_RPANHeartbeatDelayTimer;
 @property(retain, nonatomic) NSTimer *RPANHeartbeatTimer; // @synthesize RPANHeartbeatTimer=_RPANHeartbeatTimer;
 @property(retain, nonatomic) NSTimer *fileDoesNotExistRetryTimer; // @synthesize fileDoesNotExistRetryTimer=_fileDoesNotExistRetryTimer;
@@ -130,6 +133,12 @@
 @property(retain, nonatomic) Post *post; // @synthesize post=_post;
 @property(nonatomic) __weak id <TheatrePlayerDelegate> theatrePlayerDelegate; // @synthesize theatrePlayerDelegate=_theatrePlayerDelegate;
 @property(nonatomic) __weak id <PlayerViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)playbackPageType;
+- (id)playbackStreamPost;
+- (id)playbackAVPlayer;
+- (void)stopRPANTracker;
+- (void)startRPANTracker;
+- (void)configureRPANAnalytics;
 - (id)defaultAnalyticsEvent;
 - (void)removePowerupsMarketingBadgeViewIfNeeded;
 - (_Bool)parentIsCarouselView;

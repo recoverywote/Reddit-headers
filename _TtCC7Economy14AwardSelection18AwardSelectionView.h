@@ -11,6 +11,7 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: options
     // Error parsing type: , name: state
+    // Error parsing type: , name: eventLogger
     // Error parsing type: , name: theme
     // Error parsing type: , name: model
     // Error parsing type: , name: delegate

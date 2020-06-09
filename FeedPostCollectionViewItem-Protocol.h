@@ -7,7 +7,7 @@
 @class Post, UIImage;
 
 @protocol FeedPostCollectionViewItem
-@property(nonatomic, readonly) UIImage *previewImage;
-@property(nonatomic, readonly) Post *post;
+@property(readonly, nonatomic) UIImage *previewImage;
+@property(readonly, nonatomic) Post *post;
 @end
 

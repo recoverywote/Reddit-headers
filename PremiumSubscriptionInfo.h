@@ -15,6 +15,7 @@
     NSNumber *_cancelOfferBonusCoins;
 }
 
++ (id)premiumSubscriptionFormatter;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isPremiumMember; // @synthesize isPremiumMember=_isPremiumMember;
 @property(readonly, nonatomic) NSNumber *cancelOfferBonusCoins; // @synthesize cancelOfferBonusCoins=_cancelOfferBonusCoins;

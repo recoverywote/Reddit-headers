@@ -29,21 +29,15 @@
 @property(retain, nonatomic) ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(nonatomic) _Bool isPreviewing; // @synthesize isPreviewing=_isPreviewing;
-- (void)didEndDisplaying;
-- (void)didBecomeFullyVisible;
-- (void)willBeginDisplaying;
+- (void)didExitFullyVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (id)collectionView;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (double)calculateCollectionViewHeightForConstrainedSize:(CDStruct_90e057aa)arg1;
 - (void)configureTextNodes;
 - (void)configureNodes;
-- (void)transitionWithCompletion:(CDUnknownBlockType)arg1;
-- (void)trackExitingVisibility;
-- (void)trackEnteringVisibility;
-- (void)didExitVisibleState;
-- (void)didEnterVisibleState;
 - (void)didLoad;
-- (id)initWithCarouselNodeController:(id)arg1;
+- (id)initWithViewContext:(id)arg1 carouselNodeController:(id)arg2;
 
 @end
 

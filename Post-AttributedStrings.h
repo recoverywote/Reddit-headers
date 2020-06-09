@@ -77,7 +77,7 @@
 - (_Bool)shouldHideThumbnailWithOptions:(id)arg1 account:(id)arg2;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
-- (void)duplicatePosts:(CDUnknownBlockType)arg1;
+- (void)duplicatePostsWithService:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)subtopicsFromNewsTopics:(id)arg1;
 - (id)newsAttributedTitleFromNewsTopics:(id)arg1;
 - (_Bool)canPostInSubreddit:(id)arg1;

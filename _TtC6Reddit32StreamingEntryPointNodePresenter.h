@@ -12,6 +12,7 @@
     // Error parsing type: , name: current
     // Error parsing type: , name: delegate
     // Error parsing type: , name: uiVariant
+    // Error parsing type: , name: pageType
     // Error parsing type: , name: viewSessionId
     // Error parsing type: , name: playbackTracker
     // Error parsing type: , name: isLive

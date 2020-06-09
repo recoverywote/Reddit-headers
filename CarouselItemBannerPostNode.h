@@ -7,6 +7,7 @@
 #import "CarouselItemNode.h"
 
 @class ASDisplayNode, ASNetworkImageNode, ASTextNode, SubscribableButtonNode;
+@protocol CarouselItemBannerPostNodeDelegate;
 
 @interface CarouselItemBannerPostNode : CarouselItemNode
 {
@@ -15,20 +16,23 @@
     ASTextNode *_titleTextNode;
     ASNetworkImageNode *_bannerNode;
     ASDisplayNode *_gradientNode;
+    id <CarouselItemBannerPostNodeDelegate> _bannerPostNodeDelegate;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <CarouselItemBannerPostNodeDelegate> bannerPostNodeDelegate; // @synthesize bannerPostNodeDelegate=_bannerPostNodeDelegate;
 @property(retain, nonatomic) ASDisplayNode *gradientNode; // @synthesize gradientNode=_gradientNode;
 @property(retain, nonatomic) ASNetworkImageNode *bannerNode; // @synthesize bannerNode=_bannerNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
 @property(retain, nonatomic) ASTextNode *metadataTextNode; // @synthesize metadataTextNode=_metadataTextNode;
 @property(retain, nonatomic) SubscribableButtonNode *subredditIconNode; // @synthesize subredditIconNode=_subredditIconNode;
 - (id)imageURLForPost:(id)arg1;
+- (void)willBeginDisplaying;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
 - (id)createGradientNode;
 - (void)createNodes;
-- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2;
+- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2 delegate:(id)arg3;
 
 @end
 

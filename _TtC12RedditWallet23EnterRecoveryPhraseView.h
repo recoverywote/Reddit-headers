@@ -10,15 +10,11 @@ __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet23EnterRecoveryPhraseView : UIView
 {
     // Error parsing type: , name: themeProvider
-    // Error parsing type: , name: betaCheckbox
     // Error parsing type: , name: notchView
     // Error parsing type: , name: navigationBarView
-    // Error parsing type: , name: innerView
-    // Error parsing type: , name: agreeButton
-    // Error parsing type: , name: actionBarContainer
-    // Error parsing type: , name: contentContainer
-    // Error parsing type: , name: $__lazy_storage_$_scrollingInnerView
-    // Error parsing type: , name: bottomConstraint
+    // Error parsing type: , name: contentView
+    // Error parsing type: , name: actionBarView
+    // Error parsing type: , name: containerView
     // Error parsing type: , name: cancellables
 }
 

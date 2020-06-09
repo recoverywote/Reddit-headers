@@ -37,6 +37,7 @@
 - (_Bool)hasItemAlreadyBeenViewed:(id)arg1;
 - (void)resetViewedItems;
 - (void)logViewedItemWithId:(id)arg1;
+@property(readonly, copy, nonatomic) NSString *analyticsPaneName;
 @property(readonly, copy, nonatomic) NSString *analyticsPageType;
 - (id)init;
 

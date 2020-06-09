@@ -6,7 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-@class BaseTextView, NSLayoutYAxisAnchor;
+@class BaseAttachmentTextView, NSLayoutYAxisAnchor;
 @protocol _TtP6Reddit27CommentComposerViewDelegate_;
 
 @interface _TtC6Reddit29CommentComposerViewController : UIViewController
@@ -28,6 +28,9 @@
     // Error parsing type: , name: post
     // Error parsing type: , name: commentTreeNode
     // Error parsing type: , name: isOnEditMode
+    // Error parsing type: , name: metaEmoteComposeManager
+    // Error parsing type: , name: metaGIFComposeManager
+    // Error parsing type: , name: metaRichTextConverter
     // Error parsing type: , name: bottomViewYAnchor
     // Error parsing type: , name: delegate
     // Error parsing type: , name: isExpanded
@@ -35,6 +38,11 @@
     // Error parsing type: , name: contentStackView
     // Error parsing type: , name: $__lazy_storage_$_commentTextView
     // Error parsing type: , name: $__lazy_storage_$_toolbar
+    // Error parsing type: , name: gifButton
+    // Error parsing type: , name: emoteButton
+    // Error parsing type: , name: buttonContainer
+    // Error parsing type: , name: powerupsObservation
+    // Error parsing type: , name: subredditObservation
 }
 
 - (void).cxx_destruct;
@@ -47,7 +55,7 @@
 @property(nonatomic, readonly) double composerHeight;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithService:(id)arg1 presenter:(id)arg2;
-@property(nonatomic, retain) BaseTextView *commentTextView;
+@property(nonatomic, retain) BaseAttachmentTextView *commentTextView;
 @property(nonatomic) __weak id <_TtP6Reddit27CommentComposerViewDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic, retain) NSLayoutYAxisAnchor *bottomViewYAnchor; // @synthesize bottomViewYAnchor;
 

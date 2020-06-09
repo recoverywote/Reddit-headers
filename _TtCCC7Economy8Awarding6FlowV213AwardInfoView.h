@@ -13,17 +13,23 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: accessoryImageView
     // Error parsing type: , name: nameLabel
     // Error parsing type: , name: coinPriceLabel
+    // Error parsing type: , name: timeLeftContainer
+    // Error parsing type: , name: timeLeftLabel
+    // Error parsing type: , name: freeLabel
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: optionsBriefView
     // Error parsing type: , name: subredditCoinBalanceLabel
     // Error parsing type: , name: sendButton
     // Error parsing type: , name: activityIndicator
+    // Error parsing type: , name: displayLink
+    // Error parsing type: , name: timeLeftFormatter
 }
 
 - (void).cxx_destruct;
 - (void)editOptions;
 - (void)sendAward;
 - (void)layoutSubviews;
+- (void)updateCountdown;
 - (id)initWithCoder:(id)arg1;
 
 @end

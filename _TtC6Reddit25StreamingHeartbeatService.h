@@ -15,6 +15,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)sendHeartbeatForLiveStreamPost:(id)arg1;
 - (void)sendHeartbeat:(id)arg1;
 - (id)initWithRedditService:(id)arg1;
 @property(nonatomic, readonly) RedditService *redditService; // @synthesize redditService;

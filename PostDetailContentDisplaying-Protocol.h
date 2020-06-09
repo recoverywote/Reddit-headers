@@ -9,6 +9,6 @@
 @class PostDetailContentNode;
 
 @protocol PostDetailContentDisplaying <NSObject>
-@property(nonatomic, readonly) PostDetailContentNode *contentNode;
+@property(readonly, nonatomic) PostDetailContentNode *contentNode;
 @end
 

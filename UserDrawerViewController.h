@@ -6,15 +6,16 @@
 
 #import "BaseViewController.h"
 
+#import "ProfileDrawerStatsDelegate-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 #import "_TtP6Reddit35AccountStatusViewControllerDelegate_-Protocol.h"
 
-@class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseTableView, BaseView, ChatAvatarImageView, KeyValueObservation, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager;
+@class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseNavigationViewController, BaseTableView, BaseView, ChatAvatarImageView, KeyValueObservation, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager;
 @protocol AccountContext;
 
-@interface UserDrawerViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit35AccountStatusViewControllerDelegate_, UIViewControllerTransitioningDelegate>
+@interface UserDrawerViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit35AccountStatusViewControllerDelegate_, UIViewControllerTransitioningDelegate, ProfileDrawerStatsDelegate>
 {
     UIPercentDrivenInteractiveTransition *_interactiveTransition;
     id <AccountContext> _accountContext;
@@ -24,6 +25,7 @@
     BaseButton *_closeButton;
     BaseButton *_darkModeButton;
     UIStackView *_stackView;
+    BaseNavigationViewController *_userCardModal;
     ChatAvatarImageView *_iconImageView;
     UIStackView *_usernameStackView;
     BaseLabel *_usernameLabel;
@@ -52,6 +54,7 @@
 @property(retain, nonatomic) BaseLabel *usernameLabel; // @synthesize usernameLabel=_usernameLabel;
 @property(retain, nonatomic) UIStackView *usernameStackView; // @synthesize usernameStackView=_usernameStackView;
 @property(retain, nonatomic) ChatAvatarImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
+@property(retain, nonatomic) BaseNavigationViewController *userCardModal; // @synthesize userCardModal=_userCardModal;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(retain, nonatomic) BaseButton *darkModeButton; // @synthesize darkModeButton=_darkModeButton;
 @property(retain, nonatomic) BaseButton *closeButton; // @synthesize closeButton=_closeButton;
@@ -60,6 +63,7 @@
 @property(retain, nonatomic) _TtC6Reddit24MetaWalletBalanceManager *balanceManager; // @synthesize balanceManager=_balanceManager;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) UIPercentDrivenInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
+- (void)karmaTapped;
 - (void)presentLoginViewControllerWithSource:(unsigned long long)arg1;
 - (void)showAnonymousBrowsingTooltipIfNeeded;
 - (id)presentationControllerForPresentedViewController:(id)arg1 presentingViewController:(id)arg2 sourceViewController:(id)arg3;

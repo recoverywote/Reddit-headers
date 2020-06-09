@@ -57,9 +57,6 @@
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(retain, nonatomic) DiscoveryHeaderNode *headerNode; // @synthesize headerNode=_headerNode;
 @property(nonatomic) _Bool showGradientBackground; // @synthesize showGradientBackground=_showGradientBackground;
-- (void)didEndDisplaying;
-- (void)didBecomeFullyVisible;
-- (void)willBeginDisplaying;
 - (void)stackedSearchesNode:(id)arg1 didTapCarouselItem:(id)arg2 atIndex:(long long)arg3;
 - (void)spellingSuggestionNode:(id)arg1 didTapCarouselItem:(id)arg2;
 - (void)discoveryFandomBannerNode:(id)arg1 didTapOverflowButton:(id)arg2 carouselItem:(id)arg3;

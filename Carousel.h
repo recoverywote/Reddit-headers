@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "DiscoveryUnitViewModel-Protocol.h"
+#import "DiscoveryUnitViewModelAnalytics-Protocol.h"
 #import "IGListDiffable-Protocol.h"
 
 @class AnalyticsVisibilityInput, NSArray, NSNumber, NSString;
 @protocol CarouselDataSource><CarouselDataSourceInternal, DiscoveryUnitViewModel;
 
-@interface Carousel : NSObject <IGListDiffable, DiscoveryUnitViewModel>
+@interface Carousel : NSObject <IGListDiffable, DiscoveryUnitViewModel, DiscoveryUnitViewModelAnalytics>
 {
     _Bool _didBecomeFullyVisibleOnce;
     _Bool _allowItemHiding;
@@ -128,6 +129,8 @@
 @property(readonly, nonatomic) _Bool shouldShowAfterFetch;
 - (void)fetchDataWithCompletion:(CDUnknownBlockType)arg1;
 @property(retain) id <DiscoveryUnitViewModel> subDiscoveryUnitViewModel;
+@property(readonly, nonatomic) unsigned long long analyticsItemsCount;
+@property(readonly, nonatomic) NSArray *analyticsItemsPks;
 
 // Remaining properties
 @property(readonly, copy) NSString *description;

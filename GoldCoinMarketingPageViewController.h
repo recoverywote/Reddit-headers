@@ -17,7 +17,7 @@
 
 @interface GoldCoinMarketingPageViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, GoldProductTableViewCellDelegate, GoldCoinMarketingPageHeaderCellDelegate, InAppPurchaseManagerDelegate>
 {
-    _Bool _isEconDailyStorefrontClaimEnabled;
+    _Bool _isEconStorefrontClaimEnabled;
     UIImageView *_backgroundImageView;
     BaseTableView *_tableView;
     NSLayoutConstraint *_backgroundImageWidthConstraint;
@@ -35,7 +35,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) GoldProduct *targetedOfferDeal; // @synthesize targetedOfferDeal=_targetedOfferDeal;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *dealPopupController; // @synthesize dealPopupController=_dealPopupController;
-@property(readonly, nonatomic) _Bool isEconDailyStorefrontClaimEnabled; // @synthesize isEconDailyStorefrontClaimEnabled=_isEconDailyStorefrontClaimEnabled;
+@property(readonly, nonatomic) _Bool isEconStorefrontClaimEnabled; // @synthesize isEconStorefrontClaimEnabled=_isEconStorefrontClaimEnabled;
 @property(readonly, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *sourcePage; // @synthesize sourcePage=_sourcePage;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;

@@ -20,6 +20,7 @@
     // Error parsing type: , name: analyticsBuilder
     // Error parsing type: , name: redditService
     // Error parsing type: , name: $__lazy_storage_$_context
+    // Error parsing type: , name: isActive
     // Error parsing type: , name: $__lazy_storage_$_transformer
     // Error parsing type: , name: delegate
     // Error parsing type: , name: $__lazy_storage_$_responderView

@@ -5,9 +5,10 @@
 //
 
 @class NSURL;
+@protocol AccountContext;
 
 @protocol DeeplinkResolvingRouter
 - (void)navigateBack;
-- (void)navigateToUrl:(NSURL *)arg1;
+- (void)navigateToUrlWithAccountContext:(id <AccountContext>)arg1 url:(NSURL *)arg2;
 @end
 

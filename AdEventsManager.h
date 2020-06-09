@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableArray, NSMutableDictionary, NSMutableOrderedSet, NSURLSession;
+@class NSMutableArray, NSMutableDictionary, NSMutableOrderedSet, NSURLSession, RedditService;
 @protocol OS_dispatch_queue;
 
 @interface AdEventsManager : NSObject
 {
     NSMutableArray *_logEntriesForDebug;
+    RedditService *_service;
     NSObject<OS_dispatch_queue> *_queue;
     NSMutableDictionary *_firedPixels;
     NSMutableDictionary *_impresssionPayload;
@@ -55,7 +56,7 @@
     NSURLSession *_backgroundSession;
 }
 
-+ (id)sharedInstance;
++ (id)sharedQueue;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSURLSession *backgroundSession; // @synthesize backgroundSession=_backgroundSession;
 @property(retain, nonatomic) NSURLSession *session; // @synthesize session=_session;
@@ -98,6 +99,7 @@
 @property(retain, nonatomic) NSMutableDictionary *impresssionPayload; // @synthesize impresssionPayload=_impresssionPayload;
 @property(retain, nonatomic) NSMutableDictionary *firedPixels; // @synthesize firedPixels=_firedPixels;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
+@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 @property(readonly, nonatomic) NSMutableArray *logEntriesForDebug; // @synthesize logEntriesForDebug=_logEntriesForDebug;
 - (void)logEventWithType:(long long)arg1 andPayload:(id)arg2;
 - (void)postVideoPlay:(id)arg1 elapsed:(double)arg2 duration:(double)arg3 muted:(_Bool)arg4;
@@ -124,7 +126,7 @@
 - (id)createMetadataWithPayload:(id)arg1;
 - (void)firePixelWithType:(long long)arg1 andPixels:(id)arg2 metadata:(id)arg3;
 - (void)firePixelWithType:(long long)arg1 andPayload:(id)arg2;
-- (id)init;
+- (id)initWithRedditService:(id)arg1;
 
 @end
 

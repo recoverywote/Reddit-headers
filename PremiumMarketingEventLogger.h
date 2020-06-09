@@ -21,6 +21,9 @@
 @property(readonly, nonatomic) AnalyticsManager *analyticsManager; // @synthesize analyticsManager=_analyticsManager;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
+- (void)logViewPremiumCancelOffer;
+- (void)logDeclinePremiumCancelOffer;
+- (void)logAcceptPremiumCancelOffer;
 - (id)eventWithSource:(id)arg1 action:(id)arg2 noun:(id)arg3;
 - (void)logViewPurchaseSuccessEventWithGoldProduct:(id)arg1 transactionId:(id)arg2;
 - (void)logViewPurchaseProcessingEventWithGoldProduct:(id)arg1;

@@ -8,8 +8,11 @@
 
 @interface _TtC6Reddit28AppleIdentityProviderService : NSObject
 {
+    // Error parsing type: , name: window
+    // Error parsing type: , name: completionBlock
 }
 
+- (void).cxx_destruct;
 - (id)init;
 
 @end

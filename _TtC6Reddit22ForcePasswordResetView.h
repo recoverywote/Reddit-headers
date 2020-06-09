@@ -6,11 +6,12 @@
 
 #import <RedditUI/BaseView.h>
 
+@protocol _TtP6Reddit30ForcePasswordResetViewDelegate_;
+
 @interface _TtC6Reddit22ForcePasswordResetView : BaseView
 {
-    // Error parsing type: , name: fromVC
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: kButtonSize
-    // Error parsing type: , name: kHelpCenterURLString
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: iconImageView
@@ -21,7 +22,8 @@
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)didTapInfoButtonWithSender:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithFromVC:(id)arg1;
+- (id)init;
+@property(nonatomic) __weak id <_TtP6Reddit30ForcePasswordResetViewDelegate_> delegate; // @synthesize delegate;
 
 @end
 

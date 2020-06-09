@@ -9,7 +9,7 @@
 #import "ASTextNodeDelegate-Protocol.h"
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class ASDisplayNode, ASTextNode, FeedPostHlsVideoView, FeedPostMediaContentNode, FeedPostOptions, FeedPostThumbnailNode, NSString, Post, _TtC6Reddit18FeedPostAwardsNode, _TtC6Reddit20FeedPostMetadataNode;
+@class ASDisplayNode, ASTextNode, FeedPostHlsVideoView, FeedPostMediaContentNode, FeedPostOptions, FeedPostThumbnailNode, NSString, Post, _TtC6Reddit18FeedPostAwardsNode;
 @protocol FeedPostCrossPostNodeDelegate, ViewContext;
 
 @interface FeedPostCrossPostNode : BaseFeedDisplayNode <ASTextNodeDelegate, ObjectObserverProtocol>
@@ -24,13 +24,11 @@
     FeedPostOptions *_options;
     ASDisplayNode *_footerNode;
     ASTextNode *_metaTextNode;
-    _TtC6Reddit20FeedPostMetadataNode *_metadataNode;
     id <ViewContext> _viewContext;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
-@property(retain, nonatomic) _TtC6Reddit20FeedPostMetadataNode *metadataNode; // @synthesize metadataNode=_metadataNode;
 @property(retain, nonatomic) ASTextNode *metaTextNode; // @synthesize metaTextNode=_metaTextNode;
 @property(readonly, nonatomic) ASDisplayNode *footerNode; // @synthesize footerNode=_footerNode;
 @property(retain, nonatomic) FeedPostOptions *options; // @synthesize options=_options;

@@ -8,6 +8,7 @@
 
 #import "ASCollectionDataSource-Protocol.h"
 #import "ASCollectionDelegate-Protocol.h"
+#import "CarouselItemBannerPostNodeDelegate-Protocol.h"
 #import "CarouselItemCompactPostNodeDelegate-Protocol.h"
 #import "CarouselItemNodeDelegate-Protocol.h"
 #import "CarouselItemPostViewDelegate-Protocol.h"
@@ -16,7 +17,7 @@
 @class Carousel, CarouselNode, NSArray, NSDate, NSIndexPath, NSMutableArray, NSMutableSet, NSString, UICollectionView;
 @protocol CarouselNodeDelegate, ViewContext;
 
-@interface CarouselNodeController : NSObject <CarouselItemNodeDelegate, CarouselItemCompactPostNodeDelegate, CarouselItemPostViewDelegate, CarouselItemSubredditNodeDelegate, ASCollectionDataSource, ASCollectionDelegate>
+@interface CarouselNodeController : NSObject <CarouselItemNodeDelegate, CarouselItemCompactPostNodeDelegate, CarouselItemPostViewDelegate, CarouselItemSubredditNodeDelegate, CarouselItemBannerPostNodeDelegate, ASCollectionDataSource, ASCollectionDelegate>
 {
     id <CarouselNodeDelegate> _delegate;
     NSArray *_registeredCellClasses;
@@ -43,6 +44,8 @@
 @property(readonly, nonatomic) NSArray *registeredCellClasses; // @synthesize registeredCellClasses=_registeredCellClasses;
 @property(readonly, nonatomic) __weak id <CarouselNodeDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)addHideKeyValueObservationForCarouselItem:(id)arg1;
+- (void)willBeginDisplayingCarouselBannerPostNode:(id)arg1;
+- (void)willBeginDisplayingCarouselItemPostView:(id)arg1;
 - (void)carouselItemPostView:(id)arg1 didTapVideoCallToAction:(unsigned long long)arg2;
 - (void)carouselItemPostView:(id)arg1 didTapSubscribe:(id)arg2;
 - (void)carouselItemPostView:(id)arg1 didTapSubreddit:(id)arg2;

@@ -37,7 +37,7 @@
 - (_Bool)collectionView:(id)arg1 shouldHighlightItemAtIndexPath:(id)arg2;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
-- (void)mediaSelectionViewController:(id)arg1 didSelect:(id)arg2;
+- (void)mediaSelectionNavigationController:(id)arg1 didSelect:(id)arg2;
 - (void)viewDidLoad;
 @property(nonatomic) struct CGSize preferredContentSize;
 @property(nonatomic, readonly) unsigned long long supportedInterfaceOrientations;

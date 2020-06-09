@@ -19,7 +19,6 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: primaryTag
     // Error parsing type: , name: $__lazy_storage_$_navigator
-    // Error parsing type: , name: footerLabel
     // Error parsing type: , name: $__lazy_storage_$_layout
     // Error parsing type: , name: newTagAttributedString
     // Error parsing type: , name: distanceFromNewTagToArrow
@@ -33,11 +32,9 @@
 @property(nonatomic, readonly) NSString *analyticsPageType;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
-- (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
-- (void)viewDidLayoutSubviews;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithAccountContext:(id)arg1 analyticsManager:(id)arg2 subreddit:(id)arg3 modToolsConfig:(id)arg4;

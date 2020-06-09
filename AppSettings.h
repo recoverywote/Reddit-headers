@@ -16,6 +16,7 @@
 + (id)sharedSettings;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
+@property(nonatomic) _Bool reduceAwardsAnimations;
 @property(retain, nonatomic) NSDictionary *anonymousBrowsingInfo;
 @property(nonatomic) _Bool inAppPurchaseSkipReceiptValidation;
 @property(nonatomic) _Bool inAppPurchaseForceDeferredTransaction;

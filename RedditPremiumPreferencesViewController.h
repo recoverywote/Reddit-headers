@@ -33,7 +33,6 @@
 - (void)manageWebSubscriptionDidTap:(id)arg1;
 - (void)manageInAppSubscriptionDidTap:(id)arg1;
 - (void)hidePremiumAcceptance:(_Bool)arg1;
-- (_Bool)shouldShowCancellationOffer;
 - (void)showCancellationOffer;
 - (void)setupViewsForNonSubscriber;
 - (id)bonusOfferString;

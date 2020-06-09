@@ -81,6 +81,7 @@
 - (void)exposeDisableTheatreMode;
 @property(readonly, nonatomic) _Bool shouldDisableTheatreMode;
 - (id)disableTheatreModeExperimentName;
+@property(readonly, nonatomic) _Bool isCommunityModInviteEnabled;
 @property(readonly, nonatomic) _Bool isCommunityTabRefactorEnabled;
 @property(readonly, nonatomic) _Bool isLocationRecommendationsToggleEnabled;
 @property(readonly, nonatomic) _Bool isEditUsernameEnabled;

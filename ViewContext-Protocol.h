@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class Account, AdEventsManager, AnalyticsManager, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, SubredditManager, VisibilityTracker;
+@class Account, AdEventsManager, AnalyticsManager, ExperimentManager, GivenAwardsManager, LegacyExperimentManager, RUI, SubredditManager, VisibilityTracker, _TtC6Reddit24RedditMuxAnalyticsLogger, _TtC6Reddit25StreamingHeartbeatService;
 
 @protocol ViewContext <NSObject>
+@property(nonatomic, readonly) _TtC6Reddit24RedditMuxAnalyticsLogger *redditMuxAnalyticsLogger;
+@property(nonatomic, readonly) _TtC6Reddit25StreamingHeartbeatService *streamingHeartbeatService;
 @property(nonatomic, readonly) AdEventsManager *adEventsManager;
 @property(nonatomic, readonly) VisibilityTracker *visibilityTracker;
 @property(nonatomic, readonly) AnalyticsManager *analyticsManager;

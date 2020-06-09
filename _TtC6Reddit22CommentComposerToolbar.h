@@ -8,8 +8,13 @@
 
 @interface _TtC6Reddit22CommentComposerToolbar : BaseView
 {
+    // Error parsing type: , name: leftButtonStack
     // Error parsing type: , name: linkButton
+    // Error parsing type: , name: gifButton
+    // Error parsing type: , name: emoteButton
     // Error parsing type: , name: submitButton
+    // Error parsing type: , name: isEmoteComposeEnabled
+    // Error parsing type: , name: isGIFComposeEnabled
 }
 
 - (void).cxx_destruct;

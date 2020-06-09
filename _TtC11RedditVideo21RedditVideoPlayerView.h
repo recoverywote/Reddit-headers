@@ -14,6 +14,7 @@
     // Error parsing type: , name: videoOverlayView
     // Error parsing type: , name: tapAction
     // Error parsing type: , name: onDidTapView
+    // Error parsing type: , name: onDidTapMuteButton
     // Error parsing type: , name: debugLabel
 }
 
@@ -27,6 +28,7 @@
 - (void)preload;
 - (void)refreshVideoOverlay;
 - (id)initWithCoder:(id)arg1;
+@property(nonatomic, copy) CDUnknownBlockType onDidTapMuteButton;
 @property(nonatomic, copy) CDUnknownBlockType onDidTapView;
 @property(nonatomic, readonly) _TtC11RedditVideo16PlayerController *playerController;
 @property(nonatomic, readonly) _TtC11RedditVideo15RedditVideoView *redditVideoView; // @synthesize redditVideoView;

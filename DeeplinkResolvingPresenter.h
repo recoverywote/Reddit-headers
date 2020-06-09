@@ -9,10 +9,11 @@
 #import "NSURLSessionTaskDelegate-Protocol.h"
 
 @class NSString, NSURL, NSURLSession;
-@protocol DeeplinkResolvingPresentable, DeeplinkResolvingRouter;
+@protocol AccountContext, DeeplinkResolvingPresentable, DeeplinkResolvingRouter;
 
 @interface DeeplinkResolvingPresenter : NSObject <NSURLSessionTaskDelegate>
 {
+    id <AccountContext> _accountContext;
     id <DeeplinkResolvingRouter> _router;
     id <DeeplinkResolvingPresentable> _presentable;
     NSURL *_originalUrl;
@@ -26,13 +27,14 @@
 @property(retain, nonatomic) NSURL *originalUrl; // @synthesize originalUrl=_originalUrl;
 @property(nonatomic) __weak id <DeeplinkResolvingPresentable> presentable; // @synthesize presentable=_presentable;
 @property(retain, nonatomic) id <DeeplinkResolvingRouter> router; // @synthesize router=_router;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (id)parseUrlFromBranchHtml:(id)arg1;
 - (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithError:(id)arg3;
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didReceiveData:(id)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 willPerformHTTPRedirection:(id)arg3 newRequest:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 @property(readonly, copy, nonatomic) NSString *userAgent;
 - (void)deeplinkResolvingPresentableDidLoad:(id)arg1;
-- (id)initWithUrl:(id)arg1 router:(id)arg2 presentable:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 url:(id)arg2 router:(id)arg3 presentable:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

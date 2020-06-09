@@ -68,7 +68,9 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, nonatomic) _Bool isLoggedIn;
 @property(readonly, nonatomic) _Bool isNotLoggedIn;
+@property(readonly, nonatomic) unsigned long long type;
 @property(readonly, nonatomic) _Bool isSuspendedNow;
+- (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) _Bool over18;
 - (void)configureWithData:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;

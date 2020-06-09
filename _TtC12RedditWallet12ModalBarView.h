@@ -9,7 +9,7 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet12ModalBarView : UIView
 {
-    // Error parsing type: , name: _closeButton
+    // Error parsing type: , name: closeButton
     // Error parsing type: , name: cancellables
 }
 

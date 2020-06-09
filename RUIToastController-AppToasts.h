@@ -10,10 +10,10 @@
 + (void)dismissToastWithIdentifier:(id)arg1 animated:(_Bool)arg2;
 + (void)dismissToast:(_Bool)arg1;
 + (void)showToastWithConfiguration:(id)arg1;
-+ (void)showErrorMessageFromUserOperationError:(id)arg1 message:(id)arg2;
++ (void)showErrorMessageFromUserOperationError:(id)arg1 message:(id)arg2 account:(id)arg3;
 + (void)showErrorMessageFromRedditDomainErrors:(id)arg1;
-+ (void)showErrorMessageFromRedditDomainError:(id)arg1;
-+ (void)showErrorMessageForError:(id)arg1;
++ (void)showErrorMessageFromRedditDomainError:(id)arg1 account:(id)arg2;
++ (void)showErrorMessageForError:(id)arg1 account:(id)arg2;
 + (void)showErrorMessage:(id)arg1 autoDismissDelay:(double)arg2 identifier:(id)arg3;
 + (void)showErrorMessage:(id)arg1;
 + (void)showMessage:(id)arg1 rightButtonAction:(id)arg2 autoDismissDelay:(double)arg3;

@@ -55,7 +55,7 @@
 - (id)variantNameForExperimentName:(id)arg1;
 @property(readonly, nonatomic) _Bool hasFetched;
 - (void)dealloc;
-- (id)initWithService:(id)arg1 fileManager:(id)arg2 userDefaults:(id)arg3;
+- (id)initWithService:(id)arg1 fileManager:(id)arg2;
 
 @end
 

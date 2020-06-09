@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <RedditUI/BaseImageView.h>
+#import <RedditUI/AvatarImageView.h>
 
 #import "ObjectObserverProtocol-Protocol.h"
 
 @class Contact, NSString;
 @protocol ViewContext;
 
-@interface ChatAvatarImageView : BaseImageView <ObjectObserverProtocol>
+@interface ChatAvatarImageView : AvatarImageView <ObjectObserverProtocol>
 {
     NSString *_url;
     Contact *_contact;
@@ -23,15 +23,13 @@
 @property(retain, nonatomic) Contact *contact; // @synthesize contact=_contact;
 @property(copy, nonatomic) NSString *url; // @synthesize url=_url;
 - (void)updateContentViewsForData:(id)arg1;
-- (void)configureWithViewContext:(id)arg1 url:(id)arg2;
-- (void)configureWithViewContext:(id)arg1 userID:(id)arg2;
 - (void)configureWithNSFW;
 - (_Bool)shouldMarkNFSW;
-- (void)configureWithViewContext:(id)arg1 user:(id)arg2;
 - (void)configureWithViewContext:(id)arg1 contact:(id)arg2;
+- (void)configureWithViewContext:(id)arg1 url:(id)arg2;
+- (void)configureWithViewContext:(id)arg1 userID:(id)arg2;
+- (void)configureWithViewContext:(id)arg1 user:(id)arg2;
 - (void)prepareForReuse;
-- (void)layoutSubviews;
-- (id)initWithFrame:(struct CGRect)arg1;
 - (void)dealloc;
 
 // Remaining properties

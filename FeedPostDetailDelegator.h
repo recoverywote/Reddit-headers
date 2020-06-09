@@ -9,12 +9,11 @@
 #import "PostDetailCellNodeDelegate-Protocol.h"
 #import "PostModerateActionSheetDelegate-Protocol.h"
 #import "_TtP6Reddit23TrendingToasterDelegate_-Protocol.h"
-#import "_TtP6Reddit28PostDetailCellNodeV2Delegate_-Protocol.h"
 #import "_TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_-Protocol.h"
 
 @class FeedNavigator, NSString, PostDetailPresenter, PostDetailViewController, _TtC6Reddit29CommunityCreateFlowController, _TtC6Reddit36SubredditMentionUpsellViewController;
 
-@interface FeedPostDetailDelegator : NSObject <PostModerateActionSheetDelegate, _TtP6Reddit23TrendingToasterDelegate_, _TtP6Reddit28PostDetailCellNodeV2Delegate_, _TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_, PostDetailCellNodeDelegate>
+@interface FeedPostDetailDelegator : NSObject <PostModerateActionSheetDelegate, _TtP6Reddit23TrendingToasterDelegate_, _TtP6Reddit44SubredditMentionUpsellViewControllerDelegate_, PostDetailCellNodeDelegate>
 {
     FeedNavigator *_navigator;
     PostDetailViewController *_viewController;
@@ -52,23 +51,6 @@
 - (void)didTapUpvoteForPost:(id)arg1;
 - (void)didTapCommentForPost:(id)arg1;
 - (void)didTapAwardPost:(id)arg1 selectedAward:(id)arg2;
-- (void)postDetailMetadataNode:(id)arg1 didTapAward:(id)arg2;
-- (void)postModActionBarNodeDidTapSpam:(id)arg1;
-- (void)postModActionBarNodeDidTapFlair:(id)arg1;
-- (void)postModActionBarNodeDidTapDistinguish:(id)arg1;
-- (void)postModActionBarNodeDidTapDelete:(id)arg1;
-- (void)postModActionBarNodeDidTapApprove:(id)arg1;
-- (void)postModActionBarNode:(id)arg1 didTapOverflow:(id)arg2;
-- (void)postHeaderNodeDidTapJoin:(id)arg1;
-- (void)postHeaderNodeDidTapIcons:(id)arg1;
-- (void)postHeaderNode:(id)arg1 didTapOverflow:(id)arg2;
-- (void)postHeaderNode:(id)arg1 didTapLink:(id)arg2 context:(unsigned long long)arg3;
-- (void)postActionBar:(id)arg1 didTapModerate:(id)arg2;
-- (void)postActionBar:(id)arg1 didTapShare:(id)arg2;
-- (void)postActionBarDidTapComment:(id)arg1;
-- (void)postActionBarDidTapAward:(id)arg1;
-- (void)postActionBarDidTapDownvote:(id)arg1;
-- (void)postActionBarDidTapUpvote:(id)arg1;
 - (void)trendingToasterDidTapConfirm:(id)arg1;
 - (void)trendingToasterDidTapCancel:(id)arg1;
 - (void)trendingToasterDidTapClose:(id)arg1;
@@ -83,6 +65,7 @@
 - (void)handleThumbnailTapForPost:(id)arg1 image:(id)arg2;
 - (void)showSubscribedToastWithSubscribable:(id)arg1 success:(_Bool)arg2;
 - (void)toggleSubredditSubscription:(id)arg1;
+- (void)pollContentNodeDidTapVoteWithPost:(id)arg1 optionId:(id)arg2;
 - (void)pillContainerNode:(id)arg1 didViewPill:(id)arg2 pillNode:(id)arg3;
 - (void)pillContainerNode:(id)arg1 didSelectPill:(id)arg2;
 - (void)feedPostHlsVideoView:(id)arg1 didTapCallToAction:(unsigned long long)arg2;

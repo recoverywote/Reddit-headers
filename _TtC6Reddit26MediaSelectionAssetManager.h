@@ -13,6 +13,7 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: assetCollections
     // Error parsing type: , name: assets
+    // Error parsing type: , name: configuration
     // Error parsing type: , name: photoLibrary
 }
 

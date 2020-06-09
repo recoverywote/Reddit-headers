@@ -13,19 +13,20 @@
 - (void)carouselNodeController:(CarouselNodeController *)arg1 performRemoveOfCarousel:(Carousel *)arg2 removalReason:(unsigned long long)arg3;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didTapCallToAction:(unsigned long long)arg2 forPost:(Post *)arg3;
 - (void)didViewCarouselNode:(CarouselNodeController *)arg1;
-- (void)carouselNodeController:(CarouselNodeController *)arg1 performSeeMore:(Carousel *)arg2;
-- (NSString *)analyticsScreenViewName;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didViewCarouselItem:(CarouselItem *)arg2;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 carouselItem:(CarouselItem *)arg2 didTapSubscribe:(NSObject<Subscribable> *)arg3;
+- (void)carouselNodeController:(CarouselNodeController *)arg1 performSeeMore:(Carousel *)arg2;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didTapCarouselItem:(CarouselItem *)arg2 atIndex:(long long)arg3 carouselItems:(NSArray *)arg4;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didHideCarouselItem:(CarouselItem *)arg2;
+- (NSString *)analyticsScreenViewName;
 
 @optional
+- (void)carouselNodeController:(CarouselNodeController *)arg1 willVisibleCarouselItem:(CarouselItem *)arg2;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didViewTitleObject:(NSObject *)arg2;
-- (_Bool)carouselNodeControllerHasMoreContent:(CarouselNodeController *)arg1;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didTapSubscribeFromTitleWithCarouselItem:(CarouselItem *)arg2 withSubreddit:(NSObject<Subscribable> *)arg3;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didTapSubredditWithCarouselItem:(CarouselItem *)arg2 withSubreddit:(NSObject<Subscribable> *)arg3;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didTapDomainURLWithCarouselItem:(CarouselItem *)arg2 withURL:(NSURL *)arg3;
 - (void)carouselNodeController:(CarouselNodeController *)arg1 didTapComment:(Comment *)arg2 fromCarouselItem:(CarouselItem *)arg3;
+- (_Bool)carouselNodeControllerHasMoreContent:(CarouselNodeController *)arg1;
 @end
 

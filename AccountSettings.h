@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDate, NSDictionary, NSOrderedSet, NSSet, NSString, SearchHistory;
+@class NSArray, NSData, NSDate, NSDictionary, NSOrderedSet, NSSet, NSString, SearchHistory;
 
 @interface AccountSettings : NSObject
 {
@@ -19,6 +19,8 @@
 - (void)setShouldHide:(_Bool)arg1 forTaggableWithPk:(id)arg2;
 @property(copy, nonatomic) NSDictionary *shareActivityHistory;
 @property(retain, nonatomic) NSSet *tappedShareActivityTypes;
+@property(copy, nonatomic) NSData *adEventMetadataData;
+@property(copy, nonatomic) NSData *adEventPayloadData;
 @property(copy, nonatomic) NSArray *dismissedTokenClaims;
 @property(nonatomic) _Bool shouldBadgeMainScreenPlusButton;
 @property(copy, nonatomic) NSArray *mainScreenTabs;

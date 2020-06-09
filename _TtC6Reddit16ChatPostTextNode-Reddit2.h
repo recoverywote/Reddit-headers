@@ -6,7 +6,9 @@
 
 #import "_TtC6Reddit16ChatPostTextNode.h"
 
-@interface _TtC6Reddit16ChatPostTextNode (Reddit2)
+#import "RichTextDisplayNodeDelegate-Protocol.h"
+
+@interface _TtC6Reddit16ChatPostTextNode (Reddit2) <RichTextDisplayNodeDelegate>
 - (void)richTextDisplayNode:(id)arg1 didTapSpoiler:(id)arg2 atPoint:(struct CGPoint)arg3;
 - (void)richTextDisplayNode:(id)arg1 didTapMedia:(id)arg2 withMediaLabels:(id)arg3;
 - (void)richTextDisplayNode:(id)arg1 richTextTextNode:(id)arg2 didTapURL:(id)arg3 atPoint:(struct CGPoint)arg4 atRange:(struct _NSRange)arg5;

@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit17UserHovercardView (Reddit)
 - (void)showChatActions;
+- (void)showInviteAction;
 - (void)showChangeFlairAction:(_Bool)arg1;
 - (void)showMuteActionForStateWithUserIsMuted:(_Bool)arg1;
 - (void)showBanActionForStateWithUserIsBanned:(_Bool)arg1;

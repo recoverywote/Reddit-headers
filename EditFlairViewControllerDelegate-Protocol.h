@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class EditFlairViewController, NSObject;
+@class EditFlairViewController;
 @protocol FlairProtocol;
 
 @protocol EditFlairViewControllerDelegate <NSObject>
-- (void)editFlairViewController:(EditFlairViewController *)arg1 didDeleteFlair:(NSObject<FlairProtocol> *)arg2;
-- (void)editFlairViewController:(EditFlairViewController *)arg1 didEditFlair:(NSObject<FlairProtocol> *)arg2;
+- (void)editFlairViewController:(EditFlairViewController *)arg1 didDeleteFlair:(id <FlairProtocol>)arg2;
+- (void)editFlairViewController:(EditFlairViewController *)arg1 didEditFlair:(id <FlairProtocol>)arg2;
 @end
 

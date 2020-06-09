@@ -9,10 +9,12 @@
 #import "MutableTooltipModel-Protocol.h"
 
 @class NSString, UIColor, UIView;
+@protocol ViewContext;
 
 @interface TooltipModel : NSObject <MutableTooltipModel>
 {
     _Bool _isTransitioning;
+    id <ViewContext> _viewContext;
     unsigned long long _tooltipType;
     unsigned long long _priority;
     UIView *_anchorView;
@@ -43,7 +45,8 @@
 @property(readonly, nonatomic) __weak UIView *anchorView; // @synthesize anchorView=_anchorView;
 @property(nonatomic) unsigned long long priority; // @synthesize priority=_priority;
 @property(readonly, nonatomic) unsigned long long tooltipType; // @synthesize tooltipType=_tooltipType;
-- (id)initWithTooltipType:(unsigned long long)arg1 anchorView:(id)arg2 buildBlock:(CDUnknownBlockType)arg3;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
+- (id)initWithViewContext:(id)arg1 tooltipType:(unsigned long long)arg2 anchorView:(id)arg3 buildBlock:(CDUnknownBlockType)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

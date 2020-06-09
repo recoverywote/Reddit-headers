@@ -31,6 +31,7 @@
 - (void)didTapBlockWithComment:(id)arg1;
 - (void)didTapReportWithComment:(id)arg1;
 - (void)didTapReplyWithCommentTreeNode:(id)arg1;
+- (void)didTapBanWithCommentTreeNode:(id)arg1;
 - (void)didTapApproveWithCommentTreeNode:(id)arg1;
 - (void)didTapSpamWithCommentTreeNode:(id)arg1;
 - (void)didTapRemoveWithCommentTreeNode:(id)arg1;

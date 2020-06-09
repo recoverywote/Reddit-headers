@@ -18,7 +18,6 @@
 + (id)linkDisplayTypeIconForPostDisplayType:(unsigned long long)arg1;
 + (id)postDisplayTypeIconForPostDisplayType:(unsigned long long)arg1;
 + (id)imageForFeedDisplayMode:(unsigned long long)arg1;
-+ (id)avatarDefaultImageForBase10ID:(long long)arg1;
 + (id)addWatermarkToImage:(id)arg1 withSubredditName:(id)arg2 withUsername:(id)arg3 withLogo:(id)arg4;
 + (id)addWatermarkToImage:(id)arg1 withSubredditName:(id)arg2 withUsername:(id)arg3;
 + (id)circledImageNamed:(id)arg1 tintColor:(id)arg2 fillColor:(id)arg3 size:(double)arg4;

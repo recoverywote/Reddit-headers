@@ -9,7 +9,7 @@
 @interface _TtC7Economy15AwardingService : _TtC7Economy27BaseAccountDependentService
 {
     // Error parsing type: , name: econProductsService
-    // Error parsing type: , name: $__lazy_storage_$_awardViewModelsAsyncCache
+    // Error parsing type: , name: $__lazy_storage_$_usableAwardsAsyncCache
 }
 
 @end

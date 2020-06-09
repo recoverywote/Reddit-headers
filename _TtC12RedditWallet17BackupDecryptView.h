@@ -9,14 +9,12 @@
 __attribute__((visibility("hidden")))
 @interface _TtC12RedditWallet17BackupDecryptView : UIView
 {
-    // Error parsing type: , name: bottomConstraint
     // Error parsing type: , name: themeProvider
     // Error parsing type: , name: notchView
     // Error parsing type: , name: navigationBarView
-    // Error parsing type: , name: innerView
+    // Error parsing type: , name: contentView
     // Error parsing type: , name: actionBar
-    // Error parsing type: , name: contentContainer
-    // Error parsing type: , name: $__lazy_storage_$_scrollingInnerView
+    // Error parsing type: , name: containerView
     // Error parsing type: , name: cancellables
 }
 

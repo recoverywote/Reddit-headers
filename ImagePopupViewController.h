@@ -23,7 +23,7 @@
 
 + (id)awardDetailsInfoDialogMetadataViewForAward:(id)arg1 gildingTarget:(unsigned long long)arg2 subreddit:(id)arg3;
 + (id)inAppPurchasePopupWithAccountContext:(id)arg1 image:(id)arg2 title:(id)arg3 message:(id)arg4 confirmText:(id)arg5 cancelText:(id)arg6 actionHandler:(CDUnknownBlockType)arg7;
-+ (id)cancelPremiumOfferDialogWithAccountContext:(id)arg1 offer:(id)arg2 actionHandler:(CDUnknownBlockType)arg3;
++ (id)cancelPremiumOfferDialogWithAccountContext:(id)arg1 offer:(id)arg2;
 + (id)awardDetailsInfoDialogWithAccountContext:(id)arg1 award:(id)arg2 gildingTarget:(unsigned long long)arg3 subreddit:(id)arg4;
 + (id)gildingFailureAfterPurchaseDialogWithAccountContext:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
 + (id)inAppPurchaseValidationErrorDialogWithAccountContext:(id)arg1 packageType:(long long)arg2 actionHandler:(CDUnknownBlockType)arg3;

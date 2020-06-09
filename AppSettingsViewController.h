@@ -47,6 +47,7 @@
 - (id)textDescriptionOfCurrentAutoPlayMode;
 - (void)themeActionSheetControllerDidUpdate:(id)arg1;
 - (void)accountStatusViewControllerDismissedWithCompletion:(CDUnknownBlockType)arg1;
+- (void)didToggleAnimationsControl:(id)arg1;
 - (_Bool)prefersTabBarHidden;
 - (void)didTogglePostInfoToImageShares:(id)arg1;
 - (void)didToggleCommentSwipeToCollapse:(id)arg1;
@@ -80,6 +81,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)viewDidLoad;
+- (id)settings;
 @property(readonly, nonatomic) RedditService *service;
 @property(readonly, nonatomic) AccountManager *accountManager;
 - (id)initWithAccountContext:(id)arg1;

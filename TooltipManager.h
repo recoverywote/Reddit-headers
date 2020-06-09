@@ -34,7 +34,6 @@
 - (void)willShowTip:(id)arg1;
 - (void)timerTriggered:(id)arg1;
 - (void)showTooltipWithModel:(id)arg1;
-- (void)showToolTipType:(unsigned long long)arg1 anchorView:(id)arg2 transitioning:(_Bool)arg3 arrowPosition:(long long)arg4 customText:(id)arg5 analyticsSource:(id)arg6 analyticsId:(id)arg7;
 - (void)reset;
 - (_Bool)isDisplaying;
 

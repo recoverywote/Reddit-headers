@@ -10,6 +10,10 @@
 {
 }
 
++ (void)updateFlairSettingsForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 isSelfAssignable:(_Bool)arg3 flairType:(long long)arg4 service:(id)arg5 completion:(CDUnknownBlockType)arg6;
++ (id)enableSelfAssignableFlairDescriptionForFlairType:(long long)arg1;
++ (id)enableSelfAssignableFlairTextForFlairType:(long long)arg1;
++ (id)enableFlairTextForFlairType:(long long)arg1;
 + (id)noFlairTemplatesAvailableDescriptionStringForFlairType:(long long)arg1;
 + (id)noFlairTemplatesAvailableTitleStringForFlairType:(long long)arg1;
 + (id)flairDisabledDescriptionStringForFlairType:(long long)arg1;

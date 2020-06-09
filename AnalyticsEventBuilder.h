@@ -11,6 +11,7 @@
 }
 
 + (id)screenViewTypeForFeedDisplayMode:(unsigned long long)arg1;
++ (id)mediaWithPost:(id)arg1;
 + (id)mediaWithLiveStream:(id)arg1;
 + (id)popupWithId:(id)arg1 popupText:(id)arg2 buttonTitle:(id)arg3;
 + (id)postDraftForPost:(id)arg1;

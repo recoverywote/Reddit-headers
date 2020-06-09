@@ -20,9 +20,11 @@ __attribute__((visibility("hidden")))
     // Error parsing type: , name: timesUsedLabel
     // Error parsing type: , name: timesUsedContainer
     // Error parsing type: , name: accessoryImageView
+    // Error parsing type: , name: countdownView
 }
 
 - (void).cxx_destruct;
+- (void)prepareForReuse;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic) _Bool selected;

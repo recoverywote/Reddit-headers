@@ -59,6 +59,7 @@
 - (void)loadingActionStatesWithIsLoading:(_Bool)arg1;
 - (void)userLoadComplete;
 - (void)closeUserModal;
+- (void)inviteUser;
 - (void)startChat;
 - (void)openProfile;
 - (void)changeFlair;
@@ -69,6 +70,7 @@
 - (id)actionWithName:(id)arg1;
 - (void)showAction:(id)arg1 show:(_Bool)arg2;
 - (void)showChatActions;
+- (void)showInviteAction;
 - (void)showChangeFlairAction:(_Bool)arg1;
 - (void)showBlockUserAction;
 - (void)showViewProfileAction;

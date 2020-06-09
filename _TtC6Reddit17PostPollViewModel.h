@@ -8,6 +8,8 @@
 
 @interface _TtC6Reddit17PostPollViewModel : NSObject
 {
+    // Error parsing type: , name: viewContext
+    // Error parsing type: , name: onVote
     // Error parsing type: , name: poll
     // Error parsing type: , name: post
     // Error parsing type: , name: options
@@ -21,7 +23,6 @@
 - (id)init;
 @property(nonatomic, readonly) long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithPost:(id)arg1;
 
 @end
 

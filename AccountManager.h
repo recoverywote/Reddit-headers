@@ -52,6 +52,8 @@
 - (id)accountForPk:(id)arg1;
 - (void)removeAccount:(id)arg1 deletingAccountData:(_Bool)arg2;
 - (void)addService:(id)arg1;
+- (id)createAnonymousService;
+- (void)switchToAnonymousAccountWithService:(id)arg1;
 - (void)switchToLoggedOutAccount;
 @property(retain, nonatomic) Account *currentAccount;
 @property(readonly, nonatomic) Account *loggedOutAccount;

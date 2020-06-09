@@ -6,12 +6,12 @@
 
 #import <Economy/NSObject-Protocol.h>
 
-@class Award;
+@class Award, NSString;
 
 @protocol _TtP7Economy25AwardSelectionEventLogger_ <NSObject>
 - (void)logClickEditOptionsEvent;
 - (void)logCloseGiveAwardModalEvent;
 - (void)logTypeMessageEvent;
-- (void)logSelectAwardEventWithAward:(Award *)arg1 rowIndex:(long long)arg2 columnIndex:(long long)arg3;
+- (void)logSelectAwardEventWithAward:(Award *)arg1 rowIndex:(long long)arg2 columnIndex:(long long)arg3 miniPillTag:(NSString *)arg4 miniPillText:(NSString *)arg5;
 @end
 

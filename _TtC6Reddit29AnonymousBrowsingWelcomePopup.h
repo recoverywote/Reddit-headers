@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit29AnonymousBrowsingWelcomePopup : BaseViewController
 {
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: corneredView
     // Error parsing type: , name: scrollViewContainerView
     // Error parsing type: , name: scrollView
@@ -31,9 +32,10 @@
 }
 
 - (void).cxx_destruct;
-- (void)viewDidLoad;
-- (id)initWithCompletionBlock:(CDUnknownBlockType)arg1;
 - (id)init;
+- (void)viewDidLoad;
+- (id)initWithAccountContext:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

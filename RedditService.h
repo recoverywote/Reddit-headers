@@ -106,7 +106,7 @@
 - (void)invalidate;
 - (void)dealloc;
 @property(readonly, nonatomic) NSHTTPCookie *modMailCookie;
-- (id)initWithAccount:(id)arg1 dataDirectory:(id)arg2 credentials:(id)arg3 accountIdendifiers:(id)arg4 requestProcessors:(id)arg5 responseProcessors:(id)arg6 sessionTracker:(id)arg7 loid:(id)arg8 userDefaults:(id)arg9;
+- (id)initWithAccount:(id)arg1 dataDirectory:(id)arg2 credentials:(id)arg3 accountIdendifiers:(id)arg4 requestProcessors:(id)arg5 responseProcessors:(id)arg6 sessionTracker:(id)arg7 loid:(id)arg8;
 - (id)initWithAccount:(id)arg1;
 - (void)deleteDraftPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveDraftPostForSubmittedPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -313,6 +313,7 @@
 - (id)popularPostFeedWithSort:(unsigned long long)arg1 range:(unsigned long long)arg2 geoRegion:(id)arg3;
 - (id)adhocMultiPostFeedWithSubredditNames:(id)arg1 sort:(unsigned long long)arg2 range:(unsigned long long)arg3;
 - (id)adhocMultiPostFeedWithSubredditIds:(id)arg1 sort:(unsigned long long)arg2 range:(unsigned long long)arg3;
+- (id)recommendedVideoPostFeedWithSort:(unsigned long long)arg1 range:(unsigned long long)arg2 seedSubredditId:(id)arg3;
 - (id)homePostFeedWithSort:(unsigned long long)arg1 range:(unsigned long long)arg2;
 - (void)fetchLiveEventWithID:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchFeaturedLiveEventAndAnnouncementsWithCompletion:(CDUnknownBlockType)arg1;
@@ -321,10 +322,13 @@
 - (id)liveEventWithData:(id)arg1;
 - (void)suggestSubredditGeoPlace:(id)arg1 forSubreddit:(id)arg2 sessionId:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)searchForGeoPlaceWithInput:(id)arg1 sessionId:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)fetchSettingsForSubredditsWithNames:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)updateAuthorFlairSettingsForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 isSelfAssignable:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)updatePostFlairSettingsForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 isSelfAssignable:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)updateSubredditRecommendationPreferences:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchPowerupsInfoForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSupportersForSubreddit:(id)arg1 supporterType:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)updateSettingsForSubreddit:(id)arg1 publicDescription:(id)arg2 isNSFW:(_Bool)arg3 subredditType:(long long)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)updateSettingsWithSubredditSettingsInput:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updatePrimaryTagForSubreddit:(id)arg1 primaryTag:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchPrimaryTagForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)createSubredditWithName:(id)arg1 publicDescription:(id)arg2 isNSFW:(_Bool)arg3 type:(long long)arg4 communityTags:(id)arg5 primaryCommunityTag:(id)arg6 completion:(CDUnknownBlockType)arg7;

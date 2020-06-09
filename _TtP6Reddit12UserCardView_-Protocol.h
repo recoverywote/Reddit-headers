@@ -9,6 +9,7 @@
 @protocol _TtP6Reddit12UserCardView_
 - (void)configureWithUser:(User *)arg1 subreddit:(Subreddit *)arg2;
 - (void)showChatActions;
+- (void)showInviteAction;
 - (void)showChangeFlairAction:(_Bool)arg1;
 - (void)showMuteActionForStateWithUserIsMuted:(_Bool)arg1;
 - (void)showBanActionForStateWithUserIsBanned:(_Bool)arg1;

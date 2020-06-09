@@ -93,6 +93,7 @@
 - (void)cacheDeletedComment:(id)arg1;
 - (void)downvoteComment:(id)arg1;
 - (void)upvoteComment:(id)arg1;
+- (void)didTapBanWithComment:(id)arg1;
 - (void)didTapApproveWithComment:(id)arg1;
 - (void)didTapRemoveWithComment:(id)arg1 asSpam:(_Bool)arg2;
 - (void)didTapBlockWithComment:(id)arg1;

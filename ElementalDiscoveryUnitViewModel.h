@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "DiscoveryUnitViewModel-Protocol.h"
+#import "DiscoveryUnitViewModelAnalytics-Protocol.h"
 #import "IGListDiffable-Protocol.h"
 
 @class NSArray, NSString;
 @protocol DiscoveryUnitViewModel;
 
-@interface ElementalDiscoveryUnitViewModel : NSObject <IGListDiffable, DiscoveryUnitViewModel>
+@interface ElementalDiscoveryUnitViewModel : NSObject <IGListDiffable, DiscoveryUnitViewModelAnalytics, DiscoveryUnitViewModel>
 {
     id <DiscoveryUnitViewModel> subDiscoveryUnitViewModel;
     NSString *_pk;
@@ -33,6 +34,8 @@
 - (id)initWithPrimaryKey:(id)arg1 discoveryUnitElements:(id)arg2;
 - (_Bool)isEqualToDiffableObject:(id)arg1;
 - (id)diffIdentifier;
+@property(readonly, nonatomic) unsigned long long analyticsItemsCount;
+@property(readonly, nonatomic) NSArray *analyticsItemsPks;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,10 +11,10 @@ __attribute__((visibility("hidden")))
 {
     // Error parsing type: , name: shouldHidePrice
     // Error parsing type: , name: isLockedForPremiumAwards
-    // Error parsing type: , name: eventLogger
     // Error parsing type: , name: isV2
     // Error parsing type: , name: _selectedAwardViewModel
     // Error parsing type: , name: didSelectAward
+    // Error parsing type: , name: didDeselectAward
     // Error parsing type: , name: displayedAwardViewModels
     // Error parsing type: , name: awardViewModels
     // Error parsing type: , name: theme

@@ -16,7 +16,7 @@
 + (id)sharedManager;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *duplicateHistory; // @synthesize duplicateHistory=_duplicateHistory;
-- (void)duplicatePostsForPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)duplicatePostsForPost:(id)arg1 service:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)clearCache;
 
 @end

@@ -9,12 +9,13 @@
 #import "CarouselContainerNodeDelegate-Protocol.h"
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 
-@class FeedNavigator, ListingPresenter, NSString, RailsContext, RedditService;
+@class FeedNavigator, ListingPresenter, NSString, RailsContext, RedditService, Subreddit;
 @protocol AccountContext, AnalyticsViewProtocol, CarouselDelegatorDelegate, ListingAnalyticsProtocol;
 
 @interface CarouselDelegator : NSObject <UIViewControllerTransitioningDelegate, CarouselContainerNodeDelegate>
 {
     id <CarouselDelegatorDelegate> _delegate;
+    Subreddit *_sourceSubreddit;
     ListingPresenter *_listingPresenter;
     id <ListingAnalyticsProtocol> _listingAnalytics;
     CDUnknownBlockType _carouselSeeMoreAction;
@@ -36,6 +37,7 @@
 @property(copy, nonatomic) CDUnknownBlockType carouselSeeMoreAction; // @synthesize carouselSeeMoreAction=_carouselSeeMoreAction;
 @property(nonatomic) __weak id <ListingAnalyticsProtocol> listingAnalytics; // @synthesize listingAnalytics=_listingAnalytics;
 @property(nonatomic) __weak ListingPresenter *listingPresenter; // @synthesize listingPresenter=_listingPresenter;
+@property(nonatomic) __weak Subreddit *sourceSubreddit; // @synthesize sourceSubreddit=_sourceSubreddit;
 @property(nonatomic) __weak id <CarouselDelegatorDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)subscribeToUser:(id)arg1;
 - (void)subscribeToSubreddit:(id)arg1;
@@ -47,6 +49,7 @@
 - (id)viewControllerForCarouselItem:(id)arg1 forCarousel:(id)arg2 atIndex:(unsigned long long)arg3;
 - (void)carouselContainerNode:(id)arg1 performRemoveOfCarousel:(id)arg2 removalReason:(unsigned long long)arg3;
 - (void)performRemoveOfCarousel:(id)arg1;
+- (void)carouselNodeController:(id)arg1 willVisibleCarouselItem:(id)arg2;
 - (void)carouselNodeController:(id)arg1 didTapCallToAction:(unsigned long long)arg2 forPost:(id)arg3;
 - (void)carouselNodeController:(id)arg1 didTapSubscribeFromTitleWithCarouselItem:(id)arg2 withSubreddit:(id)arg3;
 - (void)carouselNodeController:(id)arg1 didTapSubredditWithCarouselItem:(id)arg2 withSubreddit:(id)arg3;

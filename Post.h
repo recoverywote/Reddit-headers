@@ -57,6 +57,7 @@
     NSString *_authorPk;
     NSDate *_createdAt;
     long long _score;
+    double _upvoteRatio;
     long long _voteState;
     unsigned long long _commentCount;
     long long _distinguished;
@@ -136,6 +137,7 @@
 @property(nonatomic) unsigned long long commentCount; // @synthesize commentCount=_commentCount;
 @property(nonatomic) _Bool isScoreHidden; // @synthesize isScoreHidden=_isScoreHidden;
 @property(nonatomic) long long voteState; // @synthesize voteState=_voteState;
+@property(nonatomic) double upvoteRatio; // @synthesize upvoteRatio=_upvoteRatio;
 @property(nonatomic) long long score; // @synthesize score=_score;
 @property(retain, nonatomic) NSDate *createdAt; // @synthesize createdAt=_createdAt;
 @property(copy, nonatomic) NSString *authorPk; // @synthesize authorPk=_authorPk;

@@ -7,7 +7,8 @@
 #import <RedditVideo/_TtC11RedditVideo15RedditVideoView.h>
 
 @interface _TtC11RedditVideo15RedditVideoView (RedditVideo)
+- (void)didClaimOutputWithPlayerController:(id)arg1;
 - (void)muteDidChangeWithPlayerController:(id)arg1;
-- (void)willChangeOutputWithPlayerController:(id)arg1;
+- (void)willResignOutputWithPlayerController:(id)arg1;
 @end
 

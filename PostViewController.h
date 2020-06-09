@@ -6,19 +6,20 @@
 
 #import "BaseViewController.h"
 
+#import "BaseTextViewDelegate-Protocol.h"
 #import "FlairSelectionSourceViewProtocol-Protocol.h"
 #import "FlairViewDelegate-Protocol.h"
 #import "KeyboardInteractorDelegate-Protocol.h"
 #import "RecentSubredditsViewControllerDelegate-Protocol.h"
 #import "RequestToNavigateView-Protocol.h"
+#import "SubredditBarViewDelegate-Protocol.h"
 #import "UIAdaptivePresentationControllerDelegate-Protocol.h"
 
-@class BaseButton, BaseLabel, BaseScrollView, FeedSpinnerView, FlairLabel, KeyboardFloatingViewInteractor, LocationManager, NSArray, NSString, NSURL, PostFlair, PowerupsMarketingBadgeView, RedditService, SubmittedPost, Subreddit, SubredditBarView, UIView, _TtC6Reddit24ChatDiscussionToggleView, _TtC6Reddit30SubredditPostingDifficultyView;
+@class BaseButton, BaseLabel, BaseScrollView, BaseTextView, FeedSpinnerView, FlairLabel, KeyboardFloatingViewInteractor, NSArray, NSString, NSURL, PostFlair, PowerupsMarketingBadgeView, RedditService, SubmittedPost, Subreddit, SubredditBarView, UIView, _TtC6Reddit24ChatDiscussionToggleView, _TtC6Reddit25PostKeyboardAccessoryView, _TtC6Reddit30SubredditPostingDifficultyView;
 @protocol AccountContext, PostViewControllerDelegate;
 
-@interface PostViewController : BaseViewController <RecentSubredditsViewControllerDelegate, FlairViewDelegate, RequestToNavigateView, FlairSelectionSourceViewProtocol, KeyboardInteractorDelegate, UIAdaptivePresentationControllerDelegate>
+@interface PostViewController : BaseViewController <RecentSubredditsViewControllerDelegate, FlairViewDelegate, RequestToNavigateView, FlairSelectionSourceViewProtocol, KeyboardInteractorDelegate, UIAdaptivePresentationControllerDelegate, SubredditBarViewDelegate, BaseTextViewDelegate>
 {
-    _Bool _analyticsDidCancelPost;
     _Bool _hasBeenEdited;
     _Bool _canSaveAsDraft;
     _TtC6Reddit30SubredditPostingDifficultyView *_postingDifficultyView;
@@ -30,18 +31,37 @@
     long long _postingRemovalRate;
     PostFlair *_currentFlair;
     NSArray *_postFlairs;
-    LocationManager *_locationManager;
     _TtC6Reddit24ChatDiscussionToggleView *_chatDiscussionView;
     KeyboardFloatingViewInteractor *_keyboardFloatingViewInteractor;
     FeedSpinnerView *_spinnerView;
     id <AccountContext> _accountContext;
     SubmittedPost *_postToEdit;
     NSArray *_formatValidationErrors;
+    BaseScrollView *_wrapperScrollView;
+    BaseLabel *_mainErrorView;
+    BaseLabel *_titleErrorView;
+    BaseLabel *_flairErrorView;
+    BaseLabel *_postErrorView;
+    UIView *_titleErrorSeparator;
+    UIView *_postErrorSeparator;
+    PowerupsMarketingBadgeView *_powerupsMarketingBadgeView;
+    BaseTextView *_titleView;
+    _TtC6Reddit25PostKeyboardAccessoryView *_postKeyboardAccessoryView;
 }
 
 + (id)postViewControllerForSubmittedPostType:(unsigned long long)arg1 accountContext:(id)arg2;
 + (id)postViewControllerForSubmittedPostToEdit:(id)arg1 accountContext:(id)arg2;
 - (void).cxx_destruct;
+@property(retain, nonatomic) _TtC6Reddit25PostKeyboardAccessoryView *postKeyboardAccessoryView; // @synthesize postKeyboardAccessoryView=_postKeyboardAccessoryView;
+@property(retain, nonatomic) BaseTextView *titleView; // @synthesize titleView=_titleView;
+@property(retain, nonatomic) PowerupsMarketingBadgeView *powerupsMarketingBadgeView; // @synthesize powerupsMarketingBadgeView=_powerupsMarketingBadgeView;
+@property(retain, nonatomic) UIView *postErrorSeparator; // @synthesize postErrorSeparator=_postErrorSeparator;
+@property(retain, nonatomic) UIView *titleErrorSeparator; // @synthesize titleErrorSeparator=_titleErrorSeparator;
+@property(retain, nonatomic) BaseLabel *postErrorView; // @synthesize postErrorView=_postErrorView;
+@property(retain, nonatomic) BaseLabel *flairErrorView; // @synthesize flairErrorView=_flairErrorView;
+@property(retain, nonatomic) BaseLabel *titleErrorView; // @synthesize titleErrorView=_titleErrorView;
+@property(retain, nonatomic) BaseLabel *mainErrorView; // @synthesize mainErrorView=_mainErrorView;
+@property(retain, nonatomic) BaseScrollView *wrapperScrollView; // @synthesize wrapperScrollView=_wrapperScrollView;
 @property(retain, nonatomic) NSArray *formatValidationErrors; // @synthesize formatValidationErrors=_formatValidationErrors;
 @property(retain, nonatomic) SubmittedPost *postToEdit; // @synthesize postToEdit=_postToEdit;
 @property(nonatomic) _Bool canSaveAsDraft; // @synthesize canSaveAsDraft=_canSaveAsDraft;
@@ -50,13 +70,14 @@
 @property(retain, nonatomic) FeedSpinnerView *spinnerView; // @synthesize spinnerView=_spinnerView;
 @property(retain, nonatomic) KeyboardFloatingViewInteractor *keyboardFloatingViewInteractor; // @synthesize keyboardFloatingViewInteractor=_keyboardFloatingViewInteractor;
 @property(retain, nonatomic) _TtC6Reddit24ChatDiscussionToggleView *chatDiscussionView; // @synthesize chatDiscussionView=_chatDiscussionView;
-@property(retain, nonatomic) LocationManager *locationManager; // @synthesize locationManager=_locationManager;
 @property(copy, nonatomic) NSArray *postFlairs; // @synthesize postFlairs=_postFlairs;
 @property(retain, nonatomic) PostFlair *currentFlair; // @synthesize currentFlair=_currentFlair;
 @property(nonatomic) long long postingRemovalRate; // @synthesize postingRemovalRate=_postingRemovalRate;
-@property(nonatomic) _Bool analyticsDidCancelPost; // @synthesize analyticsDidCancelPost=_analyticsDidCancelPost;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) __weak id <PostViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)moveCaretIfPossibleInScrollView:(id)arg1;
+- (id)inputAccessoryView;
+- (_Bool)textViewShouldChangeSize:(id)arg1;
 - (id)formatValidationErrorsFromAPIErrors:(id)arg1;
 - (void)enablePostButton;
 - (void)submittedPostDidUpdateTranscodeState:(id)arg1;
@@ -81,8 +102,8 @@
 - (id)populateSubmittedPost;
 - (void)didTapCloseEditablePopup;
 - (void)didTapClose;
-- (void)didTapSubredditRules;
-- (void)didTapDropDown;
+- (void)subredditBarViewRulesTapped:(id)arg1;
+- (void)subredditBarViewDropDownTapped:(id)arg1;
 - (void)sizeFlairView;
 - (void)flairSelectionPresenter:(id)arg1 didSelectFlair:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)presentFlairsUsingFlairs:(id)arg1;
@@ -103,13 +124,6 @@
 - (void)configureViewAppearance;
 @property(readonly, nonatomic) RedditService *service;
 - (id)initWithAccountContext:(id)arg1;
-@property(retain, nonatomic) UIView *postErrorSeparator; // @dynamic postErrorSeparator;
-@property(retain, nonatomic) PowerupsMarketingBadgeView *powerupsMarketingBadgeView; // @dynamic powerupsMarketingBadgeView;
-@property(retain, nonatomic) UIView *titleErrorSeparator; // @dynamic titleErrorSeparator;
-@property(retain, nonatomic) BaseLabel *postErrorView; // @dynamic postErrorView;
-@property(retain, nonatomic) BaseLabel *flairErrorView; // @dynamic flairErrorView;
-@property(retain, nonatomic) BaseLabel *titleErrorView; // @dynamic titleErrorView;
-@property(retain, nonatomic) BaseLabel *mainErrorView; // @dynamic mainErrorView;
 @property(readonly, nonatomic) SubredditBarView *subredditDropdownView; // @synthesize subredditDropdownView=_subredditDropdownView;
 @property(readonly, nonatomic) BaseButton *postButton; // @synthesize postButton=_postButton;
 @property(readonly, nonatomic) FlairLabel *flairView; // @synthesize flairView=_flairView;
@@ -124,7 +138,6 @@
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) _Bool screenViewLoggingEnabled;
 @property(readonly) Class superclass;
-@property(retain, nonatomic) BaseScrollView *wrapperScrollView; // @dynamic wrapperScrollView;
 
 @end
 
