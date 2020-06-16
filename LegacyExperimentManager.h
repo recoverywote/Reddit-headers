@@ -6,13 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "LegacyBoolExperimentDelegate-Protocol.h"
-#import "LegacyEnumExperimentDelegate-Protocol.h"
 #import "NSCoding-Protocol.h"
 
-@class DiscoveryConfiguration, NSArray, NSDictionary, NSMutableDictionary, NSSet, NSString, NSURL, RedditService;
+@class DiscoveryConfiguration, NSArray, NSDictionary, NSSet, NSString, NSURL, RedditService;
 
-@interface LegacyExperimentManager : NSObject <LegacyBoolExperimentDelegate, LegacyEnumExperimentDelegate, NSCoding>
+@interface LegacyExperimentManager : NSObject <NSCoding>
 {
     _Bool _hasPerformedInitialFetch;
     _Bool _enableSearchResultsViewEventLogging;
@@ -42,22 +40,17 @@
     NSURL *_coinHelpPageURL;
     NSDictionary *_surveyConfigs;
     DiscoveryConfiguration *_discoveryConfiguration;
-    NSString *_mainFeedParamOverwrite;
     RedditService *_service;
-    NSMutableDictionary *_selectorMappings;
-    NSString *_experimentFilePath;
+    NSString *_configFilePath;
 }
 
-+ (id)experimentFilePathForService:(id)arg1;
-+ (id)experimentNames;
++ (id)configFilePathForService:(id)arg1;
 + (id)experimentManagerForService:(id)arg1;
 + (void)initialize;
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSString *experimentFilePath; // @synthesize experimentFilePath=_experimentFilePath;
+@property(copy, nonatomic) NSString *configFilePath; // @synthesize configFilePath=_configFilePath;
 @property(nonatomic) _Bool isRefreshingConfig; // @synthesize isRefreshingConfig=_isRefreshingConfig;
-@property(retain, nonatomic) NSMutableDictionary *selectorMappings; // @synthesize selectorMappings=_selectorMappings;
 @property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
-@property(copy, nonatomic) NSString *mainFeedParamOverwrite; // @synthesize mainFeedParamOverwrite=_mainFeedParamOverwrite;
 @property(copy, nonatomic) DiscoveryConfiguration *discoveryConfiguration; // @synthesize discoveryConfiguration=_discoveryConfiguration;
 @property(copy, nonatomic) NSDictionary *surveyConfigs; // @synthesize surveyConfigs=_surveyConfigs;
 @property(retain, nonatomic) NSURL *coinHelpPageURL; // @synthesize coinHelpPageURL=_coinHelpPageURL;
@@ -87,15 +80,9 @@
 @property(nonatomic) _Bool hasPerformedInitialFetch; // @synthesize hasPerformedInitialFetch=_hasPerformedInitialFetch;
 - (void)enableDiscoveryUnit:(id)arg1 withPercentage:(double)arg2;
 - (void)enableDiscoveryUnitsForBeta;
-- (void)associateExperimentGetter:(SEL)arg1 withExperimentName:(id)arg2;
-- (void)setIntegerValue:(long long)arg1 forEnumExperiment:(id)arg2;
-- (long long)integerValueForEnumExperiment:(id)arg1;
-- (void)setValue:(_Bool)arg1 forBooleanExperiment:(id)arg2;
-- (_Bool)valueForBooleanExperiment:(id)arg1;
-@property(readonly, copy, nonatomic) NSArray *allInternallyDisplayedExperimentSettings;
 - (void)parseConfig:(id)arg1;
-- (void)archiveToExperimentFilePath;
-- (void)performHandshakeWithSuccess:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
+- (void)archiveToConfigFilePath;
+- (void)fetchConfigWithCompletion:(CDUnknownBlockType)arg1;
 - (void)overrideValuesForBetaTestingIfNeeded;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

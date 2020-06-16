@@ -21,14 +21,18 @@
     _Bool _typeIsSet;
     _Bool _titleIsSet;
     _Bool _bodyIsSet;
+    _Bool _authorization_statusIsSet;
     NSString *_id;
     NSString *_process_notes;
     NSString *_type;
     NSString *_title;
     NSString *_body;
+    NSString *_authorization_status;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool authorization_statusIsSet; // @synthesize authorization_statusIsSet=_authorization_statusIsSet;
+@property(copy, nonatomic) NSString *authorization_status; // @synthesize authorization_status=_authorization_status;
 @property(nonatomic) _Bool bodyIsSet; // @synthesize bodyIsSet=_bodyIsSet;
 @property(copy, nonatomic) NSString *body; // @synthesize body=_body;
 @property(nonatomic) _Bool titleIsSet; // @synthesize titleIsSet=_titleIsSet;
@@ -45,6 +49,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetAuthorization_status;
 - (void)unsetBody;
 - (void)unsetTitle;
 - (void)unsetType;
@@ -56,7 +61,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithId:(id)arg1 process_notes:(id)arg2 dropped:(_Bool)arg3 type:(id)arg4 title:(id)arg5 body:(id)arg6;
+- (id)initWithId:(id)arg1 process_notes:(id)arg2 dropped:(_Bool)arg3 type:(id)arg4 title:(id)arg5 body:(id)arg6 authorization_status:(id)arg7;
 - (id)init;
 
 // Remaining properties

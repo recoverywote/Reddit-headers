@@ -7,8 +7,9 @@
 #import "_TtC6Reddit27SearchAnalyticsEventFactory.h"
 
 @interface _TtC6Reddit27SearchAnalyticsEventFactory (Reddit)
-+ (id)searchClickPostEventWithPost:(id)arg1 railsContext:(id)arg2 isNSFWHidden:(_Bool)arg3 discoveryUnit:(id)arg4 postsPks:(id)arg5 position:(id)arg6 relativePosition:(id)arg7;
-+ (id)searchClickPostEventWithPost:(id)arg1 railsContext:(id)arg2 isNSFWHidden:(_Bool)arg3 position:(id)arg4;
++ (id)searchViewTrendingEventWithAnalyticsContext:(id)arg1 trendingSearch:(id)arg2 position:(id)arg3 discoveryUnit:(id)arg4 itemsPks:(id)arg5;
++ (id)searchViewTrendingEventWithAnalyticsContext:(id)arg1 trendingSearch:(id)arg2 position:(id)arg3;
++ (id)searchViewAdEventWithPost:(id)arg1 railsContext:(id)arg2 isNSFWHidden:(_Bool)arg3 discoveryUnit:(id)arg4 postsPks:(id)arg5 position:(id)arg6 relativePosition:(id)arg7;
 + (id)searchViewPostEventWithPost:(id)arg1 railsContext:(id)arg2 isNSFWHidden:(_Bool)arg3 discoveryUnit:(id)arg4 postsPks:(id)arg5 position:(id)arg6 relativePosition:(id)arg7;
 + (id)searchViewPostEventWithPost:(id)arg1 railsContext:(id)arg2 isNSFWHidden:(_Bool)arg3 position:(id)arg4;
 @end

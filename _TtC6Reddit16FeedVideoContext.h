@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP11RedditVideo12VideoContext_-Protocol.h"
-
 @class _TtC11RedditVideo21PlayerControllerCache;
 
-@interface _TtC6Reddit16FeedVideoContext : NSObject <_TtP11RedditVideo12VideoContext_>
+@interface _TtC6Reddit16FeedVideoContext : NSObject
 {
     // Error parsing type: , name: playerControllerCache
 }

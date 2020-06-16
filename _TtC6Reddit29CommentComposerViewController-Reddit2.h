@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit29CommentComposerViewController.h"
 
-#import "UITextViewDelegate-Protocol.h"
-
-@interface _TtC6Reddit29CommentComposerViewController (Reddit2) <UITextViewDelegate>
+@interface _TtC6Reddit29CommentComposerViewController (Reddit2)
 - (void)textViewDidChange:(id)arg1;
 - (_Bool)textViewShouldBeginEditing:(id)arg1;
 - (void)textViewDidEndEditing:(id)arg1;

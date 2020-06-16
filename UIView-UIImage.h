@@ -17,5 +17,7 @@
 - (void)bounceVertically:(double)arg1;
 - (void)animateFadeInWithDuration:(double)arg1;
 - (void)showHighlightAnimationWithColor:(id)arg1;
+- (void)clearBadgeIndicator;
+- (void)addBadgeIndicator:(CDUnknownBlockType)arg1;
 @end
 

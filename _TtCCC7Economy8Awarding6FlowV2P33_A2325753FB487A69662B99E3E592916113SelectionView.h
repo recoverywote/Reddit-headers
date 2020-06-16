@@ -12,7 +12,6 @@
 {
     // Error parsing type: , name: handleView
     // Error parsing type: , name: headerView
-    // Error parsing type: , name: saleView
     // Error parsing type: , name: miniPillBar
     // Error parsing type: , name: awardList
     // Error parsing type: , name: awardInfoView

@@ -16,7 +16,10 @@
     // Error parsing type: , name: snapshotView
     // Error parsing type: , name: onWillResignOutput
     // Error parsing type: , name: onDidClaimOutput
+    // Error parsing type: , name: onDidEnterPlayableVisibility
+    // Error parsing type: , name: onDidExitPlayableVisibility
     // Error parsing type: , name: onStateDidChange
+    // Error parsing type: , name: onDidReparent
     // Error parsing type: , name: savedAudioState
     // Error parsing type: , name: playerController
 }
@@ -28,6 +31,8 @@
 - (void)reparentWithOtherVideoView:(id)arg1;
 - (void)didExitPlayableVisibility;
 - (void)didEnterPlayableVisibility;
+- (void)didEnterForeground;
+- (void)didEnterBackground;
 - (void)pause;
 - (void)play;
 - (void)preload;
@@ -37,6 +42,9 @@
 @property(nonatomic) _Bool shouldAutoplay;
 @property(nonatomic) _Bool isMuted;
 @property(nonatomic, retain) _TtC11RedditVideo16PlayerController *playerController; // @synthesize playerController;
+@property(nonatomic, copy) CDUnknownBlockType onDidReparent;
+@property(nonatomic, copy) CDUnknownBlockType onDidExitPlayableVisibility;
+@property(nonatomic, copy) CDUnknownBlockType onDidEnterPlayableVisibility;
 @property(nonatomic, copy) CDUnknownBlockType onDidClaimOutput;
 @property(nonatomic, copy) CDUnknownBlockType onWillResignOutput;
 @property(nonatomic, readonly) _TtC11RedditVideo15PlayerLayerView *playerLayerView; // @synthesize playerLayerView;

@@ -15,13 +15,15 @@
 {
     // Error parsing type: , name: accountManager
     // Error parsing type: , name: econSettings
+    // Error parsing type: , name: economyAnalyticsLoggerProvider
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isInAnonymousBrowsingWithRedditService:(id)arg1;
 - (id)economyAnalyticsLoggerWithRedditService:(id)arg1;
-- (id)initWithAccountManager:(id)arg1 appSettings:(id)arg2;
+- (id)initWithAccountManager:(id)arg1 appSettings:(id)arg2 economyAnalyticsLoggerProvider:(CDUnknownBlockType)arg3;
+@property(nonatomic, readonly) CDUnknownBlockType economyAnalyticsLoggerProvider;
 @property(nonatomic, readonly) id <_TtP7Economy12EconSettings_> econSettings; // @synthesize econSettings;
 @property(nonatomic, readonly) AccountManager *accountManager; // @synthesize accountManager;
 

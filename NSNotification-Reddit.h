@@ -8,5 +8,6 @@
 
 @interface NSNotification (Reddit)
 + (id)volumeButtonObserverDidStopObserving;
++ (id)SurveyShowEventNotification;
 @end
 

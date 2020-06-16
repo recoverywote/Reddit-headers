@@ -10,7 +10,8 @@
 
 @interface AwardDetailsCellViewModel : NSObject
 {
-    _Bool _shouldShowOverflowButton;
+    _Bool _isReportable;
+    _Bool _isHideable;
     NSURL *_iconURL;
     NSString *_countString;
     unsigned long long _maxCountDigits;
@@ -19,9 +20,10 @@
     NSString *_subtitle;
 }
 
-+ (id)viewModelForAwardingTotal:(id)arg1 maxCountDigits:(unsigned long long)arg2;
++ (id)viewModelForAwardingTotal:(id)arg1 maxCountDigits:(unsigned long long)arg2 isHideable:(_Bool)arg3;
 - (void).cxx_destruct;
-@property(nonatomic) _Bool shouldShowOverflowButton; // @synthesize shouldShowOverflowButton=_shouldShowOverflowButton;
+@property(nonatomic) _Bool isHideable; // @synthesize isHideable=_isHideable;
+@property(nonatomic) _Bool isReportable; // @synthesize isReportable=_isReportable;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *subtitleIconName; // @synthesize subtitleIconName=_subtitleIconName;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;

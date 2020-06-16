@@ -12,9 +12,9 @@
     // Error parsing type: , name: titleView
     // Error parsing type: , name: splitView
     // Error parsing type: , name: disclaimerView
+    // Error parsing type: , name: emailPermissionsButton
     // Error parsing type: , name: usernamePasswordEmailView
     // Error parsing type: , name: authenticationProviderView
-    // Error parsing type: , name: emailPermissionsButton
     // Error parsing type: , name: shouldShowEmailPermissions
     // Error parsing type: , name: shouldEnableSingleSignOn
 }

@@ -7,9 +7,11 @@
 #import "PillButton.h"
 
 @class BaseView, PillStyle, UIColor;
+@protocol ViewContext;
 
 @interface REDPillView : PillButton
 {
+    id <ViewContext> _viewContext;
     BaseView *_selectedOverlayView;
     PillStyle *_pillStyle;
     UIColor *_pillTextColor;
@@ -21,13 +23,14 @@
 @property(retain, nonatomic) UIColor *pillTextColor; // @synthesize pillTextColor=_pillTextColor;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) BaseView *selectedOverlayView; // @synthesize selectedOverlayView=_selectedOverlayView;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)layoutSubviews;
 - (void)setSelected:(_Bool)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)configureWithAttributedTitle:(id)arg1;
 - (void)configureWithAttributeString:(id)arg1;
 - (void)configureWithPill:(id)arg1 textColor:(id)arg2 backgroundColor:(id)arg3;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

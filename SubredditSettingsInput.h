@@ -21,11 +21,15 @@
     NSNumber *_isChatPostAllowed;
     NSNumber *_isTopListingAllowed;
     NSNumber *_isDiscoveryAllowed;
+    NSString *_language;
+    long long _subredditAllowedPostType;
     long long _currentSubredditType;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) long long currentSubredditType; // @synthesize currentSubredditType=_currentSubredditType;
+@property(nonatomic) long long subredditAllowedPostType; // @synthesize subredditAllowedPostType=_subredditAllowedPostType;
+@property(retain, nonatomic) NSString *language; // @synthesize language=_language;
 @property(retain, nonatomic) NSNumber *isDiscoveryAllowed; // @synthesize isDiscoveryAllowed=_isDiscoveryAllowed;
 @property(retain, nonatomic) NSNumber *isTopListingAllowed; // @synthesize isTopListingAllowed=_isTopListingAllowed;
 @property(retain, nonatomic) NSNumber *isChatPostAllowed; // @synthesize isChatPostAllowed=_isChatPostAllowed;

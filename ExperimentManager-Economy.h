@@ -7,6 +7,7 @@
 #import <RedditCore/ExperimentManager.h>
 
 @interface ExperimentManager (Economy)
+@property(nonatomic, readonly) _Bool isEconHideAwardsEnabled;
 @property(nonatomic, readonly) _Bool isLapsedUserTargetedOfferEnabled;
 @property(nonatomic, readonly) _Bool isNewUserTargetedOfferEnabled;
 @property(nonatomic, readonly) _Bool isPremiumFlowTestingEnabled;

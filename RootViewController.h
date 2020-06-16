@@ -6,15 +6,15 @@
 
 #import "BaseViewController.h"
 
-#import "CaptureViewControllerDelegate-Protocol.h"
 #import "IntroViewControllerDelegate-Protocol.h"
 #import "MainTabBarControllerDelegate-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
+#import "_TtP6Reddit34SplashScreenViewControllerDelegate_-Protocol.h"
 
-@class AccountManager, CaptureViewController, FeedSpinnerView, IntroViewController, MainTabBarController, NSDictionary, NSString, UIView, UserDrawerViewController, _TtC6Reddit20AnonymousModeManager;
+@class AccountManager, FeedSpinnerView, MainTabBarController, NSDictionary, NSString, UIView, UIViewController, UserDrawerViewController, _TtC6Reddit20AnonymousModeManager;
 @protocol AccountContext, RootViewControllerDelegate;
 
-@interface RootViewController : BaseViewController <IntroViewControllerDelegate, MainTabBarControllerDelegate, CaptureViewControllerDelegate, UIGestureRecognizerDelegate>
+@interface RootViewController : BaseViewController <IntroViewControllerDelegate, MainTabBarControllerDelegate, UIGestureRecognizerDelegate, _TtP6Reddit34SplashScreenViewControllerDelegate_>
 {
     _Bool _hasLoadedAtLeastOneChildViewController;
     _Bool _didInstallNewMainTabController;
@@ -24,8 +24,7 @@
     _TtC6Reddit20AnonymousModeManager *_anonymousModeManager;
     id <AccountContext> _accountContext;
     UserDrawerViewController *_userDrawerViewController;
-    IntroViewController *_introController;
-    CaptureViewController *_captureViewController;
+    UIViewController *_introController;
     FeedSpinnerView *_firstLoadSpinner;
     double _timeFirstInitialized;
     NSDictionary *_launchOptions;
@@ -41,14 +40,14 @@
 @property(nonatomic) double timeFirstInitialized; // @synthesize timeFirstInitialized=_timeFirstInitialized;
 @property(nonatomic) _Bool hasLoadedAtLeastOneChildViewController; // @synthesize hasLoadedAtLeastOneChildViewController=_hasLoadedAtLeastOneChildViewController;
 @property(retain, nonatomic) FeedSpinnerView *firstLoadSpinner; // @synthesize firstLoadSpinner=_firstLoadSpinner;
-@property(retain, nonatomic) CaptureViewController *captureViewController; // @synthesize captureViewController=_captureViewController;
-@property(retain, nonatomic) IntroViewController *introController; // @synthesize introController=_introController;
+@property(retain, nonatomic) UIViewController *introController; // @synthesize introController=_introController;
 @property(retain, nonatomic) UserDrawerViewController *userDrawerViewController; // @synthesize userDrawerViewController=_userDrawerViewController;
 @property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(readonly, nonatomic) _TtC6Reddit20AnonymousModeManager *anonymousModeManager; // @synthesize anonymousModeManager=_anonymousModeManager;
 @property(readonly, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
 @property(retain, nonatomic) MainTabBarController *tabController; // @synthesize tabController=_tabController;
 @property(nonatomic) __weak id <RootViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)createAccountContextWithRedditService:(id)arg1;
 - (void)handlePanOnBlockInputView:(id)arg1;
 - (void)handleTapOnBlockInputView:(id)arg1;
 - (void)handleScreenEdgePan:(id)arg1;
@@ -57,13 +56,10 @@
 - (_Bool)gestureRecognizer:(id)arg1 shouldBeRequiredToFailByGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 @property(readonly, copy, nonatomic) NSDictionary *analyticsInstallExperimentParameters;
-- (void)captureViewControllerDidTapLogin:(id)arg1;
-- (void)captureViewControllerDidFinish:(id)arg1;
+- (void)didSkipWithSender:(id)arg1;
+- (void)didAuthenticateServiceWithSender:(id)arg1 service:(id)arg2 isNewUser:(_Bool)arg3;
 - (void)introViewControllerDidFinish:(id)arg1;
 - (void)mainTabBarControllerDidAppear:(id)arg1;
-- (void)presentLoginScreen;
-- (void)hideInterestSelection;
-- (void)showInterestSelection;
 - (void)setupUserDrawerForViewController:(id)arg1;
 - (void)showMainViewControllers;
 - (void)hideIntroViewController;

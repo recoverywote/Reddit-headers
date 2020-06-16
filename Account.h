@@ -76,20 +76,12 @@
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithPk:(id)arg1;
-@property(readonly, nonatomic) NSString *profileDescriptionText;
 @property(readonly, nonatomic) _Bool isEmployeeUser;
 @property(readonly, nonatomic) Subreddit *subreddit;
-@property(readonly, nonatomic) _Bool isVisibleActiveInCommunity;
-@property(readonly, nonatomic) _Bool isSubscribed;
-@property(readonly, nonatomic) _Bool isVerified;
-@property(readonly, nonatomic) _Bool hasPremium;
 @property(readonly, nonatomic) long long totalKarma;
 @property(readonly, nonatomic) long long linkKarma;
 @property(readonly, nonatomic) long long commentKarma;
 @property(readonly, nonatomic) NSDate *createdAt;
-@property(readonly, copy, nonatomic) NSString *sharingPermalinkIncludingDomain;
-@property(readonly, copy, nonatomic) NSString *displayNamePrefixed;
-@property(readonly, copy, nonatomic) NSString *username;
 @property(readonly, copy, nonatomic) NSString *fullID;
 
 // Remaining properties

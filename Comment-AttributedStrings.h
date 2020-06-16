@@ -10,7 +10,7 @@
 + (id)defaultAttributesUsingTheme:(id)arg1;
 + (id)activeLinkAttributesUsingTheme:(id)arg1;
 + (id)linkAttributesUsingTheme:(id)arg1;
-- (id)commentListMetadataUsingTheme:(id)arg1 shouldShowSubredditName:(_Bool)arg2;
+- (id)commentListMetadataWithViewContext:(id)arg1 theme:(id)arg2 shouldShowSubredditName:(_Bool)arg3;
 - (id)commentModIconsStringUsingTheme:(id)arg1 shouldShowLockButton:(_Bool)arg2;
 - (id)commentBodyStringForLinks:(id)arg1 withActiveLink:(id)arg2 usingTheme:(id)arg3;
 - (id)cakeIconAttachmentUsingTheme:(id)arg1;

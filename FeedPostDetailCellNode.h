@@ -44,9 +44,6 @@
 @property(nonatomic) __weak id <PostDetailCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) PostDetailContentNode *contentNode; // @synthesize contentNode=_contentNode;
 @property(readonly, nonatomic) UIImage *previewImage;
-- (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
-- (void)didEnterAdViewableStateWithVisibilityContext:(id)arg1;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;
@@ -54,6 +51,7 @@
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didChangeMediaVisibilityWithContext:(id)arg1;
+- (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
 - (struct UIEdgeInsets)contentNodeInsets;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;

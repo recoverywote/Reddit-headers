@@ -78,6 +78,8 @@
 @property(retain, nonatomic) ParallaxHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SubredditPageNavigator *navigator; // @synthesize navigator=_navigator;
 @property(retain, nonatomic) SubredditPagePresenter *presenter; // @synthesize presenter=_presenter;
+- (void)showRedditCinemaViewController;
+- (id)redditVideosNavigationButton;
 - (void)modToolsViewControllerDidUpdateCommunityDescription:(id)arg1;
 - (void)refreshHeaderContent;
 - (void)modToolsViewControllerDidUpdateCommunityAvatar:(id)arg1;

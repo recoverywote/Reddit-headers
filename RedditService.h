@@ -112,7 +112,10 @@
 - (void)saveDraftPostForSubmittedPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchDraftPostCountWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchDraftPostsWithCompletion:(CDUnknownBlockType)arg1;
+- (void)hideAward:(id)arg1 onTargetWithId:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)reportThingWithParameters:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)hideAward:(id)arg1 post:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)hideAward:(id)arg1 comment:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)reportAward:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)reportUsernameToCrisisTextLine:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)reportLiveStream:(id)arg1 reason:(id)arg2 siteReason:(id)arg3 relativeReportTime:(id)arg4 completion:(CDUnknownBlockType)arg5;
@@ -152,7 +155,7 @@
 - (void)saveNotificationPreferences:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)unlinkIdentityProvider:(id)arg1 currentPassword:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)linkIdentityProviderWithIdentityToken:(id)arg1 currentPassword:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)fetchLegacyExperiments:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchConfigWithLegacyExperiments:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)setAuthorFlairEnabled:(_Bool)arg1 inSubreddit:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setAuthorFlair:(id)arg1 forUser:(id)arg2 inSubreddit:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)registerPushNotificationToken:(id)arg1 forAccountsWithAuthTokens:(id)arg2 authorizationStatus:(long long)arg3 completion:(CDUnknownBlockType)arg4;
@@ -229,6 +232,7 @@
 - (void)createMultiWithName:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)multiWithGraphQLData:(id)arg1;
 - (id)multiWithData:(id)arg1;
+- (void)visitPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)voteForPollOnPost:(id)arg1 pollOptionId:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setIsReceivingPostReplies:(_Bool)arg1 forPost:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)fetchAwardingTotalsForPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -281,9 +285,7 @@
 - (void)awardLiveStream:(id)arg1 options:(id)arg2 correlationId:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)awardPost:(id)arg1 options:(id)arg2 correlationId:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)fetchPostCollectionsWithIds:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)fetchPostCollectionWithId:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)postCollectionWithGraphQLData:(id)arg1;
-- (id)postCollectionWithData:(id)arg1;
 - (void)submitPost:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)parseGraphQLPostData:(id)arg1 parseSubreddits:(_Bool)arg2 parseCrosspostSubreddits:(_Bool)arg3;
 - (CDUnknownBlockType)parsePostBlock;
@@ -322,6 +324,9 @@
 - (id)liveEventWithData:(id)arg1;
 - (void)suggestSubredditGeoPlace:(id)arg1 forSubreddit:(id)arg2 sessionId:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)searchForGeoPlaceWithInput:(id)arg1 sessionId:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)fetchActiveLanguagesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)updateNotificationSettingsWithUpdateSubredditNotificationSettingsInput:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchNotificationSettingsForSubredditsWithNames:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchSettingsForSubredditsWithNames:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateAuthorFlairSettingsForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 isSelfAssignable:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)updatePostFlairSettingsForSubreddit:(id)arg1 isEnabled:(_Bool)arg2 isSelfAssignable:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;

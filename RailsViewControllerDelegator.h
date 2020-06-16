@@ -7,6 +7,7 @@
 #import "FeedViewControllerDelegator.h"
 
 #import "CovidSearchDisplayNodeDelegate-Protocol.h"
+#import "DetailedTrendingSearchNodeDelegate-Protocol.h"
 #import "FeedSortOptionControllerDelegate-Protocol.h"
 #import "FilterSearchViewControllerDelegate-Protocol.h"
 #import "HeaderBarViewDelegate-Protocol.h"
@@ -19,7 +20,7 @@
 
 @class FeedSortOptionController, NSString, RailsNavigator, RailsPresenter, RailsViewController;
 
-@interface RailsViewControllerDelegator : FeedViewControllerDelegator <IconLabelNodeDelegate, FeedSortOptionControllerDelegate, FilterSearchViewControllerDelegate, HeaderBarViewDelegate, SubscribableNodeDelegate, SearchHistoryItemNodeDelegate, PillWidgetNodeDelegate, RailsButtonNodeDelegate, NSFWSearchSettingNodeDelegate, CovidSearchDisplayNodeDelegate>
+@interface RailsViewControllerDelegator : FeedViewControllerDelegator <IconLabelNodeDelegate, FeedSortOptionControllerDelegate, FilterSearchViewControllerDelegate, HeaderBarViewDelegate, SubscribableNodeDelegate, SearchHistoryItemNodeDelegate, PillWidgetNodeDelegate, RailsButtonNodeDelegate, NSFWSearchSettingNodeDelegate, CovidSearchDisplayNodeDelegate, DetailedTrendingSearchNodeDelegate>
 {
     RailsNavigator *_railsNavigator;
     FeedSortOptionController *_sortOptionController;
@@ -29,6 +30,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) FeedSortOptionController *sortOptionController; // @synthesize sortOptionController=_sortOptionController;
 @property(retain, nonatomic) RailsNavigator *railsNavigator; // @synthesize railsNavigator=_railsNavigator;
+- (id)typeaheadItemsPksForSection:(unsigned long long)arg1;
 - (void)covidSearchSettingNodeDidTapDismiss:(id)arg1;
 - (void)NSFWSearchSettingNodeDidTapDismiss:(id)arg1;
 - (id)elementalDiscoveryNode:(id)arg1 nodeForElement:(id)arg2;
@@ -41,6 +43,7 @@
 - (void)headerBarViewDidTapLeftButton:(id)arg1;
 - (void)displayFeedSortPickerFromHeaderView:(id)arg1;
 - (void)displaySearchSortPicker;
+- (void)trendingWillBeginVisible:(id)arg1;
 - (void)feedSortOptionControllerDidCancel:(id)arg1;
 - (void)feedSortOptionController:(id)arg1 didFinishSelectingFeedSort:(unsigned long long)arg2 feedRange:(unsigned long long)arg3;
 - (void)scrollViewWillBeginDragging:(id)arg1;

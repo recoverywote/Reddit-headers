@@ -9,6 +9,7 @@
 @class NSError, NSString;
 
 @protocol AwardDetailsPresentable <NSObject>
+- (void)showToastForHidingSucceededWithMessage:(NSString *)arg1;
 - (void)showToastForReportingSucceededWithMessage:(NSString *)arg1;
 - (void)showToastForError:(NSError *)arg1;
 - (void)reloadScreen;

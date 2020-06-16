@@ -6,19 +6,25 @@
 
 #import <UIKit/UIActivity.h>
 
+@protocol AccountContext;
+
 @interface SaveVideoActivity : UIActivity
 {
+    id <AccountContext> _accountContext;
 }
 
 + (long long)activityCategory;
 + (id)activityType;
-- (void)prepareWithAccountContext:(id)arg1 activityItems:(id)arg2;
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
+- (void)prepareWithActivityItems:(id)arg1;
 - (void)downloadVideo:(id)arg1;
 - (void)videoSaved:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (_Bool)canPerformWithActivityItems:(id)arg1;
 - (id)activityImage;
 - (id)activityTitle;
 - (id)activityType;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

@@ -16,10 +16,10 @@
 
 @interface CaptureViewController : BaseViewController <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, CaptureScreenDelegate, KeyboardInteractorDelegate>
 {
-    _Bool _preventReloadAllControllers;
-    _Bool _shouldReloadAllControllersItself;
     _Bool _showRetry;
     id <CaptureViewControllerDelegate> _delegate;
+    CDUnknownBlockType _onDidFinish;
+    CDUnknownBlockType _onDidCancel;
     KeyboardFloatingViewInteractor *_keyboardFloatingViewInteractor;
     CaptureManager *_manager;
     NSMutableArray *_queuedManagers;
@@ -35,6 +35,7 @@
     CaptureContent *_currentTextFieldContent;
 }
 
++ (id)onboardingCaptureViewControllerWith:(id)arg1 interestSelectionFlow:(long long)arg2 fromSource:(id)arg3 shouldShowLoginButton:(_Bool)arg4;
 - (void).cxx_destruct;
 @property(nonatomic) __weak CaptureContent *currentTextFieldContent; // @synthesize currentTextFieldContent=_currentTextFieldContent;
 @property(nonatomic) _Bool showRetry; // @synthesize showRetry=_showRetry;
@@ -50,8 +51,8 @@
 @property(retain, nonatomic) NSMutableArray *queuedManagers; // @synthesize queuedManagers=_queuedManagers;
 @property(retain, nonatomic) CaptureManager *manager; // @synthesize manager=_manager;
 @property(retain, nonatomic) KeyboardFloatingViewInteractor *keyboardFloatingViewInteractor; // @synthesize keyboardFloatingViewInteractor=_keyboardFloatingViewInteractor;
-@property(nonatomic) _Bool shouldReloadAllControllersItself; // @synthesize shouldReloadAllControllersItself=_shouldReloadAllControllersItself;
-@property(nonatomic) _Bool preventReloadAllControllers; // @synthesize preventReloadAllControllers=_preventReloadAllControllers;
+@property(copy, nonatomic) CDUnknownBlockType onDidCancel; // @synthesize onDidCancel=_onDidCancel;
+@property(copy, nonatomic) CDUnknownBlockType onDidFinish; // @synthesize onDidFinish=_onDidFinish;
 @property(nonatomic) __weak id <CaptureViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)analyticsScreenViewName;
 - (void)configureTopAndBottomButtonsInProgress:(_Bool)arg1;

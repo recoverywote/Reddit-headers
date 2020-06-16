@@ -9,11 +9,12 @@
 #import "ASNetworkImageNodeDelegate-Protocol.h"
 
 @class ASButtonNode, ASNetworkImageNode, ASTextNode, CarouselItem, NSString, PillButtonNode;
-@protocol DiscoveryFandomBannerNodeDelegate, Pillable;
+@protocol DiscoveryFandomBannerNodeDelegate, Pillable, ViewContext;
 
 @interface DiscoveryFandomBannerNode : BaseFeedDisplayNode <ASNetworkImageNodeDelegate>
 {
     _Bool _isTransitioning;
+    id <ViewContext> _viewContext;
     id <DiscoveryFandomBannerNodeDelegate> _delegate;
     PillButtonNode *_pillButtonNode;
     ASTextNode *_descriptionNode;
@@ -38,6 +39,7 @@
 @property(retain, nonatomic) ASTextNode *descriptionNode; // @synthesize descriptionNode=_descriptionNode;
 @property(retain, nonatomic) PillButtonNode *pillButtonNode; // @synthesize pillButtonNode=_pillButtonNode;
 @property(nonatomic) __weak id <DiscoveryFandomBannerNodeDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (void)didTapNode:(id)arg1;
 - (void)didTapOverflowButton:(id)arg1;
 - (void)didTapPillButton:(id)arg1;
@@ -50,7 +52,7 @@
 - (void)createNodes;
 - (void)configureNodes;
 - (void)didLoad;
-- (id)initWithCarouselItem:(id)arg1 delegate:(id)arg2;
+- (id)initWithViewContext:(id)arg1 carouselItem:(id)arg2 delegate:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,10 +6,11 @@
 
 #import "CaptureManager.h"
 
-@class CaptureContentButtonList, EmailCaptureScreen, PasswordCaptureScreen, SignupCaptureScreen, UsernameCaptureScreen;
+@class CaptureContentButtonList, EmailCaptureScreen, PasswordCaptureScreen, RedditService, SignupCaptureScreen, UsernameCaptureScreen;
 
 @interface AccountCaptureManager : CaptureManager
 {
+    RedditService *_capturedRedditService;
     CaptureContentButtonList *_buttonListContent;
     EmailCaptureScreen *_emailScreen;
     UsernameCaptureScreen *_usernameScreen;
@@ -23,6 +24,7 @@
 @property(retain, nonatomic) UsernameCaptureScreen *usernameScreen; // @synthesize usernameScreen=_usernameScreen;
 @property(retain, nonatomic) EmailCaptureScreen *emailScreen; // @synthesize emailScreen=_emailScreen;
 @property(retain, nonatomic) CaptureContentButtonList *buttonListContent; // @synthesize buttonListContent=_buttonListContent;
+@property(retain, nonatomic) RedditService *capturedRedditService; // @synthesize capturedRedditService=_capturedRedditService;
 - (void)cleanupLoggedOutAccount;
 - (void)signUpWithCompletion:(CDUnknownBlockType)arg1;
 - (void)showUsernameErrorToastWithReason:(id)arg1;
@@ -33,7 +35,7 @@
 - (id)password;
 - (id)username;
 - (id)email;
-- (id)initWithRedditService:(id)arg1 analyticsSource:(id)arg2 singleScreenSignup:(_Bool)arg3;
+- (id)initWithAccountContext:(id)arg1 analyticsSource:(id)arg2 singleScreenSignup:(_Bool)arg3;
 
 @end
 

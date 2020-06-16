@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) NSURLSession *session; // @synthesize session=_session;
 @property(copy, nonatomic) NSArray *services; // @synthesize services=_services;
 @property(retain, nonatomic) RedditService *currentService; // @synthesize currentService=_currentService;
+- (id)sessionCookieFromResponse:(id)arg1;
 - (void)addAdditionalHeadersToRequest:(id)arg1;
 - (_Bool)isPOSIXError:(id)arg1 withCode:(long long)arg2;
 - (_Bool)isURLError:(id)arg1 withCode:(long long)arg2;
@@ -36,13 +37,11 @@
 - (void)verifyEmailWithCode:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)errorWithCode:(long long)arg1 underlyingError:(id)arg2 data:(id)arg3 response:(id)arg4 apiErrors:(id)arg5;
 - (void)notifyRequestError:(id)arg1 response:(id)arg2 duration:(double)arg3;
-- (id)getSessionCookie;
-- (void)clearSessionCookie;
 - (void)logoutAccount:(id)arg1 deletingAccountData:(_Bool)arg2 pushToken:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)fetchAccountDuringLoginWithTokenPayload:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)getAccessTokenForCode:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)getCodeWithSessionCookie:(id)arg1 modhash:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)singleSignOnWithIdentityToken:(id)arg1 username:(id)arg2 shouldGenerateUser:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)singleSignOnWithIdentityToken:(id)arg1 username:(id)arg2 shouldGenerateUser:(_Bool)arg3 emailPermission:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)signUpWithUsername:(id)arg1 password:(id)arg2 email:(id)arg3 emailPermission:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)loginWithUsername:(id)arg1 password:(id)arg2 twoFactorAuthCode:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)saveAccount:(id)arg1;
@@ -54,8 +53,9 @@
 - (void)addService:(id)arg1;
 - (id)createAnonymousService;
 - (void)switchToAnonymousAccountWithService:(id)arg1;
+- (void)switchToService:(id)arg1;
 - (void)switchToLoggedOutAccount;
-@property(retain, nonatomic) Account *currentAccount;
+@property(readonly, nonatomic) Account *currentAccount;
 @property(readonly, nonatomic) Account *loggedOutAccount;
 @property(readonly, nonatomic) RedditService *loggedOutService;
 @property(readonly, nonatomic) NSArray *loggedInAccounts;

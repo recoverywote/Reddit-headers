@@ -6,7 +6,7 @@
 
 #import "FeedPresenter.h"
 
-@class ElementalDiscoveryUnitViewModel, KeyValueObservation, MediaPostDataProvider, NSArray, NSDictionary, NSString, RailsContext, RailsListingProvider;
+@class KeyValueObservation, MediaPostDataProvider, NSArray, NSDictionary, NSString, RailsContext, RailsListingProvider;
 @protocol RailsPresentable;
 
 @interface RailsPresenter : FeedPresenter
@@ -42,16 +42,30 @@
 - (void)reconfigureListingNetworkSource;
 - (id)analyticsCorrelationId;
 - (id)positionForPost:(id)arg1;
+- (void)logClickAnalyticsForTrending:(id)arg1;
+- (void)logViewAnalyticsForTrending:(id)arg1;
+- (void)logClickAnalyticsForUserOrSubredditWithURL:(id)arg1 post:(id)arg2 postForPositionCalculation:(id)arg3 discoveryUnit:(id)arg4 itemsPks:(id)arg5;
+- (void)logClickAnalyticsForUserOrSubredditWithURL:(id)arg1 post:(id)arg2 position:(id)arg3;
+- (void)logClickAnalyticsForUserOrSubredditWithURL:(id)arg1 post:(id)arg2 postForPositionCalculation:(id)arg3;
+- (void)logClickAnalyticsForUserOrSubredditWithURL:(id)arg1 post:(id)arg2;
+- (void)logClickAnalyticsForUserOrSubreddit:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
+- (void)logClickAnalyticsForUserOrSubreddit:(id)arg1 index:(long long)arg2;
+- (void)logClickAnalyticsForProfile:(id)arg1 index:(long long)arg2;
+- (void)logClickAnalyticsForSubreddit:(id)arg1 post:(id)arg2 index:(long long)arg3;
 - (void)logClickAnalyticsForPost:(id)arg1 postForPositionCalculation:(id)arg2;
 - (void)logClickAnalyticsForPost:(id)arg1;
 - (void)logViewAnalyticsForIndexPaths:(id)arg1;
+- (void)logClickAnalyticsForAd:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
+- (void)logViewAnalyticsForAd:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
+- (void)logClickAnalyticsForAdPost:(id)arg1;
+- (void)logViewAnalyticsForAdPost:(id)arg1;
 - (void)logViewAnalyticsForCategory:(id)arg1 indexPath:(id)arg2 railsContext:(id)arg3;
 - (void)logClickAnalyticsForPost:(id)arg1 position:(id)arg2;
 - (void)logClickAnalyticsForPost:(id)arg1 postForPositionCalculation:(id)arg2 discoveryUnit:(id)arg3 itemsPks:(id)arg4;
 - (void)logClickAnalyticsForPost:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
 - (void)logViewAnalyticsForPost:(id)arg1 position:(id)arg2;
-- (void)logViewAnalyticsForPost:(id)arg1;
 - (void)logViewAnalyticsForPost:(id)arg1 discoveryUnit:(id)arg2 itemsPks:(id)arg3;
+- (void)logViewAnalyticsForPost:(id)arg1;
 - (void)logViewAnalyticsForIndexPath:(id)arg1;
 - (id)analyticsPageType;
 - (id)analyticsScreenViewName;
@@ -75,8 +89,10 @@
 - (id)initWithRailsContext:(id)arg1 accountContext:(id)arg2 listingProvider:(id)arg3;
 @property(readonly, nonatomic) _Bool hasFlairContext;
 @property(readonly, nonatomic) _Bool hasSubredditContext;
+- (long long)countOfTrendingsAboveThan:(id)arg1;
 - (long long)countOfItemsAboveThan:(id)arg1;
-@property(readonly, nonatomic) ElementalDiscoveryUnitViewModel *elementalDiscoveryUnitViewModel;
+- (id)carouselForAdPostPk:(id)arg1;
+- (id)elementalDiscoveryUnitViewModel;
 - (_Bool)shouldShowHlsVideoPostInTheater:(id)arg1;
 - (id)theaterInitialObjectsForPost:(id)arg1;
 - (id)theaterNetworkSourceForPost:(id)arg1;

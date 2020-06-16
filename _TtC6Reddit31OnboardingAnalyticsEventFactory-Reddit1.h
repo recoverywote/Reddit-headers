@@ -7,6 +7,7 @@
 #import "_TtC6Reddit31OnboardingAnalyticsEventFactory.h"
 
 @interface _TtC6Reddit31OnboardingAnalyticsEventFactory (Reddit1)
++ (id)welcomeScreenLoginClickEvent;
 + (id)tapLoginOnWelcomeScreenEvent;
 + (id)tapSignupOnWelcomeScreenEvent;
 + (id)tapSkipSignupOnWelcomeScreenEvent;

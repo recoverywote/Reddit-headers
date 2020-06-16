@@ -46,6 +46,8 @@
 - (id)defaultRedditPostParameters;
 - (_Bool)isDirectChannel:(id)arg1;
 - (void)notifyConnectionObservers;
+- (void)updateInvitePolicy:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)fetchInvitePolicy:(CDUnknownBlockType)arg1;
 - (void)dismissDownToChatBannerWithSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)joinDownToChatWithSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)checkIfDownToChatBannerShouldBeShownForSubreddit:(id)arg1 completion:(CDUnknownBlockType)arg2;

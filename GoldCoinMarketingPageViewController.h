@@ -6,28 +6,20 @@
 
 #import "BaseViewController.h"
 
-#import "GoldCoinMarketingPageHeaderCellDelegate-Protocol.h"
-#import "GoldProductTableViewCellDelegate-Protocol.h"
+#import "GoldCoinMarketingListDelegate-Protocol.h"
 #import "InAppPurchaseManagerDelegate-Protocol.h"
-#import "UITableViewDataSource-Protocol.h"
-#import "UITableViewDelegate-Protocol.h"
 
-@class BaseTableView, FeedSpinnerView, GoldProduct, NSArray, NSLayoutConstraint, NSString, RedditService, UIImageView, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit34GoldUpsellImagePopupViewController;
+@class GoldCoinMarketingList, GoldProduct, NSString, RedditService, _TtC6Reddit24CoinMarketingEventLogger, _TtC6Reddit34GoldUpsellImagePopupViewController;
 @protocol AccountContext;
 
-@interface GoldCoinMarketingPageViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, GoldProductTableViewCellDelegate, GoldCoinMarketingPageHeaderCellDelegate, InAppPurchaseManagerDelegate>
+@interface GoldCoinMarketingPageViewController : BaseViewController <InAppPurchaseManagerDelegate, GoldCoinMarketingListDelegate>
 {
-    _Bool _isEconStorefrontClaimEnabled;
-    UIImageView *_backgroundImageView;
-    BaseTableView *_tableView;
-    NSLayoutConstraint *_backgroundImageWidthConstraint;
-    FeedSpinnerView *_loadingIndicatorView;
     GoldProduct *_purchasingProduct;
-    NSArray *_products;
     id <AccountContext> _accountContext;
     NSString *_correlationId;
     NSString *_sourcePage;
     _TtC6Reddit24CoinMarketingEventLogger *_eventLogger;
+    GoldCoinMarketingList *_list;
     _TtC6Reddit34GoldUpsellImagePopupViewController *_dealPopupController;
     GoldProduct *_targetedOfferDeal;
 }
@@ -35,31 +27,18 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) GoldProduct *targetedOfferDeal; // @synthesize targetedOfferDeal=_targetedOfferDeal;
 @property(retain, nonatomic) _TtC6Reddit34GoldUpsellImagePopupViewController *dealPopupController; // @synthesize dealPopupController=_dealPopupController;
-@property(readonly, nonatomic) _Bool isEconStorefrontClaimEnabled; // @synthesize isEconStorefrontClaimEnabled=_isEconStorefrontClaimEnabled;
+@property(retain, nonatomic) GoldCoinMarketingList *list; // @synthesize list=_list;
 @property(readonly, nonatomic) _TtC6Reddit24CoinMarketingEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *sourcePage; // @synthesize sourcePage=_sourcePage;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
-@property(retain, nonatomic) NSArray *products; // @synthesize products=_products;
 @property(retain, nonatomic) GoldProduct *purchasingProduct; // @synthesize purchasingProduct=_purchasingProduct;
-@property(retain, nonatomic) FeedSpinnerView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
-@property(retain, nonatomic) NSLayoutConstraint *backgroundImageWidthConstraint; // @synthesize backgroundImageWidthConstraint=_backgroundImageWidthConstraint;
-@property(retain, nonatomic) BaseTableView *tableView; // @synthesize tableView=_tableView;
-@property(retain, nonatomic) UIImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
-- (void)presentFreeAward;
 - (void)hidePurchasingModalIfPresented;
-- (struct UIEdgeInsets)contentInsetForRowAtIndexPath:(id)arg1 increaseTopPaddingForTheFirstCell:(_Bool)arg2;
 - (void)showValidationFailureDialog;
-- (void)hideLoadingIndicator;
-- (void)showLoadingIndicator;
-- (void)fetchGoldProductsIfNecessary;
 - (void)purchaseProduct:(id)arg1;
 - (void)showDealPopup;
 - (void)checkForDeals;
-- (void)updateProductItems;
 - (void)presentLoginViewController;
-- (void)handleFetchFailure;
-- (void)handleFetchSuccess;
 - (void)inAppPurchaseManager:(id)arg1 didRefreshReceiptWithError:(id)arg2;
 - (void)inAppPurchaseManager:(id)arg1 encounteredUninishedTransactionForDifferentAccount:(id)arg2 transactionId:(id)arg3 productId:(id)arg4 correlationId:(id)arg5 removalHandler:(CDUnknownBlockType)arg6;
 - (void)inAppPurchaseManager:(id)arg1 transactionDidFailWithId:(id)arg2 correlationId:(id)arg3 error:(id)arg4;
@@ -68,12 +47,10 @@
 - (void)inAppPurchaseManager:(id)arg1 transactionDidSucceedWithId:(id)arg2 correlationId:(id)arg3;
 - (void)inAppPurchaseManager:(id)arg1 transactionDidBeginValidationWithId:(id)arg2 correlationId:(id)arg3;
 - (void)inAppPurchaseManagerDidBeginTransaction:(id)arg1 correlationId:(id)arg2;
-- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
-- (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-- (long long)numberOfSectionsInTableView:(id)arg1;
-- (void)goldProductTableViewCellDidTap:(id)arg1;
-- (void)goldCoinMarketingPageHeaderCellDidTapLearnMore:(id)arg1;
-- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)goldCoinMarketingList:(id)arg1 presentErrorMessage:(id)arg2;
+- (void)goldCoinMarketingList:(id)arg1 purchaseProduct:(id)arg2;
+- (void)presentFreeAwardFromGoldCoinMarketingList:(id)arg1;
+- (void)learnAboutCoinsFromGoldCoinMarketingList:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

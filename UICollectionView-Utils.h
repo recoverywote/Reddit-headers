@@ -13,7 +13,6 @@
 - (id)visibleMiddleIndexPath;
 - (void)scrollToItemAtIndexPath:(id)arg1 withOffset:(struct CGPoint)arg2 animated:(_Bool)arg3;
 - (id)visibleFirstIndexPath;
-- (void)registerCellClasses:(id)arg1;
 - (void)reloadSections:(id)arg1 withAnimation:(_Bool)arg2;
 - (void)insertSections:(id)arg1 withAnimation:(_Bool)arg2;
 - (void)scrollToTopVisibleItemAfterReloadData;
@@ -21,5 +20,6 @@
 - (id)allVisibleReusableViews;
 - (double)layoutHeightAtIndexPaths:(id)arg1;
 - (long long)totalNumberOfItems;
+- (void)registerCellClasses:(id)arg1;
 @end
 

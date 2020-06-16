@@ -8,6 +8,7 @@
 
 @interface _TtC6Reddit13PostTagToggle : UIControl
 {
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: isEditable
     // Error parsing type: , name: onColor
     // Error parsing type: , name: title
@@ -15,10 +16,10 @@
 }
 
 - (void).cxx_destruct;
+- (id)initWithFrame:(struct CGRect)arg1;
 - (void)onTagPress;
 - (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
 @property(nonatomic) _Bool selected;
 - (_Bool)isSelected;
 

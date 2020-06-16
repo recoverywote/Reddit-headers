@@ -82,6 +82,8 @@
 - (id)newsAttributedTitleFromNewsTopics:(id)arg1;
 - (_Bool)canPostInSubreddit:(id)arg1;
 - (_Bool)canCrosspostWithAccount:(id)arg1;
+- (_Bool)isEqualToDiffableObject:(id)arg1;
+- (id)diffIdentifier;
 @property(nonatomic, readonly) _Bool isGif;
 @property(nonatomic, readonly) NSString *videoIdentifier;
 @end

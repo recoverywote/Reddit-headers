@@ -7,7 +7,6 @@
 #import "_TtC6Reddit26SplashScreenViewController.h"
 
 @interface _TtC6Reddit26SplashScreenViewController (Reddit)
-- (void)didTapBackButtonWithSender:(id)arg1;
 - (void)presentLogin;
 - (void)presentRegistration;
 - (void)didTapLoginWithSender:(id)arg1;

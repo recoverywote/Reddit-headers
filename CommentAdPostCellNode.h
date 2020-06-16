@@ -36,13 +36,7 @@
 @property(nonatomic) __weak id <CommentAdPostCellNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(readonly, nonatomic) AdPost *post; // @synthesize post=_post;
-- (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeViewableStateWithVisibilityContext:(id)arg1;
-- (void)didEnterAdViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
 - (void)buttonNodeDidTap:(id)arg1;
 - (void)commentNodeDidTap:(id)arg1;

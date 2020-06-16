@@ -6,7 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-@protocol AccountContext;
+@protocol AccountContext, _TtP6Reddit34SplashScreenViewControllerDelegate_;
 
 @interface _TtC6Reddit26SplashScreenViewController : UIViewController
 {
@@ -14,14 +14,18 @@
     // Error parsing type: , name: splashScreenView
     // Error parsing type: , name: splashScreenSingleSignOnView
     // Error parsing type: , name: backgroundAnimationView
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)didTapSkipButtonWithSender:(id)arg1;
+- (void)didTapGetStartedWithSender:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithAccountContext:(id)arg1;
+@property(nonatomic) __weak id <_TtP6Reddit34SplashScreenViewControllerDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic, readonly) id <AccountContext> accountContext; // @synthesize accountContext;
 
 @end

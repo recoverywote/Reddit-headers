@@ -7,16 +7,18 @@
 #import <objc/NSObject.h>
 
 #import "AnalyticsProcessorDelegate-Protocol.h"
-#import "_TtP7Economy22EconomyAnalyticsLogger_-Protocol.h"
 
 @class AnalyticsEventProcessor, NSString;
 
-@interface AnalyticsManager : NSObject <_TtP7Economy22EconomyAnalyticsLogger_, AnalyticsProcessorDelegate>
+@interface AnalyticsManager : NSObject <AnalyticsProcessorDelegate>
 {
     _Bool _enabled;
     AnalyticsEventProcessor *_eventProcessor;
 }
 
++ (void)recordTraceWithSentryForEvent:(id)arg1;
++ (void)logEvent:(id)arg1 usingAnalyticsManager:(id)arg2;
++ (void)logEvents:(id)arg1 usingAnalyticsManager:(id)arg2;
 + (void)setup;
 + (id)instance;
 - (void).cxx_destruct;

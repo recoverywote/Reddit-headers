@@ -23,6 +23,7 @@
 - (void)confirm:(id)arg1;
 - (void)passwordFieldTextChangedWithSender:(id)arg1;
 - (void)usernameFieldTextChangedWithSender:(id)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;

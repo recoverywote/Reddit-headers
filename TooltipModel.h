@@ -23,6 +23,7 @@
     NSString *_analyticsSource;
     NSString *_analyticsId;
     double _maxWidth;
+    double _bubbleHInset;
     double _textVInset;
     double _textHInset;
     double _delay;
@@ -36,6 +37,7 @@
 @property(nonatomic) double delay; // @synthesize delay=_delay;
 @property(nonatomic) double textHInset; // @synthesize textHInset=_textHInset;
 @property(nonatomic) double textVInset; // @synthesize textVInset=_textVInset;
+@property(nonatomic) double bubbleHInset; // @synthesize bubbleHInset=_bubbleHInset;
 @property(nonatomic) double maxWidth; // @synthesize maxWidth=_maxWidth;
 @property(copy, nonatomic) NSString *analyticsId; // @synthesize analyticsId=_analyticsId;
 @property(copy, nonatomic) NSString *analyticsSource; // @synthesize analyticsSource=_analyticsSource;

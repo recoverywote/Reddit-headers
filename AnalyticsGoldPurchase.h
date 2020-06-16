@@ -78,6 +78,7 @@
     _Bool _award_affects_awarder_karmaIsSet;
     _Bool _filter_nameIsSet;
     _Bool _filter_idIsSet;
+    _Bool _award_spotlight_statusIsSet;
     int _number_months;
     int _gift_message_length;
     int _number_creddits;
@@ -120,9 +121,12 @@
     long long _user_subreddit_comment_karma;
     NSString *_filter_name;
     NSString *_filter_id;
+    NSString *_award_spotlight_status;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool award_spotlight_statusIsSet; // @synthesize award_spotlight_statusIsSet=_award_spotlight_statusIsSet;
+@property(copy, nonatomic) NSString *award_spotlight_status; // @synthesize award_spotlight_status=_award_spotlight_status;
 @property(nonatomic) _Bool filter_idIsSet; // @synthesize filter_idIsSet=_filter_idIsSet;
 @property(copy, nonatomic) NSString *filter_id; // @synthesize filter_id=_filter_id;
 @property(nonatomic) _Bool filter_nameIsSet; // @synthesize filter_nameIsSet=_filter_nameIsSet;
@@ -233,6 +237,7 @@
 - (_Bool)validate:(id *)arg1;
 - (_Bool)write:(id)arg1 error:(id *)arg2;
 - (_Bool)read:(id)arg1 error:(id *)arg2;
+- (void)unsetAward_spotlight_status;
 - (void)unsetFilter_id;
 - (void)unsetFilter_name;
 - (void)unsetAward_affects_awarder_karma;
@@ -291,7 +296,7 @@
 @property(readonly) unsigned long long hash;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithType:(id)arg1 number_months:(int)arg2 one_time_type:(id)arg3 gift_user_id:(id)arg4 gift_anonymous:(_Bool)arg5 gift_message:(_Bool)arg6 gift_message_length:(int)arg7 number_creddits:(int)arg8 subscription_type:(id)arg9 gilded_content:(_Bool)arg10 source:(id)arg11 number_coins:(int)arg12 number_coins_monthly:(int)arg13 number_coins_bonus:(int)arg14 transaction_id:(id)arg15 content_type:(id)arg16 default_option:(id)arg17 default_anonymous:(_Bool)arg18 purchased_coins:(_Bool)arg19 proxy_for_user_id:(id)arg20 award_id:(id)arg21 award_name:(id)arg22 is_mod_award:(_Bool)arg23 available_award_ids:(id)arg24 number_coins_to_recipient:(int)arg25 number_coins_to_community:(int)arg26 start_timestamp:(long long)arg27 end_timestamp:(long long)arg28 gift_public:(_Bool)arg29 number_free_coins:(int)arg30 number_paid_coins:(int)arg31 paid_coins_revenue_pennies:(int)arg32 coin_package_id:(id)arg33 is_temporary_award:(_Bool)arg34 is_sale_enabled:(_Bool)arg35 coin_bonus_percentage:(double)arg36 coin_sale_percentage:(double)arg37 offer_context:(id)arg38 offer_type:(id)arg39 award_col_position:(int)arg40 award_row_position:(int)arg41 awarder_karma_earned:(long long)arg42 awardee_karma_earned:(long long)arg43 user_post_award_karma:(long long)arg44 user_comment_award_karma:(long long)arg45 target_user_post_karma:(long long)arg46 target_user_comment_karma:(long long)arg47 user_subreddit_post_karma:(long long)arg48 user_subreddit_comment_karma:(long long)arg49 award_affects_awardee_karma:(_Bool)arg50 award_affects_awarder_karma:(_Bool)arg51 filter_name:(id)arg52 filter_id:(id)arg53;
+- (id)initWithType:(id)arg1 number_months:(int)arg2 one_time_type:(id)arg3 gift_user_id:(id)arg4 gift_anonymous:(_Bool)arg5 gift_message:(_Bool)arg6 gift_message_length:(int)arg7 number_creddits:(int)arg8 subscription_type:(id)arg9 gilded_content:(_Bool)arg10 source:(id)arg11 number_coins:(int)arg12 number_coins_monthly:(int)arg13 number_coins_bonus:(int)arg14 transaction_id:(id)arg15 content_type:(id)arg16 default_option:(id)arg17 default_anonymous:(_Bool)arg18 purchased_coins:(_Bool)arg19 proxy_for_user_id:(id)arg20 award_id:(id)arg21 award_name:(id)arg22 is_mod_award:(_Bool)arg23 available_award_ids:(id)arg24 number_coins_to_recipient:(int)arg25 number_coins_to_community:(int)arg26 start_timestamp:(long long)arg27 end_timestamp:(long long)arg28 gift_public:(_Bool)arg29 number_free_coins:(int)arg30 number_paid_coins:(int)arg31 paid_coins_revenue_pennies:(int)arg32 coin_package_id:(id)arg33 is_temporary_award:(_Bool)arg34 is_sale_enabled:(_Bool)arg35 coin_bonus_percentage:(double)arg36 coin_sale_percentage:(double)arg37 offer_context:(id)arg38 offer_type:(id)arg39 award_col_position:(int)arg40 award_row_position:(int)arg41 awarder_karma_earned:(long long)arg42 awardee_karma_earned:(long long)arg43 user_post_award_karma:(long long)arg44 user_comment_award_karma:(long long)arg45 target_user_post_karma:(long long)arg46 target_user_comment_karma:(long long)arg47 user_subreddit_post_karma:(long long)arg48 user_subreddit_comment_karma:(long long)arg49 award_affects_awardee_karma:(_Bool)arg50 award_affects_awarder_karma:(_Bool)arg51 filter_name:(id)arg52 filter_id:(id)arg53 award_spotlight_status:(id)arg54;
 - (id)init;
 
 // Remaining properties

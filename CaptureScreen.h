@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSString, RedditService;
-@protocol CaptureScreenDelegate;
+@protocol AccountContext, CaptureScreenDelegate;
 
 @interface CaptureScreen : NSObject
 {
@@ -19,6 +19,7 @@
     NSArray *_contentItems;
     id <CaptureScreenDelegate> _delegate;
     RedditService *_service;
+    id <AccountContext> _accountContext;
     NSString *_nextButtonTitle;
     NSString *_skipButtonTitle;
     NSString *_retryButtonTitle;
@@ -37,6 +38,7 @@
 @property(nonatomic) _Bool shouldShowErrorState; // @synthesize shouldShowErrorState=_shouldShowErrorState;
 @property(nonatomic) _Bool contentValidated; // @synthesize contentValidated=_contentValidated;
 @property(nonatomic) _Bool hasTextEntry; // @synthesize hasTextEntry=_hasTextEntry;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(retain, nonatomic) RedditService *service; // @synthesize service=_service;
 @property(nonatomic) __weak id <CaptureScreenDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSArray *contentItems; // @synthesize contentItems=_contentItems;
@@ -50,7 +52,7 @@
 - (_Bool)validateContent;
 - (_Bool)validateTextEntryString:(id)arg1 forTextEntryContent:(id)arg2;
 @property(readonly, nonatomic) _Bool shouldReloadOnFailure;
-- (id)initWithRedditService:(id)arg1 analyticsSource:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 analyticsSource:(id)arg2;
 
 @end
 

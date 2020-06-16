@@ -12,8 +12,8 @@
 #import "UIViewControllerTransitioningDelegate-Protocol.h"
 #import "_TtP6Reddit35AccountStatusViewControllerDelegate_-Protocol.h"
 
-@class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseNavigationViewController, BaseTableView, BaseView, ChatAvatarImageView, KeyValueObservation, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager;
-@protocol AccountContext;
+@class AccountManager, BaseButton, BaseImageView, BaseLabel, BaseNavigationViewController, BaseTableView, BaseView, ChatAvatarImageView, NSMutableArray, NSString, UIPercentDrivenInteractiveTransition, UIStackView, UserKarmaAndAgeView, _TtC6Reddit24MetaWalletBalanceManager;
+@protocol AccountContext, BaseStoreObservation;
 
 @interface UserDrawerViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource, _TtP6Reddit35AccountStatusViewControllerDelegate_, UIViewControllerTransitioningDelegate, ProfileDrawerStatsDelegate>
 {
@@ -36,14 +36,14 @@
     BaseTableView *_actionsTableView;
     BaseTableView *_settingsTableView;
     NSMutableArray *_availableUserActions;
-    KeyValueObservation *_accountObservation;
+    id <BaseStoreObservation> _accountObservation;
     NSString *_correlationId;
 }
 
 + (double)panelWidth;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
-@property(retain, nonatomic) KeyValueObservation *accountObservation; // @synthesize accountObservation=_accountObservation;
+@property(retain, nonatomic) id <BaseStoreObservation> accountObservation; // @synthesize accountObservation=_accountObservation;
 @property(retain, nonatomic) NSMutableArray *availableUserActions; // @synthesize availableUserActions=_availableUserActions;
 @property(retain, nonatomic) BaseTableView *settingsTableView; // @synthesize settingsTableView=_settingsTableView;
 @property(retain, nonatomic) BaseTableView *actionsTableView; // @synthesize actionsTableView=_actionsTableView;

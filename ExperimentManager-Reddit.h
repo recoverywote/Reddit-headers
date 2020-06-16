@@ -11,6 +11,7 @@
 @interface ExperimentManager (Reddit)
 @property(readonly, nonatomic) _Bool isMediaSelectionFlowEnabledForImagePosts;
 @property(readonly, nonatomic) _Bool isMediaGalleriesEnabled;
+@property(readonly, nonatomic) _Bool isSplashScreenRefactorEnabled;
 @property(readonly, nonatomic) _Bool shouldSetCommentDepthOnRequest;
 - (void)exposeShouldShowAllInboxNotificationsWhenUnauthorized;
 @property(readonly, nonatomic) _Bool shouldShowAllInboxNotificationsWhenUnauthorized;
@@ -25,9 +26,13 @@
 @property(readonly, nonatomic) _Bool isSeparationFromAdsEnabled;
 @property(readonly, nonatomic) _Bool isSubredditIdOnCommunityPostConsumeEnabled;
 @property(readonly, nonatomic) _Bool isRPANSubredditIdToSREnabled;
+@property(readonly, nonatomic) _Bool isRPANNewAudioPolicyEnabled;
+@property(readonly, nonatomic) long long videoPlayerNewVolumePolicyVariant;
 @property(readonly, nonatomic) long long rpanChatV2FullscreenGestureVariant;
-@property(readonly, nonatomic) _Bool isRPANChatV2Enabled;
+@property(readonly, nonatomic) _Bool isRPANChatV2BroadcasterEnabled;
+@property(readonly, nonatomic) _Bool isRPANChatV2ViewerEnabled;
 @property(readonly, nonatomic) _Bool isMuxEnabled;
+@property(readonly, nonatomic) long long redditCinemaVariant;
 @property(readonly, nonatomic) _Bool isRPANAbrBroadcastEnabled;
 @property(readonly, nonatomic) long long rpanEntryPointUIVariant;
 @property(readonly, nonatomic) long long rpanSuperScrubberVariant;

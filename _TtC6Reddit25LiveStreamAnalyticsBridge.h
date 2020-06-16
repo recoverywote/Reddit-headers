@@ -12,7 +12,6 @@
 {
     // Error parsing type: , name: playbackTracker
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: didFirePlayEvent
 }
 
 - (void).cxx_destruct;

@@ -7,11 +7,12 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASImageNode, ASNetworkImageNode, ASTextNode, Post, TrendingSearch;
-@protocol ViewContext;
+@protocol DetailedTrendingSearchNodeDelegate, ViewContext;
 
 @interface DetailedTrendingSearchNode : BaseFeedDisplayNode
 {
     id <ViewContext> _viewContext;
+    id <DetailedTrendingSearchNodeDelegate> _delegate;
     ASTextNode *_promotedLabelNode;
     ASTextNode *_queryTextNode;
     ASImageNode *_iconImageNode;
@@ -31,19 +32,15 @@
 @property(retain, nonatomic) ASImageNode *iconImageNode; // @synthesize iconImageNode=_iconImageNode;
 @property(retain, nonatomic) ASTextNode *queryTextNode; // @synthesize queryTextNode=_queryTextNode;
 @property(retain, nonatomic) ASTextNode *promotedLabelNode; // @synthesize promotedLabelNode=_promotedLabelNode;
+@property(nonatomic) __weak id <DetailedTrendingSearchNodeDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
-- (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeViewableStateWithVisibilityContext:(id)arg1;
-- (void)didEnterAdViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureThumbnailNode;
 - (void)configureNodes;
-- (id)initWithViewContext:(id)arg1 trendingSearch:(id)arg2 visibilityTracker:(id)arg3 visibilityOptions:(id)arg4;
+- (id)initWithViewContext:(id)arg1 trendingSearch:(id)arg2 visibilityOptions:(id)arg3 delegate:(id)arg4;
 @property(readonly, nonatomic) struct CGSize thumbnailSize;
 @property(readonly, nonatomic) Post *trendingPost;
 

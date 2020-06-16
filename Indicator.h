@@ -15,7 +15,7 @@
 }
 
 + (double)emojiSizeForFont:(id)arg1;
-- (id)attributedStringForSizeType:(unsigned long long)arg1;
+- (id)attributedStringWithViewContext:(id)arg1 sizeType:(unsigned long long)arg2;
 - (id)attributedStringForStyle:(id)arg1 withAttributes:(id)arg2;
 - (id)attributedStringForStyle:(id)arg1;
 - (id)pillRichText;

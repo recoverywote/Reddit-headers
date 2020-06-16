@@ -8,12 +8,12 @@
 
 @interface _TtC6Reddit27MediaSelectionConfiguration : NSObject
 {
-    // Error parsing type: , name: allowMultipleSelections
+    // Error parsing type: , name: maxSelectionCount
     // Error parsing type: , name: mediaType
 }
 
 - (id)init;
-- (id)initWithAllowMultipleSelections:(_Bool)arg1 mediaType:(long long)arg2;
+- (id)initWithMaxSelectionCount:(long long)arg1 mediaType:(long long)arg2;
 
 @end
 

@@ -6,16 +6,15 @@
 
 #import "BaseViewController.h"
 
-#import "CaptureViewControllerDelegate-Protocol.h"
+@class BaseButton, BaseLabel, NewUserIntroAnimationView, UIImageView;
+@protocol AccountContext, IntroViewControllerDelegate;
 
-@class BaseButton, BaseLabel, NSString, NewUserIntroAnimationView, UIImageView;
-@protocol IntroViewControllerDelegate;
-
-@interface IntroViewController : BaseViewController <CaptureViewControllerDelegate>
+@interface IntroViewController : BaseViewController
 {
     _Bool _enableAnimation;
     _Bool _animationHasPlayed;
     id <IntroViewControllerDelegate> _delegate;
+    id <AccountContext> _accountContext;
     BaseButton *_loginButton;
     BaseButton *_signupButton;
     BaseButton *_skipButton;
@@ -38,10 +37,10 @@
 @property(retain, nonatomic) BaseButton *skipButton; // @synthesize skipButton=_skipButton;
 @property(retain, nonatomic) BaseButton *signupButton; // @synthesize signupButton=_signupButton;
 @property(retain, nonatomic) BaseButton *loginButton; // @synthesize loginButton=_loginButton;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(nonatomic) _Bool enableAnimation; // @synthesize enableAnimation=_enableAnimation;
 @property(nonatomic) __weak id <IntroViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)analyticsScreenViewName;
-- (void)captureViewControllerDidFinish:(id)arg1;
 - (void)skipButtonTapped:(id)arg1;
 - (void)authenticateButtonTapped:(id)arg1;
 - (void)layoutViewsForFrame:(struct CGRect)arg1;
@@ -51,13 +50,8 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)playAnimation;
 - (void)viewDidAppear:(_Bool)arg1;
+- (id)initWithAccountContext:(id)arg1;
 - (_Bool)prefersStatusBarHidden;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

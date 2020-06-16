@@ -29,8 +29,8 @@
 @property(retain, nonatomic) ASCollectionNode *collectionNode; // @synthesize collectionNode=_collectionNode;
 @property(retain, nonatomic) Carousel *carousel; // @synthesize carousel=_carousel;
 @property(nonatomic) _Bool isPreviewing; // @synthesize isPreviewing=_isPreviewing;
-- (void)didExitFullyVisibleStateWithVisibilityContext:(id)arg1;
-- (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
 - (id)collectionView;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (double)calculateCollectionViewHeightForConstrainedSize:(CDStruct_90e057aa)arg1;

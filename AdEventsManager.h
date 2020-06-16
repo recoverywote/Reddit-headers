@@ -23,6 +23,7 @@
     NSMutableDictionary *_wasViewable;
     NSMutableDictionary *_wasVendorViewableG;
     NSMutableDictionary *_wasVendorViewableH;
+    NSMutableOrderedSet *_visible;
     NSMutableDictionary *_visibleStartTime;
     NSMutableDictionary *_visibleCumulativeDuration;
     NSMutableDictionary *_visibleMaxContinuousDuration;
@@ -89,6 +90,7 @@
 @property(retain, nonatomic) NSMutableDictionary *visibleMaxContinuousDuration; // @synthesize visibleMaxContinuousDuration=_visibleMaxContinuousDuration;
 @property(retain, nonatomic) NSMutableDictionary *visibleCumulativeDuration; // @synthesize visibleCumulativeDuration=_visibleCumulativeDuration;
 @property(retain, nonatomic) NSMutableDictionary *visibleStartTime; // @synthesize visibleStartTime=_visibleStartTime;
+@property(retain, nonatomic) NSMutableOrderedSet *visible; // @synthesize visible=_visible;
 @property(retain, nonatomic) NSMutableDictionary *wasVendorViewableH; // @synthesize wasVendorViewableH=_wasVendorViewableH;
 @property(retain, nonatomic) NSMutableDictionary *wasVendorViewableG; // @synthesize wasVendorViewableG=_wasVendorViewableG;
 @property(retain, nonatomic) NSMutableDictionary *wasViewable; // @synthesize wasViewable=_wasViewable;
@@ -114,12 +116,7 @@
 - (void)postUpvote:(id)arg1;
 - (void)postClick:(id)arg1;
 - (void)postVideoVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
-- (void)postViewabilityChange:(id)arg1 viewable:(_Bool)arg2 fullyViewable:(_Bool)arg3 vendorViewable:(_Bool)arg4 vendorFullyViewable:(_Bool)arg5 viewRect:(struct CGRect)arg6 visibleRect:(struct CGRect)arg7;
-- (void)postViewabilityChange:(id)arg1 viewable:(_Bool)arg2 fullyViewable:(_Bool)arg3;
-- (void)postViewabilityChange:(id)arg1 visibilityContext:(id)arg2;
-- (void)postViewable:(id)arg1;
-- (void)postNotVisible:(id)arg1;
-- (void)postVisible:(id)arg1 size:(struct CGSize)arg2;
+- (void)postVisibilityChange:(id)arg1 visibilityContext:(id)arg2;
 - (void)blankVisible:(id)arg1;
 - (void)appWillResignActive;
 - (void)appDidFinishLaunching;

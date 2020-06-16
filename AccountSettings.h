@@ -21,6 +21,7 @@
 @property(retain, nonatomic) NSSet *tappedShareActivityTypes;
 @property(copy, nonatomic) NSData *adEventMetadataData;
 @property(copy, nonatomic) NSData *adEventPayloadData;
+@property(nonatomic) _Bool shouldBadgeRecommendedVideosEntryPoint;
 @property(copy, nonatomic) NSArray *dismissedTokenClaims;
 @property(nonatomic) _Bool shouldBadgeMainScreenPlusButton;
 @property(copy, nonatomic) NSArray *mainScreenTabs;

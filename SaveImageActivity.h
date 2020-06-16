@@ -25,12 +25,12 @@
 - (void)image:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;
 - (void)processAndSaveImage:(id)arg1;
 - (void)performActivity;
-- (id)initWithAccountContext:(id)arg1;
 - (void)prepareWithActivityItems:(id)arg1;
 - (_Bool)canPerformWithActivityItems:(id)arg1;
 - (id)activityImage;
 - (id)activityTitle;
 - (id)activityType;
+- (id)initWithAccountContext:(id)arg1;
 
 @end
 

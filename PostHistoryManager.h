@@ -6,11 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableDictionary, NSMutableOrderedSet, NSString;
+@class NSMutableDictionary, NSMutableOrderedSet, NSString, RedditService;
 @protocol OS_dispatch_queue;
 
 @interface PostHistoryManager : NSObject
 {
+    RedditService *_service;
     NSString *_cachePath;
     NSMutableOrderedSet *_postIDSet;
     NSMutableDictionary *_info;
@@ -22,6 +23,7 @@
 @property(retain, nonatomic) NSMutableDictionary *info; // @synthesize info=_info;
 @property(retain, nonatomic) NSMutableOrderedSet *postIDSet; // @synthesize postIDSet=_postIDSet;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
+@property(nonatomic) __weak RedditService *service; // @synthesize service=_service;
 - (id)currentHistoryPostsPKs;
 @property(readonly, nonatomic) NSString *recentHistoryFetchUrlString;
 - (void)clearAllPostHistory;

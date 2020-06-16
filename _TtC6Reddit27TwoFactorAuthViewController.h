@@ -16,6 +16,7 @@
     // Error parsing type: , name: accountContext
     // Error parsing type: , name: username
     // Error parsing type: , name: password
+    // Error parsing type: , name: onDidAuthenticate
     // Error parsing type: , name: twoFactorEntryType
     // Error parsing type: , name: confirmationInputAccessoryView
     // Error parsing type: , name: confirmationButton
@@ -29,7 +30,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountContext:(id)arg1 username:(id)arg2 password:(id)arg3;
+- (id)initWithAccountContext:(id)arg1 username:(id)arg2 password:(id)arg3 onDidAuthenticate:(CDUnknownBlockType)arg4;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 

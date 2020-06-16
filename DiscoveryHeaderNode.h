@@ -9,13 +9,14 @@
 #import "ASTextNodeDelegate-Protocol.h"
 
 @class ASTextNode, BaseButtonNode, Carousel, NSArray, NSString, PillStyle, UIColor, UIFont;
-@protocol DiscoveryHeaderNodeDelegate;
+@protocol DiscoveryHeaderNodeDelegate, ViewContext;
 
 @interface DiscoveryHeaderNode : BaseFeedDisplayNode <ASTextNodeDelegate>
 {
     UIFont *_titleFont;
     UIColor *_titleColor;
     id <DiscoveryHeaderNodeDelegate> _delegate;
+    id <ViewContext> _viewContext;
     ASTextNode *_titleTextNode;
     ASTextNode *_subtitleTextNode;
     NSArray *_pillNodes;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) NSArray *pillNodes; // @synthesize pillNodes=_pillNodes;
 @property(retain, nonatomic) ASTextNode *subtitleTextNode; // @synthesize subtitleTextNode=_subtitleTextNode;
 @property(retain, nonatomic) ASTextNode *titleTextNode; // @synthesize titleTextNode=_titleTextNode;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <DiscoveryHeaderNodeDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)didNodeTap:(id)arg1;
 - (void)overflowButtonTapped:(id)arg1;
@@ -40,7 +42,7 @@
 - (void)configureTitle;
 - (void)configureNodes;
 - (void)configureThemableNodes;
-- (id)initWithCarousel:(id)arg1;
+- (id)initWithViewContext:(id)arg1 carousel:(id)arg2;
 @property(copy, nonatomic) UIColor *titleColor; // @synthesize titleColor=_titleColor;
 - (id)titleFontMedium;
 @property(copy, nonatomic) UIFont *titleFont; // @synthesize titleFont=_titleFont;

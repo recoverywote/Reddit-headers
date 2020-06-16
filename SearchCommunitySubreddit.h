@@ -6,20 +6,24 @@
 
 #import "SearchCommunity.h"
 
-@class Subreddit;
+@class NSNumber, Subreddit;
 
 @interface SearchCommunitySubreddit : SearchCommunity
 {
+    NSNumber *_isQuarantined;
     Subreddit *_subreddit;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
+@property(retain, nonatomic) NSNumber *isQuarantined; // @synthesize isQuarantined=_isQuarantined;
 - (id)placeHolderImage;
 - (id)pillAttributedStringForAttributes:(id)arg1 pillTextBuilder:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
 - (id)subredditWithSubredditStore:(id)arg1;
 - (id)prefix;
 - (id)initWithSubreddit:(id)arg1;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
 
 @end
 

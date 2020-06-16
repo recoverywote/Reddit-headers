@@ -43,6 +43,8 @@
     _TtC6Reddit15StartChatButton *_startChatButton;
     NSLayoutConstraint *_followButtonCenterYAnchorConstraint;
     BaseButton *_editButton;
+    NSLayoutConstraint *_displayNameLabelTrailingNotifButtonConstraint;
+    NSLayoutConstraint *_displayNameLabelTrailingModButtonConstraint;
     ParallelHeaderTextWrapperView *_textWrapperView;
     UIView *_bottomLine;
     UIStackView *_exploreTagContainer;
@@ -74,6 +76,8 @@
 @property(retain, nonatomic) UIStackView *exploreTagContainer; // @synthesize exploreTagContainer=_exploreTagContainer;
 @property(retain, nonatomic) UIView *bottomLine; // @synthesize bottomLine=_bottomLine;
 @property(retain, nonatomic) ParallelHeaderTextWrapperView *textWrapperView; // @synthesize textWrapperView=_textWrapperView;
+@property(retain, nonatomic) NSLayoutConstraint *displayNameLabelTrailingModButtonConstraint; // @synthesize displayNameLabelTrailingModButtonConstraint=_displayNameLabelTrailingModButtonConstraint;
+@property(retain, nonatomic) NSLayoutConstraint *displayNameLabelTrailingNotifButtonConstraint; // @synthesize displayNameLabelTrailingNotifButtonConstraint=_displayNameLabelTrailingNotifButtonConstraint;
 @property(retain, nonatomic) BaseButton *editButton; // @synthesize editButton=_editButton;
 @property(nonatomic) _Bool shoudShowStartChatButtonAnimation; // @synthesize shoudShowStartChatButtonAnimation=_shoudShowStartChatButtonAnimation;
 @property(retain, nonatomic) NSLayoutConstraint *followButtonCenterYAnchorConstraint; // @synthesize followButtonCenterYAnchorConstraint=_followButtonCenterYAnchorConstraint;

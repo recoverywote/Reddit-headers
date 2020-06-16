@@ -7,13 +7,8 @@
 #import "_TtC6Reddit31OnboardingAnalyticsEventFactory.h"
 
 @interface _TtC6Reddit31OnboardingAnalyticsEventFactory (Reddit5)
-+ (id)tapLoginOnInterestsScreen;
-+ (id)interestsScreenDismissEventWithSelectedCount:(long long)arg1;
-+ (id)tapViewAllInterestsEvent;
-+ (id)tapSkipOnInterestsScreenEvent;
-+ (id)tapNextOnInterestsScreenEvent;
-+ (id)tapBackOnInterestsScreenEvent;
-+ (id)tapInterestEventWithShouldSelect:(_Bool)arg1 categoryName:(id)arg2;
-+ (id)viewOnboardingInterestsEvent;
++ (id)bottomSheetLoginTapEvent;
++ (id)bottomSheetDismissEvent;
++ (id)bottomSheetViewEvent;
 @end
 

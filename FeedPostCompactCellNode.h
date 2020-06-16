@@ -49,15 +49,13 @@
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(retain, nonatomic) Carousel *chainedCarousel; // @synthesize chainedCarousel=_chainedCarousel;
 @property(readonly, nonatomic) UIImage *previewImage;
-- (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
-- (void)didEnterAdViewableStateWithVisibilityContext:(id)arg1;
 - (void)didExitVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didExitVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didExitFullyVisibleStateWithVisibilityContext:(id)arg1;
 - (void)didEnterVisibleThresholdStateWithVisibilityContext:(id)arg1;
 - (void)didEnterFullyVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)beginVisibilityTracking;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)layoutDidFinish;

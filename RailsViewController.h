@@ -44,12 +44,15 @@
 - (id)pageItemText;
 - (void)themeDidChange:(id)arg1;
 - (void)feedPostHlsVideoViewDidTap:(id)arg1;
+- (void)feedPostGalleryCellNodeDidTapLabel:(id)arg1;
 - (void)feedPostTitleNode:(id)arg1 didTapLinkURL:(id)arg2 context:(unsigned long long)arg3;
+- (void)feedPostCallToActionNodeDidTapLink:(id)arg1;
 - (void)feedPostWebLinkNodeDidTapLink:(id)arg1;
 - (void)feedPostEventBarNode:(id)arg1 didTapLinkURL:(id)arg2;
 - (void)didTapViewFromRedditVideoPlayerView:(id)arg1 post:(id)arg2 videoIsLive:(_Bool)arg3;
 - (void)feedPostHlsVideoViewDidExpand:(id)arg1;
 - (void)feedPostVideoNodeDidTap:(id)arg1;
+- (void)feedPostCrossPostNode:(id)arg1 didTapLinkURL:(id)arg2;
 - (void)feedPostCrossPostNode:(id)arg1 didTapThumbnailWithImage:(id)arg2;
 - (void)feedPostCrossPostNodeDidTap:(id)arg1;
 - (void)feedPostTextWithThumbnailNode:(id)arg1 didTapThumbnailWithImage:(id)arg2;

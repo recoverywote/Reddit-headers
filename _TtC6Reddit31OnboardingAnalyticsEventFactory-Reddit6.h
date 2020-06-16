@@ -7,11 +7,7 @@
 #import "_TtC6Reddit31OnboardingAnalyticsEventFactory.h"
 
 @interface _TtC6Reddit31OnboardingAnalyticsEventFactory (Reddit6)
-+ (id)tapSkipOnSubscriptionListEvent;
-+ (id)tapNextOnSubscriptionListEvent;
-+ (id)tapViewMoreOnSubscriptionListEventWithCategoryName:(id)arg1;
-+ (id)tapBackOnSubscriptionListEvent;
-+ (id)tapSubscriptionEventWithShouldSelect:(_Bool)arg1 subredditName:(id)arg2 categoryName:(id)arg3;
-+ (id)viewSubredditSelectionScreenEvent;
++ (id)viewPasswordConfirmScreen;
++ (id)viewPasswordCreateScreen;
 @end
 

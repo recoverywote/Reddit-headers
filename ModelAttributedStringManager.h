@@ -19,7 +19,8 @@
     NSNotificationCenter *_notificationCenter;
 }
 
-+ (id)sharedManager;
++ (void)setupWithAccountManager:(id)arg1;
++ (id)instance;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak RUIThemeGuidance *themeGuidance; // @synthesize themeGuidance=_themeGuidance;
@@ -29,7 +30,7 @@
 - (void)didLoadPost:(id)arg1;
 - (void)dealloc;
 - (id)initWithAccountManager:(id)arg1 themeGuidance:(id)arg2 notificationCenter:(id)arg3;
-- (id)init;
+- (id)initWithAccountManager:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

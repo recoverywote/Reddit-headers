@@ -13,7 +13,7 @@
 
 @property(nonatomic) _Bool shouldRoundButtons; // @synthesize shouldRoundButtons=_shouldRoundButtons;
 - (void)layoutSubviews;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

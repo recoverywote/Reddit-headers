@@ -32,7 +32,7 @@
 - (void)willMoveToScreen:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3;
 - (void)didFinishScreen:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3;
 - (void)screenDidAppear:(id)arg1;
-- (id)initWithRedditService:(id)arg1 analyticsSource:(id)arg2 interestSelectionFlow:(long long)arg3 shouldShowLoginButton:(_Bool)arg4;
+- (id)initWithAccountContext:(id)arg1 analyticsSource:(id)arg2 interestSelectionFlow:(long long)arg3 shouldShowLoginButton:(_Bool)arg4;
 
 @end
 

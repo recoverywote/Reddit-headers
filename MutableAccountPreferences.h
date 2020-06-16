@@ -13,6 +13,7 @@
 }
 
 - (void)updateValue:(id)arg1 forKey:(id)arg2;
+@property(copy, nonatomic) NSString *allowPrivateMessages; // @dynamic allowPrivateMessages;
 @property(copy, nonatomic) NSString *geoFilter; // @dynamic geoFilter;
 @property(nonatomic) double surveyLastSeenTime; // @dynamic surveyLastSeenTime;
 @property(nonatomic) _Bool allowNSFW; // @dynamic allowNSFW;

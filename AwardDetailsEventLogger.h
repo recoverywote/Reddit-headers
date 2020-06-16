@@ -25,13 +25,16 @@
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
 @property(readonly, nonatomic) Post *post; // @synthesize post=_post;
 @property(readonly, nonatomic) Account *account; // @synthesize account=_account;
+- (id)hideAwardEventWithAction:(id)arg1 noun:(id)arg2 award:(id)arg3;
 - (id)eventWithAction:(id)arg1 noun:(id)arg2;
+- (void)logClickCancelHideAwardButtonEventWithAward:(id)arg1;
+- (void)logClickConfirmHideAwardButtonEventWithAward:(id)arg1;
+- (void)logClickHideAwardButtonEventWithAward:(id)arg1;
 - (void)logClickGiveAwardButtonEvent;
 - (void)logClickCloseButtonEvent;
 - (void)logClickInfoButtonEvent;
 - (void)logScreenViewEvent;
 - (id)initWithAccount:(id)arg1 post:(id)arg2 comment:(id)arg3 correlationId:(id)arg4 analyticsManager:(id)arg5;
-- (id)initWithAccount:(id)arg1 post:(id)arg2 comment:(id)arg3 correlationId:(id)arg4;
 
 @end
 

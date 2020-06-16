@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit38CommunityAvatarSelectionViewController.h"
 
-#import "UITableViewDataSource-Protocol.h"
-
-@interface _TtC6Reddit38CommunityAvatarSelectionViewController (Reddit) <UITableViewDataSource>
+@interface _TtC6Reddit38CommunityAvatarSelectionViewController (Reddit)
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 @end

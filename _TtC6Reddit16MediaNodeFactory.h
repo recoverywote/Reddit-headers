@@ -10,6 +10,7 @@
 {
 }
 
++ (id)createMediaNodeOnCinemaFeedWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 size:(struct CGSize)arg4 delegate:(id)arg5;
 + (id)createMediaNodeForPostCreationWithViewContext:(id)arg1 url:(id)arg2 size:(struct CGSize)arg3 previewURL:(id)arg4 analyticsViewProtocol:(id)arg5;
 + (id)createMediaNodeOnCarouselWithViewContext:(id)arg1 post:(id)arg2 options:(id)arg3 size:(struct CGSize)arg4;
 + (id)createMediaNodeForRichTextVideoElementWithViewContext:(id)arg1 videoElement:(id)arg2 size:(struct CGSize)arg3;

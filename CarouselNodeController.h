@@ -13,11 +13,12 @@
 #import "CarouselItemNodeDelegate-Protocol.h"
 #import "CarouselItemPostViewDelegate-Protocol.h"
 #import "CarouselItemSubredditNodeDelegate-Protocol.h"
+#import "ThumbnailTrendingSearchNodeDelegate-Protocol.h"
 
 @class Carousel, CarouselNode, NSArray, NSDate, NSIndexPath, NSMutableArray, NSMutableSet, NSString, UICollectionView;
 @protocol CarouselNodeDelegate, ViewContext;
 
-@interface CarouselNodeController : NSObject <CarouselItemNodeDelegate, CarouselItemCompactPostNodeDelegate, CarouselItemPostViewDelegate, CarouselItemSubredditNodeDelegate, CarouselItemBannerPostNodeDelegate, ASCollectionDataSource, ASCollectionDelegate>
+@interface CarouselNodeController : NSObject <CarouselItemNodeDelegate, CarouselItemCompactPostNodeDelegate, CarouselItemPostViewDelegate, CarouselItemSubredditNodeDelegate, CarouselItemBannerPostNodeDelegate, ThumbnailTrendingSearchNodeDelegate, ASCollectionDataSource, ASCollectionDelegate>
 {
     id <CarouselNodeDelegate> _delegate;
     NSArray *_registeredCellClasses;
@@ -44,6 +45,7 @@
 @property(readonly, nonatomic) NSArray *registeredCellClasses; // @synthesize registeredCellClasses=_registeredCellClasses;
 @property(readonly, nonatomic) __weak id <CarouselNodeDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)addHideKeyValueObservationForCarouselItem:(id)arg1;
+- (void)willBeginDisplayingThumbnailTrendingSearchNode:(id)arg1;
 - (void)willBeginDisplayingCarouselBannerPostNode:(id)arg1;
 - (void)willBeginDisplayingCarouselItemPostView:(id)arg1;
 - (void)carouselItemPostView:(id)arg1 didTapVideoCallToAction:(unsigned long long)arg2;

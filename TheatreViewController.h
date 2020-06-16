@@ -29,6 +29,7 @@
     _Bool _barsWereAutoHidden;
     _Bool _restartTimerAfterGestureCancel;
     _Bool _showControlsAfterGestureCancel;
+    _Bool _initialVideoWasUnmuted;
     id <TheatreViewControllerDelegate> _delegate;
     long long _currentPosition;
     NSIndexPath *_currentViewIndex;
@@ -45,6 +46,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool initialVideoWasUnmuted; // @synthesize initialVideoWasUnmuted=_initialVideoWasUnmuted;
 @property(retain, nonatomic) UIView *dividerView; // @synthesize dividerView=_dividerView;
 @property(retain, nonatomic) TheatrePhysicsController *physicsController; // @synthesize physicsController=_physicsController;
 @property(nonatomic) _Bool showControlsAfterGestureCancel; // @synthesize showControlsAfterGestureCancel=_showControlsAfterGestureCancel;
@@ -62,6 +64,9 @@
 @property(nonatomic) _Bool isRotating; // @synthesize isRotating=_isRotating;
 @property(nonatomic) long long currentPosition; // @synthesize currentPosition=_currentPosition;
 @property(nonatomic) __weak id <TheatreViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)currentHlsPlayerView;
+- (void)muteHlsPlayerIfNeeded;
+- (void)unmuteHlsPlayerIfNeeded:(id)arg1;
 - (id)screenViewAnalyticsEvent;
 @property(readonly, nonatomic) NSURL *deeplinkURL;
 - (id)makeCollectionViewLayout;

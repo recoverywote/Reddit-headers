@@ -9,8 +9,7 @@
 @interface _TtC6Reddit22ModToolsSettingsHeader : UITableViewHeaderFooterView
 {
     // Error parsing type: , name: titleLabel
-    // Error parsing type: , name: headerHeight
-    // Error parsing type: , name: heightConstraint
+    // Error parsing type: , name: mimimumHeight
 }
 
 - (void).cxx_destruct;

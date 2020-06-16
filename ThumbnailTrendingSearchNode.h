@@ -7,6 +7,7 @@
 #import "CarouselItemNode.h"
 
 @class ASDisplayNode, ASNetworkImageNode, ASTextNode, Post, TrendingSearch;
+@protocol ThumbnailTrendingSearchNodeDelegate;
 
 @interface ThumbnailTrendingSearchNode : CarouselItemNode
 {
@@ -15,28 +16,25 @@
     ASNetworkImageNode *_thumbnailNode;
     TrendingSearch *_trendingSearch;
     ASDisplayNode *_gradientNode;
+    id <ThumbnailTrendingSearchNodeDelegate> _trendingDelegate;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <ThumbnailTrendingSearchNodeDelegate> trendingDelegate; // @synthesize trendingDelegate=_trendingDelegate;
 @property(retain, nonatomic) ASDisplayNode *gradientNode; // @synthesize gradientNode=_gradientNode;
 @property(retain, nonatomic) TrendingSearch *trendingSearch; // @synthesize trendingSearch=_trendingSearch;
 @property(retain, nonatomic) ASNetworkImageNode *thumbnailNode; // @synthesize thumbnailNode=_thumbnailNode;
 @property(retain, nonatomic) ASTextNode *queryTextNode; // @synthesize queryTextNode=_queryTextNode;
 @property(retain, nonatomic) ASTextNode *promotedLabelNode; // @synthesize promotedLabelNode=_promotedLabelNode;
-- (void)didChangeViewabilityStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeAdVendorViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeFullyViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeViewableStateWithVisibilityContext:(id)arg1;
-- (void)didEnterAdViewableStateWithVisibilityContext:(id)arg1;
-- (void)didChangeVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didEnterVisibleStateWithVisibilityContext:(id)arg1;
+- (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)endVisibilityTracking;
 - (void)beginVisibilityTracking;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureThumbnailNode;
 - (void)configureNodes;
 - (id)createGradientNodeWithShadeColor:(id)arg1;
-- (id)initWithCarouselItem:(id)arg1 viewContext:(id)arg2;
+- (id)initWithViewContext:(id)arg1 carouselItem:(id)arg2 delegate:(id)arg3;
 @property(readonly, nonatomic) struct CGSize thumbnailSize;
 @property(readonly, nonatomic) Post *trendingPost;
 

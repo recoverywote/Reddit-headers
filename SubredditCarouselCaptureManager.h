@@ -27,7 +27,7 @@
 - (void)parseWithDataSource:(id)arg1;
 - (void)fetchRecommendedSubredditsForCategoriesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)willMoveToScreen:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3;
-- (id)initWithRedditService:(id)arg1 analyticsSource:(id)arg2 dataSource:(id)arg3 withOriginalCarouselItems:(id)arg4 maxRecommendation:(long long)arg5;
+- (id)initWithAccountContext:(id)arg1 analyticsSource:(id)arg2 dataSource:(id)arg3 withOriginalCarouselItems:(id)arg4 maxRecommendation:(long long)arg5;
 
 @end
 

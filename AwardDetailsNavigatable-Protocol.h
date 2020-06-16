@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class Award, Comment, NSString, NSURL, Post, Subreddit;
+@class Award, AwardDetailsEventLogger, Comment, NSString, NSURL, Post, Subreddit;
 @protocol AccountContext;
 
 @protocol AwardDetailsNavigatable <NSObject>
+- (void)showHideConfirmationDialogWithAccountContext:(id <AccountContext>)arg1 award:(Award *)arg2 awardedTarget:(NSString *)arg3 isAuthor:(_Bool)arg4 eventLogger:(AwardDetailsEventLogger *)arg5 completion:(void (^)(void))arg6;
 - (void)showReportConfirmationDialogWithAccountContext:(id <AccountContext>)arg1 award:(Award *)arg2 completion:(void (^)(void))arg3;
 - (void)showAwardInfoWithAccountContext:(id <AccountContext>)arg1 award:(Award *)arg2 gildingTarget:(unsigned long long)arg3 subreddit:(Subreddit *)arg4;
 - (void)showSelectAwardScreenForComment:(Comment *)arg1 parentPost:(Post *)arg2 accountContext:(id <AccountContext>)arg3 correlationId:(NSString *)arg4;

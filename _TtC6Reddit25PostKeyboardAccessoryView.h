@@ -11,20 +11,21 @@
 @interface _TtC6Reddit25PostKeyboardAccessoryView : BaseView
 {
     // Error parsing type: , name: linkButton
+    // Error parsing type: , name: $__lazy_storage_$_nsfwTag
+    // Error parsing type: , name: $__lazy_storage_$_spoilerTag
+    // Error parsing type: , name: viewContext
     // Error parsing type: , name: overflowButton
-    // Error parsing type: , name: nsfwTag
-    // Error parsing type: , name: spoilerTag
 }
 
 - (void).cxx_destruct;
+- (id)initWithFrame:(struct CGRect)arg1;
 - (void)overflowButonPress;
 - (void)configureWithPostToEdit:(id)arg1;
 - (void)configureWithSubreddit:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
-@property(nonatomic, readonly) _TtC6Reddit13PostTagToggle *spoilerTag; // @synthesize spoilerTag;
-@property(nonatomic, readonly) _TtC6Reddit13PostTagToggle *nsfwTag; // @synthesize nsfwTag;
-@property(nonatomic, readonly) BaseButton *overflowButton; // @synthesize overflowButton;
+- (id)initWithViewContext:(id)arg1 frame:(struct CGRect)arg2;
+@property(nonatomic, retain) _TtC6Reddit13PostTagToggle *spoilerTag;
+@property(nonatomic, retain) _TtC6Reddit13PostTagToggle *nsfwTag;
 @property(nonatomic, readonly) BaseButton *linkButton; // @synthesize linkButton;
 
 @end

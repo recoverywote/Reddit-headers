@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit33ChatPostActionSheetViewController.h"
 
-#import "RUIActionSheetViewControllerDelegate-Protocol.h"
-
-@interface _TtC6Reddit33ChatPostActionSheetViewController (Reddit) <RUIActionSheetViewControllerDelegate>
+@interface _TtC6Reddit33ChatPostActionSheetViewController (Reddit)
 - (void)actionSheetViewController:(id)arg1 didSelectItem:(id)arg2;
 @end
 

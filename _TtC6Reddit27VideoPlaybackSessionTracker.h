@@ -18,6 +18,7 @@
     // Error parsing type: , name: elapsedTimeOfLastHeartbeat
     // Error parsing type: , name: lastUpdateTime
     // Error parsing type: , name: chatState
+    // Error parsing type: , name: didFirePlayEvent
 }
 
 @end

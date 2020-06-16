@@ -31,7 +31,6 @@
 - (void)logClickBuyPremiumButton;
 - (void)logScreenViewEventWithReferralFromInFeedUnit:(_Bool)arg1;
 - (id)initWithAccount:(id)arg1 correlationId:(id)arg2 analyticsManager:(id)arg3;
-- (id)initWithAccount:(id)arg1 correlationId:(id)arg2;
 
 @end
 

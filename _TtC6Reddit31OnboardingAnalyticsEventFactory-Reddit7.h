@@ -7,12 +7,13 @@
 #import "_TtC6Reddit31OnboardingAnalyticsEventFactory.h"
 
 @interface _TtC6Reddit31OnboardingAnalyticsEventFactory (Reddit7)
-+ (id)tapNextOnCategoryFeedScreenEvent;
-+ (id)tapSkipOnCategoryFeedScreenEvent;
-+ (id)tapLoginOnCategoryFeedScreenEvent;
-+ (id)failFetchingCategoriesOnCategoryFeedScreenEvent;
-+ (void)attachOnboardingTelemetryToEventWithEvent:(id)arg1 for:(id)arg2;
-+ (id)tapOnTabOnCategoryFeedScreenEventWithTabIdentifier:(id)arg1;
-+ (id)swipeOnCategoryFeedScreenEventWithTabIdentifier:(id)arg1;
++ (id)tapLoginOnInterestsScreen;
++ (id)interestsScreenDismissEventWithSelectedCount:(long long)arg1;
++ (id)tapViewAllInterestsEvent;
++ (id)tapSkipOnInterestsScreenEvent;
++ (id)tapNextOnInterestsScreenEvent;
++ (id)tapBackOnInterestsScreenEvent;
++ (id)tapInterestEventWithShouldSelect:(_Bool)arg1 categoryName:(id)arg2;
++ (id)viewOnboardingInterestsEvent;
 @end
 

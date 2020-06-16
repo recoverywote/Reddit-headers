@@ -44,6 +44,8 @@
 - (void)toggleSubscriptionToSubscribable:(id)arg1;
 - (void)feedPostTitleView:(id)arg1 didTapLinkURL:(id)arg2 context:(unsigned long long)arg3;
 - (void)willNavigateToCarouselItem:(id)arg1 fromCarousel:(id)arg2;
+- (void)logClickAnalyticsForTrending:(id)arg1 carousel:(id)arg2;
+- (void)logViewAnalyticsForTrending:(id)arg1 carousel:(id)arg2;
 - (void)didTapTitleObjectOfCarousel:(id)arg1 object:(id)arg2 index:(unsigned long long)arg3;
 - (void)navigateToViewControllerForCarouselItem:(id)arg1 forCarousel:(id)arg2 atIndex:(unsigned long long)arg3;
 - (id)viewControllerForCarouselItem:(id)arg1 forCarousel:(id)arg2 atIndex:(unsigned long long)arg3;

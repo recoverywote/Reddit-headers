@@ -6,6 +6,8 @@
 
 #import "SearchCommunity.h"
 
+@class NSString;
+
 @interface SearchCommunityUser : SearchCommunity
 {
 }
@@ -13,6 +15,7 @@
 - (id)placeHolderImage;
 - (id)pillAttributedStringForAttributes:(id)arg1 pillTextBuilder:(id)arg2 imagesLoaded:(CDUnknownBlockType)arg3;
 - (id)prefix;
+@property(readonly, copy, nonatomic) NSString *fullID;
 - (id)initWithUser:(id)arg1;
 
 @end

@@ -6,10 +6,11 @@
 
 #import "CaptureManager.h"
 
-@class LoginCaptureScreen, TwoFactorCaptureScreen;
+@class LoginCaptureScreen, RedditService, TwoFactorCaptureScreen;
 
 @interface LoginCaptureManager : CaptureManager
 {
+    RedditService *_capturedRedditService;
     LoginCaptureScreen *_loginScreen;
     TwoFactorCaptureScreen *_twoFactorScreen;
 }
@@ -17,12 +18,13 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) TwoFactorCaptureScreen *twoFactorScreen; // @synthesize twoFactorScreen=_twoFactorScreen;
 @property(retain, nonatomic) LoginCaptureScreen *loginScreen; // @synthesize loginScreen=_loginScreen;
+@property(retain, nonatomic) RedditService *capturedRedditService; // @synthesize capturedRedditService=_capturedRedditService;
 - (void)handleAccountManagerError:(id)arg1;
 - (void)checkAuthCodeWithCompletion:(CDUnknownBlockType)arg1 progressHandler:(CDUnknownBlockType)arg2;
 - (void)loginWithCompletion:(CDUnknownBlockType)arg1 progressHandler:(CDUnknownBlockType)arg2;
 - (void)didFinishScreen:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 progressHandler:(CDUnknownBlockType)arg3;
 - (void)screenDidAppear:(id)arg1;
-- (id)initWithRedditService:(id)arg1 analyticsSource:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 analyticsSource:(id)arg2;
 
 @end
 

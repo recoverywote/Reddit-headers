@@ -36,12 +36,11 @@
 + (id)viewEventForMetaFlair:(id)arg1 withSubreddit:(id)arg2 withPageType:(id)arg3 withOriginSource:(unsigned long long)arg4 withIndexOrNil:(id)arg5;
 + (id)clickEventForBackNavigationWithRailsContext:(id)arg1;
 + (id)clickEventForCancelButtonWithRailsContext:(id)arg1;
-+ (id)clickEventForSearchEntryWithRailsContext:(id)arg1;
 + (id)clickEventForSubscriptionToSubscribable:(id)arg1 railsContext:(id)arg2;
 + (id)clickEventForSortShortcutWithRailsContext:(id)arg1;
 + (id)clickEventForPostSearchFilterButtonWithRailsContext:(id)arg1;
 + (id)clickEventForSeeAllSubredditSearchResultsWithRailsContext:(id)arg1;
-+ (id)clickEventForSearchHistory:(id)arg1 viewModel:(id)arg2 withSearchHistoryContext:(id)arg3;
++ (id)clickEventForSearchHistory:(id)arg1 searchHistoryContext:(id)arg2 community:(id)arg3 position:(long long)arg4;
 + (id)clickEventForFullSearchFromElementType:(unsigned long long)arg1 railsContext:(id)arg2;
 + (id)clickEventForTrendingSearch:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4;
 + (id)clickEventForSearchResultSelectedMetaFlair:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4;
@@ -58,7 +57,7 @@
 + (id)viewEventForMetaFlair:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4;
 + (id)viewEventForPost:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4;
 + (id)viewEventForSubscribable:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4;
-+ (id)viewEventForRecentSearch:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4 withSearchHistoryContext:(id)arg5;
++ (id)viewEventForRecentSearch:(id)arg1 viewModel:(id)arg2 index:(long long)arg3 railsContext:(id)arg4 searchHistoryContext:(id)arg5;
 
 @end
 

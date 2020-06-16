@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) double height;
 - (id)attributes;
 @property(readonly, nonatomic) UIFont *font;
-- (id)initWithPillSizeType:(unsigned long long)arg1;
+- (id)initWithViewContext:(id)arg1 pillSizeType:(unsigned long long)arg2;
 
 @end
 

@@ -11,6 +11,7 @@
     // Error parsing type: , name: volumeObserver
     // Error parsing type: , name: session
     // Error parsing type: , name: active
+    // Error parsing type: , name: alwaysOn
 }
 
 @end

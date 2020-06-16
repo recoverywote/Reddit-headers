@@ -6,21 +6,37 @@
 
 #import <UIKit/UIViewController.h>
 
-@interface _TtC6Reddit34MediaGalleryOrderingViewController : UIViewController
+#import "UICollectionViewDragDelegate-Protocol.h"
+#import "UICollectionViewDropDelegate-Protocol.h"
+
+@interface _TtC6Reddit34MediaGalleryOrderingViewController : UIViewController <UICollectionViewDragDelegate, UICollectionViewDropDelegate>
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: accountContext
     // Error parsing type: , name: annotatedImages
+    // Error parsing type: , name: isDragging
+    // Error parsing type: , name: maxGallerySize
+    // Error parsing type: , name: tooltipManager
     // Error parsing type: , name: collectionView
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)collectionView:(id)arg1 performDropWithCoordinator:(id)arg2;
+- (void)collectionView:(id)arg1 dropSessionDidEnd:(id)arg2;
+- (id)collectionView:(id)arg1 dropSessionDidUpdate:(id)arg2 withDestinationIndexPath:(id)arg3;
+- (void)collectionView:(id)arg1 dropSessionDidEnter:(id)arg2;
+- (id)collectionView:(id)arg1 itemsForBeginningDragSession:(id)arg2 atIndexPath:(id)arg3;
+- (struct UIEdgeInsets)collectionView:(id)arg1 layout:(id)arg2 insetForSectionAtIndex:(long long)arg3;
+- (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
+- (_Bool)collectionView:(id)arg1 shouldSelectItemAtIndexPath:(id)arg2;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (long long)numberOfSectionsInCollectionView:(id)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)init;
 
 @end
 

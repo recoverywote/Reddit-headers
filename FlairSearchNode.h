@@ -7,9 +7,11 @@
 #import "BaseFeedDisplayNode.h"
 
 @class ASImageNode, PillButtonNode, PillStyle, RailPillViewModel;
+@protocol ViewContext;
 
 @interface FlairSearchNode : BaseFeedDisplayNode
 {
+    id <ViewContext> _viewContext;
     RailPillViewModel *_railFlairViewModel;
     PillStyle *_pillStyle;
     PillButtonNode *_pillButtonNode;
@@ -21,9 +23,10 @@
 @property(retain, nonatomic) PillButtonNode *pillButtonNode; // @synthesize pillButtonNode=_pillButtonNode;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
 @property(retain, nonatomic) RailPillViewModel *railFlairViewModel; // @synthesize railFlairViewModel=_railFlairViewModel;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 - (id)layoutSpecThatFits:(CDStruct_90e057aa)arg1;
 - (void)configureNodes;
-- (id)initWithRailFlairViewModel:(id)arg1;
+- (id)initWithViewContext:(id)arg1 railFlairViewModel:(id)arg2;
 
 @end
 

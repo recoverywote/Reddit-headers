@@ -14,6 +14,7 @@
 @property(nonatomic) double delay;
 @property(nonatomic) double textHInset;
 @property(nonatomic) double textVInset;
+@property(nonatomic) double bubbleHInset;
 @property(nonatomic) double maxWidth;
 @property(copy, nonatomic) NSString *analyticsId;
 @property(copy, nonatomic) NSString *analyticsSource;

@@ -20,6 +20,7 @@
 - (id)initWithAccountContext:(id)arg1;
 - (void)didTapCaptionsButton;
 - (id)analyticsPostComposerType;
+- (void)mediaSelectionNavigationController:(id)arg1 didSelect:(id)arg2;
 @property(nonatomic, readonly) NSString *analyticsScreenViewName;
 - (void)dealloc;
 - (void)viewDidLoad;

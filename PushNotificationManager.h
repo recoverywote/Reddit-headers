@@ -8,21 +8,27 @@
 
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
-@class Account, NSString, RedditService, _TtC6Reddit23RequestPermissionRouter;
+@class Account, AccountManager, NSString, RedditService, _TtC6Reddit23RequestPermissionRouter;
+@protocol AccountContext;
 
 @interface PushNotificationManager : NSObject <UNUserNotificationCenterDelegate>
 {
     _Bool _requestedSystemPermissionDialog;
     NSString *_token;
+    id <AccountContext> _accountContext;
+    AccountManager *_accountManager;
     NSString *_correlationId;
     _TtC6Reddit23RequestPermissionRouter *_requestPermissionRouter;
 }
 
++ (void)setupWithAccountManager:(id)arg1;
 + (id)instance;
 - (void).cxx_destruct;
 @property(retain, nonatomic) _TtC6Reddit23RequestPermissionRouter *requestPermissionRouter; // @synthesize requestPermissionRouter=_requestPermissionRouter;
 @property(copy, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(nonatomic) _Bool requestedSystemPermissionDialog; // @synthesize requestedSystemPermissionDialog=_requestedSystemPermissionDialog;
+@property(retain, nonatomic) AccountManager *accountManager; // @synthesize accountManager=_accountManager;
+@property(retain, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 @property(copy, nonatomic) NSString *token; // @synthesize token=_token;
 - (void)logPushNotificationDialogConfirmed:(_Bool)arg1 promptStyle:(unsigned long long)arg2 requestModel:(id)arg3;
 - (void)logPushNotificationViewEventWithPromptStyle:(unsigned long long)arg1 requestModel:(id)arg2;
@@ -59,7 +65,8 @@
 - (void)applicationDidBecomeActive:(id)arg1;
 @property(readonly, nonatomic) Account *account;
 @property(readonly, nonatomic) RedditService *service;
-- (id)init;
+- (void)configureWithAccountContext:(id)arg1;
+- (id)initWithAccountManager:(id)arg1;
 - (void)dealloc;
 
 // Remaining properties

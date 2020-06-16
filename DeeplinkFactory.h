@@ -10,6 +10,7 @@
 {
 }
 
++ (unsigned long long)deepLinkTypeForURL:(id)arg1;
 + (id)sendbirdChannelPrefixString:(id)arg1;
 + (id)viewControllerForSendbirdChannelURL:(id)arg1 isInvite:(_Bool)arg2 accountContext:(id)arg3;
 + (id)viewControllerForChatShareableLinkURL:(id)arg1 channelURL:(id)arg2 accountContext:(id)arg3;

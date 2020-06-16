@@ -6,9 +6,7 @@
 
 #import "_TtC6Reddit38CommunityAvatarSelectionViewController.h"
 
-#import "ListingStateControllerDelegate-Protocol.h"
-
-@interface _TtC6Reddit38CommunityAvatarSelectionViewController (Reddit1) <ListingStateControllerDelegate>
+@interface _TtC6Reddit38CommunityAvatarSelectionViewController (Reddit1)
 - (void)listingStateController:(id)arg1 didTapLoadingSpinner:(id)arg2;
 - (void)listingStateController:(id)arg1 didPullToRefresh:(id)arg2;
 @end

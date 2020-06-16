@@ -49,6 +49,7 @@
 @property(retain, nonatomic) HomeViewController *homeViewController; // @synthesize homeViewController=_homeViewController;
 @property(retain, nonatomic) UINavigationController *currentViewController; // @synthesize currentViewController=_currentViewController;
 @property(nonatomic) __weak id <MainTabBarControllerDelegate> mainTabDelegate; // @synthesize mainTabDelegate=_mainTabDelegate;
+- (void)showRedditCinemaViewController;
 - (void)presentLoginViewController;
 - (void)presentAnonymousBrowsingExitDialog;
 - (void)showCommunityCreationViewController;
@@ -56,6 +57,7 @@
 - (id)tabBarItemViewForTabType:(unsigned long long)arg1;
 - (void)showCoinsMarketingController;
 - (id)coinSaleNavigationButton;
+- (id)redditVideosNavigationButton;
 - (void)addNavigationButtons;
 - (void)switchToTab:(unsigned long long)arg1 andPopToRootAndPushVC:(id)arg2;
 - (void)switchToTab:(unsigned long long)arg1 andPushViewController:(id)arg2;

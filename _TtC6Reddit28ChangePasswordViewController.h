@@ -26,6 +26,7 @@
 - (void)didTapSaveWithSender:(id)arg1;
 - (void)didTapForgotPasswordWithSender:(id)arg1;
 - (void)configureViewAppearance;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 
 @end

@@ -112,6 +112,7 @@
 - (void)configureWithPermalink:(id)arg1;
 - (_Bool)shouldHideFooterView;
 - (void)exposeChatPostHoldoutExperiment;
+- (void)exposeNewCommentComposerExperiment;
 - (_Bool)shouldUseNewCommentComposer;
 - (_Bool)shouldDisplayChatView;
 - (id)currentObjects;

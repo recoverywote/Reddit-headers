@@ -13,6 +13,7 @@
     // Error parsing type: , name: preferences
     // Error parsing type: , name: identityProviderCoordinator
     // Error parsing type: , name: loadingState
+    // Error parsing type: , name: chatPreference
 }
 
 - (void).cxx_destruct;
@@ -26,6 +27,7 @@
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
+- (void)fetchChatPreference;
 - (void)fetchPreferences;
 - (void)viewDidLoad;
 - (id)initWithAccountContext:(id)arg1;

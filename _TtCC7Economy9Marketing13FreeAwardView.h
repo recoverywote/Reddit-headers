@@ -9,8 +9,16 @@
 __attribute__((visibility("hidden")))
 @interface _TtCC7Economy9Marketing13FreeAwardView : UIView
 {
+    // Error parsing type: , name: awardAvailableView
+    // Error parsing type: , name: awardClaimedView
+    // Error parsing type: , name: displayLink
+    // Error parsing type: , name: state
+    // Error parsing type: , name: previousAnimationProgress
 }
 
+- (void).cxx_destruct;
+- (void)analyzeFrame;
+- (void)claim;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

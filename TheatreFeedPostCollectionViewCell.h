@@ -21,7 +21,7 @@
 @property(retain, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(retain, nonatomic) TheatreFeedPostView *theatreFeedPostView; // @synthesize theatreFeedPostView=_theatreFeedPostView;
 @property(readonly, nonatomic) UIImage *previewImage;
-- (void)didChangeMediaVisibilityWithContext:(id)arg1;
+- (void)didChangeVisibilityWithContext:(id)arg1;
 - (void)noLongerPastVisibilityThreshold;
 - (void)noLongerFullyVisible;
 - (void)didEndDisplayingCell;

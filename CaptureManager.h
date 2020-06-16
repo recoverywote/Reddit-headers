@@ -7,9 +7,11 @@
 #import <objc/NSObject.h>
 
 @class CaptureScreen, NSArray, NSString, RedditService;
+@protocol AccountContext;
 
 @interface CaptureManager : NSObject
 {
+    id <AccountContext> _accountContext;
     NSArray *_screens;
     CaptureScreen *_currentScreen;
     long long _dismissMethod;
@@ -23,6 +25,7 @@
 @property(nonatomic) long long dismissMethod; // @synthesize dismissMethod=_dismissMethod;
 @property(retain, nonatomic) CaptureScreen *currentScreen; // @synthesize currentScreen=_currentScreen;
 @property(copy, nonatomic) NSArray *screens; // @synthesize screens=_screens;
+@property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)screenFailedValidation:(id)arg1;
 - (void)screenDidDisappear:(id)arg1;
 - (void)screenDidAppear:(id)arg1;
@@ -33,7 +36,7 @@
 - (void)loadFirstScreenWithCompletion:(CDUnknownBlockType)arg1 progressHandler:(CDUnknownBlockType)arg2;
 - (id)previousScreen;
 - (id)nextScreen;
-- (id)initWithRedditService:(id)arg1 analyticsSource:(id)arg2;
+- (id)initWithAccountContext:(id)arg1 analyticsSource:(id)arg2;
 
 @end
 

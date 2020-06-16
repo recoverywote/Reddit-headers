@@ -24,6 +24,7 @@
 - (id)mutableCopyWithZone:(struct _NSZone *)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly, nonatomic) double surveyLastSeenTime;
+@property(readonly, copy, nonatomic) NSString *allowPrivateMessages;
 @property(readonly, nonatomic) _Bool allowNSFW;
 @property(readonly, copy, nonatomic) NSString *geoFilter;
 @property(readonly, nonatomic) _Bool allowLocationBasedSuggestions;

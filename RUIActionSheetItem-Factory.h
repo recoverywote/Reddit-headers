@@ -7,6 +7,7 @@
 #import <RedditUI/RUIActionSheetItem.h>
 
 @interface RUIActionSheetItem (Factory)
++ (id)hideAwardWithContext:(id)arg1;
 + (id)giveAwardItemWithContext:(id)arg1;
 + (id)blockUserItemWithContext:(id)arg1;
 + (id)reportItemWithContext:(id)arg1;

@@ -14,6 +14,7 @@
 + (id)bodyM;
 + (id)bodyL;
 + (id)bodyXL;
++ (id)headingM;
 + (id)headingL;
 + (id)headingXL;
 + (id)displayM;

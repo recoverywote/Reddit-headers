@@ -33,6 +33,7 @@
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)awardDetailsTableViewCell:(id)arg1 didTapOverflowButton:(id)arg2;
 - (void)configureNavigationBarAppearance;
+- (void)showToastForHidingSucceededWithMessage:(id)arg1;
 - (void)showToastForReportingSucceededWithMessage:(id)arg1;
 - (void)showToastForError:(id)arg1;
 - (void)showLoadingFailureIndicator;

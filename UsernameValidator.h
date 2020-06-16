@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)isUsernameAvailable:(id)arg1 completion:(CDUnknownBlockType)arg2;
++ (void)isUsernameAvailableWithRedditService:(id)arg1 username:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 @end
 

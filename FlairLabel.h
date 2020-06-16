@@ -7,23 +7,25 @@
 #import "PillButton.h"
 
 @class PillStyle;
-@protocol FlairViewDelegate;
+@protocol FlairViewDelegate, ViewContext;
 
 @interface FlairLabel : PillButton
 {
     id <FlairViewDelegate> _delegate;
+    id <ViewContext> _viewContext;
     PillStyle *_pillStyle;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) PillStyle *pillStyle; // @synthesize pillStyle=_pillStyle;
+@property(readonly, nonatomic) id <ViewContext> viewContext; // @synthesize viewContext=_viewContext;
 @property(nonatomic) __weak id <FlairViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)defaultButtonTitle;
 - (void)didTapFlair:(id)arg1;
 - (void)setTitle:(id)arg1;
 - (void)configureWithFlair:(id)arg1 maxEmojisToLoad:(long long)arg2;
 - (void)configureWithPill:(id)arg1 maxEmojisToLoad:(long long)arg2;
-- (id)init;
+- (id)initWithViewContext:(id)arg1;
 
 @end
 

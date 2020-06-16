@@ -16,11 +16,13 @@
     // Error parsing type: , name: confirmationButton
     // Error parsing type: , name: accountManager
     // Error parsing type: , name: accountContext
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)presentLoginViewController;
+- (void)didTapBackButtonWithSender:(id)arg1;
+- (void)didTapLogin;
 - (void)checkUsernameAvailability;
 - (void)register:(id)arg1;
 - (void)performPasswordValidation;
@@ -30,10 +32,10 @@
 - (void)emailFieldTextChangedWithSender:(id)arg1;
 - (void)passwordFieldTextChangedWithSender:(id)arg1;
 - (void)usernameFieldTextChangedWithSender:(id)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountContext:(id)arg1;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 

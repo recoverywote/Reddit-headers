@@ -8,7 +8,7 @@
 
 #import "ObjectObserverProtocol-Protocol.h"
 
-@class AwardDetailsEventLogger, Comment, NSArray, NSDictionary, NSNotificationCenter, NSString, Post, RedditService, Subreddit;
+@class AwardDetailsEventLogger, Comment, NSArray, NSDictionary, NSMutableSet, NSNotificationCenter, NSString, Post, RedditService, Subreddit;
 @protocol AccountContext, AwardDetailsNavigatable, AwardDetailsPresentable;
 
 @interface AwardDetailsPresenter : NSObject <ObjectObserverProtocol>
@@ -22,6 +22,7 @@
     Comment *_comment;
     NSString *_correlationId;
     AwardDetailsEventLogger *_eventLogger;
+    NSMutableSet *_hiddenAwardIDs;
     Subreddit *_subreddit;
     NSNotificationCenter *_notificationCenter;
     NSDictionary *_postAwardingNotificationUserInfo;
@@ -32,6 +33,7 @@
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) Subreddit *subreddit; // @synthesize subreddit=_subreddit;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
+@property(retain, nonatomic) NSMutableSet *hiddenAwardIDs; // @synthesize hiddenAwardIDs=_hiddenAwardIDs;
 @property(readonly, nonatomic) AwardDetailsEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) NSString *correlationId; // @synthesize correlationId=_correlationId;
 @property(readonly, nonatomic) Comment *comment; // @synthesize comment=_comment;
@@ -42,6 +44,7 @@
 @property(readonly, nonatomic) id <AccountContext> accountContext; // @synthesize accountContext=_accountContext;
 - (void)updateContentViewsForData:(id)arg1 changeKeyPath:(id)arg2 oldValue:(id)arg3 newValue:(id)arg4;
 - (void)processAwardingCompleteNotification:(id)arg1;
+- (void)hideAward:(id)arg1;
 - (void)reportAward:(id)arg1;
 - (id)awardedObject;
 @property(readonly, nonatomic) NSArray *awardingTotals;
@@ -49,6 +52,7 @@
 - (void)fetchSubredditIfNeededWithDispatchGroup:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchAwardingsWithDispatchGroup:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fetchData;
+- (void)didSelectHideAwardAtIndex:(unsigned long long)arg1;
 - (void)didSelectReportAwardAtIndex:(unsigned long long)arg1;
 - (void)didSelectAwardAtIndex:(unsigned long long)arg1;
 - (void)didTapReloadButton;

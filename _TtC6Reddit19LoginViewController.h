@@ -16,18 +16,20 @@
     // Error parsing type: , name: confirmationInputAccessoryView
     // Error parsing type: , name: accountManager
     // Error parsing type: , name: accountContext
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)presentRegistrationViewController;
+- (void)didTapBackButtonWithSender:(id)arg1;
+- (void)didTapSignUp;
 - (void)navigateToForgotPasswordViewController;
 - (void)login:(id)arg1;
 - (void)passwordFieldTextChangedWithSender:(id)arg1;
 - (void)usernameFieldTextChangedWithSender:(id)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
-- (id)initWithAccountContext:(id)arg1;
 @property(nonatomic, readonly) _Bool canBecomeFirstResponder;
 @property(nonatomic, readonly) UIView *inputAccessoryView;
 @property(nonatomic, readonly) NSString *passwordText;
